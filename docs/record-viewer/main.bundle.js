@@ -3642,7 +3642,7 @@
                 h = p(t);
             return {
                 c() {
-                    n = H("div"), r = H("div"), o = D(), s = H("div"), a = H("h3"), i = new V(!1), l = D(), c = H("span"), c.textContent = "@1.1.7", d = D(), h.c(), O(r, "class", "modal-bg svelte-75klku"), i.a = l, O(c, "class", "app-version svelte-75klku"), O(s, "class", "modal svelte-75klku"), O(n, "class", "modal-wrapper svelte-75klku")
+                    n = H("div"), r = H("div"), o = D(), s = H("div"), a = H("h3"), i = new V(!1), l = D(), c = H("span"), c.textContent = "@TSAIBEE", d = D(), h.c(), O(r, "class", "modal-bg svelte-75klku"), i.a = l, O(c, "class", "app-version svelte-75klku"), O(s, "class", "modal svelte-75klku"), O(n, "class", "modal-wrapper svelte-75klku")
                 },
                 m(e, t) {
                     M(e, n, t), k(n, r), k(n, o), k(n, s), k(s, a), i.m(u, a), k(a, l), k(a, c), k(s, d), h.m(s, null)
