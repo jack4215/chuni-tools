@@ -7,11 +7,11 @@
     "dev": "set NODE_ENV=development && webpack --env development --watch",
     "devmac": "export NODE_ENV=development && webpack --env development --watch"
   },
-  "author": "Dogeon188",
+  "author": "TSAIBEE",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dogeon188/chuni-tools.git"
+    "url": "git+https://github.com/jack4215/chuni-tools.git"
   },
   "devDependencies": {
     "@tsconfig/svelte": "^2.0.1",

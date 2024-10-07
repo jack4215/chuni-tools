@@ -46,11 +46,11 @@
             },
             466: e => {
                 "use strict";
-                e.exports = JSON.parse('{"locale.name":"English (US)","footer.chooseLang":"Choose Language","footer.source":"Source code & this page is hosted on <a href=\\"https://github.com/Dogeon188/chuni-tools\\" target=\\"_blank\\" rel=\\"noreferrer noopener\\">GitHub</a>"}')
+                e.exports = JSON.parse('{"locale.name":"English (US)","footer.chooseLang":"Choose Language","footer.source":"Source code & this page is hosted on <a href=\\"https://github.com/jack4215/chuni-tools\\" target=\\"_blank\\" rel=\\"noreferrer noopener\\">GitHub</a>"}')
             },
             549: e => {
                 "use strict";
-                e.exports = JSON.parse('{"locale.name":"繁體中文","footer.chooseLang":"選擇語言","footer.source":"本網站透過GitHub Pages架設，原始碼可以在<a href=\\"https://github.com/Dogeon188/chuni-tools\\" target=\\"_blank\\" rel=\\"noreferrer noopener\\">GitHub</a>找到。"}')
+                e.exports = JSON.parse('{"locale.name":"繁體中文","footer.chooseLang":"選擇語言","footer.source":"本網站透過GitHub Pages架設，原始碼可以在<a href=\\"https://github.com/jack4215/chuni-tools\\" target=\\"_blank\\" rel=\\"noreferrer noopener\\">GitHub</a>找到。"}')
             },
             903: e => {
                 "use strict";
