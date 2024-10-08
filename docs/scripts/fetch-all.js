@@ -72,7 +72,7 @@
       [Language.ZH_TW]: {
         pleaseLogin: "請先登入 CHUNITHM-NET 再執行本程式。",
         needReload: "請重新整理 CHUNITHM-NET。",
-        analyzeRating: "前往查分器"
+        analyzeRating: "分析遊戲成績"
       }
     };
   
