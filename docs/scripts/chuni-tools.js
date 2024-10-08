@@ -1,79 +1,40 @@
 (() => {
     "use strict";
-  
-    const Language = {
-      EN_US: "en_US",
-      ZH_TW: "zh_TW"
-    };
-  
-    const DOMAIN = "chunithm-net-eng.com";
-    const BASE_URL = `https://${DOMAIN}`;
-  
-    const messages = {
-      [Language.EN_US]: {
-        alreadyRun: "Please refresh the page before running CHUNI TOOLS again!",
-        wrongBase: `Oops! Looks like you are on the wrong page.\nPlease open CHUNITHM-NET Intl. (${DOMAIN}) and login, then try again.`
-      },
-      [Language.ZH_TW]: {
-        alreadyRun: "請重新整理頁面後再執行 CHUNITHM 查分器！",
-        wrongBase: `請到 CHUNITHM-NET Intl. (${DOMAIN}) 登入之後再試一次。`
-      }
-    };
-  
-    const getLanguage = () => {
-      const urlLangParam = new URLSearchParams(location.search).get("lang");
-      if (urlLangParam) {
-        return urlLangParam.startsWith("zh") ? Language.ZH_TW : Language.EN_US;
-      }
-  
-      const localStorageLang = localStorage.getItem("language");
-      if (localStorageLang) {
-        return localStorageLang === Language.ZH_TW ? Language.ZH_TW : Language.EN_US;
-      }
-  
-      return navigator.language.startsWith("zh") ? Language.ZH_TW : Language.EN_US;
-    };
-  
-    const lang = getLanguage();
-  
-    if (window.chuniTools) {
-      alert(messages[lang].alreadyRun);
-      return;
-    }
-  
-    window.chuniTools = true;
-  
-    if (window.location.hostname !== DOMAIN) {
-      alert(messages[lang].wrongBase);
-      window.location.href = BASE_URL;
-      return;
-    }
-  
-    const loadScript = (scriptName) => {
-      const scriptElement = document.createElement("script");
-      scriptElement.src = `${getScriptBaseUrl()}/scripts/${scriptName}.js`;
-      document.body.appendChild(scriptElement);
-    };
-  
-    const getScriptBaseUrl = () => {
-      const scriptElements = Array.from(document.querySelectorAll("script"));
-      for (let script of scriptElements.reverse()) {
-        if (script.src.includes("chuni-tools")) {
-          const url = new URL(script.src);
-          const path = url.pathname;
-          return `${url.origin}${path.substring(0, path.lastIndexOf("/scripts"))}`;
+    var n;
+    !function(n) {
+      n.en_US = "en_US", n.zh_TW = "zh_TW"
+    }(n || (n = {}));
+    const e = "chunithm-net-eng.com",
+      t = "https://" + e;
+    !function(o, r) {
+      const a = {
+        [n.en_US]: {
+          alreadyRun: "Please refresh the page before running CHUNI TOOLS again!",
+          wrongBase: `Oops! Looks like you are on the wrong page.\nPlease open CHUNITHM-NET Intl. (${e}) and login, then try again.`
+        },
+        [n.zh_TW]: {
+          alreadyRun: "請重新整理頁面後再執行 CHUNITHM 查分器！",
+          wrongBase: `請到 CHUNITHM-NET Intl. (${e}) 登入之後再試一次。`
         }
+      } [function() {
+        const e = new URLSearchParams(location.search);
+        return e.get("lang") ? e.get("lang").startsWith("zh") ? n.zh_TW : n.en_US : function() {
+          switch (localStorage.getItem("language")) {
+            case n.en_US:
+              return n.en_US;
+            case n.zh_TW:
+              return n.zh_TW
+          }
+          return null
+        }() || (navigator.language.startsWith("zh") ? n.zh_TW : n.en_US)
+      }()];
+      if (r.chuniTools) return void alert(a.alreadyRun);
+      if (r.chuniTools = !0, r.location.hostname !== e) return alert(a.wrongBase), void(r.location.href = t);
+  
+      function s(n) {
+        const e = o.createElement("script");
+        e.src = `${function(n){const e=Array.from(document.querySelectorAll("script"));for(;e.length;){const n=e.pop();if(n?.src.includes("chuni-tools")){const e=new URL(n.src),t=e.pathname;return e.origin+t.substring(0,t.lastIndexOf("/scripts"))}}return"https://jack4215.github.io/chuni-tools"}()}/scripts/${n}.js`, o.body.append(e)
       }
-      return "https://jack4215.github.io/chuni-tools";
-    };
-  
-    const pathname = window.location.pathname;
-    if (pathname.includes("/mobile/home/userOption/updateUserName")) {
-      loadScript("idxmap-generate");
-    } else if (pathname.includes("/mobile/record/musicGenre")) {
-      loadScript("export-csv");
-    } else {
-      loadScript("fetch-all");
-    }
+      const i = o.location.pathname; - 1 != i.indexOf("/mobile/home/userOption/updateUserName") ? s("idxmap-generate") : -1 != i.indexOf("/mobile/record/musicGenre") ? s("export-csv") : s("fetch-all")
+    }(document, window)
   })();
-  
