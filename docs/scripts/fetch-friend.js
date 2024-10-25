@@ -152,7 +152,6 @@
                                         idx: "9999"
                                     }
                                 }));
-                                console.log(records);
                                 return records.filter(e => e.title && e.score);
                             }(t.data.difficulty);
                             break;
