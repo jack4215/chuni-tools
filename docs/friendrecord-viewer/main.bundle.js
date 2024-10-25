@@ -870,15 +870,14 @@
           e.op = function(e) {
             if (e.score >= 101e4) return Ve(e);
             let t = {
-                AJ: 2000,
-                FC: 1000,
+                AJ: 2e3,
+                FC: 1e3,
                 "": 0
-            }[e.clear];   
-            let n = Math.floor(1e4 * e.const);
-            let r = e.score < 1007500 ? Math.floor(e.rawRating / 100) * 100 : n + 20000 + 3 * (e.score - 1007500);
-            r = e.score >= 975e3 ? 10 * Math.floor(r / 10) : 100 * Math.floor(r / 100);
-            return 5 * (r + t); 
-        }(e),
+              } [e.clear],
+              n = Math.floor(1e4 * e.const),
+              r = e.score < 1007500 ? e.rawRating : n + 2e4 + 3 * (e.score - 1007500);
+            return r = e.score >= 975e3 ? 10 * Math.floor(r / 10) : 100 * Math.floor(r / 100), 5 * (r + t)
+          }(e),
 
         e.opMax = Ve(e), e.opPercent = 100 * e.op / e.opMax, e.rank = Fe(e.score)
         })), n && s.length) {
