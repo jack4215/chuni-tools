@@ -3911,15 +3911,42 @@
     }
 
     function _o(e, t, n) {
-      let r, o, s, {
-        records: a
-      } = t;
-      return e.$$set = e => {
-        "records" in e && n(3, a = e.records)
-      }, e.$$.update = () => {
-        8 & e.$$.dirty && n(1, r = a.reduce(((e, t) => e + t.op), 0)), 8 & e.$$.dirty && n(0, o = a.reduce(((e, t) => e + t.opMax), 0)), 3 & e.$$.dirty && n(2, s = r / o * 100)
-      }, [o, r, s, a]
-    }
+      let r, o, s; 
+      let a = t.records; 
+
+      const groupByTitle = (records) => {
+          const map = new Map();
+          records.forEach((song) => {
+              const { title, op, opMax } = song;
+              if (!map.has(title)) {
+                  map.set(title, { op, opMax });
+              } else {
+                  const current = map.get(title);
+                  map.set(title, {
+                      op: Math.max(current.op, op),
+                      opMax: Math.max(current.opMax, opMax)
+                  });
+              }
+          });
+          return Array.from(map.values());
+      };
+
+      e.$$set = (newData) => {
+          if ("records" in newData) {
+              a = newData.records; 
+              n(3, a);
+          }
+      };
+  
+      e.$$.update = () => {
+          const groupedRecords = groupByTitle(a);  
+          if (8 & e.$$.dirty) n(1, r = groupedRecords.reduce((sum, song) => sum + song.op, 0));
+          if (8 & e.$$.dirty) n(0, o = groupedRecords.reduce((sum, song) => sum + song.opMax, 0));
+          if (3 & e.$$.dirty) n(2, s = (r / o) * 100);  
+      };
+  
+      return [o, r, s, a]; 
+  }
     const Io = class extends Se {
         constructor(e) {
           super(), je(this, e, _o, Oo, i, {
