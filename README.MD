@@ -22,7 +22,7 @@ javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.gi
  Executed on any non-specified page of [CHUNITHM-NET](https://chunithm-net-eng.com/mobile/home).
 
 - Friend Record Viewer：
- Select friend on [CHUNITHM-NET Friend VS](https://chunithm-net-eng.com/mobile/friend/genreVs/battleStart) page, click 'Battle Start' and then execute.
+ Select friend on [CHUNITHM-NET Friend VS](https://chunithm-net-eng.com/mobile/friend/genreVs) page, click 'Battle Start' and then execute.
 
 - Export Personal Record to CSV：
  Execute on [CHUNITHM-NET Login Bonus](https://chunithm-net-eng.com/mobile/loginBonus) page.
@@ -50,7 +50,7 @@ javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.gi
  於 [CHUNITHM-NET](https://chunithm-net-eng.com/mobile/home) <b>非指定</b>的網頁即可執行
 
 - 好友查分器：
- 需於 [CHUNITHM-NET 好友對決](https://chunithm-net-eng.com/mobile/friend/genreVs/battleStart)網頁選擇好友後，按下 Battle Start 再執行
+ 需於 [CHUNITHM-NET 好友對決](https://chunithm-net-eng.com/mobile/friend/genreVs)網頁選擇好友後，按下 Battle Start 再執行
 
 - 個人成績匯出 CSV：
  需於 [CHUNITHM-NET 登入獎勵](https://chunithm-net-eng.com/mobile/loginBonus)網頁執行
