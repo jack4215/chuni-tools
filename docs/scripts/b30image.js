@@ -55,7 +55,7 @@ async function handleMissingMasterSong(title) {
     }
 
     return {
-        title: title,
+        title: "Stardust:RAY",
         difficulty: "Master",
         score: score,
         isAllJustice: false,
