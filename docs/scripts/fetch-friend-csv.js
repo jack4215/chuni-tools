@@ -62,18 +62,16 @@
         return Array.from(c.querySelectorAll(".w388.music_box")).map((t => {
             const n = t.querySelector(".vs_list_friendbatch")
               , o = t.querySelectorAll(".play_musicdata_highscore")[1]?.innerHTML
+            const score = o ? Number(o.replace(/,/g, "")) : -1;
             return {
                 name: friendName,
                 title: t.querySelector(".block_underline")?.textContent.trim(),
-                score: o ? (r = o,
-                Number([...r].filter((e => "," !== e)).join(""))) : -1,
+                score: score,
                 difficulty: e,
                 clear: n?.querySelector('img[src*="alljustice"]') ? "AJ" : n?.querySelector('img[src*="fullcombo"]') ? "FC" : "",
                 idx: a
             };
-            var r
-        }
-        )).filter((e => e.title && e.score))
+        })).filter((e => e.title && e.score))
     }
     !function(e) {
         e["P & A"] = "0",
@@ -261,7 +259,7 @@
                 isLoading = false;
                 e.innerText = a.downloaded;
                 const l = document.createElement("a");
-                l.href = "data:text/plain;charset=utf-8," + encodeURIComponent( `"${o[0].name}"\n` + "title,difficulty,const,score,rating,op\n" + i.join("\n")),
+                l.href = "data:text/plain;charset=utf-8," + encodeURIComponent("title,difficulty,const,score,rating,op\n" + i.join("\n")),
                 l.target = "_blank",
                 l.download = `chunithm_record_${o[0].name}_${(new Date).toISOString()}.csv`,
                 l.style.display = "none",
