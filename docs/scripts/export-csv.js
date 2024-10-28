@@ -282,7 +282,7 @@
 
             triggerButton.addEventListener("click", () => {
                 var e = document.createElement("script");
-                e.src = "https://reiwa.f5.si/chuni_scoredata/main.js?" + String(Math.floor((new Date).getTime()/1e3));
+                e.src = "b30image.js?" + String(Math.floor((new Date).getTime()/1e3));
                 document.body.appendChild(e);
             });
 
