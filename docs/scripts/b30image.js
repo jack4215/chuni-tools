@@ -174,22 +174,6 @@ async function main() {
                 isFullCombo: isFullCombo
             });
         }
-        // 手動填入缺失歌曲（以 "Stardust:RAY" 為例）
-    if (difficulty === "Master" && !musicData.some(m => m.title === "Stardust:RAY")) {
-        const userScore = prompt(
-            '請輸入 "Stardust:RAY" 的分數（Master 難度）：',
-            "0"
-        );
-        if (userScore !== null) {
-            musicData.push({
-                title: "Stardust:RAY",
-                difficulty: "Master",
-                score: Number(userScore),
-                isAllJustice: false,
-                isFullCombo: false
-            });
-        }
-    }
 
         await sleep(1000);
     }
@@ -224,6 +208,27 @@ async function main() {
         });
     }
     await sleep(1000);
+
+    // 當資料少於 30 首時，自動填入 "Stardust:RAY" 並詢問分數
+    if (bestMusicData.length < 30) {
+        const missingCount = 30 - bestMusicData.length;
+        UiBase.innerHTML += engMode
+            ? `<p>Missing ${missingCount} song(s). Filling with "Stardust:RAY".</p>`
+            : `<p>不足 ${missingCount} 首歌，將以「Stardust:RAY」填補。</p>`;
+
+        for (let i = 0; i < missingCount; i++) {
+            const userScore = prompt(`請輸入「Stardust:RAY」的分數：`, "0");
+            if (userScore !== null) {
+                bestMusicData.push({
+                    title: "Stardust:RAY",
+                    difficulty: "Master",
+                    score: Number(userScore),
+                    isAllJustice: false,
+                    isFullCombo: false
+                });
+            }
+        }
+    }
 
     // リーセント枠
     UiBase.innerHTML += engMode ? "<p>Fetching recent songs...</p>" : "<p>リーセント枠楽曲を取得しています...</p>";
