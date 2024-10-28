@@ -122,35 +122,72 @@
                         }(e.source, e.origin);
                         let s;
                         switch (t.target) {
-                        case "bestRecord":
-                            console.log("%c    Target difficulty: %c" + t.data.difficulty, "color: gray", "color: white"),
-                            s = async function(e=o.master) {
-                                const t = new FormData;
-                                t.append("genre", "99"),
-                                t.append("token", r("_t"));
-                                const a = {
-                                    [o.ultima]: "sendUltima",
-                                    [o.master]: "sendMaster",
-                                    [o.expert]: "sendExpert",
-                                    [o.advanced]: "sendAdvanced",
-                                    [o.basic]: "sendBasic"
-                                }[e]
-                                  , c = await i("/mobile/record/musicGenre/" + a, t);
-                                return Array.from(c.querySelectorAll(".box01.w420")[1].querySelectorAll("form")).map((t => {
-                                    const r = t.querySelector(".play_musicdata_icon")
-                                      , a = t.querySelector(".text_b")?.innerHTML;
-                                    return {
-                                        title: t.querySelector(".music_title")?.innerHTML,
-                                        score: a ? n(a) : -1,
-                                        difficulty: e,
-                                        clear: r?.querySelector('img[src*="alljustice"]') ? "AJ" : r?.querySelector('img[src*="fullcombo"]') ? "FC" : "",
-                                        idx: t.querySelector('input[name="idx"]').value
+                            case "bestRecord":
+                                console.log("%c    Target difficulty: %c" + t.data.difficulty, "color: gray", "color: white"),
+                                s = async function(e=o.master) {
+                                    const t = new FormData;
+                                    t.append("genre", "99"),
+                                    t.append("token", r("_t"));
+                                    
+                                    const a = {
+                                        [o.ultima]: "sendUltima",
+                                        [o.master]: "sendMaster",
+                                        [o.expert]: "sendExpert",
+                                        [o.advanced]: "sendAdvanced",
+                                        [o.basic]: "sendBasic"
+                                    }[e];
+                                    
+                                    const c = await i("/mobile/record/musicGenre/" + a, t);
+                                    
+                                    const records = Array.from(c.querySelectorAll(".box01.w420")[1].querySelectorAll("form")).map((t => {
+                                        const r = t.querySelector(".play_musicdata_icon"),
+                                              a = t.querySelector(".text_b")?.innerHTML;
+                                        return {
+                                            title: t.querySelector(".music_title")?.innerHTML,
+                                            score: a ? n(a) : -1,
+                                            difficulty: e,
+                                            clear: r?.querySelector('img[src*="alljustice"]') ? "AJ" : r?.querySelector('img[src*="fullcombo"]') ? "FC" : "",
+                                            idx: t.querySelector('input[name="idx"]').value
+                                        };
+                                    })).filter((e => e.title && e.score));
+
+                                    const difficultyNames = {
+                                        [o.ultima]: "ultima",
+                                        [o.master]: "master",
+                                        [o.expert]: "expert",
+                                        [o.advanced]: "advanced",
+                                        [o.basic]: "basic"
+                                    };
                             
-                                    }
-                                }
-                                )).filter((e => e.title && e.score))
-                            }(t.data.difficulty);
-                            break;
+                                    const difficultyScore = sumScores(records);
+                                    const totalHighScore = await fetchTotalHighScore(difficultyNames[e]);
+                                    records.push({
+                                        title: "Stardust:RAY",
+                                        score: totalHighScore - difficultyScore === 0 ? -1 : totalHighScore - difficultyScore, 
+                                        difficulty: e,
+                                        clear: "",
+                                        idx: "2605"
+                                    });
+                                    
+                                    return records;
+                                }(t.data.difficulty);
+                                break;
+                            
+                            function sumScores(records) {
+                                return records.reduce((sum, record) => sum + (record.score !== -1 ? record.score : 0), 0);
+                            }                
+                            async function fetchTotalHighScore(difficulty) {
+                                const response = await fetch(`https://chunithm-net-eng.com/mobile/ranking/totalHighScore/${difficulty}`);
+                                const html = await response.text();
+                                const parser = new DOMParser();
+                                const doc = parser.parseFromString(html, "text/html");
+                            
+                                // 尋找 <div class="mb_5 text_b "> 中的總分
+                                const totalHighScoreDiv = doc.querySelector(".mb_5.text_b");
+                                return totalHighScoreDiv ? totalHighScoreDiv.innerText.replace(/,/g, "").trim() : "無法取得總分";
+                            }         
+                            
+                            
                         case "playHistory":
                             s = async function() {
                                 const e = await i("/mobile/record/playlog");
