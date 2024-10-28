@@ -45,8 +45,27 @@ function toISOStringWithTimezone(date) {
 
     return `${year}-${month}-${day}T${hour}:${min}:${sec}${sign}${tzHour}:${tzMin}`;
 }
+async function handleMissingMasterSong(title) {
+    const scoreInput = prompt(`請輸入「${title}」(Master) 的分數：`, "0");
+    const score = Number(scoreInput);
+
+    if (isNaN(score) || score < 0) {
+        alert("請輸入有效的數字分數！");
+        return null; // 無效輸入時回傳 null
+    }
+
+    return {
+        title: title,
+        difficulty: "Master",
+        score: score,
+        isAllJustice: false,
+        isFullCombo: false
+    };
+}
 
 async function main() {
+
+
     // https://note.affi-sapo-sv.com/js-sleep.php
     const sleep = waitTime => new Promise(resolve => setTimeout(resolve, waitTime));
 
