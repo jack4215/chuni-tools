@@ -45,27 +45,10 @@ function toISOStringWithTimezone(date) {
 
     return `${year}-${month}-${day}T${hour}:${min}:${sec}${sign}${tzHour}:${tzMin}`;
 }
-async function handleMissingMasterSong(title) {
-    const scoreInput = prompt(`請輸入「${title}」(Master) 的分數：`, "0");
-    const score = Number(scoreInput);
-
-    if (isNaN(score) || score < 0) {
-        alert("請輸入有效的數字分數！");
-        return null; // 無效輸入時回傳 null
-    }
-
-    return {
-        title: "Stardust:RAY",
-        difficulty: "Master",
-        score: score,
-        isAllJustice: false,
-        isFullCombo: false
-    };
-}
 
 async function main() {
 
-
+    
     // https://note.affi-sapo-sv.com/js-sleep.php
     const sleep = waitTime => new Promise(resolve => setTimeout(resolve, waitTime));
 
@@ -191,6 +174,22 @@ async function main() {
                 isFullCombo: isFullCombo
             });
         }
+        // 手動填入缺失歌曲（以 "Stardust:RAY" 為例）
+    if (difficulty === "Master" && !musicData.some(m => m.title === "Stardust:RAY")) {
+        const userScore = prompt(
+            '請輸入 "Stardust:RAY" 的分數（Master 難度）：',
+            "0"
+        );
+        if (userScore !== null) {
+            musicData.push({
+                title: "Stardust:RAY",
+                difficulty: "Master",
+                score: Number(userScore),
+                isAllJustice: false,
+                isFullCombo: false
+            });
+        }
+    }
 
         await sleep(1000);
     }
