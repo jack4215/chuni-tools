@@ -142,11 +142,9 @@
                                 const records = Array.from(c.querySelectorAll(".w388.music_box")).map((t => {
                                     const r = t.querySelector(".vs_list_friendbatch")
                                       , a = t.querySelectorAll(".play_musicdata_highscore")[1]?.innerHTML;
-                                      let scoreValue = a ? n(a) : -1;
-                                      scoreValue = (scoreValue === 0) ? "-" : scoreValue;
                                     return {
                                         title: t.querySelector(".block_underline")?.textContent.trim(),
-                                        score: scoreValue,
+                                        score: a && a !== "0" ? n(a) : -1,
                                         difficulty: e,
                                         clear: r?.querySelector('img[src*="alljustice"]') ? "AJ" : r?.querySelector('img[src*="fullcombo"]') ? "FC" : "",
                                         idx: "9999"
