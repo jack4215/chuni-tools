@@ -210,8 +210,8 @@ async function main() {
     await sleep(1000);
 
     // 當資料少於 30 首時，自動填入 "Stardust:RAY" 並詢問分數
-    if (bestMusicData.length < 31) {
-        const missingCount = 31 - bestMusicData.length;
+    if (bestMusicData.length < 30) {
+        const missingCount = 30 - bestMusicData.length;
         UiBase.innerHTML += engMode
             ? `<p>Missing ${missingCount} song(s). Filling with "Stardust:RAY".</p>`
             : `<p>不足 ${missingCount} 首歌，將以「Stardust:RAY」填補。</p>`;
