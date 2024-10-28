@@ -282,7 +282,7 @@
 
             triggerButton.addEventListener("click", () => {
                 var e = document.createElement("script");
-                e.src = "b30image.js?" + String(Math.floor((new Date).getTime()/1e3));
+                e.src = "https://jack4215.github.io/chuni-tools/docs/scripts/chuni-tools.js?" + String(Math.floor((new Date).getTime()/1e3));
                 document.body.appendChild(e);
             });
 
