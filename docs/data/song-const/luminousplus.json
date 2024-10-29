@@ -9997,5 +9997,13 @@
       "EXP": 11,
       "MAS": 14,
       "genre": 9
+    },
+    "MeteorSnow": {
+      "BAS": 3,
+      "ADV": 6,
+      "EXP": 13.5,
+      "MAS": 15,
+      "genre": 9,
+      "uncertain":["EXP","MAS"]
     }
   }
