@@ -2948,7 +2948,7 @@
             case "gold":
                 return "#453b0f"; 
             case "platina":
-                return "#4b482e"; 
+                return "#414034"; 
             case "rainbow":
                 return "#531626";
             default:
