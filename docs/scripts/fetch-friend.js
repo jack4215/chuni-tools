@@ -165,34 +165,56 @@
                                 });
                             }();
                             break;
-                            case "recentRecord":
-                                s = async function() {
-                                    return Array.from({ length: 10 }).map(() => {
-                                        return {
-                                            title: "unknown",
-                                            score: "0",
-                                            difficulty: "--",
-                                            clear: ""
-                                        };
-                                    });
-                                }();
-                                break;
-                        case "playerStats":
+                        case "recentRecord":
                             s = async function() {
-                                const e = await i("/mobile/friend/genreVs/battleStart")
-                                  return {
-                                    name: e.querySelector('select[name="friend"] option[selected]')?.innerHTML,
-                                    honor: {
-                                        text: "unknown",
-                                        color: "normal"
-                                    },
-                                    rating: "--",
-                                    ratingMax: "--",
-                                    playCount: "--",
-                                    lastPlayed: "--"
-                                }
+                                return Array.from({ length: 10 }).map(() => {
+                                    return {
+                                        title: "unknown",
+                                        score: "0",
+                                        difficulty: "--",
+                                        clear: ""
+                                    };
+                                });
                             }();
                             break;
+                        case "playerStats":
+                            s = async function() {
+                                const e = await i("/mobile/friend");
+                                const selectedFriendIdx = document.querySelector('select[name="friend"]').value;
+                                const friendBlock = Array.from(e.querySelectorAll(".friend_block")).find(block => 
+                                    block.querySelector('input[name="idx"]')?.value === selectedFriendIdx
+                                );
+                                if (!friendBlock) {
+                                    throw new Error("Selected friend not found");
+                                }
+                                const t = friendBlock.querySelector(".player_honor_short")
+                                 , r = /honor_bg_.*(?=\.png)/.exec(t.style.backgroundImage)
+                                 , a = Array.from(friendBlock.querySelectorAll(".player_rating_num_block img"))
+                                    .map(img => /rating_.*_comma.png/.test(img.src) ? "." : /rating_.*_[0-9]*(?=\.png)/.exec(img.src)[0].slice(-1))
+                                    .join("");
+                                const profileDiv = friendBlock.querySelector(".box_playerprofile.clearfix, .box_playerprofile");
+                                let background = "normal";
+                                if (profileDiv) {
+                                    const styleAttr = profileDiv.getAttribute("style");
+                                    const match = styleAttr.match(/profile_(\w+)\.png/);
+                                    if (match && match[1]) {
+                                        background = match[1];
+                                    }
+                                }
+                                return {
+                                    name: friendBlock.querySelector(".player_name_in a").innerHTML,
+                                    honor: {
+                                        text: friendBlock.querySelector(".player_honor_text_view span").innerHTML,
+                                        color: r ? r[0].slice(9) : "normal"
+                                    },
+                                    rating: a,
+                                    ratingMax: friendBlock.querySelector(".player_rating_max").innerHTML,
+                                    playCount: "--", 
+                                    lastPlayed: "--", 
+                                    ratingPn: background
+                                };
+                            }();
+                            break;                            
                         case "songPlayCount":                  
                             s = async function() {
                                 return "-";
