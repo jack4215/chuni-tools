@@ -209,28 +209,25 @@ async function main() {
     }
     await sleep(1000);
 
-    // 當資料少於 30 首時，自動填入 "Stardust:RAY" 並詢問分數
+    // "Stardust:RAY" 
     if (bestMusicData.length < 30) {
-        const missingCount = 30 - bestMusicData.length;
         UiBase.innerHTML += engMode
-            ? `<p>Missing ${missingCount} song(s). Filling with "Stardust:RAY".</p>`
-            : `<p>不足 ${missingCount} 首歌，將以「Stardust:RAY」填補。</p>`;
-
-        for (let i = 0; i < missingCount; i++) {
-            let userScore;
-            do {
-                userScore = prompt(`請輸入「Stardust:RAY」的分數：`);
-                userScore = Number(userScore);
-            } while (!Number.isInteger(userScore) || userScore <= 0);
+            ? `<p>Missing some songs. Filling with "Stardust:RAY".</p>`
+            : `<p>不足的歌曲將以「Stardust:RAY」填補。</p>`;
         
-            bestMusicData.push({
-                title: "Stardust:RAY",
-                difficulty: "Master",
-                score: userScore,
-                isAllJustice: false,
-                isFullCombo: false
-            });
-        }
+        let userScore;
+        do {
+            userScore = prompt(`請輸入「Stardust:RAY」的分數：`);
+            userScore = Number(userScore);
+        } while (!Number.isInteger(userScore) || userScore <= 0);
+
+        bestMusicData.push({
+            title: "Stardust:RAY",
+            difficulty: "Master",
+            score: userScore,
+            isAllJustice: false,
+            isFullCombo: false
+        });
     }
 
     // リーセント枠
