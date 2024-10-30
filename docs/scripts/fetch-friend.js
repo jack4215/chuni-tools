@@ -121,7 +121,6 @@
                             }
                         }(e.source, e.origin);
                         let s;
-                     //   let bestRecordName = "";
                         switch (t.target) {
                         case "bestRecord":
                             console.log("%c    Target difficulty: %c" + t.data.difficulty, "color: gray", "color: white"),
