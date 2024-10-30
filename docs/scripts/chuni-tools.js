@@ -48,7 +48,7 @@
                     }
                 }
                 return "https://jack4215.github.io/chuni-tools"
-            }()}/scripts/${n}.js`,
+            }()}/scripts/${n}.js?t=${Date.now()}`,
             o.body.append(e)
         }
         const i = o.location.pathname;
