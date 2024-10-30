@@ -2946,11 +2946,11 @@
             case "silver":
                 return "#023751"; 
             case "gold":
-                return "#4f4517"; 
+                return "#453b0f"; 
             case "platina":
-                return "#4f4d41"; 
+                return "#4b482e"; 
             case "rainbow":
-                return "35161e";
+                return "#531626";
             default:
                 return null;
         }
