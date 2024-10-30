@@ -2950,7 +2950,7 @@
             case "platina":
                 return "#414034"; 
             case "rainbow":
-                return "#531626";
+                return "#45242c";
             default:
                 return null;
         }
