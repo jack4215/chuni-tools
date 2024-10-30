@@ -148,7 +148,7 @@
                                         };
                                     })).filter((e => e.title && e.score));
                                     // Add hidden song
-                                    const difficultyNames = {
+                                 /*   const difficultyNames = {
                                         [o.ultima]: "ultima",
                                         [o.master]: "master",
                                         [o.expert]: "expert",
@@ -164,12 +164,12 @@
                                         clear: "",
                                         idx: "2605"
                                     });
-                                    return records;
+                                    return records;*/
                                     // Add hidden song end
                                 }(t.data.difficulty);
                                 break;
                             // Calculate total score
-                            function sumScores(records) {
+                        /*    function sumScores(records) {
                                 return records.reduce((sum, record) => sum + (record.score !== -1 ? record.score : 0), 0);
                             }                
                             async function fetchTotalHighScore(difficulty) {
@@ -179,7 +179,7 @@
                                 const doc = parser.parseFromString(html, "text/html");                        
                                 const totalHighScoreDiv = doc.querySelector(".mb_5.text_b");
                                 return totalHighScoreDiv ? totalHighScoreDiv.innerText.replace(/,/g, "").trim() : "Error";
-                            }         
+                            }      */   
                             // Calculate total score end         
                         case "playHistory":
                             s = async function() {
