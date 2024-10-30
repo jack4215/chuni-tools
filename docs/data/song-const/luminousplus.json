@@ -9999,11 +9999,10 @@
       "genre": 9
     },
     "MeteorSnow": {
-      "BAS": 3,
-      "ADV": 6,
-      "EXP": 13.5,
+      "BAS": 5,
+      "ADV": 8,
+      "EXP": 13.7,
       "MAS": 15,
-      "genre": 9,
-      "uncertain":["EXP","MAS"]
+      "genre": 9
     }
 }
