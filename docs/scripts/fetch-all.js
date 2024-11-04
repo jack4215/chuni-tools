@@ -158,7 +158,7 @@
                                     const difficultyScore = sumScores(records);
                                     const totalHighScore = await fetchTotalHighScore(difficultyNames[e]);
                                 /*    records.push({
-                                        title: "Stardust:RAY",
+                                        title: "Latent Kingdom",
                                         score: totalHighScore - difficultyScore === 0 ? -1 : totalHighScore - difficultyScore, 
                                         difficulty: e,
                                         clear: "",
