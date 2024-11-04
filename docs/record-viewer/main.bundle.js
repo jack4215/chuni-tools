@@ -1062,7 +1062,7 @@
       Tt = vt(!1),
       Ct = {};
     for (let e of tt.accepts) Ct[e] = void 0;
-    const Mt = Me(tt, (async e => (Ct[e] || (Ct[e] = await fetch(`../data/song-const/${e}.json`).then((async e => await e.json()))), Ct[e])));
+    const Mt = Me(tt, (async e => (Ct[e] || (Ct[e] = await fetch(`../data/song-const/${e}.json?t=${Date.now()}`).then((async e => await e.json()))), Ct[e])));
 
     function Et(e) {
       const {
