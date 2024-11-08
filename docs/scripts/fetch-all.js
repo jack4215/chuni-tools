@@ -164,8 +164,8 @@
                                         clear: "",
                                         idx: "2605"
                                     });*/
-                                    return records;
                                     // Add hidden song end
+                                    return records;
                                 }(t.data.difficulty);
                                 break;
                             // Calculate total score
