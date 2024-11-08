@@ -157,7 +157,7 @@
                                 return Array.from({ length: 50 }).map(() => {
                                     return {
                                         title: "unknown",
-                                        score: "0",
+                                        score: -1,
                                         difficulty: "--",
                                         clear: ""
                                     };
@@ -169,7 +169,7 @@
                                 return Array.from({ length: 10 }).map(() => {
                                     return {
                                         title: "unknown",
-                                        score: "0",
+                                        score: -1,
                                         difficulty: "--",
                                         clear: ""
                                     };
