@@ -10005,5 +10005,47 @@
       "EXP": 13.7,
       "MAS": 15,
       "genre": 9
+    },
+    "Sleep Walking Orchestra": {
+      "BAS": 2,
+      "ADV": 5,
+      "EXP": 9,
+      "MAS": 11.5,
+      "genre": 0
+    },
+    "自称、音楽愛好家": {
+      "BAS": 2,
+      "ADV": 5,
+      "EXP": 9.5,
+      "MAS": 13,
+      "genre": 2
+    },
+    "What's up? Pop!": {
+      "BAS": 4,
+      "ADV": 8,
+      "EXP": 14,
+      "MAS": 15.1,
+      "genre": 2
+    },
+    "まにまに": {
+      "BAS": 3,
+      "ADV": 6,
+      "EXP": 10,
+      "MAS": 13,
+      "genre": 2
+    },
+    "Acid God": {
+      "BAS": 4,
+      "ADV": 9.5,
+      "EXP": 14,
+      "MAS": 15.2,
+      "genre": 5
+    },
+    "Forsaken Tale": {
+      "BAS": 5,
+      "ADV": 8,
+      "EXP": 14.7,
+      "MAS": 15.5,
+      "genre": 5
     }
 }
