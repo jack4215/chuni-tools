@@ -26,7 +26,7 @@ let totalScore = calculateScore(justiceCritical, justice, attack, miss);
 
 while (justice > 0) {
     totalScore = calculateScore(justiceCritical, justice, attack, miss);
-    if (totalScore >= targetScore) break;
+    if (totalScore > targetScore) break;
 
     justice--;
     justiceCritical++;
@@ -41,7 +41,7 @@ while (justice >= 50) {
     justiceCritical += 49;
 
     totalScore = calculateScore(justiceCritical, justice, attack, miss);
-    if (totalScore >= targetScore) break;
+    if (totalScore > targetScore) break;
 }
 
 while (totalScore < targetScore && justice > 0) {
@@ -85,7 +85,7 @@ let bestAttack2 = 0;
 
 while (justice > 0) {
     totalScore2 = calculateScore(justiceCritical, justice, attack, miss);
-    if (totalScore2 >= targetScore2) break;
+    if (totalScore2 > targetScore2) break;
 
     justice--;
     justiceCritical++;
@@ -99,7 +99,7 @@ while (justice >= 50) {
     attack++;
     justiceCritical += 49;
     totalScore2 = calculateScore(justiceCritical, justice, attack, miss);
-    if (totalScore2 >= targetScore2) break;
+    if (totalScore2 > targetScore2) break;
 }
 
 while (totalScore2 < targetScore2 && justice > 0) {
