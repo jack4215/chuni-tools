@@ -86,6 +86,12 @@ const results = targetScores.map(({ score: targetScore, label }) => {
     };
 });
 
+results.forEach(result => {
+    if (result.bestJustice === 0 && result.bestAttack === 0) {
+        result.totalScore = 1010000;
+    }
+});
+
 function insertResult() {
     const resultContainer = document.createElement("div");
     resultContainer.className = "chuni-result-container";
