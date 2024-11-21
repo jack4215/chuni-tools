@@ -9,7 +9,11 @@ justice = totalNotes;
 attack = 0;
 miss = 0;
 
-const targetScore = 1007500;
+const targetScores = [
+    { score: 1007500, label: "SSS" },
+    { score: 1009000, label: "SSS+" },
+    { score: 1009900, label: "99AJ" }
+];
 
 function calculateScore(justiceCritical, justice, attack, miss) {
     const baseScore = 1000000 / totalNotes; 
@@ -19,127 +23,80 @@ function calculateScore(justiceCritical, justice, attack, miss) {
     return scoreJusticeCritical + scoreJustice + scoreAttack;
 }
 
-let bestJusticeCritical1 = 0;
-let bestJustice1 = totalNotes;
-let bestAttack1 = 0;
-let totalScore = calculateScore(justiceCritical, justice, attack, miss);
+const results = targetScores.map(({ score: targetScore, label }) => {
+    let jc = 0, j = totalNotes, a = 0, m = 0;
+    let bestJusticeCritical = 0;
+    let bestJustice = totalNotes;
+    let bestAttack = 0;
+    let totalScore = calculateScore(jc, j, a, m);
 
-while (justice > 0) {
-    totalScore = calculateScore(justiceCritical, justice, attack, miss);
-    if (totalScore >= targetScore) break;
-
-    justice--;
-    justiceCritical++;
-}
-bestJusticeCritical1 = justiceCritical;
-bestJustice1 = justice;
-bestAttack1 = attack;
-
-while (justice >= 50) {
-    justice -= 50;
-    attack++;
-    justiceCritical += 49;
-
-    totalScore = calculateScore(justiceCritical, justice, attack, miss);
-    if (totalScore > targetScore) break;
-}
-
-while (totalScore < targetScore && justice > 0) {
-    justice--;
-    justiceCritical++;
-    totalScore = calculateScore(justiceCritical, justice, attack, miss);
-}
-bestJusticeCritical1 = justiceCritical;
-bestJustice1 = justice;
-bestAttack1 = attack;
-
-if (totalScore < targetScore) {
-    while (attack > 0 && totalScore < targetScore) {
-        attack--;
-        justice += 50;
-        justiceCritical -= 49;
-        totalScore = calculateScore(justiceCritical, justice, attack, miss);
+    while (j > 0) {
+        totalScore = calculateScore(jc, j, a, m);
         if (totalScore >= targetScore) break;
 
-        while (justice > 0 && totalScore < targetScore) {
-            justice--;
-            justiceCritical++;
-            totalScore = calculateScore(justiceCritical, justice, attack, miss);
+        j--;
+        jc++;
+    }
+    bestJusticeCritical = jc;
+    bestJustice = j;
+    bestAttack = a;
+
+    while (j >= 50) {
+        j -= 50;
+        a++;
+        jc += 49;
+        totalScore = calculateScore(jc, j, a, m);
+        if (totalScore > targetScore) break;
+    }
+    while (totalScore < targetScore && j > 0) {
+        j--;
+        jc++;
+        totalScore = calculateScore(jc, j, a, m);
+    }
+    bestJusticeCritical = jc;
+    bestJustice = j;
+    bestAttack = a;
+
+    if (totalScore < targetScore) {
+        while (a > 0 && totalScore < targetScore) {
+            a--;
+            j += 50;
+            jc -= 49;
+            totalScore = calculateScore(jc, j, a, m);
+            if (totalScore >= targetScore) break;
+
+            while (j > 0 && totalScore < targetScore) {
+                j--;
+                jc++;
+                totalScore = calculateScore(jc, j, a, m);
+            }
         }
+        bestJusticeCritical = jc;
+        bestJustice = j;
+        bestAttack = a;
     }
 
-    bestJusticeCritical1 = justiceCritical;
-    bestJustice1 = justice;
-    bestAttack1 = attack;
-}
-
-const targetScore2 = 1009000;
-justiceCritical = 0;
-justice = totalNotes;
-attack = 0;
-miss = 0;
-let totalScore2 = calculateScore(justiceCritical, justice, attack, miss);
-let bestJusticeCritical2 = 0;
-let bestJustice2 = totalNotes;
-let bestAttack2 = 0;
-
-while (justice > 0) {
-    totalScore2 = calculateScore(justiceCritical, justice, attack, miss);
-    if (totalScore2 >= targetScore2) break;
-
-    justice--;
-    justiceCritical++;
-}
-bestJusticeCritical2 = justiceCritical;
-bestJustice2 = justice;
-bestAttack2 = attack;
-
-while (justice >= 50) {
-    justice -= 50;
-    attack++;
-    justiceCritical += 49;
-    totalScore2 = calculateScore(justiceCritical, justice, attack, miss);
-    if (totalScore2 > targetScore2) break;
-}
-
-while (totalScore2 < targetScore2 && justice > 0) {
-    justice--;
-    justiceCritical++;
-    totalScore2 = calculateScore(justiceCritical, justice, attack, miss);
-}
-bestJusticeCritical2 = justiceCritical;
-bestJustice2 = justice;
-bestAttack2 = attack;
-
-if (totalScore2 < targetScore2) {
-    while (attack > 0 && totalScore2 < targetScore2) {
-        attack--;
-        justice += 50;
-        justiceCritical -= 49;
-        totalScore2 = calculateScore(justiceCritical, justice, attack, miss);
-        if (totalScore2 >= targetScore2) break;
-
-        while (justice > 0 && totalScore2 < targetScore2) {
-            justice--;
-            justiceCritical++;
-            totalScore2 = calculateScore(justiceCritical, justice, attack, miss);
-        }
-    }
-    bestJusticeCritical2 = justiceCritical;
-    bestJustice2 = justice;
-    bestAttack2 = attack;
-}
+    return {
+        label: label,
+        targetScore: targetScore,
+        totalScore: Math.floor(totalScore),
+        bestJusticeCritical: bestJusticeCritical,
+        bestJustice: bestJustice,
+        bestAttack: bestAttack
+    };
+});
 
 function insertResult() {
     const resultContainer = document.createElement("div");
     resultContainer.className = "chuni-result-container";
 
-    const resultContent = `
-        <p>SSS: ${Math.floor(totalScore)}<br>
-        ( ${bestJusticeCritical1}-${bestJustice1}-${bestAttack1}-0 )${bestAttack1 > 0 ? ` , ( ${bestJusticeCritical1 - 50}-${bestJustice1 + 51}-${bestAttack1 - 1}-0 )...` : ""}</p><br>
-        <p>SSS+: ${Math.floor(totalScore2)}<br>
-        ( ${bestJusticeCritical2}-${bestJustice2}-${bestAttack2}-0 )${bestAttack2 > 0 ? ` , ( ${bestJusticeCritical2 - 50}-${bestJustice2 + 51}-${bestAttack2 - 1}-0 )...` : ""}</p>
-    `;
+    const resultContent = results.map(result => `
+        <p>${result.label} : ${result.totalScore}<br>
+        (${result.bestJusticeCritical}-${result.bestJustice}-${result.bestAttack}-0)
+        ${result.bestAttack > 0 ? ` , (${result.bestJusticeCritical - 50}-${result.bestJustice + 51}-${result.bestAttack - 1}-0)...` : ""}
+        </p>
+    `).join("<br>");
+
     resultContainer.innerHTML = resultContent;
 
     const style = document.createElement("style");
