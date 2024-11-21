@@ -132,7 +132,7 @@ if (totalScore2 < targetScore2) {
 
 alert(
     "最低要求：\n" + 
-    "SSS    : ( " + bestJusticeCritical1 + "-" + bestJustice1 + "-" + bestAttack1 + "-0 ) : " + Math.round(totalScore) + "\n" + 
-    "SSS+ : ( " + bestJusticeCritical2 + "-" + bestJustice2 + "-" + bestAttack2 + "-0 ) : " + Math.round(totalScore2) +
-    "\n\n1 Miss = 2 Attack = 100 Justice"
+    "SSS    : " + Math.round(totalScore) + "\n( " + bestJusticeCritical1 + "-" + bestJustice1 + "-" + bestAttack1 + "-0 ) , ( " + (bestJusticeCritical1 - 50) + "-" + (bestJustice1 + 51) + "-" + (bestAttack1 - 1) + "-0 )...\n" +
+    "SSS+ : " + Math.round(totalScore2) + "\n( " + bestJusticeCritical2 + "-" + bestJustice2 + "-" + bestAttack2 + "-0 ) , ( " + (bestJusticeCritical2 - 50) + "-" + (bestJustice2 + 51) + "-" + (bestAttack2 - 1) + "-0 )...\n" +
+    "\n1 Miss = 2 Attack = 100 Justice"
 );
