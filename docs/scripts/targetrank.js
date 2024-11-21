@@ -130,17 +130,33 @@ if (totalScore2 < targetScore2) {
     bestAttack2 = attack;
 }
 
-alert(
-    "最低要求：\n" +
-    "SSS    : " + Math.floor(totalScore) + "\n( " +
-    bestJusticeCritical1 + "-" + bestJustice1 + "-" + bestAttack1 + "-0 )" +
-    (bestAttack1 > 0 
-        ? " , ( " + (bestJusticeCritical1 - 50) + "-" + (bestJustice1 + 51) + "-" + (bestAttack1 - 1) + "-0 )"
-        : "") + "...\n" +
-    "SSS+ : " + Math.floor(totalScore2) + "\n( " +
-    bestJusticeCritical2 + "-" + bestJustice2 + "-" + bestAttack2 + "-0 )" +
-    (bestAttack2 > 0 
-        ? " , ( " + (bestJusticeCritical2 - 50) + "-" + (bestJustice2 + 51) + "-" + (bestAttack2 - 1) + "-0 )"
-        : "") + "...\n" +
-    "\n1 Miss = 2 Attack = 100 Justice"
-);
+function insertResult() {
+    const resultContainer = document.createElement("div");
+    resultContainer.className = "chuni-result-container";
+
+    const resultContent = `
+        <p>SSS: ${Math.floor(totalScore)}<br>
+        ( ${bestJusticeCritical1}-${bestJustice1}-${bestAttack1}-0 )${bestAttack1 > 0 ? ` , ( ${bestJusticeCritical1 - 50}-${bestJustice1 + 51}-${bestAttack1 - 1}-0 )...` : ""}</p><br>
+        <p>SSS+: ${Math.floor(totalScore2)}<br>
+        ( ${bestJusticeCritical2}-${bestJustice2}-${bestAttack2}-0 )${bestAttack2 > 0 ? ` , ( ${bestJusticeCritical2 - 50}-${bestJustice2 + 51}-${bestAttack2 - 1}-0 )...` : ""}</p>
+    `;
+    resultContainer.innerHTML = resultContent;
+
+    const style = document.createElement("style");
+    style.textContent = `
+        .chuni-result-container {
+            padding: 8px;
+            background-color: #405c7b;
+            margin: 10px auto 10px auto;
+            width: 420px;
+            font-family: Arial, sans-serif;
+        }
+        .chuni-result-container p {
+            margin: 5px 0;
+            color: #ededed;
+        }
+    `;
+    document.head.appendChild(style);
+    document.querySelector(".box01")?.insertAdjacentElement("afterend", resultContainer);
+}
+insertResult();
