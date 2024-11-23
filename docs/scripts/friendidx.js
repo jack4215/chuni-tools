@@ -1,31 +1,25 @@
 function displayFriendIdx() {
     const friendForms = document.querySelectorAll(".friend_btn_block form");
     const idxInput = friendForms[0].querySelector("input[name='idx']");
-    const resultText = idxInput.value.trim();
-    const userChoice = confirm(`Friend Code：${resultText}\n是否複製？`);
+    const idxValue = idxInput.value;
+    const userChoice = confirm(`Friend Code：${idxValue}\n是否複製？Copy?`);
     if (userChoice) {
-        if (navigator.clipboard && navigator.clipboard.write) {
-            const blobPromise = new Promise((resolve) => {
-                const blob = new Blob([resultText], { type: "text/plain" });
-                resolve(blob);
-            });
-            const clipboardItem = new ClipboardItem({
-                "text/plain": blobPromise,
-            });
-            navigator.clipboard.write([clipboardItem]).catch((err) => {
-                alert(`Error：${err.message}`);
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(idxValue).catch(err => {
+                alert(err.message);
             });
         } else {
-            const tempInput = document.createElement("textarea");
-            tempInput.value = resultText;
-            document.body.appendChild(tempInput);
-            tempInput.select();
             try {
+                const tempTextarea = document.createElement("textarea");
+                tempTextarea.value = idxValue;
+                document.body.appendChild(tempTextarea);
+                tempTextarea.select();
                 document.execCommand("copy");
+                document.body.removeChild(tempTextarea);
             } catch (err) {
-                alert(`Error：${err.message}`);
+                alert(err.message);
             }
-            document.body.removeChild(tempInput);
         }
     }
 }
+displayFriendIdx();
