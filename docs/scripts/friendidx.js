@@ -14,8 +14,9 @@ function displayFriendIdx() {
                 tempTextarea.value = idxValue;
                 document.body.appendChild(tempTextarea);
                 tempTextarea.select();
-                document.execCommand("copy");
+                const successful = document.execCommand("copy");
                 document.body.removeChild(tempTextarea);
+                if (!successful) throw new Error("Error");
             } catch (err) {
                 alert(err.message);
             }
