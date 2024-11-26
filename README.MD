@@ -34,7 +34,7 @@ javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.gi
  Execute on [CHUNITHM-NET Point book](https://chunithm-net-eng.com/mobile/netStore/netpointLog) page.
 
 - Target Rank Score Calculation：
- Execute on [CHUNITHM-NET Play Record Details](https://chunithm-net-eng.com/mobile/record/playlog) page.
+ Select song on [CHUNITHM-NET Play Record](https://chunithm-net-eng.com/mobile/record/playlog) page, click 'Details' and then execute.
 
 # CHUNITHM Tools (國際版)
 
@@ -68,4 +68,4 @@ javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.gi
  需於 [CHUNITHM-NET PT 點數紀錄](https://chunithm-net-eng.com/mobile/netStore/netpointLog)網頁執行
 
 - 目標評級分數計算：
- 需於 [CHUNITHM-NET 詳細遊玩紀錄](https://chunithm-net-eng.com/mobile/record/playlog)網頁執行
+ 需於 [CHUNITHM-NET 詳細遊玩紀錄](https://chunithm-net-eng.com/mobile/record/playlog)網頁選擇歌曲後，按下 Details 再執行
