@@ -16,7 +16,7 @@ JP 20241114v1
 javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.github.io/chuni-tools/scripts/chuni-tools.js?t='+Math.floor(Date.now()/60000);d.body.append(s);})(document);
 ```
 
-2. Navigate to [CHUNITHM-NET](https://chunithm-net-eng.com/mobile/home) and open the bookmark. This tool offers 4 features.
+2. Navigate to [CHUNITHM-NET](https://chunithm-net-eng.com/mobile/home) and open the bookmark. This tool offers 6 features.
 
 - Personal Record Viewer：
  Executed on any non-specified page of [CHUNITHM-NET](https://chunithm-net-eng.com/mobile/home).
@@ -29,6 +29,12 @@ javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.gi
 
 - Export Team Ranking to CSV：
  Execute on [CHUNITHM-NET Team Ranking](https://chunithm-net-eng.com/mobile/ranking/teamPoint) page.
+
+- P-Point Monthly Statistics：
+ Execute on [CHUNITHM-NET Point book](https://chunithm-net-eng.com/mobile/netStore/netpointLog) page.
+
+- Target Rank Score Calculation：
+ Execute on [CHUNITHM-NET Play Record Details](https://chunithm-net-eng.com/mobile/record/playlogDetail) page.
 
 # CHUNITHM Tools (國際版)
 
@@ -44,7 +50,7 @@ JP 20241114v1
 javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.github.io/chuni-tools/scripts/chuni-tools.js?t='+Math.floor(Date.now()/60000);d.body.append(s);})(document);
 ```
 
-2. 至 [CHUNITHM-NET](https://chunithm-net-eng.com/mobile/home) 並開啟該書籤，本工具共有 4 項功能
+2. 至 [CHUNITHM-NET](https://chunithm-net-eng.com/mobile/home) 並開啟該書籤，本工具共有 6 項功能
 
 - 個人查分器：
  於 [CHUNITHM-NET](https://chunithm-net-eng.com/mobile/home) <b>非指定</b>的網頁即可執行
@@ -57,3 +63,9 @@ javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.gi
 
 - 團隊排名匯出 CSV：
  需於 [CHUNITHM-NET 團隊排名](https://chunithm-net-eng.com/mobile/ranking/teamPoint)網頁執行
+
+- P-Point 月統計：
+ 需於 [CHUNITHM-NET PT 點數紀錄](https://chunithm-net-eng.com/mobile/netStore/netpointLog)網頁執行
+
+- 目標評級分數計算：
+ 需於 [CHUNITHM-NET 詳細遊玩紀錄](https://chunithm-net-eng.com/mobile/record/playlogDetail)網頁執行
