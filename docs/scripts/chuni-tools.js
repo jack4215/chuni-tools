@@ -37,19 +37,8 @@
             void (r.location.href = t);
         function s(n) {
             const e = o.createElement("script");
-            e.src = `${function(n) {
-                const e = Array.from(document.querySelectorAll("script"));
-                for (; e.length; ) {
-                    const n = e.pop();
-                    if (n?.src.includes("chuni-tools")) {
-                        const e = new URL(n.src)
-                          , t = e.pathname;
-                        return e.origin + t.substring(0, t.lastIndexOf("/scripts"))
-                    }
-                }
-                return "https://chuni.tsaibee.org"
-            }()}/scripts/${n}.js?t=${Date.now()}`,
-            o.body.append(e)
+            e.src = `https://chuni.tsaibee.org/scripts/${n}.js?t=${Date.now()}`;
+            o.body.append(e);
         }
         const i = o.location.pathname;
         -1 != i.indexOf("/mobile/home/userOption/updateUserName") ? s("idxmap-generate") : -1 != i.indexOf("/mobile/loginBonus") ? s("export-csv") : -1 != i.indexOf("/mobile/ranking/teamPoint/") ? s("team-ranking") : -1 != i.indexOf("/mobile/friend/friendDetail/") ? s("friendidx") : -1 != i.indexOf("/mobile/record/playlogDetail/") ? (s("targetrank"), setTimeout(() => {s("fetch-all");}, 5)) : -1 != i.indexOf("/mobile/friend/genreVs/battleStart")  ? (s("fetch-friend-csv"), setTimeout(() => {s("fetch-friend");}, 5)) : -1 != i.indexOf("/mobile/netStore/netpointLog")  ? (s("ptcount"), setTimeout(() => {s("fetch-all");}, 5)) : s("fetch-all")
