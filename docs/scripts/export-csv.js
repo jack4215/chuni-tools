@@ -11,7 +11,7 @@
                 return e.origin + t.substring(0, t.lastIndexOf("/scripts"))
             }
         }
-        return "https://jack4215.github.io/chuni-tools"
+        return "https://chuni.tsaibee.org"
     }
     function n(e) {
         const t = document.cookie.split(";").map((e => decodeURIComponent(e.trim()))).map((e => e.split("="))).find((t => t[0] === e));
@@ -282,7 +282,7 @@
 
             triggerButton.addEventListener("click", () => {
                 var e = document.createElement("script");
-                e.src = "https://jack4215.github.io/chuni-tools/scripts/b30image.js?" + String(Math.floor((new Date).getTime()/1e3));
+                e.src = "https://chuni.tsaibee.org/scripts/b30image.js?" + String(Math.floor((new Date).getTime()/1e3));
                 document.body.appendChild(e);
             });
 

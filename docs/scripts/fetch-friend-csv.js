@@ -11,7 +11,7 @@
                 return e.origin + t.substring(0, t.lastIndexOf("/scripts"))
             }
         }
-        return "https://jack4215.github.io/chuni-tools"
+        return "https://chuni.tsaibee.org"
     }
     function n(e) {
         const t = document.cookie.split(";").map((e => decodeURIComponent(e.trim()))).map((e => e.split("="))).find((t => t[0] === e));
