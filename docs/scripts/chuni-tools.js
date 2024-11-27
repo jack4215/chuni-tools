@@ -47,7 +47,7 @@
                         return e.origin + t.substring(0, t.lastIndexOf("/scripts"))
                     }
                 }
-                return "https://jack4215.github.io/chuni-tools"
+                return "https://chuni.tsaibee.org"
             }()}/scripts/${n}.js?t=${Date.now()}`,
             o.body.append(e)
         }
