@@ -130,7 +130,7 @@
     "MAS": 13.1,
     "ULT": 14.8,
     "genre": 6,
-    "newV": 0
+    "newV": 2
   },
   "鳥の詩": {
     "BAS": 2,
@@ -506,7 +506,7 @@
     "MAS": 13,
     "ULT": 14.1,
     "genre": 9,
-    "newV": 0
+    "newV": 2
   },
   "After the rain": {
     "BAS": 2,
@@ -515,7 +515,7 @@
     "MAS": 12,
     "ULT": 13.2,
     "genre": 5,
-    "newV": 0
+    "newV": 2
   },
   "Tango Rouge": {
     "BAS": 3,
@@ -1183,7 +1183,7 @@
     "MAS": 12.6,
     "ULT": 14,
     "genre": 2,
-    "newV": 0
+    "newV": 2
   },
   "天樂": {
     "BAS": 3,
@@ -2629,7 +2629,7 @@
     "MAS": 13.4,
     "ULT": 14.9,
     "genre": 0,
-    "newV": 0
+    "newV": 2
   },
   "ケロ⑨destiny": {
     "BAS": 3,
@@ -3584,7 +3584,7 @@
     "MAS": 14.2,
     "ULT": 14.8,
     "genre": 3,
-    "newV": 0
+    "newV": 2
   },
   "Candyland Symphony": {
     "BAS": 3,
@@ -4097,7 +4097,7 @@
     "MAS": 12.1,
     "ULT": 14.0,
     "genre": 2,
-    "newV": 0
+    "newV": 2
   },
   "Innocent Truth": {
     "BAS": 3,
