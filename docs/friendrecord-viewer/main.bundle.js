@@ -918,7 +918,7 @@
     for (let e of Ie) Ke[e] = !0;
     const et = Ue("filterGenre", Ke),
       tt = Ne("usedConstData", "luminousplus", ["luminousplus"], (() => {
-        At.updateConstData()
+        Nt.updateConstData(), Ht.updateConstData(), At.updateConstData()
       })),
       nt = Ne("showOverPower", "hide", ["hide", "value", "percentage"]),
       rt = function(e, t, n = (() => {})) {
@@ -1078,7 +1078,9 @@
         }
       }
     }
-    const Ut = (() => {
+    const Nt = Et(""),
+      Ht = Et(""),
+      Ut = (() => {
         const {
           subscribe: e,
           set: t
@@ -2994,8 +2996,8 @@
 
     function Pr(e, t, n) {
       let r, o, s, a, i, l, c, d, f;
-      return u(e, At, (e => n(8, l = e))), u(e, Ut, (e => n(3, c = e))), u(e, wt, (e => n(4, d = e))), u(e, $t, (e => n(5, f = e))), e.$$.update = () => {
-        256 & e.$$.dirty && n(2, r = l.slice(0, 30).map((e => e.rating)))
+      return u(e, Ht, (e => n(6, a = e))), u(e, Nt, (e => n(7, i = e))), u(e, At, (e => n(8, l = e))), u(e, Ut, (e => n(3, c = e))), u(e, wt, (e => n(4, d = e))), u(e, $t, (e => n(5, f = e))), e.$$.update = () => {
+        256 & e.$$.dirty && n(2, r = l.slice(0, 30).map((e => e.rating))), 128 & e.$$.dirty && n(1, o = i.map((e => e.rating))), 64 & e.$$.dirty && n(0, s = a.map((e => e.rating)))
       }, [s, o, r, c, d, f, a, i, l]
     }
     const Or = class extends Se {
@@ -4264,7 +4266,7 @@
 
     function Yo(e, t, n) {
       let r, o, s, a, i, l, c, d, f, h, g, m, v, b, y, w, $, x, k;
-      return u(e, Ye, (e => n(14, i = e))), u(e, Ze, (e => n(15, l = e))), u(e, et, (e => n(16, c = e))), u(e, Qe, (e => n(17, d = e))), u(e, nt, (e => n(2, f = e))), u(e, At, (e => n(18, h = e))), u(e, De, (e => n(19, g = e))), u(e, Tt, (e => n(20, m = e))), u(e, $t, (e => n(5, v = e))), u(e, Ae, (e => n(6, b = e))), u(e, wt, (e => n(7, y = e))), u(e, jt, (e => n(10, x = e))), u(e, xt, (e => n(11, k = e))), p($t, v = window.location.hash.slice(1), v), e.$$.update = () => {
+      return u(e, Ye, (e => n(14, i = e))), u(e, Ze, (e => n(15, l = e))), u(e, et, (e => n(16, c = e))), u(e, Qe, (e => n(17, d = e))), u(e, nt, (e => n(2, f = e))), u(e, At, (e => n(18, h = e))), u(e, De, (e => n(19, g = e))), u(e, Tt, (e => n(20, m = e))), u(e, $t, (e => n(5, v = e))), u(e, Ae, (e => n(6, b = e))), u(e, wt, (e => n(7, y = e))), u(e, Nt, (e => n(8, w = e))), u(e, Ht, (e => n(9, $ = e))), u(e, jt, (e => n(10, x = e))), u(e, xt, (e => n(11, k = e))), p($t, v = window.location.hash.slice(1), v), e.$$.update = () => {
         507908 & e.$$.dirty && n(0, r = h.filter((e => ("hide" != f || e.score >= 0) && d[e.difficulty] && c[Ie.find((t => _e[t] == e.genre))] && l >= e.const && e.const >= i))), 1 & e.$$.dirty && n(4, o = (() => {
           let e = {};
           ["MAX", "SSS+", "SSS", "SS+", "SS", "S+", "S"].forEach((t => e[t] = 0)), ["AAA", "AA", "A", "BBB", "BB", "B", "C", "D"].forEach((t => e[t] = 0));
