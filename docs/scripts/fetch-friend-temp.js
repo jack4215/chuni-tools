@@ -94,7 +94,7 @@
                 r.rel = "stylesheet",
                 r.href = t("fetch-friend") + "/common/styles/inject.css",
                 e.innerText = s.analyzeRating,
-                e.href = t("fetch-friend") + "/friendrecord-viewer/#best",
+                e.href = t("fetch-friend") + "/friendrecord-viewer-temp/#all",
                 e.target = "friendrecordViewer",
                 l.getElementsByTagName("head")[0].appendChild(r),
                 r.addEventListener("load", ( () => {
@@ -122,7 +122,7 @@
                         }(e.source, e.origin);
                         let s;
                         switch (t.target) {
-                        case "bestRecord":
+                        case "allRecord":
                             console.log("%c    Target difficulty: %c" + t.data.difficulty, "color: gray", "color: white"),
                             s = async function(e=o.master) {
                                 const t = new FormData;
