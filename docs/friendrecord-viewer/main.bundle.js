@@ -1078,9 +1078,7 @@
         }
       }
     }
-    const Nt = Et("recentRecord"),
-      Ht = Et("playHistory"),
-      Ut = (() => {
+    const Ut = (() => {
         const {
           subscribe: e,
           set: t
@@ -4230,7 +4228,7 @@
             })), t.current !== t.pending) return r(t.pending, 0), !0
         }
         var o
-      }(a = Promise.all([Ut.init(), Nt.init(), Ht.init(), At.init(), e[13]()]), f);
+      }(a = Promise.all([Ut.init(), At.init(), e[13]()]), f);
       let p = e[11] && Xo();
       return {
         c() {

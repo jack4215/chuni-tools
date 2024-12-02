@@ -152,30 +152,6 @@
                                 return records.filter(e => e.title && e.score);
                             }(t.data.difficulty);
                             break;
-                        case "playHistory":
-                            s = async function() {
-                                return Array.from({ length: 50 }).map(() => {
-                                    return {
-                                        title: "unknown",
-                                        score: -1,
-                                        difficulty: "--",
-                                        clear: ""
-                                    };
-                                });
-                            }();
-                            break;
-                        case "recentRecord":
-                            s = async function() {
-                                return Array.from({ length: 10 }).map(() => {
-                                    return {
-                                        title: "unknown",
-                                        score: -1,
-                                        difficulty: "--",
-                                        clear: ""
-                                    };
-                                });
-                            }();
-                            break;
                         case "playerStats":
                             s = async function() {
                                 const e = await i("/mobile/friend");
