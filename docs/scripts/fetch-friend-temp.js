@@ -64,12 +64,12 @@
             [e.en_US]: {
                 pleaseLogin: "Please login to CHUNITHM-NET first.",
                 needReload: "Please reload CHUNITHM-NET.",
-                analyzeRating: "Analyze Friend's Rating"
+                analyzeRating: "Analyze Friend's (Beta)"
             },
             [e.zh_TW]: {
                 pleaseLogin: "請先登入 CHUNITHM-NET 再執行本程式。",
                 needReload: "請重新整理 CHUNITHM-NET 再執行本程式。",
-                analyzeRating: "分析好友遊戲成績"
+                analyzeRating: "分析好友成績 (Beta)"
             }
         }[function() {
             const t = new URLSearchParams(location.search);
