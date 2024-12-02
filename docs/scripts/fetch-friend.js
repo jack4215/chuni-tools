@@ -94,7 +94,7 @@
                 r.rel = "stylesheet",
                 r.href = t("fetch-friend") + "/common/styles/inject.css",
                 e.innerText = s.analyzeRating,
-                e.href = t("fetch-friend") + "/friendrecord-viewer/#all",
+                e.href = t("fetch-friend") + "/friendrecord-viewer/#best",
                 e.target = "friendrecordViewer",
                 l.getElementsByTagName("head")[0].appendChild(r),
                 r.addEventListener("load", ( () => {
