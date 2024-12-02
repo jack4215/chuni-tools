@@ -41,7 +41,7 @@
             o.body.append(e);
         }
         const i = o.location.pathname;
-        -1 != i.indexOf("/mobile/home/userOption/updateUserName") ? s("idxmap-generate") : -1 != i.indexOf("/mobile/loginBonus") ? s("export-csv") : -1 != i.indexOf("/mobile/ranking/teamPoint/") ? s("team-ranking") : -1 != i.indexOf("/mobile/friend/friendDetail/") ? s("friendidx") : -1 != i.indexOf("/mobile/record/playlogDetail/") ? (s("targetrank"), setTimeout(() => {s("fetch-all");}, 5)) : -1 != i.indexOf("/mobile/friend/genreVs/battleStart")  ? (s("fetch-friend-csv"), setTimeout(() => {s("fetch-friend");}, 5)) : -1 != i.indexOf("/mobile/netStore/netpointLog")  ? (s("ptcount"), setTimeout(() => {s("fetch-all");}, 5)) : s("fetch-all")
+        -1 != i.indexOf("/mobile/home/userOption/updateUserName") ? s("idxmap-generate") : -1 != i.indexOf("/mobile/loginBonus") ? s("export-csv") : -1 != i.indexOf("/mobile/ranking/teamPoint/") ? s("team-ranking") : -1 != i.indexOf("/mobile/friend/friendDetail/") ? s("friendidx") : -1 != i.indexOf("/mobile/record/playlogDetail/") ? (s("targetrank"), setTimeout(() => {s("fetch-all");}, 5)) : -1 != i.indexOf("/mobile/friend/genreVs/battleStart")  ? (s("export-friend-csv"), setTimeout(() => {s("fetch-friend");}, 5)) : -1 != i.indexOf("/mobile/netStore/netpointLog")  ? (s("ptcount"), setTimeout(() => {s("fetch-all");}, 5)) : s("fetch-all")
     }(document, window)
 }
 )();
