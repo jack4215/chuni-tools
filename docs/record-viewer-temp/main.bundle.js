@@ -54,7 +54,7 @@
       },
       903: e => {
         "use strict";
-        e.exports = JSON.parse('{"main.title":"CHUNITHM Record Viewer (Beta)","loading.constData":"Used song constant data: {{name}}<br>Used rating calculation: Japanese Ver. (VERSE)","loading.error.serviceDown":"CHUNITHM-NET service is currently unavailable.<br/>Please come back later.","loading.error.rejected":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.timeout":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.noopener":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.unknown":"Please <em>screenshot or copy the error message</em> to the author.","header.title.dl":"Save or share B40 as image","header.title.constData":"Change song constant data (Current: {{name}})","header.title.settings":"Open settings","settings.main.title":"Settings","settings.main.reset":"Reset Settings","settings.filter.title":"Filter","settings.filter.const":"By Chart Constant","settings.filter.diff":"By Difficulty","settings.filter.diff.warn":"*Should select at least one","settings.filter.diff.notify":"*Filtering difficulties or more than two hidden songs that are not displayed on CHUNITHM-NET may cause the \\"NEW 10\\" data to be inaccurate.","settings.filter.genre":"By Genre","settings.filter.genre.all":"Toggle ALL","settings.data.title":"Game Data","settings.data.constData":"Chart Constant Data to Use","settings.data.constData.newplus":"NEW+","settings.data.constData.sun":"SUN","settings.data.constData.sunplus":"SUN+","settings.data.constData.luminous":"LUMINOUS","settings.data.constData.luminousplus":"Intl. (LUMINOUS PLUS)","settings.data.constData.verse":"Japanese Ver. (VERSE)","settings.data.playcount":"Show Play Count","settings.data.playcount.notify":"*You can click the dark box beside a song to view its play count","settings.data.showScoreDiff":"Show Score Difference <span style=\\"color:var(--theme-text-dim)\\">(since last updated)</span>","settings.data.diffUpdate":"Score Diff Basis Update Interval <span style=\\"color:var(--theme-text-dim)\\">Last updated: {{date}}</span>","settings.data.diffUpdate.1d":"Auto-update after 1 day","settings.data.diffUpdate.3d":"Auto-update after 3 days","settings.data.diffUpdate.7d":"Auto-update after 1 week","settings.data.diffUpdate.14d":"Auto-update after 2 weeks","settings.data.diffUpdate.30d":"Auto-update after 1 month","settings.data.diffUpdate.manual":"Manually update","settings.data.diffUpdate.update":"Update Score Diff Basis","settings.data.diffUpdate.reload":"Reload Page to Update","settings.data.diffUpdate.notify":"*If set to auto-update when it has been more than the specified duration from the last time updated, the program will automatically update it.<br><br>◆ For more information please refer to <a href=\\"https://github.com/jack4215/chuni-tools/blob/main/README.MD\\" target=\\"_blank\\">Github README</a>.","settings.data.overpower":"Show Over Power","settings.data.overpower.hide":"Hide (Show Rank)","settings.data.overpower.value":"Show (Over Power Value)","settings.data.overpower.percentage":"Show (Over Power Achievement%)","settings.data.overpower.dgvalue":"Show (Designate Over Power Value)","settings.data.overpower.dgpercentage":"Show (Designate Over Power Achievement%)","settings.data.overpower.notify":"*It will also show unplayed song when toggled to \\"Show Over Power\\".<br/>*Total over power might differ from the official one, if some of the songs are not unlocked yet.","settings.ui.title":"User Interface","settings.ui.locale":"Language","settings.ui.theme":"Theme","player.generic.generatedAt":"Generated At","player.best.playCount":"Play Count","player.best.best30":"BEST 30","player.best.maxPossible":"Max Possible","player.recent.best10":"Recent 10","player.recent.new10":"NEW 10","player.recent.average":"Rating","record.head.playOrder":"Played Time","record.head.order":"#","record.head.title":"Title","record.head.const":"Const","record.head.overpower":"OP","record.head.overpowerPercent":"OP%","record.head.rank":"Rank","record.head.score":"Score","record.head.scoreDiff":"Score Diff","record.head.rating":"Rating","record.head.ajfc":"AJ","record.head.playcount":"Plays","record.fetch.fetching":"Fetching record for <span style=\\"color:var(--theme-song-{{diff}});\\">{{diffStr}}</span> difficulty...","record.fetch.diff.ult":"ULTIMA","record.fetch.diff.mas":"MASTER","record.fetch.diff.exp":"EXPERT","record.fetch.diff.adv":"ADVANCED","record.fetch.diff.bas":"BASIC","record.fetch.unknown":"Found unknown song(s):\\n\\n{{songs}}\\n\\nPlease contact the author via <a href=\\"mailto:admin@tsaibee.org\\">Email</a>.","record.fetch.error":"<span style=\\"color:red;\\">Some error occured when fetching best record!<br/>You probably need to reload the page now.</span>","playcount.fetch.button":"Fetch","playcount.fetch.progress":"Fetching play count... ({{progress}}/{{all}})","playcount.fetch.error":"<span style=\\"color:red;\\">Some error occured when fetching play count!<br/>You probably need to reload the page now.</span>","share.error":"Something went wrong when converting your scores to PNG. Please screenshot the error message to the author.\\n\\n{{error}}"}')
+        e.exports = JSON.parse('{"main.title":"CHUNITHM Record Viewer (Beta)","loading.constData":"Used song constant data: {{name}}<br>Used rating calculation: Japanese Ver. (VERSE)","loading.error.serviceDown":"CHUNITHM-NET service is currently unavailable.<br/>Please come back later.","loading.error.rejected":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.timeout":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.noopener":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.unknown":"Please <em>screenshot or copy the error message</em> to the author.","header.title.dl":"Save or share B40 as image","header.title.constData":"Change song constant data (Current: {{name}})","header.title.settings":"Open settings","settings.main.title":"Settings","settings.main.reset":"Reset Settings","settings.filter.title":"Filter","settings.filter.const":"By Chart Constant","settings.filter.diff":"By Difficulty","settings.filter.diff.warn":"*Should select at least one","settings.filter.diff.notify":"*Filtering difficulties or more than two hidden songs that are not displayed on CHUNITHM-NET may cause the \\"NEW 10\\" data to be inaccurate.","settings.filter.genre":"By Genre","settings.filter.genre.all":"Toggle ALL","settings.data.title":"Game Data","settings.data.constData":"Chart Constant Data to Use","settings.data.constData.newplus":"NEW+","settings.data.constData.sun":"SUN","settings.data.constData.sunplus":"SUN+","settings.data.constData.luminous":"LUMINOUS","settings.data.constData.luminousplus":"Intl. (LUMINOUS PLUS)","settings.data.constData.verse":"Japanese Ver. (VERSE)","settings.data.playcount":"Show Play Count","settings.data.playcount.notify":"*You can click the dark box beside a song to view its play count","settings.data.showScoreDiff":"Show Score Difference <span style=\\"color:var(--theme-text-dim)\\">(since last updated)</span>","settings.data.diffUpdate":"Score Diff Basis Update Interval <span style=\\"color:var(--theme-text-dim)\\">Last updated: {{date}}</span>","settings.data.diffUpdate.1d":"Auto-update after 1 day","settings.data.diffUpdate.3d":"Auto-update after 3 days","settings.data.diffUpdate.7d":"Auto-update after 1 week","settings.data.diffUpdate.14d":"Auto-update after 2 weeks","settings.data.diffUpdate.30d":"Auto-update after 1 month","settings.data.diffUpdate.manual":"Manually update","settings.data.diffUpdate.update":"Update Score Diff Basis","settings.data.diffUpdate.reload":"Reload Page to Update","settings.data.diffUpdate.notify":"*If set to auto-update when it has been more than the specified duration from the last time updated, the program will automatically update it.<br><br>◆ For more information please refer to <a href=\\"https://github.com/jack4215/chuni-tools/blob/main/README.MD\\" target=\\"_blank\\">Github README</a>.","settings.data.overpower":"Show Over Power","settings.data.overpower.hide":"Hide (Show Rank)","settings.data.overpower.value":"Show (Over Power Value)","settings.data.overpower.percentage":"Show (Over Power Achievement%)","settings.data.overpower.dgvalue":"Show (Designate Over Power Value)","settings.data.overpower.dgpercentage":"Show (Designate Over Power Achievement%)","settings.data.overpower.notify":"*It will also show unplayed song when toggled to \\"Show Over Power\\".<br/>*Total over power might differ from the official one, if some of the songs are not unlocked yet.","settings.ui.title":"User Interface","settings.ui.locale":"Language","settings.ui.theme":"Theme","player.generic.generatedAt":"Generated At","player.best.playCount":"Play Count","player.best.best30":"BEST 30","player.best.maxPossible":"Max Possible","player.recent.best10":"Recent 10","player.recent.new10":"NEW 10","player.recent.average":"Rating","record.head.playOrder":"Played Time","record.head.order":"#","record.head.title":"Title","record.head.const":"Const","record.head.overpower":"OP","record.head.overpowerPercent":"OP%","record.head.rank":"Rank","record.head.score":"Score","record.head.scoreDiff":"Score Diff","record.head.rating":"Rating","record.head.ajfc":"AJ","record.head.playcount":"Plays","record.fetch.fetching":"Fetching record for <span style=\\"color:var(--theme-song-{{diff}});\\">{{diffStr}}</span> difficulty...","record.fetch.diff.ult":"ULTIMA","record.fetch.diff.mas":"MASTER","record.fetch.diff.exp":"EXPERT","record.fetch.diff.adv":"ADVANCED","record.fetch.diff.bas":"BASIC","record.fetch.unknown":"Found unknown song(s):\\n\\n{{songs}}\\n\\nPlease contact the author via Email (admin@tsaibee.org).","record.fetch.error":"<span style=\\"color:red;\\">Some error occured when fetching best record!<br/>You probably need to reload the page now.</span>","playcount.fetch.button":"Fetch","playcount.fetch.progress":"Fetching play count... ({{progress}}/{{all}})","playcount.fetch.error":"<span style=\\"color:red;\\">Some error occured when fetching play count!<br/>You probably need to reload the page now.</span>","share.error":"Something went wrong when converting your scores to PNG. Please screenshot the error message to the author.\\n\\n{{error}}"}')
       },
       141: e => {
         "use strict";
@@ -845,17 +845,13 @@
     }
 
     function Ge(e, t, n) {
-      const r = e, // 數據列表
-            o = t, // 傳入的對應表
-            s = []; // 未找到的歌曲集合
-  
+      const r = e, o = t, s = [];  
       r.map(e => {
-          // 判斷 newV
           let songData = t.songs ? t.songs.find(song => song.title === e.title) : t[e.title];
           if (songData && songData.newV !== undefined) {
-              e.newV = songData.newV;  // 保留 newV 的原始數值（如 0, 1, 2）
+              e.newV = songData.newV;
           } else {
-              e.newV = 0;  // 如果沒有設定 newV，則預設為 0（或其他合適的預設值）
+              e.newV = 0;
           }
           if ("WE" === e.difficulty) {
               e.title = Xe(e.title);
@@ -880,10 +876,8 @@
               if (songData.uncertain?.includes(e.difficulty)) {
                   e.constUncertain = true;
               }
-  
               e.rawRating = function(e) {
                   let rating, baseConst = Math.floor(1e4 * e.const);
-  
                   if (e.score >= 9e5) {
                       let scoreData = Be.find(data => e.score >= data.score);
                       return Math.max(0, baseConst + scoreData.base + scoreData.ratio * (e.score - scoreData.score));
@@ -896,11 +890,9 @@
                   }
                   return Math.max(0, rating);
               }(e);
-  
               e.genre = `${songData.genre}`;
               e.rating = Math.floor(e.rawRating / 100);
           }
-  
           e.op = function(e) {
               if (e.score >= 101e4) return Ve(e);
   
@@ -909,14 +901,11 @@
                   opRating = e.score < 1007500 
                       ? e.rawRating 
                       : baseConst + 20000 + 3 * (e.score - 1007500);
-  
               opRating = e.score >= 975e3 
                   ? 10 * Math.floor(opRating / 10) 
                   : 100 * Math.floor(opRating / 100);
-  
               return 5 * (opRating + bonus);
           }(e);
-  
           e.opMax = Ve(e);
           e.opPercent = (100 * e.op) / e.opMax;
           e.rank = Fe(e.score);
@@ -2913,8 +2902,6 @@
 
     function Ar(e) {
       let t, n, r, o, s, a;
-      console.log("e[0]:", e[0]);
-      console.log("e[1]:", e[1]);
       return t = new Hr({
         props: {
           title: e[4]("player.best.best30"),
@@ -3122,7 +3109,6 @@
 
     function zr(e) {
       let t, n, r;
-
       function o(e, t) {
         return e[1] === "percentage" || e[1] === "dgpercentage" ? Br : e[1] === "dgvalue" ? Fr : Fr;
       }
@@ -4043,7 +4029,6 @@
     function _o(e, t, n) {
       let r, o, s; 
       let a = t.records; 
-
       const groupByTitle = (records) => {
           const map = new Map();
           records.forEach((song) => {
@@ -4060,14 +4045,12 @@
           });
           return Array.from(map.values());
       };
-
       e.$$set = (newData) => {
           if ("records" in newData) {
               a = newData.records; 
               n(3, a);
           }
       };
-  
       e.$$.update = () => {
           const groupedRecords = groupByTitle(a);  
           if (8 & e.$$.dirty) n(1, r = groupedRecords.reduce((sum, song) => sum + song.op, 0));
@@ -4077,7 +4060,6 @@
   
       return [o, r, s, a]; 
   }
-
     const Io = class extends Se {
         constructor(e) {
           super(), je(this, e, _o, Oo, i, {
