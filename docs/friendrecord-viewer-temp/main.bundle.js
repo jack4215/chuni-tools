@@ -920,15 +920,26 @@
             e.opMax = Ve(e);
             e.opPercent = (100 * e.op) / e.opMax;
             e.rank = Fe(e.score);
-        });
-    
-        r.sort(Je.default);
-        r.map((e, index) => {
-            e.order = index + 1;
-        });
-    
-        return r;
-    }
+      });
+      if (n && s.length) {
+        const e = {};
+        s.forEach((t => {
+            var n;
+            e[n = t.title] ?? (e[n] = []), e[t.title].push(t.difficulty)
+        }));
+        console.log(e);
+        alert(n.replace("{{songs}}", Object.entries(e)
+            .map(([e, t]) => `    ${e} ${t.join(",")}`)
+            .join("\n"))
+        );
+    }  
+      r.sort(Je.default);
+      r.map((e, index) => {
+          e.order = index + 1;
+      });
+  
+      return r;
+  }
     
       c(De, (() => {
         try {
