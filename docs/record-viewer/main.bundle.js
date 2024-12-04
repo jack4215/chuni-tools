@@ -2624,6 +2624,28 @@
         min: 1,
         step: .1
       };
+      function updateNe() {
+        const filterDiff = JSON.parse(localStorage.getItem("filterDiff"));
+        if (filterDiff) {
+          if (!filterDiff.BAS && !filterDiff.ADV && !filterDiff.EXP) {
+            Ne.min = 10;
+          } else if (!filterDiff.BAS && !filterDiff.ADV) {
+            Ne.min = 7; 
+          } else if (!filterDiff.BAS) {
+            Ne.min = 4;
+          } else {
+            Ne.min = 1;
+          }
+        } else {
+          Ne.min = 1;
+        }
+      }
+      updateNe();
+      window.addEventListener("storage", (event) => {
+        if (event.key === "filterDiff") {
+          updateNe();
+        }
+      });
       void 0 !== e[1] && (Ne.high = e[1]), void 0 !== e[2] && (Ne.low = e[2]), f = new Dn({
         props: Ne
       }), Q.push((() => we(f, "high", Me))), Q.push((() => we(f, "low", Ee))), m = new Fn({}), b = new Xn({});
