@@ -982,6 +982,8 @@
         }, (() => {
           At.updateDiffFilter()
         }));
+      let Ke = {};
+      for (let e of Ie) Ke[e] = !0;
       let Kee = {};
       for (let e of Rl) Kee[e] = !0;
       const et = Ue("filterGenre", Ke), eet = Ue("filterRelease", Kee),
