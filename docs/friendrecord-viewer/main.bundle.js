@@ -757,7 +757,7 @@
     ! function(e) {
       e["ORI"] = "1", e["ORI+"] = "2", e["AIR"] = "3", e["AIR+"] = "4", e["STR"] = "5", e["STR+"] = "6", e["AMZ"] = "7", e["AMZ+"] = "8",
       e["CRS"] = "9", e["CRS+"] = "10", e["PAR"] = "11", e["PAR×"] = "12", e["NEW"] = "13", e["NEW+"] = "14", e["SUN"] = "15", e["SUN+"] = "16",
-      e["LMN"] = "17", e["LMN+"] = "18", e["VER"] = "19"
+      e["LMN"] = "17", e["LMN+"] = "18", e["VRS"] = "19"
     }(_s || (_s = {}));
     const Rl = Object.keys(_s);
 
