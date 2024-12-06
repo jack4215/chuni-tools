@@ -5,6 +5,7 @@
     "EXP": 10,
     "MAS": 13.2,
     "genre": 0,
+    "release": 15,
     "newV": 0
   },
   "39": {
@@ -13,6 +14,7 @@
     "EXP": 8.5,
     "MAS": 11.9,
     "genre": 2,
+    "release": 8,
     "newV": 0
   },
   "サクリファイス": {
@@ -21,6 +23,7 @@
     "EXP": 9.5,
     "MAS": 13.4,
     "genre": 2,
+    "release": 12,
     "newV": 0
   },
   "HECATONCHEIR": {
@@ -29,7 +32,8 @@
     "EXP": 11.8,
     "MAS": 14.1,
     "genre": 9,
-    "newV": 0
+    "release": 18,
+    "newV": 1
   },
   "B.B.K.K.B.K.K.": {
     "BAS": 3,
@@ -38,6 +42,7 @@
     "MAS": 12.5,
     "ULT": 13.7,
     "genre": 6,
+    "release": 1,
     "newV": 0
   },
   "Reach For The Stars": {
@@ -47,6 +52,7 @@
     "MAS": 13.1,
     "ULT": 13.7,
     "genre": 6,
+    "release": 1,
     "newV": 0
   },
   "初音ミクの消失": {
@@ -55,6 +61,7 @@
     "EXP": 12,
     "MAS": 14.5,
     "genre": 2,
+    "release": 3,
     "newV": 0
   },
   "千本桜": {
@@ -64,6 +71,7 @@
     "MAS": 12.6,
     "ULT": 13.7,
     "genre": 2,
+    "release": 1,
     "newV": 0
   },
   "DRAGONLADY": {
@@ -72,6 +80,7 @@
     "EXP": 11.5,
     "MAS": 14.2,
     "genre": 6,
+    "release": 2,
     "newV": 0
   },
   "taboo tears you up": {
@@ -81,6 +90,7 @@
     "MAS": 13.8,
     "ULT": 14.7,
     "genre": 3,
+    "release": 4,
     "newV": 0
   },
   "ナイト・オブ・ナイツ": {
@@ -89,6 +99,7 @@
     "EXP": 9,
     "MAS": 12.2,
     "genre": 3,
+    "release": 1,
     "newV": 0
   },
   "一触即発☆禅ガール": {
@@ -97,6 +108,7 @@
     "EXP": 9.5,
     "MAS": 13,
     "genre": 2,
+    "release": 1,
     "newV": 0
   },
   "ドーナツホール": {
@@ -105,6 +117,7 @@
     "EXP": 9.5,
     "MAS": 13.4,
     "genre": 2,
+    "release": 6,
     "newV": 0
   },
   "タイガーランペイジ": {
@@ -113,6 +126,7 @@
     "EXP": 9.5,
     "MAS": 13.7,
     "genre": 2,
+    "release": 1,
     "newV": 0
   },
   "Blue Noise": {
@@ -121,6 +135,7 @@
     "EXP": 10.1,
     "MAS": 14.5,
     "genre": 6,
+    "release": 1,
     "newV": 0
   },
   "Lapis": {
@@ -130,6 +145,7 @@
     "MAS": 13.1,
     "ULT": 14.8,
     "genre": 6,
+    "release": 2,
     "newV": 2
   },
   "鳥の詩": {
@@ -139,6 +155,7 @@
     "MAS": 11.3,
     "ULT": 12.2,
     "genre": 0,
+    "release": 3,
     "newV": 0
   },
   "天ノ弱": {
@@ -148,6 +165,7 @@
     "MAS": 11.1,
     "ULT": 13.7,
     "genre": 2,
+    "release": 1,
     "newV": 0
   },
   "sweet little sister": {
@@ -156,6 +174,7 @@
     "EXP": 9.5,
     "MAS": 11.7,
     "genre": 3,
+    "release": 1,
     "newV": 0
   },
   "L9": {
@@ -165,6 +184,7 @@
     "MAS": 13.6,
     "ULT": 14.8,
     "genre": 6,
+    "release": 1,
     "newV": 0
   },
   "Bad Apple!! feat.nomico": {
@@ -173,6 +193,7 @@
     "EXP": 8,
     "MAS": 11.5,
     "genre": 3,
+    "release": 1,
     "newV": 0
   },
   "六兆年と一夜物語": {
@@ -182,6 +203,7 @@
     "MAS": 13.4,
     "ULT": 14.1,
     "genre": 2,
+    "release": 1,
     "newV": 0
   },
   "Unlimited Spark!": {
@@ -191,6 +213,7 @@
     "MAS": 12,
     "ULT": 14.1,
     "genre": 3,
+    "release": 1,
     "newV": 0
   },
   "エピクロスの虹はもう見えない": {
@@ -199,6 +222,7 @@
     "EXP": 8,
     "MAS": 11,
     "genre": 3,
+    "release": 1,
     "newV": 0
   },
   "My First Phone": {
@@ -207,6 +231,7 @@
     "EXP": 10,
     "MAS": 14,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "Cyberozar": {
@@ -215,6 +240,7 @@
     "EXP": 11.1,
     "MAS": 14.2,
     "genre": 5,
+    "release": 2,
     "newV": 0
   },
   "Teriqma": {
@@ -223,6 +249,7 @@
     "EXP": 10,
     "MAS": 13.5,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "Invitation": {
@@ -231,6 +258,7 @@
     "EXP": 8,
     "MAS": 11.8,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "GOLDEN RULE": {
@@ -239,6 +267,7 @@
     "EXP": 11.5,
     "MAS": 14.6,
     "genre": 5,
+    "release": 2,
     "newV": 0
   },
   "名も無い鳥": {
@@ -247,6 +276,7 @@
     "EXP": 9.5,
     "MAS": 13.4,
     "genre": 5,
+    "release": 2,
     "newV": 0
   },
   "Gate of Fate": {
@@ -256,6 +286,7 @@
     "MAS": 14.6,
     "ULT": 14.9,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "今ぞ♡崇め奉れ☆オマエらよ！！～姫の秘メタル渇望～": {
@@ -264,6 +295,7 @@
     "EXP": 9.5,
     "MAS": 14,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "Anemone": {
@@ -273,6 +305,7 @@
     "MAS": 11.1,
     "ULT": 13.1,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "明るい未来": {
@@ -281,6 +314,7 @@
     "EXP": 9.5,
     "MAS": 12.8,
     "genre": 5,
+    "release": 3,
     "newV": 0
   },
   "昵懇レファレンス": {
@@ -290,6 +324,7 @@
     "MAS": 11.5,
     "ULT": 13.1,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "乗り切れ受験ウォーズ": {
@@ -298,6 +333,7 @@
     "EXP": 8.5,
     "MAS": 11.5,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "The wheel to the right": {
@@ -306,6 +342,7 @@
     "EXP": 11.9,
     "MAS": 14.4,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "STAR": {
@@ -314,6 +351,7 @@
     "EXP": 9.5,
     "MAS": 13.3,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "Infantoon Fantasy": {
@@ -323,6 +361,7 @@
     "MAS": 13,
     "ULT": 14.2,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "Genesis": {
@@ -331,6 +370,7 @@
     "EXP": 10,
     "MAS": 14.5,
     "genre": 5,
+    "release": 2,
     "newV": 0
   },
   "MUSIC PЯAYER": {
@@ -339,6 +379,7 @@
     "EXP": 10.4,
     "MAS": 14,
     "genre": 5,
+    "release": 2,
     "newV": 0
   },
   "リリーシア": {
@@ -348,6 +389,7 @@
     "MAS": 11,
     "ULT": 12.6,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "Counselor": {
@@ -357,6 +399,7 @@
     "MAS": 12.3,
     "ULT": 13.1,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "luna blu": {
@@ -365,6 +408,7 @@
     "EXP": 13.3,
     "MAS": 14.5,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "ケモノガル": {
@@ -373,6 +417,7 @@
     "EXP": 9.5,
     "MAS": 13.8,
     "genre": 5,
+    "release": 3,
     "newV": 0
   },
   "ＧＯ！ＧＯ！ラブリズム♥": {
@@ -381,6 +426,7 @@
     "EXP": 9.5,
     "MAS": 11.8,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "Grab your sword": {
@@ -389,6 +435,7 @@
     "EXP": 8,
     "MAS": 10.4,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "Memories of Sun and Moon": {
@@ -397,6 +444,7 @@
     "EXP": 8,
     "MAS": 13.5,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "ロストワンの号哭": {
@@ -406,6 +454,7 @@
     "MAS": 13,
     "ULT": 14.2,
     "genre": 2,
+    "release": 1,
     "newV": 0
   },
   "The Concept of Love": {
@@ -414,6 +463,7 @@
     "EXP": 10.7,
     "MAS": 13.2,
     "genre": 6,
+    "release": 1,
     "newV": 0
   },
   "JET": {
@@ -423,6 +473,7 @@
     "MAS": 12.3,
     "ULT": 13.5,
     "genre": 6,
+    "release": 1,
     "newV": 0
   },
   "L'épisode": {
@@ -431,6 +482,7 @@
     "EXP": 12.4,
     "MAS": 14.7,
     "genre": 5,
+    "release": 2,
     "newV": 0
   },
   "Yet Another ”drizzly rain”": {
@@ -439,6 +491,7 @@
     "EXP": 9.5,
     "MAS": 12.2,
     "genre": 3,
+    "release": 1,
     "newV": 0
   },
   "最終鬼畜妹・一部声": {
@@ -447,6 +500,7 @@
     "EXP": 10.2,
     "MAS": 14,
     "genre": 3,
+    "release": 1,
     "newV": 0
   },
   "蒼空に舞え、墨染の桜": {
@@ -455,6 +509,7 @@
     "EXP": 8.5,
     "MAS": 12.9,
     "genre": 3,
+    "release": 2,
     "newV": 0
   },
   "セツナトリップ": {
@@ -463,6 +518,7 @@
     "EXP": 8,
     "MAS": 13.8,
     "genre": 2,
+    "release": 1,
     "newV": 0
   },
   "砂漠のハンティングガール♡": {
@@ -472,6 +528,7 @@
     "MAS": 12.7,
     "ULT": 14.1,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "チルノのパーフェクトさんすう教室": {
@@ -480,6 +537,7 @@
     "EXP": 8,
     "MAS": 12.9,
     "genre": 3,
+    "release": 1,
     "newV": 0
   },
   "Help me, ERINNNNNN!!": {
@@ -488,6 +546,7 @@
     "EXP": 8,
     "MAS": 10.9,
     "genre": 3,
+    "release": 1,
     "newV": 0
   },
   "魔理沙は大変なものを盗んでいきました": {
@@ -497,6 +556,7 @@
     "MAS": 12.3,
     "ULT": 14.7,
     "genre": 3,
+    "release": 1,
     "newV": 0
   },
   "言ノ葉カルマ": {
@@ -506,6 +566,7 @@
     "MAS": 13,
     "ULT": 14.1,
     "genre": 9,
+    "release": 1,
     "newV": 2
   },
   "After the rain": {
@@ -515,6 +576,7 @@
     "MAS": 12,
     "ULT": 13.2,
     "genre": 5,
+    "release": 1,
     "newV": 2
   },
   "Tango Rouge": {
@@ -523,6 +585,7 @@
     "EXP": 12.2,
     "MAS": 14.4,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "Tuning Rangers": {
@@ -531,6 +594,7 @@
     "EXP": 9.5,
     "MAS": 13.7,
     "genre": 5,
+    "release": 3,
     "newV": 0
   },
   "エンドマークに希望と涙を添えて": {
@@ -539,6 +603,7 @@
     "EXP": 11.8,
     "MAS": 14.8,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "とーきょー全域★アキハバラ？": {
@@ -547,6 +612,7 @@
     "EXP": 10.2,
     "MAS": 13.2,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "overcome": {
@@ -555,6 +621,7 @@
     "EXP": 8.5,
     "MAS": 11,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "宛城、炎上！！": {
@@ -563,6 +630,7 @@
     "EXP": 12.6,
     "MAS": 14.8,
     "genre": 5,
+    "release": 2,
     "newV": 0
   },
   "We Gonna Journey": {
@@ -572,6 +640,7 @@
     "MAS": 14.2,
     "ULT": 14.8,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "The ether": {
@@ -580,6 +649,7 @@
     "EXP": 11.5,
     "MAS": 13,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "ストリーミングハート": {
@@ -589,6 +659,7 @@
     "MAS": 11.7,
     "ULT": 14.1,
     "genre": 2,
+    "release": 1,
     "newV": 0
   },
   "Sweet Devil": {
@@ -597,6 +668,7 @@
     "EXP": 9,
     "MAS": 12.9,
     "genre": 2,
+    "release": 1,
     "newV": 0
   },
   "Dreaming": {
@@ -605,6 +677,7 @@
     "EXP": 8,
     "MAS": 11.7,
     "genre": 3,
+    "release": 1,
     "newV": 0
   },
   "M.S.S.Planet": {
@@ -613,6 +686,7 @@
     "EXP": 8,
     "MAS": 12.3,
     "genre": 2,
+    "release": 1,
     "newV": 0
   },
   "腐れ外道とチョコレゐト": {
@@ -622,6 +696,7 @@
     "MAS": 13.5,
     "ULT": 14.7,
     "genre": 2,
+    "release": 1,
     "newV": 0
   },
   "アウターサイエンス": {
@@ -630,6 +705,7 @@
     "EXP": 9,
     "MAS": 12.8,
     "genre": 2,
+    "release": 3,
     "newV": 0
   },
   "四次元跳躍機関": {
@@ -638,6 +714,7 @@
     "EXP": 8,
     "MAS": 13.8,
     "genre": 3,
+    "release": 1,
     "newV": 0
   },
   "東方妖々夢 ～the maximum moving about～": {
@@ -646,6 +723,7 @@
     "EXP": 9.5,
     "MAS": 14,
     "genre": 3,
+    "release": 2,
     "newV": 0
   },
   "少女幻葬戦慄曲　～　Necro Fantasia": {
@@ -654,6 +732,7 @@
     "EXP": 9.5,
     "MAS": 13.8,
     "genre": 3,
+    "release": 2,
     "newV": 0
   },
   "橙の幻想郷音頭": {
@@ -662,6 +741,7 @@
     "EXP": 8,
     "MAS": 10.7,
     "genre": 3,
+    "release": 2,
     "newV": 0
   },
   "The Formula": {
@@ -670,6 +750,7 @@
     "EXP": 9.5,
     "MAS": 13.7,
     "genre": 6,
+    "release": 1,
     "newV": 0
   },
   "チルドレンレコード": {
@@ -678,6 +759,7 @@
     "EXP": 10.2,
     "MAS": 13.7,
     "genre": 2,
+    "release": 2,
     "newV": 0
   },
   "イカサマライフゲイム": {
@@ -687,6 +769,7 @@
     "MAS": 12.5,
     "ULT": 14.1,
     "genre": 2,
+    "release": 1,
     "newV": 0
   },
   "シリョクケンサ": {
@@ -695,6 +778,7 @@
     "EXP": 7,
     "MAS": 12.2,
     "genre": 2,
+    "release": 1,
     "newV": 0
   },
   "HAELEQUIN (Original Remaster)": {
@@ -703,6 +787,7 @@
     "EXP": 12.9,
     "MAS": 14.9,
     "genre": 6,
+    "release": 1,
     "newV": 0
   },
   "Vallista": {
@@ -711,6 +796,7 @@
     "EXP": 10.1,
     "MAS": 14.7,
     "genre": 6,
+    "release": 1,
     "newV": 0
   },
   "Äventyr": {
@@ -719,6 +805,7 @@
     "EXP": 9.5,
     "MAS": 13.8,
     "genre": 6,
+    "release": 1,
     "newV": 0
   },
   "Angel dust": {
@@ -727,6 +814,7 @@
     "EXP": 11.8,
     "MAS": 14.8,
     "genre": 6,
+    "release": 3,
     "newV": 0
   },
   "conflict": {
@@ -735,6 +823,7 @@
     "EXP": 10.7,
     "MAS": 14.3,
     "genre": 6,
+    "release": 1,
     "newV": 0
   },
   "Guilty": {
@@ -744,6 +833,7 @@
     "MAS": 12.8,
     "ULT": 14.2,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "閃鋼のブリューナク": {
@@ -752,6 +842,7 @@
     "EXP": 13.5,
     "MAS": 14.6,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "Altale": {
@@ -760,6 +851,7 @@
     "EXP": 9.5,
     "MAS": 13.7,
     "genre": 6,
+    "release": 1,
     "newV": 0
   },
   "ODDS&ENDS": {
@@ -769,6 +861,7 @@
     "MAS": 10.6,
     "ULT": 13.5,
     "genre": 2,
+    "release": 1,
     "newV": 0
   },
   "Aragami": {
@@ -777,6 +870,7 @@
     "EXP": 9,
     "MAS": 14.6,
     "genre": 6,
+    "release": 1,
     "newV": 0
   },
   "Change Our MIRAI！": {
@@ -785,6 +879,7 @@
     "EXP": 8.5,
     "MAS": 12.3,
     "genre": 7,
+    "release": 1,
     "newV": 0
   },
   "夕暮れワンルーム": {
@@ -793,6 +888,7 @@
     "EXP": 10,
     "MAS": 12.2,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "こころここから": {
@@ -801,6 +897,7 @@
     "EXP": 8,
     "MAS": 10.3,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "Theme of SeelischTact": {
@@ -810,6 +907,7 @@
     "MAS": 12,
     "ULT": 14.3,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "緋色のDance": {
@@ -818,6 +916,7 @@
     "EXP": 10,
     "MAS": 12.6,
     "genre": 3,
+    "release": 1,
     "newV": 0
   },
   "brilliant better": {
@@ -827,6 +926,7 @@
     "MAS": 12.1,
     "ULT": 13.6,
     "genre": 7,
+    "release": 1,
     "newV": 0
   },
   "Alma": {
@@ -835,6 +935,7 @@
     "EXP": 9.5,
     "MAS": 13.8,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "Gustav Battle": {
@@ -844,6 +945,7 @@
     "MAS": 14.1,
     "ULT": 14.8,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "FREELY TOMORROW": {
@@ -852,6 +954,7 @@
     "EXP": 8,
     "MAS": 11.4,
     "genre": 2,
+    "release": 1,
     "newV": 0
   },
   "ギガンティックO.T.N": {
@@ -860,6 +963,7 @@
     "EXP": 10,
     "MAS": 14.1,
     "genre": 2,
+    "release": 1,
     "newV": 0
   },
   "フォルテシモBELL": {
@@ -868,6 +972,7 @@
     "EXP": 8,
     "MAS": 11,
     "genre": 7,
+    "release": 1,
     "newV": 0
   },
   "ジングルベル": {
@@ -877,6 +982,7 @@
     "MAS": 14.5,
     "ULT": 14.8,
     "genre": 0,
+    "release": 1,
     "newV": 0
   },
   "言ノ葉遊戯": {
@@ -885,6 +991,7 @@
     "EXP": 9.5,
     "MAS": 11.6,
     "genre": 9,
+    "release": 1,
     "newV": 0
   },
   "私の中の幻想的世界観及びその顕現を想起させたある現実での出来事に関する一考察": {
@@ -893,6 +1000,7 @@
     "EXP": 9,
     "MAS": 13.6,
     "genre": 7,
+    "release": 1,
     "newV": 0
   },
   "幾四音-Ixion-": {
@@ -902,6 +1010,7 @@
     "MAS": 12,
     "ULT": 14.3,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "ぼくらの16bit戦争": {
@@ -910,6 +1019,7 @@
     "EXP": 9.5,
     "MAS": 14.1,
     "genre": 2,
+    "release": 1,
     "newV": 0
   },
   "裏表ラバーズ": {
@@ -919,6 +1029,7 @@
     "MAS": 12.1,
     "ULT": 14,
     "genre": 2,
+    "release": 1,
     "newV": 0
   },
   "脳漿炸裂ガール": {
@@ -928,6 +1039,7 @@
     "MAS": 13.8,
     "ULT": 14.7,
     "genre": 2,
+    "release": 1,
     "newV": 0
   },
   "ネトゲ廃人シュプレヒコール": {
@@ -937,6 +1049,7 @@
     "MAS": 12.5,
     "ULT": 14.3,
     "genre": 2,
+    "release": 1,
     "newV": 0
   },
   "elegante": {
@@ -946,6 +1059,7 @@
     "MAS": 12.5,
     "ULT": 13.8,
     "genre": 6,
+    "release": 1,
     "newV": 0
   },
   "DETARAME ROCK&ROLL THEORY": {
@@ -954,6 +1068,7 @@
     "EXP": 9,
     "MAS": 12,
     "genre": 7,
+    "release": 1,
     "newV": 0
   },
   "XL TECHNO": {
@@ -962,6 +1077,7 @@
     "EXP": 12.5,
     "MAS": 13.6,
     "genre": 6,
+    "release": 2,
     "newV": 0
   },
   "Halcyon": {
@@ -971,6 +1087,7 @@
     "MAS": 14.5,
     "ULT": 14.9,
     "genre": 6,
+    "release": 2,
     "newV": 0
   },
   "Jimang Shot": {
@@ -979,6 +1096,7 @@
     "EXP": 9.5,
     "MAS": 13.7,
     "genre": 3,
+    "release": 2,
     "newV": 0
   },
   "stella=steLLa": {
@@ -987,6 +1105,7 @@
     "EXP": 10,
     "MAS": 13.7,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "すろぉもぉしょん": {
@@ -995,6 +1114,7 @@
     "EXP": 8,
     "MAS": 11.6,
     "genre": 2,
+    "release": 1,
     "newV": 0
   },
   "怒槌": {
@@ -1003,6 +1123,7 @@
     "EXP": 13.9,
     "MAS": 15.1,
     "genre": 5,
+    "release": 1,
     "newV": 0
   },
   "ユクエシレズ": {
@@ -1011,6 +1132,7 @@
     "EXP": 8,
     "MAS": 11.5,
     "genre": 2,
+    "release": 1,
     "newV": 0
   },
   "ってゐ！　～えいえんてゐVer～": {
@@ -1019,6 +1141,7 @@
     "EXP": 9.5,
     "MAS": 11.9,
     "genre": 3,
+    "release": 3,
     "newV": 0
   },
   "患部で止まってすぐ溶ける～狂気の優曇華院": {
@@ -1028,6 +1151,7 @@
     "MAS": 14.2,
     "ULT": 14.9,
     "genre": 3,
+    "release": 3,
     "newV": 0
   },
   "ひれ伏せ愚民どもっ！": {
@@ -1036,6 +1160,7 @@
     "EXP": 10.3,
     "MAS": 13.8,
     "genre": 3,
+    "release": 3,
     "newV": 0
   },
   "エテルニタス・ルドロジー": {
@@ -1044,6 +1169,7 @@
     "EXP": 10.1,
     "MAS": 13.8,
     "genre": 3,
+    "release": 3,
     "newV": 0
   },
   "幽闇に目醒めしは": {
@@ -1052,6 +1178,7 @@
     "EXP": 8,
     "MAS": 11.7,
     "genre": 3,
+    "release": 4,
     "newV": 0
   },
   "Starlight Vision": {
@@ -1060,6 +1187,7 @@
     "EXP": 9.5,
     "MAS": 13.2,
     "genre": 3,
+    "release": 4,
     "newV": 0
   },
   "Club Ibuki in Break All": {
@@ -1068,6 +1196,7 @@
     "EXP": 9.5,
     "MAS": 13.2,
     "genre": 3,
+    "release": 4,
     "newV": 0
   },
   "Phantasm Brigade": {
@@ -1076,6 +1205,7 @@
     "EXP": 9,
     "MAS": 14.1,
     "genre": 3,
+    "release": 4,
     "newV": 0
   },
   "永遠のメロディ": {
@@ -1084,6 +1214,7 @@
     "EXP": 8,
     "MAS": 12.8,
     "genre": 3,
+    "release": 4,
     "newV": 0
   },
   "FREEDOM DiVE": {
@@ -1092,6 +1223,7 @@
     "EXP": 11.5,
     "MAS": 14.8,
     "genre": 6,
+    "release": 2,
     "newV": 0
   },
   "Jack-the-Ripper◆": {
@@ -1100,6 +1232,7 @@
     "EXP": 11.8,
     "MAS": 14.2,
     "genre": 6,
+    "release": 2,
     "newV": 0
   },
   "AVALON": {
@@ -1108,6 +1241,7 @@
     "EXP": 12,
     "MAS": 14.4,
     "genre": 6,
+    "release": 6,
     "newV": 0
   },
   "ハート・ビート": {
@@ -1116,6 +1250,7 @@
     "EXP": 10,
     "MAS": 12.2,
     "genre": 7,
+    "release": 2,
     "newV": 0
   },
   "無敵We are one!!": {
@@ -1124,6 +1259,7 @@
     "EXP": 9.5,
     "MAS": 12.5,
     "genre": 7,
+    "release": 2,
     "newV": 0
   },
   "Contrapasso -inferno-": {
@@ -1132,6 +1268,7 @@
     "EXP": 12.5,
     "MAS": 15,
     "genre": 5,
+    "release": 2,
     "newV": 0
   },
   "GEMINI -C-": {
@@ -1140,6 +1277,7 @@
     "EXP": 11.3,
     "MAS": 14.2,
     "genre": 5,
+    "release": 2,
     "newV": 0
   },
   "FLOWER": {
@@ -1149,6 +1287,7 @@
     "MAS": 13,
     "ULT": 14.2,
     "genre": 6,
+    "release": 1,
     "newV": 0
   },
   "ちくわパフェだよ☆CKP": {
@@ -1158,6 +1297,7 @@
     "MAS": 11.5,
     "ULT": 14.4,
     "genre": 6,
+    "release": 1,
     "newV": 0
   },
   "SNIPE WHOLE": {
@@ -1166,6 +1306,7 @@
     "EXP": 10.7,
     "MAS": 13.8,
     "genre": 5,
+    "release": 2,
     "newV": 0
   },
   "SAMBISTA": {
@@ -1174,6 +1315,7 @@
     "EXP": 10,
     "MAS": 13.7,
     "genre": 6,
+    "release": 2,
     "newV": 0
   },
   "アスノヨゾラ哨戒班": {
@@ -1183,6 +1325,7 @@
     "MAS": 12.6,
     "ULT": 14,
     "genre": 2,
+    "release": 2,
     "newV": 2
   },
   "天樂": {
@@ -1191,6 +1334,7 @@
     "EXP": 9.5,
     "MAS": 12.4,
     "genre": 2,
+    "release": 2,
     "newV": 0
   },
   "いろは唄": {
@@ -1199,6 +1343,7 @@
     "EXP": 9,
     "MAS": 12.5,
     "genre": 2,
+    "release": 2,
     "newV": 0
   },
   "星屑ユートピア": {
@@ -1207,6 +1352,7 @@
     "EXP": 9.5,
     "MAS": 11.9,
     "genre": 2,
+    "release": 2,
     "newV": 0
   },
   "放課後革命": {
@@ -1215,6 +1361,7 @@
     "EXP": 9.5,
     "MAS": 12.8,
     "genre": 2,
+    "release": 2,
     "newV": 0
   },
   "楽園ファンファーレ": {
@@ -1223,6 +1370,7 @@
     "EXP": 9.5,
     "MAS": 11.7,
     "genre": 2,
+    "release": 2,
     "newV": 0
   },
   "サウンドプレイヤー": {
@@ -1231,6 +1379,7 @@
     "EXP": 9,
     "MAS": 13,
     "genre": 5,
+    "release": 3,
     "newV": 0
   },
   "玩具狂奏曲 -終焉-": {
@@ -1239,6 +1388,7 @@
     "EXP": 13.9,
     "MAS": 15.1,
     "genre": 5,
+    "release": 3,
     "newV": 0
   },
   "如月アテンション": {
@@ -1247,6 +1397,7 @@
     "EXP": 9.5,
     "MAS": 12.7,
     "genre": 2,
+    "release": 2,
     "newV": 0
   },
   "Mr. Wonderland": {
@@ -1255,6 +1406,7 @@
     "EXP": 11.5,
     "MAS": 14,
     "genre": 2,
+    "release": 2,
     "newV": 0
   },
   "カミサマネジマキ": {
@@ -1263,6 +1415,7 @@
     "EXP": 11,
     "MAS": 14.1,
     "genre": 2,
+    "release": 2,
     "newV": 0
   },
   "恋愛裁判": {
@@ -1271,6 +1424,7 @@
     "EXP": 8.5,
     "MAS": 11.6,
     "genre": 2,
+    "release": 2,
     "newV": 0
   },
   "ウミユリ海底譚": {
@@ -1279,6 +1433,7 @@
     "EXP": 9.5,
     "MAS": 12.5,
     "genre": 2,
+    "release": 2,
     "newV": 0
   },
   "Garakuta Doll Play": {
@@ -1287,6 +1442,7 @@
     "EXP": 13,
     "MAS": 14.8,
     "genre": 9,
+    "release": 2,
     "newV": 0
   },
   "洗脳": {
@@ -1295,6 +1451,7 @@
     "EXP": 8,
     "MAS": 11.5,
     "genre": 9,
+    "release": 2,
     "newV": 0
   },
   "このふざけた素晴らしき世界は、僕の為にある": {
@@ -1303,6 +1460,7 @@
     "EXP": 8,
     "MAS": 12.2,
     "genre": 2,
+    "release": 2,
     "newV": 0
   },
   "紅華刑": {
@@ -1311,6 +1469,7 @@
     "EXP": 12.5,
     "MAS": 14.4,
     "genre": 5,
+    "release": 3,
     "newV": 0
   },
   "Hyperion": {
@@ -1319,6 +1478,7 @@
     "EXP": 10.3,
     "MAS": 13.5,
     "genre": 5,
+    "release": 3,
     "newV": 0
   },
   "Elemental Creation": {
@@ -1328,6 +1488,7 @@
     "MAS": 14.5,
     "ULT": 14.9,
     "genre": 6,
+    "release": 2,
     "newV": 0
   },
   "アルストロメリア": {
@@ -1337,6 +1498,7 @@
     "MAS": 12.5,
     "ULT": 14.5,
     "genre": 6,
+    "release": 2,
     "newV": 0
   },
   "Devastating Blaster": {
@@ -1345,6 +1507,7 @@
     "EXP": 13,
     "MAS": 14.9,
     "genre": 5,
+    "release": 4,
     "newV": 0
   },
   "夜咄ディセイブ": {
@@ -1353,6 +1516,7 @@
     "EXP": 10.1,
     "MAS": 13.5,
     "genre": 2,
+    "release": 2,
     "newV": 0
   },
   "回レ！雪月花": {
@@ -1362,6 +1526,7 @@
     "MAS": 12.8,
     "ULT": 14,
     "genre": 0,
+    "release": 2,
     "newV": 0
   },
   "Help me, あーりん！": {
@@ -1370,6 +1535,7 @@
     "EXP": 9.5,
     "MAS": 11.5,
     "genre": 7,
+    "release": 2,
     "newV": 0
   },
   "なるとなぎのパーフェクトロックンロール教室": {
@@ -1378,6 +1544,7 @@
     "EXP": 10.9,
     "MAS": 13.8,
     "genre": 7,
+    "release": 2,
     "newV": 0
   },
   "Schrecklicher Aufstand": {
@@ -1386,6 +1553,7 @@
     "EXP": 13.3,
     "MAS": 14.9,
     "genre": 5,
+    "release": 3,
     "newV": 0
   },
   "ドライヴ・オン・ザ・レインボー": {
@@ -1394,6 +1562,7 @@
     "EXP": 10.7,
     "MAS": 13.8,
     "genre": 5,
+    "release": 4,
     "newV": 0
   },
   "Philosopher": {
@@ -1402,6 +1571,7 @@
     "EXP": 12.1,
     "MAS": 14.5,
     "genre": 5,
+    "release": 3,
     "newV": 0
   },
   "Crazy ∞ nighT": {
@@ -1410,6 +1580,7 @@
     "EXP": 8.5,
     "MAS": 13.2,
     "genre": 2,
+    "release": 2,
     "newV": 0
   },
   "愛迷エレジー": {
@@ -1418,6 +1589,7 @@
     "EXP": 9.5,
     "MAS": 12.8,
     "genre": 2,
+    "release": 2,
     "newV": 0
   },
   "Warcry": {
@@ -1426,6 +1598,7 @@
     "EXP": 10.1,
     "MAS": 14.3,
     "genre": 5,
+    "release": 4,
     "newV": 0
   },
   "その群青が愛しかったようだった": {
@@ -1434,6 +1607,7 @@
     "EXP": 10,
     "MAS": 11.7,
     "genre": 5,
+    "release": 3,
     "newV": 0
   },
   "札付きのワル　～マイケルのうた～": {
@@ -1442,6 +1616,7 @@
     "EXP": 10.2,
     "MAS": 13.6,
     "genre": 5,
+    "release": 4,
     "newV": 0
   },
   "BOKUTO": {
@@ -1450,6 +1625,7 @@
     "EXP": 10.2,
     "MAS": 14,
     "genre": 5,
+    "release": 3,
     "newV": 0
   },
   "TiamaT:F minor": {
@@ -1458,6 +1634,7 @@
     "EXP": 13.7,
     "MAS": 15,
     "genre": 5,
+    "release": 4,
     "newV": 0
   },
   "Oshama Scramble! (Cranky Remix)": {
@@ -1466,6 +1643,7 @@
     "EXP": 11.4,
     "MAS": 14,
     "genre": 5,
+    "release": 3,
     "newV": 0
   },
   "D.E.A.D.L.Y.": {
@@ -1474,6 +1652,7 @@
     "EXP": 9.5,
     "MAS": 12.9,
     "genre": 5,
+    "release": 3,
     "newV": 0
   },
   "ロボットプラネットユートピア": {
@@ -1482,6 +1661,7 @@
     "EXP": 9.5,
     "MAS": 13.1,
     "genre": 5,
+    "release": 3,
     "newV": 0
   },
   "Tidal Wave": {
@@ -1490,6 +1670,7 @@
     "EXP": 10.8,
     "MAS": 14.4,
     "genre": 5,
+    "release": 3,
     "newV": 0
   },
   "Hand in Hand": {
@@ -1498,6 +1679,7 @@
     "EXP": 8.5,
     "MAS": 11.7,
     "genre": 2,
+    "release": 3,
     "newV": 0
   },
   "My Dearest Song": {
@@ -1506,6 +1688,7 @@
     "EXP": 8.5,
     "MAS": 13.1,
     "genre": 7,
+    "release": 3,
     "newV": 0
   },
   "猫祭り": {
@@ -1514,6 +1697,7 @@
     "EXP": 9.5,
     "MAS": 12.3,
     "genre": 7,
+    "release": 4,
     "newV": 0
   },
   "ゲシュタルト！テスト期間！！": {
@@ -1522,6 +1706,7 @@
     "EXP": 9.5,
     "MAS": 13.7,
     "genre": 5,
+    "release": 4,
     "newV": 0
   },
   "心象蜃気楼": {
@@ -1530,6 +1715,7 @@
     "EXP": 9.5,
     "MAS": 11.4,
     "genre": 5,
+    "release": 3,
     "newV": 0
   },
   "Bang Babang Bang!!!": {
@@ -1538,6 +1724,7 @@
     "EXP": 10.7,
     "MAS": 13.8,
     "genre": 7,
+    "release": 4,
     "newV": 0
   },
   "エンヴィキャットウォーク": {
@@ -1546,6 +1733,7 @@
     "EXP": 9.5,
     "MAS": 13.2,
     "genre": 2,
+    "release": 3,
     "newV": 0
   },
   "鬼KYOKAN": {
@@ -1554,6 +1742,7 @@
     "EXP": 10,
     "MAS": 14,
     "genre": 2,
+    "release": 3,
     "newV": 0
   },
   "有頂天ビバーチェ": {
@@ -1562,6 +1751,7 @@
     "EXP": 8,
     "MAS": 11.7,
     "genre": 2,
+    "release": 3,
     "newV": 0
   },
   "ビバハピ": {
@@ -1570,6 +1760,7 @@
     "EXP": 9,
     "MAS": 11.9,
     "genre": 2,
+    "release": 3,
     "newV": 0
   },
   "願い星": {
@@ -1578,6 +1769,7 @@
     "EXP": 8,
     "MAS": 11.9,
     "genre": 5,
+    "release": 4,
     "newV": 0
   },
   "愛言葉": {
@@ -1586,6 +1778,7 @@
     "EXP": 8,
     "MAS": 11.4,
     "genre": 2,
+    "release": 3,
     "newV": 0
   },
   "後夜祭": {
@@ -1594,6 +1787,7 @@
     "EXP": 9.5,
     "MAS": 13,
     "genre": 5,
+    "release": 3,
     "newV": 0
   },
   "TRUST": {
@@ -1602,6 +1796,7 @@
     "EXP": 9.5,
     "MAS": 13.1,
     "genre": 7,
+    "release": 4,
     "newV": 0
   },
   "からくりピエロ": {
@@ -1610,6 +1805,7 @@
     "EXP": 8,
     "MAS": 11.7,
     "genre": 2,
+    "release": 3,
     "newV": 0
   },
   "深海少女": {
@@ -1618,6 +1814,7 @@
     "EXP": 8,
     "MAS": 11.7,
     "genre": 2,
+    "release": 3,
     "newV": 0
   },
   "リモコン": {
@@ -1626,6 +1823,7 @@
     "EXP": 8,
     "MAS": 11.8,
     "genre": 2,
+    "release": 3,
     "newV": 0
   },
   "ラクガキスト": {
@@ -1634,6 +1832,7 @@
     "EXP": 11.2,
     "MAS": 14.4,
     "genre": 2,
+    "release": 3,
     "newV": 0
   },
   "アカツキアライヴァル": {
@@ -1642,6 +1841,7 @@
     "EXP": 9.5,
     "MAS": 11.7,
     "genre": 2,
+    "release": 3,
     "newV": 0
   },
   "神曲": {
@@ -1650,6 +1850,7 @@
     "EXP": 8,
     "MAS": 12,
     "genre": 2,
+    "release": 3,
     "newV": 0
   },
   "幸せになれる隠しコマンドがあるらしい": {
@@ -1658,6 +1859,7 @@
     "EXP": 10.2,
     "MAS": 13.7,
     "genre": 2,
+    "release": 3,
     "newV": 0
   },
   "メルト": {
@@ -1666,6 +1868,7 @@
     "EXP": 8,
     "MAS": 11.4,
     "genre": 2,
+    "release": 8,
     "newV": 0
   },
   "Tell Your World": {
@@ -1674,6 +1877,7 @@
     "EXP": 8,
     "MAS": 11.4,
     "genre": 2,
+    "release": 3,
     "newV": 0
   },
   "ロミオとシンデレラ": {
@@ -1682,6 +1886,7 @@
     "EXP": 10,
     "MAS": 11.8,
     "genre": 2,
+    "release": 3,
     "newV": 0
   },
   "First Twinkle": {
@@ -1690,6 +1895,7 @@
     "EXP": 8.5,
     "MAS": 11.4,
     "genre": 5,
+    "release": 3,
     "newV": 0
   },
   "ウソラセラ": {
@@ -1698,6 +1904,7 @@
     "EXP": 10.7,
     "MAS": 13.2,
     "genre": 5,
+    "release": 3,
     "newV": 0
   },
   "檄!帝国華撃団": {
@@ -1706,6 +1913,7 @@
     "EXP": 8,
     "MAS": 11.3,
     "genre": 6,
+    "release": 3,
     "newV": 0
   },
   "Kronos": {
@@ -1714,6 +1922,7 @@
     "EXP": 9.5,
     "MAS": 13,
     "genre": 6,
+    "release": 3,
     "newV": 0
   },
   "月に叢雲華に風": {
@@ -1722,6 +1931,7 @@
     "EXP": 8,
     "MAS": 12.4,
     "genre": 3,
+    "release": 3,
     "newV": 0
   },
   "インビジブル": {
@@ -1730,6 +1940,7 @@
     "EXP": 10.8,
     "MAS": 14.2,
     "genre": 2,
+    "release": 3,
     "newV": 0
   },
   "人生リセットボタン": {
@@ -1738,6 +1949,7 @@
     "EXP": 10.3,
     "MAS": 13.8,
     "genre": 2,
+    "release": 3,
     "newV": 0
   },
   "響": {
@@ -1746,6 +1958,7 @@
     "EXP": 9.5,
     "MAS": 12,
     "genre": 5,
+    "release": 4,
     "newV": 0
   },
   "風仁雷仁": {
@@ -1754,6 +1967,7 @@
     "EXP": 9,
     "MAS": 13.2,
     "genre": 6,
+    "release": 3,
     "newV": 0
   },
   "PRIVATE SERVICE": {
@@ -1763,6 +1977,7 @@
     "MAS": 13.5,
     "ULT": 14.7,
     "genre": 6,
+    "release": 3,
     "newV": 0
   },
   "No Routine": {
@@ -1771,6 +1986,7 @@
     "EXP": 9,
     "MAS": 12.8,
     "genre": 3,
+    "release": 3,
     "newV": 0
   },
   "白い雪のプリンセスは": {
@@ -1779,6 +1995,7 @@
     "EXP": 9.5,
     "MAS": 12.4,
     "genre": 2,
+    "release": 3,
     "newV": 0
   },
   "Strahv": {
@@ -1787,6 +2004,7 @@
     "EXP": 11,
     "MAS": 14.4,
     "genre": 6,
+    "release": 3,
     "newV": 0
   },
   "Dreams Dreams:Kids Ver.": {
@@ -1795,6 +2013,7 @@
     "EXP": 7.5,
     "MAS": 10.4,
     "genre": 6,
+    "release": 3,
     "newV": 0
   },
   "In The Blue Sky '01": {
@@ -1803,6 +2022,7 @@
     "EXP": 8,
     "MAS": 11.6,
     "genre": 6,
+    "release": 3,
     "newV": 0
   },
   "幻想のサテライト": {
@@ -1811,6 +2031,7 @@
     "EXP": 11.1,
     "MAS": 14.2,
     "genre": 3,
+    "release": 3,
     "newV": 0
   },
   "凛として咲く花の如く": {
@@ -1820,6 +2041,7 @@
     "MAS": 12.5,
     "ULT": 14.3,
     "genre": 6,
+    "release": 3,
     "newV": 0
   },
   "Paqqin": {
@@ -1828,6 +2050,7 @@
     "EXP": 10.1,
     "MAS": 13.7,
     "genre": 5,
+    "release": 3,
     "newV": 0
   },
   "覚醒楽奏メタフィクション": {
@@ -1836,6 +2059,7 @@
     "EXP": 12.2,
     "MAS": 14.2,
     "genre": 5,
+    "release": 4,
     "newV": 0
   },
   "みくみくにしてあげる♪【してやんよ】": {
@@ -1844,6 +2068,7 @@
     "EXP": 8,
     "MAS": 11.5,
     "genre": 2,
+    "release": 3,
     "newV": 0
   },
   "Air": {
@@ -1853,6 +2078,7 @@
     "MAS": 14.5,
     "ULT": 14.9,
     "genre": 6,
+    "release": 3,
     "newV": 0
   },
   "DataErr0r": {
@@ -1861,6 +2087,7 @@
     "EXP": 10.3,
     "MAS": 14,
     "genre": 6,
+    "release": 3,
     "newV": 0
   },
   "Say A Vengeance": {
@@ -1869,6 +2096,7 @@
     "EXP": 9.5,
     "MAS": 13.7,
     "genre": 6,
+    "release": 3,
     "newV": 0
   },
   "010": {
@@ -1877,6 +2105,7 @@
     "EXP": 9.5,
     "MAS": 13.5,
     "genre": 6,
+    "release": 3,
     "newV": 0
   },
   "ERIS -Legend of Gaidelia-": {
@@ -1885,6 +2114,7 @@
     "EXP": 9,
     "MAS": 13.5,
     "genre": 6,
+    "release": 3,
     "newV": 0
   },
   "Imperishable Night 2006 (2016 Refine)": {
@@ -1893,6 +2123,7 @@
     "EXP": 11.5,
     "MAS": 14.6,
     "genre": 3,
+    "release": 3,
     "newV": 0
   },
   "Dreadnought": {
@@ -1902,6 +2133,7 @@
     "MAS": 14.5,
     "ULT": 14.7,
     "genre": 6,
+    "release": 3,
     "newV": 0
   },
   "STAGER": {
@@ -1910,6 +2142,7 @@
     "EXP": 10,
     "MAS": 13.7,
     "genre": 6,
+    "release": 3,
     "newV": 0
   },
   "Her Majesty": {
@@ -1918,6 +2151,7 @@
     "EXP": 9,
     "MAS": 13.5,
     "genre": 6,
+    "release": 3,
     "newV": 0
   },
   "Sakura Fubuki": {
@@ -1926,6 +2160,7 @@
     "EXP": 9,
     "MAS": 13.3,
     "genre": 6,
+    "release": 3,
     "newV": 0
   },
   "JULIAN": {
@@ -1934,6 +2169,7 @@
     "EXP": 10.9,
     "MAS": 13.7,
     "genre": 6,
+    "release": 3,
     "newV": 0
   },
   "★LittlE HearTs★": {
@@ -1942,6 +2178,7 @@
     "EXP": 11.6,
     "MAS": 14.9,
     "genre": 6,
+    "release": 3,
     "newV": 0
   },
   "STAIRWAY TO GENERATION": {
@@ -1950,6 +2187,7 @@
     "EXP": 9.5,
     "MAS": 13.2,
     "genre": 6,
+    "release": 3,
     "newV": 0
   },
   "ドキドキDREAM!!!": {
@@ -1959,6 +2197,7 @@
     "MAS": 12.5,
     "ULT": 13.8,
     "genre": 7,
+    "release": 3,
     "newV": 0
   },
   "猛進ソリストライフ！": {
@@ -1968,6 +2207,7 @@
     "MAS": 12.6,
     "ULT": 14.7,
     "genre": 7,
+    "release": 3,
     "newV": 0
   },
   "空威張りビヘイビア": {
@@ -1976,6 +2216,7 @@
     "EXP": 9,
     "MAS": 13.1,
     "genre": 9,
+    "release": 3,
     "newV": 0
   },
   "Oshama Scramble!": {
@@ -1985,6 +2226,7 @@
     "MAS": 14,
     "ULT": 14.7,
     "genre": 9,
+    "release": 10,
     "newV": 2
   },
   "FLOATED CALM": {
@@ -1993,6 +2235,7 @@
     "EXP": 10,
     "MAS": 12.8,
     "genre": 6,
+    "release": 4,
     "newV": 0
   },
   "Supersonic Generation": {
@@ -2001,6 +2244,7 @@
     "EXP": 11.7,
     "MAS": 14.4,
     "genre": 5,
+    "release": 4,
     "newV": 0
   },
   "シジョウノコエ VOCALO ver.": {
@@ -2009,6 +2253,7 @@
     "EXP": 9.5,
     "MAS": 12.6,
     "genre": 2,
+    "release": 3,
     "newV": 0
   },
   "Tic Tac DREAMIN’": {
@@ -2017,6 +2262,7 @@
     "EXP": 8.5,
     "MAS": 11.8,
     "genre": 7,
+    "release": 4,
     "newV": 0
   },
   "SPICY SWINGY STYLE": {
@@ -2025,6 +2271,7 @@
     "EXP": 9.5,
     "MAS": 12.7,
     "genre": 7,
+    "release": 4,
     "newV": 0
   },
   "RevolutionGame": {
@@ -2033,6 +2280,7 @@
     "EXP": 8.5,
     "MAS": 12,
     "genre": 5,
+    "release": 4,
     "newV": 0
   },
   "Still": {
@@ -2041,6 +2289,7 @@
     "EXP": 9,
     "MAS": 13.1,
     "genre": 7,
+    "release": 4,
     "newV": 0
   },
   "おまかせ！！トラブルメイ娘☆とれびちゃん": {
@@ -2049,6 +2298,7 @@
     "EXP": 9.5,
     "MAS": 14.1,
     "genre": 5,
+    "release": 4,
     "newV": 0
   },
   "オススメ☆♂♀☆でぃすとぴあ": {
@@ -2057,6 +2307,7 @@
     "EXP": 10.6,
     "MAS": 14.4,
     "genre": 5,
+    "release": 4,
     "newV": 0
   },
   "Daydream café": {
@@ -2066,6 +2317,7 @@
     "MAS": 11.4,
     "ULT": 12.7,
     "genre": 0,
+    "release": 4,
     "newV": 0
   },
   "ラブリー☆えんじぇる!!": {
@@ -2074,6 +2326,7 @@
     "EXP": 9.5,
     "MAS": 12.7,
     "genre": 0,
+    "release": 4,
     "newV": 0
   },
   "Face of Fact": {
@@ -2082,6 +2335,7 @@
     "EXP": 9.5,
     "MAS": 12.3,
     "genre": 0,
+    "release": 4,
     "newV": 0
   },
   "true my heart -Lovable mix-": {
@@ -2090,6 +2344,7 @@
     "EXP": 8,
     "MAS": 11.6,
     "genre": 0,
+    "release": 4,
     "newV": 0
   },
   "桜ノ雨": {
@@ -2098,6 +2353,7 @@
     "EXP": 8,
     "MAS": 11,
     "genre": 2,
+    "release": 4,
     "newV": 0
   },
   "いーあるふぁんくらぶ": {
@@ -2106,6 +2362,7 @@
     "EXP": 8,
     "MAS": 11.4,
     "genre": 2,
+    "release": 4,
     "newV": 0
   },
   "おこちゃま戦争": {
@@ -2114,6 +2371,7 @@
     "EXP": 10,
     "MAS": 13.8,
     "genre": 2,
+    "release": 4,
     "newV": 0
   },
   "エイリアンエイリアン": {
@@ -2122,6 +2380,7 @@
     "EXP": 9.5,
     "MAS": 11.7,
     "genre": 2,
+    "release": 4,
     "newV": 0
   },
   "虎視眈々": {
@@ -2130,6 +2389,7 @@
     "EXP": 8,
     "MAS": 12.9,
     "genre": 2,
+    "release": 4,
     "newV": 0
   },
   "アンハッピーリフレイン": {
@@ -2138,6 +2398,7 @@
     "EXP": 9.5,
     "MAS": 13.7,
     "genre": 2,
+    "release": 4,
     "newV": 0
   },
   "すきなことだけでいいです": {
@@ -2146,6 +2407,7 @@
     "EXP": 8,
     "MAS": 13,
     "genre": 2,
+    "release": 4,
     "newV": 0
   },
   "デリヘル呼んだら君が来た": {
@@ -2154,6 +2416,7 @@
     "EXP": 8.5,
     "MAS": 13,
     "genre": 2,
+    "release": 4,
     "newV": 0
   },
   "チュルリラ・チュルリラ・ダッダッダ！": {
@@ -2162,6 +2425,7 @@
     "EXP": 10,
     "MAS": 13.6,
     "genre": 2,
+    "release": 4,
     "newV": 0
   },
   "だんだん早くなる": {
@@ -2170,6 +2434,7 @@
     "EXP": 9,
     "MAS": 11.5,
     "genre": 2,
+    "release": 4,
     "newV": 0
   },
   "ECHO": {
@@ -2178,6 +2443,7 @@
     "EXP": 9.5,
     "MAS": 12.6,
     "genre": 2,
+    "release": 4,
     "newV": 0
   },
   "泡沫、哀のまほろば": {
@@ -2186,6 +2452,7 @@
     "EXP": 8,
     "MAS": 11.5,
     "genre": 3,
+    "release": 4,
     "newV": 0
   },
   "愛き夜道 feat. ランコ、雨天決行": {
@@ -2194,6 +2461,7 @@
     "EXP": 8,
     "MAS": 12.5,
     "genre": 3,
+    "release": 4,
     "newV": 0
   },
   "Starlight Dance Floor": {
@@ -2202,6 +2470,7 @@
     "EXP": 8,
     "MAS": 11.5,
     "genre": 3,
+    "release": 4,
     "newV": 0
   },
   "Witches night": {
@@ -2210,6 +2479,7 @@
     "EXP": 8,
     "MAS": 12,
     "genre": 3,
+    "release": 4,
     "newV": 0
   },
   "Help me, ERINNNNNN!! -Cranky remix-": {
@@ -2218,6 +2488,7 @@
     "EXP": 9,
     "MAS": 12.6,
     "genre": 3,
+    "release": 4,
     "newV": 0
   },
   "仙酌絶唱のファンタジア": {
@@ -2226,6 +2497,7 @@
     "EXP": 9,
     "MAS": 13.5,
     "genre": 3,
+    "release": 4,
     "newV": 0
   },
   "キュアリアス光吉古牌　－祭－": {
@@ -2234,6 +2506,7 @@
     "EXP": 10,
     "MAS": 12.8,
     "genre": 3,
+    "release": 4,
     "newV": 0
   },
   "Evans": {
@@ -2243,6 +2516,7 @@
     "MAS": 14.4,
     "ULT": 14.6,
     "genre": 6,
+    "release": 4,
     "newV": 0
   },
   "神威": {
@@ -2251,6 +2525,7 @@
     "EXP": 13.8,
     "MAS": 14.9,
     "genre": 6,
+    "release": 4,
     "newV": 0
   },
   "GOODTEK": {
@@ -2259,6 +2534,7 @@
     "EXP": 10.7,
     "MAS": 14.3,
     "genre": 6,
+    "release": 4,
     "newV": 0
   },
   "Name of oath": {
@@ -2267,6 +2543,7 @@
     "EXP": 11.1,
     "MAS": 14.5,
     "genre": 6,
+    "release": 4,
     "newV": 0
   },
   "Bird Sprite": {
@@ -2275,6 +2552,7 @@
     "EXP": 8.5,
     "MAS": 13,
     "genre": 6,
+    "release": 4,
     "newV": 0
   },
   "オモイヨシノ": {
@@ -2283,6 +2561,7 @@
     "EXP": 8,
     "MAS": 11.6,
     "genre": 6,
+    "release": 6,
     "newV": 0
   },
   "Dengeki Tube": {
@@ -2291,6 +2570,7 @@
     "EXP": 12.5,
     "MAS": 14.9,
     "genre": 6,
+    "release": 4,
     "newV": 0
   },
   "若い力 -SEGA HARD GIRLS MIX-": {
@@ -2299,6 +2579,7 @@
     "EXP": 8,
     "MAS": 11.7,
     "genre": 0,
+    "release": 4,
     "newV": 0
   },
   "レッツゴー!陰陽師": {
@@ -2307,6 +2588,7 @@
     "EXP": 8,
     "MAS": 11.9,
     "genre": 6,
+    "release": 4,
     "newV": 0
   },
   "あねぺったん": {
@@ -2315,6 +2597,7 @@
     "EXP": 9,
     "MAS": 12.3,
     "genre": 7,
+    "release": 4,
     "newV": 0
   },
   "Like the Wind [Reborn]": {
@@ -2323,6 +2606,7 @@
     "EXP": 11,
     "MAS": 14.4,
     "genre": 9,
+    "release": 4,
     "newV": 0
   },
   "天国と地獄 -言ノ葉リンネ-": {
@@ -2331,6 +2615,7 @@
     "EXP": 9.5,
     "MAS": 12.2,
     "genre": 9,
+    "release": 4,
     "newV": 0
   },
   "最愛テトラグラマトン": {
@@ -2339,6 +2624,7 @@
     "EXP": 9.5,
     "MAS": 13.7,
     "genre": 5,
+    "release": 4,
     "newV": 0
   },
   "悪戯": {
@@ -2347,6 +2633,7 @@
     "EXP": 9.5,
     "MAS": 12.5,
     "genre": 9,
+    "release": 4,
     "newV": 0
   },
   "りばーぶ": {
@@ -2355,6 +2642,7 @@
     "EXP": 8,
     "MAS": 11.2,
     "genre": 9,
+    "release": 4,
     "newV": 0
   },
   "Barbed Eye": {
@@ -2363,6 +2651,7 @@
     "EXP": 9,
     "MAS": 12.1,
     "genre": 9,
+    "release": 4,
     "newV": 0
   },
   "分からない": {
@@ -2371,6 +2660,7 @@
     "EXP": 10.7,
     "MAS": 14.2,
     "genre": 9,
+    "release": 4,
     "newV": 0
   },
   "相思創愛": {
@@ -2379,6 +2669,7 @@
     "EXP": 9.5,
     "MAS": 12.9,
     "genre": 9,
+    "release": 5,
     "newV": 0
   },
   "混沌を越えし我らが神聖なる調律主を讃えよ": {
@@ -2387,6 +2678,7 @@
     "EXP": 14.4,
     "MAS": 15.3,
     "genre": 5,
+    "release": 4,
     "newV": 0
   },
   "Finite": {
@@ -2395,6 +2687,7 @@
     "EXP": 11.5,
     "MAS": 14.9,
     "genre": 6,
+    "release": 4,
     "newV": 0
   },
   "地球最後の告白を": {
@@ -2403,6 +2696,7 @@
     "EXP": 9,
     "MAS": 13,
     "genre": 2,
+    "release": 4,
     "newV": 0
   },
   "The wheel to the Night ～インド人が夢に!?～": {
@@ -2411,6 +2705,7 @@
     "EXP": 10.9,
     "MAS": 14.1,
     "genre": 7,
+    "release": 6,
     "newV": 0
   },
   "We Gonna Party -Feline Groove Mix-": {
@@ -2419,6 +2714,7 @@
     "EXP": 12.4,
     "MAS": 14.3,
     "genre": 5,
+    "release": 4,
     "newV": 0
   },
   "Through The Tower": {
@@ -2427,6 +2723,7 @@
     "EXP": 9.5,
     "MAS": 12.9,
     "genre": 6,
+    "release": 4,
     "newV": 0
   },
   "前前前世": {
@@ -2435,6 +2732,7 @@
     "EXP": 8.5,
     "MAS": 12,
     "genre": 0,
+    "release": 5,
     "newV": 0
   },
   "華鳥風月": {
@@ -2443,6 +2741,7 @@
     "EXP": 8.5,
     "MAS": 11.5,
     "genre": 3,
+    "release": 5,
     "newV": 0
   },
   "儚きもの人間": {
@@ -2451,6 +2750,7 @@
     "EXP": 9.5,
     "MAS": 13.2,
     "genre": 3,
+    "release": 5,
     "newV": 0
   },
   "Aleph-0": {
@@ -2460,6 +2760,7 @@
     "MAS": 14.7,
     "ULT": 15.2,
     "genre": 6,
+    "release": 15,
     "newV": 0
   },
   "Black Lotus": {
@@ -2468,6 +2769,7 @@
     "EXP": 11.4,
     "MAS": 14.4,
     "genre": 6,
+    "release": 9,
     "newV": 0
   },
   "ＧＯ！ＧＯ！ラブリズム♥ ～あーりん書類審査通過記念Ver.～": {
@@ -2476,6 +2778,7 @@
     "EXP": 9.5,
     "MAS": 12.2,
     "genre": 7,
+    "release": 5,
     "newV": 0
   },
   "Session High⤴": {
@@ -2484,6 +2787,7 @@
     "EXP": 10,
     "MAS": 13.3,
     "genre": 7,
+    "release": 5,
     "newV": 0
   },
   "光線チューニング": {
@@ -2492,6 +2796,7 @@
     "EXP": 9.5,
     "MAS": 12.4,
     "genre": 5,
+    "release": 5,
     "newV": 0
   },
   "立川浄穢捕物帳": {
@@ -2500,6 +2805,7 @@
     "EXP": 9.5,
     "MAS": 14,
     "genre": 5,
+    "release": 5,
     "newV": 0
   },
   "眠れぬ夜君を想フ": {
@@ -2508,6 +2814,7 @@
     "EXP": 10.1,
     "MAS": 14.3,
     "genre": 5,
+    "release": 5,
     "newV": 0
   },
   "JIGOKU STATION CENTRAL GATE": {
@@ -2516,6 +2823,7 @@
     "EXP": 12.4,
     "MAS": 14.3,
     "genre": 5,
+    "release": 5,
     "newV": 0
   },
   "PinqPiq": {
@@ -2524,6 +2832,7 @@
     "EXP": 10.1,
     "MAS": 13.5,
     "genre": 5,
+    "release": 5,
     "newV": 0
   },
   "トリスメギストス": {
@@ -2532,6 +2841,7 @@
     "EXP": 10,
     "MAS": 14.2,
     "genre": 5,
+    "release": 5,
     "newV": 0
   },
   "WE GOTTA SOUL": {
@@ -2540,6 +2850,7 @@
     "EXP": 8,
     "MAS": 12.5,
     "genre": 5,
+    "release": 5,
     "newV": 0
   },
   "哀しみ集め": {
@@ -2548,6 +2859,7 @@
     "EXP": 9,
     "MAS": 12.5,
     "genre": 5,
+    "release": 5,
     "newV": 0
   },
   "キラメケ→Shoot it Now!": {
@@ -2556,6 +2868,7 @@
     "EXP": 9.5,
     "MAS": 13.9,
     "genre": 5,
+    "release": 5,
     "newV": 0
   },
   "Kattobi KEIKYU Rider": {
@@ -2564,6 +2877,7 @@
     "EXP": 13.4,
     "MAS": 14.8,
     "genre": 5,
+    "release": 5,
     "newV": 0
   },
   "Glorious Crown (tpz over-Over-OVERCUTE REMIX)": {
@@ -2572,6 +2886,7 @@
     "EXP": 13.6,
     "MAS": 14.9,
     "genre": 5,
+    "release": 5,
     "newV": 0
   },
   "エレクトロサチュレイタ": {
@@ -2580,6 +2895,7 @@
     "EXP": 9,
     "MAS": 12,
     "genre": 2,
+    "release": 5,
     "newV": 0
   },
   "Palette": {
@@ -2588,6 +2904,7 @@
     "EXP": 8,
     "MAS": 12.5,
     "genre": 2,
+    "release": 5,
     "newV": 0
   },
   "アマツキツネ": {
@@ -2596,6 +2913,7 @@
     "EXP": 9,
     "MAS": 11.8,
     "genre": 2,
+    "release": 5,
     "newV": 0
   },
   "パーフェクト生命": {
@@ -2604,6 +2922,7 @@
     "EXP": 10.4,
     "MAS": 13.3,
     "genre": 2,
+    "release": 5,
     "newV": 0
   },
   "のぼれ！すすめ！高い塔": {
@@ -2612,6 +2931,7 @@
     "EXP": 9.5,
     "MAS": 14.3,
     "genre": 2,
+    "release": 5,
     "newV": 0
   },
   "害虫": {
@@ -2620,6 +2940,7 @@
     "EXP": 10.2,
     "MAS": 14.2,
     "genre": 2,
+    "release": 5,
     "newV": 0
   },
   "Vampire": {
@@ -2629,6 +2950,7 @@
     "MAS": 13.4,
     "ULT": 14.9,
     "genre": 0,
+    "release": 5,
     "newV": 2
   },
   "ケロ⑨destiny": {
@@ -2637,6 +2959,7 @@
     "EXP": 9.5,
     "MAS": 13.8,
     "genre": 3,
+    "release": 5,
     "newV": 0
   },
   "Last Moments": {
@@ -2645,6 +2968,7 @@
     "EXP": 9,
     "MAS": 13.2,
     "genre": 3,
+    "release": 5,
     "newV": 0
   },
   "風に乗せた願い": {
@@ -2653,6 +2977,7 @@
     "EXP": 9.5,
     "MAS": 13.9,
     "genre": 3,
+    "release": 5,
     "newV": 0
   },
   "天狗の落とし文 feat. ｙｔｒ": {
@@ -2661,6 +2986,7 @@
     "EXP": 9.5,
     "MAS": 12.9,
     "genre": 3,
+    "release": 5,
     "newV": 0
   },
   "星色夜空": {
@@ -2669,6 +2995,7 @@
     "EXP": 8,
     "MAS": 10.5,
     "genre": 3,
+    "release": 6,
     "newV": 0
   },
   "物凄い勢いでけーねが物凄いうた": {
@@ -2678,6 +3005,7 @@
     "MAS": 12.4,
     "ULT": 13.5,
     "genre": 3,
+    "release": 6,
     "newV": 0
   },
   "Wake up Dreamer": {
@@ -2686,6 +3014,7 @@
     "EXP": 9.5,
     "MAS": 13.4,
     "genre": 5,
+    "release": 5,
     "newV": 0
   },
   "World Vanquisher": {
@@ -2694,6 +3023,7 @@
     "EXP": 13.8,
     "MAS": 15.3,
     "genre": 5,
+    "release": 5,
     "newV": 0
   },
   "macrocosmos": {
@@ -2702,6 +3032,7 @@
     "EXP": 13.3,
     "MAS": 15.2,
     "genre": 5,
+    "release": 6,
     "newV": 0
   },
   "Iudicium": {
@@ -2710,6 +3041,7 @@
     "EXP": 11.9,
     "MAS": 14.8,
     "genre": 5,
+    "release": 5,
     "newV": 0
   },
   "Twice up Scenery": {
@@ -2718,6 +3050,7 @@
     "EXP": 10.4,
     "MAS": 14.2,
     "genre": 5,
+    "release": 5,
     "newV": 0
   },
   "奏者はただ背中と提琴で語るのみ": {
@@ -2726,6 +3059,7 @@
     "EXP": 10.6,
     "MAS": 14,
     "genre": 7,
+    "release": 5,
     "newV": 0
   },
   "Xevel": {
@@ -2734,6 +3068,7 @@
     "EXP": 12.1,
     "MAS": 14.9,
     "genre": 5,
+    "release": 5,
     "newV": 0
   },
   "セイクリッド　ルイン": {
@@ -2742,6 +3077,7 @@
     "EXP": 11.3,
     "MAS": 14.4,
     "genre": 6,
+    "release": 5,
     "newV": 0
   },
   "極圏": {
@@ -2750,6 +3086,7 @@
     "EXP": 11.7,
     "MAS": 14.6,
     "genre": 6,
+    "release": 5,
     "newV": 0
   },
   "Scarlet Lance": {
@@ -2758,6 +3095,7 @@
     "EXP": 12.1,
     "MAS": 14.6,
     "genre": 6,
+    "release": 5,
     "newV": 0
   },
   "ホシトハナ": {
@@ -2766,6 +3104,7 @@
     "EXP": 9,
     "MAS": 11.4,
     "genre": 0,
+    "release": 5,
     "newV": 0
   },
   "Just Be Friends": {
@@ -2774,6 +3113,7 @@
     "EXP": 9,
     "MAS": 11.7,
     "genre": 2,
+    "release": 5,
     "newV": 0
   },
   "炉心融解": {
@@ -2782,6 +3122,7 @@
     "EXP": 8.5,
     "MAS": 11.9,
     "genre": 2,
+    "release": 5,
     "newV": 0
   },
   "Fire◎Flower": {
@@ -2790,6 +3131,7 @@
     "EXP": 8,
     "MAS": 12.7,
     "genre": 2,
+    "release": 5,
     "newV": 0
   },
   "卑怯戦隊うろたんだー": {
@@ -2798,6 +3140,7 @@
     "EXP": 9,
     "MAS": 12.8,
     "genre": 2,
+    "release": 5,
     "newV": 0
   },
   "イロトリドリのメロディ": {
@@ -2806,6 +3149,7 @@
     "EXP": 9,
     "MAS": 13.5,
     "genre": 7,
+    "release": 5,
     "newV": 0
   },
   "セハガガガンバッちゃう！！": {
@@ -2814,6 +3158,7 @@
     "EXP": 9.5,
     "MAS": 13.4,
     "genre": 0,
+    "release": 5,
     "newV": 0
   },
   "Burning Hearts ～炎のANGEL～": {
@@ -2822,6 +3167,7 @@
     "EXP": 9.5,
     "MAS": 13.5,
     "genre": 6,
+    "release": 5,
     "newV": 0
   },
   "Our Fighting": {
@@ -2830,6 +3176,7 @@
     "EXP": 9,
     "MAS": 11.8,
     "genre": 0,
+    "release": 5,
     "newV": 0
   },
   "VERTeX": {
@@ -2838,6 +3185,7 @@
     "EXP": 12,
     "MAS": 14.7,
     "genre": 9,
+    "release": 5,
     "newV": 0
   },
   "-OutsideR:RequieM-": {
@@ -2846,6 +3194,7 @@
     "EXP": 10.9,
     "MAS": 13.7,
     "genre": 7,
+    "release": 5,
     "newV": 0
   },
   "夢と夢～あの日のメロディ～": {
@@ -2854,6 +3203,7 @@
     "EXP": 8,
     "MAS": 11.2,
     "genre": 7,
+    "release": 5,
     "newV": 0
   },
   "La Baguette Magique": {
@@ -2862,6 +3212,7 @@
     "EXP": 9,
     "MAS": 13.1,
     "genre": 5,
+    "release": 5,
     "newV": 0
   },
   "bubble attack": {
@@ -2870,6 +3221,7 @@
     "EXP": 10.7,
     "MAS": 14,
     "genre": 5,
+    "release": 5,
     "newV": 0
   },
   "The Darkness of Valhalla": {
@@ -2878,6 +3230,7 @@
     "EXP": 9.5,
     "MAS": 13.5,
     "genre": 5,
+    "release": 6,
     "newV": 0
   },
   "時の冒険者": {
@@ -2886,6 +3239,7 @@
     "EXP": 9.5,
     "MAS": 13.6,
     "genre": 5,
+    "release": 5,
     "newV": 0
   },
   "Rendezvous": {
@@ -2894,6 +3248,7 @@
     "EXP": 10.4,
     "MAS": 13.5,
     "genre": 5,
+    "release": 5,
     "newV": 0
   },
   "EXECUTOR": {
@@ -2902,6 +3257,7 @@
     "EXP": 9,
     "MAS": 13.7,
     "genre": 5,
+    "release": 5,
     "newV": 0
   },
   "Hyper Active": {
@@ -2910,6 +3266,7 @@
     "EXP": 10.7,
     "MAS": 14.3,
     "genre": 9,
+    "release": 5,
     "newV": 0
   },
   "L'épilogue": {
@@ -2918,6 +3275,7 @@
     "EXP": 9.5,
     "MAS": 13.3,
     "genre": 9,
+    "release": 5,
     "newV": 0
   },
   "D✪N’T ST✪P R✪CKIN’ ～[✪_✪] MIX～": {
@@ -2926,6 +3284,7 @@
     "EXP": 9.5,
     "MAS": 13.3,
     "genre": 9,
+    "release": 5,
     "newV": 0
   },
   "Caliburne ～Story of the Legendary sword～": {
@@ -2934,6 +3293,7 @@
     "EXP": 12.6,
     "MAS": 14.8,
     "genre": 9,
+    "release": 5,
     "newV": 0
   },
   "プリズム": {
@@ -2942,6 +3302,7 @@
     "EXP": 8,
     "MAS": 11.6,
     "genre": 7,
+    "release": 5,
     "newV": 0
   },
   "Clover Heart's": {
@@ -2950,6 +3311,7 @@
     "EXP": 8.5,
     "MAS": 11.5,
     "genre": 0,
+    "release": 5,
     "newV": 0
   },
   "スイートマジック": {
@@ -2958,6 +3320,7 @@
     "EXP": 8,
     "MAS": 11.7,
     "genre": 2,
+    "release": 5,
     "newV": 0
   },
   "Calamity Fortune": {
@@ -2966,6 +3329,7 @@
     "EXP": 11.5,
     "MAS": 14.7,
     "genre": 3,
+    "release": 5,
     "newV": 0
   },
   "Melody！": {
@@ -2974,6 +3338,7 @@
     "EXP": 9,
     "MAS": 12,
     "genre": 3,
+    "release": 5,
     "newV": 0
   },
   "G e n g a o z o": {
@@ -2982,6 +3347,7 @@
     "EXP": 13.5,
     "MAS": 14.6,
     "genre": 6,
+    "release": 5,
     "newV": 0
   },
   "サイバーサンダーサイダー": {
@@ -2990,6 +3356,7 @@
     "EXP": 10.3,
     "MAS": 14.1,
     "genre": 2,
+    "release": 13,
     "newV": 0
   },
   "フラジール": {
@@ -2998,6 +3365,7 @@
     "EXP": 9,
     "MAS": 11.6,
     "genre": 2,
+    "release": 5,
     "newV": 0
   },
   "Absolunote": {
@@ -3006,6 +3374,7 @@
     "EXP": 9.5,
     "MAS": 13,
     "genre": 2,
+    "release": 5,
     "newV": 0
   },
   "木彫り鯰と右肩ゾンビ": {
@@ -3014,6 +3383,7 @@
     "EXP": 9.5,
     "MAS": 12.9,
     "genre": 2,
+    "release": 5,
     "newV": 0
   },
   "ヒビカセ": {
@@ -3022,6 +3392,7 @@
     "EXP": 9,
     "MAS": 13.3,
     "genre": 2,
+    "release": 6,
     "newV": 0
   },
   "WAVE": {
@@ -3030,6 +3401,7 @@
     "EXP": 8,
     "MAS": 12.6,
     "genre": 2,
+    "release": 5,
     "newV": 0
   },
   "高気圧ねこロック": {
@@ -3038,6 +3410,7 @@
     "EXP": 10.1,
     "MAS": 13.3,
     "genre": 9,
+    "release": 7,
     "newV": 0
   },
   "ETERNAL DRAIN": {
@@ -3046,6 +3419,7 @@
     "EXP": 9.5,
     "MAS": 13.5,
     "genre": 6,
+    "release": 5,
     "newV": 0
   },
   "Paradisus-Paradoxum": {
@@ -3054,6 +3428,7 @@
     "EXP": 9,
     "MAS": 13,
     "genre": 0,
+    "release": 5,
     "newV": 0
   },
   "チルノのパーフェクトさんすう教室　⑨周年バージョン": {
@@ -3062,6 +3437,7 @@
     "EXP": 9.5,
     "MAS": 14,
     "genre": 3,
+    "release": 5,
     "newV": 0
   },
   "Cosmic twinkle star": {
@@ -3070,6 +3446,7 @@
     "EXP": 8.5,
     "MAS": 12.9,
     "genre": 0,
+    "release": 5,
     "newV": 0
   },
   "終わりなき物語": {
@@ -3078,6 +3455,7 @@
     "EXP": 8,
     "MAS": 12.8,
     "genre": 0,
+    "release": 5,
     "newV": 0
   },
   "BlazinG AIR": {
@@ -3086,6 +3464,7 @@
     "EXP": 10.1,
     "MAS": 14.3,
     "genre": 5,
+    "release": 6,
     "newV": 0
   },
   "Change me": {
@@ -3094,6 +3473,7 @@
     "EXP": 9.5,
     "MAS": 13.2,
     "genre": 2,
+    "release": 5,
     "newV": 0
   },
   "AMAZING MIGHTYYYY!!!!": {
@@ -3102,6 +3482,7 @@
     "EXP": 12.1,
     "MAS": 14.8,
     "genre": 9,
+    "release": 5,
     "newV": 0
   },
   "砂の惑星 feat. HATSUNE MIKU": {
@@ -3110,6 +3491,7 @@
     "EXP": 8,
     "MAS": 12.8,
     "genre": 2,
+    "release": 5,
     "newV": 0
   },
   "拝啓ドッペルゲンガー": {
@@ -3118,6 +3500,7 @@
     "EXP": 10,
     "MAS": 14.1,
     "genre": 2,
+    "release": 6,
     "newV": 0
   },
   "Doppelganger": {
@@ -3126,6 +3509,7 @@
     "EXP": 12.5,
     "MAS": 14.8,
     "genre": 6,
+    "release": 6,
     "newV": 0
   },
   "色は匂へど散りぬるを": {
@@ -3134,6 +3518,7 @@
     "EXP": 8.5,
     "MAS": 11.2,
     "genre": 3,
+    "release": 6,
     "newV": 0
   },
   "ポルカドット": {
@@ -3142,6 +3527,7 @@
     "EXP": 8,
     "MAS": 11.2,
     "genre": 7,
+    "release": 6,
     "newV": 0
   },
   "Sparking Revolver": {
@@ -3150,6 +3536,7 @@
     "EXP": 11.5,
     "MAS": 14.6,
     "genre": 5,
+    "release": 6,
     "newV": 0
   },
   "Gate of Doom": {
@@ -3158,6 +3545,7 @@
     "EXP": 13.1,
     "MAS": 14.8,
     "genre": 5,
+    "release": 6,
     "newV": 0
   },
   "ダンスロボットダンス": {
@@ -3166,6 +3554,7 @@
     "EXP": 9,
     "MAS": 12.7,
     "genre": 2,
+    "release": 6,
     "newV": 0
   },
   "アルカリレットウセイ": {
@@ -3174,6 +3563,7 @@
     "EXP": 8.5,
     "MAS": 11.3,
     "genre": 2,
+    "release": 6,
     "newV": 0
   },
   "キレキャリオン": {
@@ -3182,6 +3572,7 @@
     "EXP": 9,
     "MAS": 13,
     "genre": 2,
+    "release": 6,
     "newV": 0
   },
   "グラーヴェ": {
@@ -3190,6 +3581,7 @@
     "EXP": 9,
     "MAS": 12.1,
     "genre": 2,
+    "release": 6,
     "newV": 0
   },
   "レトロマニア狂想曲": {
@@ -3198,6 +3590,7 @@
     "EXP": 9.5,
     "MAS": 13.5,
     "genre": 2,
+    "release": 6,
     "newV": 0
   },
   "イロドリミドリ杯花映塚全一決定戦公式テーマソング『ウソテイ』": {
@@ -3206,6 +3599,7 @@
     "EXP": 9.5,
     "MAS": 12.7,
     "genre": 7,
+    "release": 6,
     "newV": 0
   },
   "otorii INNOVATED -[i]3-": {
@@ -3214,6 +3608,7 @@
     "EXP": 13.4,
     "MAS": 15,
     "genre": 5,
+    "release": 6,
     "newV": 0
   },
   "未来イマジネーション！": {
@@ -3222,6 +3617,7 @@
     "EXP": 9,
     "MAS": 11.8,
     "genre": 0,
+    "release": 6,
     "newV": 0
   },
   "純情-SAKURA-": {
@@ -3230,6 +3626,7 @@
     "EXP": 9.5,
     "MAS": 13.5,
     "genre": 0,
+    "release": 6,
     "newV": 0
   },
   "青春サイダー": {
@@ -3238,6 +3635,7 @@
     "EXP": 9,
     "MAS": 12.9,
     "genre": 0,
+    "release": 6,
     "newV": 0
   },
   "Very! Merry!! Session!!!": {
@@ -3246,6 +3644,7 @@
     "EXP": 9,
     "MAS": 12.7,
     "genre": 7,
+    "release": 6,
     "newV": 0
   },
   "popcorn": {
@@ -3254,6 +3653,7 @@
     "EXP": 9.5,
     "MAS": 12.3,
     "genre": 5,
+    "release": 6,
     "newV": 0
   },
   "Pastel Party": {
@@ -3262,6 +3662,7 @@
     "EXP": 10.7,
     "MAS": 14,
     "genre": 5,
+    "release": 6,
     "newV": 0
   },
   "はちみつアドベンチャー": {
@@ -3270,6 +3671,7 @@
     "EXP": 9,
     "MAS": 12.8,
     "genre": 5,
+    "release": 6,
     "newV": 0
   },
   "CHOCOLATE BOMB!!!!": {
@@ -3278,6 +3680,7 @@
     "EXP": 10.9,
     "MAS": 14.3,
     "genre": 5,
+    "release": 6,
     "newV": 0
   },
   "Twilight": {
@@ -3286,6 +3689,7 @@
     "EXP": 11.4,
     "MAS": 14.4,
     "genre": 5,
+    "release": 6,
     "newV": 0
   },
   "ねぇ、壊れタ人形ハ何処へ棄テらレるノ？": {
@@ -3294,6 +3698,7 @@
     "EXP": 12.6,
     "MAS": 14.8,
     "genre": 9,
+    "release": 6,
     "newV": 0
   },
   "WARNING×WARNING×WARNING": {
@@ -3302,6 +3707,7 @@
     "EXP": 9.5,
     "MAS": 12.8,
     "genre": 3,
+    "release": 6,
     "newV": 0
   },
   "Grip & Break down !!": {
@@ -3310,6 +3716,7 @@
     "EXP": 9.5,
     "MAS": 12.8,
     "genre": 3,
+    "release": 7,
     "newV": 0
   },
   "ネ！コ！": {
@@ -3319,6 +3726,7 @@
     "MAS": 11.9,
     "ULT": 14,
     "genre": 0,
+    "release": 6,
     "newV": 0
   },
   "マトリョシカ": {
@@ -3327,6 +3735,7 @@
     "EXP": 9.5,
     "MAS": 12.5,
     "genre": 2,
+    "release": 6,
     "newV": 0
   },
   "ゴーゴー幽霊船": {
@@ -3335,6 +3744,7 @@
     "EXP": 9.5,
     "MAS": 13.3,
     "genre": 0,
+    "release": 6,
     "newV": 0
   },
   "La Flesvelka": {
@@ -3343,6 +3753,7 @@
     "EXP": 9,
     "MAS": 13.3,
     "genre": 6,
+    "release": 6,
     "newV": 0
   },
   "碧き孤島のアングゥィス": {
@@ -3351,6 +3762,7 @@
     "EXP": 9.5,
     "MAS": 13.8,
     "genre": 0,
+    "release": 6,
     "newV": 0
   },
   "ラブって♡ジュエリー♪えんじぇる☆ブレイク！！": {
@@ -3359,6 +3771,7 @@
     "EXP": 8.5,
     "MAS": 13.3,
     "genre": 0,
+    "release": 6,
     "newV": 0
   },
   "ぶれいくるみるくらぶ！": {
@@ -3367,6 +3780,7 @@
     "EXP": 9,
     "MAS": 12.8,
     "genre": 0,
+    "release": 6,
     "newV": 0
   },
   "クレッシェンド・ストーリー": {
@@ -3375,6 +3789,7 @@
     "EXP": 9,
     "MAS": 12.9,
     "genre": 7,
+    "release": 6,
     "newV": 0
   },
   "Sentimental Snow": {
@@ -3383,6 +3798,7 @@
     "EXP": 8,
     "MAS": 11.4,
     "genre": 5,
+    "release": 6,
     "newV": 0
   },
   "サンシャインサマー☆夏期講習": {
@@ -3391,6 +3807,7 @@
     "EXP": 11,
     "MAS": 13.9,
     "genre": 5,
+    "release": 6,
     "newV": 0
   },
   "NYAN-NYA, More! ラブシャイン、Chu♥": {
@@ -3399,6 +3816,7 @@
     "EXP": 10.7,
     "MAS": 13.3,
     "genre": 5,
+    "release": 6,
     "newV": 0
   },
   "厨病激発ボーイ": {
@@ -3407,6 +3825,7 @@
     "EXP": 9,
     "MAS": 13.2,
     "genre": 2,
+    "release": 6,
     "newV": 0
   },
   "StargazeR": {
@@ -3415,6 +3834,7 @@
     "EXP": 8.5,
     "MAS": 12.5,
     "genre": 2,
+    "release": 6,
     "newV": 0
   },
   "ゴーストルール": {
@@ -3423,6 +3843,7 @@
     "EXP": 9.5,
     "MAS": 13.7,
     "genre": 2,
+    "release": 6,
     "newV": 0
   },
   "頓珍漢の宴": {
@@ -3431,6 +3852,7 @@
     "EXP": 10,
     "MAS": 14.1,
     "genre": 2,
+    "release": 6,
     "newV": 0
   },
   "TOMORROW": {
@@ -3439,6 +3861,7 @@
     "EXP": 9,
     "MAS": 11.3,
     "genre": 0,
+    "release": 6,
     "newV": 0
   },
   "Super Lovely (Heavenly Remix)": {
@@ -3447,6 +3870,7 @@
     "EXP": 9.5,
     "MAS": 14.3,
     "genre": 6,
+    "release": 8,
     "newV": 0
   },
   "Chocolate Happy": {
@@ -3455,6 +3879,7 @@
     "EXP": 9,
     "MAS": 11.5,
     "genre": 6,
+    "release": 6,
     "newV": 0
   },
   "管弦楽組曲 第3番 ニ長調「第2曲（G線上のアリア）」BWV.1068-2": {
@@ -3463,6 +3888,7 @@
     "EXP": 12.2,
     "MAS": 14.5,
     "genre": 7,
+    "release": 6,
     "newV": 0
   },
   "ここで一席！　Oshama Scramble!": {
@@ -3471,6 +3897,7 @@
     "EXP": 9.5,
     "MAS": 13.1,
     "genre": 7,
+    "release": 6,
     "newV": 0
   },
   "ウサテイ": {
@@ -3479,6 +3906,7 @@
     "EXP": 9.5,
     "MAS": 13.8,
     "genre": 3,
+    "release": 8,
     "newV": 0
   },
   "Scream out! -CHUNITHM Tuning-": {
@@ -3487,6 +3915,7 @@
     "EXP": 9.5,
     "MAS": 12.9,
     "genre": 3,
+    "release": 6,
     "newV": 0
   },
   "Spring of Dreams": {
@@ -3495,6 +3924,7 @@
     "EXP": 8.5,
     "MAS": 12.4,
     "genre": 3,
+    "release": 6,
     "newV": 0
   },
   "Floating Darkness": {
@@ -3503,6 +3933,7 @@
     "EXP": 9.5,
     "MAS": 13.7,
     "genre": 3,
+    "release": 6,
     "newV": 0
   },
   "Change Our MIRAI！ (Our 7 Lights)": {
@@ -3511,6 +3942,7 @@
     "EXP": 8.5,
     "MAS": 13.3,
     "genre": 7,
+    "release": 6,
     "newV": 0
   },
   "Dual Fractal": {
@@ -3519,6 +3951,7 @@
     "EXP": 10.8,
     "MAS": 13.9,
     "genre": 5,
+    "release": 6,
     "newV": 0
   },
   "Drivessover": {
@@ -3527,6 +3960,7 @@
     "EXP": 11.3,
     "MAS": 13.7,
     "genre": 5,
+    "release": 6,
     "newV": 0
   },
   "Surveiller et punir": {
@@ -3535,6 +3969,7 @@
     "EXP": 12.1,
     "MAS": 14.9,
     "genre": 5,
+    "release": 6,
     "newV": 0
   },
   "業 -善なる神とこの世の悪について-": {
@@ -3543,6 +3978,7 @@
     "EXP": 14.2,
     "MAS": 15.4,
     "genre": 5,
+    "release": 6,
     "newV": 0
   },
   "End Time": {
@@ -3551,6 +3987,7 @@
     "EXP": 13.7,
     "MAS": 14.9,
     "genre": 6,
+    "release": 7,
     "newV": 0
   },
   "volcanic": {
@@ -3559,6 +3996,7 @@
     "EXP": 11.8,
     "MAS": 14.4,
     "genre": 6,
+    "release": 6,
     "newV": 0
   },
   "アンノウン・マザーグース": {
@@ -3567,6 +4005,7 @@
     "EXP": 9,
     "MAS": 13.8,
     "genre": 2,
+    "release": 6,
     "newV": 0
   },
   "ゆけむり魂温泉 II": {
@@ -3575,6 +4014,7 @@
     "EXP": 8.5,
     "MAS": 12.5,
     "genre": 3,
+    "release": 6,
     "newV": 0
   },
   "サドマミホリック": {
@@ -3584,6 +4024,7 @@
     "MAS": 14.2,
     "ULT": 14.8,
     "genre": 3,
+    "release": 6,
     "newV": 2
   },
   "Candyland Symphony": {
@@ -3592,6 +4033,7 @@
     "EXP": 10,
     "MAS": 12.8,
     "genre": 6,
+    "release": 6,
     "newV": 0
   },
   "初音ミクの激唱": {
@@ -3600,6 +4042,7 @@
     "EXP": 13,
     "MAS": 14.7,
     "genre": 2,
+    "release": 6,
     "newV": 0
   },
   "つるぺったん": {
@@ -3608,6 +4051,7 @@
     "EXP": 8.5,
     "MAS": 12.8,
     "genre": 3,
+    "release": 6,
     "newV": 0
   },
   "咲キ誇レ常世ノ華": {
@@ -3616,6 +4060,7 @@
     "EXP": 9,
     "MAS": 12.8,
     "genre": 9,
+    "release": 6,
     "newV": 0
   },
   "チルノおかんのさいきょう☆バイブスごはん": {
@@ -3624,6 +4069,7 @@
     "EXP": 9.5,
     "MAS": 13.4,
     "genre": 3,
+    "release": 6,
     "newV": 0
   },
   "放課後ストライド": {
@@ -3632,6 +4078,7 @@
     "EXP": 9.5,
     "MAS": 12.3,
     "genre": 2,
+    "release": 6,
     "newV": 0
   },
   "きゅうりバーにダイブ": {
@@ -3640,6 +4087,7 @@
     "EXP": 9.5,
     "MAS": 14.4,
     "genre": 3,
+    "release": 6,
     "newV": 0
   },
   "むしとりのうた": {
@@ -3648,6 +4096,7 @@
     "EXP": 7,
     "MAS": 11,
     "genre": 6,
+    "release": 6,
     "newV": 0
   },
   "ミリオン／ワンズ": {
@@ -3656,6 +4105,7 @@
     "EXP": 9.5,
     "MAS": 13.7,
     "genre": 2,
+    "release": 7,
     "newV": 0
   },
   "ブリキノダンス": {
@@ -3664,6 +4114,7 @@
     "EXP": 9,
     "MAS": 13.1,
     "genre": 2,
+    "release": 7,
     "newV": 0
   },
   "フリィダム ロリィタ": {
@@ -3672,6 +4123,7 @@
     "EXP": 8.5,
     "MAS": 11.7,
     "genre": 2,
+    "release": 7,
     "newV": 0
   },
   "DAYBREAK FRONTLINE": {
@@ -3680,6 +4132,7 @@
     "EXP": 9,
     "MAS": 11.5,
     "genre": 2,
+    "release": 7,
     "newV": 0
   },
   "バレリーコ": {
@@ -3688,6 +4141,7 @@
     "EXP": 9,
     "MAS": 11.7,
     "genre": 2,
+    "release": 7,
     "newV": 0
   },
   "おちゃめ機能": {
@@ -3696,6 +4150,7 @@
     "EXP": 8,
     "MAS": 12.6,
     "genre": 2,
+    "release": 7,
     "newV": 0
   },
   "輪廻転生": {
@@ -3704,6 +4159,7 @@
     "EXP": 9.5,
     "MAS": 13.8,
     "genre": 2,
+    "release": 7,
     "newV": 0
   },
   "シャルル": {
@@ -3712,6 +4168,7 @@
     "EXP": 8,
     "MAS": 11.6,
     "genre": 2,
+    "release": 7,
     "newV": 0
   },
   "地獄の端にて君を待つ": {
@@ -3720,6 +4177,7 @@
     "EXP": 9.5,
     "MAS": 13.3,
     "genre": 3,
+    "release": 7,
     "newV": 0
   },
   "聖少女サクリファイス": {
@@ -3728,6 +4186,7 @@
     "EXP": 9,
     "MAS": 13.9,
     "genre": 3,
+    "release": 7,
     "newV": 0
   },
   "究極焼肉レストラン！お燐の地獄亭！": {
@@ -3736,6 +4195,7 @@
     "EXP": 8,
     "MAS": 12.2,
     "genre": 3,
+    "release": 7,
     "newV": 0
   },
   "WARNING!": {
@@ -3744,6 +4204,7 @@
     "EXP": 9.5,
     "MAS": 13.3,
     "genre": 3,
+    "release": 7,
     "newV": 0
   },
   "Paranoia": {
@@ -3752,6 +4213,7 @@
     "EXP": 9.5,
     "MAS": 12.7,
     "genre": 3,
+    "release": 7,
     "newV": 0
   },
   "ナイト・オブ・ナイツ (Cranky Remix)": {
@@ -3760,6 +4222,7 @@
     "EXP": 10,
     "MAS": 14.1,
     "genre": 3,
+    "release": 7,
     "newV": 0
   },
   "Brain Power": {
@@ -3768,6 +4231,7 @@
     "EXP": 11,
     "MAS": 14.3,
     "genre": 6,
+    "release": 7,
     "newV": 0
   },
   "ouroboros -twin stroke of the end-": {
@@ -3776,6 +4240,7 @@
     "EXP": 10.9,
     "MAS": 14.7,
     "genre": 6,
+    "release": 7,
     "newV": 0
   },
   "GERBERA": {
@@ -3784,6 +4249,7 @@
     "EXP": 11.7,
     "MAS": 14.5,
     "genre": 6,
+    "release": 7,
     "newV": 0
   },
   "Taiko Drum Monster": {
@@ -3792,6 +4258,7 @@
     "EXP": 11.4,
     "MAS": 14.3,
     "genre": 6,
+    "release": 7,
     "newV": 0
   },
   "Nhelv": {
@@ -3800,6 +4267,7 @@
     "EXP": 13,
     "MAS": 14.6,
     "genre": 6,
+    "release": 7,
     "newV": 0
   },
   "PUPA": {
@@ -3808,6 +4276,7 @@
     "EXP": 11.7,
     "MAS": 14.6,
     "genre": 6,
+    "release": 7,
     "newV": 0
   },
   "Parousia": {
@@ -3816,6 +4285,7 @@
     "EXP": 10.7,
     "MAS": 14.4,
     "genre": 6,
+    "release": 7,
     "newV": 0
   },
   "Papyrus": {
@@ -3824,6 +4294,7 @@
     "EXP": 9,
     "MAS": 13.5,
     "genre": 6,
+    "release": 7,
     "newV": 0
   },
   "Black Lair": {
@@ -3832,6 +4303,7 @@
     "EXP": 9,
     "MAS": 13.7,
     "genre": 6,
+    "release": 7,
     "newV": 0
   },
   "オーケー？　オーライ！": {
@@ -3840,6 +4312,7 @@
     "EXP": 9,
     "MAS": 11.6,
     "genre": 7,
+    "release": 7,
     "newV": 0
   },
   "Black'n White JAMMIN' CATS": {
@@ -3848,6 +4321,7 @@
     "EXP": 9,
     "MAS": 12.2,
     "genre": 7,
+    "release": 7,
     "newV": 0
   },
   "ライトスピード・デイズ": {
@@ -3856,6 +4330,7 @@
     "EXP": 9.5,
     "MAS": 13.5,
     "genre": 7,
+    "release": 7,
     "newV": 0
   },
   "Fire me up": {
@@ -3864,6 +4339,7 @@
     "EXP": 9,
     "MAS": 12.3,
     "genre": 7,
+    "release": 7,
     "newV": 0
   },
   "朝焼けプラットホーム": {
@@ -3872,6 +4348,7 @@
     "EXP": 9,
     "MAS": 11.6,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "PAST": {
@@ -3880,6 +4357,7 @@
     "EXP": 9.5,
     "MAS": 13.8,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "Blessed": {
@@ -3888,6 +4366,7 @@
     "EXP": 9.5,
     "MAS": 13.8,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "FRIDAY FRIDAY": {
@@ -3896,6 +4375,7 @@
     "EXP": 8,
     "MAS": 11.4,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "足立オウフwwww": {
@@ -3904,6 +4384,7 @@
     "EXP": 10.7,
     "MAS": 14,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "Seagull": {
@@ -3912,6 +4393,7 @@
     "EXP": 9,
     "MAS": 13.7,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "Blaster Heaven": {
@@ -3920,6 +4402,7 @@
     "EXP": 9,
     "MAS": 12.2,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "ハートアタック": {
@@ -3928,6 +4411,7 @@
     "EXP": 10.3,
     "MAS": 14.4,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "Summer is over": {
@@ -3936,6 +4420,7 @@
     "EXP": 9.5,
     "MAS": 13.8,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "folern": {
@@ -3944,6 +4429,7 @@
     "EXP": 13.7,
     "MAS": 14.6,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "2DVenture": {
@@ -3952,6 +4438,7 @@
     "EXP": 9.5,
     "MAS": 13.3,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "ぜったい！昇天★鎮魂歌♂": {
@@ -3960,6 +4447,7 @@
     "EXP": 9.5,
     "MAS": 14.3,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "夕焼けのRed Parade": {
@@ -3968,6 +4456,7 @@
     "EXP": 13.1,
     "MAS": 14.8,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "StufeStern": {
@@ -3976,6 +4465,7 @@
     "EXP": 10.3,
     "MAS": 14.3,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "スピカの天秤": {
@@ -3984,6 +4474,7 @@
     "EXP": 12.3,
     "MAS": 14.7,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "涙色メモリア": {
@@ -3992,6 +4483,7 @@
     "EXP": 9.5,
     "MAS": 12.6,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "Magic": {
@@ -4000,6 +4492,7 @@
     "EXP": 9,
     "MAS": 12,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "男装女形表裏一体発狂小娘の詐称疑惑と苦悩と情熱。": {
@@ -4008,6 +4501,7 @@
     "EXP": 10.2,
     "MAS": 13.9,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "コモリの怪物": {
@@ -4016,6 +4510,7 @@
     "EXP": 11,
     "MAS": 14.1,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "中学2年生のアンドロイド": {
@@ -4024,6 +4519,7 @@
     "EXP": 10.6,
     "MAS": 14.3,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "Life": {
@@ -4032,6 +4528,7 @@
     "EXP": 10,
     "MAS": 14.1,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "Solstånd": {
@@ -4040,6 +4537,7 @@
     "EXP": 9.5,
     "MAS": 13.1,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "Sqlupp": {
@@ -4048,6 +4546,7 @@
     "EXP": 12.2,
     "MAS": 14.4,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "Climax": {
@@ -4056,6 +4555,7 @@
     "EXP": 13.4,
     "MAS": 14.8,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "larva": {
@@ -4064,6 +4564,7 @@
     "EXP": 11.9,
     "MAS": 14.6,
     "genre": 9,
+    "release": 7,
     "newV": 0
   },
   "CYCLES": {
@@ -4072,6 +4573,7 @@
     "EXP": 8,
     "MAS": 11.8,
     "genre": 9,
+    "release": 7,
     "newV": 0
   },
   "夢花火": {
@@ -4080,6 +4582,7 @@
     "EXP": 9,
     "MAS": 13,
     "genre": 9,
+    "release": 7,
     "newV": 0
   },
   "FEEL the BEATS": {
@@ -4088,6 +4591,7 @@
     "EXP": 9.5,
     "MAS": 12.1,
     "genre": 9,
+    "release": 7,
     "newV": 0
   },
   "ロキ": {
@@ -4097,6 +4601,7 @@
     "MAS": 12.1,
     "ULT": 14,
     "genre": 2,
+    "release": 7,
     "newV": 2
   },
   "Innocent Truth": {
@@ -4105,6 +4610,7 @@
     "EXP": 9.5,
     "MAS": 14,
     "genre": 5,
+    "release": 7,
     "newV": 0
   },
   "CITRUS MONSTER": {
@@ -4113,6 +4619,7 @@
     "EXP": 12.2,
     "MAS": 14.5,
     "genre": 9,
+    "release": 7,
     "newV": 0
   },
   "サヨナラフリーウェイ": {
@@ -4121,6 +4628,7 @@
     "EXP": 8,
     "MAS": 11.9,
     "genre": 7,
+    "release": 8,
     "newV": 0
   },
   "Ai Nov": {
@@ -4129,6 +4637,7 @@
     "EXP": 12.3,
     "MAS": 14.7,
     "genre": 9,
+    "release": 8,
     "newV": 0
   },
   "エンジェデビ": {
@@ -4137,6 +4646,7 @@
     "EXP": 10,
     "MAS": 12.5,
     "genre": 5,
+    "release": 8,
     "newV": 0
   },
   "Servant of Love": {
@@ -4145,6 +4655,7 @@
     "EXP": 9.5,
     "MAS": 13.7,
     "genre": 5,
+    "release": 8,
     "newV": 0
   },
   "アイリちゃんは暗黒魔導士!": {
@@ -4153,6 +4664,7 @@
     "EXP": 10.5,
     "MAS": 14,
     "genre": 5,
+    "release": 8,
     "newV": 0
   },
   "電光石火": {
@@ -4161,6 +4673,7 @@
     "EXP": 13.5,
     "MAS": 14.8,
     "genre": 5,
+    "release": 8,
     "newV": 0
   },
   "strelitzia": {
@@ -4169,6 +4682,7 @@
     "EXP": 9.5,
     "MAS": 13.7,
     "genre": 5,
+    "release": 8,
     "newV": 0
   },
   "サヨナラチェーンソー": {
@@ -4177,6 +4691,7 @@
     "EXP": 8,
     "MAS": 11.8,
     "genre": 2,
+    "release": 8,
     "newV": 0
   },
   "Seyana. ～何でも言うことを聞いてくれるアカネチャン～": {
@@ -4185,6 +4700,7 @@
     "EXP": 8.5,
     "MAS": 13.4,
     "genre": 2,
+    "release": 8,
     "newV": 0
   },
   "はやくそれになりたい！": {
@@ -4193,6 +4709,7 @@
     "EXP": 8,
     "MAS": 12.6,
     "genre": 2,
+    "release": 8,
     "newV": 0
   },
   "ちがう!!!": {
@@ -4201,6 +4718,7 @@
     "EXP": 8,
     "MAS": 13.3,
     "genre": 2,
+    "release": 8,
     "newV": 0
   },
   "雨とペトラ": {
@@ -4209,6 +4727,7 @@
     "EXP": 9,
     "MAS": 12.3,
     "genre": 2,
+    "release": 8,
     "newV": 0
   },
   "あうんどばいみー": {
@@ -4217,6 +4736,7 @@
     "EXP": 8.5,
     "MAS": 12.7,
     "genre": 3,
+    "release": 8,
     "newV": 0
   },
   "White Traveling Girl": {
@@ -4225,6 +4745,7 @@
     "EXP": 9,
     "MAS": 12.1,
     "genre": 3,
+    "release": 8,
     "newV": 0
   },
   "トランスダンスアナーキー": {
@@ -4233,6 +4754,7 @@
     "EXP": 9,
     "MAS": 12.7,
     "genre": 3,
+    "release": 8,
     "newV": 0
   },
   "ゴールドビジョン": {
@@ -4241,6 +4763,7 @@
     "EXP": 10,
     "MAS": 14.3,
     "genre": 3,
+    "release": 8,
     "newV": 0
   },
   "【東方ニコカラ】秘神マターラ feat.魂音泉【IOSYS】": {
@@ -4249,6 +4772,7 @@
     "EXP": 9,
     "MAS": 13.7,
     "genre": 3,
+    "release": 8,
     "newV": 0
   },
   "Ever green Never end": {
@@ -4257,6 +4781,7 @@
     "EXP": 9.5,
     "MAS": 12.6,
     "genre": 7,
+    "release": 8,
     "newV": 0
   },
   "咲かせよ 沸かせよ バンバンBURN！": {
@@ -4265,6 +4790,7 @@
     "EXP": 8,
     "MAS": 12.4,
     "genre": 0,
+    "release": 8,
     "newV": 0
   },
   "Fracture Ray": {
@@ -4273,6 +4799,7 @@
     "EXP": 12.5,
     "MAS": 14.7,
     "genre": 6,
+    "release": 8,
     "newV": 0
   },
   "Axium Crisis": {
@@ -4281,6 +4808,7 @@
     "EXP": 10.9,
     "MAS": 13.7,
     "genre": 6,
+    "release": 8,
     "newV": 0
   },
   "Grievous Lady": {
@@ -4289,6 +4817,7 @@
     "EXP": 12.4,
     "MAS": 14.7,
     "genre": 6,
+    "release": 8,
     "newV": 0
   },
   "CO5M1C R4ILR0AD": {
@@ -4297,6 +4826,7 @@
     "EXP": 11,
     "MAS": 14.1,
     "genre": 6,
+    "release": 8,
     "newV": 0
   },
   "Pure Ruby": {
@@ -4305,6 +4835,7 @@
     "EXP": 10.9,
     "MAS": 14.3,
     "genre": 6,
+    "release": 8,
     "newV": 0
   },
   "一世嬉遊曲‐ディヴェルティメント‐": {
@@ -4313,6 +4844,7 @@
     "EXP": 9,
     "MAS": 13.8,
     "genre": 7,
+    "release": 8,
     "newV": 0
   },
   "恋のチャイム": {
@@ -4321,6 +4853,7 @@
     "EXP": 8,
     "MAS": 11.3,
     "genre": 5,
+    "release": 8,
     "newV": 0
   },
   "逃げろ！サテライトキャンパス！！": {
@@ -4329,6 +4862,7 @@
     "EXP": 9.5,
     "MAS": 13.7,
     "genre": 5,
+    "release": 8,
     "newV": 0
   },
   "THE BRASS OF GOODSPEED!!": {
@@ -4337,6 +4871,7 @@
     "EXP": 9,
     "MAS": 12.9,
     "genre": 5,
+    "release": 8,
     "newV": 0
   },
   "カゲロウデイズ": {
@@ -4345,6 +4880,7 @@
     "EXP": 8,
     "MAS": 13.8,
     "genre": 2,
+    "release": 8,
     "newV": 0
   },
   "妄想感傷代償連盟": {
@@ -4353,6 +4889,7 @@
     "EXP": 9,
     "MAS": 11.7,
     "genre": 2,
+    "release": 8,
     "newV": 0
   },
   "Everlasting Today": {
@@ -4361,6 +4898,7 @@
     "EXP": 12.1,
     "MAS": 14.7,
     "genre": 9,
+    "release": 8,
     "newV": 0
   },
   "Distance": {
@@ -4369,6 +4907,7 @@
     "EXP": 8,
     "MAS": 11.4,
     "genre": 0,
+    "release": 8,
     "newV": 0
   },
   "Outlaw's Lullaby": {
@@ -4377,6 +4916,7 @@
     "EXP": 10.5,
     "MAS": 14,
     "genre": 6,
+    "release": 8,
     "newV": 0
   },
   "The Pursuit of Speed": {
@@ -4385,6 +4925,7 @@
     "EXP": 9.5,
     "MAS": 13.4,
     "genre": 6,
+    "release": 8,
     "newV": 0
   },
   "光線チューニング ～なずな妄想海フェスイメージトレーニングVer.～": {
@@ -4393,6 +4934,7 @@
     "EXP": 9.5,
     "MAS": 13.3,
     "genre": 7,
+    "release": 8,
     "newV": 0
   },
   "Funny Funky Freaky": {
@@ -4401,6 +4943,7 @@
     "EXP": 9.5,
     "MAS": 13.7,
     "genre": 6,
+    "release": 8,
     "newV": 0
   },
   "Pangaea": {
@@ -4409,6 +4952,7 @@
     "EXP": 12,
     "MAS": 14,
     "genre": 6,
+    "release": 8,
     "newV": 0
   },
   "ZEUS": {
@@ -4417,6 +4961,7 @@
     "EXP": 11.6,
     "MAS": 14.4,
     "genre": 6,
+    "release": 8,
     "newV": 0
   },
   "Agitation！": {
@@ -4425,6 +4970,7 @@
     "EXP": 9,
     "MAS": 11.3,
     "genre": 7,
+    "release": 8,
     "newV": 0
   },
   "暗晦にハイライト": {
@@ -4433,6 +4979,7 @@
     "EXP": 11,
     "MAS": 14.5,
     "genre": 5,
+    "release": 8,
     "newV": 0
   },
   "8-EM": {
@@ -4441,6 +4988,7 @@
     "EXP": 12.1,
     "MAS": 14.8,
     "genre": 5,
+    "release": 8,
     "newV": 0
   },
   "Killing Rhythm": {
@@ -4449,6 +4997,7 @@
     "EXP": 14.3,
     "MAS": 15,
     "genre": 5,
+    "release": 8,
     "newV": 0
   },
   "METEOR": {
@@ -4457,6 +5006,7 @@
     "EXP": 9.5,
     "MAS": 11.8,
     "genre": 2,
+    "release": 8,
     "newV": 0
   },
   "ワールズエンド・ダンスホール": {
@@ -4465,6 +5015,7 @@
     "EXP": 9,
     "MAS": 12.8,
     "genre": 2,
+    "release": 8,
     "newV": 0
   },
   "Worlds End": {
@@ -4473,6 +5024,7 @@
     "EXP": 8,
     "MAS": 12.3,
     "genre": 3,
+    "release": 8,
     "newV": 0
   },
   "Shout Our Evidence!": {
@@ -4481,6 +5033,7 @@
     "EXP": 10,
     "MAS": 13.2,
     "genre": 7,
+    "release": 8,
     "newV": 0
   },
   "YURUSHITE": {
@@ -4489,6 +5042,7 @@
     "EXP": 13.8,
     "MAS": 14.9,
     "genre": 9,
+    "release": 8,
     "newV": 0
   },
   "ユメキキョウ": {
@@ -4497,6 +5051,7 @@
     "EXP": 11.2,
     "MAS": 14,
     "genre": 5,
+    "release": 8,
     "newV": 0
   },
   "Black Swan Lake": {
@@ -4505,6 +5060,7 @@
     "EXP": 10.9,
     "MAS": 14.3,
     "genre": 5,
+    "release": 8,
     "newV": 0
   },
   "GIGA DRIVE": {
@@ -4513,6 +5069,7 @@
     "EXP": 13.6,
     "MAS": 14.9,
     "genre": 5,
+    "release": 8,
     "newV": 0
   },
   "Rebellion": {
@@ -4521,6 +5078,7 @@
     "EXP": 14.1,
     "MAS": 15.2,
     "genre": 5,
+    "release": 8,
     "newV": 0
   },
   "Doll Judgment": {
@@ -4529,6 +5087,7 @@
     "EXP": 10.1,
     "MAS": 13.4,
     "genre": 3,
+    "release": 8,
     "newV": 0
   },
   "お嫁にしなさいっ！": {
@@ -4537,6 +5096,7 @@
     "EXP": 8,
     "MAS": 13.1,
     "genre": 3,
+    "release": 8,
     "newV": 0
   },
   "待チ人ハ来ズ。": {
@@ -4545,6 +5105,7 @@
     "EXP": 9.5,
     "MAS": 13.2,
     "genre": 3,
+    "release": 8,
     "newV": 0
   },
   "命ばっかり": {
@@ -4553,6 +5114,7 @@
     "EXP": 8,
     "MAS": 11.5,
     "genre": 2,
+    "release": 8,
     "newV": 0
   },
   "テオ": {
@@ -4561,6 +5123,7 @@
     "EXP": 8,
     "MAS": 13.4,
     "genre": 2,
+    "release": 8,
     "newV": 0
   },
   "ハイセンスナンセンス": {
@@ -4569,6 +5132,7 @@
     "EXP": 8.5,
     "MAS": 14.4,
     "genre": 2,
+    "release": 8,
     "newV": 0
   },
   "デンパラダイム": {
@@ -4577,6 +5141,7 @@
     "EXP": 10.7,
     "MAS": 14,
     "genre": 2,
+    "release": 8,
     "newV": 0
   },
   "星の器～STAR OF ANDROMEDA": {
@@ -4585,6 +5150,7 @@
     "EXP": 11.3,
     "MAS": 14.5,
     "genre": 3,
+    "release": 8,
     "newV": 0
   },
   "STARTLINER": {
@@ -4593,6 +5159,7 @@
     "EXP": 7.5,
     "MAS": 10.4,
     "genre": 9,
+    "release": 8,
     "newV": 0
   },
   "Vibrant Verve": {
@@ -4601,6 +5168,7 @@
     "EXP": 10.7,
     "MAS": 14.1,
     "genre": 5,
+    "release": 8,
     "newV": 0
   },
   "燃えてもエンジョイ！宛城、炎上！！": {
@@ -4609,6 +5177,7 @@
     "EXP": 11.2,
     "MAS": 14.3,
     "genre": 7,
+    "release": 8,
     "newV": 0
   },
   "水晶世界 ～Fracture～": {
@@ -4617,6 +5186,7 @@
     "EXP": 11.4,
     "MAS": 14.7,
     "genre": 6,
+    "release": 8,
     "newV": 0
   },
   "BlythE": {
@@ -4626,6 +5196,7 @@
     "MAS": 14.1,
     "ULT": 14.9,
     "genre": 6,
+    "release": 8,
     "newV": 0
   },
   "UNION": {
@@ -4634,6 +5205,7 @@
     "EXP": 9.5,
     "MAS": 12,
     "genre": 0,
+    "release": 9,
     "newV": 0
   },
   "ただ君に晴れ": {
@@ -4642,6 +5214,7 @@
     "EXP": 8,
     "MAS": 11.5,
     "genre": 0,
+    "release": 9,
     "newV": 0
   },
   "ナンセンス文学": {
@@ -4650,6 +5223,7 @@
     "EXP": 8,
     "MAS": 12,
     "genre": 2,
+    "release": 9,
     "newV": 0
   },
   "ロスタイムメモリー": {
@@ -4658,6 +5232,7 @@
     "EXP": 9.5,
     "MAS": 12.9,
     "genre": 2,
+    "release": 9,
     "newV": 0
   },
   "ヒバナ": {
@@ -4667,6 +5242,7 @@
     "MAS": 13.7,
     "ULT": 14,
     "genre": 2,
+    "release": 9,
     "newV": 0
   },
   "最終鬼畜妹フランドール・S": {
@@ -4676,6 +5252,7 @@
     "MAS": 14.4,
     "ULT": 14.5,
     "genre": 3,
+    "release": 9,
     "newV": 0
   },
   "\"STAR\"T": {
@@ -4684,6 +5261,7 @@
     "EXP": 8,
     "MAS": 12.7,
     "genre": 7,
+    "release": 9,
     "newV": 0
   },
   "Excalibur ～Revived resolution～": {
@@ -4692,6 +5270,7 @@
     "EXP": 12.8,
     "MAS": 14.8,
     "genre": 9,
+    "release": 9,
     "newV": 0
   },
   "Opfer": {
@@ -4700,6 +5279,7 @@
     "EXP": 13.7,
     "MAS": 14.8,
     "genre": 9,
+    "release": 9,
     "newV": 0
   },
   "神威 (NAOKI × ZPP MIX)": {
@@ -4708,6 +5288,7 @@
     "EXP": 13.7,
     "MAS": 14.8,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "サヴァイバル・キリング・メーカー": {
@@ -4716,6 +5297,7 @@
     "EXP": 9.5,
     "MAS": 12.7,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "ツクヨミステップ": {
@@ -4724,6 +5306,7 @@
     "EXP": 9.5,
     "MAS": 13.8,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "【冒険】イングリット葛西降臨！【実況】": {
@@ -4732,6 +5315,7 @@
     "EXP": 10.2,
     "MAS": 13.7,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "ハジマリノピアノ": {
@@ -4740,6 +5324,7 @@
     "EXP": 10.9,
     "MAS": 14,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "レーイレーイ": {
@@ -4748,6 +5333,7 @@
     "EXP": 10.9,
     "MAS": 13.3,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "Surrogate Life": {
@@ -4756,6 +5342,7 @@
     "EXP": 12.3,
     "MAS": 14.8,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "Nijirate Fanatics": {
@@ -4764,6 +5351,7 @@
     "EXP": 13.8,
     "MAS": 14.4,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "Destr0yer": {
@@ -4772,6 +5360,7 @@
     "EXP": 11.2,
     "MAS": 14.5,
     "genre": 6,
+    "release": 9,
     "newV": 0
   },
   "R.I.P.": {
@@ -4780,6 +5369,7 @@
     "EXP": 11.3,
     "MAS": 14.1,
     "genre": 6,
+    "release": 9,
     "newV": 0
   },
   "せかいせいふく！ゆりあちゃん！": {
@@ -4788,6 +5378,7 @@
     "EXP": 12,
     "MAS": 14.4,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "Trackless wilderness": {
@@ -4796,6 +5387,7 @@
     "EXP": 11.9,
     "MAS": 14.8,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "absolute rightness": {
@@ -4804,6 +5396,7 @@
     "EXP": 12.5,
     "MAS": 14.3,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "Walzer für das Nichts": {
@@ -4812,6 +5405,7 @@
     "EXP": 12.3,
     "MAS": 14.6,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "Lover's Trick": {
@@ -4820,6 +5414,7 @@
     "EXP": 8,
     "MAS": 13.4,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "まごころのカスクルゥト": {
@@ -4828,6 +5423,7 @@
     "EXP": 9.5,
     "MAS": 14.1,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "幾望の月": {
@@ -4837,6 +5433,7 @@
     "MAS": 13.6,
     "ULT": 14.2,
     "genre": 2,
+    "release": 9,
     "newV": 0
   },
   "アカリがやってきたぞっ": {
@@ -4845,6 +5442,7 @@
     "EXP": 8,
     "MAS": 13,
     "genre": 2,
+    "release": 9,
     "newV": 0
   },
   "おねがいダーリン": {
@@ -4853,6 +5451,7 @@
     "EXP": 8.5,
     "MAS": 12.1,
     "genre": 2,
+    "release": 9,
     "newV": 0
   },
   "リンカーネイション": {
@@ -4861,6 +5460,7 @@
     "EXP": 9,
     "MAS": 13.3,
     "genre": 2,
+    "release": 9,
     "newV": 0
   },
   "太陽系デスコ": {
@@ -4869,6 +5469,7 @@
     "EXP": 8,
     "MAS": 11.3,
     "genre": 2,
+    "release": 9,
     "newV": 0
   },
   "▲MEW▲△MEW△CAKE": {
@@ -4877,6 +5478,7 @@
     "EXP": 8,
     "MAS": 11.2,
     "genre": 0,
+    "release": 9,
     "newV": 0
   },
   "野良猫ハート": {
@@ -4885,6 +5487,7 @@
     "EXP": 8,
     "MAS": 11.7,
     "genre": 0,
+    "release": 9,
     "newV": 0
   },
   "進捗どうですか？": {
@@ -4893,6 +5496,7 @@
     "EXP": 9,
     "MAS": 12.6,
     "genre": 3,
+    "release": 9,
     "newV": 0
   },
   "単一指向性オーバーブルーム": {
@@ -4901,6 +5505,7 @@
     "EXP": 9,
     "MAS": 12.9,
     "genre": 7,
+    "release": 9,
     "newV": 0
   },
   "《混乱》 ～ Muspell": {
@@ -4909,6 +5514,7 @@
     "EXP": 11,
     "MAS": 13.7,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "《理想》 ～ Cloudland": {
@@ -4917,6 +5523,7 @@
     "EXP": 9.5,
     "MAS": 12.8,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "《逃避》 ～ The Deserter": {
@@ -4925,6 +5532,7 @@
     "EXP": 10.8,
     "MAS": 13.9,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "《最愛》 ～ Curse": {
@@ -4933,6 +5541,7 @@
     "EXP": 9.5,
     "MAS": 13.5,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "《運命》 ～ Ray of Hope": {
@@ -4941,6 +5550,7 @@
     "EXP": 11.4,
     "MAS": 14.3,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "Star Divine": {
@@ -4949,6 +5559,7 @@
     "EXP": 9,
     "MAS": 12.1,
     "genre": 0,
+    "release": 9,
     "newV": 0
   },
   "御旗のもとに": {
@@ -4957,6 +5568,7 @@
     "EXP": 9,
     "MAS": 12.3,
     "genre": 6,
+    "release": 9,
     "newV": 0
   },
   "みなえをチェック！": {
@@ -4965,6 +5577,7 @@
     "EXP": 9,
     "MAS": 13.7,
     "genre": 7,
+    "release": 9,
     "newV": 0
   },
   "とーきょー全域★アキハバラ？ (ver.にこる)": {
@@ -4973,6 +5586,7 @@
     "EXP": 10.4,
     "MAS": 13.8,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "AXION": {
@@ -4981,6 +5595,7 @@
     "EXP": 11,
     "MAS": 14.6,
     "genre": 6,
+    "release": 9,
     "newV": 0
   },
   "MEGATON BLAST": {
@@ -4989,6 +5604,7 @@
     "EXP": 13.2,
     "MAS": 14.7,
     "genre": 9,
+    "release": 9,
     "newV": 0
   },
   "結んで開いて羅刹と骸": {
@@ -4997,6 +5613,7 @@
     "EXP": 8.5,
     "MAS": 12.8,
     "genre": 2,
+    "release": 9,
     "newV": 0
   },
   "ダブルラリアット": {
@@ -5005,6 +5622,7 @@
     "EXP": 9,
     "MAS": 11.3,
     "genre": 2,
+    "release": 9,
     "newV": 0
   },
   "＊ハロー、プラネット。": {
@@ -5013,6 +5631,7 @@
     "EXP": 8,
     "MAS": 12.7,
     "genre": 2,
+    "release": 9,
     "newV": 0
   },
   "magnet": {
@@ -5021,6 +5640,7 @@
     "EXP": 8.5,
     "MAS": 11.5,
     "genre": 2,
+    "release": 9,
     "newV": 0
   },
   "Pump!n": {
@@ -5029,6 +5649,7 @@
     "EXP": 10,
     "MAS": 13.8,
     "genre": 3,
+    "release": 9,
     "newV": 0
   },
   "Endless Seeker": {
@@ -5037,6 +5658,7 @@
     "EXP": 9,
     "MAS": 13.1,
     "genre": 3,
+    "release": 9,
     "newV": 0
   },
   "STRIPES feat. EL.J (2018 reinterpretation)": {
@@ -5045,6 +5667,7 @@
     "EXP": 8.5,
     "MAS": 11.4,
     "genre": 3,
+    "release": 9,
     "newV": 0
   },
   "Cosmic Magic Shooter": {
@@ -5053,6 +5676,7 @@
     "EXP": 9,
     "MAS": 12.8,
     "genre": 3,
+    "release": 9,
     "newV": 0
   },
   "神楽": {
@@ -5061,6 +5685,7 @@
     "EXP": 10,
     "MAS": 13.2,
     "genre": 3,
+    "release": 9,
     "newV": 0
   },
   "Bad Apple!! feat.nomico (Nhato Remix)": {
@@ -5069,6 +5694,7 @@
     "EXP": 8.5,
     "MAS": 12.8,
     "genre": 3,
+    "release": 9,
     "newV": 0
   },
   "ヴンダーカンマー": {
@@ -5077,6 +5703,7 @@
     "EXP": 10.3,
     "MAS": 13.9,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "Destination": {
@@ -5085,6 +5712,7 @@
     "EXP": 9.5,
     "MAS": 13.9,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "Fidget Dancer": {
@@ -5093,6 +5721,7 @@
     "EXP": 11.3,
     "MAS": 14.3,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "Megameteor": {
@@ -5101,6 +5730,7 @@
     "EXP": 12.7,
     "MAS": 14.8,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "Trrricksters!!": {
@@ -5109,6 +5739,7 @@
     "EXP": 13.4,
     "MAS": 15.1,
     "genre": 5,
+    "release": 9,
     "newV": 0
   },
   "Road without Road": {
@@ -5117,6 +5748,7 @@
     "EXP": 9,
     "MAS": 12.8,
     "genre": 7,
+    "release": 9,
     "newV": 0
   },
   "Ladymade Star": {
@@ -5125,6 +5757,7 @@
     "EXP": 8,
     "MAS": 11.7,
     "genre": 6,
+    "release": 9,
     "newV": 0
   },
   "Memory of Beach": {
@@ -5133,6 +5766,7 @@
     "EXP": 10.3,
     "MAS": 13.8,
     "genre": 6,
+    "release": 9,
     "newV": 0
   },
   "SON OF SUN": {
@@ -5142,6 +5776,7 @@
     "MAS": 14.4,
     "ULT": 14.9,
     "genre": 6,
+    "release": 9,
     "newV": 0
   },
   "Rightfully": {
@@ -5150,6 +5785,7 @@
     "EXP": 8.5,
     "MAS": 13.2,
     "genre": 0,
+    "release": 9,
     "newV": 0
   },
   "巫女みこナース・愛のテーマ": {
@@ -5158,6 +5794,7 @@
     "EXP": 9.5,
     "MAS": 12.6,
     "genre": 0,
+    "release": 9,
     "newV": 0
   },
   "音弾超人ゴリライザー": {
@@ -5166,6 +5803,7 @@
     "EXP": 11,
     "MAS": 13.9,
     "genre": 6,
+    "release": 9,
     "newV": 0
   },
   "Giselle": {
@@ -5174,6 +5812,7 @@
     "EXP": 13.8,
     "MAS": 14.9,
     "genre": 6,
+    "release": 9,
     "newV": 0
   },
   "7 colors*": {
@@ -5182,6 +5821,7 @@
     "EXP": 10,
     "MAS": 13.2,
     "genre": 6,
+    "release": 9,
     "newV": 0
   },
   "Life is PIANO": {
@@ -5190,6 +5830,7 @@
     "EXP": 11.1,
     "MAS": 13.8,
     "genre": 6,
+    "release": 9,
     "newV": 0
   },
   "タテマエと本心の大乱闘": {
@@ -5198,6 +5839,7 @@
     "EXP": 9,
     "MAS": 12.2,
     "genre": 9,
+    "release": 9,
     "newV": 0
   },
   "Zest of Blue": {
@@ -5206,6 +5848,7 @@
     "EXP": 8.5,
     "MAS": 12.3,
     "genre": 9,
+    "release": 9,
     "newV": 0
   },
   "conflict(斉唱)": {
@@ -5214,6 +5857,7 @@
     "EXP": 10.9,
     "MAS": 14.3,
     "genre": 7,
+    "release": 10,
     "newV": 0
   },
   "チョウの標本": {
@@ -5222,6 +5866,7 @@
     "EXP": 11.1,
     "MAS": 14.3,
     "genre": 6,
+    "release": 9,
     "newV": 0
   },
   "Be A Shooter！～NORMAL BIG BONUS～": {
@@ -5230,6 +5875,7 @@
     "EXP": 10.3,
     "MAS": 12.4,
     "genre": 6,
+    "release": 9,
     "newV": 0
   },
   "Catch the Wave": {
@@ -5238,6 +5884,7 @@
     "EXP": 9,
     "MAS": 12.1,
     "genre": 2,
+    "release": 10,
     "newV": 0
   },
   "Auxesia": {
@@ -5246,6 +5893,7 @@
     "EXP": 10.9,
     "MAS": 13.4,
     "genre": 6,
+    "release": 10,
     "newV": 0
   },
   "Sound Chimera": {
@@ -5254,6 +5902,7 @@
     "EXP": 11,
     "MAS": 14.7,
     "genre": 6,
+    "release": 10,
     "newV": 0
   },
   "やらなきゃいけないことばかり": {
@@ -5262,6 +5911,7 @@
     "EXP": 9,
     "MAS": 13.4,
     "genre": 7,
+    "release": 10,
     "newV": 0
   },
   "エンドマークに希望と涙を添えて ～イロドリミドリアレンジ～": {
@@ -5270,6 +5920,7 @@
     "EXP": 10.3,
     "MAS": 13.8,
     "genre": 7,
+    "release": 10,
     "newV": 0
   },
   "Secret Sleuth": {
@@ -5278,6 +5929,7 @@
     "EXP": 10.6,
     "MAS": 13.7,
     "genre": 9,
+    "release": 10,
     "newV": 0
   },
   "Ghost Dance": {
@@ -5286,6 +5938,7 @@
     "EXP": 9,
     "MAS": 12.5,
     "genre": 5,
+    "release": 10,
     "newV": 0
   },
   "モノクロトワイライト": {
@@ -5294,6 +5947,7 @@
     "EXP": 9.5,
     "MAS": 13.7,
     "genre": 5,
+    "release": 10,
     "newV": 0
   },
   "シャッキーーン！！": {
@@ -5302,6 +5956,7 @@
     "EXP": 11,
     "MAS": 14.4,
     "genre": 5,
+    "release": 10,
     "newV": 0
   },
   "《破滅》 ～ Rhapsody for The End": {
@@ -5310,6 +5965,7 @@
     "EXP": 12.7,
     "MAS": 14.9,
     "genre": 5,
+    "release": 10,
     "newV": 0
   },
   "メルティランドナイトメア": {
@@ -5318,6 +5974,7 @@
     "EXP": 8.5,
     "MAS": 11.4,
     "genre": 2,
+    "release": 10,
     "newV": 0
   },
   "絶対にチョコミントを食べるアオイチャン": {
@@ -5326,6 +5983,7 @@
     "EXP": 9,
     "MAS": 13.7,
     "genre": 2,
+    "release": 10,
     "newV": 0
   },
   "だれかの心臓になれたなら": {
@@ -5334,6 +5992,7 @@
     "EXP": 8.5,
     "MAS": 12.6,
     "genre": 2,
+    "release": 10,
     "newV": 0
   },
   "Kadenz": {
@@ -5342,6 +6001,7 @@
     "EXP": 10.5,
     "MAS": 13.7,
     "genre": 0,
+    "release": 10,
     "newV": 0
   },
   "MARENOL": {
@@ -5350,6 +6010,7 @@
     "EXP": 12.8,
     "MAS": 14.8,
     "genre": 6,
+    "release": 10,
     "newV": 0
   },
   "Day by Day CRiSiS Songs": {
@@ -5358,6 +6019,7 @@
     "EXP": 9,
     "MAS": 13.7,
     "genre": 7,
+    "release": 10,
     "newV": 0
   },
   "Energy Booster ～ 上海紅茶館": {
@@ -5366,6 +6028,7 @@
     "EXP": 10.9,
     "MAS": 13.7,
     "genre": 3,
+    "release": 10,
     "newV": 0
   },
   "7 days a week": {
@@ -5374,6 +6037,7 @@
     "EXP": 8.5,
     "MAS": 11.9,
     "genre": 3,
+    "release": 10,
     "newV": 0
   },
   "メイドと血の懐中時計": {
@@ -5382,6 +6046,7 @@
     "EXP": 9.5,
     "MAS": 12.7,
     "genre": 3,
+    "release": 10,
     "newV": 0
   },
   "ARROW RAIN feat. Ayame": {
@@ -5390,6 +6055,7 @@
     "EXP": 10.9,
     "MAS": 13.7,
     "genre": 3,
+    "release": 10,
     "newV": 0
   },
   "悪戯センセーション": {
@@ -5398,6 +6064,7 @@
     "EXP": 9.5,
     "MAS": 13.3,
     "genre": 3,
+    "release": 10,
     "newV": 0
   },
   "紅き魔汁、闇より降りて天啓の響きを導く": {
@@ -5406,6 +6073,7 @@
     "EXP": 10.6,
     "MAS": 14,
     "genre": 7,
+    "release": 10,
     "newV": 0
   },
   "ロング・スロー・アライブ": {
@@ -5414,6 +6082,7 @@
     "EXP": 9,
     "MAS": 11.9,
     "genre": 5,
+    "release": 10,
     "newV": 0
   },
   "迷える薔薇に終わらぬ夜を": {
@@ -5422,6 +6091,7 @@
     "EXP": 10.4,
     "MAS": 12.8,
     "genre": 5,
+    "release": 10,
     "newV": 0
   },
   "パームカルマ": {
@@ -5430,6 +6100,7 @@
     "EXP": 11.3,
     "MAS": 13.9,
     "genre": 5,
+    "release": 10,
     "newV": 0
   },
   "Therapeutic Hoedown": {
@@ -5438,6 +6109,7 @@
     "EXP": 12.3,
     "MAS": 14.4,
     "genre": 5,
+    "release": 10,
     "newV": 0
   },
   "バイオレンストリガー": {
@@ -5446,6 +6118,7 @@
     "EXP": 10.6,
     "MAS": 13.3,
     "genre": 2,
+    "release": 10,
     "newV": 0
   },
   "KILLER B": {
@@ -5454,6 +6127,7 @@
     "EXP": 10,
     "MAS": 13.7,
     "genre": 2,
+    "release": 10,
     "newV": 0
   },
   "アヤカシ": {
@@ -5462,6 +6136,7 @@
     "EXP": 9.5,
     "MAS": 12.3,
     "genre": 2,
+    "release": 10,
     "newV": 0
   },
   "残響": {
@@ -5470,6 +6145,7 @@
     "EXP": 9,
     "MAS": 13.4,
     "genre": 2,
+    "release": 10,
     "newV": 0
   },
   "クレイジー・ビート": {
@@ -5478,6 +6154,7 @@
     "EXP": 10,
     "MAS": 12.7,
     "genre": 2,
+    "release": 10,
     "newV": 0
   },
   "felys -final remix-": {
@@ -5486,6 +6163,7 @@
     "EXP": 12.3,
     "MAS": 14.4,
     "genre": 6,
+    "release": 10,
     "newV": 0
   },
   "アフタースクール・エモーション": {
@@ -5494,6 +6172,7 @@
     "EXP": 8,
     "MAS": 11.7,
     "genre": 7,
+    "release": 10,
     "newV": 0
   },
   "Jörqer": {
@@ -5502,6 +6181,7 @@
     "EXP": 10,
     "MAS": 13.7,
     "genre": 5,
+    "release": 10,
     "newV": 0
   },
   "ちゅんちゅちゅチューン": {
@@ -5510,6 +6190,7 @@
     "EXP": 10,
     "MAS": 13.3,
     "genre": 5,
+    "release": 10,
     "newV": 0
   },
   "ドルオタ忍道！楠子ノ巻": {
@@ -5518,6 +6199,7 @@
     "EXP": 10.7,
     "MAS": 13.5,
     "genre": 5,
+    "release": 10,
     "newV": 0
   },
   "エキセントリックコンコン": {
@@ -5526,6 +6208,7 @@
     "EXP": 10.4,
     "MAS": 13.7,
     "genre": 5,
+    "release": 10,
     "newV": 0
   },
   "大天使ユリア★降臨!": {
@@ -5534,6 +6217,7 @@
     "EXP": 11.6,
     "MAS": 14.3,
     "genre": 5,
+    "release": 10,
     "newV": 0
   },
   "グリーンライツ・セレナーデ": {
@@ -5542,6 +6226,7 @@
     "EXP": 9,
     "MAS": 13.8,
     "genre": 2,
+    "release": 10,
     "newV": 0
   },
   "ブレス・ユア・ブレス": {
@@ -5550,6 +6235,7 @@
     "EXP": 8,
     "MAS": 13.2,
     "genre": 2,
+    "release": 10,
     "newV": 0
   },
   "Jump for Joy": {
@@ -5558,6 +6244,7 @@
     "EXP": 9.5,
     "MAS": 11.9,
     "genre": 2,
+    "release": 10,
     "newV": 0
   },
   "インドア系ならトラックメイカー": {
@@ -5566,6 +6253,7 @@
     "EXP": 10.1,
     "MAS": 12.8,
     "genre": 6,
+    "release": 10,
     "newV": 0
   },
   "Blackmagik Blazing": {
@@ -5574,6 +6262,7 @@
     "EXP": 13.2,
     "MAS": 14.8,
     "genre": 6,
+    "release": 10,
     "newV": 0
   },
   "アイジャストロック": {
@@ -5582,6 +6271,7 @@
     "EXP": 10,
     "MAS": 12.6,
     "genre": 7,
+    "release": 10,
     "newV": 0
   },
   "SUPER RESULT BEAT vol.1": {
@@ -5590,6 +6280,7 @@
     "EXP": 10.3,
     "MAS": 13.7,
     "genre": 7,
+    "release": 10,
     "newV": 0
   },
   "檄！帝国華撃団＜新章＞": {
@@ -5598,6 +6289,7 @@
     "EXP": 8,
     "MAS": 11.7,
     "genre": 6,
+    "release": 10,
     "newV": 0
   },
   "Jade Star": {
@@ -5606,6 +6298,7 @@
     "EXP": 10.7,
     "MAS": 14.2,
     "genre": 6,
+    "release": 10,
     "newV": 0
   },
   "君と、この瞬間": {
@@ -5614,6 +6307,7 @@
     "EXP": 8.5,
     "MAS": 12.6,
     "genre": 7,
+    "release": 10,
     "newV": 0
   },
   "We Are Us": {
@@ -5622,6 +6316,7 @@
     "EXP": 10.2,
     "MAS": 13.4,
     "genre": 7,
+    "release": 11,
     "newV": 0
   },
   "U ARE": {
@@ -5630,6 +6325,7 @@
     "EXP": 10.7,
     "MAS": 14.5,
     "genre": 5,
+    "release": 10,
     "newV": 0
   },
   "ハードコア・シンドローム": {
@@ -5638,6 +6334,7 @@
     "EXP": 12.3,
     "MAS": 14.5,
     "genre": 5,
+    "release": 10,
     "newV": 0
   },
   "Hainuwele": {
@@ -5646,6 +6343,7 @@
     "EXP": 13.7,
     "MAS": 14.8,
     "genre": 5,
+    "release": 10,
     "newV": 0
   },
   "宿星審判": {
@@ -5654,6 +6352,7 @@
     "EXP": 13.8,
     "MAS": 15.2,
     "genre": 5,
+    "release": 10,
     "newV": 0
   },
   "Perfect Shining!!": {
@@ -5662,6 +6361,7 @@
     "EXP": 9,
     "MAS": 12.7,
     "genre": 9,
+    "release": 10,
     "newV": 0
   },
   "みんな Happy!!": {
@@ -5670,6 +6370,7 @@
     "EXP": 8,
     "MAS": 11.4,
     "genre": 9,
+    "release": 10,
     "newV": 0
   },
   "Here We Go": {
@@ -5678,6 +6379,7 @@
     "EXP": 9.5,
     "MAS": 13.9,
     "genre": 9,
+    "release": 10,
     "newV": 0
   },
   "P！P！P！P！がおー!!": {
@@ -5686,6 +6388,7 @@
     "EXP": 10.7,
     "MAS": 13.8,
     "genre": 9,
+    "release": 10,
     "newV": 0
   },
   "Ascension to Heaven": {
@@ -5694,6 +6397,7 @@
     "EXP": 13.8,
     "MAS": 14.8,
     "genre": 6,
+    "release": 10,
     "newV": 0
   },
   "Sweet Requiem": {
@@ -5702,6 +6406,7 @@
     "EXP": 10.9,
     "MAS": 14.3,
     "genre": 3,
+    "release": 10,
     "newV": 0
   },
   "レータイスパークEx": {
@@ -5710,6 +6415,7 @@
     "EXP": 11,
     "MAS": 14.2,
     "genre": 3,
+    "release": 10,
     "newV": 0
   },
   "小悪魔の遊園地": {
@@ -5718,6 +6424,7 @@
     "EXP": 13.5,
     "MAS": 14.9,
     "genre": 6,
+    "release": 10,
     "newV": 0
   },
   "The Metaverse -First story of the SeelischTact-": {
@@ -5726,6 +6433,7 @@
     "EXP": 14.2,
     "MAS": 15.4,
     "genre": 5,
+    "release": 10,
     "newV": 0
   },
   "命に嫌われている": {
@@ -5734,6 +6442,7 @@
     "EXP": 9,
     "MAS": 13.4,
     "genre": 2,
+    "release": 10,
     "newV": 0
   },
   "乙女解剖": {
@@ -5742,6 +6451,7 @@
     "EXP": 8,
     "MAS": 11.8,
     "genre": 2,
+    "release": 10,
     "newV": 0
   },
   "フィクサー": {
@@ -5750,6 +6460,7 @@
     "EXP": 9.5,
     "MAS": 13.3,
     "genre": 2,
+    "release": 10,
     "newV": 0
   },
   "テリトリーバトル": {
@@ -5758,6 +6469,7 @@
     "EXP": 9,
     "MAS": 12.4,
     "genre": 5,
+    "release": 11,
     "newV": 0
   },
   "ROAD TO DREAM": {
@@ -5766,6 +6478,7 @@
     "EXP": 9.5,
     "MAS": 13.7,
     "genre": 5,
+    "release": 11,
     "newV": 0
   },
   "絶対トキメキデリバリー": {
@@ -5774,6 +6487,7 @@
     "EXP": 10.5,
     "MAS": 13.5,
     "genre": 5,
+    "release": 11,
     "newV": 0
   },
   "Yume no hajimari": {
@@ -5782,6 +6496,7 @@
     "EXP": 10.8,
     "MAS": 13.8,
     "genre": 5,
+    "release": 11,
     "newV": 0
   },
   "Hey Yeah!!": {
@@ -5790,6 +6505,7 @@
     "EXP": 10.8,
     "MAS": 13.8,
     "genre": 5,
+    "release": 11,
     "newV": 0
   },
   "B100d Hunter": {
@@ -5798,6 +6514,7 @@
     "EXP": 11.4,
     "MAS": 14.6,
     "genre": 5,
+    "release": 11,
     "newV": 0
   },
   "Last Celebration": {
@@ -5806,6 +6523,7 @@
     "EXP": 12.7,
     "MAS": 14.7,
     "genre": 5,
+    "release": 11,
     "newV": 0
   },
   "Cyaegha": {
@@ -5814,6 +6532,7 @@
     "EXP": 11.2,
     "MAS": 14.2,
     "genre": 6,
+    "release": 11,
     "newV": 0
   },
   "Arcahv": {
@@ -5822,6 +6541,7 @@
     "EXP": 11.7,
     "MAS": 14.1,
     "genre": 6,
+    "release": 11,
     "newV": 0
   },
   "AttraqtiA": {
@@ -5830,6 +6550,7 @@
     "EXP": 13.2,
     "MAS": 14.8,
     "genre": 6,
+    "release": 11,
     "newV": 0
   },
   "だから僕は音楽を辞めた": {
@@ -5838,6 +6559,7 @@
     "EXP": 7.5,
     "MAS": 11.8,
     "genre": 0,
+    "release": 11,
     "newV": 0
   },
   "ドラマツルギー": {
@@ -5846,6 +6568,7 @@
     "EXP": 10.4,
     "MAS": 12.3,
     "genre": 2,
+    "release": 11,
     "newV": 0
   },
   "彗星ハネムーン": {
@@ -5854,6 +6577,7 @@
     "EXP": 8,
     "MAS": 11.7,
     "genre": 2,
+    "release": 12,
     "newV": 0
   },
   "アンクローズ・ヒューマン": {
@@ -5862,6 +6586,7 @@
     "EXP": 9.5,
     "MAS": 13.7,
     "genre": 2,
+    "release": 11,
     "newV": 0
   },
   "ベノム": {
@@ -5870,6 +6595,7 @@
     "EXP": 9,
     "MAS": 12.9,
     "genre": 2,
+    "release": 11,
     "newV": 0
   },
   "ナイト・オブ・ナイツ (USAO Remix)": {
@@ -5878,6 +6604,7 @@
     "EXP": 11,
     "MAS": 14.3,
     "genre": 3,
+    "release": 11,
     "newV": 0
   },
   "Alea jacta est!": {
@@ -5886,6 +6613,7 @@
     "EXP": 13,
     "MAS": 14.7,
     "genre": 9,
+    "release": 11,
     "newV": 0
   },
   "Viyella's Tears": {
@@ -5894,6 +6622,7 @@
     "EXP": 13.4,
     "MAS": 14.9,
     "genre": 9,
+    "release": 11,
     "newV": 0
   },
   "Paqqin (tpz Despair Remix)": {
@@ -5902,6 +6631,7 @@
     "EXP": 12.4,
     "MAS": 14.7,
     "genre": 5,
+    "release": 11,
     "newV": 0
   },
   "Jack the GAME": {
@@ -5910,6 +6640,7 @@
     "EXP": 10.4,
     "MAS": 13.8,
     "genre": 7,
+    "release": 11,
     "newV": 0
   },
   "宙の隣": {
@@ -5918,6 +6649,7 @@
     "EXP": 11.1,
     "MAS": 14,
     "genre": 5,
+    "release": 11,
     "newV": 0
   },
   "Just You": {
@@ -5926,6 +6658,7 @@
     "EXP": 10.7,
     "MAS": 13.8,
     "genre": 5,
+    "release": 11,
     "newV": 0
   },
   "Insane Gamemode": {
@@ -5934,6 +6667,7 @@
     "EXP": 11.3,
     "MAS": 14.4,
     "genre": 5,
+    "release": 11,
     "newV": 0
   },
   "Parad'ox": {
@@ -5942,6 +6676,7 @@
     "EXP": 12.3,
     "MAS": 14.6,
     "genre": 5,
+    "release": 11,
     "newV": 0
   },
   "ANU": {
@@ -5950,6 +6685,7 @@
     "EXP": 13.7,
     "MAS": 15.1,
     "genre": 5,
+    "release": 11,
     "newV": 0
   },
   "愛されなくても君がいる": {
@@ -5958,6 +6694,7 @@
     "EXP": 8.5,
     "MAS": 12.8,
     "genre": 2,
+    "release": 11,
     "newV": 0
   },
   "ぽかぽかの星": {
@@ -5966,6 +6703,7 @@
     "EXP": 7.5,
     "MAS": 10.9,
     "genre": 2,
+    "release": 11,
     "newV": 0
   },
   "スターナイトスノウ": {
@@ -5974,6 +6712,7 @@
     "EXP": 9,
     "MAS": 12.7,
     "genre": 2,
+    "release": 11,
     "newV": 0
   },
   "白ゆき": {
@@ -5982,6 +6721,7 @@
     "EXP": 9.5,
     "MAS": 13.3,
     "genre": 2,
+    "release": 11,
     "newV": 0
   },
   "Shiny Smily Story": {
@@ -5990,6 +6730,7 @@
     "EXP": 8,
     "MAS": 11.9,
     "genre": 0,
+    "release": 11,
     "newV": 0
   },
   "疾走あんさんぶる": {
@@ -5998,6 +6739,7 @@
     "EXP": 11.5,
     "MAS": 13.9,
     "genre": 3,
+    "release": 11,
     "newV": 0
   },
   "しゅわスパ大作戦☆": {
@@ -6006,6 +6748,7 @@
     "EXP": 9,
     "MAS": 13.4,
     "genre": 3,
+    "release": 11,
     "newV": 0
   },
   "LOVE EAST": {
@@ -6014,6 +6757,7 @@
     "EXP": 9.5,
     "MAS": 12.5,
     "genre": 3,
+    "release": 11,
     "newV": 0
   },
   "MELtin' 17": {
@@ -6022,6 +6766,7 @@
     "EXP": 10,
     "MAS": 14,
     "genre": 7,
+    "release": 11,
     "newV": 0
   },
   "《狂乱》 ～ Cataclysm": {
@@ -6030,6 +6775,7 @@
     "EXP": 11.6,
     "MAS": 13.7,
     "genre": 5,
+    "release": 11,
     "newV": 0
   },
   "《投影》 ～ Oh My Baby Doll": {
@@ -6038,6 +6784,7 @@
     "EXP": 10.2,
     "MAS": 14.4,
     "genre": 5,
+    "release": 11,
     "newV": 0
   },
   "《信仰》 ～ Eudaimonia": {
@@ -6046,6 +6793,7 @@
     "EXP": 11.3,
     "MAS": 13.8,
     "genre": 5,
+    "release": 11,
     "newV": 0
   },
   "《選別》 ～ Refuge": {
@@ -6054,6 +6802,7 @@
     "EXP": 11.9,
     "MAS": 14.1,
     "genre": 5,
+    "release": 11,
     "newV": 0
   },
   "《本能》 ～ ReCoda": {
@@ -6062,6 +6811,7 @@
     "EXP": 10.5,
     "MAS": 14.6,
     "genre": 5,
+    "release": 11,
     "newV": 0
   },
   "赤壁、大炎上！！": {
@@ -6070,6 +6820,7 @@
     "EXP": 13.1,
     "MAS": 14.9,
     "genre": 5,
+    "release": 11,
     "newV": 0
   },
   "Everything For A Reason": {
@@ -6078,6 +6829,7 @@
     "EXP": 10,
     "MAS": 13.7,
     "genre": 7,
+    "release": 11,
     "newV": 0
   },
   "Technicians High": {
@@ -6086,6 +6838,7 @@
     "EXP": 11.5,
     "MAS": 14.2,
     "genre": 9,
+    "release": 13,
     "newV": 0
   },
   "恋はりんりん☆あーりんベル": {
@@ -6094,6 +6847,7 @@
     "EXP": 9,
     "MAS": 12.7,
     "genre": 7,
+    "release": 14,
     "newV": 0
   },
   "LINK LINK FEVER!!!": {
@@ -6102,6 +6856,7 @@
     "EXP": 9.5,
     "MAS": 11.7,
     "genre": 6,
+    "release": 11,
     "newV": 0
   },
   "DX超性能フルメタル少女": {
@@ -6110,6 +6865,7 @@
     "EXP": 11.1,
     "MAS": 14.3,
     "genre": 6,
+    "release": 11,
     "newV": 0
   },
   "SKYSCRAPER": {
@@ -6118,6 +6874,7 @@
     "EXP": 10.9,
     "MAS": 13.9,
     "genre": 6,
+    "release": 11,
     "newV": 0
   },
   "Lemegeton -little key of solomon-": {
@@ -6126,6 +6883,7 @@
     "EXP": 13.2,
     "MAS": 14.8,
     "genre": 6,
+    "release": 11,
     "newV": 0
   },
   "BUCHiGiRE Berserker": {
@@ -6134,6 +6892,7 @@
     "EXP": 13.7,
     "MAS": 14.7,
     "genre": 6,
+    "release": 11,
     "newV": 0
   },
   "ぷよぷよのうた ピコピコミックス": {
@@ -6142,6 +6901,7 @@
     "EXP": 8.5,
     "MAS": 13.7,
     "genre": 6,
+    "release": 12,
     "newV": 0
   },
   "Wizdomiot": {
@@ -6150,6 +6910,7 @@
     "EXP": 12.3,
     "MAS": 14.8,
     "genre": 3,
+    "release": 12,
     "newV": 0
   },
   "なんかノイズにきこえる": {
@@ -6158,6 +6919,7 @@
     "EXP": 8.5,
     "MAS": 13.3,
     "genre": 7,
+    "release": 12,
     "newV": 0
   },
   "Over Heart": {
@@ -6166,6 +6928,7 @@
     "EXP": 9.5,
     "MAS": 13.9,
     "genre": 7,
+    "release": 12,
     "newV": 0
   },
   "the EmpErroR": {
@@ -6174,6 +6937,7 @@
     "EXP": 13.4,
     "MAS": 14.8,
     "genre": 9,
+    "release": 13,
     "newV": 0
   },
   "Good bye, Merry-Go-Round.": {
@@ -6182,6 +6946,7 @@
     "EXP": 12.5,
     "MAS": 14.5,
     "genre": 9,
+    "release": 12,
     "newV": 0
   },
   "レイニーカラー・ウォーターカラー": {
@@ -6190,6 +6955,7 @@
     "EXP": 8,
     "MAS": 11.8,
     "genre": 5,
+    "release": 12,
     "newV": 0
   },
   "おいでよ！ 高須らいむランド": {
@@ -6198,6 +6964,7 @@
     "EXP": 9,
     "MAS": 12.5,
     "genre": 5,
+    "release": 12,
     "newV": 0
   },
   "Charlatan": {
@@ -6206,6 +6973,7 @@
     "EXP": 9.5,
     "MAS": 13.3,
     "genre": 5,
+    "release": 12,
     "newV": 0
   },
   "萌豚♥功夫♥大乱舞": {
@@ -6214,6 +6982,7 @@
     "EXP": 10.5,
     "MAS": 13.9,
     "genre": 5,
+    "release": 12,
     "newV": 0
   },
   "つっぱれ！にゃんきー魂": {
@@ -6222,6 +6991,7 @@
     "EXP": 10.7,
     "MAS": 13.8,
     "genre": 5,
+    "release": 12,
     "newV": 0
   },
   "Athlete Killer \"Meteor\"": {
@@ -6230,6 +7000,7 @@
     "EXP": 10.9,
     "MAS": 14,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "Blazing:Storm": {
@@ -6238,6 +7009,7 @@
     "EXP": 12.7,
     "MAS": 14.9,
     "genre": 5,
+    "release": 12,
     "newV": 0
   },
   "アンドロイドガール": {
@@ -6246,6 +7018,7 @@
     "EXP": 10,
     "MAS": 13.7,
     "genre": 2,
+    "release": 12,
     "newV": 0
   },
   "こちら、幸福安心委員会です。": {
@@ -6254,6 +7027,7 @@
     "EXP": 11.1,
     "MAS": 13.9,
     "genre": 2,
+    "release": 12,
     "newV": 0
   },
   "惑星ループ": {
@@ -6262,6 +7036,7 @@
     "EXP": 8.5,
     "MAS": 11.7,
     "genre": 2,
+    "release": 12,
     "newV": 0
   },
   "ふぃーばー": {
@@ -6270,6 +7045,7 @@
     "EXP": 8.5,
     "MAS": 11.9,
     "genre": 3,
+    "release": 12,
     "newV": 0
   },
   "Earthquake Super Shock": {
@@ -6278,6 +7054,7 @@
     "EXP": 9,
     "MAS": 12.8,
     "genre": 3,
+    "release": 12,
     "newV": 0
   },
   "はたてのバッコイ殺人事件": {
@@ -6286,6 +7063,7 @@
     "EXP": 10.2,
     "MAS": 13.7,
     "genre": 3,
+    "release": 12,
     "newV": 0
   },
   "ポーカーフェイス": {
@@ -6294,6 +7072,7 @@
     "EXP": 9.5,
     "MAS": 14.1,
     "genre": 3,
+    "release": 12,
     "newV": 0
   },
   "ケ・セラ・セラ奇想曲": {
@@ -6302,6 +7081,7 @@
     "EXP": 10.4,
     "MAS": 13.3,
     "genre": 7,
+    "release": 12,
     "newV": 0
   },
   "C & B": {
@@ -6310,6 +7090,7 @@
     "EXP": 11.8,
     "MAS": 14,
     "genre": 5,
+    "release": 12,
     "newV": 0
   },
   "月詠に鳴る": {
@@ -6318,6 +7099,7 @@
     "EXP": 10.8,
     "MAS": 14.4,
     "genre": 5,
+    "release": 12,
     "newV": 0
   },
   "Blessed Rain": {
@@ -6326,6 +7108,7 @@
     "EXP": 12.6,
     "MAS": 14.7,
     "genre": 5,
+    "release": 12,
     "newV": 0
   },
   "Elemental Ethnic": {
@@ -6334,6 +7117,7 @@
     "EXP": 12.5,
     "MAS": 14.8,
     "genre": 5,
+    "release": 12,
     "newV": 0
   },
   "X7124": {
@@ -6342,6 +7126,7 @@
     "EXP": 14.3,
     "MAS": 15.1,
     "genre": 5,
+    "release": 12,
     "newV": 0
   },
   "異世界かるてっと": {
@@ -6350,6 +7135,7 @@
     "EXP": 9.5,
     "MAS": 12.8,
     "genre": 0,
+    "release": 12,
     "newV": 0
   },
   "正体判明ネームレスガール": {
@@ -6358,6 +7144,7 @@
     "EXP": 9.5,
     "MAS": 13.8,
     "genre": 7,
+    "release": 12,
     "newV": 0
   },
   "ここからはじまるプロローグ。": {
@@ -6366,6 +7153,7 @@
     "EXP": 10.4,
     "MAS": 13.7,
     "genre": 9,
+    "release": 12,
     "newV": 0
   },
   "福宿音屋魂音泉": {
@@ -6374,6 +7162,7 @@
     "EXP": 10.3,
     "MAS": 12.8,
     "genre": 9,
+    "release": 12,
     "newV": 0
   },
   "BLACK ROSE": {
@@ -6382,6 +7171,7 @@
     "EXP": 9.5,
     "MAS": 12.3,
     "genre": 9,
+    "release": 12,
     "newV": 0
   },
   "BATTLE NO.1": {
@@ -6390,6 +7180,7 @@
     "EXP": 12.3,
     "MAS": 14.8,
     "genre": 6,
+    "release": 12,
     "newV": 0
   },
   "祈 -我ら神祖と共に歩む者なり-": {
@@ -6398,6 +7189,7 @@
     "EXP": 14.5,
     "MAS": 15.4,
     "genre": 5,
+    "release": 12,
     "newV": 0
   },
   "GAME IS LIFE": {
@@ -6406,6 +7198,7 @@
     "EXP": 10.3,
     "MAS": 13.3,
     "genre": 9,
+    "release": 12,
     "newV": 0
   },
   "GranFatalité": {
@@ -6414,6 +7207,7 @@
     "EXP": 9.5,
     "MAS": 13.6,
     "genre": 9,
+    "release": 12,
     "newV": 0
   },
   "SWEET SHAKE!!": {
@@ -6422,6 +7216,7 @@
     "EXP": 9,
     "MAS": 12.8,
     "genre": 9,
+    "release": 12,
     "newV": 0
   },
   "What color...": {
@@ -6430,6 +7225,7 @@
     "EXP": 10.4,
     "MAS": 12.7,
     "genre": 9,
+    "release": 12,
     "newV": 0
   },
   "クロートーと星の観測者": {
@@ -6438,6 +7234,7 @@
     "EXP": 10.2,
     "MAS": 14,
     "genre": 6,
+    "release": 11,
     "newV": 0
   },
   "真千年女王": {
@@ -6446,6 +7243,7 @@
     "EXP": 12.7,
     "MAS": 14.8,
     "genre": 6,
+    "release": 11,
     "newV": 0
   },
   "[CRYSTAL_ACCESS]": {
@@ -6454,6 +7252,7 @@
     "EXP": 11,
     "MAS": 14.6,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "ベースラインやってる？笑": {
@@ -6462,6 +7261,7 @@
     "EXP": 10,
     "MAS": 14.2,
     "genre": 6,
+    "release": 12,
     "newV": 0
   },
   "董卓討つべし": {
@@ -6470,6 +7270,7 @@
     "EXP": 11.5,
     "MAS": 14,
     "genre": 6,
+    "release": 11,
     "newV": 0
   },
   "セカイはまだ始まってすらいない": {
@@ -6478,6 +7279,7 @@
     "EXP": 8.5,
     "MAS": 12.2,
     "genre": 2,
+    "release": 11,
     "newV": 0
   },
   "TECHNOPOLIS 2085": {
@@ -6486,6 +7288,7 @@
     "EXP": 12.1,
     "MAS": 14.5,
     "genre": 5,
+    "release": 12,
     "newV": 0
   },
   "ハルシナイト": {
@@ -6494,6 +7297,7 @@
     "EXP": 9,
     "MAS": 11.7,
     "genre": 5,
+    "release": 12,
     "newV": 0
   },
   "Dark Diver": {
@@ -6502,6 +7306,7 @@
     "EXP": 8.5,
     "MAS": 12.7,
     "genre": 5,
+    "release": 12,
     "newV": 0
   },
   "Tattoo": {
@@ -6510,6 +7315,7 @@
     "EXP": 9,
     "MAS": 12.9,
     "genre": 5,
+    "release": 12,
     "newV": 0
   },
   "呪歌-JyuKa-": {
@@ -6518,6 +7324,7 @@
     "EXP": 9.5,
     "MAS": 12.5,
     "genre": 5,
+    "release": 12,
     "newV": 0
   },
   "再生不能": {
@@ -6526,6 +7333,7 @@
     "EXP": 10.5,
     "MAS": 14,
     "genre": 5,
+    "release": 12,
     "newV": 0
   },
   "アポカリプスに反逆の焔を焚べろ": {
@@ -6534,6 +7342,7 @@
     "EXP": 13.7,
     "MAS": 14.9,
     "genre": 9,
+    "release": 12,
     "newV": 0
   },
   "AstrøNotes.": {
@@ -6542,6 +7351,7 @@
     "EXP": 13.6,
     "MAS": 14.8,
     "genre": 9,
+    "release": 14,
     "newV": 0
   },
   "No.1": {
@@ -6550,6 +7360,7 @@
     "EXP": 9,
     "MAS": 11.7,
     "genre": 0,
+    "release": 12,
     "newV": 0
   },
   "ザ・ライブ革命でSHOW！": {
@@ -6558,6 +7369,7 @@
     "EXP": 9,
     "MAS": 12.4,
     "genre": 0,
+    "release": 12,
     "newV": 0
   },
   "Yes! Party Time!!": {
@@ -6566,6 +7378,7 @@
     "EXP": 9.5,
     "MAS": 11.8,
     "genre": 0,
+    "release": 12,
     "newV": 0
   },
   "香水": {
@@ -6574,6 +7387,7 @@
     "EXP": 7,
     "MAS": 10.4,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "猫 ～THE FIRST TAKE ver.～": {
@@ -6582,6 +7396,7 @@
     "EXP": 8,
     "MAS": 11.4,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "インフェルノ": {
@@ -6590,6 +7405,7 @@
     "EXP": 9.5,
     "MAS": 12.4,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "残酷な天使のテーゼ": {
@@ -6598,6 +7414,7 @@
     "EXP": 8,
     "MAS": 11.3,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "夜に駆ける": {
@@ -6606,6 +7423,7 @@
     "EXP": 9,
     "MAS": 11.8,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "紅": {
@@ -6614,6 +7432,7 @@
     "EXP": 11.3,
     "MAS": 14.6,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "GO! GO! MANIAC": {
@@ -6622,6 +7441,7 @@
     "EXP": 10,
     "MAS": 13.5,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "廻廻奇譚": {
@@ -6630,6 +7450,7 @@
     "EXP": 9,
     "MAS": 12.4,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "エクストラ・マジック・アワー": {
@@ -6638,6 +7459,7 @@
     "EXP": 8.5,
     "MAS": 12.5,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "名前のない怪物": {
@@ -6646,6 +7468,7 @@
     "EXP": 9,
     "MAS": 12.6,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "ヴィラン": {
@@ -6654,6 +7477,7 @@
     "EXP": 9.5,
     "MAS": 13.2,
     "genre": 2,
+    "release": 13,
     "newV": 0
   },
   "KING": {
@@ -6662,6 +7486,7 @@
     "EXP": 9,
     "MAS": 12.3,
     "genre": 2,
+    "release": 13,
     "newV": 0
   },
   "電脳少女は歌姫の夢を見るか？": {
@@ -6670,6 +7495,7 @@
     "EXP": 10,
     "MAS": 14.2,
     "genre": 2,
+    "release": 13,
     "newV": 0
   },
   "心予報": {
@@ -6678,6 +7504,7 @@
     "EXP": 8.5,
     "MAS": 12.8,
     "genre": 2,
+    "release": 13,
     "newV": 0
   },
   "拝啓、桜舞い散るこの日に": {
@@ -6686,6 +7513,7 @@
     "EXP": 9.5,
     "MAS": 12.5,
     "genre": 2,
+    "release": 13,
     "newV": 0
   },
   "セカイ": {
@@ -6694,6 +7522,7 @@
     "EXP": 9.5,
     "MAS": 12.9,
     "genre": 2,
+    "release": 13,
     "newV": 0
   },
   "ローリンガール": {
@@ -6702,6 +7531,7 @@
     "EXP": 9,
     "MAS": 13.4,
     "genre": 2,
+    "release": 13,
     "newV": 0
   },
   "骸骨楽団とリリア": {
@@ -6710,6 +7540,7 @@
     "EXP": 10.2,
     "MAS": 12.8,
     "genre": 2,
+    "release": 13,
     "newV": 0
   },
   "失敗作少女": {
@@ -6718,6 +7549,7 @@
     "EXP": 9,
     "MAS": 12.9,
     "genre": 2,
+    "release": 13,
     "newV": 0
   },
   "高音厨音域テスト": {
@@ -6726,6 +7558,7 @@
     "EXP": 8.5,
     "MAS": 12,
     "genre": 2,
+    "release": 13,
     "newV": 0
   },
   "深海のリトルクライ feat. 土岐麻子": {
@@ -6734,6 +7567,7 @@
     "EXP": 9.5,
     "MAS": 13.6,
     "genre": 2,
+    "release": 13,
     "newV": 0
   },
   "ナイト・オブ・ナイツ (かめりあ’s“ワンス・アポン・ア・ナイト”Remix)": {
@@ -6742,6 +7576,7 @@
     "EXP": 10.9,
     "MAS": 14.4,
     "genre": 3,
+    "release": 13,
     "newV": 0
   },
   "Bad Apple!! feat.nomico (REDALiCE Remix)": {
@@ -6750,6 +7585,7 @@
     "EXP": 9.5,
     "MAS": 12.9,
     "genre": 3,
+    "release": 13,
     "newV": 0
   },
   "No Life Queen [DJ Command Remix]": {
@@ -6758,6 +7594,7 @@
     "EXP": 10.1,
     "MAS": 13.4,
     "genre": 3,
+    "release": 13,
     "newV": 0
   },
   "Little \"Sister\" Bitch": {
@@ -6766,6 +7603,7 @@
     "EXP": 9.5,
     "MAS": 13.9,
     "genre": 3,
+    "release": 13,
     "newV": 0
   },
   "キャプテン・ムラサのケツアンカー": {
@@ -6774,6 +7612,7 @@
     "EXP": 9.5,
     "MAS": 13,
     "genre": 3,
+    "release": 13,
     "newV": 0
   },
   "ホイホイ☆幻想ホロイズム": {
@@ -6782,6 +7621,7 @@
     "EXP": 10.1,
     "MAS": 13.9,
     "genre": 3,
+    "release": 13,
     "newV": 0
   },
   "A Site De La Rue": {
@@ -6790,6 +7630,7 @@
     "EXP": 12.9,
     "MAS": 14.9,
     "genre": 6,
+    "release": 13,
     "newV": 0
   },
   "XL TECHNO -More Dance Remix-": {
@@ -6798,6 +7639,7 @@
     "EXP": 13.9,
     "MAS": 14.5,
     "genre": 6,
+    "release": 13,
     "newV": 0
   },
   "CHAOS": {
@@ -6806,6 +7648,7 @@
     "EXP": 10,
     "MAS": 13.8,
     "genre": 6,
+    "release": 13,
     "newV": 0
   },
   "二次元ドリームフィーバー": {
@@ -6814,6 +7657,7 @@
     "EXP": 10.5,
     "MAS": 14,
     "genre": 2,
+    "release": 13,
     "newV": 0
   },
   "SINister Evolution": {
@@ -6822,6 +7666,7 @@
     "EXP": 12.3,
     "MAS": 14.8,
     "genre": 6,
+    "release": 13,
     "newV": 0
   },
   "]-[|/34<#!": {
@@ -6830,6 +7675,7 @@
     "EXP": 14,
     "MAS": 14.8,
     "genre": 6,
+    "release": 13,
     "newV": 0
   },
   "Crimson Phoenix": {
@@ -6838,6 +7684,7 @@
     "EXP": 13.1,
     "MAS": 14.7,
     "genre": 6,
+    "release": 13,
     "newV": 0
   },
   "8OROCHI": {
@@ -6846,6 +7693,7 @@
     "EXP": 12.9,
     "MAS": 14.4,
     "genre": 6,
+    "release": 14,
     "newV": 0
   },
   "Satellite System ft.Diana Chiaki": {
@@ -6854,6 +7702,7 @@
     "EXP": 12.9,
     "MAS": 14.3,
     "genre": 6,
+    "release": 13,
     "newV": 0
   },
   "DAZZLING♡SEASON": {
@@ -6862,6 +7711,7 @@
     "EXP": 9,
     "MAS": 13.8,
     "genre": 6,
+    "release": 13,
     "newV": 0
   },
   "ミュージック・リボルバー": {
@@ -6870,6 +7720,7 @@
     "EXP": 11.5,
     "MAS": 14.5,
     "genre": 6,
+    "release": 13,
     "newV": 0
   },
   "REDRAVE": {
@@ -6878,6 +7729,7 @@
     "EXP": 11.9,
     "MAS": 14,
     "genre": 6,
+    "release": 13,
     "newV": 0
   },
   "BLUE ZONE": {
@@ -6886,6 +7738,7 @@
     "EXP": 10.5,
     "MAS": 14.6,
     "genre": 6,
+    "release": 13,
     "newV": 0
   },
   "花たちに希望を": {
@@ -6894,6 +7747,7 @@
     "EXP": 10.5,
     "MAS": 14.3,
     "genre": 6,
+    "release": 13,
     "newV": 0
   },
   "召しませ！Rock'n Roll Party": {
@@ -6902,6 +7756,7 @@
     "EXP": 10.7,
     "MAS": 13.4,
     "genre": 7,
+    "release": 12,
     "newV": 0
   },
   "脳天直撃": {
@@ -6910,6 +7765,7 @@
     "EXP": 13.3,
     "MAS": 14.9,
     "genre": 9,
+    "release": 13,
     "newV": 0
   },
   "封焔の135秒": {
@@ -6918,6 +7774,7 @@
     "EXP": 13.7,
     "MAS": 14.8,
     "genre": 9,
+    "release": 13,
     "newV": 0
   },
   "UltraNeon": {
@@ -6926,6 +7783,7 @@
     "EXP": 11.6,
     "MAS": 14.3,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "雪男": {
@@ -6934,6 +7792,7 @@
     "EXP": 12.1,
     "MAS": 15,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "DDDD": {
@@ -6942,6 +7801,7 @@
     "EXP": 9.5,
     "MAS": 13,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "Ring": {
@@ -6950,6 +7810,7 @@
     "EXP": 8.5,
     "MAS": 11.5,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "Blazing Break": {
@@ -6958,6 +7819,7 @@
     "EXP": 9.5,
     "MAS": 13.6,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "Give me Love♡": {
@@ -6966,6 +7828,7 @@
     "EXP": 9,
     "MAS": 11.8,
     "genre": 5,
+    "release": 14,
     "newV": 0
   },
   "Crack": {
@@ -6974,6 +7837,7 @@
     "EXP": 11,
     "MAS": 14,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "STAR IN THE WORLD": {
@@ -6982,6 +7846,7 @@
     "EXP": 10.1,
     "MAS": 12.8,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "蜘蛛の糸": {
@@ -6990,6 +7855,7 @@
     "EXP": 13.7,
     "MAS": 15,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "コスモポップファンクラブ": {
@@ -6998,6 +7864,7 @@
     "EXP": 9.5,
     "MAS": 12,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "夢路拍子": {
@@ -7006,6 +7873,7 @@
     "EXP": 9.5,
     "MAS": 12.4,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "人生攻略☆Tips": {
@@ -7014,6 +7882,7 @@
     "EXP": 9,
     "MAS": 11.9,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "ピュグマリオンの咒文": {
@@ -7022,6 +7891,7 @@
     "EXP": 11.1,
     "MAS": 14.1,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "創世のコンツェルティーナ": {
@@ -7030,6 +7900,7 @@
     "EXP": 10.5,
     "MAS": 13.4,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "Fantasm": {
@@ -7038,6 +7909,7 @@
     "EXP": 10.1,
     "MAS": 13.6,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "Echoes": {
@@ -7046,6 +7918,7 @@
     "EXP": 9.5,
     "MAS": 13.7,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "Super Kitsch Mode": {
@@ -7054,6 +7927,7 @@
     "EXP": 10.2,
     "MAS": 13.6,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "Pre Paid Pog Punk Panic": {
@@ -7062,6 +7936,7 @@
     "EXP": 13,
     "MAS": 14.2,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "自分勝手Dazzling": {
@@ -7070,6 +7945,7 @@
     "EXP": 9.5,
     "MAS": 12.3,
     "genre": 5,
+    "release": 12,
     "newV": 0
   },
   "Utopithm": {
@@ -7078,6 +7954,7 @@
     "EXP": 10,
     "MAS": 13.7,
     "genre": 5,
+    "release": 12,
     "newV": 0
   },
   "妖怪ですから": {
@@ -7086,6 +7963,7 @@
     "EXP": 9,
     "MAS": 13.2,
     "genre": 5,
+    "release": 12,
     "newV": 0
   },
   "Glory Days": {
@@ -7094,6 +7972,7 @@
     "EXP": 10,
     "MAS": 12.2,
     "genre": 5,
+    "release": 12,
     "newV": 0
   },
   "Spiral Fortune": {
@@ -7102,6 +7981,7 @@
     "EXP": 9,
     "MAS": 13.9,
     "genre": 5,
+    "release": 12,
     "newV": 0
   },
   "キズナミュージック♪": {
@@ -7110,6 +7990,7 @@
     "EXP": 9,
     "MAS": 12.4,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "FIRE BIRD": {
@@ -7118,6 +7999,7 @@
     "EXP": 9.5,
     "MAS": 13.5,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "最強 the サマータイム!!!!!": {
@@ -7126,6 +8008,7 @@
     "EXP": 9.5,
     "MAS": 12.8,
     "genre": 9,
+    "release": 12,
     "newV": 0
   },
   "I believe what you said": {
@@ -7134,6 +8017,7 @@
     "EXP": 9,
     "MAS": 11.8,
     "genre": 0,
+    "release": 12,
     "newV": 0
   },
   "スーサイドパレヱド": {
@@ -7142,6 +8026,7 @@
     "EXP": 9.5,
     "MAS": 13.1,
     "genre": 2,
+    "release": 12,
     "newV": 0
   },
   "永遠にゲームで対戦したいキリタン": {
@@ -7150,6 +8035,7 @@
     "EXP": 9.5,
     "MAS": 12.7,
     "genre": 2,
+    "release": 12,
     "newV": 0
   },
   "アンヘル": {
@@ -7158,6 +8044,7 @@
     "EXP": 9,
     "MAS": 13.7,
     "genre": 2,
+    "release": 12,
     "newV": 0
   },
   "Get a Life！": {
@@ -7166,6 +8053,7 @@
     "EXP": 9.5,
     "MAS": 12.9,
     "genre": 7,
+    "release": 12,
     "newV": 0
   },
   "ロストワードクロニカル": {
@@ -7174,6 +8062,7 @@
     "EXP": 9.5,
     "MAS": 13.6,
     "genre": 3,
+    "release": 12,
     "newV": 0
   },
   "Yakumo >>JOINT STRUGGLE (2019 Update)": {
@@ -7182,6 +8071,7 @@
     "EXP": 11.4,
     "MAS": 14.7,
     "genre": 3,
+    "release": 12,
     "newV": 0
   },
   "全力ハッピーライフ": {
@@ -7190,6 +8080,7 @@
     "EXP": 9.5,
     "MAS": 13.3,
     "genre": 3,
+    "release": 12,
     "newV": 0
   },
   "明星ロケット": {
@@ -7198,6 +8089,7 @@
     "EXP": 9,
     "MAS": 13.3,
     "genre": 3,
+    "release": 12,
     "newV": 0
   },
   "神々が恋した幻想郷": {
@@ -7206,6 +8098,7 @@
     "EXP": 10,
     "MAS": 14.4,
     "genre": 3,
+    "release": 12,
     "newV": 0
   },
   "Love & Justice": {
@@ -7214,6 +8107,7 @@
     "EXP": 12.7,
     "MAS": 14.9,
     "genre": 6,
+    "release": 12,
     "newV": 0
   },
   "《自戒》 ～ Paganelope": {
@@ -7222,6 +8116,7 @@
     "EXP": 10.5,
     "MAS": 14.6,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "《紀律》 ～ As One": {
@@ -7230,6 +8125,7 @@
     "EXP": 11,
     "MAS": 13.9,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "《種子》 ～ Set You Free": {
@@ -7238,6 +8134,7 @@
     "EXP": 10.5,
     "MAS": 13.8,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "《偏愛》 ～ Shattered Memories": {
@@ -7246,6 +8143,7 @@
     "EXP": 13,
     "MAS": 14.4,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "Limits": {
@@ -7254,6 +8152,7 @@
     "EXP": 9,
     "MAS": 13,
     "genre": 7,
+    "release": 13,
     "newV": 0
   },
   "天空カフェテリア": {
@@ -7262,6 +8161,7 @@
     "EXP": 8.5,
     "MAS": 12.2,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "ヒバリ": {
@@ -7270,6 +8170,7 @@
     "EXP": 9.5,
     "MAS": 12.9,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "Say!ファンファーレ!": {
@@ -7278,6 +8179,7 @@
     "EXP": 9,
     "MAS": 12.2,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "Virtual to LIVE": {
@@ -7286,6 +8188,7 @@
     "EXP": 9.5,
     "MAS": 11.3,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "Don't Fight The Music": {
@@ -7294,6 +8197,7 @@
     "EXP": 12.3,
     "MAS": 14.8,
     "genre": 9,
+    "release": 13,
     "newV": 0
   },
   "Realize": {
@@ -7302,6 +8206,7 @@
     "EXP": 10,
     "MAS": 13.3,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "ラグトレイン": {
@@ -7310,6 +8215,7 @@
     "EXP": 8.5,
     "MAS": 11.7,
     "genre": 2,
+    "release": 12,
     "newV": 0
   },
   "幽霊東京": {
@@ -7318,6 +8224,7 @@
     "EXP": 8,
     "MAS": 11.6,
     "genre": 2,
+    "release": 12,
     "newV": 0
   },
   "ポジティブ・パレード": {
@@ -7326,6 +8233,7 @@
     "EXP": 8.5,
     "MAS": 12.4,
     "genre": 2,
+    "release": 12,
     "newV": 0
   },
   "Blueprint": {
@@ -7334,6 +8242,7 @@
     "EXP": 9.5,
     "MAS": 12.7,
     "genre": 7,
+    "release": 13,
     "newV": 0
   },
   "Kattobi舞高Riders": {
@@ -7342,6 +8251,7 @@
     "EXP": 10,
     "MAS": 13.7,
     "genre": 7,
+    "release": 12,
     "newV": 0
   },
   "FLARE": {
@@ -7350,6 +8260,7 @@
     "EXP": 9.5,
     "MAS": 12.6,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "UTAKATA": {
@@ -7358,6 +8269,7 @@
     "EXP": 9,
     "MAS": 12.9,
     "genre": 9,
+    "release": 13,
     "newV": 0
   },
   "Rule the World!!": {
@@ -7366,6 +8278,7 @@
     "EXP": 10,
     "MAS": 14,
     "genre": 9,
+    "release": 13,
     "newV": 0
   },
   "どうぶつ☆パラダイス": {
@@ -7374,6 +8287,7 @@
     "EXP": 9.5,
     "MAS": 11.5,
     "genre": 9,
+    "release": 13,
     "newV": 0
   },
   "Radiance": {
@@ -7382,6 +8296,7 @@
     "EXP": 10.5,
     "MAS": 13.9,
     "genre": 9,
+    "release": 13,
     "newV": 0
   },
   "Lost Princess": {
@@ -7390,6 +8305,7 @@
     "EXP": 9,
     "MAS": 11.7,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "Mirage Game": {
@@ -7398,6 +8314,7 @@
     "EXP": 9.5,
     "MAS": 12.4,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "ルナティックレッドアイズ": {
@@ -7406,6 +8323,7 @@
     "EXP": 9,
     "MAS": 12.9,
     "genre": 3,
+    "release": 13,
     "newV": 0
   },
   "#FairyJoke": {
@@ -7414,6 +8332,7 @@
     "EXP": 10,
     "MAS": 14.1,
     "genre": 3,
+    "release": 13,
     "newV": 0
   },
   "NewStartでReadyGo!": {
@@ -7422,6 +8341,7 @@
     "EXP": 9,
     "MAS": 12,
     "genre": 7,
+    "release": 13,
     "newV": 0
   },
   "Qliphothgear": {
@@ -7430,6 +8350,7 @@
     "EXP": 13.4,
     "MAS": 14.5,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "SQUAD-Phvntom-": {
@@ -7438,6 +8359,7 @@
     "EXP": 13.3,
     "MAS": 14.4,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "parvorbital": {
@@ -7446,6 +8368,7 @@
     "EXP": 13,
     "MAS": 15.1,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "Inpaqq": {
@@ -7454,6 +8377,7 @@
     "EXP": 10.4,
     "MAS": 13.9,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "Strange Love": {
@@ -7462,6 +8386,7 @@
     "EXP": 13.7,
     "MAS": 15.1,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "Akasagarbha -reincarnate-": {
@@ -7470,6 +8395,7 @@
     "EXP": 12.9,
     "MAS": 14.5,
     "genre": 6,
+    "release": 13,
     "newV": 0
   },
   "なだめスかし Negotiation（TVsize）": {
@@ -7478,6 +8404,7 @@
     "EXP": 9.5,
     "MAS": 12.8,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "88D": {
@@ -7486,6 +8413,7 @@
     "EXP": 10.8,
     "MAS": 14.1,
     "genre": 6,
+    "release": 13,
     "newV": 0
   },
   "カラッポ・ノンフィクション": {
@@ -7494,6 +8422,7 @@
     "EXP": 9,
     "MAS": 13.4,
     "genre": 6,
+    "release": 13,
     "newV": 0
   },
   "Tuk Tuk Boshi": {
@@ -7502,6 +8431,7 @@
     "EXP": 10.5,
     "MAS": 14.7,
     "genre": 6,
+    "release": 13,
     "newV": 0
   },
   "プナイプナイたいそう": {
@@ -7510,6 +8440,7 @@
     "EXP": 10.5,
     "MAS": 14.4,
     "genre": 6,
+    "release": 13,
     "newV": 0
   },
   "多重未来のカルテット -Quartet Theme-": {
@@ -7518,6 +8449,7 @@
     "EXP": 9.5,
     "MAS": 13.7,
     "genre": 2,
+    "release": 14,
     "newV": 0
   },
   "Starduster": {
@@ -7526,6 +8458,7 @@
     "EXP": 7.5,
     "MAS": 10.8,
     "genre": 2,
+    "release": 14,
     "newV": 0
   },
   "崩壊歌姫 -disruptive diva-": {
@@ -7534,6 +8467,7 @@
     "EXP": 10,
     "MAS": 13.8,
     "genre": 2,
+    "release": 14,
     "newV": 0
   },
   "マージナル": {
@@ -7542,6 +8476,7 @@
     "EXP": 9,
     "MAS": 12.8,
     "genre": 2,
+    "release": 14,
     "newV": 0
   },
   "ぽっぴっぽー": {
@@ -7550,6 +8485,7 @@
     "EXP": 9.5,
     "MAS": 13.6,
     "genre": 2,
+    "release": 14,
     "newV": 0
   },
   "The secret garden": {
@@ -7558,6 +8494,7 @@
     "EXP": 8.5,
     "MAS": 12.4,
     "genre": 2,
+    "release": 14,
     "newV": 0
   },
   "Iudicium “Apocalypsis Mix”": {
@@ -7566,6 +8503,7 @@
     "EXP": 11,
     "MAS": 14.4,
     "genre": 9,
+    "release": 13,
     "newV": 0
   },
   "IMPACT": {
@@ -7574,6 +8512,7 @@
     "EXP": 12.9,
     "MAS": 14.5,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "Long shot": {
@@ -7582,6 +8521,7 @@
     "EXP": 9.5,
     "MAS": 12.4,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "MEGALOVANIA": {
@@ -7590,6 +8530,7 @@
     "EXP": 13.5,
     "MAS": 14,
     "genre": 6,
+    "release": 13,
     "newV": 0
   },
   "NightTheater": {
@@ -7598,6 +8539,7 @@
     "EXP": 11.8,
     "MAS": 14.4,
     "genre": 6,
+    "release": 13,
     "newV": 0
   },
   "圧　倒　的　存　在　感": {
@@ -7606,6 +8548,7 @@
     "EXP": 10,
     "MAS": 13,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "ピアノ協奏曲第１番”蠍火”": {
@@ -7614,6 +8557,7 @@
     "EXP": 14.2,
     "MAS": 15.3,
     "genre": 6,
+    "release": 13,
     "newV": 0
   },
   "永遠のAria": {
@@ -7622,6 +8566,7 @@
     "EXP": 8.5,
     "MAS": 12.7,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "うまぴょい伝説": {
@@ -7630,6 +8575,7 @@
     "EXP": 9.5,
     "MAS": 12.5,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "うっせぇわ": {
@@ -7638,6 +8584,7 @@
     "EXP": 9,
     "MAS": 12.9,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "天火明命": {
@@ -7646,6 +8593,7 @@
     "EXP": 10,
     "MAS": 14,
     "genre": 9,
+    "release": 13,
     "newV": 0
   },
   "Blows Up Everything": {
@@ -7654,6 +8602,7 @@
     "EXP": 13.6,
     "MAS": 14.2,
     "genre": 9,
+    "release": 13,
     "newV": 0
   },
   "Baqeela": {
@@ -7662,6 +8611,7 @@
     "EXP": 10.1,
     "MAS": 14.1,
     "genre": 9,
+    "release": 13,
     "newV": 0
   },
   "花と、雪と、ドラムンベース。": {
@@ -7670,6 +8620,7 @@
     "EXP": 10.8,
     "MAS": 14.5,
     "genre": 9,
+    "release": 13,
     "newV": 0
   },
   "グッバイ宣言": {
@@ -7678,6 +8629,7 @@
     "EXP": 9,
     "MAS": 12.3,
     "genre": 2,
+    "release": 13,
     "newV": 0
   },
   "テレキャスタービーボーイ": {
@@ -7686,6 +8638,7 @@
     "EXP": 9.5,
     "MAS": 12.6,
     "genre": 2,
+    "release": 13,
     "newV": 0
   },
   "ボッカデラベリタ": {
@@ -7694,6 +8647,7 @@
     "EXP": 10,
     "MAS": 13.2,
     "genre": 2,
+    "release": 13,
     "newV": 0
   },
   "ヴァンパイア": {
@@ -7702,6 +8656,7 @@
     "EXP": 9.5,
     "MAS": 11.9,
     "genre": 2,
+    "release": 13,
     "newV": 0
   },
   "帝国少女": {
@@ -7710,6 +8665,7 @@
     "EXP": 9,
     "MAS": 12.3,
     "genre": 2,
+    "release": 13,
     "newV": 0
   },
   "クーネル・エンゲイザー": {
@@ -7718,6 +8674,7 @@
     "EXP": 10,
     "MAS": 13.2,
     "genre": 2,
+    "release": 133,
     "newV": 0
   },
   "回転 feat.あやぽんず＊": {
@@ -7726,6 +8683,7 @@
     "EXP": 9.5,
     "MAS": 12.2,
     "genre": 3,
+    "release": 13,
     "newV": 0
   },
   "SOUL 2 DIVIDE": {
@@ -7734,6 +8692,7 @@
     "EXP": 9,
     "MAS": 13.4,
     "genre": 3,
+    "release": 13,
     "newV": 0
   },
   "Cinderella Story [BlackY Remix]": {
@@ -7742,6 +8701,7 @@
     "EXP": 10,
     "MAS": 14.1,
     "genre": 3,
+    "release": 13,
     "newV": 0
   },
   "妖々跋扈　～ Who done it！！！": {
@@ -7750,6 +8710,7 @@
     "EXP": 12.5,
     "MAS": 14.4,
     "genre": 3,
+    "release": 13,
     "newV": 0
   },
   "宵闇の月に抱かれて": {
@@ -7758,6 +8719,7 @@
     "EXP": 10.3,
     "MAS": 14,
     "genre": 3,
+    "release": 13,
     "newV": 0
   },
   "Starting Over": {
@@ -7766,6 +8728,7 @@
     "EXP": 9.5,
     "MAS": 13.7,
     "genre": 7,
+    "release": 13,
     "newV": 0
   },
   "POTENTIAL": {
@@ -7774,6 +8737,7 @@
     "EXP": 14,
     "MAS": 15.1,
     "genre": 5,
+    "release": 13,
     "newV": 0
   },
   "まっすぐ→→→ストリーム！": {
@@ -7782,6 +8746,7 @@
     "EXP": 9,
     "MAS": 13.1,
     "genre": 9,
+    "release": 13,
     "newV": 0
   },
   "トリドリ⇒モリモリ! Lovely fruits☆": {
@@ -7790,6 +8755,7 @@
     "EXP": 10.5,
     "MAS": 12.5,
     "genre": 9,
+    "release": 13,
     "newV": 0
   },
   "夜明けのストリング": {
@@ -7798,6 +8764,7 @@
     "EXP": 9,
     "MAS": 12.3,
     "genre": 9,
+    "release": 13,
     "newV": 0
   },
   "Valsqotch": {
@@ -7806,6 +8773,7 @@
     "EXP": 13.5,
     "MAS": 14.5,
     "genre": 9,
+    "release": 14,
     "newV": 0
   },
   "違う、そうじゃない": {
@@ -7814,6 +8782,7 @@
     "EXP": 8.5,
     "MAS": 12.3,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "俺ら東京さ行ぐだ": {
@@ -7822,6 +8791,7 @@
     "EXP": 9,
     "MAS": 12.7,
     "genre": 0,
+    "release": 13,
     "newV": 0
   },
   "J219": {
@@ -7830,6 +8800,7 @@
     "EXP": 10.9,
     "MAS": 14.4,
     "genre": 6,
+    "release": 13,
     "newV": 0
   },
   "CAT'S EYE": {
@@ -7838,6 +8809,7 @@
     "EXP": 9.5,
     "MAS": 13,
     "genre": 7,
+    "release": 13,
     "newV": 0
   },
   "ヤミツキ": {
@@ -7846,6 +8818,7 @@
     "EXP": 10,
     "MAS": 13,
     "genre": 9,
+    "release": 13,
     "newV": 0
   },
   "Titania": {
@@ -7854,6 +8827,7 @@
     "EXP": 13.8,
     "MAS": 14.8,
     "genre": 9,
+    "release": 14,
     "newV": 0
   },
   "Cry Baby": {
@@ -7862,6 +8836,7 @@
     "EXP": 8,
     "MAS": 11.4,
     "genre": 0,
+    "release": 14,
     "newV": 0
   },
   "怪物": {
@@ -7870,6 +8845,7 @@
     "EXP": 9,
     "MAS": 12.5,
     "genre": 0,
+    "release": 14,
     "newV": 0
   },
   "明け星": {
@@ -7878,6 +8854,7 @@
     "EXP": 8.5,
     "MAS": 11.7,
     "genre": 0,
+    "release": 14,
     "newV": 0
   },
   "シル・ヴ・プレジデント": {
@@ -7886,6 +8863,7 @@
     "EXP": 9.5,
     "MAS": 12.6,
     "genre": 0,
+    "release": 14,
     "newV": 0
   },
   "さんさーら！": {
@@ -7894,6 +8872,7 @@
     "EXP": 9.5,
     "MAS": 12.7,
     "genre": 0,
+    "release": 14,
     "newV": 0
   },
   "ギラギラ": {
@@ -7902,6 +8881,7 @@
     "EXP": 8.5,
     "MAS": 11.8,
     "genre": 0,
+    "release": 14,
     "newV": 0
   },
   "モア！ジャンプ！モア！": {
@@ -7910,6 +8890,7 @@
     "EXP": 9.5,
     "MAS": 13.2,
     "genre": 2,
+    "release": 14,
     "newV": 0
   },
   "携帯恋話": {
@@ -7918,6 +8899,7 @@
     "EXP": 9,
     "MAS": 13.7,
     "genre": 2,
+    "release": 14,
     "newV": 0
   },
   "エンヴィーベイビー": {
@@ -7926,6 +8908,7 @@
     "EXP": 9,
     "MAS": 12.2,
     "genre": 2,
+    "release": 14,
     "newV": 0
   },
   "ダーリンダンス": {
@@ -7934,6 +8917,7 @@
     "EXP": 9.5,
     "MAS": 12.6,
     "genre": 2,
+    "release": 14,
     "newV": 0
   },
   "初音天地開闢神話": {
@@ -7942,6 +8926,7 @@
     "EXP": 13.6,
     "MAS": 14.7,
     "genre": 2,
+    "release": 14,
     "newV": 0
   },
   "無間嫉妬劇場『666』": {
@@ -7950,6 +8935,7 @@
     "EXP": 10.4,
     "MAS": 13.5,
     "genre": 3,
+    "release": 14,
     "newV": 0
   },
   "ENDYMION": {
@@ -7958,6 +8944,7 @@
     "EXP": 14.5,
     "MAS": 15,
     "genre": 6,
+    "release": 14,
     "newV": 0
   },
   "竹": {
@@ -7966,6 +8953,7 @@
     "EXP": 13,
     "MAS": 14.8,
     "genre": 6,
+    "release": 14,
     "newV": 0
   },
   "Forever and…": {
@@ -7974,6 +8962,7 @@
     "EXP": 9.5,
     "MAS": 12.5,
     "genre": 7,
+    "release": 14,
     "newV": 0
   },
   "タイムカプセル": {
@@ -7982,6 +8971,7 @@
     "EXP": 9.5,
     "MAS": 12.9,
     "genre": 5,
+    "release": 14,
     "newV": 0
   },
   "パズルリボン": {
@@ -7990,6 +8980,7 @@
     "EXP": 9.5,
     "MAS": 12.9,
     "genre": 5,
+    "release": 14,
     "newV": 0
   },
   "Be4Step": {
@@ -7998,6 +8989,7 @@
     "EXP": 10,
     "MAS": 13.8,
     "genre": 5,
+    "release": 14,
     "newV": 0
   },
   "Everlasting Liberty": {
@@ -8006,6 +8998,7 @@
     "EXP": 13.6,
     "MAS": 14.7,
     "genre": 5,
+    "release": 14,
     "newV": 0
   },
   "とびだせ！TO THE COSMIC!!": {
@@ -8014,6 +9007,7 @@
     "EXP": 10,
     "MAS": 13.5,
     "genre": 9,
+    "release": 14,
     "newV": 0
   },
   "星めぐり、果ての君へ。": {
@@ -8022,6 +9016,7 @@
     "EXP": 9,
     "MAS": 12.7,
     "genre": 9,
+    "release": 14,
     "newV": 0
   },
   "モ°ルモ°ル": {
@@ -8030,6 +9025,7 @@
     "EXP": 13.4,
     "MAS": 14.1,
     "genre": 9,
+    "release": 14,
     "newV": 0
   },
   "蒼穹舞楽": {
@@ -8038,6 +9034,7 @@
     "EXP": 12.5,
     "MAS": 14.3,
     "genre": 9,
+    "release": 14,
     "newV": 0
   },
   "Komplexe": {
@@ -8046,6 +9043,7 @@
     "EXP": 10.5,
     "MAS": 14.3,
     "genre": 9,
+    "release": 14,
     "newV": 0
   },
   "愛のシンギュラリティ": {
@@ -8054,6 +9052,7 @@
     "EXP": 10.5,
     "MAS": 13.7,
     "genre": 5,
+    "release": 14,
     "newV": 0
   },
   "アナタニナルノ": {
@@ -8062,6 +9061,7 @@
     "EXP": 10.4,
     "MAS": 13.4,
     "genre": 5,
+    "release": 14,
     "newV": 0
   },
   "コトバウタ": {
@@ -8070,6 +9070,7 @@
     "EXP": 10,
     "MAS": 12.5,
     "genre": 7,
+    "release": 14,
     "newV": 0
   },
   "A Man In The Mirror": {
@@ -8078,6 +9079,7 @@
     "EXP": 13.4,
     "MAS": 14.9,
     "genre": 9,
+    "release": 14,
     "newV": 0
   },
   "Dig Delight!": {
@@ -8086,6 +9088,7 @@
     "EXP": 9.5,
     "MAS": 12.7,
     "genre": 0,
+    "release": 14,
     "newV": 0
   },
   "Floor Killer": {
@@ -8094,6 +9097,7 @@
     "EXP": 9,
     "MAS": 12.6,
     "genre": 0,
+    "release": 14,
     "newV": 0
   },
   "ジャンキーナイトタウンオーケストラ": {
@@ -8102,6 +9106,7 @@
     "EXP": 9.5,
     "MAS": 13.4,
     "genre": 2,
+    "release": 14,
     "newV": 0
   },
   "エバ": {
@@ -8110,6 +9115,7 @@
     "EXP": 10.5,
     "MAS": 13.7,
     "genre": 2,
+    "release": 14,
     "newV": 0
   },
   "トラフィック・ジャム": {
@@ -8118,6 +9124,7 @@
     "EXP": 9.5,
     "MAS": 13,
     "genre": 2,
+    "release": 14,
     "newV": 0
   },
   "舞高最強ドリームセッション!!!!! ～180秒一曲勝負～": {
@@ -8126,6 +9133,7 @@
     "EXP": 10.4,
     "MAS": 13.4,
     "genre": 7,
+    "release": 14,
     "newV": 0
   },
   "HERA": {
@@ -8134,6 +9142,7 @@
     "EXP": 11.5,
     "MAS": 14.8,
     "genre": 9,
+    "release": 14,
     "newV": 0
   },
   "I'll make you Super Rock Star": {
@@ -8142,6 +9151,7 @@
     "EXP": 10.3,
     "MAS": 14,
     "genre": 5,
+    "release": 14,
     "newV": 0
   },
   "Reverberate": {
@@ -8150,6 +9160,7 @@
     "EXP": 13,
     "MAS": 14.9,
     "genre": 5,
+    "release": 14,
     "newV": 0
   },
   "Breakthrough": {
@@ -8158,6 +9169,7 @@
     "EXP": 11.8,
     "MAS": 13.9,
     "genre": 5,
+    "release": 14,
     "newV": 0
   },
   "Scythe of Death": {
@@ -8166,6 +9178,7 @@
     "EXP": 13.9,
     "MAS": 14.9,
     "genre": 5,
+    "release": 14,
     "newV": 0
   },
   "くらべられっ子": {
@@ -8174,6 +9187,7 @@
     "EXP": 9,
     "MAS": 12.5,
     "genre": 2,
+    "release": 14,
     "newV": 0
   },
   "あの世行きのバスに乗ってさらば。": {
@@ -8182,6 +9196,7 @@
     "EXP": 9.5,
     "MAS": 12.7,
     "genre": 2,
+    "release": 14,
     "newV": 0
   },
   "泥の分際で私だけの大切を奪おうだなんて": {
@@ -8190,6 +9205,7 @@
     "EXP": 10,
     "MAS": 13.3,
     "genre": 2,
+    "release": 14,
     "newV": 0
   },
   "吉原ラメント": {
@@ -8198,6 +9214,7 @@
     "EXP": 9,
     "MAS": 12.2,
     "genre": 2,
+    "release": 14,
     "newV": 0
   },
   "フォニイ": {
@@ -8206,6 +9223,7 @@
     "EXP": 9.5,
     "MAS": 12.8,
     "genre": 2,
+    "release": 14,
     "newV": 0
   },
   "愛のシュプリーム！": {
@@ -8214,6 +9232,7 @@
     "EXP": 9,
     "MAS": 12,
     "genre": 0,
+    "release": 14,
     "newV": 0
   },
   "めいど・うぃず・どらごんず♥": {
@@ -8222,6 +9241,7 @@
     "EXP": 9.5,
     "MAS": 11.8,
     "genre": 0,
+    "release": 14,
     "newV": 0
   },
   "Re：End of a Dream": {
@@ -8230,6 +9250,7 @@
     "EXP": 13.4,
     "MAS": 14.9,
     "genre": 6,
+    "release": 14,
     "newV": 0
   },
   "僕らのFreedom DiVE↓": {
@@ -8238,6 +9259,7 @@
     "EXP": 10,
     "MAS": 14.1,
     "genre": 7,
+    "release": 14,
     "newV": 0
   },
   "色彩過剰のダイアリーミュージック": {
@@ -8246,6 +9268,7 @@
     "EXP": 11.4,
     "MAS": 14.6,
     "genre": 7,
+    "release": 14,
     "newV": 0
   },
   "Last Kingdom": {
@@ -8254,6 +9277,7 @@
     "EXP": 11,
     "MAS": 14.1,
     "genre": 9,
+    "release": 14,
     "newV": 0
   },
   "3倍！Sun Shine！カーニバル！": {
@@ -8262,6 +9286,7 @@
     "EXP": 9,
     "MAS": 11.9,
     "genre": 0,
+    "release": 14,
     "newV": 0
   },
   "地獄屋八丁荒らし": {
@@ -8270,6 +9295,7 @@
     "EXP": 8,
     "MAS": 12.3,
     "genre": 0,
+    "release": 14,
     "newV": 0
   },
   "ハッピーエンドをはじめから": {
@@ -8278,6 +9304,7 @@
     "EXP": 10,
     "MAS": 12.2,
     "genre": 0,
+    "release": 14,
     "newV": 0
   },
   "過去を喰らう": {
@@ -8286,6 +9313,7 @@
     "EXP": 9.5,
     "MAS": 12.9,
     "genre": 0,
+    "release": 14,
     "newV": 0
   },
   "失礼しますが、RIP♡": {
@@ -8294,6 +9322,7 @@
     "EXP": 10,
     "MAS": 13.5,
     "genre": 0,
+    "release": 14,
     "newV": 0
   },
   "Splash Dance!!": {
@@ -8302,6 +9331,7 @@
     "EXP": 9.5,
     "MAS": 12.4,
     "genre": 9,
+    "release": 14,
     "newV": 0
   },
   "帰り道": {
@@ -8310,6 +9340,7 @@
     "EXP": 8.5,
     "MAS": 10.9,
     "genre": 7,
+    "release": 14,
     "newV": 0
   },
   "QZKago Requiem": {
@@ -8318,6 +9349,7 @@
     "EXP": 13.7,
     "MAS": 14.8,
     "genre": 9,
+    "release": 14,
     "newV": 0
   },
   "#SUP3RORBITAL": {
@@ -8326,6 +9358,7 @@
     "EXP": 12.4,
     "MAS": 14.8,
     "genre": 5,
+    "release": 14,
     "newV": 0
   },
   "WE'RE BACK!!": {
@@ -8334,6 +9367,7 @@
     "EXP": 12.9,
     "MAS": 14.6,
     "genre": 5,
+    "release": 14,
     "newV": 0
   },
   "Brightness": {
@@ -8342,6 +9376,7 @@
     "EXP": 12,
     "MAS": 14.2,
     "genre": 5,
+    "release": 14,
     "newV": 0
   },
   "Λzure Vixen": {
@@ -8350,6 +9385,7 @@
     "EXP": 13.8,
     "MAS": 15.2,
     "genre": 5,
+    "release": 14,
     "newV": 0
   },
   "僕の戦争": {
@@ -8358,6 +9394,7 @@
     "EXP": 9,
     "MAS": 12.5,
     "genre": 0,
+    "release": 14,
     "newV": 0
   },
   "ポケットからぬりつぶせ！": {
@@ -8366,6 +9403,7 @@
     "EXP": 10,
     "MAS": 11.9,
     "genre": 9,
+    "release": 14,
     "newV": 0
   },
   "Y.Y.Y.計画!!!!": {
@@ -8374,6 +9412,7 @@
     "EXP": 9.5,
     "MAS": 12.6,
     "genre": 9,
+    "release": 14,
     "newV": 0
   },
   "最っ高のエンタメだ!!": {
@@ -8382,6 +9421,7 @@
     "EXP": 10.7,
     "MAS": 13,
     "genre": 9,
+    "release": 14,
     "newV": 0
   },
   "GODLINESS": {
@@ -8390,6 +9430,7 @@
     "EXP": 10.9,
     "MAS": 14.2,
     "genre": 9,
+    "release": 14,
     "newV": 0
   },
   "ホーリーサンバランド": {
@@ -8398,6 +9439,7 @@
     "EXP": 13.1,
     "MAS": 14.8,
     "genre": 6,
+    "release": 14,
     "newV": 0
   },
   "MALKUTH -The Last Ruler of Terrestrials-": {
@@ -8406,6 +9448,7 @@
     "EXP": 14.5,
     "MAS": 15.4,
     "genre": 5,
+    "release": 14,
     "newV": 0
   },
   "DA'AT -The First Seeker of Souls-": {
@@ -8414,6 +9457,7 @@
     "EXP": 14.3,
     "MAS": 15.3,
     "genre": 5,
+    "release": 14,
     "newV": 0
   },
   "キルミーのベイベー！": {
@@ -8422,6 +9466,7 @@
     "EXP": 11,
     "MAS": 14,
     "genre": 0,
+    "release": 14,
     "newV": 0
   },
   "Rumbling hearts": {
@@ -8430,6 +9475,7 @@
     "EXP": 8,
     "MAS": 11.6,
     "genre": 0,
+    "release": 14,
     "newV": 0
   },
   "非実在系女子達はどうすりゃいいですか？": {
@@ -8438,6 +9484,7 @@
     "EXP": 9,
     "MAS": 13,
     "genre": 0,
+    "release": 14,
     "newV": 0
   },
   "恋ひ恋ふ縁": {
@@ -8446,6 +9493,7 @@
     "EXP": 8,
     "MAS": 11.9,
     "genre": 0,
+    "release": 14,
     "newV": 0
   },
   "Transcend Lights": {
@@ -8454,6 +9502,7 @@
     "EXP": 9.5,
     "MAS": 12.2,
     "genre": 9,
+    "release": 14,
     "newV": 0
   },
   "Get the star for you [DJ Command Remix]": {
@@ -8462,6 +9511,7 @@
     "EXP": 9,
     "MAS": 12.7,
     "genre": 3,
+    "release": 14,
     "newV": 0
   },
   "Music Evolution": {
@@ -8470,6 +9520,7 @@
     "EXP": 9,
     "MAS": 13,
     "genre": 3,
+    "release": 14,
     "newV": 0
   },
   "ハウリング": {
@@ -8478,6 +9529,7 @@
     "EXP": 9,
     "MAS": 12.4,
     "genre": 3,
+    "release": 14,
     "newV": 0
   },
   "寡黙なるフォール": {
@@ -8486,6 +9538,7 @@
     "EXP": 10,
     "MAS": 14,
     "genre": 3,
+    "release": 14,
     "newV": 0
   },
   "みずいろレインドロップ": {
@@ -8494,6 +9547,7 @@
     "EXP": 9,
     "MAS": 13,
     "genre": 3,
+    "release": 14,
     "newV": 0
   },
   "BlackFlagBreaker!!": {
@@ -8502,6 +9556,7 @@
     "EXP": 10.6,
     "MAS": 14,
     "genre": 0,
+    "release": 14,
     "newV": 0
   },
   "レッド・ルーラー": {
@@ -8510,6 +9565,7 @@
     "EXP": 11,
     "MAS": 13.7,
     "genre": 0,
+    "release": 15,
     "newV": 0
   },
   "Before I Rise": {
@@ -8518,6 +9574,7 @@
     "EXP": 8.5,
     "MAS": 11.9,
     "genre": 0,
+    "release": 15,
     "newV": 0
   },
   "ミックスナッツ": {
@@ -8526,6 +9583,7 @@
     "EXP": 9,
     "MAS": 13,
     "genre": 0,
+    "release": 15,
     "newV": 0
   },
   "阿修羅ちゃん": {
@@ -8534,6 +9592,7 @@
     "EXP": 9,
     "MAS": 13,
     "genre": 0,
+    "release": 15,
     "newV": 0
   },
   "なにやってもうまくいかない": {
@@ -8542,6 +9601,7 @@
     "EXP": 9.5,
     "MAS": 12.7,
     "genre": 0,
+    "release": 15,
     "newV": 0
   },
   "ユメヲカケル！": {
@@ -8550,6 +9610,7 @@
     "EXP": 9.5,
     "MAS": 12.6,
     "genre": 0,
+    "release": 15,
     "newV": 0
   },
   "いただきバベル (Prod. ケンモチヒデフミ)": {
@@ -8558,6 +9619,7 @@
     "EXP": 10,
     "MAS": 13,
     "genre": 0,
+    "release": 15,
     "newV": 0
   },
   "キュートなカノジョ": {
@@ -8566,6 +9628,7 @@
     "EXP": 9,
     "MAS": 13,
     "genre": 2,
+    "release": 15,
     "newV": 0
   },
   "神っぽいな": {
@@ -8574,6 +9637,7 @@
     "EXP": 9.5,
     "MAS": 12.5,
     "genre": 2,
+    "release": 15,
     "newV": 0
   },
   "トンデモワンダーズ": {
@@ -8582,6 +9646,7 @@
     "EXP": 11.3,
     "MAS": 13.7,
     "genre": 2,
+    "release": 15,
     "newV": 0
   },
   "スカーレット警察のゲットーパトロール24時": {
@@ -8590,6 +9655,7 @@
     "EXP": 9,
     "MAS": 13.9,
     "genre": 3,
+    "release": 15,
     "newV": 0
   },
   "I'm so Happy": {
@@ -8598,6 +9664,7 @@
     "EXP": 12.5,
     "MAS": 13.7,
     "genre": 6,
+    "release": 15,
     "newV": 0
   },
   "Random": {
@@ -8606,6 +9673,7 @@
     "EXP": 10,
     "MAS": 14.4,
     "genre": 6,
+    "release": 15,
     "newV": 0
   },
   "超Rock The Party": {
@@ -8614,6 +9682,7 @@
     "EXP": 10,
     "MAS": 13.3,
     "genre": 7,
+    "release": 15,
     "newV": 0
   },
   "アンビバレンス": {
@@ -8622,6 +9691,7 @@
     "EXP": 10.5,
     "MAS": 12.6,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "TEmPTaTiON": {
@@ -8630,6 +9700,7 @@
     "EXP": 13.5,
     "MAS": 14.8,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "Falsum Atlantis.": {
@@ -8638,6 +9709,7 @@
     "EXP": 13,
     "MAS": 14.8,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "ミラージュ・フレイグランス": {
@@ -8646,6 +9718,7 @@
     "EXP": 12.2,
     "MAS": 14.3,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "インパアフェクシオン・ホワイトガアル": {
@@ -8654,6 +9727,7 @@
     "EXP": 10.9,
     "MAS": 14.1,
     "genre": 5,
+    "release": 15,
     "newV": 0
   },
   "クリーパー": {
@@ -8662,6 +9736,7 @@
     "EXP": 9.5,
     "MAS": 11.9,
     "genre": 5,
+    "release": 15,
     "newV": 0
   },
   "Ignition": {
@@ -8670,6 +9745,7 @@
     "EXP": 10.9,
     "MAS": 13.8,
     "genre": 5,
+    "release": 15,
     "newV": 0
   },
   "推してもダメならひいてみな！": {
@@ -8678,6 +9754,7 @@
     "EXP": 9.5,
     "MAS": 12.7,
     "genre": 5,
+    "release": 15,
     "newV": 0
   },
   "ガチ恋ラビリンス": {
@@ -8686,6 +9763,7 @@
     "EXP": 10.5,
     "MAS": 14,
     "genre": 5,
+    "release": 15,
     "newV": 0
   },
   "CELERITAS": {
@@ -8694,6 +9772,7 @@
     "EXP": 11.5,
     "MAS": 14.5,
     "genre": 5,
+    "release": 15,
     "newV": 0
   },
   "グラウンドスライダー協奏曲第一番「風唄」": {
@@ -8702,6 +9781,7 @@
     "EXP": 14,
     "MAS": 15.3,
     "genre": 5,
+    "release": 15,
     "newV": 0
   },
   "Crawler / Flyer": {
@@ -8710,6 +9790,7 @@
     "EXP": 10.5,
     "MAS": 13.7,
     "genre": 5,
+    "release": 15,
     "newV": 0
   },
   "Re:Credits": {
@@ -8718,6 +9799,7 @@
     "EXP": 10,
     "MAS": 13.6,
     "genre": 5,
+    "release": 15,
     "newV": 0
   },
   "Cheat Sheet": {
@@ -8726,6 +9808,7 @@
     "EXP": 10.5,
     "MAS": 13.8,
     "genre": 5,
+    "release": 15,
     "newV": 0
   },
   "One Room Sky": {
@@ -8734,6 +9817,7 @@
     "EXP": 11.4,
     "MAS": 13.5,
     "genre": 5,
+    "release": 15,
     "newV": 0
   },
   "Revived": {
@@ -8742,6 +9826,7 @@
     "EXP": 10.9,
     "MAS": 14.2,
     "genre": 3,
+    "release": 15,
     "newV": 0
   },
   "デザイアシューティング": {
@@ -8750,6 +9835,7 @@
     "EXP": 8.5,
     "MAS": 11.5,
     "genre": 3,
+    "release": 15,
     "newV": 0
   },
   "Mami Mami Zone": {
@@ -8758,6 +9844,7 @@
     "EXP": 9,
     "MAS": 13.2,
     "genre": 3,
+    "release": 15,
     "newV": 0
   },
   "Armageddon": {
@@ -8766,6 +9853,7 @@
     "EXP": 13.3,
     "MAS": 14.9,
     "genre": 3,
+    "release": 15,
     "newV": 0
   },
   "田中": {
@@ -8774,6 +9862,7 @@
     "EXP": 11.4,
     "MAS": 14.6,
     "genre": 6,
+    "release": 15,
     "newV": 0
   },
   "INSIDE IDENTITY": {
@@ -8782,6 +9871,7 @@
     "EXP": 9.5,
     "MAS": 12.7,
     "genre": 0,
+    "release": 15,
     "newV": 0
   },
   "Van!shment Th!s World": {
@@ -8790,6 +9880,7 @@
     "EXP": 9.5,
     "MAS": 12.2,
     "genre": 0,
+    "release": 15,
     "newV": 0
   },
   "がんばれ！蜘蛛子さんのテーマ": {
@@ -8798,6 +9889,7 @@
     "EXP": 10.5,
     "MAS": 14.3,
     "genre": 0,
+    "release": 15,
     "newV": 0
   },
   "新世界スターター": {
@@ -8806,6 +9898,7 @@
     "EXP": 9,
     "MAS": 12.7,
     "genre": 7,
+    "release": 15,
     "newV": 0
   },
   "Girl's Party Planet!": {
@@ -8814,6 +9907,7 @@
     "EXP": 9,
     "MAS": 11.7,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "Viyella's Scream": {
@@ -8822,6 +9916,7 @@
     "EXP": 13.6,
     "MAS": 14.9,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "Desperado Waltz": {
@@ -8830,6 +9925,7 @@
     "EXP": 13.3,
     "MAS": 14.6,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "HiGHER": {
@@ -8838,6 +9934,7 @@
     "EXP": 11.2,
     "MAS": 13.9,
     "genre": 6,
+    "release": 16,
     "newV": 0
   },
   "めっちゃ煽ってくるタイプの音ゲーボス曲ちゃんなんかに負けないが？？？？？": {
@@ -8846,6 +9943,7 @@
     "EXP": 11.7,
     "MAS": 14.4,
     "genre": 6,
+    "release": 16,
     "newV": 0
   },
   "Breaking Dawn (feat. 棗いつき)": {
@@ -8854,6 +9952,7 @@
     "EXP": 10,
     "MAS": 13.3,
     "genre": 6,
+    "release": 16,
     "newV": 0
   },
   "Odin": {
@@ -8862,6 +9961,7 @@
     "EXP": 13.7,
     "MAS": 14.9,
     "genre": 6,
+    "release": 16,
     "newV": 0
   },
   "Wildfire": {
@@ -8870,6 +9970,7 @@
     "EXP": 13.3,
     "MAS": 14.5,
     "genre": 6,
+    "release": 16,
     "newV": 0
   },
   "ステラ": {
@@ -8878,6 +9979,7 @@
     "EXP": 9.5,
     "MAS": 13.1,
     "genre": 2,
+    "release": 15,
     "newV": 0
   },
   "Ready Steady": {
@@ -8886,6 +9988,7 @@
     "EXP": 8.5,
     "MAS": 13.1,
     "genre": 2,
+    "release": 15,
     "newV": 0
   },
   "群青讃歌": {
@@ -8894,6 +9997,7 @@
     "EXP": 9,
     "MAS": 12.3,
     "genre": 2,
+    "release": 15,
     "newV": 0
   },
   "キャットラビング": {
@@ -8902,6 +10006,7 @@
     "EXP": 9.5,
     "MAS": 12.4,
     "genre": 2,
+    "release": 15,
     "newV": 0
   },
   "マーシャル・マキシマイザー": {
@@ -8910,6 +10015,7 @@
     "EXP": 9.5,
     "MAS": 13.8,
     "genre": 2,
+    "release": 15,
     "newV": 0
   },
   "GRÄNDIR": {
@@ -8918,6 +10024,7 @@
     "EXP": 10.5,
     "MAS": 13.8,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "Advance（CHUNITHM edit）": {
@@ -8926,6 +10033,7 @@
     "EXP": 10,
     "MAS": 13.8,
     "genre": 6,
+    "release": 15,
     "newV": 0
   },
   "Let's Starry Party！": {
@@ -8934,6 +10042,7 @@
     "EXP": 10.3,
     "MAS": 12.4,
     "genre": 9,
+    "release": 16,
     "newV": 0
   },
   "任せてJC陰陽師☆八雲ちゃん": {
@@ -8942,6 +10051,7 @@
     "EXP": 10.4,
     "MAS": 13.3,
     "genre": 5,
+    "release": 15,
     "newV": 0
   },
   "†大闘士＝クライン・フォーゲル・シュピール＝えりか†": {
@@ -8950,6 +10060,7 @@
     "EXP": 12.6,
     "MAS": 14.5,
     "genre": 5,
+    "release": 15,
     "newV": 0
   },
   "Fallin' Darlin' Rollin'": {
@@ -8958,6 +10069,7 @@
     "EXP": 9,
     "MAS": 13,
     "genre": 5,
+    "release": 15,
     "newV": 0
   },
   "恋するみたいに☆かませレッドヘルズ": {
@@ -8966,6 +10078,7 @@
     "EXP": 10,
     "MAS": 12.9,
     "genre": 5,
+    "release": 15,
     "newV": 0
   },
   "シンデレラ": {
@@ -8974,6 +10087,7 @@
     "EXP": 8.5,
     "MAS": 12.1,
     "genre": 2,
+    "release": 15,
     "newV": 0
   },
   "アニマル": {
@@ -8982,6 +10096,7 @@
     "EXP": 9.5,
     "MAS": 13.3,
     "genre": 2,
+    "release": 15,
     "newV": 0
   },
   "パラサイト": {
@@ -8990,6 +10105,7 @@
     "EXP": 9,
     "MAS": 12.5,
     "genre": 2,
+    "release": 15,
     "newV": 0
   },
   "きゅうくらりん": {
@@ -8998,6 +10114,7 @@
     "EXP": 10,
     "MAS": 13.6,
     "genre": 2,
+    "release": 15,
     "newV": 0
   },
   "生きる": {
@@ -9006,6 +10123,7 @@
     "EXP": 8.5,
     "MAS": 13.1,
     "genre": 2,
+    "release": 15,
     "newV": 0
   },
   "MAIGAHARA パンチラインキッカーズ": {
@@ -9014,6 +10132,7 @@
     "EXP": 9.5,
     "MAS": 13,
     "genre": 7,
+    "release": 15,
     "newV": 0
   },
   "エータ・ベータ・イータ": {
@@ -9022,6 +10141,7 @@
     "EXP": 12.8,
     "MAS": 14.7,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "irony": {
@@ -9030,6 +10150,7 @@
     "EXP": 8,
     "MAS": 11.7,
     "genre": 0,
+    "release": 15,
     "newV": 0
   },
   "お空のニュークリアフュージョン道場": {
@@ -9038,6 +10159,7 @@
     "EXP": 9,
     "MAS": 13.5,
     "genre": 3,
+    "release": 15,
     "newV": 0
   },
   "全人類ノ非想天則": {
@@ -9046,6 +10168,7 @@
     "EXP": 9.5,
     "MAS": 13.4,
     "genre": 3,
+    "release": 15,
     "newV": 0
   },
   "三妖精SAY YA!!!": {
@@ -9054,6 +10177,7 @@
     "EXP": 9.5,
     "MAS": 12.2,
     "genre": 3,
+    "release": 15,
     "newV": 0
   },
   "U&iVERSE -銀河鸞翔-": {
@@ -9062,6 +10186,7 @@
     "EXP": 10.9,
     "MAS": 14.4,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "RELOAD": {
@@ -9070,6 +10195,7 @@
     "EXP": 11,
     "MAS": 14.4,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "アイ情劣等生": {
@@ -9078,6 +10204,7 @@
     "EXP": 10,
     "MAS": 13,
     "genre": 2,
+    "release": 15,
     "newV": 0
   },
   "アイロニック": {
@@ -9086,6 +10213,7 @@
     "EXP": 9.5,
     "MAS": 13.1,
     "genre": 2,
+    "release": 15,
     "newV": 0
   },
   "孤独毒毒": {
@@ -9094,6 +10222,7 @@
     "EXP": 9,
     "MAS": 12.8,
     "genre": 2,
+    "release": 15,
     "newV": 0
   },
   "スティールユー": {
@@ -9102,6 +10231,7 @@
     "EXP": 9.5,
     "MAS": 12.8,
     "genre": 2,
+    "release": 15,
     "newV": 0
   },
   "マチガイサガシ": {
@@ -9110,6 +10240,7 @@
     "EXP": 9,
     "MAS": 12.7,
     "genre": 2,
+    "release": 15,
     "newV": 0
   },
   "痛快リズムアクション「B.B.K.K.B.K.K.」": {
@@ -9118,6 +10249,7 @@
     "EXP": 10,
     "MAS": 14.2,
     "genre": 7,
+    "release": 15,
     "newV": 0
   },
   "SUPER AMBULANCE": {
@@ -9126,6 +10258,7 @@
     "EXP": 13.5,
     "MAS": 14.5,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "盟月": {
@@ -9134,6 +10267,7 @@
     "EXP": 12.5,
     "MAS": 14.8,
     "genre": 5,
+    "release": 15,
     "newV": 0
   },
   "Bitter Juicy": {
@@ -9142,6 +10276,7 @@
     "EXP": 11.5,
     "MAS": 13.9,
     "genre": 5,
+    "release": 15,
     "newV": 0
   },
   "Disruptor Array": {
@@ -9150,6 +10285,7 @@
     "EXP": 14.4,
     "MAS": 15.1,
     "genre": 5,
+    "release": 15,
     "newV": 0
   },
   "Daphnis": {
@@ -9158,6 +10294,7 @@
     "EXP": 14.4,
     "MAS": 15.4,
     "genre": 5,
+    "release": 15,
     "newV": 0
   },
   "To：Be Continued": {
@@ -9166,6 +10303,7 @@
     "EXP": 14.3,
     "MAS": 15.2,
     "genre": 5,
+    "release": 15,
     "newV": 0
   },
   "アマカミサマ": {
@@ -9174,6 +10312,7 @@
     "EXP": 9.5,
     "MAS": 11.9,
     "genre": 0,
+    "release": 15,
     "newV": 0
   },
   "だじゃれくりえぃしょん": {
@@ -9182,6 +10321,7 @@
     "EXP": 9.5,
     "MAS": 12.3,
     "genre": 0,
+    "release": 15,
     "newV": 0
   },
   "ワールドイズマイン": {
@@ -9190,6 +10330,7 @@
     "EXP": 8.5,
     "MAS": 12,
     "genre": 2,
+    "release": 15,
     "newV": 0
   },
   "フューチャー・イヴ": {
@@ -9198,6 +10339,7 @@
     "EXP": 10.8,
     "MAS": 13.9,
     "genre": 2,
+    "release": 15,
     "newV": 0
   },
   "Magic Rock'n Roll Maker": {
@@ -9206,6 +10348,7 @@
     "EXP": 9,
     "MAS": 12.6,
     "genre": 7,
+    "release": 15,
     "newV": 0
   },
   "FLUFFY FLASH": {
@@ -9214,6 +10357,7 @@
     "EXP": 12.1,
     "MAS": 14.7,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "Alexandrite": {
@@ -9222,6 +10366,7 @@
     "EXP": 13.4,
     "MAS": 14.4,
     "genre": 6,
+    "release": 15,
     "newV": 0
   },
   "PRAGMATISM -RESURRECTION-": {
@@ -9230,6 +10375,7 @@
     "EXP": 11.9,
     "MAS": 14.3,
     "genre": 6,
+    "release": 15,
     "newV": 0
   },
   "Alice's Suitcase": {
@@ -9238,6 +10384,7 @@
     "EXP": 9.5,
     "MAS": 13.3,
     "genre": 6,
+    "release": 15,
     "newV": 0
   },
   "迷える音色は恋の唄": {
@@ -9246,6 +10393,7 @@
     "EXP": 10.3,
     "MAS": 13.9,
     "genre": 6,
+    "release": 15,
     "newV": 0
   },
   "Sheriruth": {
@@ -9254,6 +10402,7 @@
     "EXP": 12,
     "MAS": 14.8,
     "genre": 6,
+    "release": 15,
     "newV": 0
   },
   "STARRED HEART": {
@@ -9262,6 +10411,7 @@
     "EXP": 8,
     "MAS": 12.4,
     "genre": 9,
+    "release": 16,
     "newV": 0
   },
   "幻想即興曲": {
@@ -9270,6 +10420,7 @@
     "EXP": 12.4,
     "MAS": 14.9,
     "genre": 6,
+    "release": 15,
     "newV": 0
   },
   "月の光": {
@@ -9278,6 +10429,7 @@
     "EXP": 10.5,
     "MAS": 14.7,
     "genre": 6,
+    "release": 15,
     "newV": 0
   },
   "「四季」より「冬」": {
@@ -9286,6 +10438,7 @@
     "EXP": 12.4,
     "MAS": 14.4,
     "genre": 6,
+    "release": 15,
     "newV": 0
   },
   "Moon of Noon": {
@@ -9294,6 +10447,7 @@
     "EXP": 12,
     "MAS": 14.4,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "4月1日でございました": {
@@ -9302,6 +10456,7 @@
     "EXP": 11.4,
     "MAS": 14.7,
     "genre": 5,
+    "release": 15,
     "newV": 0
   },
   "五等分のカタチ": {
@@ -9310,6 +10465,7 @@
     "EXP": 9,
     "MAS": 11.3,
     "genre": 0,
+    "release": 15,
     "newV": 0
   },
   "魔法少女とチョコレゐト": {
@@ -9318,6 +10474,7 @@
     "EXP": 8.5,
     "MAS": 13,
     "genre": 2,
+    "release": 15,
     "newV": 0
   },
   "少女レイ": {
@@ -9326,6 +10483,7 @@
     "EXP": 9,
     "MAS": 12.3,
     "genre": 2,
+    "release": 15,
     "newV": 0
   },
   "超常マイマイン": {
@@ -9334,6 +10492,7 @@
     "EXP": 10,
     "MAS": 12,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "VIIIbit Explorer": {
@@ -9342,6 +10501,7 @@
     "EXP": 12.2,
     "MAS": 14.3,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "MAXRAGE": {
@@ -9350,6 +10510,7 @@
     "EXP": 12,
     "MAS": 14.3,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "ぱくぱく☆がーる": {
@@ -9358,6 +10519,7 @@
     "EXP": 9.5,
     "MAS": 12.2,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "Resolution": {
@@ -9366,6 +10528,7 @@
     "EXP": 10.9,
     "MAS": 13.9,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "ヒストリー×ブレイカー": {
@@ -9374,6 +10537,7 @@
     "EXP": 9.5,
     "MAS": 13,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "Ruler Count, Zero": {
@@ -9382,6 +10546,7 @@
     "EXP": 10.5,
     "MAS": 13.4,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "絆はずっとGrowing Up!!!": {
@@ -9390,6 +10555,7 @@
     "EXP": 9,
     "MAS": 12.4,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "アマツカミ": {
@@ -9398,6 +10564,7 @@
     "EXP": 11,
     "MAS": 14.2,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "No Limit RED Force": {
@@ -9406,6 +10573,7 @@
     "EXP": 8.5,
     "MAS": 13,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "進め！マイウェイ！": {
@@ -9414,6 +10582,7 @@
     "EXP": 9,
     "MAS": 12,
     "genre": 9,
+    "release": 15,
     "newV": 0
   },
   "Burn My Soul": {
@@ -9422,6 +10591,7 @@
     "EXP": 9,
     "MAS": 12.8,
     "genre": 0,
+    "release": 15,
     "newV": 0
   },
   "Let you DIVE!": {
@@ -9430,6 +10600,7 @@
     "EXP": 9,
     "MAS": 12,
     "genre": 6,
+    "release": 15,
     "newV": 0
   },
   "Knight Rider": {
@@ -9438,6 +10609,7 @@
     "EXP": 12.8,
     "MAS": 14.2,
     "genre": 6,
+    "release": 15,
     "newV": 0
   },
   "ADAM": {
@@ -9446,6 +10618,7 @@
     "EXP": 11.4,
     "MAS": 14.1,
     "genre": 6,
+    "release": 15,
     "newV": 0
   },
   "Exitium": {
@@ -9454,6 +10627,7 @@
     "EXP": 13.4,
     "MAS": 14.8,
     "genre": 6,
+    "release": 15,
     "newV": 0
   },
   "eden": {
@@ -9462,6 +10636,7 @@
     "EXP": 13.4,
     "MAS": 14.8,
     "genre": 6,
+    "release": 15,
     "newV": 0
   },
   "青春コンプレックス": {
@@ -9470,6 +10645,7 @@
     "EXP": 9,
     "MAS": 12.6,
     "genre": 0,
+    "release": 16,
     "newV": 0
   },
   "ギターと孤独と蒼い惑星": {
@@ -9478,6 +10654,7 @@
     "EXP": 9.5,
     "MAS": 12.4,
     "genre": 0,
+    "release": 16,
     "newV": 0
   },
   "INTERNET OVERDOSE": {
@@ -9486,6 +10663,7 @@
     "EXP": 8.5,
     "MAS": 13,
     "genre": 0,
+    "release": 16,
     "newV": 0
   },
   "新時代（ウタfrom ONE PIECE FILM RED）": {
@@ -9494,6 +10672,7 @@
     "EXP": 9,
     "MAS": 12.2,
     "genre": 0,
+    "release": 16,
     "newV": 0
   },
   "祝福": {
@@ -9502,6 +10681,7 @@
     "EXP": 9,
     "MAS": 12.1,
     "genre": 0,
+    "release": 16,
     "newV": 0
   },
   "刃渡り2億センチ(TV edit)": {
@@ -9510,6 +10690,7 @@
     "EXP": 12,
     "MAS": 14.5,
     "genre": 0,
+    "release": 16,
     "newV": 0
   },
   "おとせサンダー": {
@@ -9518,6 +10699,7 @@
     "EXP": 9.5,
     "MAS": 11.9,
     "genre": 0,
+    "release": 16,
     "newV": 0
   },
   "カレシのジュード": {
@@ -9526,6 +10708,7 @@
     "EXP": 9.5,
     "MAS": 12.9,
     "genre": 2,
+    "release": 16,
     "newV": 0
   },
   "サラマンダー": {
@@ -9534,6 +10717,7 @@
     "EXP": 9,
     "MAS": 12,
     "genre": 2,
+    "release": 16,
     "newV": 0
   },
   "酔いどれ知らず": {
@@ -9542,6 +10726,7 @@
     "EXP": 10.1,
     "MAS": 13.7,
     "genre": 2,
+    "release": 16,
     "newV": 0
   },
   "もぺもぺ": {
@@ -9550,6 +10735,7 @@
     "EXP": 12.5,
     "MAS": 14.2,
     "genre": 6,
+    "release": 16,
     "newV": 0
   },
   "neu": {
@@ -9558,6 +10744,7 @@
     "EXP": 13.8,
     "MAS": 14.8,
     "genre": 6,
+    "release": 16,
     "newV": 0
   },
   "雷切-RAIKIRI-": {
@@ -9566,6 +10753,7 @@
     "EXP": 12.5,
     "MAS": 14.7,
     "genre": 9,
+    "release": 16,
     "newV": 0
   },
   "LAMIA": {
@@ -9574,6 +10762,7 @@
     "EXP": 14.1,
     "MAS": 15,
     "genre": 9,
+    "release": 16,
     "newV": 0
   },
   "オンソクデイズ!!": {
@@ -9582,6 +10771,7 @@
     "EXP": 12.6,
     "MAS": 14.7,
     "genre": 9,
+    "release": 16,
     "newV": 0
   },
   "ウルガレオン": {
@@ -9590,6 +10780,7 @@
     "EXP": 13.3,
     "MAS": 14.6,
     "genre": 5,
+    "release": 16,
     "newV": 0
   },
   "やめらんないな!": {
@@ -9598,6 +10789,7 @@
     "EXP": 9,
     "MAS": 12.2,
     "genre": 5,
+    "release": 16,
     "newV": 0
   },
   "Dive a Wave": {
@@ -9606,6 +10798,7 @@
     "EXP": 9.5,
     "MAS": 12.9,
     "genre": 5,
+    "release": 16,
     "newV": 0
   },
   "ASH": {
@@ -9614,6 +10807,7 @@
     "EXP": 10,
     "MAS": 14,
     "genre": 5,
+    "release": 16,
     "newV": 0
   },
   "Makear": {
@@ -9622,6 +10816,7 @@
     "EXP": 14,
     "MAS": 15.3,
     "genre": 5,
+    "release": 16,
     "newV": 0
   },
   "プライマリー進化論": {
@@ -9630,6 +10825,7 @@
     "EXP": 9,
     "MAS": 12.6,
     "genre": 7,
+    "release": 16,
     "newV": 0
   },
   "フリーフォール": {
@@ -9638,6 +10834,7 @@
     "EXP": 11.1,
     "MAS": 14,
     "genre": 6,
+    "release": 16,
     "newV": 0
   },
   "Invisible Frenzy": {
@@ -9646,6 +10843,7 @@
     "EXP": 13.3,
     "MAS": 15,
     "genre": 6,
+    "release": 16,
     "newV": 0
   },
   "Quon": {
@@ -9654,6 +10852,7 @@
     "EXP": 11.3,
     "MAS": 13.8,
     "genre": 6,
+    "release": 16,
     "newV": 0
   },
   "幻想症候群": {
@@ -9662,6 +10861,7 @@
     "EXP": 9,
     "MAS": 11.8,
     "genre": 3,
+    "release": 16,
     "newV": 0
   },
   "夜のサーカス": {
@@ -9670,6 +10870,7 @@
     "EXP": 9.5,
     "MAS": 13.5,
     "genre": 3,
+    "release": 16,
     "newV": 0
   },
   "Pris-Magic!": {
@@ -9678,6 +10879,7 @@
     "EXP": 8.5,
     "MAS": 12.6,
     "genre": 0,
+    "release": 16,
     "newV": 0
   },
   "放課後マーメイド": {
@@ -9686,6 +10888,7 @@
     "EXP": 9,
     "MAS": 12.1,
     "genre": 0,
+    "release": 16,
     "newV": 0
   },
   "Snow Colored Score": {
@@ -9695,6 +10898,7 @@
     "MAS": 11.8,
     "ULT": 14.4,
     "genre": 7,
+    "release": 16,
     "newV": 0
   },
   "LiftOff": {
@@ -9703,6 +10907,7 @@
     "EXP": 12.3,
     "MAS": 14.6,
     "genre": 9,
+    "release": 16,
     "newV": 0
   },
   "独りんぼエンヴィー": {
@@ -9711,6 +10916,7 @@
     "EXP": 8,
     "MAS": 11.4,
     "genre": 2,
+    "release": 16,
     "newV": 0
   },
   "Shine In The Sky☆": {
@@ -9719,6 +10925,7 @@
     "EXP": 8.5,
     "MAS": 12.2,
     "genre": 0,
+    "release": 16,
     "newV": 0
   },
   "よりみちリトルスター": {
@@ -9727,6 +10934,7 @@
     "EXP": 9,
     "MAS": 12.9,
     "genre": 0,
+    "release": 16,
     "newV": 0
   },
   "Hydra": {
@@ -9735,6 +10943,7 @@
     "EXP": 11.5,
     "MAS": 14.4,
     "genre": 6,
+    "release": 16,
     "newV": 0
   },
   "Survive": {
@@ -9743,6 +10952,7 @@
     "EXP": 11.2,
     "MAS": 13.8,
     "genre": 6,
+    "release": 16,
     "newV": 0
   },
   "シンデレラディスコ": {
@@ -9751,6 +10961,7 @@
     "EXP": 8,
     "MAS": 12.3,
     "genre": 9,
+    "release": 16,
     "newV": 0
   },
   "うたかたのせかいで": {
@@ -9759,6 +10970,7 @@
     "EXP": 13.4,
     "MAS": 14.7,
     "genre": 5,
+    "release": 16,
     "newV": 0
   },
   "とあちゃんのおもちゃ箱": {
@@ -9767,6 +10979,7 @@
     "EXP": 12,
     "MAS": 14.8,
     "genre": 5,
+    "release": 16,
     "newV": 0
   },
   "白庭": {
@@ -9775,6 +10988,7 @@
     "EXP": 12.2,
     "MAS": 14.3,
     "genre": 5,
+    "release": 16,
     "newV": 0
   },
   "REL0VE REL1VE": {
@@ -9783,6 +10997,7 @@
     "EXP": 12.5,
     "MAS": 13.9,
     "genre": 5,
+    "release": 16,
     "newV": 0
   },
   "deadeye": {
@@ -9791,6 +11006,7 @@
     "EXP": 12.8,
     "MAS": 14.6,
     "genre": 5,
+    "release": 16,
     "newV": 0
   },
   "Aiolos": {
@@ -9799,6 +11015,7 @@
     "EXP": 13.6,
     "MAS": 14.8,
     "genre": 9,
+    "release": 16,
     "newV": 0
   },
   "花となれ": {
@@ -9807,6 +11024,7 @@
     "EXP": 9,
     "MAS": 11.9,
     "genre": 2,
+    "release": 16,
     "newV": 0
   },
   "カノン": {
@@ -9815,6 +11033,7 @@
     "EXP": 9,
     "MAS": 12.8,
     "genre": 2,
+    "release": 16,
     "newV": 0
   },
   "異星にいこうね": {
@@ -9823,6 +11042,7 @@
     "EXP": 11,
     "MAS": 13.2,
     "genre": 2,
+    "release": 16,
     "newV": 0
   },
   "悪魔の踊り方": {
@@ -9831,6 +11051,7 @@
     "EXP": 8,
     "MAS": 12.6,
     "genre": 2,
+    "release": 16,
     "newV": 0
   },
   "ド屑": {
@@ -9839,6 +11060,7 @@
     "EXP": 10.1,
     "MAS": 13,
     "genre": 2,
+    "release": 16,
     "newV": 0
   },
   "夏色花火": {
@@ -9847,6 +11069,7 @@
     "EXP": 8.5,
     "MAS": 11.3,
     "genre": 9,
+    "release": 16,
     "newV": 0
   },
   "夢と幻想の終点にて": {
@@ -9855,6 +11078,7 @@
     "EXP": 11.4,
     "MAS": 14.1,
     "genre": 5,
+    "release": 16,
     "newV": 0
   },
   "Superbia": {
@@ -9863,6 +11087,7 @@
     "EXP": 13.5,
     "MAS": 14.8,
     "genre": 5,
+    "release": 16,
     "newV": 0
   },
   "空間創造理論": {
@@ -9871,6 +11096,7 @@
     "EXP": 12.3,
     "MAS": 14.5,
     "genre": 5,
+    "release": 16,
     "newV": 0
   },
   "βlαnoir": {
@@ -9879,6 +11105,7 @@
     "EXP": 13.8,
     "MAS": 15.2,
     "genre": 5,
+    "release": 16,
     "newV": 0
   },
   "リハーサルタイム": {
@@ -9887,6 +11114,7 @@
     "EXP": 8.5,
     "MAS": 12.7,
     "genre": 7,
+    "release": 16,
     "newV": 0
   },
   "Cult future": {
@@ -9895,6 +11123,7 @@
     "EXP": 12.5,
     "MAS": 14.8,
     "genre": 9,
+    "release": 16,
     "newV": 0
   },
   "Night Spider": {
@@ -9903,6 +11132,7 @@
     "EXP": 9,
     "MAS": 13.1,
     "genre": 0,
+    "release": 16,
     "newV": 0
   },
   "#あくあ色ぱれっと": {
@@ -9911,6 +11141,7 @@
     "EXP": 9,
     "MAS": 11.8,
     "genre": 0,
+    "release": 16,
     "newV": 0
   },
   "いつかオトナになれるといいね。": {
@@ -9919,6 +11150,7 @@
     "EXP": 9.5,
     "MAS": 12.8,
     "genre": 2,
+    "release": 16,
     "newV": 0
   },
   "story": {
@@ -9927,6 +11159,7 @@
     "EXP": 10.3,
     "MAS": 13.7,
     "genre": 0,
+    "release": 16,
     "newV": 0
   },
   "ばかみたい【Taxi Driver Edition】": {
@@ -9935,6 +11168,7 @@
     "EXP": 8,
     "MAS": 13,
     "genre": 6,
+    "release": 16,
     "newV": 0
   },
   "セガサターン起動音[H.][Remix]": {
@@ -9943,6 +11177,7 @@
     "EXP": 10.2,
     "MAS": 13.9,
     "genre": 6,
+    "release": 16,
     "newV": 0
   },
   "スン(マイル)フラワー～Sun(Mile)Flower": {
@@ -9951,6 +11186,7 @@
     "EXP": 9,
     "MAS": 12.5,
     "genre": 9,
+    "release": 16,
     "newV": 0
   },
   "あなたは世界の終わりにずんだを食べるのだ": {
@@ -9959,6 +11195,7 @@
     "EXP": 7.5,
     "MAS": 12.7,
     "genre": 2,
+    "release": 16,
     "newV": 0
   },
   "ちょっとあざとい": {
@@ -9967,6 +11204,7 @@
     "EXP": 8.5,
     "MAS": 12.3,
     "genre": 2,
+    "release": 16,
     "newV": 0
   },
   "snooze": {
@@ -9975,6 +11213,7 @@
     "EXP": 10.1,
     "MAS": 13.9,
     "genre": 2,
+    "release": 16,
     "newV": 0
   },
   "ONE SAME GOAL": {
@@ -9983,6 +11222,7 @@
     "EXP": 10,
     "MAS": 13.7,
     "genre": 7,
+    "release": 16,
     "newV": 0
   },
   "Vibes 2k20": {
@@ -9991,6 +11231,7 @@
     "EXP": 11.8,
     "MAS": 14.4,
     "genre": 9,
+    "release": 16,
     "newV": 0
   },
   "《真紅》 ～ Pavane Pour La Flamme": {
@@ -9999,6 +11240,7 @@
     "EXP": 11,
     "MAS": 14.1,
     "genre": 5,
+    "release": 16,
     "newV": 0
   },
   "《楽土》 ～ One and Only One": {
@@ -10007,6 +11249,7 @@
     "EXP": 11.1,
     "MAS": 13.6,
     "genre": 5,
+    "release": 16,
     "newV": 0
   },
   "《散華》 ～ EMBARK": {
@@ -10015,6 +11258,7 @@
     "EXP": 10.9,
     "MAS": 13.4,
     "genre": 5,
+    "release": 16,
     "newV": 0
   },
   "《慈雨》 ～ La Symphonie de Salacia: Agony Movement": {
@@ -10023,6 +11267,7 @@
     "EXP": 11.7,
     "MAS": 14,
     "genre": 5,
+    "release": 16,
     "newV": 0
   },
   "《創造》 ～ Cries, beyond The End": {
@@ -10031,6 +11276,7 @@
     "EXP": 13.7,
     "MAS": 14.9,
     "genre": 5,
+    "release": 16,
     "newV": 0
   },
   "反撃! 突撃! Back To Back!": {
@@ -10039,6 +11285,7 @@
     "EXP": 8.5,
     "MAS": 13,
     "genre": 9,
+    "release": 16,
     "newV": 0
   },
   "Sad Creature": {
@@ -10047,6 +11294,7 @@
     "EXP": 9.5,
     "MAS": 12.9,
     "genre": 0,
+    "release": 16,
     "newV": 0
   },
   "Goodbye Innocence": {
@@ -10055,6 +11303,7 @@
     "EXP": 10,
     "MAS": 12.7,
     "genre": 0,
+    "release": 16,
     "newV": 0
   },
   "Λlteration": {
@@ -10063,6 +11312,7 @@
     "EXP": 10.1,
     "MAS": 14.3,
     "genre": 7,
+    "release": 16,
     "newV": 0
   },
   "Regulus": {
@@ -10071,6 +11321,7 @@
     "EXP": 11.9,
     "MAS": 14.4,
     "genre": 9,
+    "release": 16,
     "newV": 0
   },
   "カリスマ煉獄天神": {
@@ -10079,6 +11330,7 @@
     "EXP": 9,
     "MAS": 12.6,
     "genre": 3,
+    "release": 16,
     "newV": 0
   },
   "シアワセうさぎ": {
@@ -10087,6 +11339,7 @@
     "EXP": 9,
     "MAS": 12.4,
     "genre": 3,
+    "release": 16,
     "newV": 0
   },
   "Chaotic Ørder": {
@@ -10095,6 +11348,7 @@
     "EXP": 14.3,
     "MAS": 15.4,
     "genre": 5,
+    "release": 16,
     "newV": 0
   },
   "ぽかぽか温泉音頭": {
@@ -10103,6 +11357,7 @@
     "EXP": 9,
     "MAS": 12.1,
     "genre": 9,
+    "release": 16,
     "newV": 0
   },
   "sølips": {
@@ -10111,6 +11366,7 @@
     "EXP": 13.6,
     "MAS": 15,
     "genre": 9,
+    "release": 16,
     "newV": 0
   },
   "茉子の日常": {
@@ -10119,6 +11375,7 @@
     "EXP": 8.5,
     "MAS": 12,
     "genre": 0,
+    "release": 16,
     "newV": 0
   },
   "キズナヒトツ": {
@@ -10127,6 +11384,7 @@
     "EXP": 8,
     "MAS": 10.7,
     "genre": 0,
+    "release": 16,
     "newV": 0
   },
   "GEOMETRIC DANCE": {
@@ -10135,6 +11393,7 @@
     "EXP": 12.4,
     "MAS": 14.6,
     "genre": 9,
+    "release": 16,
     "newV": 0
   },
   "Love Cheat!": {
@@ -10143,6 +11402,7 @@
     "EXP": 9.5,
     "MAS": 13.6,
     "genre": 0,
+    "release": 16,
     "newV": 0
   },
   "ドーナドーナのうた": {
@@ -10151,6 +11411,7 @@
     "EXP": 8.5,
     "MAS": 12.3,
     "genre": 0,
+    "release": 16,
     "newV": 0
   },
   "未来への咆哮": {
@@ -10159,6 +11420,7 @@
     "EXP": 8,
     "MAS": 11.9,
     "genre": 0,
+    "release": 16,
     "newV": 0
   },
   "Singularity": {
@@ -10167,6 +11429,7 @@
     "EXP": 13.7,
     "MAS": 14.9,
     "genre": 9,
+    "release": 16,
     "newV": 0
   },
   "ワンダーシャッフェンの法則": {
@@ -10175,6 +11438,7 @@
     "EXP": 10,
     "MAS": 14,
     "genre": 9,
+    "release": 16,
     "newV": 0
   },
   "Paradisoda": {
@@ -10183,6 +11447,7 @@
     "EXP": 9,
     "MAS": 12.7,
     "genre": 9,
+    "release": 16,
     "newV": 0
   },
   "Yorugao": {
@@ -10191,6 +11456,7 @@
     "EXP": 12.3,
     "MAS": 14.7,
     "genre": 9,
+    "release": 16,
     "newV": 0
   },
   "ハイファイ☆デイズ": {
@@ -10199,6 +11465,7 @@
     "EXP": 9.5,
     "MAS": 12.7,
     "genre": 0,
+    "release": 16,
     "newV": 0
   },
   "ALIVE": {
@@ -10207,6 +11474,7 @@
     "EXP": 9,
     "MAS": 12.6,
     "genre": 0,
+    "release": 17,
     "newV": 0
   },
   "可愛くてごめん": {
@@ -10215,6 +11483,7 @@
     "EXP": 9,
     "MAS": 11.5,
     "genre": 0,
+    "release": 17,
     "newV": 0
   },
   "トウキョウ・シャンディ・ランデヴ feat. 花譜, ツミキ": {
@@ -10223,6 +11492,7 @@
     "EXP": 10,
     "MAS": 13.3,
     "genre": 0,
+    "release": 17,
     "newV": 0
   },
   "マツケンサンバⅡ": {
@@ -10231,6 +11501,7 @@
     "EXP": 9.5,
     "MAS": 12.7,
     "genre": 0,
+    "release": 17,
     "newV": 0
   },
   "アイドル": {
@@ -10239,6 +11510,7 @@
     "EXP": 9.5,
     "MAS": 12.7,
     "genre": 0,
+    "release": 17,
     "newV": 0
   },
   "STORM": {
@@ -10247,6 +11519,7 @@
     "EXP": 9,
     "MAS": 12.3,
     "genre": 0,
+    "release": 17,
     "newV": 0
   },
   "さくゆいたいそう": {
@@ -10255,6 +11528,7 @@
     "EXP": 9.5,
     "MAS": 11.7,
     "genre": 0,
+    "release": 17,
     "newV": 0
   },
   "アイデン貞貞メルトダウン": {
@@ -10263,6 +11537,7 @@
     "EXP": 9.5,
     "MAS": 11.9,
     "genre": 0,
+    "release": 17,
     "newV": 0
   },
   "ひめごと＊クライシスターズ": {
@@ -10271,6 +11546,7 @@
     "EXP": 9.5,
     "MAS": 13,
     "genre": 0,
+    "release": 17,
     "newV": 0
   },
   "Stellar Stellar": {
@@ -10279,6 +11555,7 @@
     "EXP": 10.2,
     "MAS": 13.8,
     "genre": 0,
+    "release": 17,
     "newV": 0
   },
   "不可解": {
@@ -10287,6 +11564,7 @@
     "EXP": 9,
     "MAS": 12.7,
     "genre": 0,
+    "release": 17,
     "newV": 0
   },
   "海に化ける": {
@@ -10295,6 +11573,7 @@
     "EXP": 9.5,
     "MAS": 13,
     "genre": 0,
+    "release": 17,
     "newV": 0
   },
   "パラレルサーチライト": {
@@ -10303,6 +11582,7 @@
     "EXP": 9.5,
     "MAS": 13.1,
     "genre": 0,
+    "release": 17,
     "newV": 0
   },
   "INTERNET YAMERO": {
@@ -10311,6 +11591,7 @@
     "EXP": 10.3,
     "MAS": 13.7,
     "genre": 0,
+    "release": 17,
     "newV": 0
   },
   "とまどい→レシピ": {
@@ -10319,6 +11600,7 @@
     "EXP": 8,
     "MAS": 11.9,
     "genre": 0,
+    "release": 17,
     "newV": 0
   },
   "ラブカ？": {
@@ -10327,6 +11609,7 @@
     "EXP": 10.2,
     "MAS": 13.5,
     "genre": 2,
+    "release": 17,
     "newV": 0
   },
   "強風オールバック": {
@@ -10335,6 +11618,7 @@
     "EXP": 8.5,
     "MAS": 12.8,
     "genre": 2,
+    "release": 17,
     "newV": 0
   },
   "星界ちゃんと可不ちゃんのおつかい合騒曲": {
@@ -10343,6 +11627,7 @@
     "EXP": 12,
     "MAS": 14.2,
     "genre": 2,
+    "release": 17,
     "newV": 0
   },
   "リレイアウター": {
@@ -10351,6 +11636,7 @@
     "EXP": 9,
     "MAS": 13.5,
     "genre": 2,
+    "release": 17,
     "newV": 0
   },
   "おどロボ": {
@@ -10359,6 +11645,7 @@
     "EXP": 9,
     "MAS": 12.7,
     "genre": 2,
+    "release": 17,
     "newV": 0
   },
   "Beat Eater": {
@@ -10367,6 +11654,7 @@
     "EXP": 8.5,
     "MAS": 13.2,
     "genre": 2,
+    "release": 17,
     "newV": 0
   },
   "Glory Steady Go!": {
@@ -10375,6 +11663,7 @@
     "EXP": 9,
     "MAS": 12.7,
     "genre": 2,
+    "release": 17,
     "newV": 0
   },
   "ロウワー": {
@@ -10383,6 +11672,7 @@
     "EXP": 10.5,
     "MAS": 13.7,
     "genre": 2,
+    "release": 17,
     "newV": 0
   },
   "てらてら": {
@@ -10391,6 +11681,7 @@
     "EXP": 9,
     "MAS": 12.8,
     "genre": 2,
+    "release": 17,
     "newV": 0
   },
   "天使のクローバー": {
@@ -10399,6 +11690,7 @@
     "EXP": 9,
     "MAS": 12.8,
     "genre": 2,
+    "release": 17,
     "newV": 0
   },
   "イナイイナイ依存症": {
@@ -10407,6 +11699,7 @@
     "EXP": 11.1,
     "MAS": 14.2,
     "genre": 2,
+    "release": 17,
     "newV": 0
   },
   "バグ": {
@@ -10415,6 +11708,7 @@
     "EXP": 10,
     "MAS": 13.6,
     "genre": 2,
+    "release": 17,
     "newV": 0
   },
   "ミラクルペイント": {
@@ -10423,6 +11717,7 @@
     "EXP": 10,
     "MAS": 12.3,
     "genre": 2,
+    "release": 17,
     "newV": 0
   },
   "ブラック★ロックシューター": {
@@ -10431,6 +11726,7 @@
     "EXP": 8.5,
     "MAS": 12,
     "genre": 2,
+    "release": 17,
     "newV": 0
   },
   "アンダーキッズ": {
@@ -10439,6 +11735,7 @@
     "EXP": 9,
     "MAS": 13.5,
     "genre": 2,
+    "release": 17,
     "newV": 0
   },
   "flos": {
@@ -10447,6 +11744,7 @@
     "EXP": 8.5,
     "MAS": 12.1,
     "genre": 2,
+    "release": 17,
     "newV": 0
   },
   "ヒアソビ": {
@@ -10455,6 +11753,7 @@
     "EXP": 10.9,
     "MAS": 13.6,
     "genre": 2,
+    "release": 17,
     "newV": 0
   },
   "インターネットサバイバー": {
@@ -10463,6 +11762,7 @@
     "EXP": 11.2,
     "MAS": 13,
     "genre": 3,
+    "release": 17,
     "newV": 0
   },
   "ユックリ feat.餅千歳": {
@@ -10471,6 +11771,7 @@
     "EXP": 10,
     "MAS": 12.8,
     "genre": 3,
+    "release": 17,
     "newV": 0
   },
   "本物のヒーローとの戦い": {
@@ -10479,6 +11780,7 @@
     "EXP": 11.5,
     "MAS": 14.5,
     "genre": 6,
+    "release": 17,
     "newV": 0
   },
   "華麗なる死闘": {
@@ -10487,6 +11789,7 @@
     "EXP": 11,
     "MAS": 13.6,
     "genre": 6,
+    "release": 17,
     "newV": 0
   },
   "Blow My Mind": {
@@ -10495,6 +11798,7 @@
     "EXP": 11.8,
     "MAS": 14,
     "genre": 6,
+    "release": 17,
     "newV": 0
   },
   "Jakarta PROGRESSION": {
@@ -10503,6 +11807,7 @@
     "EXP": 12.1,
     "MAS": 14.2,
     "genre": 6,
+    "release": 17,
     "newV": 0
   },
   "VALLIS-NERIA": {
@@ -10511,6 +11816,7 @@
     "EXP": 13.5,
     "MAS": 14.7,
     "genre": 6,
+    "release": 17,
     "newV": 0
   },
   "Big Bang": {
@@ -10519,6 +11825,7 @@
     "EXP": 12,
     "MAS": 14.9,
     "genre": 6,
+    "release": 17,
     "newV": 0
   },
   "Spasmodic": {
@@ -10527,6 +11834,7 @@
     "EXP": 12.7,
     "MAS": 14.7,
     "genre": 6,
+    "release": 17,
     "newV": 0
   },
   "ΩΩPARTS": {
@@ -10535,6 +11843,7 @@
     "EXP": 13.6,
     "MAS": 14.9,
     "genre": 6,
+    "release": 17,
     "newV": 0
   },
   "ENERGY SYNERGY MATRIX": {
@@ -10543,6 +11852,7 @@
     "EXP": 11.3,
     "MAS": 14.2,
     "genre": 6,
+    "release": 17,
     "newV": 0
   },
   "New York Back Raise": {
@@ -10551,6 +11861,7 @@
     "EXP": 11.9,
     "MAS": 14.3,
     "genre": 6,
+    "release": 17,
     "newV": 0
   },
   "D-Birth": {
@@ -10559,6 +11870,7 @@
     "EXP": 11.9,
     "MAS": 13.5,
     "genre": 6,
+    "release": 17,
     "newV": 0
   },
   "GIGA BLAST": {
@@ -10567,6 +11879,7 @@
     "EXP": 12.3,
     "MAS": 14.9,
     "genre": 6,
+    "release": 17,
     "newV": 0
   },
   "Longinus": {
@@ -10575,6 +11888,7 @@
     "EXP": 13.7,
     "MAS": 14.9,
     "genre": 6,
+    "release": 17,
     "newV": 0
   },
   "Ωκεανος": {
@@ -10583,6 +11897,7 @@
     "EXP": 12.8,
     "MAS": 14.1,
     "genre": 6,
+    "release": 17,
     "newV": 0
   },
   "Love's Theme of BADASS ～バッド・アス 愛のテーマ～": {
@@ -10591,6 +11906,7 @@
     "EXP": 12.5,
     "MAS": 14.4,
     "genre": 6,
+    "release": 17,
     "newV": 0
   },
   "Burn it All": {
@@ -10599,6 +11915,7 @@
     "EXP": 11.6,
     "MAS": 14.7,
     "genre": 6,
+    "release": 17,
     "newV": 0
   },
   "Stronghold LandEater": {
@@ -10607,6 +11924,7 @@
     "EXP": 11.1,
     "MAS": 13.8,
     "genre": 6,
+    "release": 17,
     "newV": 0
   },
   "MuseDashを作っているPeroPeroGamesさんが倒産しちゃったよ～": {
@@ -10615,6 +11933,7 @@
     "EXP": 12.1,
     "MAS": 14.5,
     "genre": 6,
+    "release": 17,
     "newV": 0
   },
   "Rush B": {
@@ -10623,6 +11942,7 @@
     "EXP": 10.8,
     "MAS": 13.4,
     "genre": 6,
+    "release": 17,
     "newV": 0
   },
   "それはもうらぶちゅ": {
@@ -10631,6 +11951,7 @@
     "EXP": 9.5,
     "MAS": 12.9,
     "genre": 6,
+    "release": 17,
     "newV": 0
   },
   "Cthugha": {
@@ -10639,6 +11960,7 @@
     "EXP": 12.3,
     "MAS": 14.7,
     "genre": 6,
+    "release": 17,
     "newV": 0
   },
   "XING": {
@@ -10647,6 +11969,7 @@
     "EXP": 10.7,
     "MAS": 13.7,
     "genre": 6,
+    "release": 17,
     "newV": 0
   },
   "どこにもいかない": {
@@ -10655,6 +11978,7 @@
     "EXP": 9.5,
     "MAS": 12,
     "genre": 7,
+    "release": 17,
     "newV": 0
   },
   "ラビットランド・メッセンジャー": {
@@ -10663,6 +11987,7 @@
     "EXP": 9,
     "MAS": 13.1,
     "genre": 7,
+    "release": 17,
     "newV": 0
   },
   "ALL I WANNA DO": {
@@ -10671,6 +11996,7 @@
     "EXP": 9.5,
     "MAS": 12.6,
     "genre": 7,
+    "release": 17,
     "newV": 0
   },
   "オン×ステージ！": {
@@ -10679,6 +12005,7 @@
     "EXP": 8.5,
     "MAS": 12.3,
     "genre": 9,
+    "release": 17,
     "newV": 0
   },
   "MarbleBlue.": {
@@ -10687,6 +12014,7 @@
     "EXP": 13.7,
     "MAS": 14.9,
     "genre": 9,
+    "release": 17,
     "newV": 0
   },
   "Sage": {
@@ -10695,6 +12023,7 @@
     "EXP": 13.2,
     "MAS": 14.6,
     "genre": 9,
+    "release": 17,
     "newV": 0
   },
   "Mutation": {
@@ -10703,6 +12032,7 @@
     "EXP": 12.6,
     "MAS": 14.9,
     "genre": 9,
+    "release": 17,
     "newV": 0
   },
   "Adverse Gaff": {
@@ -10711,6 +12041,7 @@
     "EXP": 13.2,
     "MAS": 14.8,
     "genre": 9,
+    "release": 17,
     "newV": 0
   },
   "Catch Me If You Can": {
@@ -10719,6 +12050,7 @@
     "EXP": 10.1,
     "MAS": 13.4,
     "genre": 9,
+    "release": 17,
     "newV": 0
   },
   "四月の雨": {
@@ -10727,6 +12059,7 @@
     "EXP": 11.5,
     "MAS": 13.9,
     "genre": 9,
+    "release": 17,
     "newV": 0
   },
   "少女PastQ": {
@@ -10735,6 +12068,7 @@
     "EXP": 8.5,
     "MAS": 11.5,
     "genre": 5,
+    "release": 17,
     "newV": 0
   },
   "君と夏色っ！～わんダフルバケーション～": {
@@ -10743,6 +12077,7 @@
     "EXP": 10,
     "MAS": 12.9,
     "genre": 5,
+    "release": 17,
     "newV": 0
   },
   "MyPaceInvention": {
@@ -10751,6 +12086,7 @@
     "EXP": 9.5,
     "MAS": 12.2,
     "genre": 5,
+    "release": 17,
     "newV": 0
   },
   "colorful": {
@@ -10759,6 +12095,7 @@
     "EXP": 10.1,
     "MAS": 13,
     "genre": 5,
+    "release": 17,
     "newV": 0
   },
   "ZegalltA": {
@@ -10767,6 +12104,7 @@
     "EXP": 13.1,
     "MAS": 15,
     "genre": 5,
+    "release": 17,
     "newV": 0
   },
   "ウニの歌": {
@@ -10775,6 +12113,7 @@
     "EXP": 11.1,
     "MAS": 14.6,
     "genre": 5,
+    "release": 17,
     "newV": 0
   },
   "驚異の魔法": {
@@ -10783,6 +12122,7 @@
     "EXP": 11.3,
     "MAS": 13.8,
     "genre": 5,
+    "release": 17,
     "newV": 0
   },
   "liberate": {
@@ -10791,6 +12131,7 @@
     "EXP": 10.3,
     "MAS": 13.4,
     "genre": 5,
+    "release": 17,
     "newV": 0
   },
   "lucky omen": {
@@ -10799,6 +12140,7 @@
     "EXP": 10.4,
     "MAS": 13.4,
     "genre": 5,
+    "release": 17,
     "newV": 0
   },
   "Sunlight Starlight": {
@@ -10807,6 +12149,7 @@
     "EXP": 10.7,
     "MAS": 14.1,
     "genre": 5,
+    "release": 17,
     "newV": 0
   },
   "ワーカーホリック": {
@@ -10815,6 +12158,7 @@
     "EXP": 9.5,
     "MAS": 13.1,
     "genre": 5,
+    "release": 17,
     "newV": 0
   },
   "Overturn": {
@@ -10823,6 +12167,7 @@
     "EXP": 11,
     "MAS": 14.3,
     "genre": 5,
+    "release": 17,
     "newV": 0
   },
   "First Light": {
@@ -10831,6 +12176,7 @@
     "EXP": 10.3,
     "MAS": 13.7,
     "genre": 5,
+    "release": 17,
     "newV": 0
   },
   "ラストピースに祝福と栄光を": {
@@ -10839,6 +12185,7 @@
     "EXP": 14.1,
     "MAS": 15.3,
     "genre": 5,
+    "release": 17,
     "newV": 0
   },
   "crazy (about you)": {
@@ -10847,6 +12194,7 @@
     "EXP": 11.7,
     "MAS": 14.1,
     "genre": 5,
+    "release": 17,
     "newV": 0
   },
   "Dèfandour": {
@@ -10855,6 +12203,7 @@
     "EXP": 12.1,
     "MAS": 14.4,
     "genre": 5,
+    "release": 17,
     "newV": 0
   },
   "Ultimate Force": {
@@ -10863,6 +12212,7 @@
     "EXP": 14.5,
     "MAS": 15.4,
     "genre": 5,
+    "release": 17,
     "newV": 0
   },
   "SILENT BLUE": {
@@ -10871,6 +12221,7 @@
     "EXP": 13.3,
     "MAS": 14.2,
     "genre": 9,
+    "release": 17,
     "newV": 0
   },
   "Beautiful Future": {
@@ -10879,6 +12230,7 @@
     "EXP": 12,
     "MAS": 13.7,
     "genre": 9,
+    "release": 17,
     "newV": 0
   },
   "Alcyone": {
@@ -10887,6 +12239,7 @@
     "EXP": 11.9,
     "MAS": 14.5,
     "genre": 9,
+    "release": 17,
     "newV": 0
   },
   "Jump!! Jump!! Jump!!": {
@@ -10895,6 +12248,7 @@
     "EXP": 9,
     "MAS": 12.7,
     "genre": 9,
+    "release": 17,
     "newV": 0
   },
   "Prominence": {
@@ -10903,6 +12257,7 @@
     "EXP": 11.2,
     "MAS": 14.4,
     "genre": 9,
+    "release": 17,
     "newV": 0
   },
   "Stargazing Dreamer": {
@@ -10911,6 +12266,7 @@
     "EXP": 12.3,
     "MAS": 14.7,
     "genre": 9,
+    "release": 17,
     "newV": 0
   },
   "勇者": {
@@ -10919,6 +12275,7 @@
     "EXP": 8.5,
     "MAS": 13.1,
     "genre": 0,
+    "release": 18,
     "newV": 1
   },
   "カオスが極まる": {
@@ -10927,6 +12284,7 @@
     "EXP": 10,
     "MAS": 13,
     "genre": 0,
+    "release": 18,
     "newV": 1
   },
   "唱": {
@@ -10935,6 +12293,7 @@
     "EXP": 8,
     "MAS": 12.7,
     "genre": 0,
+    "release": 18,
     "newV": 1
   },
   "美少女無罪♡パイレーツ": {
@@ -10943,6 +12302,7 @@
     "EXP": 9.5,
     "MAS": 12.3,
     "genre": 0,
+    "release": 18,
     "newV": 1
   },
   "ÅMARA (大未来電脳)": {
@@ -10951,6 +12311,7 @@
     "EXP": 13.3,
     "MAS": 14.7,
     "genre": 2,
+    "release": 18,
     "newV": 1
   },
   "デビルじゃないもん": {
@@ -10959,6 +12320,7 @@
     "EXP": 9.5,
     "MAS": 12.4,
     "genre": 2,
+    "release": 18,
     "newV": 1
   },
   "寝起きヤシの木": {
@@ -10967,6 +12329,7 @@
     "EXP": 9,
     "MAS": 12.8,
     "genre": 2,
+    "release": 18,
     "newV": 1
   },
   "マツヨイナイトバグ": {
@@ -10975,6 +12338,7 @@
     "EXP": 11,
     "MAS": 14.3,
     "genre": 3,
+    "release": 18,
     "newV": 1
   },
   "Rrhar'il": {
@@ -10983,6 +12347,7 @@
     "EXP": 12.3,
     "MAS": 14.9,
     "genre": 6,
+    "release": 18,
     "newV": 1
   },
   "ヒュブリスの頂に聳えるのは": {
@@ -10991,6 +12356,7 @@
     "EXP": 12.5,
     "MAS": 14.7,
     "genre": 6,
+    "release": 18,
     "newV": 1
   },
   "The Greatest Night": {
@@ -10999,6 +12365,7 @@
     "EXP": 10.5,
     "MAS": 12.9,
     "genre": 7,
+    "release": 18,
     "newV": 1
   },
   "夏宵スターマイン": {
@@ -11007,6 +12374,7 @@
     "EXP": 9.5,
     "MAS": 12.5,
     "genre": 9,
+    "release": 18,
     "newV": 1
   },
   "其のエメラルドを見よ": {
@@ -11015,6 +12383,7 @@
     "EXP": 12.1,
     "MAS": 14.8,
     "genre": 9,
+    "release": 18,
     "newV": 1
   },
   "Stardust:RAY": {
@@ -11023,6 +12392,7 @@
     "EXP": 13.5,
     "MAS": 15.2,
     "genre": 9,
+    "release": 18,
     "newV": 1
   },
   "バッドトリッパー": {
@@ -11031,6 +12401,7 @@
     "EXP": 8,
     "MAS": 12,
     "genre": 5,
+    "release": 18,
     "newV": 1
   },
   "幻想ロードオブキング": {
@@ -11039,6 +12410,7 @@
     "EXP": 11.9,
     "MAS": 14.8,
     "genre": 5,
+    "release": 18,
     "newV": 1
   },
   "イーヴィルガール": {
@@ -11047,6 +12419,7 @@
     "EXP": 11.4,
     "MAS": 14,
     "genre": 5,
+    "release": 18,
     "newV": 1
   },
   "わたしはオッセルヴァトリーチェ！": {
@@ -11055,6 +12428,7 @@
     "EXP": 10.1,
     "MAS": 13.4,
     "genre": 5,
+    "release": 18,
     "newV": 1
   },
   "コメクエスト": {
@@ -11063,6 +12437,7 @@
     "EXP": 10.6,
     "MAS": 13.5,
     "genre": 5,
+    "release": 18,
     "newV": 1
   },
   "リ・フィクション・O": {
@@ -11071,6 +12446,7 @@
     "EXP": 13.6,
     "MAS": 15.1,
     "genre": 5,
+    "release": 18,
     "newV": 1
   },
   "1000年生きてる": {
@@ -11079,6 +12455,7 @@
     "EXP": 9.5,
     "MAS": 12.5,
     "genre": 2,
+    "release": 18,
     "newV": 1
   },
   "熱異常": {
@@ -11087,6 +12464,7 @@
     "EXP": 11.8,
     "MAS": 14.2,
     "genre": 2,
+    "release": 18,
     "newV": 1
   },
   "アプリコット": {
@@ -11095,6 +12473,7 @@
     "EXP": 10,
     "MAS": 13.8,
     "genre": 2,
+    "release": 18,
     "newV": 1
   },
   "おくすり飲んで寝よう": {
@@ -11103,6 +12482,7 @@
     "EXP": 9,
     "MAS": 12.6,
     "genre": 2,
+    "release": 18,
     "newV": 1
   },
   "匿名M": {
@@ -11111,6 +12491,7 @@
     "EXP": 8.5,
     "MAS": 13.4,
     "genre": 2,
+    "release": 18,
     "newV": 1
   },
   "チューリングの跡": {
@@ -11119,6 +12500,7 @@
     "EXP": 14,
     "MAS": 14.9,
     "genre": 9,
+    "release": 18,
     "newV": 1
   },
   "DRE4M1N9": {
@@ -11127,6 +12509,7 @@
     "EXP": 11.7,
     "MAS": 13.7,
     "genre": 5,
+    "release": 18,
     "newV": 1
   },
   "Overhea[r]t": {
@@ -11135,6 +12518,7 @@
     "EXP": 12.3,
     "MAS": 14.5,
     "genre": 5,
+    "release": 18,
     "newV": 1
   },
   "Malleus Maleficarum": {
@@ -11143,6 +12527,7 @@
     "EXP": 11.8,
     "MAS": 14.7,
     "genre": 5,
+    "release": 18,
     "newV": 1
   },
   "Elusive Enforcer": {
@@ -11151,6 +12536,7 @@
     "EXP": 12.1,
     "MAS": 14.3,
     "genre": 5,
+    "release": 18,
     "newV": 1
   },
   "黎命に殉ず": {
@@ -11159,6 +12545,7 @@
     "EXP": 13.6,
     "MAS": 14.8,
     "genre": 5,
+    "release": 18,
     "newV": 1
   },
   "ReCoda": {
@@ -11167,6 +12554,7 @@
     "EXP": 8.5,
     "MAS": 12.3,
     "genre": 0,
+    "release": 18,
     "newV": 1
   },
   "トゥッティ！": {
@@ -11175,6 +12563,7 @@
     "EXP": 9.5,
     "MAS": 12.8,
     "genre": 0,
+    "release": 18,
     "newV": 1
   },
   "Presence": {
@@ -11183,6 +12572,7 @@
     "EXP": 9,
     "MAS": 12.5,
     "genre": 7,
+    "release": 18,
     "newV": 1
   },
   "NIGHTWAVE FRAGMENTS": {
@@ -11191,6 +12581,7 @@
     "EXP": 12,
     "MAS": 14.2,
     "genre": 6,
+    "release": 18,
     "newV": 1
   },
   "Joe Fight": {
@@ -11199,6 +12590,7 @@
     "EXP": 12.2,
     "MAS": 14.3,
     "genre": 6,
+    "release": 18,
     "newV": 1
   },
   "Poppin' Dream": {
@@ -11207,6 +12599,7 @@
     "EXP": 10.2,
     "MAS": 13.7,
     "genre": 6,
+    "release": 18,
     "newV": 1
   },
   "Make Up Your World feat. キョンシーのCiちゃん & らっぷびと": {
@@ -11215,6 +12608,7 @@
     "EXP": 10.7,
     "MAS": 13.3,
     "genre": 6,
+    "release": 18,
     "newV": 1
   },
   "Latent Kingdom": {
@@ -11223,6 +12617,7 @@
     "EXP": 13.4,
     "MAS": 14.9,
     "genre": 9,
+    "release": 18,
     "newV": 1
   },
   "ハッピータイフーン": {
@@ -11231,6 +12626,7 @@
     "EXP": 9,
     "MAS": 12.4,
     "genre": 0,
+    "release": 18,
     "newV": 1
   },
   "M.L.V.G": {
@@ -11239,6 +12635,7 @@
     "EXP": 11,
     "MAS": 14,
     "genre": 0,
+    "release": 18,
     "newV": 1
   },
   "壊れた人形のマーチ": {
@@ -11247,6 +12644,7 @@
     "EXP": 8.5,
     "MAS": 12.2,
     "genre": 3,
+    "release": 18,
     "newV": 1
   },
   "ヒトリシズカ(Arranged: Iceon)": {
@@ -11255,6 +12653,7 @@
     "EXP": 9,
     "MAS": 11.9,
     "genre": 3,
+    "release": 18,
     "newV": 1
   },
   "Dramatic…?": {
@@ -11263,6 +12662,7 @@
     "EXP": 11.2,
     "MAS": 14.2,
     "genre": 9,
+    "release": 18,
     "newV": 1
   },
   "X.Y.Z.": {
@@ -11271,6 +12671,7 @@
     "EXP": 9.5,
     "MAS": 13,
     "genre": 5,
+    "release": 18,
     "newV": 1
   },
   "優勝Princess♡": {
@@ -11279,6 +12680,7 @@
     "EXP": 9,
     "MAS": 13.3,
     "genre": 5,
+    "release": 18,
     "newV": 1
   },
   "乙女戦士☆あーし。": {
@@ -11287,6 +12689,7 @@
     "EXP": 10,
     "MAS": 13.7,
     "genre": 5,
+    "release": 18,
     "newV": 1
   },
   "おしゃまなプリンセス": {
@@ -11295,6 +12698,7 @@
     "EXP": 11.4,
     "MAS": 14.3,
     "genre": 5,
+    "release": 18,
     "newV": 1
   },
   "ソーシャルワンダーランド": {
@@ -11303,6 +12707,7 @@
     "EXP": 11.2,
     "MAS": 14.5,
     "genre": 5,
+    "release": 18,
     "newV": 1
   },
   "壱雫空": {
@@ -11311,6 +12716,7 @@
     "EXP": 10.8,
     "MAS": 14,
     "genre": 0,
+    "release": 18,
     "newV": 1
   },
   "迷星叫": {
@@ -11319,6 +12725,7 @@
     "EXP": 9.5,
     "MAS": 12.6,
     "genre": 0,
+    "release": 18,
     "newV": 1
   },
   "スコーピオンガールの貴重な捕食シーン": {
@@ -11327,6 +12734,7 @@
     "EXP": 10.3,
     "MAS": 14.1,
     "genre": 2,
+    "release": 18,
     "newV": 1
   },
   "ずんだパーリナイ": {
@@ -11335,6 +12743,7 @@
     "EXP": 8.5,
     "MAS": 13.5,
     "genre": 2,
+    "release": 18,
     "newV": 1
   },
   "Rhythmic Ride": {
@@ -11343,6 +12752,7 @@
     "EXP": 10.1,
     "MAS": 13.8,
     "genre": 7,
+    "release": 18,
     "newV": 1
   },
   "ハートサーモグラフィー": {
@@ -11351,6 +12761,7 @@
     "EXP": 9,
     "MAS": 13,
     "genre": 0,
+    "release": 18,
     "newV": 1
   },
   "モンダイナイトリッパー！": {
@@ -11360,6 +12771,7 @@
     "MAS": 13.1,
     "ULT": 14.2,
     "genre": 0,
+    "release": 18,
     "newV": 1
   },
   "特者生存ワンダラダー!!": {
@@ -11368,6 +12780,7 @@
     "EXP": 10,
     "MAS": 13.2,
     "genre": 0,
+    "release": 18,
     "newV": 1
   },
   "マシンガンポエムドール": {
@@ -11376,6 +12789,7 @@
     "EXP": 14,
     "MAS": 14.9,
     "genre": 2,
+    "release": 18,
     "newV": 1
   },
   "Lovely Lovely Lover": {
@@ -11384,6 +12798,7 @@
     "EXP": 11.5,
     "MAS": 14,
     "genre": 5,
+    "release": 18,
     "newV": 1
   },
   "Fire Engine73": {
@@ -11392,6 +12807,7 @@
     "EXP": 12.4,
     "MAS": 13.8,
     "genre": 5,
+    "release": 18,
     "newV": 1
   },
   "LibrariA": {
@@ -11400,6 +12816,7 @@
     "EXP": 13,
     "MAS": 14.9,
     "genre": 5,
+    "release": 18,
     "newV": 1
   },
   "Tuatha Dé Danann": {
@@ -11408,6 +12825,7 @@
     "EXP": 14.3,
     "MAS": 15.3,
     "genre": 5,
+    "release": 18,
     "newV": 1
   },
   "Death Doll": {
@@ -11416,6 +12834,7 @@
     "EXP": 11,
     "MAS": 14,
     "genre": 9,
+    "release": 18,
     "newV": 1
   },
   "MeteorSnow": {
@@ -11424,6 +12843,7 @@
     "EXP": 13.7,
     "MAS": 15,
     "genre": 9,
+    "release": 18,
     "newV": 1
   },
   "Sleep Walking Orchestra": {
@@ -11432,6 +12852,7 @@
     "EXP": 9,
     "MAS": 11.8,
     "genre": 0,
+    "release": 18,
     "newV": 1
   },
   "自称、音楽愛好家": {
@@ -11440,6 +12861,7 @@
     "EXP": 9.5,
     "MAS": 13,
     "genre": 2,
+    "release": 18,
     "newV": 1
   },
   "What's up? Pop!": {
@@ -11448,6 +12870,7 @@
     "EXP": 14.1,
     "MAS": 15.1,
     "genre": 2,
+    "release": 18,
     "newV": 1
   },
   "まにまに": {
@@ -11456,6 +12879,7 @@
     "EXP": 10.3,
     "MAS": 13.5,
     "genre": 2,
+    "release": 18,
     "newV": 1
   },
   "Acid God": {
@@ -11464,6 +12888,7 @@
     "EXP": 14,
     "MAS": 15.2,
     "genre": 5,
+    "release": 18,
     "newV": 1
   },
   "Forsaken Tale": {
@@ -11472,6 +12897,7 @@
     "EXP": 14.5,
     "MAS": 15.5,
     "genre": 5,
+    "release": 18,
     "newV": 1
   },
   "Here the Our MIRAI!": {
@@ -11480,6 +12906,7 @@
     "EXP": 10.2,
     "MAS": 13.5,
     "genre": 7,
+    "release": 18,
     "newV": 1
   },
   "超熊猫的周遊記(ワンダーパンダートラベラー)": {
@@ -11488,6 +12915,7 @@
     "EXP": 13.1,
     "MAS": 14.6,
     "genre": 9,
+    "release": 18,
     "newV": 1
   },
   "NAGAREBOSHI☆ROCKET": {
@@ -11496,6 +12924,7 @@
     "EXP": 12,
     "MAS": 14.1,
     "genre": 9,
+    "release": 18,
     "newV": 1
   },
   "群青シグナル": {
@@ -11504,6 +12933,7 @@
     "EXP": 10.1,
     "MAS": 13.8,
     "genre": 9,
+    "release": 18,
     "newV": 1
   },
   "Flower": {
@@ -11512,6 +12942,7 @@
     "EXP": 9.5,
     "MAS": 12.6,
     "genre": 9,
+    "release": 18,
     "newV": 1
   }
 }

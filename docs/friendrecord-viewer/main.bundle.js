@@ -54,11 +54,11 @@
       },
       903: e => {
         "use strict";
-        e.exports = JSON.parse('{"main.title":"CHUNITHM Friends Record Viewer","loading.constData":"Used song constant data: {{name}}","loading.error.serviceDown":"CHUNITHM-NET service is currently unavailable.<br/>Please come back later.","loading.error.rejected":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.timeout":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.noopener":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.unknown":"Please <em>screenshot or copy the error message</em> to the author.","header.title.dl":"Save or share B40 as image","header.title.constData":"Change song constant data (Current: {{name}})","header.title.settings":"Open settings","settings.main.title":"Settings","settings.main.reset":"Reset Settings","settings.filter.title":"Filter","settings.filter.const":"By Chart Constant","settings.filter.diff":"By Difficulty","settings.filter.diff.warn":"*Should select at least one","settings.filter.diff.notify":"*Filtering difficulties or hidden songs that are not displayed on CHUNITHM-NET may cause the \\"Best 30\\" data to be inaccurate.","settings.filter.genre":"By Genre","settings.filter.genre.all":"Toggle ALL","settings.data.title":"Game Data","settings.data.constData":"Chart Constant Data to Use","settings.data.constData.newplus":"NEW+","settings.data.constData.sun":"SUN","settings.data.constData.sunplus":"SUN+","settings.data.constData.luminous":"LUMINOUS","settings.data.constData.luminousplus":"Intl. / Japanese Ver. (LUMINOUS PLUS)","settings.data.playcount":"Show Play Count","settings.data.playcount.notify":"*You can click the dark box beside a song to view its play count","settings.data.showScoreDiff":"Show Score Difference <span style=\\"color:var(--theme-text-dim)\\">(since last updated)</span>","settings.data.diffUpdate":"","settings.data.diffUpdate.1d":"Auto-update after 1 day","settings.data.diffUpdate.3d":"Auto-update after 3 days","settings.data.diffUpdate.7d":"Auto-update after 1 week","settings.data.diffUpdate.14d":"Auto-update after 2 weeks","settings.data.diffUpdate.30d":"Auto-update after 1 month","settings.data.diffUpdate.manual":"Disabled","settings.data.diffUpdate.update":"Update Score Diff Basis","settings.data.diffUpdate.reload":"Reload Page to Update","settings.data.diffUpdate.notify":"","settings.data.overpower":"Show Over Power","settings.data.overpower.hide":"Hide (Show Rank)","settings.data.overpower.value":"Show (Over Power Value)","settings.data.overpower.percentage":"Show (Over Power Achievement%)","settings.data.overpower.dgvalue":"Show (Designate Over Power Value)","settings.data.overpower.dgpercentage":"Show (Designate Over Power Achievement%)","settings.data.overpower.notify":"*It will also show unplayed song when toggled to \\"Show Over Power\\".<br/>*Total over power might differ from the official one, if some of the songs are not unlocked yet.","settings.ui.title":"User Interface","settings.ui.locale":"Language","settings.ui.theme":"Theme","player.generic.generatedAt":"Generated At","player.best.playCount":"Play Count","player.best.best30":"Best 30","player.best.maxPossible":"Max Possible","player.recent.best10":"Recent 10","player.recent.history10":"History 10","player.recent.history30":"History 30","record.head.playOrder":"Played Time","record.head.order":"#","record.head.title":"Title","record.head.const":"Const","record.head.overpower":"OP","record.head.overpowerPercent":"OP%","record.head.rank":"Rank","record.head.score":"Score","record.head.scoreDiff":"Score Diff","record.head.rating":"Rating","record.head.ajfc":"AJ","record.head.playcount":"Plays","record.fetch.fetching":"Fetching record for <span style=\\"color:var(--theme-song-{{diff}});\\">{{diffStr}}</span> difficulty...","record.fetch.diff.ult":"ULTIMA","record.fetch.diff.mas":"MASTER","record.fetch.diff.exp":"EXPERT","record.fetch.diff.adv":"ADVANCED","record.fetch.diff.bas":"BASIC","record.fetch.unknown":"Found unknown song(s):\\n\\n{{songs}}\\n\\nPlease contact the author via Email (admin@tsaibee.org).","record.fetch.error":"<span style=\\"color:red;\\">Some error occured when fetching best record!<br/>You probably need to reload the page now.</span>","playcount.fetch.button":"Fetch","playcount.fetch.progress":"Fetching play count... ({{progress}}/{{all}})","playcount.fetch.error":"<span style=\\"color:red;\\">Some error occured when fetching play count!<br/>You probably need to reload the page now.</span>","share.error":"Something went wrong when converting your scores to PNG. Please screenshot the error message to the author.\\n\\n{{error}}"}')
+        e.exports = JSON.parse('{"main.title":"CHUNITHM Friends Record Viewer","loading.constData":"Used song constant data: {{name}}","loading.error.serviceDown":"CHUNITHM-NET service is currently unavailable.<br/>Please come back later.","loading.error.rejected":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.timeout":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.noopener":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.unknown":"Please <em>screenshot or copy the error message</em> to the author.","header.title.dl":"Save or share B40 as image","header.title.constData":"Change song constant data (Current: {{name}})","header.title.settings":"Open settings","settings.main.title":"Settings","settings.main.reset":"Reset Settings","settings.filter.title":"Filter","settings.filter.const":"By Chart Constant","settings.filter.diff":"By Difficulty","settings.filter.diff.warn":"*Should select at least one","settings.filter.diff.notify":"*Filtering difficulties or hidden songs that are not displayed on CHUNITHM-NET may cause the \\"Best 30\\" data to be inaccurate.","settings.filter.genre":"By Genre","settings.filter.genre.all":"Toggle ALL","settings.filter.release":"By release","settings.filter.release.all":"Toggle ALL","settings.data.title":"Game Data","settings.data.constData":"Chart Constant Data to Use","settings.data.constData.newplus":"NEW+","settings.data.constData.sun":"SUN","settings.data.constData.sunplus":"SUN+","settings.data.constData.luminous":"LUMINOUS","settings.data.constData.luminousplus":"Intl. / Japanese Ver. (LUMINOUS PLUS)","settings.data.playcount":"Show Play Count","settings.data.playcount.notify":"*You can click the dark box beside a song to view its play count","settings.data.showScoreDiff":"Show Score Difference <span style=\\"color:var(--theme-text-dim)\\">(since last updated)</span>","settings.data.diffUpdate":"","settings.data.diffUpdate.1d":"Auto-update after 1 day","settings.data.diffUpdate.3d":"Auto-update after 3 days","settings.data.diffUpdate.7d":"Auto-update after 1 week","settings.data.diffUpdate.14d":"Auto-update after 2 weeks","settings.data.diffUpdate.30d":"Auto-update after 1 month","settings.data.diffUpdate.manual":"Disabled","settings.data.diffUpdate.update":"Update Score Diff Basis","settings.data.diffUpdate.reload":"Reload Page to Update","settings.data.diffUpdate.notify":"","settings.data.overpower":"Show Over Power","settings.data.overpower.hide":"Hide (Show Rank)","settings.data.overpower.value":"Show (Over Power Value)","settings.data.overpower.percentage":"Show (Over Power Achievement%)","settings.data.overpower.dgvalue":"Show (Designate Over Power Value)","settings.data.overpower.dgpercentage":"Show (Designate Over Power Achievement%)","settings.data.overpower.notify":"*It will also show unplayed song when toggled to \\"Show Over Power\\".<br/>*Total over power might differ from the official one, if some of the songs are not unlocked yet.","settings.ui.title":"User Interface","settings.ui.locale":"Language","settings.ui.theme":"Theme","player.generic.generatedAt":"Generated At","player.best.playCount":"Play Count","player.best.best30":"Best 30","player.best.maxPossible":"Max Possible","player.recent.best10":"Recent 10","player.recent.history10":"History 10","player.recent.history30":"History 30","record.head.playOrder":"Played Time","record.head.order":"#","record.head.title":"Title","record.head.const":"Const","record.head.overpower":"OP","record.head.overpowerPercent":"OP%","record.head.rank":"Rank","record.head.score":"Score","record.head.scoreDiff":"Score Diff","record.head.rating":"Rating","record.head.ajfc":"AJ","record.head.playcount":"Plays","record.fetch.fetching":"Fetching record for <span style=\\"color:var(--theme-song-{{diff}});\\">{{diffStr}}</span> difficulty...","record.fetch.diff.ult":"ULTIMA","record.fetch.diff.mas":"MASTER","record.fetch.diff.exp":"EXPERT","record.fetch.diff.adv":"ADVANCED","record.fetch.diff.bas":"BASIC","record.fetch.unknown":"Found unknown song(s):\\n\\n{{songs}}\\n\\nPlease contact the author via Email (admin@tsaibee.org).","record.fetch.error":"<span style=\\"color:red;\\">Some error occured when fetching best record!<br/>You probably need to reload the page now.</span>","playcount.fetch.button":"Fetch","playcount.fetch.progress":"Fetching play count... ({{progress}}/{{all}})","playcount.fetch.error":"<span style=\\"color:red;\\">Some error occured when fetching play count!<br/>You probably need to reload the page now.</span>","share.error":"Something went wrong when converting your scores to PNG. Please screenshot the error message to the author.\\n\\n{{error}}"}')
       },
       141: e => {
         "use strict";
-        e.exports = JSON.parse('{"main.title":"CHUNITHM 好友查分器","loading.constData":"使用 {{name}} 版本的定數資料","loading.error.serviceDown":"CHUNITHM-NET 目前正在停服維護。<br/>請在其可以使用的時段執行本程式。","loading.error.rejected":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.timeout":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.noopener":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.unknown":"無法正常執行！<br/>請截圖以下錯誤資訊並回報作者協助處理。","header.title.dl":"將B40記錄儲存為照片","header.title.constData":"切換歌曲定數資料 (目前：{{name}})","header.title.settings":"設定","settings.main.title":"設定","settings.main.reset":"重置設定","settings.filter.title":"歌曲篩選","settings.filter.const":"依 譜面定數","settings.filter.diff":"依 譜面難度","settings.filter.diff.warn":"*至少選一個吧","settings.filter.diff.notify":"*依照難度篩選或未於 CHUNITHM-NET 顯示的隱藏歌曲，可能會使得 B30 的記錄變得不準確","settings.filter.genre":"依 歌曲類別","settings.filter.genre.all":"全部開啟/關閉","settings.data.title":"遊戲數據","settings.data.constData":"使用的定數資料（版本：JP 20241128v1）","settings.data.constData.newplus":"NEW+","settings.data.constData.sun":"SUN","settings.data.constData.sunplus":"SUN+","settings.data.constData.luminous":"LUMINOUS","settings.data.constData.luminousplus":"國際版 / 日版 (LUMINOUS PLUS)","settings.data.playcount":"顯示個別歌曲遊玩次數","settings.data.playcount.notify":"*點擊歌曲條目旁的深色方塊也可以查看單曲遊玩次數","settings.data.showScoreDiff":"顯示推分數據","settings.data.diffUpdate":"","settings.data.diffUpdate.1d":"一天 後自動更新","settings.data.diffUpdate.3d":"三天 後自動更新","settings.data.diffUpdate.7d":"一週 後自動更新","settings.data.diffUpdate.14d":"兩週 後自動更新","settings.data.diffUpdate.30d":"一個月 後自動更新","settings.data.diffUpdate.manual":"功能關閉","settings.data.diffUpdate.update":"更新推分基準","settings.data.diffUpdate.reload":"請重新載入頁面以更新紀錄","settings.data.diffUpdate.notify":"","settings.data.overpower":"顯示 OVER POWER","settings.data.overpower.hide":"隱藏 (顯示成績等級)","settings.data.overpower.value":"顯示 (OVER POWER 數值)","settings.data.overpower.percentage":"顯示 (OVER POWER 達成率)","settings.data.overpower.dgvalue":"顯示 (OVER POWER 對象數值)","settings.data.overpower.dgpercentage":"顯示 (OVER POWER 對象達成率)","settings.data.overpower.notify":"*設定為「顯示」時，未遊玩的歌曲也會一併顯示<br/>*若有尚未解鎖的歌曲，OVER POWER 的數據可能會與官方記錄有差別","settings.ui.title":"使用者介面","settings.ui.locale":"語言","settings.ui.theme":"佈景主題","player.generic.generatedAt":"生成日期","player.best.playCount":"遊玩道數","player.best.best30":"BEST 30","player.best.maxPossible":"不推分可至","player.recent.best10":"RECENT 10","player.recent.history10":"遊玩記錄前10","player.recent.history30":"遊玩記錄前30","record.head.playOrder":"遊玩時間","record.head.order":"#","record.head.title":"曲名","record.head.const":"定數","record.head.overpower":"OP","record.head.overpowerPercent":"OP%","record.head.rank":"評級","record.head.score":"成績","record.head.scoreDiff":"成績變動","record.head.rating":"評分","record.head.ajfc":"AJ","record.head.playcount":"次數","record.fetch.fetching":"正在載入 <span style=\\"color:var(--theme-song-{{diff}});\\">{{diffStr}}</span> 資料……","record.fetch.diff.ult":"黑譜 (ULTIMA)","record.fetch.diff.mas":"紫譜 (MASTER)","record.fetch.diff.exp":"紅譜 (EXPERT)","record.fetch.diff.adv":"黃譜 (ADVANCED)","record.fetch.diff.bas":"綠譜 (BASIC)","record.fetch.unknown":"資料庫尚未有以下歌曲：\\n{{songs}}\\n請寄信至 admin@tsaibee.org 反映。","record.fetch.error":"<span style=\\"color:red;\\">取得遊玩記錄時發生問題，<br/>請重新整理頁面後再試一次。</span>","playcount.fetch.button":"取得","playcount.fetch.progress":"正在取得歌曲遊玩次數…… ({{progress}}/{{all}})","playcount.fetch.error":"<span style=\\"color:red;\\">取得遊玩次數時出現問題，<br/>請重新整理頁面後再試一次。</span>","share.error":"轉換圖檔時出現錯誤，請將以下的錯誤訊息截圖傳給作者處理。\\n\\n{{error}}"}')
+        e.exports = JSON.parse('{"main.title":"CHUNITHM 好友查分器","loading.constData":"使用 {{name}} 版本的定數資料","loading.error.serviceDown":"CHUNITHM-NET 目前正在停服維護。<br/>請在其可以使用的時段執行本程式。","loading.error.rejected":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.timeout":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.noopener":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.unknown":"無法正常執行！<br/>請截圖以下錯誤資訊並回報作者協助處理。","header.title.dl":"將B40記錄儲存為照片","header.title.constData":"切換歌曲定數資料 (目前：{{name}})","header.title.settings":"設定","settings.main.title":"設定","settings.main.reset":"重置設定","settings.filter.title":"歌曲篩選","settings.filter.const":"依 譜面定數","settings.filter.diff":"依 譜面難度","settings.filter.diff.warn":"*至少選一個吧","settings.filter.diff.notify":"*依照難度篩選或未於 CHUNITHM-NET 顯示的隱藏歌曲，可能會使得 B30 的記錄變得不準確","settings.filter.genre":"依 歌曲類別","settings.filter.genre.all":"全部開啟/關閉","settings.filter.release":"依 歌曲代數","settings.filter.release.all":"全開/關","settings.data.title":"遊戲數據","settings.data.constData":"使用的定數資料（版本：JP 20241128v1）","settings.data.constData.newplus":"NEW+","settings.data.constData.sun":"SUN","settings.data.constData.sunplus":"SUN+","settings.data.constData.luminous":"LUMINOUS","settings.data.constData.luminousplus":"國際版 / 日版 (LUMINOUS PLUS)","settings.data.playcount":"顯示個別歌曲遊玩次數","settings.data.playcount.notify":"*點擊歌曲條目旁的深色方塊也可以查看單曲遊玩次數","settings.data.showScoreDiff":"顯示推分數據","settings.data.diffUpdate":"","settings.data.diffUpdate.1d":"一天 後自動更新","settings.data.diffUpdate.3d":"三天 後自動更新","settings.data.diffUpdate.7d":"一週 後自動更新","settings.data.diffUpdate.14d":"兩週 後自動更新","settings.data.diffUpdate.30d":"一個月 後自動更新","settings.data.diffUpdate.manual":"功能關閉","settings.data.diffUpdate.update":"更新推分基準","settings.data.diffUpdate.reload":"請重新載入頁面以更新紀錄","settings.data.diffUpdate.notify":"","settings.data.overpower":"顯示 OVER POWER","settings.data.overpower.hide":"隱藏 (顯示成績等級)","settings.data.overpower.value":"顯示 (OVER POWER 數值)","settings.data.overpower.percentage":"顯示 (OVER POWER 達成率)","settings.data.overpower.dgvalue":"顯示 (OVER POWER 對象數值)","settings.data.overpower.dgpercentage":"顯示 (OVER POWER 對象達成率)","settings.data.overpower.notify":"*設定為「顯示」時，未遊玩的歌曲也會一併顯示<br/>*若有尚未解鎖的歌曲，OVER POWER 的數據可能會與官方記錄有差別","settings.ui.title":"使用者介面","settings.ui.locale":"語言","settings.ui.theme":"佈景主題","player.generic.generatedAt":"生成日期","player.best.playCount":"遊玩道數","player.best.best30":"BEST 30","player.best.maxPossible":"不推分可至","player.recent.best10":"RECENT 10","player.recent.history10":"遊玩記錄前10","player.recent.history30":"遊玩記錄前30","record.head.playOrder":"遊玩時間","record.head.order":"#","record.head.title":"曲名","record.head.const":"定數","record.head.overpower":"OP","record.head.overpowerPercent":"OP%","record.head.rank":"評級","record.head.score":"成績","record.head.scoreDiff":"成績變動","record.head.rating":"評分","record.head.ajfc":"AJ","record.head.playcount":"次數","record.fetch.fetching":"正在載入 <span style=\\"color:var(--theme-song-{{diff}});\\">{{diffStr}}</span> 資料……","record.fetch.diff.ult":"黑譜 (ULTIMA)","record.fetch.diff.mas":"紫譜 (MASTER)","record.fetch.diff.exp":"紅譜 (EXPERT)","record.fetch.diff.adv":"黃譜 (ADVANCED)","record.fetch.diff.bas":"綠譜 (BASIC)","record.fetch.unknown":"資料庫尚未有以下歌曲：\\n{{songs}}\\n請寄信至 admin@tsaibee.org 反映。","record.fetch.error":"<span style=\\"color:red;\\">取得遊玩記錄時發生問題，<br/>請重新整理頁面後再試一次。</span>","playcount.fetch.button":"取得","playcount.fetch.progress":"正在取得歌曲遊玩次數…… ({{progress}}/{{all}})","playcount.fetch.error":"<span style=\\"color:red;\\">取得遊玩次數時出現問題，<br/>請重新整理頁面後再試一次。</span>","share.error":"轉換圖檔時出現錯誤，請將以下的錯誤訊息截圖傳給作者處理。\\n\\n{{error}}"}')
       }
     },
     t = {};
@@ -753,6 +753,13 @@
       e["P & A"] = "0", e.niconico = "2", e["東方Project"] = "3", e.ORIGINAL = "5", e.VARIETY = "6", e["イロドリ"] = "7", e["ゲキマイ"] = "9"
     }(_e || (_e = {}));
     const Ie = Object.keys(_e);
+    var _s;
+    ! function(e) {
+      e["ORI"] = "1", e["ORI+"] = "2", e["AIR"] = "3", e["AIR+"] = "4", e["STR"] = "5", e["STR+"] = "6", e["AMZ"] = "7", e["AMZ+"] = "8",
+      e["CRS"] = "9", e["CRS+"] = "10", e["PAR"] = "11", e["PAR×"] = "12", e["NEW"] = "13", e["NEW+"] = "14", e["SUN"] = "15", e["SUN+"] = "16",
+      e["LMN"] = "17", e["LMN+"] = "18", e["VER"] = "19"
+    }(_s || (_s = {}));
+    const Rl = Object.keys(_s);
 
     function Re(e, t) {
       if (!e) throw new Error("Target window does not exist");
@@ -866,8 +873,7 @@
               t = (n - 5e4) / 2 * (e.score - 5e5) / 3e5
             }
             return Math.max(0, t)
-          }(e), e.genre = `${t.genre}`, e.rating = Math.floor(e.rawRating / 100));
-          
+          }(e), e.genre = `${t.genre}`, e.release = `${songData.release}`, e.rating = Math.floor(e.rawRating / 100));
           e.op = function(e) {
             if (e.score >= 101e4) return Ve(e);
             let t = {
@@ -879,7 +885,6 @@
               r = e.score < 1007500 ? e.rawRating : n + 2e4 + 3 * (e.score - 1007500);
             return r = e.score >= 975e3 ? 10 * Math.floor(r / 10) : 100 * Math.floor(r / 100), 5 * (r + t)
           }(e), 
-          
           e.opMax = Ve(e), e.opPercent = 100 * e.op / e.opMax, e.rank = Fe(e.score)
         })));
         const titleMap = new Map();
@@ -945,7 +950,9 @@
       }));
     let Ke = {};
     for (let e of Ie) Ke[e] = !0;
-    const et = Ue("filterGenre", Ke),
+    let Kee = {};
+    for (let e of Rl) Kee[e] = !0;
+    const et = Ue("filterGenre", Ke), eet = Ue("filterRelease", Kee),
       tt = Ne("usedConstData", "luminousplus", ["luminousplus"], (() => {
         Nt.updateConstData(), Ht.updateConstData(), At.updateConstData()
       })),
@@ -977,7 +984,7 @@
         manual: Number.POSITIVE_INFINITY
       },
       st = Ne("diffUpdateInterval", "manual", Object.keys(ot)),
-      at = [Ae, De, Ze, Ye, Qe, et, tt, nt, rt],
+      at = [Ae, De, Ze, Ye, Qe, et, eet, tt, nt, rt],
       it = {
         randomUUID: "undefined" != typeof crypto && crypto.randomUUID && crypto.randomUUID.bind(crypto)
       };
@@ -2162,6 +2169,91 @@
       }
     };
 
+    function Bnn(e) {
+      j(e, "svelte-by0uoq", '.wrapper.svelte-by0uoq{display:flex;-ms-flex-direction:column;flex-direction:column;padding:0.5rem;gap:1rem}.btns.svelte-by0uoq{display:-ms-grid;display:grid;grid-template-columns: repeat(4, 1fr);grid-template-areas:".... .... ....";gap:0.5rem;flex-wrap:wrap}button.svelte-by0uoq{width:100%;padding:0.5rem;border-radius:0.5rem;background-color:var(--theme-bg-sub);border:3px solid var(--theme-control);color:var(--theme-text-control);filter:brightness(0.5)}button.svelte-by0uoq:hover{filter:brightness(0.8)}button.activated.svelte-by0uoq{filter:brightness(1)}.btn-all.svelte-by0uoq{grid-column:2/4;border-color:var(--theme-control-altr)}')
+    }
+
+    function Vnn(e, t, n) {
+      const r = e.slice();
+      return r[5] = t[n], r
+      
+    }
+
+    function qnn(e) {
+      let t, n, r, o, s = e[5] + "";
+      function a() {
+        return e[3](e[5])
+      }
+      return {
+        c() {
+          t = H("button"), n = A(s), O(t, "type", "button"), O(t, "class", "svelte-by0uoq"), B(t, "activated", e[1][e[5]])
+        },
+        m(e, s) {
+          M(e, t, s), k(t, n), r || (o = P(t, "click", a), r = !0)
+        },
+        p(n, r) {
+          e = n, 2 & r && B(t, "activated", e[1][e[5]])
+        },
+        d(e) {
+          e && E(t), r = !1, o()
+        }
+      }
+    }
+
+    function Wnn(t) {
+      let n, r, o, s, a, i, l, c, d, u = t[2]("settings.filter.release") + "",
+        f = t[2]("settings.filter.release.all") + "",
+        p = Rl,
+        h = [];
+      for (let e = 0; e < p.length; e += 1) h[e] = qnn(Vnn(t, p, e));
+      return {
+        c() {
+          n = H("div"), r = H("span"), o = D(), s = H("div");
+          for (let e = 0; e < h.length; e += 1) h[e].c();
+          a = D(), i = H("button"), l = A(f), O(i, "type", "button"), O(i, "class", "btn-all svelte-by0uoq"), B(i, "activated", t[0]), O(s, "class", "btns svelte-by0uoq"), O(n, "class", "wrapper svelte-by0uoq")
+        },
+        m(e, f) {
+          M(e, n, f), k(n, r), r.innerHTML = u, k(n, o), k(n, s);
+          for (let e = 0; e < h.length; e += 1) h[e] && h[e].m(s, null);
+          k(s, a), k(s, i), k(i, l), c || (d = P(i, "click", t[4]), c = !0)
+        },
+        p(e, [t]) {
+          if (4 & t && u !== (u = e[2]("settings.filter.release") + "") && (r.innerHTML = u), 3 & t) {
+            let n;
+            for (p = Rl, n = 0; n < p.length; n += 1) {
+              const r = Vnn(e, p, n);
+              h[n] ? h[n].p(r, t) : (h[n] = qnn(r), h[n].c(), h[n].m(s, a))
+            }
+            for (; n < h.length; n += 1) h[n].d(1);
+            h.length = p.length
+          }
+          4 & t && f !== (f = e[2]("settings.filter.release.all") + "") && I(l, f), 1 & t && B(i, "activated", e[0])
+        },
+        i: e,
+        o: e,
+        d(e) {
+          e && E(n), N(h, e), c = !1, d()
+        }
+      }
+    }
+    
+    function Jnn(e, t, n) {
+      let r, o;
+      u(e, eet, (e => n(1, r = e))), u(e, wt, (e => n(2, o = e)));
+      let s = Rl.every((e => r[e]));
+      return [s, r, o, e => {
+        p(eet, r[e] = !r[e], r), n(0, s = Rl.every((e => r[e])))
+      }, () => {
+        n(0, s = !s);
+        for (let e of Rl) p(eet, r[e] = s, r)
+      }]
+    }
+    const Xnn = class extends Se {
+      constructor(e) {
+        super(), je(this, e, Jnn, Wnn, i, {}, Bnn)
+      }
+    };
+
     function Gn(e) {
       j(e, "svelte-1lhvhf8", ".wrapper.svelte-1lhvhf8{padding:0.5rem;display:flex;gap:0.5rem;align-items:center}input[type=number].svelte-1lhvhf8{background-color:var(--theme-bg-sub);color:var(--theme-text-control);border:none;border-radius:0.2rem;width:4rem;padding:0.5rem;-moz-appearance:textfield;appearance:textfield;flex-grow:1}input[type=number].svelte-1lhvhf8::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}.btn.svelte-1lhvhf8{width:-moz-fit-content;width:fit-content;padding:0.5rem 1.5rem;border-radius:0.8rem;background-color:var(--theme-control);color:var(--theme-text-control)}.btn[disabled].svelte-1lhvhf8{background-color:var(--theme-border);cursor:no-drop}")
     }
@@ -2600,7 +2692,7 @@
     }
 
     function kr(e) {
-      let t, n, r, o, a, i, l, c, d, u, f, p, h, g, m, v, b, y, w, $, x, j, S, T, C, N, U, A, L, _, I, R, F, B, V, q, W, J, X, G, Y, Z, K, ee, te, ne, se, ae, ie, le, ce, de, ue, fe, ve = e[0]("settings.main.title") + "",
+      let t, n, r, o, a, i, l, c, d, u, f, p, h, g, m, v, b, bb, y, yy, w, $, x, j, S, T, C, N, U, A, L, _, I, R, F, B, V, q, W, J, X, G, Y, Z, K, ee, te, ne, se, ae, ie, le, ce, de, ue, fe, ve = e[0]("settings.main.title") + "",
         ye = e[0]("settings.filter.title") + "",
         je = e[0]("settings.data.title") + "",
         Se = e[0]("settings.data.overpower.notify") + "",
@@ -2644,7 +2736,7 @@
       });
       void 0 !== e[1] && (Ne.high = e[1]), void 0 !== e[2] && (Ne.low = e[2]), f = new Dn({
         props: Ne
-      }), Q.push((() => we(f, "high", Me))), Q.push((() => we(f, "low", Ee))), m = new Fn({}), b = new Xn({});
+      }), Q.push((() => we(f, "high", Me))), Q.push((() => we(f, "low", Ee))), m = new Fn({}), b = new Xn({}), bb = new Xnn({});
       let He = function(e) {
         let t, n, r;
 
@@ -2757,10 +2849,10 @@
         props: Fe
       }), Q.push((() => we(te, "value", ze))), {
         c() {
-          t = H("div"), n = H("div"), r = D(), o = H("div"), a = H("button"), a.textContent = "✕", i = D(), l = H("h3"), c = D(), d = H("h4"), u = D(), $e(f.$$.fragment), g = D(), $e(m.$$.fragment), v = D(), $e(b.$$.fragment), y = D(), w = H("hr"), $ = D(), x = H("h4"), j = D(), He && He.c(), S = D(), $e(T.$$.fragment), N = D(), U = H("div"), A = D(), $e(L.$$.fragment), I = D(), Pe && Pe.c(), R = D(), $e(F.$$.fragment), V = D(), $e(q.$$.fragment), W = D(), J = H("hr"), X = D(), G = H("h4"), Y = D(), $e(Z.$$.fragment), ee = D(), $e(te.$$.fragment), se = D(), ae = H("hr"), ie = D(), le = H("button"), O(n, "class", "modal-bg svelte-iga5r4"), O(a, "type", "button"), O(a, "class", "close-btn svelte-iga5r4"), z(l, "margin", "0"), O(d, "class", "svelte-iga5r4"), O(w, "class", "svelte-iga5r4"), O(x, "class", "svelte-iga5r4"), z(U, "color", "var(--theme-text-dim)"), z(U, "margin", ".5em auto"), O(J, "class", "svelte-iga5r4"), O(G, "class", "svelte-iga5r4"), O(ae, "class", "svelte-iga5r4"), O(le, "type", "button"), O(le, "class", "reset-btn svelte-iga5r4"), O(o, "class", "modal svelte-iga5r4"), O(t, "class", "wrapper svelte-iga5r4")
+          t = H("div"), n = H("div"), r = D(), o = H("div"), a = H("button"), a.textContent = "✕", i = D(), l = H("h3"), c = D(), d = H("h4"), u = D(), $e(f.$$.fragment), g = D(), $e(m.$$.fragment), v = D(), $e(b.$$.fragment), y = D(), $e(bb.$$.fragment), yy = D(), w = H("hr"), $ = D(), x = H("h4"), j = D(), He && He.c(), S = D(), $e(T.$$.fragment), N = D(), U = H("div"), A = D(), $e(L.$$.fragment), I = D(), Pe && Pe.c(), R = D(), $e(F.$$.fragment), V = D(), $e(q.$$.fragment), W = D(), J = H("hr"), X = D(), G = H("h4"), Y = D(), $e(Z.$$.fragment), ee = D(), $e(te.$$.fragment), se = D(), ae = H("hr"), ie = D(), le = H("button"), O(n, "class", "modal-bg svelte-iga5r4"), O(a, "type", "button"), O(a, "class", "close-btn svelte-iga5r4"), z(l, "margin", "0"), O(d, "class", "svelte-iga5r4"), O(w, "class", "svelte-iga5r4"), O(x, "class", "svelte-iga5r4"), z(U, "color", "var(--theme-text-dim)"), z(U, "margin", ".5em auto"), O(J, "class", "svelte-iga5r4"), O(G, "class", "svelte-iga5r4"), O(ae, "class", "svelte-iga5r4"), O(le, "type", "button"), O(le, "class", "reset-btn svelte-iga5r4"), O(o, "class", "modal svelte-iga5r4"), O(t, "class", "wrapper svelte-iga5r4")
         },
         m(s, p) {
-          M(s, t, p), k(t, n), k(t, r), k(t, o), k(o, a), k(o, i), k(o, l), l.innerHTML = ve, k(o, c), k(o, d), d.innerHTML = ye, k(o, u), xe(f, o, null), k(o, g), xe(m, o, null), k(o, v), xe(b, o, null), k(o, y), k(o, w), k(o, $), k(o, x), x.innerHTML = je, k(o, j), He && He.m(o, null), k(o, S), xe(T, o, null), k(o, N), k(o, U), U.innerHTML = Se, k(o, A), xe(L, o, null), k(o, I), Pe && Pe.m(o, null), k(o, R), xe(F, o, null), k(o, V), xe(q, o, null), k(o, W), k(o, J), k(o, X), k(o, G), G.innerHTML = Te, k(o, Y), xe(Z, o, null), k(o, ee), xe(te, o, null), k(o, se), k(o, ae), k(o, ie), k(o, le), le.innerHTML = Ce, de = !0, ue || (fe = [P(n, "click", xt.toggle), P(a, "click", xt.toggle), P(le, "click", e[17])], ue = !0)
+          M(s, t, p), k(t, n), k(t, r), k(t, o), k(o, a), k(o, i), k(o, l), l.innerHTML = ve, k(o, c), k(o, d), d.innerHTML = ye, k(o, u), xe(f, o, null), k(o, g), xe(m, o, null), k(o, v), xe(b, o, null), k(o, y), xe(bb, o, null), k(o, yy), k(o, w), k(o, $), k(o, x), x.innerHTML = je, k(o, j), He && He.m(o, null), k(o, S), xe(T, o, null), k(o, N), k(o, U), U.innerHTML = Se, k(o, A), xe(L, o, null), k(o, I), Pe && Pe.m(o, null), k(o, R), xe(F, o, null), k(o, V), xe(q, o, null), k(o, W), k(o, J), k(o, X), k(o, G), G.innerHTML = Te, k(o, Y), xe(Z, o, null), k(o, ee), xe(te, o, null), k(o, se), k(o, ae), k(o, ie), k(o, le), le.innerHTML = Ce, de = !0, ue || (fe = [P(n, "click", xt.toggle), P(a, "click", xt.toggle), P(le, "click", e[17])], ue = !0)
         },
         p(e, [t]) {
           (!de || 1 & t) && ve !== (ve = e[0]("settings.main.title") + "") && (l.innerHTML = ve), (!de || 1 & t) && ye !== (ye = e[0]("settings.filter.title") + "") && (d.innerHTML = ye);
@@ -2789,19 +2881,19 @@
           }), !ne && 256 & t && (ne = !0, c.value = e[8], oe((() => ne = !1))), te.$set(c), (!de || 1 & t) && Ce !== (Ce = e[0]("settings.main.reset") + "") && (le.innerHTML = Ce)
         },
         i(e) {
-          de || (ge(f.$$.fragment, e), ge(m.$$.fragment, e), ge(b.$$.fragment, e), ge(He), ge(T.$$.fragment, e), ge(L.$$.fragment, e), ge(Pe), ge(F.$$.fragment, e), ge(q.$$.fragment, e), ge(Z.$$.fragment, e), ge(te.$$.fragment, e), re((() => {
+          de || (ge(f.$$.fragment, e), ge(m.$$.fragment, e), ge(b.$$.fragment, e), ge(bb.$$.fragment, e), ge(He), ge(T.$$.fragment, e), ge(L.$$.fragment, e), ge(Pe), ge(F.$$.fragment, e), ge(q.$$.fragment, e), ge(Z.$$.fragment, e), ge(te.$$.fragment, e), re((() => {
             de && (ce || (ce = be(t, $n, {
               duration: 100
             }, !0)), ce.run(1))
           })), de = !0)
         },
         o(e) {
-          me(f.$$.fragment, e), me(m.$$.fragment, e), me(b.$$.fragment, e), me(He), me(T.$$.fragment, e), me(L.$$.fragment, e), me(Pe), me(F.$$.fragment, e), me(q.$$.fragment, e), me(Z.$$.fragment, e), me(te.$$.fragment, e), ce || (ce = be(t, $n, {
+          me(f.$$.fragment, e), me(m.$$.fragment, e), me(b.$$.fragment, e),me(bb.$$.fragment, e), me(He), me(T.$$.fragment, e), me(L.$$.fragment, e), me(Pe), me(F.$$.fragment, e), me(q.$$.fragment, e), me(Z.$$.fragment, e), me(te.$$.fragment, e), ce || (ce = be(t, $n, {
             duration: 100
           }, !1)), ce.run(0), de = !1
         },
         d(e) {
-          e && E(t), ke(f), ke(m), ke(b), He && He.d(), ke(T), ke(L), Pe && Pe.d(), ke(F), ke(q), ke(Z), ke(te), e && ce && ce.end(), ue = !1, s(fe)
+          e && E(t), ke(f), ke(m), ke(b), ke(bb), He && He.d(), ke(T), ke(L), Pe && Pe.d(), ke(F), ke(q), ke(Z), ke(te), e && ce && ce.end(), ue = !1, s(fe)
         }
       }
     }
@@ -4316,23 +4408,24 @@
     }
 
     function Yo(e, t, n) {
-      let r, o, s, a, i, l, c, d, f, h, g, m, v, b, y, w, $, x, k;
-      return u(e, Ye, (e => n(14, i = e))), u(e, Ze, (e => n(15, l = e))), u(e, et, (e => n(16, c = e))), u(e, Qe, (e => n(17, d = e))), u(e, nt, (e => n(2, f = e))), u(e, At, (e => n(18, h = e))), u(e, De, (e => n(19, g = e))), u(e, Tt, (e => n(20, m = e))), u(e, $t, (e => n(5, v = e))), u(e, Ae, (e => n(6, b = e))), u(e, wt, (e => n(7, y = e))), u(e, Nt, (e => n(8, w = e))), u(e, Ht, (e => n(9, $ = e))), u(e, jt, (e => n(10, x = e))), u(e, xt, (e => n(11, k = e))), p($t, v = window.location.hash.slice(1), v), e.$$.update = () => {
-        507908 & e.$$.dirty && n(0, r = h.filter((e => ("hide" != f || e.score >= 0) && (!(f === "dgvalue" || f === "dgpercentage") || (e.dg === 1 || e.dg === 2)) && d[e.difficulty] && c[Ie.find((t => _e[t] == e.genre))] && l >= e.const && e.const >= i))), 1 & e.$$.dirty && n(4, o = (() => {
+      let r, o, s, a, i, l, c, d, f, h, g, m, v, b, y, w, $, x, k, j;
+      return u(e, Ye, (e => n(14, i = e))), u(e, Ze, (e => n(15, l = e))), u(e, At, (e => n(16, h = e))), u(e, et, (e => n(17, c = e))), u(e, eet, (e => n(18, j = e))), u(e, Qe, (e => n(19, d = e))), u(e, nt, (e => n(2, f = e))), u(e, De, (e => n(20, g = e))), u(e, Tt, (e => n(21, m = e))), u(e, $t, (e => n(5, v = e))), u(e, Ae, (e => n(6, b = e))), u(e, wt, (e => n(7, y = e))),u(e, At, (e => n(8, w = e.filter((item) => (item.newV === 0 || (item.newV === 2 && item.difficulty !== "ULT")) && item.score !== -1).map((item, index) => ({ ...item, order: index + 1 }))))), u(e, At, (e => n(9, $ = e.filter(item => (item.newV === 1 || (item.newV === 2 && item.difficulty === "ULT")) && item.score !== -1).map((item, index) => ({ ...item, order: index + 1 }))))), u(e, jt, (e => n(10, x = e))), u(e, xt, (e => n(11, k = e))), p($t, v = window.location.hash.slice(1), v), 
+      e.$$.update = () => {
+        507908 & e.$$.dirty && n(0, r = h.filter((e => ("hide" != f || e.score >= 0) && (!(f === "dgvalue" || f === "dgpercentage") || (e.dg === 1 || e.dg === 2)) && d[e.difficulty] && c[Ie.find((t => _e[t] == e.genre))] && j[Rl.find((t => _s[t] == e.release))] && l >= e.const && e.const >= i))), 1 & e.$$.dirty && n(4, o = (() => {
           let e = {};
           ["MAX", "SSS+", "SSS", "SS+", "SS", "S+", "S"].forEach((t => e[t] = 0)), ["AAA", "AA", "A", "BBB", "BB", "B", "C", "D"].forEach((t => e[t] = 0));
           for (const t of r) e[t.rank]++;
           return Object.keys(e).reduce(((t, n) => (e[n] += e[t], n))), e
         })()), 1 & e.$$.dirty && n(1, s = r.filter((e => "AJ" == e.clear)).length), 3 & e.$$.dirty && n(3, a = s + r.filter((e => "FC" == e.clear)).length)
-      }, [r, s, f, a, o, v, b, y, w, $, x, k, function() {
-        p($t, v = window.location.hash.slice(1), v), "best" !== v && p(Tt, m = !1, m)
+      },[r, s, f, a, o, v, b, y, w, $, x, k, function() {
+        p($t, v = window.location.hash.slice(1), v), "all" !== v && p(Tt, m = !1, m)
       }, async function() {
         Re(window.opener, Le)("saveConfig", {
           data: {
             lang: g
           }
         })
-      }, i, l, c, d, h]
+      }, i, l, h, c, j, d]
     }
     new class extends Se {
       constructor(e) {
