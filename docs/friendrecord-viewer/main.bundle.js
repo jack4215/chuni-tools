@@ -873,7 +873,7 @@
               t = (n - 5e4) / 2 * (e.score - 5e5) / 3e5
             }
             return Math.max(0, t)
-          }(e), e.genre = `${t.genre}`, e.release = `${songData.release}`, e.rating = Math.floor(e.rawRating / 100));
+          }(e), e.genre = `${t.genre}`, e.release = `${t.release}`, e.rating = Math.floor(e.rawRating / 100));
           e.op = function(e) {
             if (e.score >= 101e4) return Ve(e);
             let t = {
