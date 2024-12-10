@@ -183,7 +183,7 @@
                                         color: r ? r[0].slice(9) : "normal"
                                     },
                                     rating: a,
-                                    ratingMax: friendBlock.querySelector(".player_rating_max").innerHTML,
+                                    overPower: friendBlock.querySelector(".player_overpower_text").innerHTML,
                                     playCount: "--", 
                                     lastPlayed: "--", 
                                     ratingPn: background

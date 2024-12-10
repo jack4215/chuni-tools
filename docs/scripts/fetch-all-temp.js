@@ -204,7 +204,7 @@
                                         color: r ? r[0].slice(9) : "normal"
                                     },
                                     rating: a,
-                                    ratingMax: e.querySelector(".player_rating_max").innerHTML,
+                                    overPower: e.querySelector(".player_overpower_text").innerHTML.match(/\(([^)]+)\)/)[1],
                                     playCount: e.querySelector(".user_data_play_count .user_data_text").innerHTML,
                                     lastPlayed: Date.parse(e.querySelector(".player_lastplaydate_text").innerHTML),
                                     ratingPn: background
