@@ -1113,6 +1113,7 @@
     "ADV": 5,
     "EXP": 8,
     "MAS": 11.6,
+    "ULT": 14,
     "genre": 2,
     "release": 1,
     "newV": 0
@@ -1120,7 +1121,7 @@
   "怒槌": {
     "BAS": 6,
     "ADV": 9.5,
-    "EXP": 14.0,
+    "EXP": 14,
     "MAS": 15.4,
     "genre": 5,
     "release": 1,
@@ -2215,6 +2216,7 @@
     "ADV": 6,
     "EXP": 9,
     "MAS": 13.1,
+    "ULT": 14,
     "genre": 9,
     "release": 3,
     "newV": 0
@@ -7539,6 +7541,7 @@
     "ADV": 6,
     "EXP": 10.2,
     "MAS": 12.8,
+    "ULT": 14.8,
     "genre": 2,
     "release": 13,
     "newV": 0
@@ -12927,6 +12930,15 @@
     "release": 18,
     "newV": 0
   },
+  "Flower": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 9.5,
+    "MAS": 12.6,
+    "genre": 9,
+    "release": 18,
+    "newV": 1
+  },
   "群青シグナル": {
     "BAS": 3,
     "ADV": 6,
@@ -12936,7 +12948,7 @@
     "release": 18,
     "newV": 0
   },
-  "Flower": {
+  "Campus mode!!": {
     "BAS": 3,
     "ADV": 6,
     "EXP": 9.5,
@@ -12944,5 +12956,262 @@
     "genre": 9,
     "release": 18,
     "newV": 0
+  },
+  "Fighting My Way": {
+    "BAS": 2,
+    "ADV": 5,
+    "EXP": 10.2,
+    "MAS": 13.9,
+    "genre": 0,
+    "release": 19,
+    "newV": 1
+  },
+  "On your mark (104期 Ver.)": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 9.5,
+    "MAS": 12.8,
+    "ULT": 14.2,
+    "genre": 0,
+    "release": 19,
+    "newV": 1
+  },
+  "眩耀夜行（104期Ver.）": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 9,
+    "MAS": 13,
+    "genre": 0,
+    "release": 19,
+    "newV": 1
+  },
+  "KNOT（104期Ver.）": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 9,
+    "MAS": 13.1,
+    "genre": 0,
+    "release": 19,
+    "newV": 1
+  },
+  "アイデンティティ（104期NEW Ver.）": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 10.9,
+    "MAS": 14,
+    "genre": 0,
+    "release": 19,
+    "newV": 1
+  },
+  "晴る": {
+    "BAS": 2,
+    "ADV": 5,
+    "EXP": 8.5,
+    "MAS": 11.9,
+    "ULT": 14.1,
+    "genre": 0,
+    "release": 19,
+    "newV": 1
+  },
+  "ビビデバ": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 10.7,
+    "MAS": 12.9,
+    "ULT": 14.1,
+    "genre": 0,
+    "release": 19,
+    "newV": 1
+  },
+  "愛包ダンスホール": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 9.5,
+    "MAS": 12.8,
+    "ULT": 14,
+    "genre": 0,
+    "release": 19,
+    "newV": 1
+  },
+  "VERSE": {
+    "BAS": 2,
+    "ADV": 5,
+    "EXP": 9,
+    "MAS": 13,
+    "genre": 0,
+    "release": 19,
+    "newV": 1
+  },
+  "メズマライザー": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 10.9,
+    "MAS": 13.3,
+    "genre": 2,
+    "release": 19,
+    "newV": 1
+  },
+  "絶対敵対メチャキライヤー": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 10.4,
+    "MAS": 13,
+    "genre": 2,
+    "release": 19,
+    "newV": 1
+  },
+  "好きな惣菜発表ドラゴン": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 7.5,
+    "MAS": 13.6,
+    "genre": 2,
+    "release": 19,
+    "newV": 1
+  },
+  "有頂天ドリーマーズ": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 9,
+    "MAS": 12.7,
+    "genre": 3,
+    "release": 19,
+    "newV": 1
+  },
+  "Igallta": {
+    "BAS": 4,
+    "ADV": 8.5,
+    "EXP": 11.6,
+    "MAS": 14.9,
+    "genre": 6,
+    "release": 19,
+    "newV": 1
+  },
+  "Synthesis.": {
+    "BAS": 3,
+    "ADV": 8,
+    "EXP": 12.3,
+    "MAS": 15,
+    "genre": 6,
+    "release": 19,
+    "newV": 1
+  },
+  "Chronomia": {
+    "BAS": 4,
+    "ADV": 8,
+    "EXP": 12.7,
+    "MAS": 14.9,
+    "genre": 6,
+    "release": 19,
+    "newV": 1
+  },
+  "カモンゴー！": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 9.5,
+    "MAS": 13.8,
+    "genre": 7,
+    "release": 19,
+    "newV": 1
+  },
+  "≠彡\"/了→": {
+    "BAS": 4,
+    "ADV": 7.5,
+    "EXP": 13.4,
+    "MAS": 15,
+    "genre": 9,
+    "release": 19,
+    "newV": 1
+  },
+  "イルミネーション": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 8,
+    "MAS": 12.9,
+    "genre": 9,
+    "release": 19,
+    "newV": 1
+  },
+  "Ai C": {
+    "BAS": 3,
+    "ADV": 7,
+    "EXP": 13.2,
+    "MAS": 14.7,
+    "genre": 9,
+    "release": 19,
+    "newV": 1
+  },
+  "Theatore Creatore": {
+    "BAS": 5,
+    "ADV": 9.5,
+    "EXP": 12.8,
+    "MAS": 14.4,
+    "ULT": 15.3,
+    "genre": 5,
+    "release": 19,
+    "newV": 1
+  },
+  "ドリームケッチャー": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 9,
+    "MAS": 12.3,
+    "genre": 5,
+    "release": 19,
+    "newV": 1
+  },
+  "ラブリージャッジメント": {
+    "BAS": 2,
+    "ADV": 5,
+    "EXP": 10.5,
+    "MAS": 13.6,
+    "genre": 5,
+    "release": 19,
+    "newV": 1
+  },
+  "房総★ミラクル☆てんたくる!?": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 10.2,
+    "MAS": 14.3,
+    "genre": 5,
+    "release": 19,
+    "newV": 1
+  },
+  "Crystallize": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 10.3,
+    "MAS": 14.2,
+    "genre": 5,
+    "release": 19,
+    "newV": 1
+  },
+  "Oracle": {
+    "BAS": 3,
+    "ADV": 7.5,
+    "EXP": 13.1,
+    "MAS": 14.8,
+    "genre": 5,
+    "release": 19,
+    "newV": 1
+  },
+  "The Devil Incarnate": {
+    "BAS": 5,
+    "ADV": 10,
+    "EXP": 14.3,
+    "MAS": 15.2,
+    "genre": 5,
+    "release": 19,
+    "newV": 1
+  },
+  "メッちゅう殴打": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 11.9,
+    "MAS": 14.1,
+    "genre": 5,
+    "release": 19,
+    "newV": 1
   }
 }

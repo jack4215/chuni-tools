@@ -158,11 +158,11 @@
                                     const difficultyScore = sumScores(records);
                                     const totalHighScore = await fetchTotalHighScore(difficultyNames[e]);
                                  /*   records.push({
-                                        title: "Latent Kingdom",
+                                        title: "Forsaken Tale",
                                         score: totalHighScore - difficultyScore === 0 ? -1 : totalHighScore - difficultyScore, 
                                         difficulty: e,
                                         clear: "",
-                                        idx: "2605"
+                                        idx: "9999"
                                     }); */
                                     // Add hidden song end
                                     return records;
