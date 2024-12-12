@@ -12930,20 +12930,20 @@
     "release": 18,
     "newV": 0
   },
-  "Flower": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 9.5,
-    "MAS": 12.6,
-    "genre": 9,
-    "release": 18,
-    "newV": 1
-  },
   "群青シグナル": {
     "BAS": 3,
     "ADV": 6,
     "EXP": 10.1,
     "MAS": 13.8,
+    "genre": 9,
+    "release": 18,
+    "newV": 0
+  },
+  "Flower": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 9.5,
+    "MAS": 12.6,
     "genre": 9,
     "release": 18,
     "newV": 0
@@ -12954,8 +12954,8 @@
     "EXP": 9.5,
     "MAS": 12.6,
     "genre": 9,
-    "release": 18,
-    "newV": 0
+    "release": 19,
+    "newV": 1
   },
   "Fighting My Way": {
     "BAS": 2,
