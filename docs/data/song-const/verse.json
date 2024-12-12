@@ -88,7 +88,7 @@
     "ADV": 6,
     "EXP": 9.5,
     "MAS": 13.8,
-    "ULT": 14.7,
+    "ULT": 15,
     "genre": 3,
     "release": 4,
     "newV": 0
@@ -10968,7 +10968,7 @@
     "BAS": 3,
     "ADV": 8,
     "EXP": 13.4,
-    "MAS": 14.7,
+    "MAS": 14.9,
     "genre": 5,
     "release": 16,
     "newV": 0
@@ -12354,7 +12354,7 @@
     "BAS": 3,
     "ADV": 7,
     "EXP": 12.5,
-    "MAS": 14.7,
+    "MAS": 14.9,
     "genre": 6,
     "release": 18,
     "newV": 0
