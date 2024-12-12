@@ -937,8 +937,8 @@
         console.error(e)
       }
     }));
-    const Ye = He("filterConstMin", 1, 1, 15.5),
-      Ze = He("filterConstMax", 15.5, 1, 15.5),
+    const Ye = He("filterConstMin", 1, 1, 15.7),
+      Ze = He("filterConstMax", 15.7, 1, 15.7),
       Qe = Ue("filterDiff", {
         BAS: !0,
         ADV: !0,
@@ -2708,7 +2708,7 @@
       }
       let Ne = {
         label: e[0]("settings.filter.const"),
-        max: 15.5,
+        max: 15.7,
         min: 1,
         step: .1
       };
