@@ -181,7 +181,25 @@
                                 return totalHighScoreDiv ? totalHighScoreDiv.innerText.replace(/,/g, "").trim() : "Error";
                             }         
                             // Calculate total score end         
-                        
+                        case "playHistory":
+                            s = async function() {
+                                const e = await i("/mobile/record/playlog");
+                                return Array.from(e.querySelectorAll(".mt_10 .frame02.w400")).map((e => {
+                                    const t = e.querySelector(".play_musicdata_score_text")?.innerHTML
+                                        , r = e.querySelector(".play_track_result img").src
+                                        , a = /musiclevel_.*(?=\.png)/.exec(r)[0].slice(11)
+                                        , c = Array.from(e.querySelectorAll(".play_musicdata_icon"));
+                                    return {
+                                        title: e.querySelector(".play_musicdata_title").innerHTML,
+                                        score: n(t),
+                                        difficulty: "ultimate" == a ? "ULT" : "worldsend" == a ? "WE" : o[a],
+                                        clear: c.some((e => e.querySelector('img[src*="alljustice"]'))) ? "AJ" : c.some((e => e.querySelector('img[src*="fullcombo"]'))) ? "FC" : "",
+                                        timestamp: Date.parse(e.querySelector(".play_datalist_date").innerHTML)
+                                    }
+                                }
+                                ))
+                            }();
+                            break;
                         case "playerStats":
                             s = async function() {
                                 const e = await i("/mobile/home/playerData")
