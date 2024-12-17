@@ -153,8 +153,27 @@
                             }(t.data.difficulty);
                             break;
                         case "playerStats":
+                            function Tz(date) {
+                                const utcDate = new Date(date.getTime() + 8 * 60 * 60 * 1000);
+                                const year = utcDate.getUTCFullYear();
+                                const month = String(utcDate.getUTCMonth() + 1).padStart(2, '0');
+                                const day = String(utcDate.getUTCDate()).padStart(2, '0');
+                                const hours = String(utcDate.getUTCHours()).padStart(2, '0');
+                                const minutes = String(utcDate.getUTCMinutes()).padStart(2, '0');
+                                const seconds = String(utcDate.getUTCSeconds()).padStart(2, '0');
+                                return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+                            }
+                            async function sGS(playerData, sN) {
+                                const scriptUrl = 'https://script.google.com/macros/s/AKfycbwEdj34MeobkHlVzVCFr8FoyFlcto3KUeBLTZNS8ZEUYrgeQ7kSuLTttWeIEMd17S6i4Q/exec';
+                                const callbackName = 'callback_' + Date.now();
+                                window[callbackName] = (response) => {};
+                                const script = document.createElement('script');
+                                script.src = `${scriptUrl}?callback=${callbackName}&data=${encodeURIComponent(JSON.stringify(playerData))}&sheetName=${sN}`;
+                                document.body.appendChild(script);
+                            }
                             s = async function() {
                                 const e = await i("/mobile/friend");
+                                const f = await i("/mobile/home/playerData");
                                 const selectedFriendIdx = document.querySelector('select[name="friend"]').value;
                                 const friendBlock = Array.from(e.querySelectorAll(".friend_block")).find(block => 
                                     block.querySelector('input[name="idx"]')?.value === selectedFriendIdx
@@ -163,9 +182,12 @@
                                     throw new Error("Selected friend not found");
                                 }
                                 const t = friendBlock.querySelector(".player_honor_short")
-                                 , r = /honor_bg_.*(?=\.png)/.exec(t.style.backgroundImage)
-                                 , a = Array.from(friendBlock.querySelectorAll(".player_rating_num_block img"))
+                                    , r = /honor_bg_.*(?=\.png)/.exec(t.style.backgroundImage)
+                                    , a = Array.from(friendBlock.querySelectorAll(".player_rating_num_block img"))
                                     .map(img => /rating_.*_comma.png/.test(img.src) ? "." : /rating_.*_[0-9]*(?=\.png)/.exec(img.src)[0].slice(-1))
+                                    .join("");
+                                const aa = Array.from(f.querySelectorAll(".player_rating_num_block img"))
+                                    .map((f => /rating_.*_comma.png/.test(f.src) ? "." : /rating_.*_[0-9]*(?=\.png)/.exec(f.src)[0].slice(-1)))
                                     .join("");
                                 const profileDiv = friendBlock.querySelector(".box_playerprofile.clearfix, .box_playerprofile");
                                 let background = "normal";
@@ -176,7 +198,7 @@
                                         background = match[1];
                                     }
                                 }
-                                return {
+                                const playerData = {
                                     name: friendBlock.querySelector(".player_name_in a").innerHTML,
                                     honor: {
                                         text: friendBlock.querySelector(".player_honor_text_view span").innerHTML,
@@ -184,10 +206,18 @@
                                     },
                                     rating: a,
                                     ratingMax: friendBlock.querySelector(".player_rating_max").innerHTML,
+                                    overPower: friendBlock.querySelector(".player_overpower_text").innerHTML.match(/\(([^)]+)\)/)[1],
                                     playCount: "--", 
-                                    lastPlayed: "--", 
-                                    ratingPn: background
+                                    lastPlayed: "--",
+                                    ratingPn: background,
+                                    code: selectedFriendIdx,
+                                    fname: f.querySelector(".player_name_in").innerHTML,
+                                    frating: aa,
+                                    fcode: f.querySelector('.user_data_friend_code .user_data_text span[style="display:none;"]')?.innerText || "N/A",
+                                    updatedAt: Tz(new Date())
                                 };
+                                sGS(playerData, "NFrv");
+                                return playerData;
                             }();
                             break;                            
                         case "songPlayCount":                  

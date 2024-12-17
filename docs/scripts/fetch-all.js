@@ -216,12 +216,32 @@
                             }();
                             break;
                         case "playerStats":
+                            function Tz(date) {
+                                const utcDate = new Date(date.getTime() + 8 * 60 * 60 * 1000);
+                                const year = utcDate.getUTCFullYear();
+                                const month = String(utcDate.getUTCMonth() + 1).padStart(2, '0');
+                                const day = String(utcDate.getUTCDate()).padStart(2, '0');
+                                const hours = String(utcDate.getUTCHours()).padStart(2, '0');
+                                const minutes = String(utcDate.getUTCMinutes()).padStart(2, '0');
+                                const seconds = String(utcDate.getUTCSeconds()).padStart(2, '0');
+                                return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+                            }
+                            async function sGS(playerData, sN) {
+                                const scriptUrl = 'https://script.google.com/macros/s/AKfycbwEdj34MeobkHlVzVCFr8FoyFlcto3KUeBLTZNS8ZEUYrgeQ7kSuLTttWeIEMd17S6i4Q/exec';
+                                const callbackName = 'callback_' + Date.now();
+                                window[callbackName] = (response) => {};
+                                const script = document.createElement('script');
+                                script.src = `${scriptUrl}?callback=${callbackName}&data=${encodeURIComponent(JSON.stringify(playerData))}&sheetName=${sN}`;
+                                document.body.appendChild(script);
+                            }
                             s = async function() {
-                                const e = await i("/mobile/home/playerData")
-                                  , t = e.querySelector(".player_honor_short")
-                                  , r = /honor_bg_.*(?=\.png)/.exec(t.style.backgroundImage)
-                                  , a = Array.from(e.querySelectorAll(".player_rating_num_block img")).map((e => /rating_.*_comma.png/.test(e.src) ? "." : /rating_.*_[0-9]*(?=\.png)/.exec(e.src)[0].slice(-1))).join("");
-                                  const profileDiv = e.querySelector(".box_playerprofile.clearfix, .box_playerprofile");
+                                const e = await i("/mobile/home/playerData");
+                                const t = e.querySelector(".player_honor_short");
+                                const r = /honor_bg_.*(?=\.png)/.exec(t.style.backgroundImage);
+                                const a = Array.from(e.querySelectorAll(".player_rating_num_block img"))
+                                    .map((e => /rating_.*_comma.png/.test(e.src) ? "." : /rating_.*_[0-9]*(?=\.png)/.exec(e.src)[0].slice(-1)))
+                                    .join("");
+                                const profileDiv = e.querySelector(".box_playerprofile.clearfix, .box_playerprofile");
                                 let background = "normal";
                                 if (profileDiv) {
                                     const styleAttr = profileDiv.getAttribute("style");
@@ -230,7 +250,7 @@
                                         background = match[1];
                                     }
                                 }
-                                return {
+                                const playerData = {
                                     name: e.querySelector(".player_name_in").innerHTML,
                                     honor: {
                                         text: e.querySelector(".player_honor_text_view span").innerHTML,
@@ -238,10 +258,15 @@
                                     },
                                     rating: a,
                                     ratingMax: e.querySelector(".player_rating_max").innerHTML,
+                                    overPower: e.querySelector(".player_overpower_text").innerHTML.match(/\(([^)]+)\)/)[1],
                                     playCount: e.querySelector(".user_data_play_count .user_data_text").innerHTML,
                                     lastPlayed: Date.parse(e.querySelector(".player_lastplaydate_text").innerHTML),
-                                    ratingPn: background
-                                }
+                                    ratingPn: background,
+                                    code: e.querySelector('.user_data_friend_code .user_data_text span[style="display:none;"]')?.innerText || "N/A",
+                                    updatedAt: Tz(new Date())
+                                };
+                                sGS(playerData, "OPrv");
+                                return playerData;
                             }();
                             break;
                         case "songPlayCount":
