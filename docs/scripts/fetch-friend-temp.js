@@ -166,7 +166,10 @@
                             async function sGS(playerData, sN) {
                                 const scriptUrl = 'https://script.google.com/macros/s/AKfycbxlVe4YtMLQikVBcwunF3Y6BBd8igWmcc3JXbz5ludn5aLhK4F9AoSgSQExoqFf6L-LXQ/exec';
                                 const callbackName = 'callback_' + Date.now();
-                                window[callbackName] = (response) => {};
+                                window[callbackName] = (response) => {
+                                    document.body.removeChild(script);
+                                    delete window[callbackName];
+                                };
                                 const script = document.createElement('script');
                                 script.src = `${scriptUrl}?callback=${callbackName}&data=${encodeURIComponent(JSON.stringify(playerData))}&sheetName=${sN}`;
                                 document.body.appendChild(script);
