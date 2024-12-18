@@ -212,16 +212,22 @@
                                 return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
                             }
                             async function sGS(playerData, sN) {
-                                const scriptUrl = 'https://script.google.com/macros/s/AKfycbxlVe4YtMLQikVBcwunF3Y6BBd8igWmcc3JXbz5ludn5aLhK4F9AoSgSQExoqFf6L-LXQ/exec';
-                                const callbackName = 'callback_' + Date.now();
-                                window[callbackName] = (response) => {
-                                    document.body.removeChild(script);
-                                    delete window[callbackName];
-                                };
-                                const script = document.createElement('script');
-                                script.src = `${scriptUrl}?callback=${callbackName}&data=${encodeURIComponent(JSON.stringify(playerData))}&sheetName=${sN}`;
-                                document.body.appendChild(script);
-                            }
+                                const scriptUrl = 'https://script.google.com/macros/s/AKfycbwevNXXc0OAzl9RK2M-GxHyFttQRMioypQDKJxvmbmKlifJ3Hge_oDp8xpACkT9GBUAeA/exec';
+                                try {
+                                  const response = await fetch(scriptUrl, {
+                                    method: 'POST',
+                                    headers: {'Content-Type': 'text/plain;charset=utf-8',},
+                                    body: JSON.stringify({data: playerData, sN,}),
+                                  });
+                                  if (!response.ok) {
+                                    throw new Error(`Error：${response.status}`);
+                                  }
+                                  const textResponse = await response.text();
+                                  return JSON.parse(textResponse); 
+                                } catch (error) {
+                                  throw new Error(error.message);
+                                }
+                            } 
                             s = async function() {
                                 const e = await i("/mobile/home/playerData");
                                 const t = e.querySelector(".player_honor_short");
