@@ -4,7 +4,7 @@ This repo is forked from [Dogeon188/chuni-tools](https://github.com/Dogeon188/ch
 
 (請注意：中文內容設於下方)
 
-For more information please refer to [this page](https://chuni.tsaibee.org/?lang=en_US).
+For more information please refer to [this page](https://chuni.tsaibee.org/?lang=en_US) and [Privacy policy](https://chuni.tsaibee.org/privacy-policy).
 
 ## Chart constant data
 JP 20241212v11
@@ -41,9 +41,10 @@ javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.gi
 - Target Rank Score Calculation：
  Select song on [CHUNITHM-NET Play Record](https://chunithm-net-eng.com/mobile/record/playlog) page, click 'Details' and then execute.
 
+
 # CHUNITHM Tools (國際版)
 
-若要取得更多資訊，請參考[此頁面](https://chuni.tsaibee.org/?lang=zh_TW)
+若要取得更多資訊，請參考[此頁面](https://chuni.tsaibee.org/?lang=zh_TW)及[隱私權政策](https://chuni.tsaibee.org/privacy-policy)
 
 ## 定數資料
 JP 20241212v11
