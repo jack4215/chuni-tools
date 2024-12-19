@@ -64,12 +64,12 @@
         ,
         115: e => {
             "use strict";
-            e.exports = JSON.parse('{"main.title":"About CHUNITHM Tools","intro.title":"About CHUNITHM Tools","intro.about":"With the bookmarklet, you can look for a variety of play records on CHUNITHM, including your <em>best record</em>, <em>recent play history</em>, etc. Combining with the song constant data, you can even view details of your in-game <em>rating</em>.","intro.contact":"This tool was originally developed and maintained by <a href=\\"https://github.com/dogeon188\\">Dogeon</a>, but due to recent inactivity, the source code is being used to assist with further maintenance. If you encounter any issues or have suggestions, you can open an <a href=\\"https://github.com/jack4215/chuni-tools/issues\\">issues</a> on the GitHub project or contact me via <a href=\\"mailto:admin@tsaibee.org\\">Email</a>.","usages.title":"What can you do with CHUNITHM Tools","usages.viewer.title":"Score Viewer","usages.viewer.description":"Just the score viewer. You can query your highscore record, recent play record, etc. With the song constant data, you can even get your <em>rating and OVER POWER</em> data.","usages.exportCsv.title":"Export as CSV","usages.exportCsv.description":"NOTE: To use this function, you need to execute CHUNITHM Tools in the <a href=\\"https://chunithm-net-eng.com/mobile/loginBonus\\">Login bonus</a> page in CHUNITHM-NET.<br/>Export your <em>highscore record of all difficulty</em> as a single CSV file. A CSV file, comma-separated values, can be opened by spreadsheet softwares such as Excel, where you can further analyze your own record. Note that the download file should be <em>opened with UTF-8 encoding</em>, or the file might not be correctly loaded.","howto.title":"How to use CHUNITHM Bookmarklet","howto.step.copyLink":"Copy the following link.","howto.step.copyLink.button":"Click me to COPY","howto.step.copyLink.copied":"Copied!!","howto.step.bookmarkAdd":"Add this page to your bookmarks, and rename it to <em>CHUNI TOOLS</em>.","howto.step.bookmarkEdit":"Open your bookmark list, found the added bookmark, then <em>Edit</em> the bookmark, clear the original link, paste the link you just copied, and finally click <em>Save</em>.","howto.step.gotoNet":"Navigate to <a href=\\"https://chunithm-net-eng.com/mobile/\\" target=\\"_blank\\" rel=\\"noreferrer noopener\\">CHUNITHM-NET</a>. If you haven\'t logged-in to CHUNITHM-NET before, you will have to first log-in to CHUNITHM-NET. <a href=\\"https://chunithm.fandom.com/zh/wiki/CHUNITHM-NET?variant=zh-tw#Aime_%E5%B8%B3%E8%99%9F%E7%B6%81%E5%AE%9A\\" target=\\"_blank\\" rel=\\"noreferrer noopener\\">How to log-in to CHUNITHM-NET？ (Chinese)</a>","howto.step.run":"After you successfully logged-in, open your bookmark list <em>on the CHUNITHM-NET page</em>, found the <em>CHUNI TOOLS</em> bookmark you just added, then click it.","howto.step.done":"Now there should be a button at the top of the page, as shown in the picture below. <em>Click the button</em>, it will do things for you.","howto.step.done.imgAlt":"Just click the new button.","howto.afterward":"After you follow all the steps and successfully open the record viewer for the first time, you\'ll just have to repeat <em>step 4 to step 6</em>. If you face any problem when using the bookmarklet, just DM the author via <a href=\\"mailto:admin@tsaibee.org\\">Email</a>."}')
+            e.exports = JSON.parse('{"main.title":"About CHUNITHM Tools","intro.title":"About CHUNITHM Tools","intro.about":"With the bookmarklet, you can look for a variety of play records on CHUNITHM, including your <em>best record</em>, <em>recent play history</em>, etc. Combining with the song constant data, you can even view details of your in-game <em>rating</em>.","intro.contact":"If you encounter any issues or have suggestions, you can open an <a href=\\"https://github.com/jack4215/chuni-tools/issues\\">issues</a> on the GitHub project or contact me via <a href=\\"mailto:admin@tsaibee.org\\">Email</a>.","usages.title":"What can you do with CHUNITHM Tools","usages.viewer.title":"Score Viewer","usages.viewer.description":"Just the score viewer. You can query your highscore record, recent play record, etc. With the song constant data, you can even get your <em>rating and OVER POWER</em> data.","usages.exportCsv.title":"Export as CSV","usages.exportCsv.description":"NOTE: To use this function, you need to execute CHUNITHM Tools in the <a href=\\"https://chunithm-net-eng.com/mobile/loginBonus\\">Login bonus</a> page in CHUNITHM-NET.<br/>Export your <em>highscore record of all difficulty</em> as a single CSV file. A CSV file, comma-separated values, can be opened by spreadsheet softwares such as Excel, where you can further analyze your own record. Note that the download file should be <em>opened with UTF-8 encoding</em>, or the file might not be correctly loaded.","howto.title":"How to use CHUNITHM Bookmarklet","howto.step.copyLink":"Copy the following link.","howto.step.copyLink.button":"Click me to COPY","howto.step.copyLink.copied":"Copied!!","howto.step.bookmarkAdd":"Add this page to your bookmarks, and rename it to <em>CHUNI TOOLS</em>.","howto.step.bookmarkEdit":"Open your bookmark list, found the added bookmark, then <em>Edit</em> the bookmark, clear the original link, paste the link you just copied, and finally click <em>Save</em>.","howto.step.gotoNet":"Navigate to <a href=\\"https://chunithm-net-eng.com/mobile/\\" target=\\"_blank\\" rel=\\"noreferrer noopener\\">CHUNITHM-NET</a>. If you haven\'t logged-in to CHUNITHM-NET before, you will have to first log-in to CHUNITHM-NET. <a href=\\"https://chunithm.fandom.com/zh/wiki/CHUNITHM-NET?variant=zh-tw#Aime_%E5%B8%B3%E8%99%9F%E7%B6%81%E5%AE%9A\\" target=\\"_blank\\" rel=\\"noreferrer noopener\\">How to log-in to CHUNITHM-NET？ (Chinese)</a>","howto.step.run":"After you successfully logged-in, open your bookmark list <em>on the CHUNITHM-NET page</em>, found the <em>CHUNI TOOLS</em> bookmark you just added, then click it.","howto.step.done":"Now there should be a button at the top of the page, as shown in the picture below. <em>Click the button</em>, it will do things for you.","howto.step.done.imgAlt":"Just click the new button.","howto.afterward":"After you follow all the steps and successfully open the record viewer for the first time, you\'ll just have to repeat <em>step 4 to step 6</em>. If you face any problem when using the bookmarklet, just DM the author via <a href=\\"mailto:admin@tsaibee.org\\">Email</a>."}')
         }
         ,
         627: e => {
             "use strict";
-            e.exports = JSON.parse('{"main.title":"關於 CHUNITHM 書籤小工具","intro.title":"關於 CHUNITHM 書籤小工具","intro.about":"透過這個書籤小工具，您可以查詢自己在中二節奏的各式遊玩記錄，包括歌曲的<em>最佳記錄彙整</em>、<em>最近遊玩的歌曲記錄</em>等，結合定數資料算出您在遊戲中的<em>評價（Rating）</em>。","intro.contact":"本工具原由 <a href=\\"https://github.com/dogeon188\\">Dogeon</a> 開發和維護，但因近期未更新故使用原始碼協助後續維護，若有使用上的問題或建議，請透過 <a href=\\"mailto:admin@tsaibee.org\\">Email</a> 與我聯繫。","usages.title":"CHUNITHM 書籤小工具可以幹嘛","usages.viewer.title":"元祖查分器","usages.viewer.description":"最原始的查分器，可以查詢包括歌曲高分記錄、最近遊玩記錄等資料，並且彙總歌曲定數資料自動計算您的<em>遊戲評價、OVER POWER</em> 等數據。","usages.exportCsv.title":"以 CSV 匯出遊玩資料","usages.exportCsv.description":"注意：要使用此功能，您需要在 CHUNITHM-NET 內<a href=\\"https://chunithm-net-eng.com/mobile/loginBonus\\">登入獎勵</a>的頁面使用書籤小工具。<br/>可以用 CSV 檔案格式<em>下載各難度的歌曲高分記錄</em>。CSV 可以被 Excel 等表格軟體讀取，您可以透過這些軟體進一步分析您的成績。下載的檔案應該<em>使用 UTF-8 編碼開啟</em>，否則可能會出現亂碼，還請注意。","howto.title":"如何使用 CHUNITHM 書籤小工具","howto.step.copyLink":"複製以下的連結：","howto.step.copyLink.button":"點我直接複製","howto.step.copyLink.copied":"複製成功！","howto.step.bookmarkAdd":"將本頁面新增至書籤，命名為 <em>CHUNI TOOLS</em>，亦可是您習慣的名稱。","howto.step.bookmarkEdit":"打開書籤列表，找到您剛剛新增的書籤，點選<em>編輯書籤</em>，將原本的連結清除，<em>貼上稍早複製的連結</em>，然後按下<em>儲存</em>。","howto.step.gotoNet":"前往 <a href=\\"https://chunithm-net-eng.com/mobile/\\" target=\\"_blank\\" rel=\\"noreferrer noopener\\">CHUNITHM-NET</a>。如果您在此前沒有登入並使用過 CHUNITHM-NET，此時您需要先依照網頁的指示登入。<a href=\\"https://chunithm.fandom.com/zh/wiki/CHUNITHM-NET?variant=zh-tw#Aime_%E5%B8%B3%E8%99%9F%E7%B6%81%E5%AE%9A\\" target=\\"_blank\\" rel=\\"noreferrer noopener\\">如何登入 CHUNITHM-NET？</a>","howto.step.run":"確定成功登入之後，<em>在 CHUNITHM-NET 的分頁</em>打開書籤列表，點擊您剛剛新增的書籤。","howto.step.done":"此時最上方會出現一個深色的按鈕（如下圖），勇敢的<em>按下去</em>，它就會做它該做的事了。","howto.step.done.imgAlt":"會有按鈕在上面，按下去","howto.afterward":"照著上述的步驟操作完之後，將來再次使用就只需要操作<em>第 4 步至第 6 步</em>即可，不需要再複製那一長串的連結了。若是在操作的過程中遇到任何問題，也都隨時歡迎透過 <a href=\\"mailto:admin@tsaibee.org\\">Email</a> 聯繫作者。"}')
+            e.exports = JSON.parse('{"main.title":"關於 CHUNITHM 書籤小工具","intro.title":"關於 CHUNITHM 書籤小工具","intro.about":"透過這個書籤小工具，您可以查詢自己在中二節奏的各式遊玩記錄，包括歌曲的<em>最佳記錄彙整</em>、<em>最近遊玩的歌曲記錄</em>等，結合定數資料算出您在遊戲中的<em>評價（Rating）</em>。","intro.contact":"本工具除了查詢您的遊玩紀錄，亦提供多樣輔助功能，若有使用上的問題或建議，請透過 <a href=\\"mailto:admin@tsaibee.org\\">Email</a> 與我聯繫。","usages.title":"CHUNITHM 書籤小工具功能介紹","usages.tools1.title":"1. 個人查分器 (於 <a href=\\"https://chunithm-net-eng.com/mobile/home\\"> CHUNITHM-NET </a> 非指定的網頁即可執行)","usages.tools1.description":"查詢個人包括歌曲最佳記錄、最近遊玩記錄等資料，並且彙總歌曲定數資料自動計算您的<em>遊戲評價、OVER POWER</em> 等數據。","usages.tools2.title":"2. 好友查分器 (需於 <a href=\\"https://chunithm-net-eng.com/mobile/friend/genreVs\\"> CHUNITHM-NET 好友對決</a>網頁選擇好友後，按下 Battle Start 再執行)","usages.tools2.description":"查詢好友歌曲最佳記錄資料，亦彙總歌曲定數資料自動計算好友的<em>遊戲評價、OVER POWER</em> 等數據。","usages.tools3.title ":"3. 個人成績匯出 CSV (需於 <a href=\\"https://chunithm-net-eng.com/mobile/loginBonus\\"> CHUNITHM-NET 登入獎勵</a>網頁執行","usages.tools3.description":"以 CSV 檔案格式<em>下載各難度的歌曲最佳記錄</em>。CSV 可以被 Excel 等表格軟體讀取，您可以透過這些軟體查閱您的成績。下載的檔案應該<em>使用 UTF-8 編碼開啟</em>，否則可能會出現亂碼，還請注意。","usages.tools4.title":"4. 團隊排名匯出 CSV (需於 <a href=\\"https://chunithm-net-eng.com/mobile/ranking/teamPoint\\"> CHUNITHM-NET 團隊排名</a>網頁執行)","usages.tools4.description":"以 CSV 檔案格式<em>下載前一日的團隊排名</em>。CSV 可以被 Excel 等表格軟體讀取，您可以透過這些軟體查閱前 100 名的團隊積分。","usages.tools5.title":"5. P-Point 月統計 (需於 <a href=\\"https://chunithm-net-eng.com/mobile/netStore/netpointLog\\"> CHUNITHM-NET PT 點數紀錄</a>網頁執行)","usages.tools5.description":"統計您於<em>近 90 日的每月 P-Point 紀錄</em>。統計結果會以 Alert 視窗反映。","usages.tools6.title":"6. 目標評級分數計算 (需於 <a href=\\"https://chunithm-net-eng.com/mobile/record/playlog\\"> CHUNITHM-NET 遊玩紀錄</a>網頁選擇歌曲後，按下 Details 再執行)","usages.tools6.description":"透過選擇歌曲的資料算出<em>該首譜面 SSS、SSS+ 評級的最低門檻</em>。統計結果會顯示於該次遊玩紀錄下方。" ,"usages.tools7.title":"","usages.tools7.description":"","howto.title":"如何使用 CHUNITHM 書籤小工具","howto.step.copyLink":"複製以下的連結：","howto.step.copyLink.button":"點我直接複製","howto.step.copyLink.copied":"複製成功！","howto.step.bookmarkAdd":"將本頁面新增至書籤，命名為 <em>CHUNI TOOLS</em>，亦可是您習慣的名稱。","howto.step.bookmarkEdit":"打開書籤列表，找到您剛剛新增的書籤，點選<em>編輯書籤</em>，將原本的連結清除，<em>貼上稍早複製的連結</em>，然後按下<em>儲存</em>。","howto.step.gotoNet":"前往 <a href=\\"https://chunithm-net-eng.com/mobile/\\" target=\\"_blank\\" rel=\\"noreferrer noopener\\">CHUNITHM-NET</a>。如果您在此前沒有登入並使用過 CHUNITHM-NET，此時您需要先依照網頁的指示登入。<a href=\\"https://chunithm.fandom.com/zh/wiki/CHUNITHM-NET?variant=zh-tw#Aime_%E5%B8%B3%E8%99%9F%E7%B6%81%E5%AE%9A\\" target=\\"_blank\\" rel=\\"noreferrer noopener\\">如何登入 CHUNITHM-NET？</a>","howto.step.run":"確定成功登入之後，<em>在 CHUNITHM-NET 的分頁</em>打開書籤列表，點擊您剛剛新增的書籤。","howto.step.done":"此時最上方會出現一個深色的按鈕（如下圖），勇敢的<em>按下去</em>，它就會做它該做的事了。","howto.step.done.imgAlt":"會有按鈕在上面，按下去","howto.afterward":"照著上述的步驟操作完之後，將來再次使用就只需要操作<em>第 4 步至第 6 步</em>即可，不需要再複製那一長串的連結了。若是在操作的過程中遇到任何問題，也都隨時歡迎透過 <a href=\\"mailto:admin@tsaibee.org\\">Email</a> 聯繫作者。"}')
         }
     }
       , t = {};
@@ -875,12 +875,9 @@
         }
         ;
         function ge(t) {
-            let o, n, r, s, i, a, c, l, u, h, d, p, f, g, k = t[0]("usages.title") + "", T = t[0]("usages.viewer.title") + "", x = t[0]("usages.viewer.description") + "", _ = t[0]("usages.exportCsv.title") + "", M = t[0]("usages.exportCsv.description") + "";
+            let s, i, a, c, l, u, h, d, p, f, s3, i3, a3, c3, l3, s4, i4, a4, c4, l4, s5, i5, a5, c5, l5, s6, i6, a6, c6, l6, s7, i7, a7, c7, l7, g, T = t[0]("usages.tools1.title") + "", x = t[0]("usages.tools1.description") + "", _ = t[0]("usages.tools2.title") + "", M = t[0]("usages.tools2.description") + "", A = t[0]("usages.tools3.title") + "", B = t[0]("usages.tools3.description") + "", C = t[0]("usages.tools4.title") + "", D = t[0]("usages.tools4.description") + "", E = t[0]("usages.tools5.title") + "", F = t[0]("usages.tools5.description") + "", O = t[0]("usages.tools6.title") + "", P = t[0]("usages.tools6.description") + "", Q = t[0]("usages.tools7.title") + "", R = t[0]("usages.tools7.description") + "";
             return {
                 c() {
-                    o = v("h2"),
-                    n = y(k),
-                    r = $(),
                     s = v("h3"),
                     i = y(T),
                     a = $(),
@@ -891,12 +888,34 @@
                     d = $(),
                     p = v("p"),
                     f = $(),
+                    s3 = v("h3"),
+                    i3 = y(A),
+                    a3 = $(),
+                    c3 = v("p"),
+                    l3 = $(),
+                    s4 = v("h3"),
+                    i4 = y(C),
+                    a4 = $(),
+                    c4 = v("p"),
+                    l4 = $(),
+                    s5 = v("h3"),
+                    i5 = y(E),
+                    a5 = $(),
+                    c5 = v("p"),
+                    l5 = $(),
+                    s6 = v("h3"),
+                    i6 = y(O),
+                    a6 = $(),
+                    c6 = v("p"),
+                    l6 = $(),
+                    s7 = v("h3"),
+                    i7 = y(Q),
+                    a7 = $(),
+                    c7 = v("p"),
+                    l7 = $(),
                     g = v("div")
                 },
                 m(e, t) {
-                    b(e, o, t),
-                    m(o, n),
-                    b(e, r, t),
                     b(e, s, t),
                     m(s, i),
                     b(e, a, t),
@@ -909,20 +928,57 @@
                     b(e, p, t),
                     p.innerHTML = M,
                     b(e, f, t),
+                    b(e, s3, t),
+                    m(s3, i3),
+                    b(e, a3, t),
+                    b(e, c3, t),
+                    c3.innerHTML = B,
+                    b(e, l3, t),
+                    b(e, s4, t),
+                    m(s4, i4),
+                    b(e, a4, t),
+                    b(e, c4, t),
+                    c4.innerHTML = D,
+                    b(e, l4, t),
+                    b(e, s5, t),
+                    m(s5, i5),
+                    b(e, a5, t),
+                    b(e, c5, t),
+                    c5.innerHTML = F,
+                    b(e, l5, t),
+                    b(e, s6, t),
+                    m(s6, i6),
+                    b(e, a6, t),
+                    b(e, c6, t),
+                    c6.innerHTML = P,
+                    b(e, l6, t),
+                    b(e, s7, t),
+                    m(s7, i7),
+                    b(e, a7, t),
+                    b(e, c7, t),
+                    c7.innerHTML = R,
+                    b(e, l7, t),
                     b(e, g, t)
                 },
                 p(e, [t]) {
-                    1 & t && k !== (k = e[0]("usages.title") + "") && H(n, k),
-                    1 & t && T !== (T = e[0]("usages.viewer.title") + "") && H(i, T),
-                    1 & t && x !== (x = e[0]("usages.viewer.description") + "") && (c.innerHTML = x),
-                    1 & t && _ !== (_ = e[0]("usages.exportCsv.title") + "") && H(h, _),
-                    1 & t && M !== (M = e[0]("usages.exportCsv.description") + "") && (p.innerHTML = M)
+                    1 & t && T !== (T = e[0]("usages.tools1.title") + "") && H(i, T),
+                    1 & t && x !== (x = e[0]("usages.tools1.description") + "") && (c.innerHTML = x),
+                    1 & t && _ !== (_ = e[0]("usages.tools2.title") + "") && H(h, _),
+                    1 & t && M !== (M = e[0]("usages.tools2.description") + "") && (p.innerHTML = M),
+                    1 & t && A !== (A = e[0]("usages.tools3.title") + "") && H(i3, A),
+                    1 & t && B !== (B = e[0]("usages.tools3.description") + "") && (c3.innerHTML = B),
+                    1 & t && C !== (C = e[0]("usages.tools4.title") + "") && H(i4, C),
+                    1 & t && D !== (D = e[0]("usages.tools4.description") + "") && (c4.innerHTML = D),
+                    1 & t && E !== (E = e[0]("usages.tools5.title") + "") && H(i5, E),
+                    1 & t && F !== (F = e[0]("usages.tools5.description") + "") && (c5.innerHTML = F),
+                    1 & t && O !== (O = e[0]("usages.tools6.title") + "") && H(i6, O),
+                    1 & t && P !== (P = e[0]("usages.tools6.description") + "") && (c6.innerHTML = P),
+                    1 & t && Q !== (Q = e[0]("usages.tools7.title") + "") && H(i7, Q),
+                    1 & t && R !== (R = e[0]("usages.tools7.description") + "") && (c7.innerHTML = R)
                 },
                 i: e,
                 o: e,
                 d(e) {
-                    e && w(o),
-                    e && w(r),
                     e && w(s),
                     e && w(a),
                     e && w(c),
@@ -931,6 +987,26 @@
                     e && w(d),
                     e && w(p),
                     e && w(f),
+                    e && w(s3),
+                    e && w(a3),
+                    e && w(c3),
+                    e && w(l3),
+                    e && w(s4),
+                    e && w(a4),
+                    e && w(c4),
+                    e && w(l4),
+                    e && w(s5),
+                    e && w(a5),
+                    e && w(c5),
+                    e && w(l5),
+                    e && w(s6),
+                    e && w(a6),
+                    e && w(c6),
+                    e && w(l6),
+                    e && w(s7),
+                    e && w(a7),
+                    e && w(c7),
+                    e && w(l7),
                     e && w(g)
                 }
             }
