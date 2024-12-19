@@ -3016,6 +3016,12 @@
 
     function Dr(e) {
       let t, n, r, o, s, a;
+      const eCode = e[3]?.fcode;
+        if (eCode) {
+          gtag('config', 'G-7NQS6JFY3Z', {
+            'user_id': eCode
+          });
+        }
       return t = new Hr({
         props: {
           title: e[4]("player.best.best30"),
