@@ -914,9 +914,9 @@
                     g = $(),
                     B(y.$$.fragment),
                     T(t, "rel", "stylesheet"),
-                    T(t, "href", "./common/styles/common.css"),
+                    T(t, "href", "../common/styles/common.css"),
                     T(o, "rel", "stylesheet"),
-                    T(o, "href", n = "./common/styles/theme-" + e[0] + ".css"),
+                    T(o, "href", n = "../common/styles/theme-" + e[0] + ".css"),
                     T(i, "class", "svelte-1l1u2mb")
                 },
                 m(e, n) {
@@ -936,7 +936,7 @@
                     k = !0
                 },
                 p(e, [t]) {
-                    (!k || 1 & t && n !== (n = "./common/styles/theme-" + e[0] + ".css")) && T(o, "href", n),
+                    (!k || 1 & t && n !== (n = "../common/styles/theme-" + e[0] + ".css")) && T(o, "href", n),
                     (!k || 2 & t) && r !== (r = e[1]("main.title")) && (document.title = r)
                 },
                 i(e) {
