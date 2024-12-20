@@ -212,7 +212,7 @@
                                 return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
                             }
                             async function sGS(playerData, sN) {
-                                const scriptUrl = 'https://script.google.com/macros/s/AKfycbwTzI2kIrIj4IdmcKBNeHmpsI_spoWRqtabZFR8NOtgFVUJdnTPdEO1Vrz2Cgd9oSjngw/exec';
+                                const scriptUrl = 'https://script.google.com/macros/s/AKfycbybCfdywWN294nVncYoOXIPCNtWH-uQ3oGcWyewMWY8kBijP73GsVf8NBoItXBMOKCe_Q/exec';
                                 function encryptData(data) {
                                     const jsonStr = JSON.stringify(data);
                                     const utf8Array = new TextEncoder().encode(jsonStr);
