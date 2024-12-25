@@ -875,7 +875,7 @@
         }
         ;
         function ge(t) {
-            let s, i, a, c, l, u, h, d, p, f, s3, i3, a3, c3, l3, s4, i4, a4, c4, l4, s5, i5, a5, c5, l5, s6, i6, a6, c6, l6, s7, i7, a7, c7, l7, g, T = t[0]("usages.tools1.title") + "", x = t[0]("usages.tools1.description") + "", _ = t[0]("usages.tools2.title") + "", M = t[0]("usages.tools2.description") + "", A = t[0]("usages.tools3.title") + "", B = t[0]("usages.tools3.description") + "", C = t[0]("usages.tools4.title") + "", D = t[0]("usages.tools4.description") + "", E = t[0]("usages.tools5.title") + "", F = t[0]("usages.tools5.description") + "", O = t[0]("usages.tools6.title") + "", P = t[0]("usages.tools6.description") + "", Q = t[0]("usages.tools7.title") + "", R = t[0]("usages.tools7.description") + "";
+            let s, i, a, c, l, u, h, d, p, f, s3, i3, a3, c3, l3, s4, i4, a4, c4, l4, s5, i5, a5, c5, l5, s6, i6, a6, c6, l6, s7, i7, a7, c7, l7, g, T = t[0]("usages.tools1.title") + "", x = t[0]("usages.tools1.description") + "", _ = t[0]("usages.tools2.title") + "", M = t[0]("usages.tools2.description") + "", A = t[0]("usages.tools3.title") + "", B = t[0]("usages.tools3.description") + "", C = t[0]("usages.tools4.title") + "", D = t[0]("usages.tools4.description") + "", E = t[0]("usages.tools5.title") + "", F = t[0]("usages.tools5.description") + "", O = t[0]("usages.tools6.title") + "", P = t[0]("usages.tools6.description") + "";
             return {
                 c() {
                     s = v("h3"),
@@ -908,11 +908,6 @@
                     a6 = $(),
                     c6 = v("p"),
                     l6 = $(),
-                    s7 = v("h3"),
-                    i7 = y(Q),
-                    a7 = $(),
-                    c7 = v("p"),
-                    l7 = $(),
                     g = v("div")
                 },
                 m(e, t) {
@@ -952,12 +947,6 @@
                     b(e, c6, t),
                     c6.innerHTML = P,
                     b(e, l6, t),
-                    b(e, s7, t),
-                    m(s7, i7),
-                    b(e, a7, t),
-                    b(e, c7, t),
-                    c7.innerHTML = R,
-                    b(e, l7, t),
                     b(e, g, t)
                 },
                 p(e, [t]) {
@@ -972,9 +961,7 @@
                     1 & t && E !== (E = e[0]("usages.tools5.title") + "") && H(i5, E),
                     1 & t && F !== (F = e[0]("usages.tools5.description") + "") && (c5.innerHTML = F),
                     1 & t && O !== (O = e[0]("usages.tools6.title") + "") && H(i6, O),
-                    1 & t && P !== (P = e[0]("usages.tools6.description") + "") && (c6.innerHTML = P),
-                    1 & t && Q !== (Q = e[0]("usages.tools7.title") + "") && H(i7, Q),
-                    1 & t && R !== (R = e[0]("usages.tools7.description") + "") && (c7.innerHTML = R)
+                    1 & t && P !== (P = e[0]("usages.tools6.description") + "") && (c6.innerHTML = P)
                 },
                 i: e,
                 o: e,
@@ -1003,10 +990,6 @@
                     e && w(a6),
                     e && w(c6),
                     e && w(l6),
-                    e && w(s7),
-                    e && w(a7),
-                    e && w(c7),
-                    e && w(l7),
                     e && w(g)
                 }
             }
