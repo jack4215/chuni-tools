@@ -84,16 +84,19 @@ function displayCharacterInfo() {
     const level = getCharacterLevel();
     const expPercentage = getExpPercentage();
     const levelExp = getExpForLevel(level);
-    const totalExp = calculateTotalExperience(level) + Math.floor((levelExp * expPercentage) / 100);
-
+    let totalExp = calculateTotalExperience(level) + Math.floor((levelExp * expPercentage) / 100);
+    const maxLevelBox = document.querySelector(".character_lv_box_max");
+    if (maxLevelBox) {
+        totalExp -= levelExp;
+    }
     const lv50TotalExp = calculateTotalExperience(50);
     const lv100TotalExp = calculateTotalExperience(100);
     const lv150TotalExp = calculateTotalExperience(150);
     const lv200TotalExp = calculateTotalExperience(200);
 
-    const resultContainer = document.createElement("div");
-    resultContainer.className = "character-info-container";
-    resultContainer.innerHTML = `
+    const resultDiv = document.createElement("div");
+    resultDiv.className = "character-info-container";
+    resultDiv.innerHTML = `
         <p>RANK：${level} (${expPercentage.toFixed(1)}%) → EXP：${totalExp}</p>
         <table class="info-table">
             <tr>
@@ -148,7 +151,7 @@ function displayCharacterInfo() {
 
     const characterBlock = document.querySelector(".character_block");
     if (characterBlock) {
-        characterBlock.insertAdjacentElement("afterend", resultContainer);
+        characterBlock.insertAdjacentElement("afterend", resultDiv);
     }
 }
 
