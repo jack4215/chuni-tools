@@ -100,19 +100,19 @@ function displayCharacterInfo() {
         <p>RANK：${level} (${expPercentage.toFixed(1)}%) → EXP：${totalExp}</p>
         <table class="info-table">
             <tr>
-                <td>LV.50</td>
+                <td>RANK 50</td>
                 <td>${Math.max(0, lv50TotalExp - totalExp)}</td>
             </tr>
             <tr>
-                <td>LV.100</td>
+                <td>RANK 100</td>
                 <td>${Math.max(0, lv100TotalExp - totalExp)}</td>
             </tr>
             <tr>
-                <td>LV.150</td>
+                <td>RANK 150</td>
                 <td>${Math.max(0, lv150TotalExp - totalExp)}</td>
             </tr>
             <tr>
-                <td>LV.200</td>
+                <td>RANK 200</td>
                 <td>${Math.max(0, lv200TotalExp - totalExp)}</td>
             </tr>
         </table>
