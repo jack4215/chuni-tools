@@ -41,6 +41,9 @@ javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.gi
 - Target Rank Score Calculation：
  Select song on [CHUNITHM-NET Play Record](https://chunithm-net-eng.com/mobile/record/playlog) page, click 'Details' and then execute.
 
+- Character Exp Calculation：
+ Execute on [CHUNITHM-NET Character](https://chunithm-net-eng.com/mobile/collection) page.
+
 
 # CHUNITHM Tools (國際版)
 
@@ -79,3 +82,6 @@ javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.gi
 
 - 目標評級分數計算：
  需於 [CHUNITHM-NET 遊玩紀錄](https://chunithm-net-eng.com/mobile/record/playlog)網頁選擇歌曲後，按下 Details 再執行
+
+ - 角色經驗值計算：
+ 需於 [CHUNITHM-NET 角色選擇](https://chunithm-net-eng.com/mobile/collection)網頁執行
