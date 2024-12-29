@@ -61,7 +61,7 @@ function getCharacterLevel() {
     return parseInt(level, 10) || 0;
 }
 
-function calculateTotalExperience(level) {
+function calTotalExp(level) {
     if (level < 1) return 0;
 
     let totalExp = 0;
@@ -84,21 +84,36 @@ function displayCharacterInfo() {
     const level = getCharacterLevel();
     const expPercentage = getExpPercentage();
     const levelExp = getExpForLevel(level);
-    let totalExp = calculateTotalExperience(level) + Math.floor((levelExp * expPercentage) / 100);
+    let totalExp = calTotalExp(level) + Math.floor((levelExp * expPercentage) / 100);
     const maxLevelBox = document.querySelector(".character_lv_box_max");
     if (maxLevelBox) {
         totalExp -= levelExp;
     }
-    const lv50TotalExp = calculateTotalExperience(50);
-    const lv100TotalExp = calculateTotalExperience(100);
-    const lv150TotalExp = calculateTotalExperience(150);
-    const lv200TotalExp = calculateTotalExperience(200);
+    const lv15TotalExp = calTotalExp(15);
+    const lv20TotalExp = calTotalExp(20);
+    const lv25TotalExp = calTotalExp(25);
+    const lv50TotalExp = calTotalExp(50);
+    const lv100TotalExp = calTotalExp(100);
+    const lv150TotalExp = calTotalExp(150);
+    const lv200TotalExp = calTotalExp(200);
 
     const resultDiv = document.createElement("div");
     resultDiv.className = "character-info-container";
     resultDiv.innerHTML = `
         <p>RANK：${level} (${expPercentage.toFixed(1)}%) → EXP：${totalExp}</p>
         <table class="info-table">
+            <tr>
+                <td>RANK 15</td>
+                <td>${Math.max(0, lv15TotalExp - totalExp)}</td>
+            </tr>
+            <tr>
+                <td>RANK 20</td>
+                <td>${Math.max(0, lv20TotalExp - totalExp)}</td>
+            </tr>
+            <tr>
+                <td>RANK 25</td>
+                <td>${Math.max(0, lv25TotalExp - totalExp)}</td>
+            </tr>
             <tr>
                 <td>RANK 50</td>
                 <td>${Math.max(0, lv50TotalExp - totalExp)}</td>
