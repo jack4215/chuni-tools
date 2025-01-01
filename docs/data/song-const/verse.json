@@ -11915,7 +11915,7 @@
   "Burn it All": {
     "BAS": 3,
     "ADV": 7,
-    "EXP": 11.6,
+    "EXP": 12,
     "MAS": 14.8,
     "genre": 6,
     "release": 17,
@@ -12410,8 +12410,9 @@
   "幻想ロードオブキング": {
     "BAS": 4,
     "ADV": 7.5,
-    "EXP": 11.9,
+    "EXP": 11,
     "MAS": 14.9,
+    "uncertain":["EXP"],
     "genre": 5,
     "release": 18,
     "newV": 0
