@@ -162,7 +162,7 @@
                                         score: totalHighScore - difficultyScore === 0 ? -1 : totalHighScore - difficultyScore, 
                                         difficulty: e,
                                         clear: "",
-                                        idx: "9999"
+                                        idx: "2652"
                                     }); */
                                     // Add hidden song end
                                     return records;
