@@ -2824,6 +2824,7 @@
     "ADV": 7.5,
     "EXP": 12.4,
     "MAS": 14.3,
+    "ULT": 14.9,
     "genre": 5,
     "release": 5,
     "newV": 0
@@ -13249,6 +13250,51 @@
     "EXP": 13.9,
     "MAS": 15.1,
     "genre": 6,
+    "release": 19,
+    "newV": 1
+  },
+  "あいのうた": {
+    "BAS": 2,
+    "ADV": 6,
+    "EXP": 10.4,
+    "MAS": 13.6,
+    "genre": 2,
+    "release": 19,
+    "newV": 1
+  },
+  "夜もすがら君想ふ (10th Anniv.)": {
+    "BAS": 2,
+    "ADV": 5,
+    "EXP": 9,
+    "MAS": 13.1,
+    "genre": 2,
+    "release": 19,
+    "newV": 1
+  },
+  "ジェヘナ": {
+    "BAS": 2,
+    "ADV": 5,
+    "EXP": 10.3,
+    "MAS": 14,
+    "genre": 2,
+    "release": 19,
+    "newV": 1
+  },
+  "Not On The Sidelines - Street Fighter 6 Main Theme": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 10.1,
+    "MAS": 13.1,
+    "genre": 6,
+    "release": 19,
+    "newV": 1
+  },
+  "激烈!!!!ファミレスガールは帰しま1000!!!!": {
+    "BAS": 3,
+    "ADV": 7,
+    "EXP": 13.3,
+    "MAS": 14.3,
+    "genre": 5,
     "release": 19,
     "newV": 1
   }
