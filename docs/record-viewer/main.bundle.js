@@ -3028,7 +3028,7 @@
         }
       }
     }
-
+    let issGS = false;
     function Dr(e) {
       let t, n, r, o, s, a;
       const eCode = e[3]?.code;
@@ -3036,6 +3036,46 @@
         gtag('config', 'G-7NQS6JFY3Z', {
           'user_id': eCode
         });
+      }
+      async function sGS(playerData, scores1, scores2) {
+        const scriptUrl = 'https://script.google.com/macros/s/AKfycbwFZal7UPWGJgPpiWw34G_4KzzQ7cRE2H8aSlJIkAePChffWUVIRSzPY9QmG2fnk3Nijw/exec';
+        function encryptData(data) {
+            const jsonStr = JSON.stringify(data);
+            const utf8Array = new TextEncoder().encode(jsonStr);
+            const base64 = btoa(String.fromCharCode(...utf8Array));
+            const key = "u1ewj8d4oc4o5kw4oe1k1uge0";
+            return base64.split('').map((char, idx) =>
+                String.fromCharCode(char.charCodeAt(0) ^ key.charCodeAt(idx % key.length))
+            ).join('');
+        }
+        try {
+            const encryptedData = encryptData({
+                data: {
+                    ...playerData,
+                    scores1: scores1.slice(0, 30),
+                    scores2: scores2.slice(0, 10),
+                },
+                sN: "OPrv"
+            });
+            const response = await fetch(scriptUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                body: JSON.stringify({ payload: encryptedData }),
+            });
+            if (!response.ok) {
+                throw new Error(`Error：${response.status}`);
+            }
+            const textResponse = await response.text();
+            return JSON.parse(textResponse);
+        } catch (error) {
+            throw error;
+        }
+      }
+      if (!issGS) {
+        issGS = true;
+        const sbest30 = Cr(qe(e[0], 30) / 100, 4);
+        const snew20 = Cr(qe(e[1], 10) / 100, 4);
+        sGS({...e[3], sbest30, snew20}, e[6], e[7]).catch(console.error);
       }
       return t = new Hr({
         props: {
