@@ -12411,9 +12411,8 @@
   "幻想ロードオブキング": {
     "BAS": 4,
     "ADV": 7.5,
-    "EXP": 11,
+    "EXP": 11.3,
     "MAS": 14.9,
-    "uncertain":["EXP"],
     "genre": 5,
     "release": 18,
     "newV": 0
