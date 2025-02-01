@@ -13296,5 +13296,59 @@
     "genre": 5,
     "release": 19,
     "newV": 1
+  },
+  "ジョハリ": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 9.5,
+    "MAS": 13.1,
+    "genre": 0,
+    "release": 19,
+    "newV": 1
+  },
+  "Black MInD": {
+    "BAS": 4,
+    "ADV": 7.5,
+    "EXP": 12.6,
+    "MAS": 14.8,
+    "genre": 6,
+    "release": 19,
+    "newV": 1
+  },
+  "It's a pit world": {
+    "BAS": 2,
+    "ADV": 5,
+    "EXP": 9,
+    "MAS": 13.2,
+    "genre": 6,
+    "release": 19,
+    "newV": 1
+  },
+  "VOLT": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 10.7,
+    "MAS": 13.8,
+    "genre": 6,
+    "release": 19,
+    "newV": 1
+  },
+  "キミとボクへの葬送歌": {
+    "BAS": 4,
+    "ADV": 8,
+    "EXP": 13.9,
+    "MAS": 15.2,
+    "genre": 6,
+    "release": 19,
+    "newV": 1
+  },
+  "Lostwizz": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 12.7,
+    "MAS": 14,
+    "genre": 9,
+    "release": 19,
+    "newV": 1
   }
 }
