@@ -13350,5 +13350,50 @@
     "genre": 9,
     "release": 19,
     "newV": 1
+  },
+  "We don't need tears!": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 9.5,
+    "MAS": 13.6,
+    "genre": 7,
+    "release": 19,
+    "newV": 1
+  },
+  "〚隔絶〛 ～Flame of Determination": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 11.3,
+    "MAS": 14,
+    "genre": 5,
+    "release": 19,
+    "newV": 1
+  },
+  "〚献身〛 ～Paradox of Choice": {
+    "BAS": 5,
+    "ADV": 8,
+    "EXP": 13.8,
+    "MAS": 15,
+    "genre": 5,
+    "release": 19,
+    "newV": 1
+  },
+  "〚盲従〛 ～Fantasia Sonata Flower": {
+    "BAS": 4,
+    "ADV": 6,
+    "EXP": 12.7,
+    "MAS": 14.7,
+    "genre": 5,
+    "release": 19,
+    "newV": 1
+  },
+  "〚空虚〛 ～Pyrophilia": {
+    "BAS": 4,
+    "ADV": 7.5,
+    "EXP": 13.1,
+    "MAS": 14.6,
+    "genre": 5,
+    "release": 19,
+    "newV": 1
   }
 }
