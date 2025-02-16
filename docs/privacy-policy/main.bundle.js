@@ -485,7 +485,7 @@
             e.en_US = "en_US",
             e.zh_TW = "zh_TW"
         }(K || (K = {}));
-        const X = Q("theme", "dark", ["dark", "purple"])
+        const X = Q("theme", "dark", ["dark", "purple", "black"])
           , Z = Q("language", function() {
             const e = new URLSearchParams(location.search);
             if (e.get("lang"))

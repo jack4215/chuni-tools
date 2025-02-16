@@ -728,7 +728,7 @@
     }! function(e) {
       e.en_US = "en_US", e.zh_TW = "zh_TW"
     }(Ee || (Ee = {}));
-    const Ae = Ne("theme", "dark", ["dark", "purple"]),
+    const Ae = Ne("theme", "dark", ["dark", "purple", "black"]),
       De = Ne("language", function() {
         const e = new URLSearchParams(location.search);
         if (e.get("lang")) return e.get("lang").startsWith("zh") ? Ee.zh_TW : Ee.en_US;
