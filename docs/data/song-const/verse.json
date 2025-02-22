@@ -125,6 +125,7 @@
     "ADV": 6,
     "EXP": 9.5,
     "MAS": 13.7,
+    "ULT": 15,
     "genre": 2,
     "release": 1,
     "newV": 0
@@ -13393,6 +13394,51 @@
     "EXP": 13.1,
     "MAS": 14.6,
     "genre": 5,
+    "release": 19,
+    "newV": 1
+  },
+  "ありふれたせかいせいふく": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 9,
+    "MAS": 13.9,
+    "genre": 2,
+    "release": 19,
+    "newV": 1
+  },
+  "ノンブレス・オブリージュ": {
+    "BAS": 3,
+    "ADV": 7,
+    "EXP": 10.5,
+    "MAS": 14,
+    "genre": 2,
+    "release": 19,
+    "newV": 1
+  },
+  "ももいろの鍵": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 10,
+    "MAS": 13.8,
+    "genre": 2,
+    "release": 19,
+    "newV": 1
+  },
+  "新人類": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 9,
+    "MAS": 13.4,
+    "genre": 2,
+    "release": 19,
+    "newV": 1
+  },
+  "リアライズ": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 9.5,
+    "MAS": 13,
+    "genre": 2,
     "release": 19,
     "newV": 1
   }
