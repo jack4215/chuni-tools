@@ -3119,9 +3119,9 @@
         },
         p(e, n) {
           const o = {};
-          16 & n && (a.title = e[4]("player.best.all30")), 4 & n && (a.content = Cr(qe(e[2], 30) / 100, 4)), t.$set(o);
+          16 & n && (o.title = e[4]("player.best.all30")), 4 & n && (o.content = Cr(qe(e[2], 30) / 100, 4)), t.$set(o);
           const a = {};
-          16 & n && (i.title = e[4]("player.recent.average")), 1 & n && (i.content = Cr((qe(e[0], 30) / 100) * 0.6 + (qe(e[1], 20) / 100) * 0.4, 4)), r.$set(a);
+          16 & n && (a.title = e[4]("player.recent.average")), 1 & n && (a.content = Cr((qe(e[0], 30) / 100) * 0.6 + (qe(e[1], 20) / 100) * 0.4, 4)), r.$set(a);
           const i = {};
           16 & n && (i.title = e[4]("player.best.playCount")), 8 & n && (i.content = e[3].playCount), s.$set(i)
         },
