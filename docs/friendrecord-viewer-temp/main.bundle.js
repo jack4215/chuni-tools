@@ -46,7 +46,7 @@
     },
     466: e => {
       "use strict";
-      e.exports = JSON.parse('{"locale.name":"English (US)","footer.chooseLang":"Choose Language","footer.source":"Source code & this page is hosted on <a href=\\"https://github.com/jack4215/chuni-tools\\" target=\\"_blank\\" rel=\\"noreferrer noopener\\">GitHub</a><br/><br/>Developed and maintained by TSAIBEE"}')
+      e.exports = JSON.parse('{"locale.name":"English (US)","footer.chooseLang":"Select Language","footer.source":"Source code & this page is hosted on <a href=\\"https://github.com/jack4215/chuni-tools\\" target=\\"_blank\\" rel=\\"noreferrer noopener\\">GitHub</a><br/><br/>Developed and maintained by TSAIBEE"}')
     },
     549: e => {
       "use strict";
