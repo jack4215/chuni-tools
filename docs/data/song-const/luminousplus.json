@@ -1,4 +1,22 @@
 {
+  "Crush the Dystopia": {
+    "BAS": 5,
+    "ADV": 8,
+    "EXP": 13.3,
+    "MAS": 15.2,
+    "genre": 5,
+    "release": 19,
+    "newV": 1
+  },
+  "Aether Crest: Celestial": {
+    "BAS": 5,
+    "ADV": 8.5,
+    "EXP": 14.4,
+    "MAS": 15.3,
+    "genre": 0,
+    "release": 19,
+    "newV": 1
+  },
   "1": {
     "BAS": 3,
     "ADV": 5,
