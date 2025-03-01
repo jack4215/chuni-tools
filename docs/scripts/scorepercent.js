@@ -21,7 +21,7 @@
                 scoreList.style.backgroundColor = "#ffffee";
 
                 if (percentage === 100) {
-                    scoreList.style.backgroundColor = "#ffc3c3";
+                    scoreList.style.backgroundColor = "#b0ffc8";
                 } else {
                     scoreList.style.backgroundImage = `linear-gradient(to right, #ffc3c3 ${percentage}%, transparent ${percentage}%)`;
                 }
