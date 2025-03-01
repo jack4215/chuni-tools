@@ -4,18 +4,22 @@
         let allText = scoreList.querySelector(".score_all_text");
 
         if (numText && allText) {
-            let achieved = parseInt(numText.textContent.trim(), 10);
-            let total = parseInt(allText.textContent.replace("/", "").trim(), 10);
+            let achieved = parseInt(numText.textContent.trim().replace(/,/g, ""), 10);
+            let total = parseInt(allText.textContent.replace("/", "").trim().replace(/,/g, ""), 10);
 
             if (!isNaN(achieved) && !isNaN(total) && total > 0) {
                 let percentage = Math.floor((achieved / total) * 10000) / 100;
-                let formattedPercentage = percentage.toFixed(2);
-
+                let formattedPercentage = `${percentage.toFixed(2)}%`;
+                let oldPercentDiv = scoreList.querySelector(".score_percent_text");
+                if (oldPercentDiv) {
+                    oldPercentDiv.remove();
+                }
                 let percentDiv = document.createElement("div");
                 percentDiv.className = "score_percent_text font_small";
-                percentDiv.textContent = `(${formattedPercentage}%)`; 
+                percentDiv.textContent = `(${formattedPercentage})`; 
                 scoreList.querySelector(".score_list_bottom").appendChild(percentDiv);
                 scoreList.style.backgroundColor = "#ffffee";
+
                 if (percentage === 100) {
                     scoreList.style.backgroundColor = "#ffc3c3";
                 } else {
