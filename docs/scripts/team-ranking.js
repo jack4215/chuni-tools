@@ -145,22 +145,6 @@ async function fetchTeamPoints() {
             margin-left: 5px;
             vertical-align: middle;
         }
-        .loading-status {
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold;
-            color: white;
-            background: rgba(0, 0, 0, 0.9);
-            padding: 10px;
-            width: 220px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
-            z-index: 9999;
-            position: fixed;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
     `;
     document.head.appendChild(style);
 
