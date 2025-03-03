@@ -55,22 +55,33 @@ async function fetchTeamPoints() {
             <th colspan="5">Real-Time Info</th>
         </tr>
         ${results.map((r, index) => {
+            const rank = index + 1;
+            const isEvenRow = rank % 2 === 0 ? 'style="background-color: #505050;"' : "";
             const pointDiffColor = r.pointDiff > 0 ? "#00ffff" : r.pointDiff < 0 ? "#ed3665" : "#FFF";
-            const formattedPointDiff = r.pointDiff > 0 ? `+${r.pointDiff.toLocaleString()}` 
-                                        : r.pointDiff < 0 ? r.pointDiff.toLocaleString() 
+            const formattedPointDiff = r.pointDiff > 0 ? `+${r.pointDiff.toLocaleString()}`
+                                        : r.pointDiff < 0 ? r.pointDiff.toLocaleString()
                                         : "±0";
+            let rankColor = "#FFF";
+            if (rank >= 1 && rank <= 10) {
+                rankColor = "#50ee77";
+            } else if (rank >= 11 && rank <= 40) {
+                rankColor = "#fbd679";
+            } else if (rank >= 41 && rank <= 70) {
+                rankColor = "#aad8d6";
+            }
             return `
-                <tr>
-                    <td rowspan="2">${index + 1}</td>
+                <tr ${isEvenRow}>
+                    <td rowspan="2" style="color: ${rankColor};">${rank}</td>
                     <td colspan="5" class="team-name">${r.teamName}</td>
                 </tr>
-                <tr>
+                <tr ${isEvenRow}>
                     <td colspan="3" class="team-points">${r.currentPoints.toLocaleString()}</td>
                     <td colspan="2" class="team-change" style="color: ${pointDiffColor};">${formattedPointDiff}</td>
                 </tr>
             `;
         }).join("")}
     </table>`;
+
 
     const style = document.createElement("style");
     style.textContent = `
