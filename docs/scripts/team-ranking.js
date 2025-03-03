@@ -41,7 +41,7 @@ async function fetchTeamPoints() {
             console.error(`Failed to fetch data for ${teamName}`, error);
             results.push({ teamName, currentPoints: 0, pointDiff: 0 });
         }
-        loadingDiv.innerText = `Loading... (${i + 1}/${teams.length})`;
+        loadingDiv.innerText = `Real-Time Ranking is loading... (${i + 1}/${teams.length})`;
     }
     results.sort((a, b) => b.currentPoints - a.currentPoints);
     loadingDiv.remove();
