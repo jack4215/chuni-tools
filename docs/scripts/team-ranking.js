@@ -104,11 +104,11 @@ async function fetchTeamPoints() {
             font-size: 16px;
         }
         .team-points {
-            font-size: 15px;
+            font-size: 16px;
             color: #ffcc00;
         }
         .team-change {
-            font-size: 15px;
+            font-size: 16px;
         }
         .loading-status {
             text-align: center;
