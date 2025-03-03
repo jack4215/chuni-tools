@@ -27,6 +27,10 @@ async function fetchTeamPoints() {
                 method: "POST",
                 body: formData
             });
+            if (response.url === "https://chunithm-net-eng.com/mobile/error/") {
+                loadingDiv.innerText = "請重新整理頁面　Please refresh the website."; 
+                return;
+            }
             const text = await response.text();
             const parser = new DOMParser();
             const doc = parser.parseFromString(text, "text/html");
@@ -81,7 +85,6 @@ async function fetchTeamPoints() {
             `;
         }).join("")}
     </table>`;
-
 
     const style = document.createElement("style");
     style.textContent = `
