@@ -4,7 +4,7 @@ async function fetchTeamPoints() {
 
     const loadingDiv = document.createElement("div");
     loadingDiv.className = "loading-status";
-    loadingDiv.innerText = `Loading... (0/${teams.length})`;
+    loadingDiv.innerText = `Please Wait... (0/${teams.length})`;
 
     const teamRanking = document.querySelector(".clearfix");
     if (teamRanking) {
