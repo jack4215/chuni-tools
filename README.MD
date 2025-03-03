@@ -32,7 +32,7 @@ javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.gi
 - Export Personal Record to CSV：
  Execute on [CHUNITHM-NET Login Bonus](https://chunithm-net-eng.com/mobile/loginBonus) page.
 
-- Export Team Ranking to CSV：
+- Real-Time Team Ranking：
  Execute on [CHUNITHM-NET Team Ranking](https://chunithm-net-eng.com/mobile/ranking/teamPoint) page.
 
 - P-Point Monthly Statistics：
@@ -74,7 +74,7 @@ javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.gi
 - 個人成績匯出 CSV：
  需於 [CHUNITHM-NET 登入獎勵](https://chunithm-net-eng.com/mobile/loginBonus)網頁執行
 
-- 團隊排名匯出 CSV：
+- 團隊即時排行榜：
  需於 [CHUNITHM-NET 團隊排名](https://chunithm-net-eng.com/mobile/ranking/teamPoint)網頁執行
 
 - P-Point 月統計：
