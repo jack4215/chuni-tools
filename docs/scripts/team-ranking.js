@@ -1,6 +1,7 @@
 async function fetchTeamPoints() {
     const teams = Array.from(document.querySelectorAll(".rank_block"));
     let results = [];
+    let originalRankings = {};
 
     const loadingDiv = document.createElement("div");
     loadingDiv.className = "loading-status";
@@ -10,6 +11,10 @@ async function fetchTeamPoints() {
     if (teamRanking) {
         teamRanking.insertAdjacentElement("afterend", loadingDiv);
     }
+    teams.forEach((team, index) => {
+        const teamName = team.querySelector(".rank_teamname").innerText;
+        originalRankings[teamName] = index + 1;
+    });
 
     for (let i = 0; i < teams.length; i++) {
         const team = teams[i];
@@ -60,6 +65,18 @@ async function fetchTeamPoints() {
         </tr>
         ${results.map((r, index) => {
             const rank = index + 1;
+            const originalRank = originalRankings[r.teamName] || rank;
+            const rankDiff = originalRank - rank;
+
+            let rankIcon = "";
+            if (rankDiff > 0) {
+                rankIcon = `<img class="rank_state_img flo_r" src="https://chunithm-net-eng.com/mobile/images/ranking_up.png">`;
+            } else if (rankDiff < 0) {
+                rankIcon = `<img class="rank_state_img flo_r" src="https://chunithm-net-eng.com/mobile/images/ranking_down.png">`;
+            } else {
+                rankIcon = `<img class="rank_state_img flo_r" src="https://chunithm-net-eng.com/mobile/images/ranking_keep.png">`;
+            }
+
             const isEvenRow = rank % 2 === 0 ? 'style="background-color: #505050;"' : "";
             const pointDiffColor = r.pointDiff > 0 ? "#00ffff" : r.pointDiff < 0 ? "#ed3665" : "#FFF";
             const formattedPointDiff = r.pointDiff > 0 ? `+${r.pointDiff.toLocaleString()}`
@@ -73,6 +90,7 @@ async function fetchTeamPoints() {
             } else if (rank >= 41 && rank <= 70) {
                 rankColor = "#aad8d6";
             }
+
             return `
                 <tr ${isEvenRow}>
                     <td rowspan="2" style="color: ${rankColor}; font-weight: 600;">${rank}</td>
@@ -80,7 +98,7 @@ async function fetchTeamPoints() {
                 </tr>
                 <tr ${isEvenRow}>
                     <td colspan="3" class="team-points">${r.currentPoints.toLocaleString()}</td>
-                    <td colspan="2" class="team-change" style="color: ${pointDiffColor};">${formattedPointDiff}</td>
+                    <td colspan="2" class="team-change" style="color: ${pointDiffColor};">${formattedPointDiff} ${rankIcon}</td>
                 </tr>
             `;
         }).join("")}
@@ -96,9 +114,6 @@ async function fetchTeamPoints() {
             text-align: center;
             font-family: Arial, sans-serif;
             color: #ededed;
-        }
-        .team-ranking-container p {
-            margin: 5px 0;
         }
         .ranking-table {
             width: 100%;
@@ -123,6 +138,12 @@ async function fetchTeamPoints() {
         }
         .team-change {
             font-size: 16px;
+        }
+        .rank_state_img {
+            width: 20px;
+            height: 20px;
+            margin-left: 5px;
+            vertical-align: middle;
         }
         .loading-status {
             text-align: center;
