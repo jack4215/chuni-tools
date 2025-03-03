@@ -76,7 +76,6 @@ async function fetchTeamPoints() {
     const teams = Array.from(document.querySelectorAll(".rank_block"));
     let results = [];
 
-    // 建立並插入 loading 訊息
     const loadingDiv = document.createElement("div");
     loadingDiv.className = "loading-status";
     loadingDiv.innerText = `Loading... (0/${teams.length})`;
@@ -116,15 +115,9 @@ async function fetchTeamPoints() {
             console.error(`Failed to fetch data for ${teamName}`, error);
             results.push({ teamName, currentPoints: 0, pointDiff: 0 });
         }
-
-        // 更新 loading 訊息
         loadingDiv.innerText = `Loading... (${i + 1}/${teams.length})`;
     }
-
-    // 按照 currentPoints 由高到低排序
     results.sort((a, b) => b.currentPoints - a.currentPoints);
-
-    // 移除 loading 訊息
     loadingDiv.remove();
     
     const resultDiv = document.createElement("div");
@@ -152,8 +145,6 @@ async function fetchTeamPoints() {
             `;
         }).join("")}
     </table>`;
-
-
 
     const style = document.createElement("style");
     style.textContent = `
