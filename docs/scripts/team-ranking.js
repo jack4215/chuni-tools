@@ -71,7 +71,7 @@ async function fetchTeamPoints() {
             }
             return `
                 <tr ${isEvenRow}>
-                    <td rowspan="2" style="color: ${rankColor};">${rank}</td>
+                    <td rowspan="2" style="color: ${rankColor}; font-weight: 600;">${rank}</td>
                     <td colspan="5" class="team-name">${r.teamName}</td>
                 </tr>
                 <tr ${isEvenRow}>
