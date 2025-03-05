@@ -4174,7 +4174,7 @@
     function Oo(t) {
       let n, r, o, s, a, i, l, c, d, u, f, p, h, g = Cr(t[1] / 1e4, 2) + "",
         m = (t[0] / 1e4).toFixed(1) + "",
-        v = (isNaN(t[2]) ? "--" : Cr(t[2], 3)) + "";
+        v = (isNaN(t[2]) ? "--" : Cr(t[2], 4)) + "";
       return {
         c() {
           n = H("div"), r = H("div"), o = H("div"), s = A(g), a = D(), i = H("div"), l = A("／"), c = A(m), d = D(), u = H("div"), f = H("div"), p = A(v), h = A("%"), O(o, "class", "op-total svelte-cshvda"), O(i, "class", "op-max svelte-cshvda"), z(f, "width", t[2] + "%"), O(f, "class", "svelte-cshvda"), O(u, "class", "progress svelte-cshvda"), O(n, "class", "wrapper svelte-cshvda"), B(n, "aj", t[0] && t[1].toFixed() === t[0].toFixed())
