@@ -14,7 +14,7 @@
                 wrongBase: `Please open CHUNITHM-NET Intl. (${e}) and login, then try again.`
             },
             [n.zh_TW]: {
-                alreadyRun: "請重新整理頁面後再執行 CHUNITHM 查分器！",
+                alreadyRun: "請重新整理頁面後再執行 CHUNITHM 書籤工具！",
                 wrongBase: `請到 CHUNITHM-NET Intl. (${e}) 登入之後再試一次。`
             }
         }[function() {
