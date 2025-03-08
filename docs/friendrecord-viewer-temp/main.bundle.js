@@ -4166,7 +4166,7 @@
           M(e, n, t), k(n, r), k(r, o), k(o, s), k(r, a), k(r, i), k(i, l), k(i, c), k(n, d), k(n, u), k(u, f), k(f, p), k(f, h)
         },
         p(e, [t]) {
-          2 & t && g !== (g = Cr(e[1] / 1e4, 2) + "") && I(s, g), 1 & t && m !== (m = (e[0] / 1e4).toFixed(1) + "") && I(c, m), 4 & t && v !== (v = (isNaN(e[2]) ? "--" : Cr(e[2], 3)) + "") && I(p, v), 4 & t && z(f, "width", e[2] + "%"), 3 & t && B(n, "aj", e[0] && e[1].toFixed() === e[0].toFixed())
+          2 & t && g !== (g = Cr(e[1] / 1e4, 2) + "") && I(s, g), 1 & t && m !== (m = (e[0] / 1e4).toFixed(1) + "") && I(c, m), 4 & t && v !== (v = (isNaN(e[2]) ? "--" : Cr(e[2], 4)) + "") && I(p, v), 4 & t && z(f, "width", e[2] + "%"), 3 & t && B(n, "aj", e[0] && e[1].toFixed() === e[0].toFixed())
         },
         i: e,
         o: e,
