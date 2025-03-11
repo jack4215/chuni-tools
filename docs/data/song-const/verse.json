@@ -2115,6 +2115,7 @@
     "ADV": 6,
     "EXP": 9,
     "MAS": 13.5,
+    "ULT": 15.1,
     "genre": 6,
     "release": 3,
     "newV": 0
@@ -13457,6 +13458,51 @@
     "EXP": 14.4,
     "MAS": 15.5,
     "genre": 5,
+    "release": 19,
+    "newV": 1
+  },
+  "ONLY YOUR STARS!（Trickstar Ver.）": {
+    "BAS": 2,
+    "ADV": 5,
+    "EXP": 9.5,
+    "MAS": 13,
+    "genre": 0,
+    "release": 19,
+    "newV": 1
+  },
+  "BRAND NEW STARS!! (ALKALOID ver.)": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 10.1,
+    "MAS": 12.6,
+    "genre": 0,
+    "release": 19,
+    "newV": 1
+  },
+  "One with One (Eden ver.)": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 9,
+    "MAS": 13.5,
+    "genre": 0,
+    "release": 19,
+    "newV": 1
+  },
+  "Surprising Thanks!! (Crazy:B ver.)": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 9,
+    "MAS": 13.2,
+    "genre": 0,
+    "release": 19,
+    "newV": 1
+  },
+  "INFiNiTE ENERZY -Overdoze-": {
+    "BAS": 4,
+    "ADV": 7,
+    "EXP": 13.1,
+    "MAS": 14.2,
+    "genre": 6,
     "release": 19,
     "newV": 1
   }
