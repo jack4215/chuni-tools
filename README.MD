@@ -47,7 +47,7 @@ javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.gi
 ## Credits
 The chart constant data is from [CHUNITHM譜面定数メインフレーム](https://x.com/RCMF_chunithm).
 
-The Version Title data is from [かっきー](https://x.com/Schwarz_k2mt).
+The version title data is from [かっきー](https://x.com/Schwarz_k2mt).
 
 # CHUNITHM Tools (國際版)
 
