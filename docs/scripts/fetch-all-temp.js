@@ -215,6 +215,27 @@
                                 const e = await i("/mobile/home/playerData");
                                 const t = e.querySelector(".player_honor_short");
                                 const r = /honor_bg_.*(?=\.png)/.exec(t.style.backgroundImage);
+                                let honorTextElement = e.querySelector(".player_honor_text_view span");
+                                let honorText = honorTextElement ? honorTextElement.innerHTML : null;
+                                let honorColor = r ? r[0].slice(9) : "normal";
+                                if (!honorText && t) {
+                                    const backgroundImage = t.style.backgroundImage;
+                                    const imageUrlMatch = backgroundImage ? backgroundImage.match(/url\(["']?(.*?)["']?\)/) : null;
+                                    const imageUrl = imageUrlMatch ? imageUrlMatch[1] : null;
+                                    if (imageUrl) {
+                                        try {
+                                            const response = await fetch("https://chuni.tsaibee.org/data/title.json");
+                                            const titleData = await response.json();
+                                            const matchedTitle = titleData.find(item => item.image === imageUrl);
+                                            if (matchedTitle) {
+                                                honorText = matchedTitle.title;
+                                                honorColor = matchedTitle.genre;
+                                            }
+                                        } catch (error) {
+                                            console.error("Error fetching title.json:", error);
+                                        }
+                                    }
+                                }
                                 const a = Array.from(e.querySelectorAll(".player_rating_num_block img"))
                                     .map((e => /rating_.*_comma.png/.test(e.src) ? "." : /rating_.*_[0-9]*(?=\.png)/.exec(e.src)[0].slice(-1)))
                                     .join("");
@@ -230,8 +251,8 @@
                                 const playerData = {
                                     name: e.querySelector(".player_name_in").innerHTML,
                                     honor: {
-                                        text: e.querySelector(".player_honor_text_view span").innerHTML,
-                                        color: r ? r[0].slice(9) : "normal"
+                                        text: honorText || "Unknown",
+                                        color: honorColor
                                     },
                                     rating: a,
                                     overPower: e.querySelector(".player_overpower_text").innerHTML.match(/\(([^)]+)\)/)[1],

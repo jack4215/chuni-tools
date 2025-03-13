@@ -173,9 +173,30 @@
                                 if (!friendBlock) {
                                     throw new Error("Selected friend not found");
                                 }
-                                const t = friendBlock.querySelector(".player_honor_short")
-                                    , r = /honor_bg_.*(?=\.png)/.exec(t.style.backgroundImage)
-                                    , a = Array.from(friendBlock.querySelectorAll(".player_rating_num_block img"))
+                                const t = e.querySelector(".player_honor_short");
+                                const r = /honor_bg_.*(?=\.png)/.exec(t.style.backgroundImage);
+                                let honorTextElement = e.querySelector(".player_honor_text_view span");
+                                let honorText = honorTextElement ? honorTextElement.innerHTML : null;
+                                let honorColor = r ? r[0].slice(9) : "normal";
+                                if (!honorText && t) {
+                                    const backgroundImage = t.style.backgroundImage;
+                                    const imageUrlMatch = backgroundImage ? backgroundImage.match(/url\(["']?(.*?)["']?\)/) : null;
+                                    const imageUrl = imageUrlMatch ? imageUrlMatch[1] : null;
+                                    if (imageUrl) {
+                                        try {
+                                            const response = await fetch("https://chuni.tsaibee.org/data/title.json");
+                                            const titleData = await response.json();
+                                            const matchedTitle = titleData.find(item => item.image === imageUrl);
+                                            if (matchedTitle) {
+                                                honorText = matchedTitle.title;
+                                                honorColor = matchedTitle.genre;
+                                            }
+                                        } catch (error) {
+                                            console.error("Error fetching title.json:", error);
+                                        }
+                                    }
+                                }
+                                const a = Array.from(friendBlock.querySelectorAll(".player_rating_num_block img"))
                                     .map(img => /rating_.*_comma.png/.test(img.src) ? "." : /rating_.*_[0-9]*(?=\.png)/.exec(img.src)[0].slice(-1))
                                     .join("");
                                 const aa = Array.from(f.querySelectorAll(".player_rating_num_block img"))
