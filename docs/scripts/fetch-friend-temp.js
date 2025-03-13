@@ -230,7 +230,7 @@
                                 };
                                 return playerData;
                             }();
-                            break;                            
+                            break;
                         case "songPlayCount":                  
                             s = async function() {
                                 return "-";
