@@ -109,7 +109,7 @@ style.innerHTML = `
         grid-template-columns: repeat(4, 1fr);
         gap: 10px;
         margin-bottom: 10px;
-        font-size: 14px;
+        font-size: 15px;
         font-family: Arial, sans-serif;
     }
     .sort-btn {
@@ -164,7 +164,7 @@ style.innerHTML = `
         transform: translateX(26px);
     }
     #sortLabel {
-        font-size: 14px;
+        font-size: 15px;
         font-family: Arial, sans-serif;
         white-space: nowrap;
     }
