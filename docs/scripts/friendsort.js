@@ -6,7 +6,7 @@ if (box02) {
         <div class="sort-options">
             <button class="sort-btn active" id="sortByLevel">Lv.</button>
             <button class="sort-btn" id="sortByRating">Rating</button>
-            <button class="sort-btn" id="sortByOP">OP%</button>
+            <button class="sort-btn" id="sortByOP">OP</button>
             <button class="sort-btn" id="sortByDate">Last Play</button>
         </div>
         <div class="toggle-container">
@@ -31,10 +31,9 @@ function getPlayerLevel(block) {
 }
 
 function getPlayerOP(block) {
-    const opText = block.querySelector('.player_overpower_text')?.innerHTML.match(/\(([^)]+)\)/);
-    return opText ? parseFloat(opText[1]) : 0;
+    const opText = block.querySelector('.player_overpower_text')?.innerText.split(' ')[0];
+    return opText ? parseFloat(opText) : 0;
 }
-
 function getPlayerRating(block) {
     const ratingImgs = Array.from(block.querySelectorAll('.player_rating_num_block img'));
     return parseFloat(ratingImgs.map(img => {
