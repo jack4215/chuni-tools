@@ -216,12 +216,15 @@ style.innerHTML = `
         border: 1px solid #ccc;
         padding: 6px;
         width: 16.66%;
+        background-color: #ffffee;
+        font-weight: 600;
     }
     .level-table th {
         background-color: #f1b56a;
     }
     .fraction {
-        font-size: 80%;
+        font-size: 70%;
+        font-weight: 300;
     }
     .total-exp {
         font-family: Arial, sans-serif;
