@@ -7,7 +7,8 @@ if (box02) {
             <button class="sort-btn active" id="sortByLevel">Lv.</button>
             <button class="sort-btn" id="sortByRating">Rating</button>
             <button class="sort-btn" id="sortByOP">OP</button>
-            <button class="sort-btn" id="sortByDate">Last Play</button>
+            <button class="sort-btn" id="sortByOPPercent">OP%</button>
+            <button class="sort-btn" id="sortByDate">Date</button>
         </div>
         <div class="toggle-container">
             <label class="toggle-switch">
@@ -34,6 +35,12 @@ function getPlayerOP(block) {
     const opText = block.querySelector('.player_overpower_text')?.innerText.split(' ')[0];
     return opText ? parseFloat(opText) : 0;
 }
+
+function getPlayerOPPercent(block) {
+    const opText = block.querySelector('.player_overpower_text')?.innerHTML.match(/\(([^)]+)%\)/);
+    return opText ? parseFloat(opText[1]) : 0;
+}
+
 function getPlayerRating(block) {
     const ratingImgs = Array.from(block.querySelectorAll('.player_rating_num_block img'));
     return parseFloat(ratingImgs.map(img => {
@@ -61,6 +68,10 @@ function sortFriends(criteria, desc = false) {
             case 'op':
                 aValue = getPlayerOP(a);
                 bValue = getPlayerOP(b);
+                break;
+            case 'oppercent':
+                aValue = getPlayerOPPercent(a);
+                bValue = getPlayerOPPercent(b);
                 break;
             case 'date':
             default:
@@ -105,7 +116,7 @@ const style = document.createElement('style');
 style.innerHTML = `
     .sort-options {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         gap: 10px;
         margin-bottom: 10px;
         font-size: 15px;
@@ -114,7 +125,7 @@ style.innerHTML = `
     .sort-btn {
         padding: 10px;
         border: none;
-        border-radius: 10px;
+        border-radius: 7px;
         background-color: #ccc;
         cursor: pointer;
     }
@@ -133,7 +144,6 @@ style.innerHTML = `
         display: inline-block;
         width: 60px;
         height: 30px;
-        flex-shrink: 0;
     }
     .slider {
         position: absolute;
