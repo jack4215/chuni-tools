@@ -129,7 +129,7 @@ function updateLevelStats() {
                 <tr>${levelThresholds.map(lvl => `<th>${lvl}</th>`).join('')}</tr>
                 <tr>${levelThresholds.map(() => `<td>0<br><span class="fraction">/0</span></td>`).join('')}</tr>
             </table>
-            <div class="total-exp">Total EXP: <strong>0</strong></div>
+            <div class="total-exp">Total EXP：<strong>0</strong></div>
         `;
         document.getElementById('levelStats').innerHTML = tableHTML;
         return;
