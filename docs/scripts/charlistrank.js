@@ -116,16 +116,29 @@ function calculateTotalExp(level, expBarWidth, characterBlock) {
     return totalExp;
 }
 
-
 function updateLevelStats() {
+    const titleElement = document.getElementById('title');
     const levelThresholds = [10, 25, 50, 100, 150, 200];
-    const levelCounts = levelThresholds.map(() => 0);
+    let levelCounts = levelThresholds.map(() => 0);
     let totalExpSum = 0;
-    
-    const characters = Array.from(document.querySelectorAll('.box01.w420.mt_25'))
-        .filter(c => c.style.display !== "none"); 
+    let totalCharacters = 0;
 
-    const totalCharacters = characters.length;
+    if (titleElement && titleElement.style.display === "none") {
+        const tableHTML = `
+            <table class="level-table">
+                <tr>${levelThresholds.map(lvl => `<th>${lvl}</th>`).join('')}</tr>
+                <tr>${levelThresholds.map(() => `<td>0<br><span class="fraction">/0</span></td>`).join('')}</tr>
+            </table>
+            <div class="total-exp">Total EXP: <strong>0</strong></div>
+        `;
+        document.getElementById('levelStats').innerHTML = tableHTML;
+        return;
+    }
+
+    const characters = Array.from(document.querySelectorAll('.box01.w420.mt_25'))
+        .filter(c => c.style.display !== "none");
+
+    totalCharacters = characters.length;
 
     characters.forEach(character => {
         const level = getCharacterLevel(character);
@@ -134,14 +147,13 @@ function updateLevelStats() {
                 levelCounts[index]++;
             }
         });
-    
+
         const gageBase = character.querySelector('.character_list_gage_base img');
         const match = gageBase ? gageBase.getAttribute('width').match(/(\d+)px/) : null;
         const expBarWidth = match ? parseInt(match[1], 10) : 270;
-    
+
         totalExpSum += calculateTotalExp(level, expBarWidth, character);
     });
-    
 
     const tableHTML = `
         <table class="level-table">
@@ -152,6 +164,23 @@ function updateLevelStats() {
     `;
 
     document.getElementById('levelStats').innerHTML = tableHTML;
+}
+
+const characterObserver = new MutationObserver(() => {
+    updateLevelStats();
+});
+
+document.getElementById('list').querySelectorAll('.box01.w420.mt_25').forEach(node => {
+    characterObserver.observe(node, { attributes: true, attributeFilter: ['style'] });
+});
+
+const titleObserver = new MutationObserver(() => {
+    updateLevelStats();
+});
+
+const titleElement = document.getElementById('title');
+if (titleElement) {
+    titleObserver.observe(titleElement, { attributes: true, attributeFilter: ['style'] });
 }
 
 const observer = new MutationObserver(() => {
