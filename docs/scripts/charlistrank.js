@@ -121,6 +121,7 @@ function updateLevelStats() {
     const levelThresholds = [10, 25, 50, 100, 150, 200];
     let levelCounts = levelThresholds.map(() => 0);
     let totalExpSum = 0;
+    let totalRankSum = 0;
     let totalCharacters = 0;
 
     if (titleElement && titleElement.style.display === "none") {
@@ -129,7 +130,7 @@ function updateLevelStats() {
                 <tr>${levelThresholds.map(lvl => `<th>${lvl}</th>`).join('')}</tr>
                 <tr>${levelThresholds.map(() => `<td>0<br><span class="fraction">/0</span></td>`).join('')}</tr>
             </table>
-            <div class="total-exp">Total EXP：<strong>0</strong></div>
+            <div class="total-exp">Total Rank：<strong>${totalRankSum.toLocaleString()}</strong>｜Total EXP：<strong>${totalExpSum.toLocaleString()}</strong></div>
         `;
         document.getElementById('levelStats').innerHTML = tableHTML;
         return;
@@ -142,6 +143,8 @@ function updateLevelStats() {
 
     characters.forEach(character => {
         const level = getCharacterLevel(character);
+        totalRankSum += level; // 計算總等級
+        
         levelThresholds.forEach((threshold, index) => {
             if (level >= threshold) {
                 levelCounts[index]++;
@@ -160,11 +163,12 @@ function updateLevelStats() {
             <tr>${levelThresholds.map(lvl => `<th>${lvl}</th>`).join('')}</tr>
             <tr>${levelCounts.map(count => `<td>${count}<br><span class="fraction">/${totalCharacters}</span></td>`).join('')}</tr>
         </table>
-        <div class="total-exp">Total EXP: <strong>${totalExpSum.toLocaleString()}</strong></div>
+        <div class="total-exp">Total Rank：<strong>${totalRankSum.toLocaleString()}</strong>｜Total EXP：<strong>${totalExpSum.toLocaleString()}</strong></div>
     `;
 
     document.getElementById('levelStats').innerHTML = tableHTML;
 }
+
 
 const characterObserver = new MutationObserver(() => {
     updateLevelStats();
