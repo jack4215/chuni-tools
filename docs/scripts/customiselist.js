@@ -1,6 +1,5 @@
 async function fetchData() {
     try {
-        // **建立 Now Loading 訊息**
         let statsElement = document.getElementById('statsContainer');
         if (!statsElement) {
             statsElement = document.createElement('div');
@@ -21,6 +20,14 @@ async function fetchData() {
 
         async function fetchAndParse(url, selector) {
             const response = await fetch(url);
+            if (response.url === "https://chunithm-net-eng.com/mobile/error/") {
+                statsElement.innerHTML = `
+                    <div class="box01 w420" class="Count-Info" style="text-align:center;">
+                        請重新整理頁面　Please refresh the website.
+                    </div>
+                `;
+            }
+        
             if (!response.ok) throw new Error(`Failed to fetch: ${url}`);
             const html = await response.text();
             const doc = new DOMParser().parseFromString(html, "text/html");
@@ -28,8 +35,7 @@ async function fetchData() {
             updateLoadingMessage();
             return doc.querySelectorAll(selector).length;
         }
-
-        // **抓取稱號數據**
+        
         const titleUrl = 'https://chunithm-net-eng.com/mobile/collection/trophy/';
         const titleResponse = await fetch(titleUrl);
         if (!titleResponse.ok) throw new Error("Failed to fetch title page");
@@ -52,7 +58,6 @@ async function fetchData() {
             (titleCounts.Normal + titleCounts.Silver + titleCounts.Gold + titleCounts.Platinum + titleCounts.Rainbow);
         titleCounts.Total = Object.values(titleCounts).reduce((a, b) => a + b, 0);
 
-        // **抓取 Avatar 數據**
         const avatarCategories = [
             { name: "Face", url: "https://chunithm-net-eng.com/mobile/collection/avatarCustom/customiseFace/" },
             { name: "Head", url: "https://chunithm-net-eng.com/mobile/collection/avatarCustom/customiseHead/" },
@@ -67,8 +72,6 @@ async function fetchData() {
         }
 
         const totalCustomise = Object.values(avatarCounts).reduce((a, b) => a + b, 0);
-
-        // **抓取額外數據**
         const additionalCategories = [
             { name: "Name Plate", url: "https://chunithm-net-eng.com/mobile/collection/nameplate/", class: ".nameplate_block" },
             { name: "Map Icon", url: "https://chunithm-net-eng.com/mobile/collection/mapIcon/", class: ".mapicon_block" },
@@ -80,7 +83,6 @@ async function fetchData() {
             additionalCounts[category.name] = await fetchAndParse(category.url, category.class);
         }
 
-        // **完成載入，移除 Loading 訊息，插入正式數據**
         statsElement.innerHTML = `
             <div class="box01 w420">
                 <div class="Count-Info">Total Customize</div>
@@ -123,12 +125,8 @@ async function fetchData() {
         console.error("Error fetching data:", error);
     }
 }
-
 fetchData();
 
-
-
-// **新增表格樣式**
 const style = document.createElement('style');
 style.innerHTML = `
     table {
@@ -136,10 +134,9 @@ style.innerHTML = `
         border-collapse: collapse;
         margin: 10px auto;
         text-align: center;
-        table-layout: fixed; /* 固定欄位寬度 */
+        table-layout: fixed;
     }
 
-    /* 確保所有欄位均分 */
     th, td {
         width: 16.67%;
         border: 1px solid #ccc;
@@ -159,7 +156,6 @@ style.innerHTML = `
         font-size: 90%;
     }
 
-    /* Title 表格背景色 */
     .title-table th.normal-bg { background-color: #cdcdcd; }
     .title-table th.silver-bg { background-color: #c4e9ff; }
     .title-table th.gold-bg { background-color: #f5cf42; }
@@ -172,7 +168,6 @@ style.innerHTML = `
         font-size: 70% !important;
     }
 
-    /* Customise 表格背景色 */
     .avatar-table th.face-bg { background-color: #b4fdfd; }
     .avatar-table th.head-bg { background-color: #a6ffa6; }
     .avatar-table th.wear-bg { background-color: #ffa0a0; }
