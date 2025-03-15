@@ -86,16 +86,16 @@ async function fetchData() {
                 <div class="Count-Info">Total Customize</div>
                 <table class="stats-table">
                     <tr class="count-row">
-                        <td style="background-color: #e1e1e1 font-family: Arial, sans-serif;">Avatar</td>
+                        <td style="background-color: #e1e1e1; font-family: Arial, sans-serif;">Avatar</td>
                         <td>${totalCustomise.toLocaleString()}</td>
                     </tr>
                     <tr class="count-row">
-                        <td style="background-color: #e1e1e1 font-family: Arial, sans-serif;">Title</td>
+                        <td style="background-color: #e1e1e1; font-family: Arial, sans-serif;">Title</td>
                         <td>${titleCounts.Total.toLocaleString()}</td>
                     </tr>
                     ${Object.entries(additionalCounts).map(([key, value]) => `
                         <tr class="count-row">
-                            <td style="background-color: #e1e1e1 font-family: Arial, sans-serif;">${key}</td>
+                            <td style="background-color: #e1e1e1; font-family: Arial, sans-serif;">${key}</td>
                             <td>${value.toLocaleString()}</td>
                         </tr>`).join('')}
                 </table>
