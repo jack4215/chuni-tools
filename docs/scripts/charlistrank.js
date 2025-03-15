@@ -143,7 +143,7 @@ function updateLevelStats() {
 
     characters.forEach(character => {
         const level = getCharacterLevel(character);
-        totalRankSum += level; // 計算總等級
+        totalRankSum += level;
         
         levelThresholds.forEach((threshold, index) => {
             if (level >= threshold) {
