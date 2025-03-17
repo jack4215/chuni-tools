@@ -44,7 +44,7 @@ javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.gi
 - Character Exp Calculation：
  Execute on [CHUNITHM-NET Character](https://chunithm-net-eng.com/mobile/collection) page.
 
- - Character Rank Statistics Table:：
+ - Character Rank Statistics Table：
  Execute on [CHUNITHM-NET Character-list](https://chunithm-net-eng.com/mobile/collection/characterList) page.
 
  - Friend List Sorting：
