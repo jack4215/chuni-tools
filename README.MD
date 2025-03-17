@@ -21,7 +21,7 @@ javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.gi
 javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.github.io/chuni-tools/scripts/chuni-tools-temp.js?t='+Math.floor(Date.now()/60000);d.body.append(s);})(document);
 ```
 
-2. Navigate to [CHUNITHM-NET](https://chunithm-net-eng.com/mobile/home) and open the bookmark. This tool offers 7 features.
+2. Navigate to [CHUNITHM-NET](https://chunithm-net-eng.com/mobile/home) and open the bookmark. This tool offers 10 features.
 
 - Personal Record Viewer：
  Executed on any non-specified page of [CHUNITHM-NET](https://chunithm-net-eng.com/mobile/home).
@@ -43,6 +43,15 @@ javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.gi
 
 - Character Exp Calculation：
  Execute on [CHUNITHM-NET Character](https://chunithm-net-eng.com/mobile/collection) page.
+
+ - Character Rank Statistics Table:：
+ Execute on [CHUNITHM-NET Character-list](https://chunithm-net-eng.com/mobile/collection/characterList) page.
+
+ - Friend List Sorting：
+ Execute on [CHUNITHM-NET Friend-list](https://chunithm-net-eng.com/mobile/friend) page.
+
+ - Customize Statistics Table：
+ Execute on [CHUNITHM-NET Customize](https://chunithm-net-eng.com/mobile/collection/customise) page.
 
 ## Credits
 The chart constant data is from [CHUNITHM譜面定数メインフレーム](https://x.com/RCMF_chunithm).
@@ -67,7 +76,7 @@ javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.gi
 javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.github.io/chuni-tools/scripts/chuni-tools-temp.js?t='+Math.floor(Date.now()/60000);d.body.append(s);})(document);
 ```
 
-2. 至 [CHUNITHM-NET](https://chunithm-net-eng.com/mobile/home) 並開啟該書籤，本工具共有 7 項功能
+2. 至 [CHUNITHM-NET](https://chunithm-net-eng.com/mobile/home) 並開啟該書籤，本工具共有 10 項功能
 
 - 個人查分器：
  於 [CHUNITHM-NET](https://chunithm-net-eng.com/mobile/home) <b>非指定</b>的網頁即可執行
@@ -89,6 +98,15 @@ javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.gi
 
  - 角色經驗值計算：
  需於 [CHUNITHM-NET 角色選擇](https://chunithm-net-eng.com/mobile/collection)網頁執行
+
+ - 角色等級統計表：
+ 需於 [CHUNITHM-NET 角色列表](https://chunithm-net-eng.com/mobile/collection/characterList)網頁執行
+
+ - 好友列表排序：
+ 需於 [CHUNITHM-NET 好友列表](https://chunithm-net-eng.com/mobile/friend)網頁執行
+
+ - 裝飾物品統計表：
+ 需於 [CHUNITHM-NET 飾品列表](https://chunithm-net-eng.com/mobile/collection/customise)網頁執行
 
 ## 致謝
 定數資料來源 [CHUNITHM譜面定数メインフレーム](https://x.com/RCMF_chunithm)
