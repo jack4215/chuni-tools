@@ -157,13 +157,13 @@
                                     };   
                                     const difficultyScore = sumScores(records);
                                     const totalHighScore = await fetchTotalHighScore(difficultyNames[e]);
-                                /*    records.push({
+                                    records.push({
                                         title: "Forsaken Tale",
                                         score: totalHighScore - difficultyScore === 0 ? -1 : totalHighScore - difficultyScore, 
                                         difficulty: e,
                                         clear: "",
                                         idx: "2652"
-                                    });*/
+                                    });
                                     // Add hidden song end
                                     return records;
                                 }(t.data.difficulty);
