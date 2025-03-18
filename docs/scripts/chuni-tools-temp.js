@@ -44,7 +44,8 @@
                 <p>Beta 版查分器將於 2025-04-17 棄用</p>
                 <p>屆時請改回使用原書籤工具</p><br>
                 <p>The Beta version Record Viewer will be deprecated on April 17, 2025.</p>
-                <p>Please use the original bookmark by then.</p>
+                <p>Please use the original bookmark by then.</p><br>
+                <p><a href="https://chuni.tsaibee.org/notice" target="_blank">更多資訊 / More Details.</a></p>
             `;
             const style = document.createElement("style");
             style.textContent = `
