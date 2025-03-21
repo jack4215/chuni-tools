@@ -3153,7 +3153,7 @@
       function getBackgroundColor(ratingPn) {
         switch (ratingPn) {
             case "silver":
-                return "linear-gradient(135deg, #2d4e61, #375a6d, #253655, #1b4255);"; 
+                return "linear-gradient(135deg, #2d4e61, #345f77, #253655, #1b4255);"; 
             case "gold":
                 return "linear-gradient(135deg, #4f4906, #675e00, #554203, #514006, #515007);"; 
             case "platina":

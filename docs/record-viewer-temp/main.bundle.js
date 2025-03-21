@@ -3167,27 +3167,27 @@
       function getBackgroundColor(ratingPn) {
         switch (ratingPn) {
             case "silver":
-                return "#023751"; 
+                return "linear-gradient(135deg, #2d4e61, #345f77, #253655, #1b4255);"; 
             case "gold":
-                return "#453b0f"; 
+                return "linear-gradient(135deg, #4f4906, #675e00, #554203, #514006, #515007);"; 
             case "platina":
-                return "#414034"; 
+                return "linear-gradient(135deg, #5b503f, #5b574c, #4f402c, #3f3527, #595750);"; 
             case "rainbow":
-                return "#45242c";
+                return "linear-gradient(135deg, #534565, #512d43, #3c2951, #394659, #245d1e)";
             default:
                 return null;
         }
       }
 
       function P(e, t) {
-        return "all" === e[5] ? 0 : "new" === e[5] || "best" === e[5] || "history" === e[5] ? 1 : -1
+        return "all" === e[5] ? 0 : "new" === e[5] || "best" === e[5] ? 1 : -1
       }
       return ~($ = P(e)) && (x = L[$] = U[$](e)), {
         c() {
-          t = H("div"),this.t = t, n = H("h2"), r = A(S), o = D(), s = H("div"), a = H("h2"), i = A(T), l = D(), c = H("span"), d = A("OP "), u = A(C), f = D(), p = H("div"), h = H("span"), g = A(N), v = D(), b = H("div"), $e(y.$$.fragment), w = D(), x && x.c(), O(n, "class", "stats-name svelte-1rv2o5c"), O(a, "class", "svelte-1rv2o5c"), O(c, "class", "svelte-1rv2o5c"), O(s, "class", "stats-rating svelte-1rv2o5c"), O(p, "class", "stats-honor svelte-1rv2o5c"), O(p, "data-honor", m = e[3].honor.color), B(p, "marquee", !0), O(b, "class", "stats-items svelte-1rv2o5c"), O(t, "class", "wrapper svelte-1rv2o5c"), O(t, "style", `background-color: ${getBackgroundColor(e[3].ratingPn)}`)
+          t = H("div"),this.t = t, n = H("h2"), r = A(S), o = D(), s = H("div"), a = H("h2"), i = A(T), l = D(), c = H("span"), d = A("OP "), u = A(C), f = D(), p = H("div"), h = H("span"), g = A(N), v = D(), b = H("div"), $e(y.$$.fragment), w = D(), x && x.c(), O(n, "class", "stats-name svelte-1rv2o5c"), O(a, "class", "svelte-1rv2o5c"), O(c, "class", "svelte-1rv2o5c"), O(s, "class", "stats-rating svelte-1rv2o5c"), O(p, "class", "stats-honor svelte-1rv2o5c"), O(p, "data-honor", m = e[3].honor.color), B(p, "marquee", !0), O(b, "class", "stats-items svelte-1rv2o5c"), O(t, "class", "wrapper svelte-1rv2o5c"), O(t, "style", `background-image: ${getBackgroundColor(e[3].ratingPn)}`)
           const bgColor = getBackgroundColor(e[3].ratingPn);
           if (bgColor) {
-              O(t, "style", `background-color: ${bgColor}`);
+              O(t, "style", `background-image: ${bgColor}`);
           }
           O(t, "class", "wrapper svelte-1rv2o5c");
         },
@@ -3204,7 +3204,7 @@
           })), he()), ~$ ? (x = L[$], x ? x.p(e, t) : (x = L[$] = U[$](e), x.c()), ge(x, 1), x.m(b, null)) : x = null);
           const bgColor = getBackgroundColor(e[3].ratingPn);
           if (bgColor) {
-              O(this.t, "style", `background-color: ${bgColor}`);
+              O(this.t, "style", `background-image: ${bgColor}`);
           } else {
               this.t.removeAttribute("style"); 
           }
