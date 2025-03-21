@@ -3180,7 +3180,7 @@
       }
 
       function P(e, t) {
-        return "all" === e[5] ? 0 : "new" === e[5] || "best" === e[5] ? 1 : -1
+        return "all" === e[5] ? 0 : "new" === e[5] || "best" === e[5] || "history" === e[5] ? 1 : -1
       }
       return ~($ = P(e)) && (x = L[$] = U[$](e)), {
         c() {
