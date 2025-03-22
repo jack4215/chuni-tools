@@ -957,7 +957,7 @@
       tt = Ne("usedConstData", "luminousplus", ["luminousplus","verse"], (() => {
         Nt.updateConstData(), Ht.updateConstData(), At.updateConstData()
       })),
-      nt = Ne("showOverPower", "hide", ["hide", "value", "percentage", "dgvalue", "dgpercentage"]),
+      nt = Ne("showOverPower", "hide", ["hide", "value", "percentage", "dgvalue", "dgpercentage", "eudgvalue", "eudgpercentage"]),
       rt = function(e, t, n = (() => {})) {
         let r = localStorage.getItem(e);
         (null === r || "true" !== r && "false" !== r) && (r = JSON.stringify(t), localStorage.setItem(e, r));
@@ -3242,7 +3242,7 @@
       let t, n, r;
 
       function o(e, t) {
-        return e[1] === "percentage" || e[1] === "dgpercentage" ? Br : e[1] === "dgvalue" ? Fr : Fr;
+        return e[1] === "percentage" || e[1] === "dgpercentage" || e[1] === "eudgpercentage" ? Br : e[1] === "dgvalue" || e[1] === "eudgvalue" ? Fr : Fr;
       }
       let s = o(e),
         a = s(e);
@@ -3462,7 +3462,7 @@
       }, [l, r, o, s, a, i, function() {
         "best" === o && Tt.toggle()
       }, function() {
-        "best" == o && p(nt, r = r === "percentage" ? "value" : r === "value" ? "percentage" : r === "dgpercentage" ? "dgvalue" : "dgpercentage", r)
+        "best" == o && p(nt, r = r === "percentage" ? "value" : r === "value" ? "percentage" : r === "dgpercentage" ? "dgvalue" : r === "dgvalue" ? "dgpercentage" : r === "eudgpercentage" ? "eudgvalue" : "eudgpercentage", r);
       }, () => {
         i || gt("songPlayCount", l.difficulty, l.idx).then((e => {
           n(0, l.playCount = e, l)
@@ -3656,11 +3656,11 @@
         }, {
           display: "overpowerPercent",
           sort: "opp",
-          condition: "percentage" == l || "dgpercentage" == l
+          condition: "percentage" == l || "dgpercentage" == l || "eudgpercentage" == l
         }, {
           display: "overpower",
           sort: "op",
-          condition: "value" == l || "dgvalue" == l
+          condition: "value" == l || "dgvalue" == l || "eudgvalue" == l
         }, {
           display: "rank",
           sort: "score",
@@ -4464,7 +4464,7 @@
       let r, o, s, a, i, l, c, d, f, h, g, m, v, b, y, w, $, x, k, j;
       return u(e, Ye, (e => n(14, i = e))), u(e, Ze, (e => n(15, l = e))), u(e, At, (e => n(16, h = e))), u(e, et, (e => n(17, c = e))), u(e, eet, (e => n(17, j = e))), u(e, Qe, (e => n(18, d = e))), u(e, nt, (e => n(2, f = e))), u(e, De, (e => n(19, g = e))), u(e, Tt, (e => n(20, m = e))), u(e, $t, (e => n(5, v = e))), u(e, Ae, (e => n(6, b = e))), u(e, wt, (e => n(7, y = e))), u(e, Nt, (e => n(8, w = e))), u(e, Ht, (e => n(9, $ = e))), u(e, jt, (e => n(10, x = e))), u(e, xt, (e => n(11, k = e))), p($t, v = window.location.hash.slice(1), v),
       e.$$.update = () => {
-        507908 & e.$$.dirty && n(0, r = h.filter((e => ("hide" != f || e.score >= 0) && (!(f === "dgvalue" || f === "dgpercentage") || (e.dg === 1 || e.dg === 2)) && d[e.difficulty] && c[Ie.find((t => _e[t] == e.genre))] && j[Rl.find((t => _s[t] == e.release))] && l >= e.const && e.const >= i))), 1 & e.$$.dirty && n(4, o = (() => {
+        507908 & e.$$.dirty && n(0, r = h.filter((e => ("hide" != f || e.score >= 0) && (!(f === "dgvalue" || f === "dgpercentage") || (e.dg === 1 || e.dg === 2)) && (!(f === "eudgvalue" || f === "eudgpercentage") || ((e.dg === 1 || e.dg === 2) && e.score >= 0)) && d[e.difficulty] && c[Ie.find((t => _e[t] == e.genre))] && j[Rl.find((t => _s[t] == e.release))] && l >= e.const && e.const >= i))), 1 & e.$$.dirty && n(4, o = (() => {
           let e = {};
           ["MAX", "SSS+", "SSS", "SS+", "SS", "S+", "S"].forEach((t => e[t] = 0)), ["AAA", "AA", "A", "BBB", "BB", "B", "C", "D"].forEach((t => e[t] = 0));
           for (const t of r) e[t.rank]++;
