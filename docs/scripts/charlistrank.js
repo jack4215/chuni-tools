@@ -18,8 +18,7 @@ function getCharacterExp(characterBlock) {
 function sortCharacters() {
     const characterList = document.getElementById('list');
     if (!characterList) return;
-    let characters = Array.from(characterList.querySelectorAll('.box01.w420.mt_25'))
-        .filter(c => c.style.display !== 'none');
+    let characters = Array.from(characterList.querySelectorAll('.box01.w420.mt_25'));
     characters.forEach(character => {
         const lazyImages = character.querySelectorAll('img.lazy');
         lazyImages.forEach(img => {
@@ -34,10 +33,13 @@ function sortCharacters() {
     characters.sort((a, b) => {
         const levelA = getCharacterLevel(a);
         const levelB = getCharacterLevel(b);
-
         if (levelA !== levelB) {
             return levelB - levelA;
         }
+        const isMaxA = a.querySelector('.character_list_rank_max') !== null;
+        const isMaxB = b.querySelector('.character_list_rank_max') !== null;
+        if (isMaxA && !isMaxB) return 1;
+        if (!isMaxA && isMaxB) return -1;
         const expA = getCharacterExp(a);
         const expB = getCharacterExp(b);
         return expA - expB;
