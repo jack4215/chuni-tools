@@ -1,50 +1,48 @@
 function getCharacterLevel(characterBlock) {
     const levelImgs = Array.from(characterBlock.querySelectorAll('.character_list_rank_num img'));
-
     const levelStr = levelImgs.map(img => {
         const match = img.src.match(/num_s_lv_([0-9]+)\.png/);
         return match ? match[1] : '0';
     }).join('');
-
     return parseInt(levelStr, 10) || 0;
 }
 
 function getCharacterExp(characterBlock) {
     const gageBase = characterBlock.querySelector('.character_list_gage_base img');
     if (!gageBase) return Infinity;
-
     const match = gageBase.getAttribute('width').match(/(\d+)px/);
     const width = match ? parseInt(match[1], 10) : Infinity;
-
     return width === 0 ? 9999 : width;
 }
 
-function sortCharacters(desc = true) {
+function sortCharacters() {
     const characterList = document.getElementById('list');
     if (!characterList) return;
-
     let characters = Array.from(characterList.querySelectorAll('.box01.w420.mt_25'))
-        .filter(c => c.style.display !== "none");
-
-    if (!characterList.dataset.originalOrder) {
-        characterList.dataset.originalOrder = JSON.stringify(characters.map(c => c.outerHTML));
-    }
-
+        .filter(c => c.style.display !== 'none');
+    characters.forEach(character => {
+        const lazyImages = character.querySelectorAll('img.lazy');
+        lazyImages.forEach(img => {
+            if (img.src.startsWith('data:image')) {
+                const originalSrc = img.getAttribute('data-original');
+                if (originalSrc) {
+                    img.src = originalSrc;
+                }
+            }
+        });
+    });
     characters.sort((a, b) => {
         const levelA = getCharacterLevel(a);
         const levelB = getCharacterLevel(b);
 
         if (levelA !== levelB) {
-            return desc ? levelB - levelA : levelA - levelB;
+            return levelB - levelA;
         }
-
         const expA = getCharacterExp(a);
         const expB = getCharacterExp(b);
         return expA - expB;
     });
-
     characters.forEach(character => characterList.appendChild(character));
-
     updateLevelStats();
 }
 
