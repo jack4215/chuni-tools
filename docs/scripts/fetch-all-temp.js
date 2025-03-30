@@ -236,6 +236,11 @@
                                         }
                                     }
                                 }
+                                /* 
+                                const response = await fetch("https://chuni.tsaibee.org/data/title-aprilfools.json");
+                                const t = await response.json();
+                                const r = t[Math.floor(Math.random() * t.length)];
+                                */
                                 const a = Array.from(e.querySelectorAll(".player_rating_num_block img"))
                                     .map((e => /rating_.*_comma.png/.test(e.src) ? "." : /rating_.*_[0-9]*(?=\.png)/.exec(e.src)[0].slice(-1)))
                                     .join("");
@@ -253,6 +258,8 @@
                                     honor: {
                                         text: honorText || "Unknown",
                                         color: honorColor
+                                        /* text: r.title,
+                                        color: r.genre */
                                     },
                                     rating: a,
                                     overPower: e.querySelector(".player_overpower_text").innerHTML.match(/\(([^)]+)\)/)[1],
