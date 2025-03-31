@@ -184,7 +184,7 @@
                                     const imageUrl = imageUrlMatch ? imageUrlMatch[1] : null;
                                     if (imageUrl) {
                                         try {
-                                            const response = await fetch("https://chuni.tsaibee.org/data/title.json");
+                                            const response = await fetch(`https://chuni.tsaibee.org/data/title.json?t=${Date.now()}`);
                                             const titleData = await response.json();
                                             const matchedTitle = titleData.find(item => item.image === imageUrl);
                                             if (matchedTitle) {
