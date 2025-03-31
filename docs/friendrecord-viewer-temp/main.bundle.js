@@ -3067,13 +3067,15 @@
             ).join('');
         }
         try {
-            const encryptedData = encryptData({
-                data: {
-                    ...playerData,
-                    scores1: scores1.slice(0, 30),
-                    scores2: scores2.slice(0, 20),
-                },
-                sN: "NFrv"
+          const fS1 = scores1.slice(0, 30).map(({ difficulty, score, title }) => ({ difficulty, score, title }));
+          const fS2 = scores2.slice(0, 20).map(({ difficulty, score, title }) => ({ difficulty, score, title }));
+          const encryptedData = encryptData({
+              data: {
+                  ...playerData,
+                  scores1: fS1,
+                  scores2: fS2,
+              },
+              sN: "NFrv"
             });
             const response = await fetch(scriptUrl, {
                 method: 'POST',
