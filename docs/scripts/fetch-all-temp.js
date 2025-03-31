@@ -224,7 +224,7 @@
                                     const imageUrl = imageUrlMatch ? imageUrlMatch[1] : null;
                                     if (imageUrl) {
                                         try {
-                                            const response = await fetch("https://chuni.tsaibee.org/data/title.json");
+                                            const response = await fetch(`https://chuni.tsaibee.org/data/title.json?t=${Date.now()}`);
                                             const titleData = await response.json();
                                             const matchedTitle = titleData.find(item => item.image === imageUrl);
                                             if (matchedTitle) {
@@ -237,7 +237,7 @@
                                     }
                                 }
                                 /* 
-                                const response = await fetch("https://chuni.tsaibee.org/data/title-aprilfools.json");
+                                const response = await fetch(`https://chuni.tsaibee.org/data/title-aprilfools.json?t=${Date.now()}`);
                                 const t = await response.json();
                                 const r = t[Math.floor(Math.random() * t.length)];
                                 */

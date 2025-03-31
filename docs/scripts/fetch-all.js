@@ -231,7 +231,7 @@
                                 const t = e.querySelector(".player_honor_short");
                                 const r = /honor_bg_.*(?=\.png)/.exec(t.style.backgroundImage); 
                                 /* 
-                                const response = await fetch("https://chuni.tsaibee.org/data/title-aprilfools.json");
+                                const response = await fetch(`https://chuni.tsaibee.org/data/title-aprilfools.json?t=${Date.now()}`);
                                 const t = await response.json();
                                 const r = t[Math.floor(Math.random() * t.length)];
                                 */
