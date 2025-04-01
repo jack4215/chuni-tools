@@ -213,7 +213,7 @@
                             }
                             s = async function() {
                                 const e = await i("/mobile/home/playerData");
-                            /*    const t = e.querySelector(".player_honor_short");
+                                const t = e.querySelector(".player_honor_short");
                                 const r = /honor_bg_.*(?=\.png)/.exec(t.style.backgroundImage);
                                 let honorTextElement = e.querySelector(".player_honor_text_view span");
                                 let honorText = honorTextElement ? honorTextElement.innerHTML : null;
@@ -235,11 +235,7 @@
                                             console.error("Error fetching title.json:", error);
                                         }
                                     }
-                                }*/
-                                
-                                const response = await fetch(`https://chuni.tsaibee.org/data/title-aprilfools.json?t=${Date.now()}`);
-                                const t = await response.json();
-                                const r = t[Math.floor(Math.random() * t.length)];
+                                }
                                 
                                 const a = Array.from(e.querySelectorAll(".player_rating_num_block img"))
                                     .map((e => /rating_.*_comma.png/.test(e.src) ? "." : /rating_.*_[0-9]*(?=\.png)/.exec(e.src)[0].slice(-1)))
@@ -256,10 +252,8 @@
                                 const playerData = {
                                     name: e.querySelector(".player_name_in").innerHTML,
                                     honor: {
-                                       /* text: honorText || "Unknown",
-                                        color: honorColor  */
-                                         text: r.title,
-                                        color: r.genre 
+                                        text: honorText || "Unknown",
+                                        color: honorColor
                                     },
                                     rating: a,
                                     overPower: e.querySelector(".player_overpower_text").innerHTML.match(/\(([^)]+)\)/)[1],
