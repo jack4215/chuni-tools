@@ -13542,5 +13542,32 @@
     "genre": 2,
     "release": 19,
     "newV": 1
+  },
+  "本能的 Survivor": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 10,
+    "MAS": 13.8,
+    "genre": 9,
+    "release": 19,
+    "newV": 1
+  },
+  "淵底のグレイ・ユークロニア": {
+    "BAS": 5,
+    "ADV": 8,
+    "EXP": 13.7,
+    "MAS": 15,
+    "genre": 9,
+    "release": 19,
+    "newV": 1
+  },
+  "Nyan Cat": {
+    "BAS": 2,
+    "ADV": 6,
+    "EXP": 12.3,
+    "MAS": 13.9,
+    "genre": 2,
+    "release": 19,
+    "newV": 1
   }
 }
