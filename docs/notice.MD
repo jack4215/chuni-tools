@@ -6,7 +6,7 @@
 
 ![image](https://chuni.tsaibee.org/data/1.jpg)
 
-＊原書籤請至[本網站](https://chuni.tsaibee.org/)複製使用
+＊原書籤請至[本網站](https://chuni.tsaibee.org/?lang=zh_TW)複製使用
 
 ## System Maintenance Notice (2025.04)
 
@@ -16,4 +16,4 @@ We sincerely apologize for any inconvenience this may cause and appreciate your 
 
 ![image](https://chuni.tsaibee.org/data/2.jpg)
 
-＊Please copy and use the original bookmarks from [this website](https://chuni.tsaibee.org/).
+＊Please copy and use the original bookmarks from [this website](https://chuni.tsaibee.org/?lang=en_US).
