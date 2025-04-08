@@ -3122,13 +3122,13 @@
       function getBackgroundColor(ratingPn) {
         switch (ratingPn) {
             case "silver":
-                return "linear-gradient(135deg, #2d4e61, #345f77, #253655, #1b4255);"; 
+                return "linear-gradient(135deg, #2d4e61, #345f77, #253655, #1b4255) padding-box, linear-gradient(135deg, #5c91af, #6592ab, #647ba5, #618b9f) border-box; border: 3px solid transparent"; 
             case "gold":
-                return "linear-gradient(135deg, #4f4906, #675e00, #554203, #514006, #515007);"; 
+                return "linear-gradient(135deg, #575007, #675e00, #554203, #514006, #535208) padding-box, linear-gradient(135deg, #898129, #817a33, #a9975c, #776732, #83822c) border-box; border: 3px solid transparent"; 
             case "platina":
-                return "linear-gradient(135deg, #5b503f, #5b574c, #4f402c, #3f3527, #595750);"; 
+                return "linear-gradient(135deg, #5b503f, #5b574c, #4f402c, #3f3527, #595750) padding-box, linear-gradient(135deg, #8f816b, #8b8470, #87745b, #817058, #9d998c) border-box; border: 3px solid transparent"; 
             case "rainbow":
-                return "linear-gradient(135deg, #534565, #512d43, #3c2951, #394659, #245d1e)";
+                return "linear-gradient(135deg, #534565, #512d43, #3c2951, #394659, #245d1e) padding-box, linear-gradient(135deg, #9b83bb, #995f83, #8d6cb1, #758aa7, #56934f) border-box; border: 3px solid transparent";
             default:
                 return null;
         }
@@ -3139,10 +3139,10 @@
       }
       return ~($ = P(e)) && (x = L[$] = U[$](e)), {
         c() {
-          t = H("div"),this.t = t, n = H("h2"), r = A(S), o = D(), s = H("div"), a = H("h2"), i = A(T), l = D(), c = H("span"), d = A("MAX "), u = A(C), f = D(), p = H("div"), h = H("span"), g = A(N), v = D(), b = H("div"), $e(y.$$.fragment), w = D(), x && x.c(), O(n, "class", "stats-name svelte-1rv2o5c"), O(a, "class", "svelte-1rv2o5c"), O(c, "class", "svelte-1rv2o5c"), O(s, "class", "stats-rating svelte-1rv2o5c"), O(p, "class", "stats-honor svelte-1rv2o5c"), O(p, "data-honor", m = e[3].honor.color), B(p, "marquee", !0), O(b, "class", "stats-items svelte-1rv2o5c"), O(t, "class", "wrapper svelte-1rv2o5c"), O(t, "style", `background-image: ${getBackgroundColor(e[3].ratingPn)}`)
+          t = H("div"),this.t = t, n = H("h2"), r = A(S), o = D(), s = H("div"), a = H("h2"), i = A(T), l = D(), c = H("span"), d = A("MAX "), u = A(C), f = D(), p = H("div"), h = H("span"), g = A(N), v = D(), b = H("div"), $e(y.$$.fragment), w = D(), x && x.c(), O(n, "class", "stats-name svelte-1rv2o5c"), O(a, "class", "svelte-1rv2o5c"), O(c, "class", "svelte-1rv2o5c"), O(s, "class", "stats-rating svelte-1rv2o5c"), O(p, "class", "stats-honor svelte-1rv2o5c"), O(p, "data-honor", m = e[3].honor.color), B(p, "marquee", !0), O(b, "class", "stats-items svelte-1rv2o5c"), O(t, "class", "wrapper svelte-1rv2o5c"), O(t, "style", `background: ${getBackgroundColor(e[3].ratingPn)}`)
           const bgColor = getBackgroundColor(e[3].ratingPn);
           if (bgColor) {
-              O(t, "style", `background-image: ${bgColor}`);
+              O(t, "style", `background: ${bgColor}`);
           }
           O(t, "class", "wrapper svelte-1rv2o5c");
         },
@@ -3159,7 +3159,7 @@
           })), he()), ~$ ? (x = L[$], x ? x.p(e, t) : (x = L[$] = U[$](e), x.c()), ge(x, 1), x.m(b, null)) : x = null);
           const bgColor = getBackgroundColor(e[3].ratingPn);
           if (bgColor) {
-              O(this.t, "style", `background-image: ${bgColor}`);
+              O(this.t, "style", `background: ${bgColor}`);
           } else {
               this.t.removeAttribute("style"); 
           }
