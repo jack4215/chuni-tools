@@ -54,12 +54,12 @@
         ,
         466: e => {
             "use strict";
-            e.exports = JSON.parse('{"locale.name":"English (US)","footer.chooseLang":"Select Language","footer.source":"Source code & this page is hosted on <a href=\\"https://github.com/jack4215/chuni-tools\\" target=\\"_blank\\" rel=\\"noreferrer noopener\\">GitHub</a><br/><br/>Developed and maintained by TSAIBEE"}')
+            e.exports = JSON.parse('{"locale.name":"English (US)","footer.chooseLang":"Select Language","footer.source":"<a href=\\"https://chuni.tsaibee.org\\" target=\\"_blank\\" rel=\\"noreferrer noopener\\">＜Back to homepage</a><br><br>Source code & this page is hosted on <a href=\\"https://github.com/jack4215/chuni-tools\\" target=\\"_blank\\" rel=\\"noreferrer noopener\\">GitHub</a><br/><br/>Developed and maintained by TSAIBEE"}')
         }
         ,
         549: e => {
             "use strict";
-            e.exports = JSON.parse('{"locale.name":"繁體中文","footer.chooseLang":"選擇語言","footer.source":"本網站透過 GitHub Pages 架設，可至 <a href=\\"https://github.com/jack4215/chuni-tools\\" target=\\"_blank\\" rel=\\"noreferrer noopener\\">GitHub</a> 查看原始碼。<br/><br/>Developed and maintained by TSAIBEE"}')
+            e.exports = JSON.parse('{"locale.name":"繁體中文","footer.chooseLang":"選擇語言","footer.source":"<a href=\\"https://chuni.tsaibee.org\\" target=\\"_blank\\" rel=\\"noreferrer noopener\\">＜返回首頁</a><br><br>本網站透過 GitHub Pages 架設，可至 <a href=\\"https://github.com/jack4215/chuni-tools\\" target=\\"_blank\\" rel=\\"noreferrer noopener\\">GitHub</a> 查看原始碼。<br/><br/>Developed and maintained by TSAIBEE"}')
         }
         ,
         115: e => {
