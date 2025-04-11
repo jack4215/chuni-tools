@@ -54,11 +54,11 @@
       },
       903: e => {
         "use strict";
-        e.exports = JSON.parse('{"main.title":"CHUNITHM Record Viewer (Beta)","loading.constData":"Used song constant data: {{name}}","loading.error.serviceDown":"CHUNITHM-NET service is currently unavailable.<br/>Please come back later.","loading.error.rejected":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.timeout":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.noopener":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.unknown":"Please <em>screenshot or copy the error message</em> to the author.","header.title.dl":"Save or share B40 as image","header.title.constData":"Change song constant data (Current: {{name}})","header.title.settings":"Open settings","settings.main.title":"Settings","settings.main.reset":"Reset Settings","settings.filter.title":"Filter","settings.filter.const":"By Chart Constant","settings.filter.diff":"By Difficulty","settings.filter.diff.warn":"*Should select at least one","settings.filter.diff.notify":"*Filtering difficulties or more than two hidden songs that are not displayed on CHUNITHM-NET may cause the data to be inaccurate.","settings.filter.genre":"By Genre","settings.filter.genre.all":"Toggle ALL","settings.filter.release":"By Release","settings.filter.release.all":"Toggle ALL","settings.data.title":"Game Data","settings.data.constData":"Chart Constant Data（Version : JP 20250401v1）","settings.data.constData.newplus":"NEW+","settings.data.constData.sun":"SUN","settings.data.constData.sunplus":"SUN+","settings.data.constData.luminous":"LUMINOUS","settings.data.constData.luminousplus":"Intl. Ver. (LUMINOUS PLUS)","settings.data.constData.verse":"Japanese Ver. (VERSE)","settings.data.playcount":"Show Play Count","settings.data.playcount.notify":"*You can click the dark box beside a song to view its play count","settings.data.showScoreDiff":"Show Diff.erence <span style=\\"color:var(--theme-text-dim)\\">(since last updated)</span>","settings.data.diffUpdate":"Diff. Basis Update Interval <span style=\\"color:var(--theme-text-dim)\\">Last updated: {{date}}</span>","settings.data.diffUpdate.1d":"Auto-update after 1 day","settings.data.diffUpdate.3d":"Auto-update after 3 days","settings.data.diffUpdate.7d":"Auto-update after 1 week","settings.data.diffUpdate.14d":"Auto-update after 2 weeks","settings.data.diffUpdate.30d":"Auto-update after 1 month","settings.data.diffUpdate.manual":"Manually update","settings.data.diffUpdate.update":"Update Diff. Basis","settings.data.diffUpdate.reload":"Reload Page to Update","settings.data.diffUpdate.notify":"*If set to auto-update when it has been more than the specified duration from the last time updated, the program will automatically update it.<br><br>◆ For more information please refer to <a href=\\"https://github.com/jack4215/chuni-tools/blob/main/README.MD\\" target=\\"_blank\\">Github README</a>.<br><br>◆ To report issues please mail to <a href=\\"mailto:admin@tsaibee.org\\" target=\\"_blank\\">admin@tsaibee.org</a>.","settings.data.overpower":"Show Over Power","settings.data.overpower.hide":"Hide (Show Rank)","settings.data.overpower.value":"Show (Over Power Value)","settings.data.overpower.percentage":"Show (Over Power Achievement%)","settings.data.overpower.dgvalue":"Show (Designate Over Power Value)","settings.data.overpower.dgpercentage":"Show (Designate Over Power Achievement%)","settings.data.overpower.eudgvalue":"Show (Designate Over Power Value except unscored)","settings.data.overpower.eudgpercentage":"Show (Designate Over Power Achievement% except unscored)","settings.data.overpower.notify":"*It will also show unplayed song when toggled to \\"Show Over Power\\".<br/>*Total over power might differ from the official one, if some of the songs are not unlocked yet.","settings.ui.title":"User Interface","settings.ui.locale":"Language","settings.ui.theme":"Theme","player.generic.generatedAt":"Generated At","player.best.playCount":"Play Count","player.best.best30":"BEST 30","player.best.maxPossible":"Max Possible","player.best.all30":"ALL 30","player.best.curr20":"CURRENT 20","player.recent.average":"Rating","record.head.playOrder":"Played Time","record.head.order":"#","record.head.title":"Title","record.head.const":"Ct","record.head.overpower":"OP","record.head.overpowerPercent":"OP%","record.head.rank":"Rank","record.head.score":"Score","record.head.scoreDiff":"Diff.","record.head.rating":"Rat.","record.head.ajfc":"AJ","record.head.playcount":"Plays","record.fetch.fetching":"Fetching record for <span style=\\"color:var(--theme-song-{{diff}});\\">{{diffStr}}</span> difficulty...","record.fetch.diff.ult":"ULTIMA","record.fetch.diff.mas":"MASTER","record.fetch.diff.exp":"EXPERT","record.fetch.diff.adv":"ADVANCED","record.fetch.diff.bas":"BASIC","record.fetch.unknown":"Found unknown song(s):\\n\\n{{songs}}\\n\\nPlease contact the author via Email (admin@tsaibee.org).","record.fetch.error":"<span style=\\"color:red;\\">Some error occured when fetching best record!<br/>You probably need to reload the page now.</span>","playcount.fetch.button":"Fetch","playcount.fetch.progress":"Fetching play count... ({{progress}}/{{all}})","playcount.fetch.error":"<span style=\\"color:red;\\">Some error occured when fetching play count!<br/>You probably need to reload the page now.</span>","share.error":"Something went wrong when converting your scores to PNG. Please screenshot the error message to the author.\\n\\n{{error}}"}')
+        e.exports = JSON.parse('{"main.title":"CHUNITHM Record Viewer (Beta)","loading.constData":"Used song constant data: {{name}}","loading.error.serviceDown":"CHUNITHM-NET service is currently unavailable.<br/>Please come back later.","loading.error.rejected":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.timeout":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.noopener":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.unknown":"Please <em>screenshot or copy the error message</em> to the author.","header.title.dl":"Save or share B40 as image","header.title.constData":"Change song constant data (Current: {{name}})","header.title.settings":"Open settings","settings.main.title":"Settings","settings.main.reset":"Reset Settings","settings.filter.title":"Filter","settings.filter.const":"By Chart Constant","settings.filter.diff":"By Difficulty","settings.filter.diff.warn":"*Should select at least one","settings.filter.diff.notify":"*Filtering difficulties or more than two hidden songs that are not displayed on CHUNITHM-NET may cause the data to be inaccurate.","settings.filter.genre":"By Genre","settings.filter.genre.all":"Toggle ALL","settings.filter.release":"By Release","settings.filter.release.all":"Toggle ALL","settings.data.title":"Game Data","settings.data.constData":"Chart Constant Data（Version : JP 20250401v1）","settings.data.constData.newplus":"NEW+","settings.data.constData.sun":"SUN","settings.data.constData.sunplus":"SUN+","settings.data.constData.luminous":"LUMINOUS","settings.data.constData.luminousplus":"Intl. Ver. (LUMINOUS PLUS)","settings.data.constData.verse":"Japanese Ver. (VERSE)","settings.data.playcount":"Show Play Count","settings.data.playcount.notify":"*You can click the dark box beside a song to view its play count","settings.data.showScoreDiff":"Show Diff.erence <span style=\\"color:var(--theme-text-dim)\\">(since last updated)</span>","settings.data.diffUpdate":"Diff. Basis Update Interval <span style=\\"color:var(--theme-text-dim)\\">Last updated: {{date}}</span>","settings.data.diffUpdate.1d":"Auto-update after 1 day","settings.data.diffUpdate.3d":"Auto-update after 3 days","settings.data.diffUpdate.7d":"Auto-update after 1 week","settings.data.diffUpdate.14d":"Auto-update after 2 weeks","settings.data.diffUpdate.30d":"Auto-update after 1 month","settings.data.diffUpdate.manual":"Manually update","settings.data.diffUpdate.update":"Update Diff. Basis","settings.data.diffUpdate.reload":"Reload Page to Update","settings.data.diffUpdate.notify":"*If set to auto-update when it has been more than the specified duration from the last time updated, the program will automatically update it.<br><br>◆ For more information please refer to <a href=\\"https://github.com/jack4215/chuni-tools/blob/main/README.MD\\" target=\\"_blank\\">Github README</a>.<br><br>◆ To report issues please mail to <a href=\\"mailto:admin@tsaibee.org\\" target=\\"_blank\\">admin@tsaibee.org</a>.","settings.data.overpower":"Show Over Power","settings.data.overpower.hide":"Hide (Show Rank)","settings.data.overpower.clr":"Hide (Show Clear Mark)","settings.data.overpower.value":"Show (Over Power Value)","settings.data.overpower.percentage":"Show (Over Power Achievement%)","settings.data.overpower.dgvalue":"Show (Designate Over Power Value)","settings.data.overpower.dgpercentage":"Show (Designate Over Power Achievement%)","settings.data.overpower.eudgvalue":"Show (Designate Over Power Value except unscored)","settings.data.overpower.eudgpercentage":"Show (Designate Over Power Achievement% except unscored)","settings.data.overpower.notify":"*It will also show unplayed song when toggled to \\"Show Over Power\\".<br/>*Total over power might differ from the official one, if some of the songs are not unlocked yet.","settings.ui.title":"User Interface","settings.ui.locale":"Language","settings.ui.theme":"Theme","player.generic.generatedAt":"Generated At","player.best.playCount":"Play Count","player.best.best30":"BEST 30","player.best.maxPossible":"Max Possible","player.best.all30":"ALL 30","player.best.curr20":"CURRENT 20","player.recent.average":"Rating","record.head.playOrder":"Played Time","record.head.order":"#","record.head.title":"Title","record.head.const":"Ct","record.head.overpower":"OP","record.head.overpowerPercent":"OP%","record.head.rank":"Rank","record.head.clr":"CLR","record.head.score":"Score","record.head.scoreDiff":"Diff.","record.head.rating":"Rat.","record.head.ajfc":"AJ","record.head.playcount":"Plays","record.fetch.fetching":"Fetching record for <span style=\\"color:var(--theme-song-{{diff}});\\">{{diffStr}}</span> difficulty...","record.fetch.diff.ult":"ULTIMA","record.fetch.diff.mas":"MASTER","record.fetch.diff.exp":"EXPERT","record.fetch.diff.adv":"ADVANCED","record.fetch.diff.bas":"BASIC","record.fetch.unknown":"Found unknown song(s):\\n\\n{{songs}}\\n\\nPlease contact the author via Email (admin@tsaibee.org).","record.fetch.error":"<span style=\\"color:red;\\">Some error occured when fetching best record!<br/>You probably need to reload the page now.</span>","playcount.fetch.button":"Fetch","playcount.fetch.progress":"Fetching play count... ({{progress}}/{{all}})","playcount.fetch.error":"<span style=\\"color:red;\\">Some error occured when fetching play count!<br/>You probably need to reload the page now.</span>","share.error":"Something went wrong when converting your scores to PNG. Please screenshot the error message to the author.\\n\\n{{error}}"}')
       },
       141: e => {
         "use strict";
-        e.exports = JSON.parse('{"main.title":"CHUNITHM 查分器 (Beta)","loading.constData":"使用 {{name}} 版本的定數資料","loading.error.serviceDown":"CHUNITHM-NET 目前正在停服維護。<br/>請在其可以使用的時段執行本程式。","loading.error.rejected":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.timeout":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.noopener":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.unknown":"無法正常執行！<br/>請截圖以下錯誤資訊並回報作者協助處理。","header.title.dl":"將B40記錄儲存為照片","header.title.constData":"切換歌曲定數資料 (目前：{{name}})","header.title.settings":"設定","settings.main.title":"設定","settings.main.reset":"重置設定","settings.filter.title":"歌曲篩選","settings.filter.const":"依 譜面定數","settings.filter.diff":"依 譜面難度","settings.filter.diff.warn":"*至少選一個吧","settings.filter.diff.notify":"*依照難度篩選或有 2 首以上未於 CHUNITHM-NET 顯示的隱藏曲，可能會使得記錄變得不準確","settings.filter.genre":"依 歌曲類別","settings.filter.genre.all":"全部開啟/關閉","settings.filter.release":"依 歌曲代數","settings.filter.release.all":"全開/關","settings.data.title":"遊戲數據","settings.data.constData":"使用的定數資料（版本：JP 20250401v1）","settings.data.constData.newplus":"NEW+","settings.data.constData.sun":"SUN","settings.data.constData.sunplus":"SUN+","settings.data.constData.luminous":"LUMINOUS","settings.data.constData.luminousplus":"國際版 (LUMINOUS PLUS)","settings.data.constData.verse":"日版 (VERSE)","settings.data.playcount":"顯示個別歌曲遊玩次數","settings.data.playcount.notify":"*點擊歌曲條目旁的深色方塊也可以查看單曲遊玩次數","settings.data.showScoreDiff":"顯示推分數據","settings.data.diffUpdate":"推分基準更新週期 <span style=\\"color:var(--theme-text-dim)\\">上次更新：{{date}}</span>","settings.data.diffUpdate.1d":"一天 後自動更新","settings.data.diffUpdate.3d":"三天 後自動更新","settings.data.diffUpdate.7d":"一週 後自動更新","settings.data.diffUpdate.14d":"兩週 後自動更新","settings.data.diffUpdate.30d":"一個月 後自動更新","settings.data.diffUpdate.manual":"手動更新","settings.data.diffUpdate.update":"更新推分基準","settings.data.diffUpdate.reload":"請重新載入頁面以更新紀錄","settings.data.diffUpdate.notify":"*若設定為自動更新，每當距離「上一次記錄推分基準」超過指定時間，就會自動更新推分的計算基準<br><br>◆ 關於本書籤工具說明，請見 <a href=\\"https://github.com/jack4215/chuni-tools/blob/main/README.MD\\" target=\\"_blank\\">Github README</a><br><br>◆ 問題回報請寄信至 <a href=\\"mailto:admin@tsaibee.org\\" target=\\"_blank\\">admin@tsaibee.org</a>","settings.data.overpower":"顯示 OVER POWER","settings.data.overpower.hide":"隱藏 (顯示成績等級)","settings.data.overpower.value":"顯示 (OVER POWER 數值)","settings.data.overpower.percentage":"顯示 (OVER POWER 達成率)","settings.data.overpower.dgvalue":"顯示 (OVER POWER 對象數值)","settings.data.overpower.dgpercentage":"顯示 (OVER POWER 對象達成率)","settings.data.overpower.eudgvalue":"顯示 (OVER POWER 對象數值 - 排除無分數)","settings.data.overpower.eudgpercentage":"顯示 (OVER POWER 對象達成率 - 排除無分數)","settings.data.overpower.notify":"*設定為「顯示」時，未遊玩的歌曲也會一併顯示<br/>*若有尚未解鎖的歌曲，OVER POWER 的數據可能會與官方記錄有差別","settings.ui.title":"使用者介面","settings.ui.locale":"語言","settings.ui.theme":"佈景主題","player.generic.generatedAt":"生成日期","player.best.playCount":"遊玩道數","player.best.best30":"BEST 30","player.best.maxPossible":"不推分可至","player.best.all30":"ALL 30","player.best.curr20":"CURRENT 20","player.recent.average":"Rating","record.head.playOrder":"遊玩時間","record.head.order":"#","record.head.title":"曲名","record.head.const":"定數","record.head.overpower":"OP","record.head.overpowerPercent":"OP%","record.head.rank":"評級","record.head.score":"成績","record.head.scoreDiff":"推分","record.head.rating":"評分","record.head.ajfc":"AJ","record.head.playcount":"次數","record.fetch.fetching":"正在載入 <span style=\\"color:var(--theme-song-{{diff}});\\">{{diffStr}}</span> 資料……","record.fetch.diff.ult":"黑譜 (ULTIMA)","record.fetch.diff.mas":"紫譜 (MASTER)","record.fetch.diff.exp":"紅譜 (EXPERT)","record.fetch.diff.adv":"黃譜 (ADVANCED)","record.fetch.diff.bas":"綠譜 (BASIC)","record.fetch.unknown":"資料庫尚未有以下歌曲：\\n{{songs}}\\n請寄信至 admin@tsaibee.org 反映。","record.fetch.error":"<span style=\\"color:red;\\">取得遊玩記錄時發生問題，<br/>請重新整理頁面後再試一次。</span>","playcount.fetch.button":"取得","playcount.fetch.progress":"正在取得歌曲遊玩次數…… ({{progress}}/{{all}})","playcount.fetch.error":"<span style=\\"color:red;\\">取得遊玩次數時出現問題，<br/>請重新整理頁面後再試一次。</span>","share.error":"轉換圖檔時出現錯誤，請將以下的錯誤訊息截圖傳給作者處理。\\n\\n{{error}}"}')
+        e.exports = JSON.parse('{"main.title":"CHUNITHM 查分器 (Beta)","loading.constData":"使用 {{name}} 版本的定數資料","loading.error.serviceDown":"CHUNITHM-NET 目前正在停服維護。<br/>請在其可以使用的時段執行本程式。","loading.error.rejected":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.timeout":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.noopener":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.unknown":"無法正常執行！<br/>請截圖以下錯誤資訊並回報作者協助處理。","header.title.dl":"將B40記錄儲存為照片","header.title.constData":"切換歌曲定數資料 (目前：{{name}})","header.title.settings":"設定","settings.main.title":"設定","settings.main.reset":"重置設定","settings.filter.title":"歌曲篩選","settings.filter.const":"依 譜面定數","settings.filter.diff":"依 譜面難度","settings.filter.diff.warn":"*至少選一個吧","settings.filter.diff.notify":"*依照難度篩選或有 2 首以上未於 CHUNITHM-NET 顯示的隱藏曲，可能會使得記錄變得不準確","settings.filter.genre":"依 歌曲類別","settings.filter.genre.all":"全部開啟/關閉","settings.filter.release":"依 歌曲代數","settings.filter.release.all":"全開/關","settings.data.title":"遊戲數據","settings.data.constData":"使用的定數資料（版本：JP 20250401v1）","settings.data.constData.newplus":"NEW+","settings.data.constData.sun":"SUN","settings.data.constData.sunplus":"SUN+","settings.data.constData.luminous":"LUMINOUS","settings.data.constData.luminousplus":"國際版 (LUMINOUS PLUS)","settings.data.constData.verse":"日版 (VERSE)","settings.data.playcount":"顯示個別歌曲遊玩次數","settings.data.playcount.notify":"*點擊歌曲條目旁的深色方塊也可以查看單曲遊玩次數","settings.data.showScoreDiff":"顯示推分數據","settings.data.diffUpdate":"推分基準更新週期 <span style=\\"color:var(--theme-text-dim)\\">上次更新：{{date}}</span>","settings.data.diffUpdate.1d":"一天 後自動更新","settings.data.diffUpdate.3d":"三天 後自動更新","settings.data.diffUpdate.7d":"一週 後自動更新","settings.data.diffUpdate.14d":"兩週 後自動更新","settings.data.diffUpdate.30d":"一個月 後自動更新","settings.data.diffUpdate.manual":"手動更新","settings.data.diffUpdate.update":"更新推分基準","settings.data.diffUpdate.reload":"請重新載入頁面以更新紀錄","settings.data.diffUpdate.notify":"*若設定為自動更新，每當距離「上一次記錄推分基準」超過指定時間，就會自動更新推分的計算基準<br><br>◆ 關於本書籤工具說明，請見 <a href=\\"https://github.com/jack4215/chuni-tools/blob/main/README.MD\\" target=\\"_blank\\">Github README</a><br><br>◆ 問題回報請寄信至 <a href=\\"mailto:admin@tsaibee.org\\" target=\\"_blank\\">admin@tsaibee.org</a>","settings.data.overpower":"顯示 OVER POWER","settings.data.overpower.hide":"隱藏 (顯示成績等級)","settings.data.overpower.clr":"隱藏 (顯示 CLEAR 標記)","settings.data.overpower.value":"顯示 (OVER POWER 數值)","settings.data.overpower.percentage":"顯示 (OVER POWER 達成率)","settings.data.overpower.dgvalue":"顯示 (OVER POWER 對象數值)","settings.data.overpower.dgpercentage":"顯示 (OVER POWER 對象達成率)","settings.data.overpower.eudgvalue":"顯示 (OVER POWER 對象數值 - 排除無分數)","settings.data.overpower.eudgpercentage":"顯示 (OVER POWER 對象達成率 - 排除無分數)","settings.data.overpower.notify":"*設定為「顯示」時，未遊玩的歌曲也會一併顯示<br/>*若有尚未解鎖的歌曲，OVER POWER 的數據可能會與官方記錄有差別","settings.ui.title":"使用者介面","settings.ui.locale":"語言","settings.ui.theme":"佈景主題","player.generic.generatedAt":"生成日期","player.best.playCount":"遊玩道數","player.best.best30":"BEST 30","player.best.maxPossible":"不推分可至","player.best.all30":"ALL 30","player.best.curr20":"CURRENT 20","player.recent.average":"Rating","record.head.playOrder":"遊玩時間","record.head.order":"#","record.head.title":"曲名","record.head.const":"定數","record.head.overpower":"OP","record.head.overpowerPercent":"OP%","record.head.rank":"評級","record.head.clr":"CLR","record.head.score":"成績","record.head.scoreDiff":"推分","record.head.rating":"評分","record.head.ajfc":"AJ","record.head.playcount":"次數","record.fetch.fetching":"正在載入 <span style=\\"color:var(--theme-song-{{diff}});\\">{{diffStr}}</span> 資料……","record.fetch.diff.ult":"黑譜 (ULTIMA)","record.fetch.diff.mas":"紫譜 (MASTER)","record.fetch.diff.exp":"紅譜 (EXPERT)","record.fetch.diff.adv":"黃譜 (ADVANCED)","record.fetch.diff.bas":"綠譜 (BASIC)","record.fetch.unknown":"資料庫尚未有以下歌曲：\\n{{songs}}\\n請寄信至 admin@tsaibee.org 反映。","record.fetch.error":"<span style=\\"color:red;\\">取得遊玩記錄時發生問題，<br/>請重新整理頁面後再試一次。</span>","playcount.fetch.button":"取得","playcount.fetch.progress":"正在取得歌曲遊玩次數…… ({{progress}}/{{all}})","playcount.fetch.error":"<span style=\\"color:red;\\">取得遊玩次數時出現問題，<br/>請重新整理頁面後再試一次。</span>","share.error":"轉換圖檔時出現錯誤，請將以下的錯誤訊息截圖傳給作者處理。\\n\\n{{error}}"}')
       }
     },
     t = {};
@@ -845,6 +845,11 @@
         const n = ["", "FC", "AJ"];
         return n.indexOf(t.clear) - n.indexOf(e.clear)
       },
+      clr: (e, t) => {
+        if (e.clear2 == t.clear2) return e.order - t.order;
+        const nn = ["", "CLR", "HRD", "BRV", "ABS", "CTS"];
+        return nn.indexOf(t.clear2) - nn.indexOf(e.clear2)
+      },
       playcount: (e, t) => null == e.playCount ? 100 : null == t.playCount ? -100 : e.playCount == t.playCount ? e.order - t.order : t.playCount - e.playCount
     };
 
@@ -989,7 +994,7 @@
       tt = Ne("usedConstData", "luminousplus", ["luminousplus","verse"], (() => {
         At.updateConstData(), Ht.updateConstData()
       })),
-      nt = Ne("showOverPower", "hide", ["hide", "value", "percentage", "dgvalue", "dgpercentage", "eudgvalue", "eudgpercentage"]),
+      nt = Ne("showOverPower", "hide", ["hide", "clr", "value", "percentage", "dgvalue", "dgpercentage", "eudgvalue", "eudgpercentage"]),
       rt = function(e, t, n = (() => {})) {
         let r = localStorage.getItem(e);
         (null === r || "true" !== r && "false" !== r) && (r = JSON.stringify(t), localStorage.setItem(e, r));
@@ -3236,7 +3241,7 @@
     };
 
     function _r(e) {
-      j(e, "svelte-1gjhsjp", 'tr.best30.svelte-1gjhsjp td.song-order.svelte-1gjhsjp{color:var(--theme-rank-b30)}tr.best40.svelte-1gjhsjp td.song-order.svelte-1gjhsjp{font-weight:bold}tr.svelte-1gjhsjp:not(.best40) td.song-order.svelte-1gjhsjp{color:var(--theme-text-dim)}tr.ajc.svelte-1gjhsjp td[data-rank].svelte-1gjhsjp,tr.ajc.svelte-1gjhsjp td.song-score.svelte-1gjhsjp,tr.ajc.svelte-1gjhsjp td[data-clear].svelte-1gjhsjp{text-shadow:0 0 10px var(--theme-clear-aj)}td.svelte-1gjhsjp.svelte-1gjhsjp{padding:0.5em;border-top:var(--theme-border) 1.5px solid;text-align:center}td[data-diff].svelte-1gjhsjp.svelte-1gjhsjp{font-weight:bold;text-align:left;width:30em}td[data-diff][data-diff=WE].svelte-1gjhsjp.svelte-1gjhsjp{color:var(--theme-song-we)}td[data-diff][data-diff=ULT].svelte-1gjhsjp.svelte-1gjhsjp{color:var(--theme-song-ult)}td[data-diff][data-diff=MAS].svelte-1gjhsjp.svelte-1gjhsjp{color:var(--theme-song-mas)}td[data-diff][data-diff=EXP].svelte-1gjhsjp.svelte-1gjhsjp{color:var(--theme-song-exp)}td[data-diff][data-diff=ADV].svelte-1gjhsjp.svelte-1gjhsjp{color:var(--theme-song-adv)}td[data-diff][data-diff=BAS].svelte-1gjhsjp.svelte-1gjhsjp{color:var(--theme-song-bas)}@media only screen and (max-width: 544px){td.svelte-1gjhsjp.svelte-1gjhsjp{padding:0.5em 0.1em}td[data-diff].svelte-1gjhsjp.svelte-1gjhsjp{max-width:20em}}td[data-rank].svelte-1gjhsjp.svelte-1gjhsjp{white-space:nowrap}td[data-rank][data-rank=MAX].svelte-1gjhsjp.svelte-1gjhsjp{color:var(--theme-clear-ajc);text-shadow:0 0 10px var(--theme-clear-ajc) !important}td[data-rank][data-rank="SSS+"].svelte-1gjhsjp.svelte-1gjhsjp{color:#68fb60}td[data-rank][data-rank=SSS].svelte-1gjhsjp.svelte-1gjhsjp{color:#ffd744}td[data-rank][data-rank="SS+"].svelte-1gjhsjp.svelte-1gjhsjp{color:#ffe277}td[data-rank][data-rank=SS].svelte-1gjhsjp.svelte-1gjhsjp{color:#ffedaa}td[data-rank][data-rank="S+"].svelte-1gjhsjp.svelte-1gjhsjp{color:#ffd744}td[data-rank][data-rank=S].svelte-1gjhsjp.svelte-1gjhsjp{color:#ffe277}td[data-rank][data-rank=AAA].svelte-1gjhsjp.svelte-1gjhsjp{color:#cceeff}td[data-rank][data-rank=AA].svelte-1gjhsjp.svelte-1gjhsjp{color:#a6e1ff}td[data-rank][data-rank=A].svelte-1gjhsjp.svelte-1gjhsjp{color:#80d5ff}td[data-rank][data-rank=BBB].svelte-1gjhsjp.svelte-1gjhsjp{color:#59c8ff}td[data-rank][data-rank=BB].svelte-1gjhsjp.svelte-1gjhsjp{color:#33bbff}td[data-rank][data-rank=B].svelte-1gjhsjp.svelte-1gjhsjp{color:#0daeff}td[data-rank][data-rank=MAX].svelte-1gjhsjp.svelte-1gjhsjp{font-weight:bold}td[data-rank][data-rank="SSS+"].svelte-1gjhsjp.svelte-1gjhsjp{font-weight:bold}td[data-rank][data-rank=SSS].svelte-1gjhsjp.svelte-1gjhsjp{font-weight:bold}td[data-rank][data-rank="SS+"].svelte-1gjhsjp.svelte-1gjhsjp{font-weight:bold}td[data-rank][data-rank=SS].svelte-1gjhsjp.svelte-1gjhsjp{font-weight:bold}td[data-rank][data-rank=C].svelte-1gjhsjp.svelte-1gjhsjp{color:#888}td[data-rank][data-rank=D].svelte-1gjhsjp.svelte-1gjhsjp{color:#666}td[data-clear].svelte-1gjhsjp.svelte-1gjhsjp{font-weight:bold}td[data-clear][data-clear=FC].svelte-1gjhsjp.svelte-1gjhsjp{color:var(--theme-clear-fc)}td[data-clear][data-clear=AJ].svelte-1gjhsjp.svelte-1gjhsjp{color:var(--theme-clear-aj)}td.song-op.svelte-1gjhsjp.svelte-1gjhsjp{white-space:nowrap}td.clickable.svelte-1gjhsjp.svelte-1gjhsjp{cursor:pointer}td.clickable.svelte-1gjhsjp.svelte-1gjhsjp:hover{text-shadow:0 0 10px var(--theme-text)}.opmx.svelte-1gjhsjp.svelte-1gjhsjp{color:var(--theme-text-dim);font-size:0.8em}.pc-hidden.svelte-1gjhsjp.svelte-1gjhsjp{cursor:pointer}.pc-hidden.svelte-1gjhsjp span.svelte-1gjhsjp{border-radius:0.2em;background-color:var(--theme-bg-sub);color:var(--theme-bg-sub)}.pc-hidden.disabled.svelte-1gjhsjp.svelte-1gjhsjp{cursor:no-drop}.pc-hidden.disabled.svelte-1gjhsjp span.svelte-1gjhsjp{filter:brightness(0.8)}')
+      j(e, "svelte-1gjhsjp", 'tr.best30.svelte-1gjhsjp td.song-order.svelte-1gjhsjp{color:var(--theme-rank-b30)}tr.best40.svelte-1gjhsjp td.song-order.svelte-1gjhsjp{font-weight:bold}tr.svelte-1gjhsjp:not(.best40) td.song-order.svelte-1gjhsjp{color:var(--theme-text-dim)}tr.ajc.svelte-1gjhsjp td[data-rank].svelte-1gjhsjp,tr.ajc.svelte-1gjhsjp td.song-score.svelte-1gjhsjp,tr.ajc.svelte-1gjhsjp td[data-clear].svelte-1gjhsjp{text-shadow:0 0 10px var(--theme-clear-aj)}td.svelte-1gjhsjp.svelte-1gjhsjp{padding:0.5em;border-top:var(--theme-border) 1.5px solid;text-align:center}td[data-diff].svelte-1gjhsjp.svelte-1gjhsjp{font-weight:bold;text-align:left;width:30em}td[data-diff][data-diff=WE].svelte-1gjhsjp.svelte-1gjhsjp{color:var(--theme-song-we)}td[data-diff][data-diff=ULT].svelte-1gjhsjp.svelte-1gjhsjp{color:var(--theme-song-ult)}td[data-diff][data-diff=MAS].svelte-1gjhsjp.svelte-1gjhsjp{color:var(--theme-song-mas)}td[data-diff][data-diff=EXP].svelte-1gjhsjp.svelte-1gjhsjp{color:var(--theme-song-exp)}td[data-diff][data-diff=ADV].svelte-1gjhsjp.svelte-1gjhsjp{color:var(--theme-song-adv)}td[data-diff][data-diff=BAS].svelte-1gjhsjp.svelte-1gjhsjp{color:var(--theme-song-bas)}@media only screen and (max-width: 544px){td.svelte-1gjhsjp.svelte-1gjhsjp{padding:0.5em 0.1em}td[data-diff].svelte-1gjhsjp.svelte-1gjhsjp{max-width:20em}}td[data-rank].svelte-1gjhsjp.svelte-1gjhsjp{white-space:nowrap}td[data-rank][data-rank=MAX].svelte-1gjhsjp.svelte-1gjhsjp{color:var(--theme-clear-ajc);text-shadow:0 0 10px var(--theme-clear-ajc) !important}td[data-rank][data-rank="SSS+"].svelte-1gjhsjp.svelte-1gjhsjp{color:#68fb60}td[data-rank][data-rank=SSS].svelte-1gjhsjp.svelte-1gjhsjp{color:#ffd744}td[data-rank][data-rank="SS+"].svelte-1gjhsjp.svelte-1gjhsjp{color:#ffe277}td[data-rank][data-rank=SS].svelte-1gjhsjp.svelte-1gjhsjp{color:#ffedaa}td[data-rank][data-rank="S+"].svelte-1gjhsjp.svelte-1gjhsjp{color:#ffd744}td[data-rank][data-rank=S].svelte-1gjhsjp.svelte-1gjhsjp{color:#ffe277}td[data-rank][data-rank=AAA].svelte-1gjhsjp.svelte-1gjhsjp{color:#cceeff}td[data-rank][data-rank=AA].svelte-1gjhsjp.svelte-1gjhsjp{color:#a6e1ff}td[data-rank][data-rank=A].svelte-1gjhsjp.svelte-1gjhsjp{color:#80d5ff}td[data-rank][data-rank=BBB].svelte-1gjhsjp.svelte-1gjhsjp{color:#59c8ff}td[data-rank][data-rank=BB].svelte-1gjhsjp.svelte-1gjhsjp{color:#33bbff}td[data-rank][data-rank=B].svelte-1gjhsjp.svelte-1gjhsjp{color:#0daeff}td[data-rank][data-rank=MAX].svelte-1gjhsjp.svelte-1gjhsjp{font-weight:bold}td[data-rank][data-rank="SSS+"].svelte-1gjhsjp.svelte-1gjhsjp{font-weight:bold}td[data-rank][data-rank=SSS].svelte-1gjhsjp.svelte-1gjhsjp{font-weight:bold}td[data-rank][data-rank="SS+"].svelte-1gjhsjp.svelte-1gjhsjp{font-weight:bold}td[data-rank][data-rank=SS].svelte-1gjhsjp.svelte-1gjhsjp{font-weight:bold}td[data-rank][data-rank=C].svelte-1gjhsjp.svelte-1gjhsjp{color:#888}td[data-rank][data-rank=D].svelte-1gjhsjp.svelte-1gjhsjp{color:#666}td[data-clear].svelte-1gjhsjp.svelte-1gjhsjp{font-weight:bold}td[data-clear][data-clear=FC].svelte-1gjhsjp.svelte-1gjhsjp{color:var(--theme-clear-fc)}td[data-clear][data-clear=AJ].svelte-1gjhsjp.svelte-1gjhsjp{color:var(--theme-clear-aj)}td.song-op.svelte-1gjhsjp.svelte-1gjhsjp{white-space:nowrap}td.clickable.svelte-1gjhsjp.svelte-1gjhsjp{cursor:pointer}td.clickable.svelte-1gjhsjp.svelte-1gjhsjp:hover{text-shadow:0 0 10px var(--theme-text)}.opmx.svelte-1gjhsjp.svelte-1gjhsjp{color:var(--theme-text-dim);font-size:0.8em}.pc-hidden.svelte-1gjhsjp.svelte-1gjhsjp{cursor:pointer}.pc-hidden.svelte-1gjhsjp span.svelte-1gjhsjp{border-radius:0.2em;background-color:var(--theme-bg-sub);color:var(--theme-bg-sub)}.pc-hidden.disabled.svelte-1gjhsjp.svelte-1gjhsjp{cursor:no-drop}.pc-hidden.disabled.svelte-1gjhsjp span.svelte-1gjhsjp{filter:brightness(0.8)}td[data-clr].svelte-1gjhsjp{white-space:nowrap;}td[data-clr="CTS"].svelte-1gjhsjp{color:#ff88d0;font-weight:bold;}td[data-clr="ABS"].svelte-1gjhsjp{color:#68fb60;font-weight:bold;}td[data-clr="BRV"].svelte-1gjhsjp{color:#ffd744;font-weight:bold;}td[data-clr="HRD"].svelte-1gjhsjp{color:#ffad44;font-weight:bold;}td[data-clr="CLR"].svelte-1gjhsjp{color:#80d5ff;font-weight:bold;}')
     }
 
     function Ir(e) {
@@ -3265,6 +3270,24 @@
         },
         p(e, s) {
           1 & s && o !== (o = e[0].rank + "") && I(n, o), 1 & s && r !== (r = e[0].rank) && O(t, "data-rank", r)
+        },
+        d(e) {
+          e && E(t)
+        }
+      }
+    }
+
+    function Rrr(e) {
+      let t, n, r, o = e[0].clear2 + "";
+      return {
+        c() {
+          t = H("td"), n = A(o), O(t, "data-clr", r = e[0].clear2), O(t, "class", "svelte-1gjhsjp")
+        },
+        m(e, r) {
+          M(e, t, r), k(t, n)
+        },
+        p(e, s) {
+          1 & s && o !== (o = e[0].clear2 + "") && I(n, o), 1 & s && r !== (r = e[0].clear2) && O(t, "data-clr", r)
         },
         d(e) {
           e && E(t)
@@ -3470,7 +3493,9 @@
         N = t[0].constUncertain && Ir();
       let newVIndicator = (t[0].newV === 1 || (t[0].newV === 2 && t[0].difficulty === "ULT")) && Vz(T);
       function U(e, t) {
-        return "hide" != e[1] ? zr : Rr
+        if (e[1] === "hide") return Rr;
+        if (e[1] === "clr") return Rrr;
+        return zr;
       }
       let L = U(t),
         _ = L(t);
@@ -3739,6 +3764,10 @@
           sort: "score",
           condition: "hide" == l,
           nocur: !i
+        }, {
+          display: "clr",
+          sort: "clr",
+          condition: "clr" == l
         }, {
           display: i ? "scoreDiff" : "score",
           sort: i ? "scoreDiff" : "score"
@@ -4065,7 +4094,7 @@
     };
 
     function Eo(e) {
-      j(e, "svelte-1cp0kbr", ".wrapper.svelte-1cp0kbr.svelte-1cp0kbr{border:var(--theme-border) 3px solid;border-radius:0.5rem;background-color:var(--theme-bg-sub);box-sizing:border-box;width:100%;max-width:600px;padding:0.5rem;margin:0.5rem;display:flex;justify-content:space-evenly;text-align:center;gap:0.8em;overflow-x:scroll}.wrapper.svelte-1cp0kbr.svelte-1cp0kbr::-webkit-scrollbar{display:none}.item.svelte-1cp0kbr.svelte-1cp0kbr{display:flex;-ms-flex-direction:column;flex-direction:column}.item.svelte-1cp0kbr div.svelte-1cp0kbr:nth-child(1){color:var(--theme-label)}.item.svelte-1cp0kbr div.svelte-1cp0kbr:nth-child(2){font-size:1.2em;font-weight:bold}.item.fc.svelte-1cp0kbr div.svelte-1cp0kbr:nth-child(1){color:var(--theme-clear-fc)}.item.aj.svelte-1cp0kbr div.svelte-1cp0kbr:nth-child(1){color:var(--theme-clear-aj)}.item.mx.svelte-1cp0kbr:not(.zero) div.svelte-1cp0kbr:nth-child(2),.item.full.svelte-1cp0kbr div.svelte-1cp0kbr:nth-child(2){color:var(--theme-clear-aj);text-shadow:0 0 10px var(--theme-clear-aj)}.item.zero.svelte-1cp0kbr div.svelte-1cp0kbr:nth-child(2){color:var(--theme-text-dim)}.total.svelte-1cp0kbr.svelte-1cp0kbr{color:var(--theme-text-dim);font-size:0.8rem;display:flex;align-items:end}")
+      j( e, "svelte-1cp0kbr", `.wrapper.svelte-1cp0kbr{border:var(--theme-border) 3px solid;border-radius:0.5rem;background-color:var(--theme-bg-sub);box-sizing:border-box;width:100%;max-width:600px;padding:0.5rem;margin:0.5rem;display:flex;justify-content:space-evenly;text-align:center;gap:0.8em;overflow-x:scroll}.wrapper.svelte-1cp0kbr::-webkit-scrollbar{display:none} .item.svelte-1cp0kbr{display:flex;flex-direction:column} .item.svelte-1cp0kbr div:nth-child(1){color:var(--theme-label)} .item.svelte-1cp0kbr div:nth-child(2){font-size:1.2em;font-weight:bold} .item.fc.svelte-1cp0kbr div:nth-child(1){color:var(--theme-clear-fc)} .item.aj.svelte-1cp0kbr div:nth-child(1){color:var(--theme-clear-aj)} .item.mx.svelte-1cp0kbr:not(.zero) div:nth-child(2), .item.full.svelte-1cp0kbr div:nth-child(2){color:var(--theme-clear-aj);text-shadow:0 0 10px var(--theme-clear-aj)} .item.zero.svelte-1cp0kbr div:nth-child(2){color:var(--theme-text-dim)} .total.svelte-1cp0kbr{color:var(--theme-text-dim);font-size:0.8rem;display:flex;align-items:end}` );
     }
 
     function No(e, t, n) {
@@ -4110,38 +4139,99 @@
     }
 
     function Ao(t) {
-      let n, r, o, s, a, i, l, c, d, u, f, p, h, g, m, v, b, y, w = ["S", "S+", "SS", "SS+", "SSS", "SSS+"],
-        $ = [];
-      for (let e = 0; e < 6; e += 1) $[e] = Ho(No(t, w, e));
-      let x = t[0].MAX > 0 && Uo(t);
+      let n, r, o, s, a, i, l, c, d, u, f, p, h, g, m, v, b, y;
+      let S1 = ["S", "S+", "SS", "SS+", "SSS", "SSS+"];
+      let S2 = ["CLR", "HRD", "BRV", "ABS", "CTS"];
+      let z1 = [], z2 = [];
+      for (let e = 0; e < 6; e++) z1[e] = Ho(No(t, S1, e));
+      for (let e = 0; e < 5; e++) z2[e] = Ho(No(t, S2, e));
+      let Mx = t[0].MAX > 0 && Uo(t);
       return {
         c() {
           n = H("div");
-          for (let e = 0; e < 6; e += 1) $[e].c();
-          r = D(), x && x.c(), o = D(), s = H("div"), a = H("div"), a.textContent = "FC", i = D(), l = H("div"), c = A(t[1]), d = D(), u = H("div"), f = H("div"), f.textContent = "AJ", p = D(), h = H("div"), g = A(t[2]), m = D(), v = H("div"), b = A("/"), y = A(t[3]), O(a, "class", "svelte-1cp0kbr"), O(l, "class", "svelte-1cp0kbr"), O(s, "class", "item fc svelte-1cp0kbr"), B(s, "zero", 0 == t[1]), B(s, "full", t[1] == t[3]), O(f, "class", "svelte-1cp0kbr"), O(h, "class", "svelte-1cp0kbr"), O(u, "class", "item aj svelte-1cp0kbr"), B(u, "zero", 0 == t[2]), B(u, "full", t[2] == t[3]), O(v, "class", "total svelte-1cp0kbr"), O(n, "class", "wrapper svelte-1cp0kbr")
+          for (let e = 0; e < 6; e++) z1[e].c();
+          r = D();
+          Mx && Mx.c();
+          o = D();
+          s = H("div");
+          a = A("/" + t[3]);
+          O(n, "class", "wrapper svelte-1cp0kbr");
+          O(s, "class", "total svelte-1cp0kbr");
+          i = H("div");
+          for (let e = 0; e < 5; e++) z2[e].c();
+          l = D();
+          c = H("div");
+          d = H("div");
+          d.textContent = "FC";
+          u = D();
+          f = H("div");
+          p = A(t[1]);
+          O(d, "class", "svelte-1cp0kbr");
+          O(f, "class", "svelte-1cp0kbr");
+          O(c, "class", "item fc svelte-1cp0kbr");
+          B(c, "zero", 0 == t[1]);
+          B(c, "full", t[1] == t[3]);
+          h = H("div");
+          g = H("div");
+          g.textContent = "AJ";
+          m = D();
+          v = H("div");
+          b = A(t[2]);
+          O(g, "class", "svelte-1cp0kbr");
+          O(v, "class", "svelte-1cp0kbr");
+          O(h, "class", "item aj svelte-1cp0kbr");
+          B(h, "zero", 0 == t[2]);
+          B(h, "full", t[2] == t[3]);
+          O(i, "class", "wrapper svelte-1cp0kbr");
         },
         m(e, t) {
           M(e, n, t);
-          for (let e = 0; e < 6; e += 1) $[e] && $[e].m(n, null);
-          k(n, r), x && x.m(n, null), k(n, o), k(n, s), k(s, a), k(s, i), k(s, l), k(l, c), k(n, d), k(n, u), k(u, f), k(u, p), k(u, h), k(h, g), k(n, m), k(n, v), k(v, b), k(v, y)
+          for (let e = 0; e < 6; e++) z1[e].m(n, null);
+          k(n, r);
+          Mx && Mx.m(n, null);
+          k(n, o);
+          k(n, s);
+          k(s, a);
+          M(e, i, t);
+          for (let e = 0; e < 5; e++) z2[e].m(i, null);
+          k(i, l);
+          k(i, c);
+          k(c, d);
+          k(c, u);
+          k(c, f);
+          k(f, p);
+          k(i, h);
+          k(h, g);
+          k(h, m);
+          k(h, v);
+          k(v, b);
         },
         p(e, [t]) {
-          if (9 & t) {
-            let o;
-            for (w = ["S", "S+", "SS", "SS+", "SSS", "SSS+"], o = 0; o < 6; o += 1) {
-              const s = No(e, w, o);
-              $[o] ? $[o].p(s, t) : ($[o] = Ho(s), $[o].c(), $[o].m(n, r))
+          if (1 & t) {
+            for (let r = 0; r < 6; r++) {
+              const o = No(e, S1, r);
+              z1[r] ? z1[r].p(o, t) : ((z1[r] = Ho(o)), z1[r].c(), z1[r].m(n, null));
             }
-            for (; o < 6; o += 1) $[o].d(1)
+            for (let r = 0; r < 5; r++) {
+              const o = No(e, S2, r);
+              z2[r] ? z2[r].p(o, t) : ((z2[r] = Ho(o)), z2[r].c(), z2[r].m(i, null));
+            }
           }
-          e[0].MAX > 0 ? x ? x.p(e, t) : (x = Uo(e), x.c(), x.m(n, o)) : x && (x.d(1), x = null), 2 & t && I(c, e[1]), 2 & t && B(s, "zero", 0 == e[1]), 10 & t && B(s, "full", e[1] == e[3]), 4 & t && I(g, e[2]), 4 & t && B(u, "zero", 0 == e[2]), 12 & t && B(u, "full", e[2] == e[3]), 8 & t && I(y, e[3])
+          e[0].MAX > 0
+            ? Mx ? Mx.p(e, t) : ((Mx = Uo(e)), Mx.c(), Mx.m(n, o))
+            : Mx && (Mx.d(1), Mx = null);
+          8 & t && I(a, "/" + e[3]);
+          2 & t && I(p, e[1]);
+          2 & t && B(c, "zero", 0 == e[1]);
+          10 & t && B(c, "full", e[1] == e[3]);
+          4 & t && I(b, e[2]);
+          4 & t && B(h, "zero", 0 == e[2]);
+          12 & t && B(h, "full", e[2] == e[3]);
         },
-        i: e,
-        o: e,
         d(e) {
-          e && E(n), N($, e), x && x.d()
+          e && E(n), N(z1, e), Mx && Mx.d(e), e && E(i), N(z2, e), e && E(c), e && E(h);
         }
-      }
+      };
     }
 
     function Do(e, t, n) {
@@ -4228,7 +4318,7 @@
       };
   
       return [o, r, s, a]; 
-  }
+    }
     const Io = class extends Se {
         constructor(e) {
           super(), je(this, e, _o, Oo, i, {
@@ -4340,7 +4430,7 @@
           total: e[0].length
         }
       });
-      let s = "hide" != e[2] && qo(e);
+      let s = e[2] != "hide" && e[2] != "clr" && qo(e);
       return {
         c() {
           $e(t.$$.fragment), n = D(), s && s.c(), r = L()
@@ -4350,7 +4440,7 @@
         },
         p(e, n) {
           const o = {};
-          2 & n && (o.ajCount = e[1]), 8 & n && (o.fcCount = e[3]), 16 & n && (o.rankCounts = e[4]), 1 & n && (o.total = e[0].length), t.$set(o), "hide" != e[2] ? s ? (s.p(e, n), 4 & n && ge(s, 1)) : (s = qo(e), s.c(), ge(s, 1), s.m(r.parentNode, r)) : s && (pe(), me(s, 1, 1, (() => {
+          2 & n && (o.ajCount = e[1]), 8 & n && (o.fcCount = e[3]), 16 & n && (o.rankCounts = e[4]), 1 & n && (o.total = e[0].length), t.$set(o), e[2] != "hide" && e[2] != "clr" ? s ? (s.p(e, n), 4 & n && ge(s, 1)) : (s = qo(e), s.c(), ge(s, 1), s.m(r.parentNode, r)) : s && (pe(), me(s, 1, 1, (() => {
             s = null
           })), he())
         },
@@ -4539,11 +4629,19 @@
       let r, o, s, a, i, l, c, d, f, h, g, m, v, b, y, w, $, x, k, j, z;
       return u(e, Ht, (e => n(13, z = e))), u(e, Ye, (e => n(14, i = e))), u(e, Ze, (e => n(15, l = e))), u(e, At, (e => n(16, h = e))), u(e, et, (e => n(17, c = e))), u(e, eet, (e => n(17, j = e))), u(e, Qe, (e => n(18, d = e))), u(e, nt, (e => n(2, f = e))), u(e, De, (e => n(19, g = e))), u(e, Tt, (e => n(20, m = e))), u(e, $t, (e => n(5, v = e))), u(e, Ae, (e => n(6, b = e))), u(e, wt, (e => n(7, y = e))), u(e, At, (e => n(8, w = e.filter((item) => (item.newV === 0 || (item.newV === 2 && item.difficulty !== "ULT")) && item.score !== -1).map((item, index) => ({ ...item, order: index + 1 }))))), u(e, At, (e => n(9, $ = e.filter(item => (item.newV === 1 || (item.newV === 2 && item.difficulty === "ULT")) && item.score !== -1).map((item, index) => ({ ...item, order: index + 1 }))))), u(e, jt, (e => n(10, x = e))), u(e, xt, (e => n(11, k = e))), p($t, v = window.location.hash.slice(1), v), 
       e.$$.update = () => {
-        507908 & e.$$.dirty && n(0, r = h.filter((e => ("hide" != f || e.score >= 0) && (!(f === "dgvalue" || f === "dgpercentage") || (e.dg === 1 || e.dg === 2)) && (!(f === "eudgvalue" || f === "eudgpercentage") || ((e.dg === 1 || e.dg === 2) && e.score >= 0)) && d[e.difficulty] && c[Ie.find((t => _e[t] == e.genre))] && j[Rl.find((t => _s[t] == e.release))] && l >= e.const && e.const >= i))), 1 & e.$$.dirty && n(4, o = (() => {
+        507908 & e.$$.dirty && n(0, r = h.filter((e => ("hide" != f || e.score >= 0) && ("clr" != f || e.score >= 0) && (!(f === "dgvalue" || f === "dgpercentage") || (e.dg === 1 || e.dg === 2)) && (!(f === "eudgvalue" || f === "eudgpercentage") || ((e.dg === 1 || e.dg === 2) && e.score >= 0)) && d[e.difficulty] && c[Ie.find((t => _e[t] == e.genre))] && j[Rl.find((t => _s[t] == e.release))] && l >= e.const && e.const >= i))), 1 & e.$$.dirty && n(4, o = (() => {
           let e = {};
-          ["MAX", "SSS+", "SSS", "SS+", "SS", "S+", "S"].forEach((t => e[t] = 0)), ["AAA", "AA", "A", "BBB", "BB", "B", "C", "D"].forEach((t => e[t] = 0));
-          for (const t of r) e[t.rank]++;
-          return Object.keys(e).reduce(((t, n) => (e[n] += e[t], n))), e
+          const rankOrder = ["MAX", "SSS+", "SSS", "SS+", "SS", "S+", "S", "AAA", "AA", "A", "BBB", "BB", "B", "C", "D"];
+          rankOrder.forEach(t => e[t] = 0);
+          const clear2Order = ["CTS", "ABS", "BRV", "HRD", "CLR"];
+          clear2Order.forEach(t => e[t] = 0);
+          for (const t of r) {
+            if (t.rank in e) e[t.rank]++;
+            if (t.clear2 in e) e[t.clear2]++;
+          }
+          rankOrder.reduce((prev, curr) => (e[curr] += e[prev] || 0, curr));
+          clear2Order.reduce((prev, curr) => (e[curr] += e[prev] || 0, curr));
+          return e;
         })()), 1 & e.$$.dirty && n(1, s = r.filter((e => "AJ" == e.clear)).length), 3 & e.$$.dirty && n(3, a = s + r.filter((e => "FC" == e.clear)).length)
       },[r, s, f, a, o, v, b, y, w, $, x, k, function() {
         p($t, v = window.location.hash.slice(1), v), "all" !== v && p(Tt, m = !1, m)
