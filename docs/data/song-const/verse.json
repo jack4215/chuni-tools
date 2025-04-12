@@ -13569,5 +13569,50 @@
     "genre": 2,
     "release": 19,
     "newV": 1
+  },
+  "殺屋中毒": {
+    "BAS": 2,
+    "ADV": 6,
+    "EXP": 10.7,
+    "MAS": 13.6,
+    "genre": 0,
+    "release": 19,
+    "newV": 1
+  },
+  "旅星に渇く": {
+    "BAS": 4,
+    "ADV": 7.5,
+    "EXP": 12.8,
+    "MAS": 14.9,
+    "genre": 5,
+    "release": 19,
+    "newV": 1
+  },
+  "ずんずんサファリ": {
+    "BAS": 3,
+    "ADV": 7,
+    "EXP": 11.1,
+    "MAS": 14.8,
+    "genre": 5,
+    "release": 19,
+    "newV": 1
+  },
+  "jaQup": {
+    "BAS": 4,
+    "ADV": 7.5,
+    "EXP": 13.4,
+    "MAS": 14.3,
+    "genre": 5,
+    "release": 19,
+    "newV": 1
+  },
+  "HeinousЯeaper": {
+    "BAS": 4,
+    "ADV": 8,
+    "EXP": 14,
+    "MAS": 15.3,
+    "genre": 5,
+    "release": 19,
+    "newV": 1
   }
 }
