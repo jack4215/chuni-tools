@@ -149,7 +149,7 @@
                                         idx: "9999"
                                     }
                                 }));
-                                return records.filter(e => e.title && e.score);
+                                return records.filter((e => e.title && e.score && !e.title.includes("Floor Killer") && !e.title.includes("Dig Delight!")));
                             }(t.data.difficulty);
                             break;
                         case "playerStats":

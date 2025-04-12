@@ -146,7 +146,7 @@
                                             clear: r?.querySelector('img[src*="alljustice"]') ? "AJ" : r?.querySelector('img[src*="fullcombo"]') ? "FC" : "",
                                             idx: t.querySelector('input[name="idx"]').value
                                         };
-                                    })).filter((e => e.title && e.score));
+                                    })).filter((e => e.title && e.score && !e.title.includes("Floor Killer") && !e.title.includes("Dig Delight!")));
                                     // Add hidden song
                                     const difficultyNames = {
                                         [o.ultima]: "ultima",

@@ -147,7 +147,7 @@
                                             clear2: r?.querySelector('img[src*="clear"]') ? "CLR" : r?.querySelector('img[src*="hard"]') ? "HRD" : r?.querySelector('img[src*="absolutep"]') ? "ABS" : r?.querySelector('img[src*="absolute"]') ? "BRV" : r?.querySelector('img[src*="catastrophy"]') ? "CTS" : "",
                                             idx: t.querySelector('input[name="idx"]').value
                                         };
-                                    })).filter((e => e.title && e.score));
+                                    })).filter((e => e.title && e.score && !e.title.includes("Floor Killer") && !e.title.includes("Dig Delight!")));
                                     // Add hidden song
                                     const difficultyNames = {
                                         [o.ultima]: "ultima",
