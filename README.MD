@@ -56,7 +56,7 @@ javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.gi
 ## Credits
 The chart constant data is from [CHUNITHM譜面定数メインフレーム](https://x.com/RCMF_chunithm).
 
-The version title data is from [かっきー](https://x.com/Schwarz_k2mt).
+The version complete title data is from [かっきー](https://x.com/Schwarz_k2mt).
 
 # CHUNITHM Tools (國際版)
 
@@ -109,6 +109,6 @@ javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.gi
  需於 [CHUNITHM-NET 飾品列表](https://chunithm-net-eng.com/mobile/collection/customise)網頁執行
 
 ## 致謝
-定數資料來源 [CHUNITHM譜面定数メインフレーム](https://x.com/RCMF_chunithm)
+譜面定數資料來源 [CHUNITHM譜面定数メインフレーム](https://x.com/RCMF_chunithm)
 
 版本稱號資料來源 [かっきー](https://x.com/Schwarz_k2mt)
