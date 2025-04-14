@@ -21,7 +21,7 @@ javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.gi
 javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.github.io/chuni-tools/scripts/chuni-tools-temp.js?t='+Math.floor(Date.now()/60000);d.body.append(s);})(document);
 ```
 
-2. Navigate to [CHUNITHM-NET](https://chunithm-net-eng.com/mobile/home) and open the bookmark. This tool offers 10 features.
+2. Navigate to [CHUNITHM-NET](https://chunithm-net-eng.com/mobile/home) and open the bookmark. This tool offers 12 features.
 
 - Personal Record Viewer：
  Executed on any non-specified page of [CHUNITHM-NET](https://chunithm-net-eng.com/mobile/home).
@@ -82,7 +82,7 @@ javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.gi
 javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.github.io/chuni-tools/scripts/chuni-tools-temp.js?t='+Math.floor(Date.now()/60000);d.body.append(s);})(document);
 ```
 
-2. 至 [CHUNITHM-NET](https://chunithm-net-eng.com/mobile/home) 並開啟該書籤，本工具共有 10 項功能
+2. 至 [CHUNITHM-NET](https://chunithm-net-eng.com/mobile/home) 並開啟該書籤，本工具共有 12 項功能
 
 - 個人查分器：
  於 [CHUNITHM-NET](https://chunithm-net-eng.com/mobile/home) <b>非指定</b>的網頁即可執行
