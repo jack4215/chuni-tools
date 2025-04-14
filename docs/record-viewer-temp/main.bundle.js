@@ -58,7 +58,7 @@
       },
       141: e => {
         "use strict";
-        e.exports = JSON.parse('{"main.title":"CHUNITHM 查分器 (Beta)","loading.constData":"使用 {{name}} 版本的定數資料","loading.error.serviceDown":"CHUNITHM-NET 目前正在停服維護。<br/>請在其可以使用的時段執行本程式。","loading.error.rejected":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.timeout":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.noopener":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.unknown":"無法正常執行！<br/>請截圖以下錯誤資訊並回報作者協助處理。","header.title.dl":"將B40記錄儲存為照片","header.title.constData":"切換歌曲定數資料 (目前：{{name}})","header.title.settings":"設定","settings.main.title":"設定","settings.main.reset":"重置設定","settings.filter.title":"歌曲篩選","settings.filter.const":"依 譜面定數","settings.filter.diff":"依 譜面難度","settings.filter.diff.warn":"*至少選一個吧","settings.filter.diff.notify":"*依照難度篩選或有 2 首以上未於 CHUNITHM-NET 顯示的隱藏曲，可能會使得記錄變得不準確","settings.filter.genre":"依 歌曲類別","settings.filter.genre.all":"全部開啟/關閉","settings.filter.release":"依 歌曲代數","settings.filter.release.all":"全開/關","settings.data.title":"遊戲數據","settings.data.constData":"使用的定數資料（版本：JP 20250410v1）","settings.data.constData.newplus":"NEW+","settings.data.constData.sun":"SUN","settings.data.constData.sunplus":"SUN+","settings.data.constData.luminous":"LUMINOUS","settings.data.constData.luminousplus":"國際版 (LUMINOUS PLUS)","settings.data.constData.verse":"日版 (VERSE)","settings.data.playcount":"顯示個別歌曲遊玩次數","settings.data.playcount.notify":"*點擊歌曲條目旁的深色方塊也可以查看單曲遊玩次數","settings.data.showScoreDiff":"顯示推分數據","settings.data.diffUpdate":"推分基準更新週期 <span style=\\"color:var(--theme-text-dim)\\">上次更新：{{date}}</span>","settings.data.diffUpdate.1d":"一天 後自動更新","settings.data.diffUpdate.3d":"三天 後自動更新","settings.data.diffUpdate.7d":"一週 後自動更新","settings.data.diffUpdate.14d":"兩週 後自動更新","settings.data.diffUpdate.30d":"一個月 後自動更新","settings.data.diffUpdate.manual":"手動更新","settings.data.diffUpdate.update":"更新推分基準","settings.data.diffUpdate.reload":"請重新載入頁面以更新紀錄","settings.data.diffUpdate.notify":"*若設定為自動更新，每當距離「上一次記錄推分基準」超過指定時間，就會自動更新推分的計算基準<br><br>◆ 關於本書籤工具說明，請見 <a href=\\"https://github.com/jack4215/chuni-tools/blob/main/README.MD\\" target=\\"_blank\\">Github README</a><br><br>◆ 問題回報請寄信至 <a href=\\"mailto:admin@tsaibee.org\\" target=\\"_blank\\">admin@tsaibee.org</a>","settings.data.overpower":"顯示 OVER POWER","settings.data.overpower.hide":"隱藏 (顯示成績等級)","settings.data.overpower.clr":"隱藏 (顯示 CLEAR 標記)","settings.data.overpower.value":"顯示 (OVER POWER 數值)","settings.data.overpower.percentage":"顯示 (OVER POWER 達成率)","settings.data.overpower.dgvalue":"顯示 (OVER POWER 對象數值)","settings.data.overpower.dgpercentage":"顯示 (OVER POWER 對象達成率)","settings.data.overpower.eudgvalue":"顯示 (OVER POWER 對象數值 - 排除無分數)","settings.data.overpower.eudgpercentage":"顯示 (OVER POWER 對象達成率 - 排除無分數)","settings.data.overpower.notify":"*設定為「顯示」時，未遊玩的歌曲也會一併顯示<br/>*若有尚未解鎖的歌曲，OVER POWER 的數據可能會與官方記錄有差別","settings.ui.title":"使用者介面","settings.ui.locale":"語言","settings.ui.theme":"佈景主題","player.generic.generatedAt":"生成日期","player.best.playCount":"遊玩道數","player.best.best30":"BEST 30","player.best.maxPossible":"不推分可至","player.best.all30":"ALL 30","player.best.curr20":"CURRENT 20","player.recent.average":"Rating","record.head.playOrder":"遊玩時間","record.head.order":"#","record.head.title":"曲名","record.head.const":"定數","record.head.overpower":"OP","record.head.overpowerPercent":"OP%","record.head.rank":"評級","record.head.clr":"CLR","record.head.score":"成績","record.head.scoreDiff":"推分","record.head.rating":"評分","record.head.ajfc":"AJ","record.head.playcount":"次數","record.fetch.fetching":"正在載入 <span style=\\"color:var(--theme-song-{{diff}});\\">{{diffStr}}</span> 資料……","record.fetch.diff.ult":"黑譜 (ULTIMA)","record.fetch.diff.mas":"紫譜 (MASTER)","record.fetch.diff.exp":"紅譜 (EXPERT)","record.fetch.diff.adv":"黃譜 (ADVANCED)","record.fetch.diff.bas":"綠譜 (BASIC)","record.fetch.unknown":"資料庫尚未有以下歌曲：\\n{{songs}}\\n請寄信至 admin@tsaibee.org 反映。","record.fetch.error":"<span style=\\"color:red;\\">取得遊玩記錄時發生問題，<br/>請重新整理頁面後再試一次。</span>","playcount.fetch.button":"取得","playcount.fetch.progress":"正在取得歌曲遊玩次數…… ({{progress}}/{{all}})","playcount.fetch.error":"<span style=\\"color:red;\\">取得遊玩次數時出現問題，<br/>請重新整理頁面後再試一次。</span>","share.error":"轉換圖檔時出現錯誤，請將以下的錯誤訊息截圖傳給作者處理。\\n\\n{{error}}"}')
+        e.exports = JSON.parse('{"main.title":"CHUNITHM 查分器 (Beta)","loading.constData":"使用 {{name}} 版本的定數資料","loading.error.serviceDown":"CHUNITHM-NET 目前正在停服維護。<br/>請在其可以使用的時段執行本程式。","loading.error.rejected":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.timeout":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.noopener":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.unknown":"無法正常執行！<br/>請截圖以下錯誤資訊並回報作者協助處理。","header.title.dl":"將B40記錄儲存為照片","header.title.constData":"切換歌曲定數資料 (目前：{{name}})","header.title.settings":"設定","settings.main.title":"設定","settings.main.reset":"重置設定","settings.filter.title":"歌曲篩選","settings.filter.const":"依 譜面定數","settings.filter.diff":"依 譜面難度","settings.filter.diff.warn":"*至少選一個吧","settings.filter.diff.notify":"*依照難度篩選或有 2 首以上未於 CHUNITHM-NET 顯示的隱藏曲，可能會使得記錄變得不準確","settings.filter.genre":"依 歌曲類別","settings.filter.genre.all":"全部開啟/關閉","settings.filter.release":"依 歌曲代數","settings.filter.release.all":"全開/關","settings.data.title":"遊戲數據","settings.data.constData":"使用的定數資料（版本：JP 20250410v1）","settings.data.constData.newplus":"NEW+","settings.data.constData.sun":"SUN","settings.data.constData.sunplus":"SUN+","settings.data.constData.luminous":"LUMINOUS","settings.data.constData.luminousplus":"國際版 (LUMINOUS PLUS)","settings.data.constData.verse":"日版 (VERSE)","settings.data.playcount":"顯示個別歌曲遊玩次數","settings.data.playcount.notify":"*點擊歌曲條目旁的深色方塊也可以查看單曲遊玩次數","settings.data.showScoreDiff":"顯示推分數據","settings.data.diffUpdate":"推分基準更新週期 <span style=\\"color:var(--theme-text-dim)\\">上次更新：{{date}}</span>","settings.data.diffUpdate.1d":"一天 後自動更新","settings.data.diffUpdate.3d":"三天 後自動更新","settings.data.diffUpdate.7d":"一週 後自動更新","settings.data.diffUpdate.14d":"兩週 後自動更新","settings.data.diffUpdate.30d":"一個月 後自動更新","settings.data.diffUpdate.manual":"手動更新","settings.data.diffUpdate.update":"更新推分基準","settings.data.diffUpdate.reload":"請重新載入頁面以更新紀錄","settings.data.diffUpdate.notify":"*若設定為自動更新，每當距離「上一次記錄推分基準」超過指定時間，就會自動更新推分的計算基準<br><br>◆ 關於本書籤工具說明，請見 <a href=\\"https://github.com/jack4215/chuni-tools/blob/main/README.MD\\" target=\\"_blank\\">Github README</a><br><br>◆ 問題回報請寄信至 <a href=\\"mailto:admin@tsaibee.org\\" target=\\"_blank\\">admin@tsaibee.org</a>","settings.data.overpower":"顯示 OVER POWER","settings.data.overpower.hide":"隱藏 (顯示成績評級)","settings.data.overpower.clr":"隱藏 (顯示 CLEAR 標記)","settings.data.overpower.value":"顯示 (OVER POWER 數值)","settings.data.overpower.percentage":"顯示 (OVER POWER 達成率)","settings.data.overpower.dgvalue":"顯示 (OVER POWER 對象數值)","settings.data.overpower.dgpercentage":"顯示 (OVER POWER 對象達成率)","settings.data.overpower.eudgvalue":"顯示 (OVER POWER 對象數值 - 排除無分數)","settings.data.overpower.eudgpercentage":"顯示 (OVER POWER 對象達成率 - 排除無分數)","settings.data.overpower.notify":"*設定為「顯示」時，未遊玩的歌曲也會一併顯示<br/>*若有尚未解鎖的歌曲，OVER POWER 的數據可能會與官方記錄有差別","settings.ui.title":"使用者介面","settings.ui.locale":"語言","settings.ui.theme":"佈景主題","player.generic.generatedAt":"生成日期","player.best.playCount":"遊玩道數","player.best.best30":"BEST 30","player.best.maxPossible":"不推分可至","player.best.all30":"ALL 30","player.best.curr20":"CURRENT 20","player.recent.average":"Rating","record.head.playOrder":"遊玩時間","record.head.order":"#","record.head.title":"曲名","record.head.const":"定數","record.head.overpower":"OP","record.head.overpowerPercent":"OP%","record.head.rank":"評級","record.head.clr":"CLR","record.head.score":"成績","record.head.scoreDiff":"推分","record.head.rating":"評分","record.head.ajfc":"AJ","record.head.playcount":"次數","record.fetch.fetching":"正在載入 <span style=\\"color:var(--theme-song-{{diff}});\\">{{diffStr}}</span> 資料……","record.fetch.diff.ult":"黑譜 (ULTIMA)","record.fetch.diff.mas":"紫譜 (MASTER)","record.fetch.diff.exp":"紅譜 (EXPERT)","record.fetch.diff.adv":"黃譜 (ADVANCED)","record.fetch.diff.bas":"綠譜 (BASIC)","record.fetch.unknown":"資料庫尚未有以下歌曲：\\n{{songs}}\\n請寄信至 admin@tsaibee.org 反映。","record.fetch.error":"<span style=\\"color:red;\\">取得遊玩記錄時發生問題，<br/>請重新整理頁面後再試一次。</span>","playcount.fetch.button":"取得","playcount.fetch.progress":"正在取得歌曲遊玩次數…… ({{progress}}/{{all}})","playcount.fetch.error":"<span style=\\"color:red;\\">取得遊玩次數時出現問題，<br/>請重新整理頁面後再試一次。</span>","share.error":"轉換圖檔時出現錯誤，請將以下的錯誤訊息截圖傳給作者處理。\\n\\n{{error}}"}')
       }
     },
     t = {};
@@ -4139,99 +4139,44 @@
     }
 
     function Ao(t) {
-      let n, r, o, s, a, i, l, c, d, u, f, p, h, g, m, v, b, y;
-      let S1 = ["S", "S+", "SS", "SS+", "SSS", "SSS+"];
-      let S2 = ["CLR", "HRD", "BRV", "ABS", "CTS"];
-      let z1 = [], z2 = [];
+      let n, r, o, s, a, i, l, c, d, u, f, p, h, g, m, v, b, y, S1 = ["S", "S+", "SS", "SS+", "SSS", "SSS+"], S2 = ["CLR", "HRD", "BRV", "ABS", "CTS"], z1 = [], z2 = [];
       for (let e = 0; e < 6; e++) z1[e] = Ho(No(t, S1, e));
       for (let e = 0; e < 5; e++) z2[e] = Ho(No(t, S2, e));
       let Mx = t[0].MAX > 0 && Uo(t);
       return {
         c() {
-          n = H("div");
-          for (let e = 0; e < 6; e++) z1[e].c();
-          r = D();
-          Mx && Mx.c();
-          o = D();
-          s = H("div");
-          a = A("/" + t[3]);
-          O(n, "class", "wrapper svelte-1cp0kbr");
-          O(s, "class", "total svelte-1cp0kbr");
-          i = H("div");
-          for (let e = 0; e < 5; e++) z2[e].c();
-          l = D();
-          c = H("div");
-          d = H("div");
-          d.textContent = "FC";
-          u = D();
-          f = H("div");
-          p = A(t[1]);
-          O(d, "class", "svelte-1cp0kbr");
-          O(f, "class", "svelte-1cp0kbr");
-          O(c, "class", "item fc svelte-1cp0kbr");
-          B(c, "zero", 0 == t[1]);
-          B(c, "full", t[1] == t[3]);
-          h = H("div");
-          g = H("div");
-          g.textContent = "AJ";
-          m = D();
-          v = H("div");
-          b = A(t[2]);
-          O(g, "class", "svelte-1cp0kbr");
-          O(v, "class", "svelte-1cp0kbr");
-          O(h, "class", "item aj svelte-1cp0kbr");
-          B(h, "zero", 0 == t[2]);
-          B(h, "full", t[2] == t[3]);
-          O(i, "class", "wrapper svelte-1cp0kbr");
+          n = H("div"), z1.forEach(e => e.c()), r = D(), Mx && Mx.c(), o = D(), s = H("div"), a = A("/" + t[3]),
+          O(n, "class", "wrapper svelte-1cp0kbr"), O(s, "class", "total svelte-1cp0kbr"), i = H("div"),
+          z2.forEach(e => e.c()), l = D(),
+          c = H("div"), d = H("div"), d.textContent = "FC", u = D(), f = H("div"), p = A(t[1]),
+          O(d, "class", "svelte-1cp0kbr"), O(f, "class", "svelte-1cp0kbr"), O(c, "class", "item fc svelte-1cp0kbr"),
+          B(c, "zero", 0 == t[1]), B(c, "full", t[1] == t[3]),
+          h = H("div"), g = H("div"), g.textContent = "AJ", m = D(), v = H("div"), b = A(t[2]),
+          O(g, "class", "svelte-1cp0kbr"), O(v, "class", "svelte-1cp0kbr"), O(h, "class", "item aj svelte-1cp0kbr"),
+          B(h, "zero", 0 == t[2]), B(h, "full", t[2] == t[3]), O(i, "class", "wrapper svelte-1cp0kbr")
         },
         m(e, t) {
-          M(e, n, t);
-          for (let e = 0; e < 6; e++) z1[e].m(n, null);
-          k(n, r);
-          Mx && Mx.m(n, null);
-          k(n, o);
-          k(n, s);
-          k(s, a);
-          M(e, i, t);
-          for (let e = 0; e < 5; e++) z2[e].m(i, null);
-          k(i, l);
-          k(i, c);
-          k(c, d);
-          k(c, u);
-          k(c, f);
-          k(f, p);
-          k(i, h);
-          k(h, g);
-          k(h, m);
-          k(h, v);
-          k(v, b);
+          M(e, n, t), z1.forEach(el => el.m(n, null)), k(n, r), Mx && Mx.m(n, null), k(n, o), k(n, s), k(s, a),M(e, i, t), z2.forEach(el => el.m(i, null)), k(i, l),k(i, c), k(c, d), k(c, u), k(c, f), k(f, p),k(i, h), k(h, g), k(h, m), k(h, v), k(v, b)
         },
         p(e, [t]) {
           if (1 & t) {
             for (let r = 0; r < 6; r++) {
               const o = No(e, S1, r);
-              z1[r] ? z1[r].p(o, t) : ((z1[r] = Ho(o)), z1[r].c(), z1[r].m(n, null));
+              z1[r] ? z1[r].p(o, t) : (z1[r] = Ho(o), z1[r].c(), z1[r].m(n, null));
             }
             for (let r = 0; r < 5; r++) {
               const o = No(e, S2, r);
-              z2[r] ? z2[r].p(o, t) : ((z2[r] = Ho(o)), z2[r].c(), z2[r].m(i, null));
+              z2[r] ? z2[r].p(o, t) : (z2[r] = Ho(o), z2[r].c(), z2[r].m(i, null));
             }
           }
-          e[0].MAX > 0
-            ? Mx ? Mx.p(e, t) : ((Mx = Uo(e)), Mx.c(), Mx.m(n, o))
-            : Mx && (Mx.d(1), Mx = null);
-          8 & t && I(a, "/" + e[3]);
-          2 & t && I(p, e[1]);
-          2 & t && B(c, "zero", 0 == e[1]);
-          10 & t && B(c, "full", e[1] == e[3]);
-          4 & t && I(b, e[2]);
-          4 & t && B(h, "zero", 0 == e[2]);
-          12 & t && B(h, "full", e[2] == e[3]);
+          e[0].MAX > 0 ? (Mx ? Mx.p(e, t) : (Mx = Uo(e), Mx.c(), Mx.m(n, o))) : Mx && (Mx.d(1), Mx = null),
+          8 & t && I(a, "/" + e[3]), 2 & t && (I(p, e[1]), B(c, "zero", 0 == e[1])), 10 & t && B(c, "full", e[1] == e[3]),
+          4 & t && (I(b, e[2]), B(h, "zero", 0 == e[2])), 12 & t && B(h, "full", e[2] == e[3])
         },
         d(e) {
-          e && E(n), N(z1, e), Mx && Mx.d(e), e && E(i), N(z2, e), e && E(c), e && E(h);
+          e && E(n), N(z1, e), Mx && Mx.d(e), e && E(i), N(z2, e), e && E(c), e && E(h)
         }
-      };
+      }
     }
 
     function Do(e, t, n) {
