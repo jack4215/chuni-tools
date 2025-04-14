@@ -164,20 +164,20 @@
                                 return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
                             }
                             s = async function() {
-                                const e = await i("/mobile/friend");
+                                const sF = document.querySelector('select[name="friend"]').value;
+                                const g = new FormData();
+                                g.append("idx", sF);
+                                g.append("token", r("_t"));
+                                const e = await i("/mobile/friend/sendFriendDetail/", g);
                                 const f = await i("/mobile/home/playerData");
-                                const selectedFriendIdx = document.querySelector('select[name="friend"]').value;
                                 const friendBlock = Array.from(e.querySelectorAll(".friend_block")).find(block => 
-                                    block.querySelector('input[name="idx"]')?.value === selectedFriendIdx
+                                    block.querySelector('input[name="idx"]')?.value === sF
                                 );
-                                if (!friendBlock) {
-                                    throw new Error("Selected friend not found");
-                                }
                                 const t = e.querySelector(".player_honor_short");
-                                const r = /honor_bg_.*(?=\.png)/.exec(t.style.backgroundImage);
+                                const x = /honor_bg_.*(?=\.png)/.exec(t.style.backgroundImage);
                                 let honorTextElement = e.querySelector(".player_honor_text_view span");
                                 let honorText = honorTextElement ? honorTextElement.innerHTML : null;
-                                let honorColor = r ? r[0].slice(9) : "normal";
+                                let honorColor = x ? x[0].slice(9) : "normal";
                                 if (!honorText && t) {
                                     const backgroundImage = t.style.backgroundImage;
                                     const imageUrlMatch = backgroundImage ? backgroundImage.match(/url\(["']?(.*?)["']?\)/) : null;
@@ -196,13 +196,13 @@
                                         }
                                     }
                                 }
-                                const a = Array.from(friendBlock.querySelectorAll(".player_rating_num_block img"))
+                                const a = Array.from(e.querySelectorAll(".player_rating_num_block img"))
                                     .map(img => /rating_.*_comma.png/.test(img.src) ? "." : /rating_.*_[0-9]*(?=\.png)/.exec(img.src)[0].slice(-1))
                                     .join("");
                                 const aa = Array.from(f.querySelectorAll(".player_rating_num_block img"))
                                     .map((f => /rating_.*_comma.png/.test(f.src) ? "." : /rating_.*_[0-9]*(?=\.png)/.exec(f.src)[0].slice(-1)))
                                     .join("");
-                                const profileDiv = friendBlock.querySelector(".box_playerprofile.clearfix, .box_playerprofile");
+                                const profileDiv = e.querySelector(".box_playerprofile.clearfix, .box_playerprofile");
                                 let background = "normal";
                                 if (profileDiv) {
                                     const styleAttr = profileDiv.getAttribute("style");
@@ -212,17 +212,17 @@
                                     }
                                 }
                                 const playerData = {
-                                    name: friendBlock.querySelector(".player_name_in a").innerHTML,
+                                    name: e.querySelector(".player_name_in").innerHTML,
                                     honor: {
-                                        text: friendBlock.querySelector(".player_honor_text_view span").innerHTML,
-                                        color: r ? r[0].slice(9) : "normal"
+                                        text: e.querySelector(".player_honor_text_view span").innerHTML,
+                                        color: x ? x[0].slice(9) : "normal"
                                     },
                                     rating: a,
-                                    overPower: friendBlock.querySelector(".player_overpower_text").innerHTML.match(/\(([^)]+)\)/)[1],
+                                    overPower: e.querySelector(".player_overpower_text").innerHTML.match(/\(([^)]+)\)/)[1],
                                     playCount: "--", 
                                     lastPlayed: "--",
                                     ratingPn: background,
-                                    code: selectedFriendIdx,
+                                    code: sF,
                                     fname: f.querySelector(".player_name_in").innerHTML,
                                     frating: aa,
                                     fcode: f.querySelector('.user_data_friend_code .user_data_text span[style="display:none;"]')?.innerText || "N/A",
