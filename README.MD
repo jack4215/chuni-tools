@@ -53,6 +53,12 @@ javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.gi
  - Customize Statistics Table：
  Execute on [CHUNITHM-NET Customize](https://chunithm-net-eng.com/mobile/collection/customise) page.
 
+ - Percentage Rendering Display of Music Statistics Table：
+ Execute on [CHUNITHM-NET Music Record](https://chunithm-net-eng.com/mobile/record/musicGenre) page.
+
+ - World's End Statistics Table：
+ Execute on [CHUNITHM-NET World's End](https://chunithm-net-eng.com/mobile/record/worldsEndList) page.
+
 ## Credits
 The chart constant data is from [CHUNITHM譜面定数メインフレーム](https://x.com/RCMF_chunithm).
 
@@ -107,6 +113,12 @@ javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.gi
 
  - 裝飾物品統計表：
  需於 [CHUNITHM-NET 飾品列表](https://chunithm-net-eng.com/mobile/collection/customise)網頁執行
+
+  - 歌曲統計表百分比渲染顯示：
+ 需於 [CHUNITHM-NET 歌曲紀錄](https://chunithm-net-eng.com/mobile/record/musicGenre)網頁執行
+
+  - World's End (彩譜) 統計表：
+ 需於 [CHUNITHM-NET 彩譜紀錄](https://chunithm-net-eng.com/mobile/record/worldsEndList)網頁執行
 
 ## 致謝
 譜面定數資料來源 [CHUNITHM譜面定数メインフレーム](https://x.com/RCMF_chunithm)
