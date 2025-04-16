@@ -22,7 +22,6 @@ function sortMusicBoxes(desc = false) {
 
     musicBoxes.forEach(musicBox => box01.appendChild(musicBox));
 }
-
 sortMusicBoxes(false);
 
 const sortToggle = document.getElementById('sortToggle');
