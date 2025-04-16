@@ -40,9 +40,7 @@
             const resultContainer = document.createElement("div");
             resultContainer.className = "chuni-tools-container";
             resultContainer.innerHTML = `
-                <p>目前系統維護中，請稍後再試</p><br>
-                <p>The system is under maintenance, please try again later.</p><br>
-                <p><a href="https://chuni.tsaibee.org/notice" target="_blank">更多資訊 / More Details.</a></p>
+                <p><a href="https://chuni.tsaibee.org" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools</a></p>
                 <hr width="96%">
                 <p style="font-size:15px;">使用即同意本服務之<a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">隱私權政策</a></p>
                 <p style="font-size:15px;">By using this service, you agree to its <a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">Privacy Policy</a>.</p>
@@ -74,7 +72,7 @@
         // End of chuni-tools-container
         function s(n) {
             const e = o.createElement("script");
-        //    e.src = `https://chuni.tsaibee.org/scripts/${n}.js?t=${Date.now()}`;
+            e.src = `https://chuni.tsaibee.org/scripts/${n}.js?t=${Date.now()}`;
             o.body.append(e);
         }
         const i = o.location.pathname;
