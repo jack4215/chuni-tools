@@ -41,14 +41,11 @@
             const resultContainer = document.createElement("div");
             resultContainer.className = "chuni-tools-container";
             resultContainer.innerHTML = `
-                <p>Beta 版查分器將於 2025-04-17 棄用</p>
-                <p>屆時請改回使用原書籤工具</p><br>
-                <p>The Beta version Record Viewer will be deprecated on April 17, 2025.</p>
-                <p>Please use the original bookmark by then.</p><br>
-                <p><a href="https://chuni.tsaibee.org/notice" target="_blank">更多資訊 / More Details.</a></p>
-                <hr width="96%">
-                <p style="font-size:15px;">使用即同意本服務之<a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">隱私權政策</a></p>
-                <p style="font-size:15px;">By using this service, you agree to its <a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">Privacy Policy</a>.</p>
+                <p>Beta 版查分器已棄用</p>
+                <p>請改回使用原書籤工具</p><br>
+                <p>The Beta version Record Viewer has been deprecated.</p>
+                <p>Please use the original bookmark.</p><br>
+                <p><a href="https://chuni.tsaibee.org" target="_blank">更多資訊 / More Details.</a></p>
             `;
             const style = document.createElement("style");
             style.textContent = `
@@ -77,7 +74,7 @@
         // End of chuni-tools-container
         function s(n) {
             const e = o.createElement("script");
-            e.src = `https://chuni.tsaibee.org/scripts/${n}.js?t=${Date.now()}`;
+         //   e.src = `https://chuni.tsaibee.org/scripts/${n}.js?t=${Date.now()}`;
             o.body.append(e);
         }
         const i = o.location.pathname;

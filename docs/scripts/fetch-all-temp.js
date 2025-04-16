@@ -64,12 +64,12 @@
             [e.en_US]: {
                 pleaseLogin: "Please login to CHUNITHM-NET first.",
                 needReload: "Please reload CHUNITHM-NET.",
-                analyzeRating: "Analyze Rating (Beta)"
+                analyzeRating: "Analyze Rating"
             },
             [e.zh_TW]: {
                 pleaseLogin: "請先登入 CHUNITHM-NET 再執行本程式。",
                 needReload: "請重新整理 CHUNITHM-NET 再執行本程式。",
-                analyzeRating: "分析遊戲成績 (Beta)"
+                analyzeRating: "分析遊戲成績"
             }
         }[function() {
             const t = new URLSearchParams(location.search);
@@ -94,7 +94,7 @@
                 r.rel = "stylesheet",
                 r.href = t("fetch-all") + "/common/styles/inject.css",
                 e.innerText = s.analyzeRating,
-                e.href = t("fetch-all") + "/record-viewer-temp/#all",
+                e.href = t("fetch-all") + "/record-viewer/#all",
                 e.target = "recordViewer",
                 l.getElementsByTagName("head")[0].appendChild(r),
                 r.addEventListener("load", ( () => {
@@ -144,7 +144,7 @@
                                             score: a ? n(a) : -1,
                                             difficulty: e,
                                             clear: r?.querySelector('img[src*="alljustice"]') ? "AJ" : r?.querySelector('img[src*="fullcombo"]') ? "FC" : "",
-                                            clear2: r?.querySelector('img[src*="clear"]') ? "CLR" : r?.querySelector('img[src*="hard"]') ? "HRD" : r?.querySelector('img[src*="absolutep"]') ? "ABS" : r?.querySelector('img[src*="absolute"]') ? "BRV" : r?.querySelector('img[src*="catastrophy"]') ? "CTS" : "",
+                                            clear2: r?.querySelector('img[src*="clear"]') ? "CLR" : r?.querySelector('img[src*="hard"]') ? "HRD" : r?.querySelector('img[src*="absolute"]') ? "ABS" : r?.querySelector('img[src*="brave"]') ? "BRV" : r?.querySelector('img[src*="catastrophy"]') ? "CTS" : "",
                                             idx: t.querySelector('input[name="idx"]').value
                                         };
                                     })).filter((e => e.title && e.score && !e.title.includes("Floor Killer") && !e.title.includes("Dig Delight!")));
@@ -195,7 +195,7 @@
                                         score: n(t),
                                         difficulty: "ultimate" == a ? "ULT" : "worldsend" == a ? "WE" : o[a],
                                         clear: c.some((e => e.querySelector('img[src*="alljustice"]'))) ? "AJ" : c.some((e => e.querySelector('img[src*="fullcombo"]'))) ? "FC" : "",
-                                        clear2: c.some((e => e.querySelector('img[src*="clear"]'))) ? "CLR" : c.some((e => e.querySelector('img[src*="hard"]'))) ? "HRD" : c.some((e => e.querySelector('img[src*="absolutep"]'))) ? "ABS" : c.some((e => e.querySelector('img[src*="absolute"]'))) ? "BRV" : c.some((e => e.querySelector('img[src*="catastrophy"]'))) ? "CTS" : "",
+                                        clear2: c.some((e => e.querySelector('img[src*="clear"]'))) ? "CLR" : c.some((e => e.querySelector('img[src*="hard"]'))) ? "HRD" : c.some((e => e.querySelector('img[src*="absolute"]'))) ? "ABS" : c.some((e => e.querySelector('img[src*="brave"]'))) ? "BRV" : c.some((e => e.querySelector('img[src*="catastrophy"]'))) ? "CTS" : "",
                                         timestamp: Date.parse(e.querySelector(".play_datalist_date").innerHTML)
                                     }
                                 }

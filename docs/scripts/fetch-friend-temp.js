@@ -64,12 +64,12 @@
             [e.en_US]: {
                 pleaseLogin: "Please login to CHUNITHM-NET first.",
                 needReload: "Please reload CHUNITHM-NET.",
-                analyzeRating: "Analyze Friend's (Beta)"
+                analyzeRating: "Analyze Friend's Rating"
             },
             [e.zh_TW]: {
                 pleaseLogin: "請先登入 CHUNITHM-NET 再執行本程式。",
                 needReload: "請重新整理 CHUNITHM-NET 再執行本程式。",
-                analyzeRating: "分析好友成績 (Beta)"
+                analyzeRating: "分析好友遊戲成績"
             }
         }[function() {
             const t = new URLSearchParams(location.search);
@@ -94,7 +94,7 @@
                 r.rel = "stylesheet",
                 r.href = t("fetch-friend") + "/common/styles/inject.css",
                 e.innerText = s.analyzeRating,
-                e.href = t("fetch-friend") + "/friendrecord-viewer-temp/#all",
+                e.href = t("fetch-friend") + "/friendrecord-viewer/#all",
                 e.target = "friendrecordViewer",
                 l.getElementsByTagName("head")[0].appendChild(r),
                 r.addEventListener("load", ( () => {

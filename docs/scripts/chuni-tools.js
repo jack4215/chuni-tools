@@ -40,11 +40,8 @@
             const resultContainer = document.createElement("div");
             resultContainer.className = "chuni-tools-container";
             resultContainer.innerHTML = `
-                <p>預定於 2025-04-17 1:00~1:30 (GMT+8)</p>
-                <p>進行系統維護</p>
-                <p>期間將無法使用查分器所有功能</p><br>
-                <p>System maintenance is scheduled for April 17, 2025, from 1:00 to 1:30 (GMT+8).</p>
-                <p>During this period, all functions of the Record Viewer will be unavailable.</p><br>
+                <p>目前系統維護中，請稍後再試</p><br>
+                <p>The system is under maintenance, please try again later.</p><br>
                 <p><a href="https://chuni.tsaibee.org/notice" target="_blank">更多資訊 / More Details.</a></p>
                 <hr width="96%">
                 <p style="font-size:15px;">使用即同意本服務之<a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">隱私權政策</a></p>
@@ -77,7 +74,7 @@
         // End of chuni-tools-container
         function s(n) {
             const e = o.createElement("script");
-            e.src = `https://chuni.tsaibee.org/scripts/${n}.js?t=${Date.now()}`;
+        //    e.src = `https://chuni.tsaibee.org/scripts/${n}.js?t=${Date.now()}`;
             o.body.append(e);
         }
         const i = o.location.pathname;
