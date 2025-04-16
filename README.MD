@@ -11,14 +11,9 @@ JP 20250410v1
 
 ## How to use
 1. Copy the following link to your bookmarks.
-- Rating calculation before LUMINOUS+
 ```js
 javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.github.io/chuni-tools/scripts/chuni-tools.js?t='+Math.floor(Date.now()/60000);d.body.append(s);})(document);
 
-```
-- Rating calculation after VERSE (Beta)
-```js
-javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.github.io/chuni-tools/scripts/chuni-tools-temp.js?t='+Math.floor(Date.now()/60000);d.body.append(s);})(document);
 ```
 
 2. Navigate to [CHUNITHM-NET](https://chunithm-net-eng.com/mobile/home) and open the bookmark. This tool offers 12 features.
@@ -73,13 +68,8 @@ JP 20250410v1
 
 ## 如何使用
 1. 複製以下的連結加入書籤 
-- LUMINOUS+ 前的 Rating 計算方式
 ```js
 javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.github.io/chuni-tools/scripts/chuni-tools.js?t='+Math.floor(Date.now()/60000);d.body.append(s);})(document);
-```
-- VERSE 後的 Rating 計算方式 (Beta)
-```js
-javascript:(function(d,s){s=d.createElement('script');s.src='https://jack4215.github.io/chuni-tools/scripts/chuni-tools-temp.js?t='+Math.floor(Date.now()/60000);d.body.append(s);})(document);
 ```
 
 2. 至 [CHUNITHM-NET](https://chunithm-net-eng.com/mobile/home) 並開啟該書籤，本工具共有 12 項功能
