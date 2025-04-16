@@ -254,7 +254,7 @@
                     }
                     )),
                     o
-                }(n, await fetch(t("export-csv") + "/data/song-const/luminousplus.json").then((async e => await e.json())))
+                }(n, await fetch(t("export-csv") + "/data/song-const/verse.json").then((async e => await e.json())))
                   , i = o.map((e => `"${e.title.replace(/"/g, '""')}",${e.difficulty},${e.const},${e.score},${e.rating},${e.op}`));
                 isLoading = false;
                 e.innerText = a.downloaded;
