@@ -158,13 +158,15 @@
                                     };   
                                     const difficultyScore = sumScores(records);
                                     const totalHighScore = await fetchTotalHighScore(difficultyNames[e]);
-                                 /*   records.push({
-                                        title: "Forsaken Tale",
-                                        score: totalHighScore - difficultyScore === 0 ? -1 : totalHighScore - difficultyScore, 
-                                        difficulty: e,
-                                        clear: "",
-                                        idx: "2652"
-                                    }); */
+                                    if (e === o.ultima) {
+                                        records.push({
+                                            title: "Theatore Creatore",
+                                            score: totalHighScore - difficultyScore === 0 ? -1 : totalHighScore - difficultyScore, 
+                                            difficulty: e,
+                                            clear: "",
+                                            idx: "2712"
+                                        });
+                                    }
                                     // Add hidden song end
                                     return records;
                                 }(t.data.difficulty);
