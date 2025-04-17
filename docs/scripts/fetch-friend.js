@@ -173,16 +173,18 @@
                                 const friendBlock = Array.from(e.querySelectorAll(".friend_block")).find(block => 
                                     block.querySelector('input[name="idx"]')?.value === sF
                                 );
-                                const t = e.querySelector(".player_honor_short");
-                                const x = /honor_bg_.*(?=\.png)/.exec(t.style.backgroundImage);
-                                let honorTextElement = e.querySelector(".player_honor_text_view span");
-                                let honorText = honorTextElement ? honorTextElement.innerHTML : null;
-                                let honorColor = x ? x[0].slice(9) : "normal";
-                                if (!honorText && t) {
-                                    const backgroundImage = t.style.backgroundImage;
-                                    const imageUrlMatch = backgroundImage ? backgroundImage.match(/url\(["']?(.*?)["']?\)/) : null;
+                                const t = e.querySelectorAll(".player_honor_short")[0];
+                                let honorText = null;
+                                let honorColor = "normal";
+                                if (t) {
+                                    const honorTextElement = t.querySelector(".player_honor_text_view span");
+                                    honorText = honorTextElement ? honorTextElement.innerHTML : null;
+                                    const bgImage = t.style.backgroundImage;
+                                    const imageUrlMatch = bgImage.match(/url\(["']?(.*?)["']?\)/);
                                     const imageUrl = imageUrlMatch ? imageUrlMatch[1] : null;
-                                    if (imageUrl) {
+                                    const x = /honor_bg_(.*?)(?=\.png)/.exec(bgImage);
+                                    if (x) honorColor = x[1];
+                                    if (!honorText && imageUrl) {
                                         try {
                                             const response = await fetch(`https://chuni.tsaibee.org/data/title.json?t=${Date.now()}`);
                                             const titleData = await response.json();
@@ -192,7 +194,7 @@
                                                 honorColor = matchedTitle.genre;
                                             }
                                         } catch (error) {
-                                            console.error("Error fetching title.json:", error);
+                                            console.error("Error:", error);
                                         }
                                     }
                                 }

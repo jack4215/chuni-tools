@@ -215,9 +215,9 @@
                             }
                             s = async function() {
                                 const e = await i("/mobile/home/playerData");
-                                const t = e.querySelector(".player_honor_short");
+                                const t = e.querySelectorAll(".player_honor_short")[0];
                                 const r = /honor_bg_.*(?=\.png)/.exec(t.style.backgroundImage);
-                                let honorTextElement = e.querySelector(".player_honor_text_view span");
+                                let honorTextElement = t.querySelector(".player_honor_text_view span");
                                 let honorText = honorTextElement ? honorTextElement.innerHTML : null;
                                 let honorColor = r ? r[0].slice(9) : "normal";
                                 if (!honorText && t) {
@@ -234,11 +234,10 @@
                                                 honorColor = matchedTitle.genre;
                                             }
                                         } catch (error) {
-                                            console.error("Error fetching title.json:", error);
+                                            console.error("Error:", error);
                                         }
                                     }
                                 }
-                                
                                 const a = Array.from(e.querySelectorAll(".player_rating_num_block img"))
                                     .map((e => /rating_.*_comma.png/.test(e.src) ? "." : /rating_.*_[0-9]*(?=\.png)/.exec(e.src)[0].slice(-1)))
                                     .join("");
