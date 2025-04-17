@@ -214,8 +214,8 @@
                                 const playerData = {
                                     name: e.querySelector(".player_name_in").innerHTML,
                                     honor: {
-                                        text: e.querySelector(".player_honor_text_view span").innerHTML,
-                                        color: x ? x[0].slice(9) : "normal"
+                                        text: honorText || "Unknown",
+                                        color: honorColor
                                     },
                                     rating: a,
                                     overPower: e.querySelector(".player_overpower_text").innerHTML.match(/\(([^)]+)\)/)[1],
