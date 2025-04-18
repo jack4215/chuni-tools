@@ -64,12 +64,12 @@
             [e.en_US]: {
                 pleaseLogin: "Please login to CHUNITHM-NET first.",
                 needReload: "Please reload CHUNITHM-NET.",
-                analyzeRating: "Analyze Rating (Old)"
+                analyzeRating: "Analyze Rating"
             },
             [e.zh_TW]: {
                 pleaseLogin: "請先登入 CHUNITHM-NET 再執行本程式。",
                 needReload: "請重新整理 CHUNITHM-NET 再執行本程式。",
-                analyzeRating: "分析遊戲成績 (舊定)"
+                analyzeRating: "分析遊戲成績"
             }
         }[function() {
             const t = new URLSearchParams(location.search);
@@ -94,7 +94,7 @@
                 r.rel = "stylesheet",
                 r.href = t("fetch-all") + "/common/styles/inject.css",
                 e.innerText = s.analyzeRating,
-                e.href = t("fetch-all") + "/record-viewer-old/#all",
+                e.href = t("fetch-all") + "/record-viewer/#best",
                 e.target = "recordViewer",
                 l.getElementsByTagName("head")[0].appendChild(r),
                 r.addEventListener("load", ( () => {
@@ -122,7 +122,7 @@
                         }(e.source, e.origin);
                         let s;
                         switch (t.target) {
-                            case "allRecord":
+                            case "bestRecord":
                                 console.log("%c    Target difficulty: %c" + t.data.difficulty, "color: gray", "color: white"),
                                 s = async function(e=o.master) {
                                     const t = new FormData;
@@ -144,7 +144,6 @@
                                             score: a ? n(a) : -1,
                                             difficulty: e,
                                             clear: r?.querySelector('img[src*="alljustice"]') ? "AJ" : r?.querySelector('img[src*="fullcombo"]') ? "FC" : "",
-                                            clear2: r?.querySelector('img[src*="clear"]') ? "CLR" : r?.querySelector('img[src*="hard"]') ? "HRD" : r?.querySelector('img[src*="absolute"]') ? "ABS" : r?.querySelector('img[src*="brave"]') ? "BRV" : r?.querySelector('img[src*="catastrophy"]') ? "CTS" : "",
                                             idx: t.querySelector('input[name="idx"]').value
                                         };
                                     })).filter((e => e.title && e.score && !e.title.includes("Floor Killer") && !e.title.includes("Dig Delight!")));
@@ -158,15 +157,13 @@
                                     };   
                                     const difficultyScore = sumScores(records);
                                     const totalHighScore = await fetchTotalHighScore(difficultyNames[e]);
-                                    if (e === o.ultima) {
-                                        records.push({
-                                            title: "Theatore Creatore",
-                                            score: totalHighScore - difficultyScore === 0 ? -1 : totalHighScore - difficultyScore, 
-                                            difficulty: e,
-                                            clear: "",
-                                            idx: "2712"
-                                        });
-                                    }
+                                 /*   records.push({
+                                        title: "Forsaken Tale",
+                                        score: totalHighScore - difficultyScore === 0 ? -1 : totalHighScore - difficultyScore, 
+                                        difficulty: e,
+                                        clear: "",
+                                        idx: "2652"
+                                    });*/
                                     // Add hidden song end
                                     return records;
                                 }(t.data.difficulty);
@@ -189,16 +186,30 @@
                                 const e = await i("/mobile/record/playlog");
                                 return Array.from(e.querySelectorAll(".mt_10 .frame02.w400")).map((e => {
                                     const t = e.querySelector(".play_musicdata_score_text")?.innerHTML
-                                        , r = e.querySelector(".play_track_result img").src
-                                        , a = /musiclevel_.*(?=\.png)/.exec(r)[0].slice(11)
-                                        , c = Array.from(e.querySelectorAll(".play_musicdata_icon"));
+                                      , r = e.querySelector(".play_track_result img").src
+                                      , a = /musiclevel_.*(?=\.png)/.exec(r)[0].slice(11)
+                                      , c = Array.from(e.querySelectorAll(".play_musicdata_icon"));
                                     return {
                                         title: e.querySelector(".play_musicdata_title").innerHTML,
                                         score: n(t),
                                         difficulty: "ultimate" == a ? "ULT" : "worldsend" == a ? "WE" : o[a],
                                         clear: c.some((e => e.querySelector('img[src*="alljustice"]'))) ? "AJ" : c.some((e => e.querySelector('img[src*="fullcombo"]'))) ? "FC" : "",
-                                        clear2: c.some((e => e.querySelector('img[src*="clear"]'))) ? "CLR" : c.some((e => e.querySelector('img[src*="hard"]'))) ? "HRD" : c.some((e => e.querySelector('img[src*="absolute"]'))) ? "ABS" : c.some((e => e.querySelector('img[src*="brave"]'))) ? "BRV" : c.some((e => e.querySelector('img[src*="catastrophy"]'))) ? "CTS" : "",
                                         timestamp: Date.parse(e.querySelector(".play_datalist_date").innerHTML)
+                                    }
+                                }
+                                ))
+                            }();
+                            break;
+                        case "recentRecord":
+                            s = async function() {
+                                const e = await i("/mobile/home/playerData/ratingDetailRecent");
+                                return Array.from(e.querySelectorAll("form")).map((e => {
+                                    const t = e.querySelector("input[name=diff]")?.value;
+                                    return {
+                                        title: e.querySelector(".music_title").innerHTML,
+                                        score: n(e.querySelector(".text_b")?.innerHTML),
+                                        difficulty: Object.values(o)[parseInt(t)],
+                                        clear: ""
                                     }
                                 }
                                 ))
@@ -217,29 +228,8 @@
                             }
                             s = async function() {
                                 const e = await i("/mobile/home/playerData");
-                                const t = e.querySelectorAll(".player_honor_short")[0];
+                                const t = e.querySelector(".player_honor_short");
                                 const r = /honor_bg_.*(?=\.png)/.exec(t.style.backgroundImage);
-                                let honorTextElement = t.querySelector(".player_honor_text_view span");
-                                let honorText = honorTextElement ? honorTextElement.innerHTML : null;
-                                let honorColor = r ? r[0].slice(9) : "normal";
-                                if (!honorText && t) {
-                                    const backgroundImage = t.style.backgroundImage;
-                                    const imageUrlMatch = backgroundImage ? backgroundImage.match(/url\(["']?(.*?)["']?\)/) : null;
-                                    const imageUrl = imageUrlMatch ? imageUrlMatch[1] : null;
-                                    if (imageUrl) {
-                                        try {
-                                            const response = await fetch(`https://chuni.tsaibee.org/data/title.json?t=${Date.now()}`);
-                                            const titleData = await response.json();
-                                            const matchedTitle = titleData.find(item => item.image === imageUrl);
-                                            if (matchedTitle) {
-                                                honorText = matchedTitle.title;
-                                                honorColor = matchedTitle.genre;
-                                            }
-                                        } catch (error) {
-                                            console.error("Error:", error);
-                                        }
-                                    }
-                                }
                                 const a = Array.from(e.querySelectorAll(".player_rating_num_block img"))
                                     .map((e => /rating_.*_comma.png/.test(e.src) ? "." : /rating_.*_[0-9]*(?=\.png)/.exec(e.src)[0].slice(-1)))
                                     .join("");
@@ -255,10 +245,11 @@
                                 const playerData = {
                                     name: e.querySelector(".player_name_in").innerHTML,
                                     honor: {
-                                        text: honorText || "Unknown",
-                                        color: honorColor
+                                        text: e.querySelector(".player_honor_text_view span").innerHTML,
+                                        color: r ? r[0].slice(9) : "normal" 
                                     },
                                     rating: a,
+                                    ratingMax: e.querySelector(".player_rating_max").innerHTML,
                                     overPower: e.querySelector(".player_overpower_text").innerHTML.match(/\(([^)]+)\)/)[1],
                                     playCount: e.querySelector(".user_data_play_count .user_data_text").innerHTML,
                                     lastPlayed: Date.parse(e.querySelector(".player_lastplaydate_text").innerHTML),
