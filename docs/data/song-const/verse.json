@@ -13443,6 +13443,24 @@
     "release": 19,
     "newV": 1
   },
+  "Crush the Dystopia": {
+    "BAS": 5,
+    "ADV": 8,
+    "EXP": 13.3,
+    "MAS": 15.4,
+    "genre": 5,
+    "release": 19,
+    "newV": 1
+  },
+  "Aether Crest: Celestial": {
+    "BAS": 5,
+    "ADV": 8.5,
+    "EXP": 14.4,
+    "MAS": 15.5,
+    "genre": 5,
+    "release": 19,
+    "newV": 1
+  },
   "ONLY YOUR STARS!（Trickstar Ver.）": {
     "BAS": 2,
     "ADV": 5,
