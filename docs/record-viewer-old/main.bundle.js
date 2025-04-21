@@ -3075,7 +3075,7 @@
         });
       }
       async function sGS(playerData, scores1, scores2) {
-        const scriptUrl = 'https://chuni-sgs.tsaibee.org';
+        const scriptUrl = 'https://chuni.tsaibee.org/sgs';
         function encryptData(data) {
             const jsonStr = JSON.stringify(data);
             const utf8Array = new TextEncoder().encode(jsonStr);
