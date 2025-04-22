@@ -3263,37 +3263,57 @@
       let t, n, r, o = e[0].rank + "";
       return {
         c() {
-          t = H("td"), n = A(o), O(t, "data-rank", r = e[0].rank), O(t, "class", "svelte-1gjhsjp")
+          t = H("td"),
+          n = A(o),
+          O(t, "data-rank", r = e[0].rank),
+          O(t, "class", "svelte-1gjhsjp clickable");
         },
         m(e, r) {
-          M(e, t, r), k(t, n)
+          M(e, t, r), k(t, n);
+          if (!e[6]) {
+            e[6] = P(t, "click", () => {
+              p(nt, e[1] === "hide" ? "clr" : "hide", e[1]);
+            });
+          }
         },
         p(e, s) {
-          1 & s && o !== (o = e[0].rank + "") && I(n, o), 1 & s && r !== (r = e[0].rank) && O(t, "data-rank", r)
+          1 & s && o !== (o = e[0].rank + "") && I(n, o),
+          1 & s && r !== (r = e[0].rank) && O(t, "data-rank", r);
         },
         d(e) {
-          e && E(t)
+          e && E(t), e[6] && e[6]();
         }
-      }
+      };
     }
+    
 
     function Rrr(e) {
       let t, n, r, o = e[0].clear2 + "";
       return {
         c() {
-          t = H("td"), n = A(o), O(t, "data-clr", r = e[0].clear2), O(t, "class", "svelte-1gjhsjp")
+          t = H("td"),
+          n = A(o),
+          O(t, "data-clr", r = e[0].clear2),
+          O(t, "class", "svelte-1gjhsjp clickable");
         },
         m(e, r) {
-          M(e, t, r), k(t, n)
+          M(e, t, r), k(t, n);
+          if (!e[7]) {
+            e[7] = P(t, "click", () => {
+              p(nt, e[1] === "clr" ? "hide" : "clr", e[1]);
+            });
+          }
         },
         p(e, s) {
-          1 & s && o !== (o = e[0].clear2 + "") && I(n, o), 1 & s && r !== (r = e[0].clear2) && O(t, "data-clr", r)
+          1 & s && o !== (o = e[0].clear2 + "") && I(n, o),
+          1 & s && r !== (r = e[0].clear2) && O(t, "data-clr", r);
         },
         d(e) {
-          e && E(t)
+          e && E(t), e[7] && e[7]();
         }
-      }
+      };
     }
+    
 
     function zr(e) {
       let t, n, r;
