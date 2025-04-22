@@ -3260,62 +3260,40 @@
     }
 
     function Rr(e) {
-      let t, n, r, clickHandler, o = e[0].rank + "";
-    
+      let t, n, r, o = e[0].rank + "";
       return {
         c() {
-          t = H("td");
-          n = A(o);
-          O(t, "data-rank", r = e[0].rank);
-          O(t, "class", "clickable svelte-1gjhsjp"); // 加 clickable 樣式
+          t = H("td"), n = A(o), O(t, "data-rank", r = e[0].rank), O(t, "class", "svelte-1gjhsjp")
         },
         m(e, r) {
-          M(e, t, r);
-          k(t, n);
-          clickHandler = P(t, "click", () => {
-            e[9]("clr"); 
-          });
+          M(e, t, r), k(t, n)
         },
         p(e, s) {
-          1 & s && o !== (o = e[0].rank + "") && I(n, o);
-          1 & s && r !== (r = e[0].rank) && O(t, "data-rank", r);
+          1 & s && o !== (o = e[0].rank + "") && I(n, o), 1 & s && r !== (r = e[0].rank) && O(t, "data-rank", r)
         },
         d(e) {
-          e && E(t);
-          clickHandler();
+          e && E(t)
         }
-      };
+      }
     }
-    
 
     function Rrr(e) {
-      let t, n, r, clickHandler, o = e[0].clear2 + "";
-    
+      let t, n, r, o = e[0].clear2 + "";
       return {
         c() {
-          t = H("td");
-          n = A(o);
-          O(t, "data-clr", r = e[0].clear2);
-          O(t, "class", "clickable svelte-1gjhsjp");
+          t = H("td"), n = A(o), O(t, "data-clr", r = e[0].clear2), O(t, "class", "svelte-1gjhsjp")
         },
         m(e, r) {
-          M(e, t, r);
-          k(t, n);
-          clickHandler = P(t, "click", () => {
-            e[9]("hide");
-          });
+          M(e, t, r), k(t, n)
         },
         p(e, s) {
-          1 & s && o !== (o = e[0].clear2 + "") && I(n, o);
-          1 & s && r !== (r = e[0].clear2) && O(t, "data-clr", r);
+          1 & s && o !== (o = e[0].clear2 + "") && I(n, o), 1 & s && r !== (r = e[0].clear2) && O(t, "data-clr", r)
         },
         d(e) {
-          e && E(t);
-          clickHandler();
+          e && E(t)
         }
-      };
+      }
     }
-    
 
     function zr(e) {
       let t, n, r;
@@ -3589,9 +3567,6 @@
         })).catch((() => {
           n(0, l.playCount = null, l)
         }))
-      },
-      function (next) {
-        p(nt, next, next);
       }]
     }
     const Qr = class extends Se {
