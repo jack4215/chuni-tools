@@ -3260,56 +3260,58 @@
     }
 
     function Rr(e) {
-      let t, n, r, o = e[0].rank + "";
+      let t, n, r, clickHandler, o = e[0].rank + "";
+    
       return {
         c() {
-          t = H("td"),
-          n = A(o),
-          O(t, "data-rank", r = e[0].rank),
-          O(t, "class", "svelte-1gjhsjp clickable");
+          t = H("td");
+          n = A(o);
+          O(t, "data-rank", r = e[0].rank);
+          O(t, "class", "clickable svelte-1gjhsjp"); // 加 clickable 樣式
         },
         m(e, r) {
-          M(e, t, r), k(t, n);
-          if (!e[6]) {
-            e[6] = P(t, "click", () => {
-              p(nt, e[1] === "hide" ? "clr" : "hide", e[1]);
-            });
-          }
+          M(e, t, r);
+          k(t, n);
+          clickHandler = P(t, "click", () => {
+            e[9]("clr"); 
+          });
         },
         p(e, s) {
-          1 & s && o !== (o = e[0].rank + "") && I(n, o),
+          1 & s && o !== (o = e[0].rank + "") && I(n, o);
           1 & s && r !== (r = e[0].rank) && O(t, "data-rank", r);
         },
         d(e) {
-          e && E(t), e[6] && e[6]();
+          e && E(t);
+          clickHandler();
         }
       };
     }
     
 
     function Rrr(e) {
-      let t, n, r, o = e[0].clear2 + "";
+      let t, n, r, clickHandler, o = e[0].clear2 + "";
+    
       return {
         c() {
-          t = H("td"),
-          n = A(o),
-          O(t, "data-clr", r = e[0].clear2),
-          O(t, "class", "svelte-1gjhsjp clickable");
+          t = H("td");
+          n = A(o);
+          O(t, "data-clr", r = e[0].clear2);
+          O(t, "class", "clickable svelte-1gjhsjp");
         },
         m(e, r) {
-          M(e, t, r), k(t, n);
-          if (!e[7]) {
-            e[7] = P(t, "click", () => {
-              p(nt, e[1] === "clr" ? "hide" : "clr", e[1]);
-            });
-          }
+          M(e, t, r);
+          k(t, n);
+          clickHandler = P(t, "click", () => {
+            e[9]("hide");
+          });
         },
         p(e, s) {
-          1 & s && o !== (o = e[0].clear2 + "") && I(n, o),
+          1 & s && o !== (o = e[0].clear2 + "") && I(n, o);
           1 & s && r !== (r = e[0].clear2) && O(t, "data-clr", r);
         },
         d(e) {
-          e && E(t), e[7] && e[7]();
+          e && E(t);
+          clickHandler();
         }
       };
     }
@@ -3587,6 +3589,9 @@
         })).catch((() => {
           n(0, l.playCount = null, l)
         }))
+      },
+      function (next) {
+        p(nt, next, next);
       }]
     }
     const Qr = class extends Se {
