@@ -153,16 +153,6 @@
                             }(t.data.difficulty);
                             break;
                         case "playerStats":
-                            function Tz(date) {
-                                const utcDate = new Date(date.getTime() + 8 * 60 * 60 * 1000);
-                                const year = utcDate.getUTCFullYear();
-                                const month = String(utcDate.getUTCMonth() + 1).padStart(2, '0');
-                                const day = String(utcDate.getUTCDate()).padStart(2, '0');
-                                const hours = String(utcDate.getUTCHours()).padStart(2, '0');
-                                const minutes = String(utcDate.getUTCMinutes()).padStart(2, '0');
-                                const seconds = String(utcDate.getUTCSeconds()).padStart(2, '0');
-                                return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
-                            }
                             s = async function() {
                                 const e = await i("/mobile/friend");
                                 const f = await i("/mobile/home/playerData");
@@ -206,7 +196,6 @@
                                     fname: f.querySelector(".player_name_in").innerHTML,
                                     frating: aa,
                                     fcode: f.querySelector('.user_data_friend_code .user_data_text span[style="display:none;"]')?.innerText || "N/A",
-                                    updatedAt: Tz(new Date())
                                 };
                                 return playerData;
                             }();
