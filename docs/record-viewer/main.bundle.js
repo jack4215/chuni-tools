@@ -2128,29 +2128,28 @@
     };
 
     function Bn(e) {
-      j(e, "svelte-by0uiq", '.wrapper.svelte-by0uiq{display:flex;-ms-flex-direction:column;flex-direction:column;padding:0.5rem;gap:1rem}.btns.svelte-by0uiq{display:-ms-grid;display:grid;grid-template-areas:"... ... ...";gap:0.5rem;flex-wrap:wrap}button.svelte-by0uiq{width:100%;padding:0.5rem;border-radius:0.5rem;background-color:var(--theme-bg-sub);border:3px solid var(--theme-control);color:var(--theme-text-control);filter:brightness(0.5)}button.svelte-by0uiq:hover{filter:brightness(0.8)}button.activated.svelte-by0uiq{filter:brightness(1)}.btn-all.svelte-by0uiq{grid-column:2/4;border-color:var(--theme-control-altr)}')
+      j(e, "svelte-by0uiq", '.wrapper.svelte-by0uiq{display:flex;-ms-flex-direction:column;flex-direction:column;padding:0.5rem;gap:1rem}.btns.svelte-by0uiq{display:-ms-grid;display:grid;grid-template-areas:"... ... ...";gap:0.5rem;flex-wrap:wrap}button.svelte-by0uiq{width:100%;padding:0.5rem;border-radius:0.5rem;background-color:var(--theme-bg-sub);border:3px solid var(--theme-control);color:var(--theme-text-control);filter:brightness(0.5)}button.svelte-by0uiq:hover{filter:brightness(0.8)}button.activated.svelte-by0uiq{filter:brightness(1)}.btn-all.svelte-by0uiq{grid-column:2/4;border-color:var(--theme-control-altr)}button[disabled].svelte-by0uiq{cursor:no-drop;border:3px solid var(--theme-bg-sub)}')
     }
 
     function Vn(e, t, n) {
       const r = e.slice();
-      return r[5] = t[n], r
+      return r[6] = t[n], r
     }
 
     function qn(e) {
-      let t, n, r, o, s = e[5] + "";
-
+      let t, n, r, o, s = e[6] + "";
       function a() {
-        return e[3](e[5])
+        return e[3](e[6])
       }
       return {
         c() {
-          t = H("button"), n = A(s), O(t, "type", "button"), O(t, "class", "svelte-by0uiq"), B(t, "activated", e[1][e[5]])
+          t = H("button"), n = A(s), O(t, "type", "button"), t.disabled = e[5], O(t, "class", "svelte-by0uiq"), B(t, "activated", e[1][e[6]])
         },
         m(e, s) {
           M(e, t, s), k(t, n), r || (o = P(t, "click", a), r = !0)
         },
         p(n, r) {
-          e = n, 2 & r && B(t, "activated", e[1][e[5]])
+          e = n, 32 & r && (t.disabled = e[5]), 2 & r && B(t, "activated", e[1][e[6]])
         },
         d(e) {
           e && E(t), r = !1, o()
@@ -2168,7 +2167,7 @@
         c() {
           n = H("div"), r = H("span"), o = D(), s = H("div");
           for (let e = 0; e < h.length; e += 1) h[e].c();
-          a = D(), i = H("button"), l = A(f), O(i, "type", "button"), O(i, "class", "btn-all svelte-by0uiq"), B(i, "activated", t[0]), O(s, "class", "btns svelte-by0uiq"), O(n, "class", "wrapper svelte-by0uiq")
+          a = D(), i = H("button"), l = A(f), O(i, "type", "button"), O(i, "class", "btn-all svelte-by0uiq"), B(i, "activated", t[0]), i.disabled = t[5], O(s, "class", "btns svelte-by0uiq"), O(n, "class", "wrapper svelte-by0uiq")
         },
         m(e, f) {
           M(e, n, f), k(n, r), r.innerHTML = u, k(n, o), k(n, s);
@@ -2185,7 +2184,7 @@
             for (; n < h.length; n += 1) h[n].d(1);
             h.length = p.length
           }
-          4 & t && f !== (f = e[2]("settings.filter.genre.all") + "") && I(l, f), 1 & t && B(i, "activated", e[0])
+          4 & t && f !== (f = e[2]("settings.filter.genre.all") + "") && I(l, f), 1 & t && B(i, "activated", e[0])/*, 32 & t && (i.disabled = e[5])*/
         },
         i: e,
         o: e,
@@ -2196,15 +2195,15 @@
     }
 
     function Jn(e, t, n) {
-      let r, o;
-      u(e, et, (e => n(1, r = e))), u(e, wt, (e => n(2, o = e)));
+      let r, o, v;
+      u(e, et, (e => n(1, r = e))), u(e, wt, (e => n(2, o = e))), u(e, jt, (e => n(5, v = e)));
       let s = Ie.every((e => r[e]));
       return [s, r, o, e => {
         p(et, r[e] = !r[e], r), n(0, s = Ie.every((e => r[e])))
       }, () => {
         n(0, s = !s);
         for (let e of Ie) p(et, r[e] = s, r)
-      }]
+      }, v]
     }
     const Xn = class extends Se {
       constructor(e) {
@@ -2213,29 +2212,29 @@
     };
 
     function Bnn(e) {
-      j(e, "svelte-by0uoq", '.wrapper.svelte-by0uoq{display:flex;-ms-flex-direction:column;flex-direction:column;padding:0.5rem;gap:1rem}.btns.svelte-by0uoq{display:-ms-grid;display:grid;grid-template-columns: repeat(4, 1fr);grid-template-areas:".... .... ....";gap:0.5rem;flex-wrap:wrap}button.svelte-by0uoq{width:100%;padding:0.5rem;border-radius:0.5rem;background-color:var(--theme-bg-sub);border:3px solid var(--theme-control);color:var(--theme-text-control);filter:brightness(0.5)}button.svelte-by0uoq:hover{filter:brightness(0.8)}button.activated.svelte-by0uoq{filter:brightness(1)}.btn-all.svelte-by0uoq{grid-column:2/4;border-color:var(--theme-control-altr)}')
+      j(e, "svelte-by0uoq", '.wrapper.svelte-by0uoq{display:flex;-ms-flex-direction:column;flex-direction:column;padding:0.5rem;gap:1rem}.btns.svelte-by0uoq{display:-ms-grid;display:grid;grid-template-columns: repeat(4, 1fr);grid-template-areas:".... .... ....";gap:0.5rem;flex-wrap:wrap}button.svelte-by0uoq{width:100%;padding:0.5rem;border-radius:0.5rem;background-color:var(--theme-bg-sub);border:3px solid var(--theme-control);color:var(--theme-text-control);filter:brightness(0.5)}button.svelte-by0uoq:hover{filter:brightness(0.8)}button.activated.svelte-by0uoq{filter:brightness(1)}.btn-all.svelte-by0uoq{grid-column:2/4;border-color:var(--theme-control-altr)}button[disabled].svelte-by0uoq{cursor:no-drop;border:3px solid var(--theme-bg-sub)}')
     }
 
     function Vnn(e, t, n) {
       const r = e.slice();
-      return r[5] = t[n], r
+      return r[6] = t[n], r
       
     }
 
     function qnn(e) {
-      let t, n, r, o, s = e[5] + "";
+      let t, n, r, o, s = e[6] + "";
       function a() {
-        return e[3](e[5])
+        return e[3](e[6])
       }
       return {
         c() {
-          t = H("button"), n = A(s), O(t, "type", "button"), O(t, "class", "svelte-by0uoq"), B(t, "activated", e[1][e[5]])
+          t = H("button"), n = A(s), O(t, "type", "button"), t.disabled = e[5], O(t, "class", "svelte-by0uoq"), B(t, "activated", e[1][e[6]])
         },
         m(e, s) {
           M(e, t, s), k(t, n), r || (o = P(t, "click", a), r = !0)
         },
         p(n, r) {
-          e = n, 2 & r && B(t, "activated", e[1][e[5]])
+          e = n, 32 & r && (t.disabled = e[5]), 2 & r && B(t, "activated", e[1][e[6]])
         },
         d(e) {
           e && E(t), r = !1, o()
@@ -2253,7 +2252,7 @@
         c() {
           n = H("div"), r = H("span"), o = D(), s = H("div");
           for (let e = 0; e < h.length; e += 1) h[e].c();
-          a = D(), i = H("button"), l = A(f), O(i, "type", "button"), O(i, "class", "btn-all svelte-by0uoq"), B(i, "activated", t[0]), O(s, "class", "btns svelte-by0uoq"), O(n, "class", "wrapper svelte-by0uoq")
+          a = D(), i = H("button"), l = A(f), O(i, "type", "button"), O(i, "class", "btn-all svelte-by0uoq"), B(i, "activated", t[0]), i.disabled = t[5], O(s, "class", "btns svelte-by0uoq"), O(n, "class", "wrapper svelte-by0uoq")
         },
         m(e, f) {
           M(e, n, f), k(n, r), r.innerHTML = u, k(n, o), k(n, s);
@@ -2270,7 +2269,7 @@
             for (; n < h.length; n += 1) h[n].d(1);
             h.length = p.length
           }
-          4 & t && f !== (f = e[2]("settings.filter.release.all") + "") && I(l, f), 1 & t && B(i, "activated", e[0])
+          4 & t && f !== (f = e[2]("settings.filter.release.all") + "") && I(l, f), 1 & t && B(i, "activated", e[0])/*, 32 & t && (i.disabled = e[5])*/
         },
         i: e,
         o: e,
@@ -2281,15 +2280,15 @@
     }
     
     function Jnn(e, t, n) {
-      let r, o;
-      u(e, eet, (e => n(1, r = e))), u(e, wt, (e => n(2, o = e)));
+      let r, o, v;
+      u(e, eet, (e => n(1, r = e))), u(e, wt, (e => n(2, o = e))), u(e, jt, (e => n(5, v = e)));
       let s = Rl.every((e => r[e]));
       return [s, r, o, e => {
         p(eet, r[e] = !r[e], r), n(0, s = Rl.every((e => r[e])))
       }, () => {
         n(0, s = !s);
         for (let e of Rl) p(eet, r[e] = s, r)
-      }]
+      }, v]
     }
     const Xnn = class extends Se {
       constructor(e) {
@@ -2326,7 +2325,7 @@
     }
 
     function Qn(e, t, n) {
-      let r, o, s, a, l, i = sFS;
+      let r, o, s, a, i, l;
       u(e, jt, (e => n(2, r = e))), u(e, wt, (e => n(3, o = e))), u(e, kt, (e => n(8, s = e))), u(e, St, (e => n(9, a = e))),/* u(e, At, (e => n(10, i = e))),*/ u(e, xt, (e => n(11, l = e)));
       let c = 1,
         d = 40;
@@ -2334,11 +2333,11 @@
         if (!Zn(e, t)) {
           p(St, a = !0, a), p(jt, r = !0, r), p(xt, l = !1, l);
           try {
-            const n = i.slice(e - 1, t).length;
-            for (const [r, s] of i.slice(e - 1, t).entries()) kt.set(o("playcount.fetch.progress", {
+            const n = sFS.slice(e - 1, t).length;
+            for (const [r, s] of sFS.slice(e - 1, t).entries()) kt.set(o("playcount.fetch.progress", {
               progress: `${r}`,
               all: `${n}`
-            })), null == s.playCount && (s.playCount = await gt("songPlayCount", s.difficulty, s.idx), At.set(i));
+            })), null == s.playCount && (s.playCount = await gt("songPlayCount", s.difficulty, s.idx), At.set(sFS));
             p(jt, r = !1, r), p(St, a = !1, a)
           } catch {
             p(St, a = !1, a), p(kt, s = o("playcount.fetch.error"), s), setTimeout((() => {
