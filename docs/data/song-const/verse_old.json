@@ -1986,6 +1986,7 @@
     "ADV": 5,
     "EXP": 9,
     "MAS": 13.2,
+    "ULT": 14.8,
     "genre": 6,
     "release": 3,
     "newV": 0
@@ -13612,6 +13613,42 @@
     "EXP": 14,
     "MAS": 15.1,
     "genre": 5,
+    "release": 19,
+    "newV": 1
+  },
+  "ラビットホール": {
+    "BAS": 3,
+    "ADV": 7,
+    "EXP": 11,
+    "MAS": 13.7,
+    "genre": 2,
+    "release": 19,
+    "newV": 1
+  },
+  "あいたい星人": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 9.5,
+    "MAS": 13.2,
+    "genre": 2,
+    "release": 19,
+    "newV": 1
+  },
+  "ハオ": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 9,
+    "MAS": 13.1,
+    "genre": 2,
+    "release": 19,
+    "newV": 1
+  },
+  "躯樹の墓守": {
+    "BAS": 5,
+    "ADV": 8,
+    "EXP": 13.7,
+    "MAS": 14.8,
+    "genre": 9,
     "release": 19,
     "newV": 1
   }
