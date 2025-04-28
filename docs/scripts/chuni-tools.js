@@ -11,11 +11,23 @@
         const a = {
             [n.en_US]: {
                 alreadyRun: "Please refresh the page before running CHUNI TOOLS again!",
-                wrongBase: `Please open CHUNITHM-NET Intl. (${e}) and login, then try again.`
+                wrongBase: `Please open CHUNITHM-NET Intl. (${e}) and login, then try again.`,
+                containerHTML: `
+                    <p>Theatore Creatore [ULT] can only display the score, the OP may have discrepancies.</p>
+                    <hr width="96%">
+                    <p><a href="https://chuni.tsaibee.org" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools</a></p>
+                    <p style="font-size:15px;">By using this service, you agree to its <a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">Privacy Policy</a>.</p>
+                `
             },
             [n.zh_TW]: {
                 alreadyRun: "請重新整理頁面後再執行 CHUNITHM 書籤工具！",
-                wrongBase: `請到 CHUNITHM-NET Intl. (${e}) 登入之後再試一次。`
+                wrongBase: `請到 CHUNITHM-NET Intl. (${e}) 登入之後再試一次。`,
+                containerHTML: `
+                    <p>Theatore Creatore [ULT] 僅能顯示分數，OP 可能會有誤差</p>
+                    <hr width="96%">
+                    <p><a href="https://chuni.tsaibee.org" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools</a></p>
+                    <p style="font-size:15px;">使用即同意本服務之<a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">隱私權政策</a></p>
+                `
             }
         }[function() {
             const e = new URLSearchParams(location.search);
@@ -39,12 +51,7 @@
         function insertResult(targetElement) {
             const resultContainer = document.createElement("div");
             resultContainer.className = "chuni-tools-container";
-            resultContainer.innerHTML = `
-                <p><a href="https://chuni.tsaibee.org" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools</a></p>
-                <hr width="96%">
-                <p style="font-size:15px;">使用即同意本服務之<a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">隱私權政策</a></p>
-                <p style="font-size:15px;">By using this service, you agree to its <a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">Privacy Policy</a>.</p>
-            `;
+            resultContainer.innerHTML = a.containerHTML;
             const style = document.createElement("style");
             style.textContent = `
                 .chuni-tools-container {
@@ -60,6 +67,7 @@
                     margin: 5px 0;
                     color: #ededed;
                     text-align: center;
+                    line-height: 1.2;
                 }
             `;
             document.head.appendChild(style);

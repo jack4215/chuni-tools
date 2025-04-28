@@ -164,6 +164,7 @@
                                             score: totalHighScore - difficultyScore === 0 ? -1 : totalHighScore - difficultyScore, 
                                             difficulty: e,
                                             clear: "",
+                                            clear2: "",
                                             idx: "2712"
                                         });
                                     }
