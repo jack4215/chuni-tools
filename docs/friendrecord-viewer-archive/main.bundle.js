@@ -2967,7 +2967,7 @@
     };
 
     function Ur(e) {
-      j(e, "svelte-1rv2o5c", '.wrapper.svelte-1rv2o5c.svelte-1rv2o5c{border:var(--theme-border) 3px solid;border-radius:0.5rem;background-color:var(--theme-bg-sub);box-sizing:border-box;width:100%;max-width:600px;padding:0.5rem;margin:0.5rem;display:-ms-grid;display:grid;align-items:center;justify-items:center;overflow-x:scroll}.wrapper.svelte-1rv2o5c.svelte-1rv2o5c::-webkit-scrollbar{display:none}.stats-name.svelte-1rv2o5c.svelte-1rv2o5c{grid-column:1;width:auto;white-space:nowrap}.stats-rating.svelte-1rv2o5c.svelte-1rv2o5c{grid-column:2;display:flex;-ms-flex-direction:column;flex-direction:column}.stats-rating.svelte-1rv2o5c h2.svelte-1rv2o5c{margin:auto}.stats-rating.svelte-1rv2o5c span.svelte-1rv2o5c{color:var(--theme-text-dim)}.stats-honor.svelte-1rv2o5c.svelte-1rv2o5c{grid-area:2/1/3/3;color:var(--theme-honor-normal);font-weight:bold;background:var(--theme-bg-main);border-radius:3px;padding:5px 2rem;margin:0 20px;width:-webkit-fill-available;text-align:center}.stats-honor[data-honor=normal].svelte-1rv2o5c.svelte-1rv2o5c{color:var(--theme-honor-normal)}.stats-honor[data-honor=bronze].svelte-1rv2o5c.svelte-1rv2o5c{color:var(--theme-honor-bronze)}.stats-honor[data-honor=silver].svelte-1rv2o5c.svelte-1rv2o5c{color:var(--theme-honor-silver)}.stats-honor[data-honor=gold].svelte-1rv2o5c.svelte-1rv2o5c{color:var(--theme-honor-gold)}.stats-honor[data-honor=platina].svelte-1rv2o5c.svelte-1rv2o5c{color:var(--theme-honor-platina)}.stats-honor[data-honor=rainbow].svelte-1rv2o5c.svelte-1rv2o5c{color:var(--theme-honor-rainbow)}.stats-honor[data-honor=version1].svelte-1rv2o5c.svelte-1rv2o5c{color:var(--theme-honor-version1)}.stats-honor[data-honor=version2].svelte-1rv2o5c.svelte-1rv2o5c{color:var(--theme-honor-version2)}.stats-honor[data-honor=version3].svelte-1rv2o5c.svelte-1rv2o5c{color:var(--theme-honor-version3)}.stats-honor[data-honor=kop].svelte-1rv2o5c.svelte-1rv2o5c{color:var(--theme-honor-kop)}.stats-items.svelte-1rv2o5c.svelte-1rv2o5c{width:-moz-fit-content;width:fit-content;display:-ms-grid;display:grid;grid-template-areas:"... ...";grid-area:1/3/3/4;gap:5px;padding:5px}@media only screen and (max-width: 544px){.stats-name.svelte-1rv2o5c.svelte-1rv2o5c{margin:auto}.stats-rating.svelte-1rv2o5c.svelte-1rv2o5c{grid-column:1}.stats-items.svelte-1rv2o5c.svelte-1rv2o5c{grid-area:1/2/3/3;max-width:-moz-fit-content;max-width:fit-content}.stats-honor.svelte-1rv2o5c.svelte-1rv2o5c{grid-area:3/1/4/3}}')
+      j(e, "svelte-1rv2o5c", '.wrapper.svelte-1rv2o5c.svelte-1rv2o5c{border:var(--theme-border) 3px solid;border-radius:0.5rem;background-color:var(--theme-bg-sub);box-sizing:border-box;width:100%;max-width:600px;padding:0.5rem;margin:0.5rem;display:-ms-grid;display:grid;align-items:center;justify-items:center;overflow-x:scroll;position:relative}.wrapper.svelte-1rv2o5c.svelte-1rv2o5c::-webkit-scrollbar{display:none}.shine.svelte-1rv2o5c{display:block;position:absolute;content:"";top:0;left:0;bottom:0;z-index:0;opacity:.75;width:300%;height:100%;background:linear-gradient(120deg,rgba(255,255,255,0) 16%,#ffffff30 19%,rgba(255,255,255,0) 28%,rgba(255,255,255,0) 30%,#ffffff40 35%,rgba(255,255,255,0) 42%,rgba(255,255,255,0) 50%,#ffffff15 60%,rgba(255,255,255,0) 75%);animation:anim_posession_surface 4s linear infinite;pointer-events:none}@keyframes anim_posession_surface{0%{transform:translateX(33%)}30%{transform:translateX(-100%)}100%{transform:translateX(-100%)}}.stats-name.svelte-1rv2o5c.svelte-1rv2o5c{grid-column:1;width:auto;white-space:nowrap}.stats-rating.svelte-1rv2o5c.svelte-1rv2o5c{grid-column:2;display:flex;-ms-flex-direction:column;flex-direction:column}.stats-rating.svelte-1rv2o5c h2.svelte-1rv2o5c{margin:auto}.stats-rating.svelte-1rv2o5c span.svelte-1rv2o5c{color:var(--theme-text-dim)}.stats-honor.svelte-1rv2o5c.svelte-1rv2o5c{grid-area:2/1/3/3;color:var(--theme-honor-normal);font-weight:bold;background:var(--theme-bg-main);border-radius:3px;padding:5px 2rem;margin:0 20px;width:-webkit-fill-available;text-align:center}.stats-honor[data-honor=normal].svelte-1rv2o5c.svelte-1rv2o5c{color:var(--theme-honor-normal)}.stats-honor[data-honor=bronze].svelte-1rv2o5c.svelte-1rv2o5c{color:var(--theme-honor-bronze)}.stats-honor[data-honor=silver].svelte-1rv2o5c.svelte-1rv2o5c{color:var(--theme-honor-silver)}.stats-honor[data-honor=gold].svelte-1rv2o5c.svelte-1rv2o5c{color:var(--theme-honor-gold)}.stats-honor[data-honor=platina].svelte-1rv2o5c.svelte-1rv2o5c{color:var(--theme-honor-platina)}.stats-honor[data-honor=rainbow].svelte-1rv2o5c.svelte-1rv2o5c{color:var(--theme-honor-rainbow)}.stats-honor[data-honor=version1].svelte-1rv2o5c.svelte-1rv2o5c{color:var(--theme-honor-version1)}.stats-honor[data-honor=version2].svelte-1rv2o5c.svelte-1rv2o5c{color:var(--theme-honor-version2)}.stats-honor[data-honor=version3].svelte-1rv2o5c.svelte-1rv2o5c{color:var(--theme-honor-version3)}.stats-honor[data-honor=kop].svelte-1rv2o5c.svelte-1rv2o5c{color:var(--theme-honor-kop)}.stats-items.svelte-1rv2o5c.svelte-1rv2o5c{width:-moz-fit-content;width:fit-content;display:-ms-grid;display:grid;grid-template-areas:"... ...";grid-area:1/3/3/4;gap:5px;padding:5px}@media only screen and (max-width:544px){.stats-name.svelte-1rv2o5c.svelte-1rv2o5c{margin:auto}.stats-rating.svelte-1rv2o5c.svelte-1rv2o5c{grid-column:1}.stats-items.svelte-1rv2o5c.svelte-1rv2o5c{grid-area:1/2/3/3;max-width:-moz-fit-content;max-width:fit-content}.stats-honor.svelte-1rv2o5c.svelte-1rv2o5c{grid-area:3/1/4/3}}')
     }
 
     function Ar(e) {
@@ -3135,14 +3135,17 @@
       }
 
       function P(e, t) {
-        return "best" === e[5] ? 0 : "recent" === e[5] || "history" === e[5] ? 1 : -1
+        return "all" === e[5] ? 0 : "curr" === e[5] || "best" === e[5] || "history" === e[5] ? 1 : -1
       }
       return ~($ = P(e)) && (x = L[$] = U[$](e)), {
         c() {
-          t = H("div"),this.t = t, n = H("h2"), r = A(S), o = D(), s = H("div"), a = H("h2"), i = A(T), l = D(), c = H("span"), d = A("MAX "), u = A(C), f = D(), p = H("div"), h = H("span"), g = A(N), v = D(), b = H("div"), $e(y.$$.fragment), w = D(), x && x.c(), O(n, "class", "stats-name svelte-1rv2o5c"), O(a, "class", "svelte-1rv2o5c"), O(c, "class", "svelte-1rv2o5c"), O(s, "class", "stats-rating svelte-1rv2o5c"), O(p, "class", "stats-honor svelte-1rv2o5c"), O(p, "data-honor", m = e[3].honor.color), B(p, "marquee", !0), O(b, "class", "stats-items svelte-1rv2o5c"), O(t, "class", "wrapper svelte-1rv2o5c"), O(t, "style", `background: ${getBackgroundColor(e[3].ratingPn)}`)
+          t = H("div"),this.t = t, n = H("h2"), r = A(S), o = D(), s = H("div"), a = H("h2"), i = A(T), l = D(), c = H("span"), d = A("OP "), u = A(C), f = D(), p = H("div"), h = H("span"), g = A(N), v = D(), b = H("div"), $e(y.$$.fragment), w = D(), x && x.c(), O(n, "class", "stats-name svelte-1rv2o5c"), O(a, "class", "svelte-1rv2o5c"), O(c, "class", "svelte-1rv2o5c"), O(s, "class", "stats-rating svelte-1rv2o5c"), O(p, "class", "stats-honor svelte-1rv2o5c"), O(p, "data-honor", m = e[3].honor.color), B(p, "marquee", !0), O(b, "class", "stats-items svelte-1rv2o5c"), O(t, "class", "wrapper svelte-1rv2o5c"), O(t, "style", `background: ${getBackgroundColor(e[3].ratingPn)}`)
           const bgColor = getBackgroundColor(e[3].ratingPn);
           if (bgColor) {
-              O(t, "style", `background: ${bgColor}`);
+            O(t, "style", `background: ${bgColor}`);
+            const shine = H("div");
+            O(shine, "class", "shine svelte-1rv2o5c");
+            k(t, shine);
           }
           O(t, "class", "wrapper svelte-1rv2o5c");
         },
@@ -3150,7 +3153,7 @@
           M(e, t, m), k(t, n), k(n, r), k(t, o), k(t, s), k(s, a), k(a, i), k(s, l), k(s, c), k(c, d), k(c, u), k(t, f), k(t, p), k(p, h), k(h, g), k(t, v), k(t, b), xe(y, b, null), k(b, w), ~$ && L[$].m(b, null), j = !0
         },
         p(e, [t]) {
-          (!j || 8 & t) && S !== (S = e[3].name + "") && I(r, S), (!j || 8 & t) && T !== (T = e[3].rating + "") && I(i, T), (!j || 8 & t) && C !== (C = e[3].ratingMax + "") && I(u, C), (!j || 8 & t) && N !== (N = e[3].honor.text + "") && I(g, N), (!j || 8 & t && m !== (m = e[3].honor.color)) && O(p, "data-honor", m);
+          (!j || 8 & t) && S !== (S = e[3].name + "") && I(r, S), (!j || 8 & t) && T !== (T = e[3].rating + "") && I(i, T), (!j || 8 & t) && C !== (C = e[3].overPower + "") && I(u, C), (!j || 8 & t) && N !== (N = e[3].honor.text + "") && I(g, N), (!j || 8 & t && m !== (m = e[3].honor.color)) && O(p, "data-honor", m);
           const n = {};
           16 & t && (n.title = e[4]("player.generic.generatedAt")), y.$set(n);
           let o = $;
@@ -3158,10 +3161,19 @@
             L[o] = null
           })), he()), ~$ ? (x = L[$], x ? x.p(e, t) : (x = L[$] = U[$](e), x.c()), ge(x, 1), x.m(b, null)) : x = null);
           const bgColor = getBackgroundColor(e[3].ratingPn);
+          const bgColor2 = this.t.querySelector('.shine');
           if (bgColor) {
               O(this.t, "style", `background: ${bgColor}`);
+              if (!bgColor2) {
+                  const shine = H("div");
+                  O(shine, "class", "shine svelte-1rv2o5c");
+                  k(this.t, shine);
+              }
           } else {
-              this.t.removeAttribute("style"); 
+              this.t.removeAttribute("style");
+              if (bgColor2) {
+                  E(bgColor2); 
+              }
           }
         },
         i(e) {
