@@ -3148,6 +3148,20 @@
                 return null;
         }
       }
+      function getBackgroundShine(ratingPn) {
+        switch (ratingPn) {
+            case "silver":
+                return "linear-gradient(130deg, rgba(255,255,255,0) 16%, #ade4ff25 19%, rgba(255,255,255,0) 28%, rgba(255,255,255,0) 30%, #ade4ff30 35%, rgba(255,255,255,0) 42%, rgba(255,255,255,0) 50%, #ade4ff20 60%, rgba(255,255,255,0) 75%)";
+            case "gold":
+                return "linear-gradient(130deg, rgba(255,255,255,0) 16%, #f7ef8a25 19%, rgba(255,255,255,0) 28%, rgba(255,255,255,0) 30%, #f7ef8a30 35%, rgba(255,255,255,0) 42%, rgba(255,255,255,0) 50%, #f7ef8a20 60%, rgba(255,255,255,0) 75%)";
+            case "platina":
+                return "linear-gradient(130deg, rgba(255,255,255,0) 16%, #ffe6bf25 19%, rgba(255,255,255,0) 28%, rgba(255,255,255,0) 30%, #ffe6bf30 35%, rgba(255,255,255,0) 42%, rgba(255,255,255,0) 50%, #ffe6bf20 60%, rgba(255,255,255,0) 75%)";
+            case "rainbow":
+                return "linear-gradient(130deg, rgba(255,255,255,0) 16%, #fbf1f825 19%, rgba(255,255,255,0) 28%, rgba(255,255,255,0) 30%, #d0b7eb30 35%, rgba(255,255,255,0) 42%, rgba(255,255,255,0) 50%, #d5fdd120 60%, rgba(255,255,255,0) 75%)";
+            default:
+              return null;
+        }
+      }
 
       function P(e, t) {
         return "all" === e[5] ? 0 : "curr" === e[5] || "best" === e[5] || "history" === e[5] ? 1 : -1
@@ -3156,11 +3170,15 @@
         c() {
           t = H("div"),this.t = t, n = H("h2"), r = A(S), o = D(), s = H("div"), a = H("h2"), i = A(T), l = D(), c = H("span"), d = A("OP "), u = A(C), f = D(), p = H("div"), h = H("span"), g = A(N), v = D(), b = H("div"), $e(y.$$.fragment), w = D(), x && x.c(), O(n, "class", "stats-name svelte-1rv2o5c"), O(a, "class", "svelte-1rv2o5c"), O(c, "class", "svelte-1rv2o5c"), O(s, "class", "stats-rating svelte-1rv2o5c"), O(p, "class", "stats-honor svelte-1rv2o5c"), O(p, "data-honor", m = e[3].honor.color), B(p, "marquee", !0), O(b, "class", "stats-items svelte-1rv2o5c"), O(t, "class", "wrapper svelte-1rv2o5c"), O(t, "style", `background: ${getBackgroundColor(e[3].ratingPn)}`)
           const bgColor = getBackgroundColor(e[3].ratingPn);
+          const bgShine = getBackgroundShine(e[3].ratingPn);
           if (bgColor) {
-            O(t, "style", `background: ${bgColor}`);
-            const shine = H("div");
-            O(shine, "class", "shine svelte-1rv2o5c");
-            k(t, shine);
+              O(t, "style", `background: ${bgColor}`);
+              const shine = H("div");
+              O(shine, "class", "shine svelte-1rv2o5c");
+              if (bgShine) {
+                  O(shine, "style", `background: ${bgShine}`);
+              }
+              k(t, shine);
           }
           O(t, "class", "wrapper svelte-1rv2o5c");
         },
@@ -3176,18 +3194,26 @@
             L[o] = null
           })), he()), ~$ ? (x = L[$], x ? x.p(e, t) : (x = L[$] = U[$](e), x.c()), ge(x, 1), x.m(b, null)) : x = null);
           const bgColor = getBackgroundColor(e[3].ratingPn);
+          const bgShine = getBackgroundShine(e[3].ratingPn);
           const bgColor2 = this.t.querySelector('.shine');
           if (bgColor) {
               O(this.t, "style", `background: ${bgColor}`);
               if (!bgColor2) {
                   const shine = H("div");
                   O(shine, "class", "shine svelte-1rv2o5c");
+                  if (bgShine) {
+                      O(shine, "style", `background: ${bgShine}`);
+                  }
                   k(this.t, shine);
+              } else {
+                  if (bgShine) {
+                      O(bgColor2, "style", `background: ${bgShine}`);
+                  }
               }
           } else {
               this.t.removeAttribute("style");
               if (bgColor2) {
-                  E(bgColor2); 
+                  E(bgColor2);
               }
           }
         },
