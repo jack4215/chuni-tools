@@ -15,7 +15,7 @@
                 containerHTML: `
                     <p>Theatore Creatore [ULT] can only display the score on Personal Record Viewer, the OP may have discrepancies.</p>
                     <hr width="96%">
-                    <p><a href="https://chuni.tsaibee.org" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools @TSAIBEE</a></p>
+                    <p><a href="https://chuni.tsaibee.org" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools</a></p>
                     <p style="font-size:15px;">By using this service, you agree to its <a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">Privacy Policy</a>.</p>
                 `
             },
@@ -25,7 +25,7 @@
                 containerHTML: `
                     <p>Theatore Creatore [ULT] 僅能於個人查分器顯示分數，OP 可能產生誤差</p>
                     <hr width="96%">
-                    <p><a href="https://chuni.tsaibee.org" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools @TSAIBEE</a></p>
+                    <p><a href="https://chuni.tsaibee.org" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools</a></p>
                     <p style="font-size:15px;">使用即同意本服務之<a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">隱私權政策</a></p>
                 `
             }
