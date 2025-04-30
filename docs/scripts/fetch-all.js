@@ -157,7 +157,7 @@
                                         [o.basic]: "basic"
                                     };   
                                     const difficultyScore = sumScores(records);
-                                    const totalHighScore = await fetchTotalHighScore(difficultyNames[e]);
+                                  /*  const totalHighScore = await fetchTotalHighScore(difficultyNames[e]);
                                     if (e === o.ultima) {
                                         records.push({
                                             title: "Theatore Creatore",
@@ -167,7 +167,7 @@
                                             clear2: "",
                                             idx: "2712"
                                         });
-                                    }
+                                    }*/
                                     // Add hidden song end
                                     return records;
                                 }(t.data.difficulty);
