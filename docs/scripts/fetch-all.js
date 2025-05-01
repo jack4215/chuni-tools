@@ -162,9 +162,9 @@
                     };
                     types.forEach(createRow);
                     title.addEventListener("click", () => {
-                        const isHidden = grid.style.display === "none";
-                        grid.style.display = isHidden ? "grid" : "none";
-                        title.innerText = `Select \"Theatore Creatore\" Status ${isHidden ? "▲" : "▼"}`;
+                        grid.classList.toggle("open");
+                        const isOpen = grid.classList.contains("open");
+                        title.innerText = `Select \"Theatore Creatore\" Status ${isOpen ? "▲" : "▼"}`;
                     });
                     const style = document.createElement("style");
                     style.textContent = `
