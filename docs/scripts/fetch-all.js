@@ -113,7 +113,7 @@
                     container.className = "clear-select-container";
                     const title = document.createElement("p");
                     title.id = "clear-toggle-title";
-                    title.innerText = "Select Theatore Creatore Status ▼";
+                    title.innerText = "Select \"Theatore Creatore\" Status ▼";
                     title.style.cursor = "pointer";
                     container.appendChild(title);
                     const grid = document.createElement("div");
@@ -165,7 +165,7 @@
                     title.addEventListener("click", () => {
                         const isHidden = grid.style.display === "none";
                         grid.style.display = isHidden ? "grid" : "none";
-                        title.innerText = `Select Theatore Creatore Status ${isHidden ? "▲" : "▼"}`;
+                        title.innerText = `Select \"Theatore Creatore\" Status ${isHidden ? "▲" : "▼"}`;
                     });
                     const style = document.createElement("style");
                     style.textContent = `
@@ -182,7 +182,7 @@
                             margin: 5px 0 10px 0;
                             color: #ededed;
                             text-align: center;
-                            font-size: 18px;
+                            font-size: 17px;
                             user-select: none;
                         }
                         .clear-grid {
@@ -309,7 +309,7 @@
                                 const totalHighScoreDiv = doc.querySelector(".mb_5.text_b");
                                 return totalHighScoreDiv ? totalHighScoreDiv.innerText.replace(/,/g, "").trim() : "Error";
                             }         
-                            // Calculate total score end
+                            // Calculate total score end     
                         case "playHistory":
                             s = async function() {
                                 const e = await i("/mobile/record/playlog");
