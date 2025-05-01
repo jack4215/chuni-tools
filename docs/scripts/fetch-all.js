@@ -231,7 +231,7 @@
                     `;
                     document.head.appendChild(style);
                     document.querySelector(".chuni-tool-btn")?.insertAdjacentElement("afterend", container);
-                }                
+                }
             }(),
             window.addEventListener("message", (function(e) {
                 switch (e.data.action) {
