@@ -58,7 +58,7 @@
                     padding: 8px;
                     background-color:rgb(34, 51, 68);
                     margin: 10px auto;
-                    width: 420px;
+                    width: 440px;
                     font-family: Arial, sans-serif;
                     border-radius: 4px;
                     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
