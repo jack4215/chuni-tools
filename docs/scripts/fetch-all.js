@@ -117,9 +117,8 @@
                     title.style.cursor = "pointer";
                     container.appendChild(title);
                     const grid = document.createElement("div");
-                    grid.className = "clear-grid";
-                    grid.style.display = "none";
-                    container.appendChild(grid);
+                    grid.classList.add("clear-grid");
+                    container.appendChild(grid); 
                 
                     const labelRow = document.createElement("div");
                     labelRow.className = "clear-row";
@@ -186,10 +185,18 @@
                             user-select: none;
                         }
                         .clear-grid {
+                            max-height: 0;
+                            overflow: hidden;
+                            transition: max-height 0.05s ease-out, padding 0.05s ease-out;
                             display: flex;
                             flex-direction: column;
                             gap: 6px;
                             margin-top: 8px;
+                            padding: 0;
+                        }
+                        .clear-grid.open {
+                            max-height: 300px;
+                            padding: 6px 0;
                         }
                         .clear-row {
                             display: flex;
