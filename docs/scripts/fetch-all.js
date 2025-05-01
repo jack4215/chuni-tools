@@ -117,9 +117,8 @@
                     title.style.cursor = "pointer";
                     container.appendChild(title);
                     const grid = document.createElement("div");
-                    grid.className = "clear-grid";
-                    grid.style.display = "none";
-                    container.appendChild(grid);
+                    grid.classList.add("clear-grid");
+                    container.appendChild(grid); 
                 
                     const labelRow = document.createElement("div");
                     labelRow.className = "clear-row";
@@ -163,9 +162,9 @@
                     };
                     types.forEach(createRow);
                     title.addEventListener("click", () => {
-                        const isHidden = grid.style.display === "none";
-                        grid.style.display = isHidden ? "grid" : "none";
-                        title.innerText = `Select \"Theatore Creatore\" Status ${isHidden ? "▲" : "▼"}`;
+                        grid.classList.toggle("open");
+                        const isOpen = grid.classList.contains("open");
+                        title.innerText = `Select \"Theatore Creatore\" Status ${isOpen ? "▲" : "▼"}`;
                     });
                     const style = document.createElement("style");
                     style.textContent = `
@@ -186,10 +185,18 @@
                             user-select: none;
                         }
                         .clear-grid {
+                            max-height: 0;
+                            overflow: hidden;
+                            transition: max-height 0.05s ease-out, padding 0.05s ease-out;
                             display: flex;
                             flex-direction: column;
                             gap: 6px;
                             margin-top: 8px;
+                            padding: 0;
+                        }
+                        .clear-grid.open {
+                            max-height: 300px;
+                            padding: 6px 0;
                         }
                         .clear-row {
                             display: flex;
@@ -224,7 +231,7 @@
                     `;
                     document.head.appendChild(style);
                     document.querySelector(".chuni-tool-btn")?.insertAdjacentElement("afterend", container);
-                }                
+                }
             }(),
             window.addEventListener("message", (function(e) {
                 switch (e.data.action) {
@@ -288,7 +295,7 @@
                                             title: "Theatore Creatore",
                                             score: totalHighScore - difficultyScore === 0 ? -1 : totalHighScore - difficultyScore, 
                                             difficulty: e,
-                                            clear: "",
+                                            clear: clearStatus[e] || "",
                                             clear2: "",
                                             idx: "2712"
                                         });
