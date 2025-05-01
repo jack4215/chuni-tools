@@ -98,9 +98,133 @@
                 e.target = "recordViewer",
                 l.getElementsByTagName("head")[0].appendChild(r),
                 r.addEventListener("load", ( () => {
-                    l.querySelector(".clearfix")?.insertAdjacentElement("afterend", e)
+                    l.querySelector(".clearfix")?.insertAdjacentElement("afterend", e);
+                    insertClearButtons();
                 }
                 ))
+                function insertClearButtons() {
+                    const difficulties = ["ULT"];
+                    const types = ["FC", "AJ"];
+                    const stateKey = "clearStatus_250417";
+                    const defaultState = { BAS: "", ADV: "", EXP: "", MAS: "", ULT: "" };
+                    const state = JSON.parse(localStorage.getItem(stateKey) || JSON.stringify(defaultState));
+                    const colorMap = { BAS: "#8ae29a", ADV: "#ea8a55", EXP: "#ed5a77", MAS: "#dd8aee", ULT: "#78deff" };
+                    const container = document.createElement("div");
+                    container.className = "clear-select-container";
+                    const title = document.createElement("p");
+                    title.id = "clear-toggle-title";
+                    title.innerText = "Select Theatore Creatore Status ▼";
+                    title.style.cursor = "pointer";
+                    container.appendChild(title);
+                    const grid = document.createElement("div");
+                    grid.className = "clear-grid";
+                    grid.style.display = "none";
+                    container.appendChild(grid);
+                
+                    const labelRow = document.createElement("div");
+                    labelRow.className = "clear-row";
+                    difficulties.forEach(diff => {
+                        const label = document.createElement("div");
+                        label.className = "diff-label";
+                        label.innerText = diff;
+                        label.style.color = colorMap[diff];
+                        labelRow.appendChild(label);
+                    });
+                    grid.appendChild(labelRow);
+
+                    const createRow = (type) => {
+                        const row = document.createElement("div");
+                        row.className = "clear-row";
+                
+                        difficulties.forEach(diff => {
+                            const btn = document.createElement("button");
+                            btn.className = "sort-btn";
+                            btn.innerText = type;
+                            btn.dataset.difficulty = diff;
+                            btn.dataset.type = type;
+                            if (state[diff] === type) {
+                                btn.classList.add("selected", type.toLowerCase());
+                            }
+                            btn.addEventListener("click", () => {
+                                const allBtns = grid.querySelectorAll(`button[data-difficulty="${diff}"]`);
+                                if (state[diff] === type) {
+                                    state[diff] = "";
+                                    btn.classList.remove("selected", type.toLowerCase());
+                                } else {
+                                    state[diff] = type;
+                                    allBtns.forEach(b => b.classList.remove("selected", "fc", "aj"));
+                                    btn.classList.add("selected", type.toLowerCase());
+                                }
+                                localStorage.setItem(stateKey, JSON.stringify(state));
+                            });
+                            row.appendChild(btn);
+                        });
+                        grid.appendChild(row);
+                    };
+                    types.forEach(createRow);
+                    title.addEventListener("click", () => {
+                        const isHidden = grid.style.display === "none";
+                        grid.style.display = isHidden ? "grid" : "none";
+                        title.innerText = `Select Theatore Creatore Status ${isHidden ? "▲" : "▼"}`;
+                    });
+                    const style = document.createElement("style");
+                    style.textContent = `
+                        .clear-select-container {
+                            padding: 8px;
+                            background-color: rgb(34, 51, 68);
+                            margin: 10px auto;
+                            width: 440px;
+                            font-family: Arial, sans-serif;
+                            border-radius: 6px;
+                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+                        }
+                        #clear-toggle-title {
+                            margin: 5px 0 10px 0;
+                            color: #ededed;
+                            text-align: center;
+                            font-size: 17px;
+                            user-select: none;
+                        }
+                        .clear-grid {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 6px;
+                            margin-top: 8px;
+                        }
+                        .clear-row {
+                            display: flex;
+                            justify-content: center;
+                            gap: 6px;
+                        }
+                        .diff-label {
+                            font-weight: bold;
+                            font-size: 15px;
+                            padding: 5px 0;
+                            width: 20%;
+                        }
+                        .sort-btn {
+                            padding: 10px;
+                            border: none;
+                            border-radius: 7px;
+                            background-color: #ccc;
+                            cursor: pointer;
+                            font-weight: bold;
+                            font-size: 16px;
+                            transition: background-color 0.2s, color 0.2s;
+                            width: 20%;
+                        }
+                        .sort-btn.selected.fc {
+                            background-color: #a3ccf5;
+                            color: #000;
+                        }
+                        .sort-btn.selected.aj {
+                            background-color: #ffd744;
+                            color: #000;
+                        }
+                    `;
+                    document.head.appendChild(style);
+                    document.querySelector(".chuni-tool-btn")?.insertAdjacentElement("afterend", container);
+                }                
             }(),
             window.addEventListener("message", (function(e) {
                 switch (e.data.action) {
@@ -158,6 +282,7 @@
                                     const difficultyScore = sumScores(records);
                                     // Add hidden song
                                     const totalHighScore = await fetchTotalHighScore(difficultyNames[e]);
+                                    const clearStatus = JSON.parse(localStorage.getItem("clearStatus_250417") || "{}");
                                     if (e === o.ultima) {
                                         records.push({
                                             title: "Theatore Creatore",
@@ -184,7 +309,7 @@
                                 const totalHighScoreDiv = doc.querySelector(".mb_5.text_b");
                                 return totalHighScoreDiv ? totalHighScoreDiv.innerText.replace(/,/g, "").trim() : "Error";
                             }         
-                            // Calculate total score end         
+                            // Calculate total score end
                         case "playHistory":
                             s = async function() {
                                 const e = await i("/mobile/record/playlog");
