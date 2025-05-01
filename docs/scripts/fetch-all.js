@@ -182,7 +182,7 @@
                             margin: 5px 0 10px 0;
                             color: #ededed;
                             text-align: center;
-                            font-size: 17px;
+                            font-size: 18px;
                             user-select: none;
                         }
                         .clear-grid {
