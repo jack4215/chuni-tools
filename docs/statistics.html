@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CHUNITHM Tools @TSAIBEE｜Statistics</title>
+  <style>
+    :root {
+      --bg-color: #151f28;
+      --text-color: #cecece;
+      --table-bg-color: #1e2a36;
+      --table-text-color: #cecece;
+      --table-border-color: #444;
+      --table-header-bg: #2c3a4b;
+      --theme-bg-sub: #334;
+      --theme-label: #fff;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      font-size: 12px;
+    }
+
+    .content {
+      padding: 2em;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      font-size: 14px;
+      width: 100%;
+      min-width: 600px;
+      background-color: var(--table-bg-color);
+      color: var(--table-text-color);
+    }
+
+    th, td {
+      border: 1px solid var(--table-border-color);
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: var(--table-header-bg);
+    }
+
+    #loading {
+      text-align: center;
+      margin-top: 10rem;
+      color: var(--text-color);
+      font-size: 15px;
+    }
+
+    #last-updated {
+      font-size: 12px;
+      color: #f08d79;
+      text-align: left !important; 
+      margin-bottom: 0.5em;
+      font-weight: bold;
+    }
+
+    .spinner {
+      margin: 1.5rem auto;
+      border: 0.5rem solid var(--theme-bg-sub);
+      border-top-color: var(--theme-label);
+      border-radius: 50%;
+      width: 4rem;
+      height: 4rem;
+      animation: spin 1s cubic-bezier(0.5, 0.2, 0.5, 0.8) infinite;
+    }
+
+    @keyframes spin {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @media (max-width: 660px) {
+      table {
+        min-width: unset;
+        font-size: 14px;
+      }
+
+      .content {
+        padding: 1em;
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h2>CHUNITHM Tools @TSAIBEE｜Statistics</h2>
+    <div id="loading">
+      <div class="spinner"></div>
+      Now Loading...
+    </div>
+    <div class="table-wrapper" style="display: none;">
+      <div id="last-updated" style="margin-bottom: 1em; display: none;"></div>
+      <table id="data-table">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+      <div id="footer" style="margin: 2em 0;">Developed and maintained by TSAIBEE</div>
+    </div>
+  </div>
+
+  <script>
+    const theme = localStorage.theme || 'dark';
+    const root = document.documentElement;
+
+    if (theme === 'black') {
+      root.style.setProperty('--bg-color', '#1a1a1a');
+      root.style.setProperty('--table-bg-color', '#202020');
+      root.style.setProperty('--table-text-color', '#cecece');
+      root.style.setProperty('--table-border-color', '#333');
+      root.style.setProperty('--table-header-bg', '#2a2a2a');
+    } else if (theme === 'purple') {
+      root.style.setProperty('--bg-color', '#161021');
+      root.style.setProperty('--table-bg-color', '#1d132c');
+      root.style.setProperty('--table-text-color', '#cecece');
+      root.style.setProperty('--table-border-color', '#3a2a4a');
+      root.style.setProperty('--table-header-bg', '#2b1a40');
+    } else {
+      root.style.setProperty('--bg-color', '#151f28');
+      root.style.setProperty('--table-bg-color', '#1e2a36');
+      root.style.setProperty('--table-text-color', '#cecece');
+      root.style.setProperty('--table-border-color', '#444');
+      root.style.setProperty('--table-header-bg', '#2c3a4b');
+    }
+
+    const url = 'https://chuni-api.tsaibee.org/stat';
+
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        const tableWrapper = document.querySelector('.table-wrapper');
+        const loading = document.getElementById('loading');
+        const lastUpdated = document.getElementById('last-updated');
+        const thead = document.querySelector('#data-table thead');
+        const tbody = document.querySelector('#data-table tbody');
+        thead.innerHTML = `
+          <tr>
+            <th>　</th>
+            <th>Rating</th>
+            <th>OP</th>
+            <th>P.C.</th>
+            <th>B30</th>
+            <th>C20</th>
+          </tr>
+        `;
+
+        data.slice(0, 19).forEach(row => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td>${row['PR'] || ''}</td>
+            <td>${row['Rating']}</td>
+            <td>${row['OP']}</td>
+            <td>${row['P.C.']}</td>
+            <td>${row['B30']}</td>
+            <td>${row['C20']}</td>
+          `;
+          tbody.appendChild(tr);
+        });
+
+        if (data.length >= 20) {
+          lastUpdated.textContent = 'Last updated : ' + data[20]['Rating'];
+          lastUpdated.style.display = 'block';
+        }
+
+        loading.style.display = 'none';
+        tableWrapper.style.display = 'block';
+      });
+  </script>
+</body>
+</html>
