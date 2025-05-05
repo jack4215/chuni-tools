@@ -48,7 +48,7 @@ async function main() {
     // https://note.affi-sapo-sv.com/js-sleep.php
     const sleep = waitTime => new Promise(resolve => setTimeout(resolve, waitTime));
 
-    const VERSION = "2.0.0";
+    const VERSION = "2.0.1a";
     const difficulties = ["Basic", "Advanced", "Expert", "Master", "Ultima"];
     const engMode = location.hostname === "chunithm-net-eng.com";
     let baseUrl = engMode ? "https://chunithm-net-eng.com/" : "https://new.chunithm-net.com/chuni-mobile/html/";
@@ -68,7 +68,7 @@ async function main() {
     }
 
     const homeDoc = await fetchPageDoc(homeUrl);
-    if (homeDoc.querySelector(".player_honor_text") === null) {
+    if (homeDoc.querySelector(".player_honor_block") === null) {
         alert("CHUNITHM-NETにログインし、Aimeカードを選択してから実行してください。 Please login to CHUNITHM-NET and select your Aime card.");
         return;
     }
@@ -99,16 +99,16 @@ async function main() {
     await sleep(1000);
 
     // Player Data
-    const honors = homeDoc.querySelectorAll(".player_honor_text");
-    const mainHonor = honors[0].textContent;
-    let subHonor1 = null;
-    let subHonor2 = null;
-    if (honors.length > 1) {
-        subHonor1 = honors[1].textContent;
-    }
-    if (honors.length > 2) {
-        subHonor2 = honors[2].textContent;
-    }
+    // const honors = homeDoc.querySelectorAll(".player_honor_text");
+    // const mainHonor = honors[0].textContent;
+    // let subHonor1 = null;
+    // let subHonor2 = null;
+    // if (honors.length > 1) {
+    //     subHonor1 = honors[1].textContent;
+    // }
+    // if (honors.length > 2) {
+    //     subHonor2 = honors[2].textContent;
+    // }
     const name = homeDoc.querySelector(".player_name_in").textContent;
     const ratingBlockImgs = homeDoc.querySelectorAll(".player_rating_num_block img");
     const ratingStr = [];
@@ -130,9 +130,13 @@ async function main() {
     const lastPlayed = homeDoc.querySelector(".player_lastplaydate_text").textContent; // format: yyyy/MM/DD hh:mm
 
     playerData.appVersion = VERSION;
-    playerData.honor = mainHonor;
-    playerData.subHonor1 = subHonor1;
-    playerData.subHonor2 = subHonor2;
+    // playerData.honor = mainHonor;
+    // playerData.subHonor1 = subHonor1;
+    // playerData.subHonor2 = subHonor2;
+    // 仮にすべて空文字で埋める
+    playerData.honor = "";
+    playerData.subHonor1 = "";
+    playerData.subHonor2 = "";
     playerData.name = name;
     playerData.rating = rating;
     playerData.level = playerLevel;
