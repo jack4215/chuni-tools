@@ -164,6 +164,10 @@
 
         data.slice(0, 19).forEach(row => {
           const tr = document.createElement('tr');
+          if (index === 0) {
+            tr.style.backgroundColor = getComputedStyle(document.documentElement)
+              .getPropertyValue('--table-header-bg');
+          }
           tr.innerHTML = `
             <td>${row['PR'] || ''}</td>
             <td>${row['Rating']}</td>
