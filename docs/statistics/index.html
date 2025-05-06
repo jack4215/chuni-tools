@@ -65,6 +65,12 @@
       font-size: 15px;
     }
 
+    #error {
+      font-size: 5em;
+      margin: 1.5rem auto;
+      border: 0.5rem solid var(--theme-bg-sub);
+    }
+
     #last-updated {
       font-size: 12px;
       color: #f08d79;
@@ -190,7 +196,7 @@
       })
       .catch(err => {
         const loading = document.getElementById('loading');
-        loading.innerHTML = `<div class="spinner"></div>Too Many Requests`;
+        loading.innerHTML = `<div class="error">！</div>Too Many Requests`;
       });
   </script>
 </body>
