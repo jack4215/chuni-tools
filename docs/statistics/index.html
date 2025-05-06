@@ -162,7 +162,7 @@
           </tr>
         `;
 
-        data.slice(0, 19).forEach(row => {
+        data.slice(0, 10).forEach(row => {
           const tr = document.createElement('tr');
           tr.innerHTML = `
             <th>${row['PR'] || ''}</th>
@@ -175,8 +175,8 @@
           tbody.appendChild(tr);
         });
 
-        if (data.length >= 20) {
-          lastUpdated.textContent = 'Last updated : ' + data[20]['Rating'] + '｜User : ' + data[20]['C20'] + ' (VRS)';
+        if (data.length >= 11) {
+          lastUpdated.textContent = 'Last updated : ' + data[11]['Rating'] + '｜User : ' + data[11]['C20'] + ' (VRS)';
           lastUpdated.style.display = 'block';
         }
 
