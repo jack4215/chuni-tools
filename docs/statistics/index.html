@@ -67,8 +67,7 @@
 
     #error {
       font-size: 5em;
-      margin: 1.5rem auto;
-      border: 0.5rem solid var(--theme-bg-sub);
+      margin-bottom: 0.5rem;
     }
 
     #last-updated {
@@ -196,7 +195,7 @@
       })
       .catch(err => {
         const loading = document.getElementById('loading');
-        loading.innerHTML = `<div class="error">！</div>Too Many Requests`;
+        loading.innerHTML = `<div id="error">！</div>Too Many Requests`;
       });
   </script>
 </body>
