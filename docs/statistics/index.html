@@ -144,7 +144,12 @@
     const url = 'https://chuni-api.tsaibee.org/stat';
 
     fetch(url)
-      .then(res => res.json())
+      .then(res => {
+        if (res.status === 429) {
+          throw new Error("Too Many Requests");
+        }
+        return res.json();
+      })
       .then(data => {
         const tableWrapper = document.querySelector('.table-wrapper');
         const loading = document.getElementById('loading');
@@ -182,6 +187,10 @@
 
         loading.style.display = 'none';
         tableWrapper.style.display = 'block';
+      })
+      .catch(err => {
+        const loading = document.getElementById('loading');
+        loading.innerHTML = `<div class="spinner"></div>Too Many Requests`;
       });
   </script>
 </body>
