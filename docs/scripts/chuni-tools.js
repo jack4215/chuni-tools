@@ -16,7 +16,7 @@
                     <p>Theatore Creatore [ULT] can only display the score on Personal Record Viewer, please add the FC / AJ status above.</p>
                     <hr width="96%">
                     <p><a href="https://chuni.tsaibee.org" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools</a></p>
-                    <p style="font-size:15px;">By using this service, you agree to its <a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">Privacy Policy</a>.</p>
+                    <p style="font-size:15px;"><a href="https://chuni.tsaibee.org/statistics" target="_blank">User stats</a>　｜　<a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">Privacy Policy</a>.</p>
                 `
             },
             [n.zh_TW]: {
@@ -26,7 +26,7 @@
                     <p>Theatore Creatore [ULT] 僅能於個人查分器顯示分數，FC / AJ 狀態請於上方自行添加</p>
                     <hr width="96%">
                     <p><a href="https://chuni.tsaibee.org" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools</a></p>
-                    <p style="font-size:15px;">使用即同意本服務之<a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">隱私權政策</a></p>
+                    <p style="font-size:15px;"><a href="https://chuni.tsaibee.org/statistics" target="_blank">使用者統計</a>　｜　<a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">隱私權政策</a></p>
                 `
             }
         }[function() {
