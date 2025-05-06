@@ -162,7 +162,7 @@
           </tr>
         `;
 
-        data.slice(0, 19).forEach(row => {
+        data.slice(0, 19).forEach((row, index) => {
           const tr = document.createElement('tr');
           if (index === 0) {
             tr.style.backgroundColor = getComputedStyle(document.documentElement)
