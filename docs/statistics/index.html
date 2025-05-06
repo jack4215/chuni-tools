@@ -162,14 +162,10 @@
           </tr>
         `;
 
-        data.slice(0, 19).forEach((row, index) => {
+        data.slice(0, 19).forEach(row => {
           const tr = document.createElement('tr');
-          if (index === 0) {
-            tr.style.backgroundColor = getComputedStyle(document.documentElement)
-              .getPropertyValue('--table-header-bg');
-          }
           tr.innerHTML = `
-            <td>${row['PR'] || ''}</td>
+            <th>${row['PR'] || ''}</th>
             <td>${row['Rating']}</td>
             <td>${row['OP']}</td>
             <td>${row['P.C.']}</td>
