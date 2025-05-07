@@ -21,7 +21,6 @@
       --theme-bg-sub: #334;
       --theme-label: #fff;
     }
-
     body {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       background-color: var(--bg-color);
@@ -30,17 +29,14 @@
       padding: 0;
       font-size: 12px;
     }
-
     .content {
       padding: 2em;
       max-width: 600px;
       margin: auto;
     }
-
     .table-wrapper {
       overflow-x: auto;
     }
-
     table {
       border-collapse: collapse;
       font-size: 14px;
@@ -49,29 +45,24 @@
       background-color: var(--table-bg-color);
       color: var(--table-text-color);
     }
-
     th, td {
       border: 1px solid var(--table-border-color);
       padding: 8px;
       text-align: center;
     }
-
     th {
       background-color: var(--table-header-bg);
     }
-
     #loading {
       text-align: center;
       margin-top: 10rem;
       color: var(--text-color);
       font-size: 15px;
     }
-
     #error {
       font-size: 5em;
       margin-bottom: 0.5rem;
     }
-
     #last-updated {
       font-size: 12px;
       color: #f08d79;
@@ -79,7 +70,6 @@
       margin-bottom: 0.5em;
       font-weight: bold;
     }
-
     .spinner {
       margin: 1.5rem auto;
       border: 0.5rem solid var(--theme-bg-sub);
@@ -89,7 +79,13 @@
       height: 4rem;
       animation: spin 1s cubic-bezier(0.5, 0.2, 0.5, 0.8) infinite;
     }
-
+    #captcha-box #branding {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      height: 0 !important;
+      overflow: hidden;
+    }
     @keyframes spin {
       0%   { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
@@ -99,7 +95,6 @@
         min-width: unset;
         font-size: 14px;
       }
-
       .content {
         padding: 1em;
         font-size: 12px;
