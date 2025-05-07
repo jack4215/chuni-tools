@@ -1,0 +1,32 @@
+name: Scheduled Deploy to GitHub Pages
+
+on:
+  schedule:
+    - cron: '20 20 * * *'  
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout schedule branch
+        uses: actions/checkout@v3
+        with:
+          ref: schedule
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Pull latest from main
+        run: git fetch origin main
+
+      - name: Switch to main branch
+        run: git checkout main
+
+      - name: Merge from schedule branch
+        run: |
+          git merge origin/schedule -m "Scheduled update from schedule branch"
+          git push origin main
