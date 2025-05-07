@@ -176,44 +176,46 @@
       return res.json();
     })
     .then(data => {
-      const tableWrapper = document.querySelector('.table-wrapper');
-      const loading = document.getElementById('loading');
-      const lastUpdated = document.getElementById('last-updated');
-      const thead = document.querySelector('#data-table thead');
-      const tbody = document.querySelector('#data-table tbody');
+    const tableWrapper = document.querySelector('.table-wrapper');
+    const loading = document.getElementById('loading');
+    const lastUpdated = document.getElementById('last-updated');
+    const thead = document.querySelector('#data-table thead');
+    const tbody = document.querySelector('#data-table tbody');
+    thead.innerHTML = '';
+    tbody.innerHTML = '';
 
-      thead.innerHTML = `
-        <tr>
-          <th>　</th>
-          <th>Rating</th>
-          <th>OP</th>
-          <th>P.C.</th>
-          <th>B30</th>
-          <th>C20</th>
-        </tr>
+    thead.innerHTML = `
+      <tr>
+        <th>　</th>
+        <th>Rating</th>
+        <th>OP</th>
+        <th>P.C.</th>
+        <th>B30</th>
+        <th>C20</th>
+      </tr>
+    `;
+
+    data.slice(1, 11).forEach(row => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <th>${row['PR'] || ''}</th>
+        <td>${row['Rating']}</td>
+        <td>${row['OP']}</td>
+        <td>${row['P.C.']}</td>
+        <td>${row['B30']}</td>
+        <td>${row['C20']}</td>
       `;
+      tbody.appendChild(tr);
+    });
 
-      data.slice(1, 11).forEach(row => {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-          <th>${row['PR'] || ''}</th>
-          <td>${row['Rating']}</td>
-          <td>${row['OP']}</td>
-          <td>${row['P.C.']}</td>
-          <td>${row['B30']}</td>
-          <td>${row['C20']}</td>
-        `;
-        tbody.appendChild(tr);
-      });
+    if (data.length >= 2) {
+      lastUpdated.textContent = 'Last updated : ' + data[0]['Rating'] + '｜User : ' + data[0]['C20'] + ' (VRS)';
+      lastUpdated.style.display = 'block';
+    }
 
-      if (data.length >= 2) {
-        lastUpdated.textContent = 'Last updated : ' + data[0]['Rating'] + '｜User : ' + data[0]['C20'] + ' (VRS)';
-        lastUpdated.style.display = 'block';
-      }
-
-      document.getElementById('loading').style.display = 'none';
-      tableWrapper.style.display = 'block';
-    })
+    document.getElementById('loading').style.display = 'none';
+    tableWrapper.style.display = 'block';
+  })
     .catch(err => {
       document.getElementById('loading').innerHTML = `<div id="error">！</div>Too many requests. Please try again later.`;
     });
