@@ -100,7 +100,7 @@
     <h2>CHUNITHM Tools｜Statistics</h2>   
     <div id="loading">
       <div class="spinner"></div>
-      Verifying captcha, please wait...
+      Verifying... Please wait.
     </div>
     <div class="table-wrapper" style="display: none;">
       <div id="last-updated" style="margin-bottom: 1em; display: none;"></div>
@@ -125,10 +125,7 @@
     const root = document.documentElement;
     function onCaptchaSuccess(token) {
       turnstileToken = token;
-      document.getElementById('loading').innerHTML = `
-        <div class="spinner"></div>
-        Now Loading...
-      `;
+      document.querySelector('#loading .loading-text').textContent = 'Now Loading...';
       loadData();
     }
     if (theme === 'black') {
