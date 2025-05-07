@@ -99,7 +99,7 @@
                 l.getElementsByTagName("head")[0].appendChild(r),
                 r.addEventListener("load", ( () => {
                     l.querySelector(".clearfix")?.insertAdjacentElement("afterend", e);
-                    insertClearButtons();
+                //    insertClearButtons();
                 }
                 ))
                 function insertClearButtons() {
@@ -279,7 +279,7 @@
                                             idx: t.querySelector('input[name="idx"]').value
                                         };
                                     })).filter((e => e.title && e.score && !e.title.includes("Floor Killer") && !e.title.includes("Dig Delight!")));
-                                    // Add hidden song
+                                   /* // Add hidden song
                                     const difficultyNames = {
                                         [o.ultima]: "ultima",
                                         [o.master]: "master",
@@ -300,7 +300,7 @@
                                             idx: "2712"
                                         });
                                     }
-                                    // Add hidden song end
+                                    // Add hidden song end */
                                     return records;
                                 }(t.data.difficulty);
                                 break;
