@@ -126,7 +126,6 @@
     function onCaptchaSuccess(token) {
       turnstileToken = token;
       document.querySelector('#loading .loading-text').textContent = 'Now Loading...';
-      document.getElementById('captcha-box').remove();
       loadData();
     }
     if (theme === 'black') {
