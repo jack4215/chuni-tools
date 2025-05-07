@@ -279,6 +279,7 @@
                                             idx: t.querySelector('input[name="idx"]').value
                                         };
                                     })).filter((e => e.title && e.score && !e.title.includes("Floor Killer") && !e.title.includes("Dig Delight!")));
+                                    // Add hidden song
                                     const difficultyNames = {
                                         [o.ultima]: "ultima",
                                         [o.master]: "master",
@@ -287,7 +288,6 @@
                                         [o.basic]: "basic"
                                     };   
                                     const difficultyScore = sumScores(records);
-                                    // Add hidden song
                                     const totalHighScore = await fetchTotalHighScore(difficultyNames[e]);
                                     const clearStatus = JSON.parse(localStorage.getItem("clearStatus_250417") || "{}");
                                     if (e === o.ultima) {
