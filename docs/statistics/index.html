@@ -9,6 +9,7 @@
   <meta name="author" content="Jack Lu">
   <link rel="shortcut icon" href="https://www.tsaibee.org/photo/webicon02.png">
   <link rel="apple-touch-icon" href="https://www.tsaibee.org/photo/webicon01.png">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <style>
     :root {
       --bg-color: #151f28;
@@ -109,6 +110,13 @@
 <body>
   <div class="content">
     <h2>CHUNITHM Tools｜Statistics</h2>
+    <div id="captcha-box" style="margin-bottom: 2em;">
+      <div class="cf-turnstile"
+           data-sitekey="0x4AAAAAABbHMsZPCZfXhgJB"
+           data-callback="onCaptchaSuccess"
+           data-theme="dark">
+      </div>
+    </div>    
     <div id="loading">
       <div class="spinner"></div>
       Now Loading...
@@ -124,9 +132,13 @@
   </div>
 
   <script>
+    let turnstileToken = '';
     const theme = localStorage.theme || 'dark';
     const root = document.documentElement;
-
+    function onCaptchaSuccess(token) {
+      turnstileToken = token;
+      loadData();
+    }
     if (theme === 'black') {
       root.style.setProperty('--bg-color', '#1a1a1a');
       root.style.setProperty('--table-bg-color', '#202020');
@@ -147,57 +159,65 @@
       root.style.setProperty('--table-header-bg', '#2c3a4b');
     }
 
+    function loadData() {
     const url = 'https://chuni-api.tsaibee.org/stat';
 
-    fetch(url)
-      .then(res => {
-        if (res.status === 429) {
-          throw new Error("Too Many Requests");
-        }
-        return res.json();
-      })
-      .then(data => {
-        const tableWrapper = document.querySelector('.table-wrapper');
-        const loading = document.getElementById('loading');
-        const lastUpdated = document.getElementById('last-updated');
-        const thead = document.querySelector('#data-table thead');
-        const tbody = document.querySelector('#data-table tbody');
-        thead.innerHTML = `
-          <tr>
-            <th>　</th>
-            <th>Rating</th>
-            <th>OP</th>
-            <th>P.C.</th>
-            <th>B30</th>
-            <th>C20</th>
-          </tr>
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ token: turnstileToken })
+    })
+    .then(res => {
+      if (!res.ok) {
+        throw new Error("API error");
+      }
+      return res.json();
+    })
+    .then(data => {
+      const tableWrapper = document.querySelector('.table-wrapper');
+      const loading = document.getElementById('loading');
+      const lastUpdated = document.getElementById('last-updated');
+      const thead = document.querySelector('#data-table thead');
+      const tbody = document.querySelector('#data-table tbody');
+
+      thead.innerHTML = `
+        <tr>
+          <th>　</th>
+          <th>Rating</th>
+          <th>OP</th>
+          <th>P.C.</th>
+          <th>B30</th>
+          <th>C20</th>
+        </tr>
+      `;
+
+      data.slice(1, 11).forEach(row => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <th>${row['PR'] || ''}</th>
+          <td>${row['Rating']}</td>
+          <td>${row['OP']}</td>
+          <td>${row['P.C.']}</td>
+          <td>${row['B30']}</td>
+          <td>${row['C20']}</td>
         `;
-
-        data.slice(1, 11).forEach(row => {
-          const tr = document.createElement('tr');
-          tr.innerHTML = `
-            <th>${row['PR'] || ''}</th>
-            <td>${row['Rating']}</td>
-            <td>${row['OP']}</td>
-            <td>${row['P.C.']}</td>
-            <td>${row['B30']}</td>
-            <td>${row['C20']}</td>
-          `;
-          tbody.appendChild(tr);
-        });
-
-        if (data.length >= 2) {
-          lastUpdated.textContent = 'Last updated : ' + data[0]['Rating'] + '｜User : ' + data[0]['C20'] + ' (VRS)';
-          lastUpdated.style.display = 'block';
-        }
-
-        loading.style.display = 'none';
-        tableWrapper.style.display = 'block';
-      })
-      .catch(err => {
-        const loading = document.getElementById('loading');
-        loading.innerHTML = `<div id="error">！</div>Too many requests. Please try again later.`;
+        tbody.appendChild(tr);
       });
+
+      if (data.length >= 2) {
+        lastUpdated.textContent = 'Last updated : ' + data[0]['Rating'] + '｜User : ' + data[0]['C20'] + ' (VRS)';
+        lastUpdated.style.display = 'block';
+      }
+
+      document.getElementById('loading').style.display = 'none';
+      tableWrapper.style.display = 'block';
+    })
+    .catch(err => {
+      document.getElementById('loading').innerHTML = `<div id="error">！</div>載入失敗，請稍後再試`;
+    });
+  }
   </script>
 </body>
 </html>
