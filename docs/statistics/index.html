@@ -125,7 +125,7 @@
     const root = document.documentElement;
     function onCaptchaSuccess(token) {
       turnstileToken = token;
-      document.querySelector('#loading .loading-text').textContent = 'Now Loading...';
+      document.getElementById('loading').textContent = 'Now Loading...';
       loadData();
     }
     if (theme === 'black') {
