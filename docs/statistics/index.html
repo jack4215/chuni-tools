@@ -109,14 +109,7 @@
 </head>
 <body>
   <div class="content">
-    <h2>CHUNITHM Tools｜Statistics</h2>
-    <div id="captcha-box" style="margin-bottom: 2em;">
-      <div class="cf-turnstile"
-           data-sitekey="0x4AAAAAABbHMsZPCZfXhgJB"
-           data-callback="onCaptchaSuccess"
-           data-theme="dark">
-      </div>
-    </div>    
+    <h2>CHUNITHM Tools｜Statistics</h2>   
     <div id="loading">
       <div class="spinner"></div>
       Now Loading...
@@ -129,6 +122,13 @@
       </table>
       <div id="footer" style="margin: 2em 0;">Developed and maintained by TSAIBEE</div>
     </div>
+    <div id="captcha-box" style="margin-bottom: 2em;">
+      <div class="cf-turnstile"
+           data-sitekey="0x4AAAAAABbHMsZPCZfXhgJB"
+           data-callback="onCaptchaSuccess"
+           data-theme="dark">
+      </div>
+    </div> 
   </div>
 
   <script>
@@ -215,7 +215,7 @@
       tableWrapper.style.display = 'block';
     })
     .catch(err => {
-      document.getElementById('loading').innerHTML = `<div id="error">！</div>載入失敗，請稍後再試`;
+      document.getElementById('loading').innerHTML = `<div id="error">！</div>Too many requests. Please try again later.`;
     });
   }
   </script>
