@@ -159,7 +159,6 @@
 
     function loadData() {
     const url = 'https://chuni-api.tsaibee.org/stat';
-
     fetch(url, {
       method: 'POST',
       headers: {
@@ -181,7 +180,6 @@
     const tbody = document.querySelector('#data-table tbody');
     thead.innerHTML = '';
     tbody.innerHTML = '';
-
     thead.innerHTML = `
       <tr>
         <th>　</th>
@@ -192,7 +190,6 @@
         <th>C20</th>
       </tr>
     `;
-
     data.slice(1, 11).forEach(row => {
       const tr = document.createElement('tr');
       tr.innerHTML = `
@@ -205,12 +202,10 @@
       `;
       tbody.appendChild(tr);
     });
-
     if (data.length >= 2) {
       lastUpdated.textContent = 'Last updated : ' + data[0]['Rating'] + '｜User : ' + data[0]['C20'] + ' (VRS)';
       lastUpdated.style.display = 'block';
     }
-
     document.getElementById('loading').style.display = 'none';
     tableWrapper.style.display = 'block';
   })
