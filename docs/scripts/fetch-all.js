@@ -99,7 +99,7 @@
                 l.getElementsByTagName("head")[0].appendChild(r),
                 r.addEventListener("load", ( () => {
                     l.querySelector(".clearfix")?.insertAdjacentElement("afterend", e);
-                //    insertClearButtons();
+               //    insertClearButtons();
                 }
                 ))
                 function insertClearButtons() {
