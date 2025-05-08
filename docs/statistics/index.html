@@ -70,6 +70,13 @@
       margin-bottom: 0.5em;
       font-weight: bold;
     }
+    #users-stat {
+      font-size: 12px;
+      color: #7997f0;
+      text-align: left !important; 
+      margin-bottom: 0.5em;
+      font-weight: bold;
+    }
     .spinner {
       margin: 1.5rem auto;
       border: 0.5rem solid var(--theme-bg-sub);
@@ -113,6 +120,7 @@
     </div>
     <div class="table-wrapper" style="display: none;">
       <div id="last-updated" style="margin-bottom: 1em; display: none;"></div>
+      <div id="users-stat" style="margin-bottom: 1em; display: none;"></div>
       <table id="data-table">
         <thead></thead>
         <tbody></tbody>
@@ -176,13 +184,14 @@
     const tableWrapper = document.querySelector('.table-wrapper');
     const loading = document.getElementById('loading');
     const lastUpdated = document.getElementById('last-updated');
+    const users = document.getElementById('users-stat');
     const thead = document.querySelector('#data-table thead');
     const tbody = document.querySelector('#data-table tbody');
     thead.innerHTML = '';
     tbody.innerHTML = '';
     thead.innerHTML = `
       <tr>
-        <th>　</th>
+        <th>&nbsp;</th>
         <th>Rating</th>
         <th>OP</th>
         <th>P.C.</th>
@@ -203,8 +212,10 @@
       tbody.appendChild(tr);
     });
     if (data.length >= 2) {
-      lastUpdated.textContent = 'Last updated : ' + data[0]['Rating'] + '｜User : ' + data[0]['C20'] + ' (VRS)';
+      lastUpdated.textContent = 'Last updated : ' + data[0]['Rating'];
       lastUpdated.style.display = 'block';
+      users.textContent = 'Today’s Users : ' + data[0]['B30'] + '｜Total Users : ' + data[0]['C20'] + ' (VRS)';
+      users.style.display = 'block';
     }
     document.getElementById('loading').style.display = 'none';
     tableWrapper.style.display = 'block';
