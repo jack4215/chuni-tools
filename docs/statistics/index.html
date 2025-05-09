@@ -122,7 +122,7 @@
       tbody.appendChild(tr);
     });
     if (data.length >= 2) {
-      lastUpdated.textContent = 'Last updated : ' + data[0]['Rating'];
+      lastUpdated.textContent = 'Last updated : ' + data[0]['Rating'] + ' (GMT+8)';
       lastUpdated.style.display = 'block';
       users.textContent = 'Today’s Users : ' + data[0]['B30'] + '｜Total Users : ' + data[0]['C20'] + ' (VRS)';
       users.style.display = 'block';
