@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>CHUNITHM Tools｜Statistics</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="author" content="Jack Lu">
+  <link rel="shortcut icon" href="https://www.tsaibee.org/photo/webicon02.png">
+  <link rel="apple-touch-icon" href="https://www.tsaibee.org/photo/webicon01.png">
+  <link rel="stylesheet" href="/common/styles/userstat.css" />
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7NQS6JFY3Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7NQS6JFY3Z');
+</script>
+<body>
+  <div class="content">
+    <h2>CHUNITHM Tools｜Statistics</h2>   
+    <div id="loading">
+      <div class="spinner"></div>
+      <div class="loading-text">Verifying... Please wait.</div>
+    </div>
+    <div class="table-wrapper" style="display: none;">
+      <div id="last-updated" style="margin-bottom: 1em; display: none;"></div>
+      <div id="users-stat" style="margin-bottom: 1em; display: none;"></div>
+      <table id="data-table">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+      <div id="footer" style="margin: 2em 0;">Developed and maintained by TSAIBEE</div>
+    </div>
+    <div id="captcha-box" style="position: fixed;bottom: 1em;transform: scale(0.8);transform-origin: bottom left;">
+      <div class="cf-turnstile"
+           data-sitekey="0x4AAAAAABbHMsZPCZfXhgJB"
+           data-callback="onCaptchaSuccess"
+           data-theme="dark">
+      </div>
+    </div> 
+  </div>
+
+  <script>
+    let turnstileToken = '';
+    const theme = localStorage.theme || 'dark';
+    const root = document.documentElement;
+    function onCaptchaSuccess(token) {
+      turnstileToken = token;
+      document.querySelector('#loading .loading-text').textContent = 'Now Loading...';
+      loadData();
+    }
+    if (theme === 'black') {
+      root.style.setProperty('--bg-color', '#1a1a1a');
+      root.style.setProperty('--table-bg-color', '#202020');
+      root.style.setProperty('--table-text-color', '#cecece');
+      root.style.setProperty('--table-border-color', '#333');
+      root.style.setProperty('--table-header-bg', '#2a2a2a');
+    } else if (theme === 'purple') {
+      root.style.setProperty('--bg-color', '#161021');
+      root.style.setProperty('--table-bg-color', '#1d132c');
+      root.style.setProperty('--table-text-color', '#cecece');
+      root.style.setProperty('--table-border-color', '#3a2a4a');
+      root.style.setProperty('--table-header-bg', '#2b1a40');
+    } else {
+      root.style.setProperty('--bg-color', '#151f28');
+      root.style.setProperty('--table-bg-color', '#1e2a36');
+      root.style.setProperty('--table-text-color', '#cecece');
+      root.style.setProperty('--table-border-color', '#444');
+      root.style.setProperty('--table-header-bg', '#2c3a4b');
+    }
+
+    function loadData() {
+    const url = 'https://chuni-api.tsaibee.org/stat';
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ token: turnstileToken })
+    })
+    .then(res => {
+      if (!res.ok) {
+        throw new Error("API error");
+      }
+      return res.json();
+    })
+    .then(data => {
+    const tableWrapper = document.querySelector('.table-wrapper');
+    const loading = document.getElementById('loading');
+    const thead = document.querySelector('#data-table thead');
+    const tbody = document.querySelector('#data-table tbody');
+    thead.innerHTML = '';
+    tbody.innerHTML = '';
+    thead.innerHTML = `
+      <tr>
+        <th>&nbsp;</th>
+        <th>Rating</th>
+        <th>OP</th>
+        <th>P.C.</th>
+        <th>B30</th>
+        <th>C20</th>
+      </tr>
+    `;
+    data.slice(1, 11).forEach(row => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <th>${row['PR'] || ''}</th>
+        <td>${row['Rating']}</td>
+        <td>${row['OP']}</td>
+        <td>${row['P.C.']}</td>
+        <td>${row['B30']}</td>
+        <td>${row['C20']}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+    document.getElementById('loading').style.display = 'none';
+    tableWrapper.style.display = 'block';
+  })
+    .catch(err => {
+      document.getElementById('loading').innerHTML = `<div id="error">！</div>Too many requests. Please try again later.`;
+    });
+  }
+  </script>
+</body>
+</html>
