@@ -11,6 +11,30 @@
   <link rel="apple-touch-icon" href="https://www.tsaibee.org/photo/webicon01.png">
   <link rel="stylesheet" href="/common/styles/userstat.css" />
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table th, table td {
+      text-align: left;
+      padding: 0.5em;
+      height: 2.5em;
+    }
+
+    table th:nth-child(1), table td:nth-child(1) {
+      width: 7%;
+    }
+
+    table th:nth-child(2), table td:nth-child(2) {
+      width: 63%;
+    }
+
+    table th:nth-child(3), table td:nth-child(3) {
+      width: 30%;
+    }
+  </style>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7NQS6JFY3Z"></script>
@@ -32,8 +56,8 @@
 
     <div class="table-wrapper" style="display: none;">
       <div style="margin-bottom: 1em;">
-        <label for="difficulty-select">Target Avg. BEST</label>
-        <select id="difficulty-select">
+        <h3>Target Avg. Rating<h3>
+        <select id="rating-select">
           <option value="16">16.0</option>
           <option value="16.1">16.1</option>
           <option value="16.2">16.2</option>
