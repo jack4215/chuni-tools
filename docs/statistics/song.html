@@ -152,7 +152,8 @@
         songData = data;
         document.getElementById('loading').style.display = 'none';
         document.querySelector('.table-wrapper').style.display = 'block';
-        renderTable('16');
+        const currentDiff = document.getElementById('difficulty-select').value;
+        renderTable(currentDiff);
       })
       .catch(err => {
         document.getElementById('loading').innerHTML = `<div id="error">！</div>Too many requests. Please try again later.`;
