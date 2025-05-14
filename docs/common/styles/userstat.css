@@ -28,10 +28,11 @@
     }
     .stat-select a {
       display: flex;
-      width: 80%;
+      font-size: 1.15em;
+      width: 95%;
       height: 40px;
       margin: 20px auto;
-      border: 2px solid #73A5F5;
+      border: 2px solid #5a5a5b;
       border-radius: 20px;
       text-align: center;
       color: inherit;
@@ -39,10 +40,10 @@
       align-items: center;
       justify-content: center;
       font-weight: bold;
-      background-color: rgba(0, 40, 87, 0.5);
+      background-color: rgb(0 0 0 / 6%);
     }
     .stat-select a:hover {
-      background: #73A5F5;
+      background: #2b446d;
       color: #ffffff;
       font-weight: bold;
     }
