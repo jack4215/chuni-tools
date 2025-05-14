@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
-  <title>CHUNITHM Tools｜Statistics</title>
+  <title>CHUNITHM Tools｜Song Statistics</title>
   <meta name="robots" content="noindex, nofollow">
   <meta name="author" content="Jack Lu">
   <link rel="shortcut icon" href="https://www.tsaibee.org/photo/webicon02.png">
@@ -23,7 +23,7 @@
 </script>
 <body>
   <div class="content">
-    <h2>CHUNITHM Tools｜Song Score Statistics</h2>
+    <h2>CHUNITHM Tools｜Song Statistics</h2>
 
     <div id="loading">
       <div class="spinner"></div>
@@ -52,7 +52,14 @@
           <option value="17.5">17.5</option>
         </select>
       </div>
-      <table id="data-table">
+      <h3>BEST</h3>
+      <table id="data-table-best">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+
+      <h3>CURRENT</h3>
+      <table id="data-table-curr">
         <thead></thead>
         <tbody></tbody>
       </table>
@@ -129,18 +136,19 @@
     }
 
     function renderTable(difficulty) {
-      const thead = document.querySelector('#data-table thead');
-      const tbody = document.querySelector('#data-table tbody');
-      thead.innerHTML = `
+      const songs = songData[difficulty] || [];
+
+      const theadBest = document.querySelector('#data-table-best thead');
+      const tbodyBest = document.querySelector('#data-table-best tbody');
+      theadBest.innerHTML = `
         <tr>
           <th>#</th>
           <th>Title</th>
           <th>Score</th>
         </tr>
       `;
-      tbody.innerHTML = '';
+      tbodyBest.innerHTML = '';
 
-      const songs = songData[difficulty] || [];
       songs.slice(0, 30).forEach((song, index) => {
         const color = colorMap[song.diff] || "#ffffff";
         const tr = document.createElement('tr');
@@ -149,9 +157,32 @@
           <td style="color: ${color}">${song.title}</td>
           <td>${song.score}</td>
         `;
-        tbody.appendChild(tr);
+        tbodyBest.appendChild(tr);
+      });
+
+      const theadCurr = document.querySelector('#data-table-curr thead');
+      const tbodyCurr = document.querySelector('#data-table-curr tbody');
+      theadCurr.innerHTML = `
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Score</th>
+        </tr>
+      `;
+      tbodyCurr.innerHTML = '';
+
+      songs.slice(30, 50).forEach((song, index) => {
+        const color = colorMap[song.diff] || "#ffffff";
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${index + 31}</td>
+          <td style="color: ${color}">${song.title}</td>
+          <td>${song.score}</td>
+        `;
+        tbodyCurr.appendChild(tr);
       });
     }
+
     document.getElementById('difficulty-select').addEventListener('change', function () {
       renderTable(this.value);
     });
