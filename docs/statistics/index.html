@@ -4,91 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
-  <title>CHUNITHM Tools｜Statistics</title>
+  <title>CHUNITHM Tools｜User Statistics</title>
   <meta name="robots" content="noindex, nofollow">
   <meta name="author" content="Jack Lu">
   <link rel="shortcut icon" href="https://www.tsaibee.org/photo/webicon02.png">
   <link rel="apple-touch-icon" href="https://www.tsaibee.org/photo/webicon01.png">
   <link rel="stylesheet" href="/common/styles/userstat.css" />
-  <style>
-    #buttons01 {
-        gap: 0.5rem;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    #buttons01:not(:first-child) {
-        margin-top: 1.375rem !important;
-    }
-
-    #buttons01:not(:last-child) {
-        margin-bottom: 1.375rem !important;
-    }
-
-    #buttons01 li a {
-        display: inline-block;
-        width: 6.5rem;
-        height: 2.25rem;
-        line-height: calc(2.25rem - 2px);
-        padding: 0 0.5rem;
-        vertical-align: middle;
-        text-transform: uppercase;
-        font-family: 'Source Sans Pro', sans-serif;
-        letter-spacing: 0.225rem;
-        padding-left: calc(0.225rem + 0.5rem);
-        font-size: 0.625em;
-        font-weight: 400;
-        border-radius: 1.625rem;
-        direction: var(--site-language-direction);
-        overflow: hidden;
-        text-overflow: ellipsis;
-        transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
-    }
-
-    #buttons01 .button {
-        color: #ededed;
-        border: solid 1px #CCCCCC;
-    }
-
-    #buttons01 .web {
-        display: flex; 
-        align-items: center;
-        justify-content: flex-start;
-        color: #ededed;
-        border: solid 1px #CCCCCC;
-        width: 35rem;
-        height: 10rem;
-        border-radius: 0.5rem;
-        text-decoration: none;
-        padding: 1rem;
-        gap: 1rem;
-        overflow: hidden;
-    }
-
-    #buttons01 .web img {
-        width: 13rem;
-        height: auto;
-        border-radius: 0.25rem;
-    }
-
-    #buttons01 .web span {
-        font-size: 1rem;
-        font-weight: 500;
-        line-height: 1.5;
-        color: #ededed;
-        text-align: left;
-    }
-
-    #buttons01 .button:hover {
-        border-color: #309EDB !important;
-        color: #309EDB !important;
-    }
-
-    #buttons01 .web:hover {
-        border-color: #309EDB !important;
-        color: #ededed !important;
-    }
-  </style>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7NQS6JFY3Z"></script>
@@ -101,12 +23,32 @@
 </script>
 <body>
   <div class="content">
-    <h2>CHUNITHM Tools｜Statistics</h2>   
-    <ul id="buttons01">
-      <li><a href="https://chuni.tsaibee.org/statistics/user" class="button">USER</a></li>
-      <li><a href="https://chuni.tsaibee.org/statistics/song" class="button">SONG</a></li>
-    </ul>
+    <h2>CHUNITHM Tools｜User Statistics</h2>   
+    <div class="stat-select">
+      <a href="/user">User Statistics</a>
+      <a href="/song">Song Statistics</a>
+      <div id="footer" style="margin: 2em 0;">Developed and maintained by TSAIBEE</div>
+    </div>
   </div>
-  <div id="footer" style="margin: 2em 0;">Developed and maintained by TSAIBEE</div>
+
+  <script>
+    const theme = localStorage.theme || 'dark';
+    const root = document.documentElement;
+
+    function applyTheme() {
+      const themes = {
+        black: { bg: '#1a1a1a', tableBg: '#202020', text: '#cecece', border: '#333', header: '#2a2a2a' },
+        purple: { bg: '#161021', tableBg: '#1d132c', text: '#cecece', border: '#3a2a4a', header: '#2b1a40' },
+        dark: { bg: '#151f28', tableBg: '#1e2a36', text: '#cecece', border: '#444', header: '#2c3a4b' }
+      };
+      const t = themes[theme] || themes.dark;
+      root.style.setProperty('--bg-color', t.bg);
+      root.style.setProperty('--table-bg-color', t.tableBg);
+      root.style.setProperty('--table-text-color', t.text);
+      root.style.setProperty('--table-border-color', t.border);
+      root.style.setProperty('--table-header-bg', t.header);
+    }
+    applyTheme();
+  </script>
 </body>
 </html>
