@@ -50,90 +50,86 @@
     let turnstileToken = '';
     const theme = localStorage.theme || 'dark';
     const root = document.documentElement;
+
     function onCaptchaSuccess(token) {
       turnstileToken = token;
       document.querySelector('#loading .loading-text').textContent = 'Now Loading...';
       loadData();
     }
-    if (theme === 'black') {
-      root.style.setProperty('--bg-color', '#1a1a1a');
-      root.style.setProperty('--table-bg-color', '#202020');
-      root.style.setProperty('--table-text-color', '#cecece');
-      root.style.setProperty('--table-border-color', '#333');
-      root.style.setProperty('--table-header-bg', '#2a2a2a');
-    } else if (theme === 'purple') {
-      root.style.setProperty('--bg-color', '#161021');
-      root.style.setProperty('--table-bg-color', '#1d132c');
-      root.style.setProperty('--table-text-color', '#cecece');
-      root.style.setProperty('--table-border-color', '#3a2a4a');
-      root.style.setProperty('--table-header-bg', '#2b1a40');
-    } else {
-      root.style.setProperty('--bg-color', '#151f28');
-      root.style.setProperty('--table-bg-color', '#1e2a36');
-      root.style.setProperty('--table-text-color', '#cecece');
-      root.style.setProperty('--table-border-color', '#444');
-      root.style.setProperty('--table-header-bg', '#2c3a4b');
+
+    function applyTheme() {
+      const themes = {
+        black: { bg: '#1a1a1a', tableBg: '#202020', text: '#cecece', border: '#333', header: '#2a2a2a' },
+        purple: { bg: '#161021', tableBg: '#1d132c', text: '#cecece', border: '#3a2a4a', header: '#2b1a40' },
+        dark: { bg: '#151f28', tableBg: '#1e2a36', text: '#cecece', border: '#444', header: '#2c3a4b' }
+      };
+      const t = themes[theme] || themes.dark;
+      root.style.setProperty('--bg-color', t.bg);
+      root.style.setProperty('--table-bg-color', t.tableBg);
+      root.style.setProperty('--table-text-color', t.text);
+      root.style.setProperty('--table-border-color', t.border);
+      root.style.setProperty('--table-header-bg', t.header);
     }
+    applyTheme();
 
     function loadData() {
-    const url = 'https://chuni-api.tsaibee.org/stat';
-    fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ token: turnstileToken })
-    })
-    .then(res => {
-      if (!res.ok) {
-        throw new Error("API error");
-      }
-      return res.json();
-    })
-    .then(data => {
-    const tableWrapper = document.querySelector('.table-wrapper');
-    const loading = document.getElementById('loading');
-    const lastUpdated = document.getElementById('last-updated');
-    const users = document.getElementById('users-stat');
-    const thead = document.querySelector('#data-table thead');
-    const tbody = document.querySelector('#data-table tbody');
-    thead.innerHTML = '';
-    tbody.innerHTML = '';
-    thead.innerHTML = `
-      <tr>
-        <th>&nbsp;</th>
-        <th>Rating</th>
-        <th>OP</th>
-        <th>P.C.</th>
-        <th>B30</th>
-        <th>C20</th>
-      </tr>
-    `;
-    data.slice(1, 11).forEach(row => {
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <th>${row['PR'] || ''}</th>
-        <td>${row['Rating']}</td>
-        <td>${row['OP']}</td>
-        <td>${row['P.C.']}</td>
-        <td>${row['B30']}</td>
-        <td>${row['C20']}</td>
+      fetch('https://chuni-api.tsaibee.org/stat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ token: turnstileToken })
+      })
+      .then(res => {
+        if (!res.ok) throw new Error("API error");
+        return res.json();
+      })
+      .then(data => {
+        updateTable(data);
+        updateStats(data);
+        document.getElementById('loading').style.display = 'none';
+        document.querySelector('.table-wrapper').style.display = 'block';
+      })
+      .catch(err => {
+        document.getElementById('loading').innerHTML = `<div id="error">！</div>Too many requests. Please try again later.`;
+      });
+    }
+
+    function updateTable(data) {
+      const thead = document.querySelector('#data-table thead');
+      const tbody = document.querySelector('#data-table tbody');
+      thead.innerHTML = `
+        <tr>
+          <th>&nbsp;</th>
+          <th>Rating</th>
+          <th>OP</th>
+          <th>P.C.</th>
+          <th>B30</th>
+          <th>C20</th>
+        </tr>
       `;
-      tbody.appendChild(tr);
-    });
-    if (data.length >= 2) {
+      tbody.innerHTML = '';
+      data.slice(1, 11).forEach(row => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <th>${row['PR'] || ''}</th>
+          <td>${row['Rating']}</td>
+          <td>${row['OP']}</td>
+          <td>${row['P.C.']}</td>
+          <td>${row['B30']}</td>
+          <td>${row['C20']}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function updateStats(data) {
+      if (data.length < 2) return;
+      const lastUpdated = document.getElementById('last-updated');
+      const users = document.getElementById('users-stat');
       lastUpdated.textContent = 'Last updated : ' + data[0]['Rating'] + ' (GMT+8)';
       lastUpdated.style.display = 'block';
       users.textContent = 'Today’s Users : ' + data[0]['B30'] + '｜Total Users : ' + data[0]['C20'] + ' (VRS)';
       users.style.display = 'block';
     }
-    document.getElementById('loading').style.display = 'none';
-    tableWrapper.style.display = 'block';
-  })
-    .catch(err => {
-      document.getElementById('loading').innerHTML = `<div id="error">！</div>Too many requests. Please try again later.`;
-    });
-  }
   </script>
 </body>
 </html>

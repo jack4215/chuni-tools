@@ -95,51 +95,38 @@
     let songData = {};
     const theme = localStorage.theme || 'dark';
     const root = document.documentElement;
-    const colorMap = {
-      BAS: "#8ae29a",
-      ADV: "#ea8a55",
-      EXP: "#ed5a77",
-      MAS: "#dd8aee",
-      ULT: "#78deff"
-    };
+    const colorMap = { BAS: "#8ae29a", ADV: "#ea8a55", EXP: "#ed5a77", MAS: "#dd8aee", ULT: "#78deff" };
+
     const urlParams = new URLSearchParams(window.location.search);
     let rsValue = urlParams.get('rs');
-
     if (!rsValue) {
       urlParams.set('rs', '160');
       const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
       window.location.href = newUrl;
     } else {
       const ratingSelect = document.getElementById('rating-select');
-      if (ratingSelect) {
-        ratingSelect.value = rsValue;
-      }
+      if (ratingSelect) ratingSelect.value = rsValue;
     }
+
+    function applyTheme() {
+      const themes = {
+        black: { bg: '#1a1a1a', tableBg: '#202020', text: '#cecece', border: '#333', header: '#2a2a2a' },
+        purple: { bg: '#161021', tableBg: '#1d132c', text: '#cecece', border: '#3a2a4a', header: '#2b1a40' },
+        dark: { bg: '#151f28', tableBg: '#1e2a36', text: '#cecece', border: '#444', header: '#2c3a4b' }
+      };
+      const t = themes[theme] || themes.dark;
+      root.style.setProperty('--bg-color', t.bg);
+      root.style.setProperty('--table-bg-color', t.tableBg);
+      root.style.setProperty('--table-text-color', t.text);
+      root.style.setProperty('--table-border-color', t.border);
+      root.style.setProperty('--table-header-bg', t.header);
+    }
+    applyTheme();
 
     function onCaptchaSuccess(token) {
       turnstileToken = token;
       document.querySelector('#loading .loading-text').textContent = 'Now Loading...';
       loadData();
-    }
-
-    if (theme === 'black') {
-      root.style.setProperty('--bg-color', '#1a1a1a');
-      root.style.setProperty('--table-bg-color', '#202020');
-      root.style.setProperty('--table-text-color', '#cecece');
-      root.style.setProperty('--table-border-color', '#333');
-      root.style.setProperty('--table-header-bg', '#2a2a2a');
-    } else if (theme === 'purple') {
-      root.style.setProperty('--bg-color', '#161021');
-      root.style.setProperty('--table-bg-color', '#1d132c');
-      root.style.setProperty('--table-text-color', '#cecece');
-      root.style.setProperty('--table-border-color', '#3a2a4a');
-      root.style.setProperty('--table-header-bg', '#2b1a40');
-    } else {
-      root.style.setProperty('--bg-color', '#151f28');
-      root.style.setProperty('--table-bg-color', '#1e2a36');
-      root.style.setProperty('--table-text-color', '#cecece');
-      root.style.setProperty('--table-border-color', '#444');
-      root.style.setProperty('--table-header-bg', '#2c3a4b');
     }
 
     function loadData() {
@@ -156,64 +143,41 @@
         songData = data;
         document.getElementById('loading').style.display = 'none';
         document.querySelector('.table-wrapper').style.display = 'block';
-        const currentDiff = document.getElementById('rating-select').value;
-        renderTable(currentDiff);
+        renderTable(document.getElementById('rating-select').value);
       })
       .catch(err => {
         document.getElementById('loading').innerHTML = `<div id="error">！</div>Too many requests. Please try again later.`;
       });
     }
 
+
     function renderTable(difficulty) {
       const songs = songData[difficulty] || [];
+      const tableConfigs = [
+        { selector: '#data-table-best', range: [0, 30] },
+        { selector: '#data-table-curr', range: [30, 50] }
+      ];
 
-      const theadBest = document.querySelector('#data-table-best thead');
-      const tbodyBest = document.querySelector('#data-table-best tbody');
-      theadBest.innerHTML = `
-        <tr>
-          <th>#</th>
-          <th>Title</th>
-          <th>Score</th>
-        </tr>
-      `;
-      tbodyBest.innerHTML = '';
+      tableConfigs.forEach(({ selector, range }) => {
+        const thead = document.querySelector(`${selector} thead`);
+        const tbody = document.querySelector(`${selector} tbody`);
+        thead.innerHTML = `<tr><th>#</th><th>Title</th><th>Score</th></tr>`;
+        tbody.innerHTML = '';
 
-      songs.slice(0, 30).forEach((song, index) => {
-        const color = colorMap[song.diff] || "#ffffff";
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-          <td>${index + 1}</td>
-          <td style="color: ${color}">${song.title}</td>
-          <td>${song.score}</td>
-        `;
-        tbodyBest.appendChild(tr);
-      });
-
-      const theadCurr = document.querySelector('#data-table-curr thead');
-      const tbodyCurr = document.querySelector('#data-table-curr tbody');
-      theadCurr.innerHTML = `
-        <tr>
-          <th>#</th>
-          <th>Title</th>
-          <th>Score</th>
-        </tr>
-      `;
-      tbodyCurr.innerHTML = '';
-
-      songs.slice(30, 50).forEach((song, index) => {
-        const color = colorMap[song.diff] || "#ffffff";
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-          <td>${index + 1}</td>
-          <td style="color: ${color}">${song.title}</td>
-          <td>${song.score}</td>
-        `;
-        tbodyCurr.appendChild(tr);
+        songs.slice(range[0], range[1]).forEach((song, index) => {
+          const color = colorMap[song.diff] || "#ffffff";
+          const tr = document.createElement('tr');
+          tr.innerHTML = `<td>${index + 1}</td><td style="color: ${color}">${song.title}</td><td>${song.score}</td>`;
+          tbody.appendChild(tr);
+        });
       });
     }
 
     document.getElementById('rating-select').addEventListener('change', function () {
       renderTable(this.value);
+      const url = new URL(window.location);
+      url.searchParams.set('rs', this.value);
+      window.history.replaceState({}, '', url);
     });
   </script>
 </body>
