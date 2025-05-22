@@ -13651,5 +13651,96 @@
     "genre": 9,
     "release": 19,
     "newV": 1
+  },
+  "シリウスの輝きのように": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 10.4,
+    "MAS": 13.2,
+    "ULT": 14.9,
+    "genre": 0,
+    "release": 19,
+    "newV": 1
+  },
+  "革命ダンス": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 9.5,
+    "MAS": 13.2,
+    "genre": 0,
+    "release": 19,
+    "newV": 1
+  },
+  "イガク": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 10.9,
+    "MAS": 14,
+    "genre": 2,
+    "release": 19,
+    "newV": 1
+  },
+  "ザムザ": {
+    "BAS": 2,
+    "ADV": 5,
+    "EXP": 9.5,
+    "MAS": 13.7,
+    "genre": 2,
+    "release": 19,
+    "newV": 1
+  },
+  "I Wanna": {
+    "BAS": 4,
+    "ADV": 7,
+    "EXP": 13.9,
+    "MAS": 15.3,
+    "genre": 0,
+    "release": 19,
+    "newV": 1
+  },
+  "超最終鬼畜妹フランドール・S": {
+    "BAS": 4,
+    "ADV": 7.5,
+    "EXP": 12.3,
+    "MAS": 15,
+    "genre": 3,
+    "release": 19,
+    "newV": 1
+  },
+  "Help me, ERINNNNNN!!": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 10.8,
+    "MAS": 14.1,
+    "genre": 3,
+    "release": 19,
+    "newV": 1
+  },
+  "宵の平安京 Stargazer": {
+    "BAS": 3,
+    "ADV": 7,
+    "EXP": 16,
+    "MAS": 14.9,
+    "genre": 6,
+    "release": 19,
+    "newV": 1
+  },
+  "Destined Marionette": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 12.5,
+    "MAS": 14.4,
+    "genre": 6,
+    "release": 19,
+    "newV": 1
+  },
+  "We Are Us(IOSYS TRAX Remix)": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 10.9,
+    "MAS": 14,
+    "genre": 7,
+    "release": 19,
+    "newV": 1
   }
 }
