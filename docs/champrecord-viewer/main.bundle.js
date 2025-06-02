@@ -1188,7 +1188,7 @@
             for (let e of Oe)(a || i[e]) && (kt.set(d(wt)("record.fetch.fetching", {
               diff: e.toLowerCase(),
               diffStr: d(wt)("record.fetch.diff." + e.toLowerCase())
-            })), Array.prototype.push.apply(o, await gt("allRecord", e)), r[e] = !0);
+            })), Array.prototype.push.apply(o, await gt("champRecord", e)), r[e] = !0);
             const l = Ge(o, await d(Mt), d(wt)("record.fetch.unknown"));
             a && function(e) {
               const t = {};
@@ -1209,7 +1209,7 @@
               for (let t of Oe) !r[t] && d(Qe)[t] && (r[t] = !0, kt.set(d(wt)("record.fetch.fetching", {
                 diff: t.toLowerCase(),
                 diffStr: d(wt)("record.fetch.diff." + t.toLowerCase())
-              })), Array.prototype.push.apply(o, await gt("allRecord", t)), e = !0);
+              })), Array.prototype.push.apply(o, await gt("champRecord", t)), e = !0);
               if (e) {
                 const e = Ge(o, await d(Mt), d(wt)("record.fetch.unknown"));
                 t(e), mt(e)
