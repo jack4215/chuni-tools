@@ -106,7 +106,8 @@
                         const p = l.createElement("p");
                         p.className = "fetch-champ-note";
                         p.style.fontFamily = "sans-serif";
-                        p.style.fontSize = "0.8em";
+                        p.style.fontSize = "0.9em";
+                        p.style.marginTop = "-1rem";
                         p.innerText = s.noteBelowButton;
                         e.insertAdjacentElement("afterend", p);
                     }
