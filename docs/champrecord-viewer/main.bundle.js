@@ -3069,30 +3069,42 @@
       }
       return t = new Hr({
         props: {
+          title: e[4]("player.best.best30"),
+          content: Cr(qe(e[1], 30) / 100, 4)
+        }
+      }), r = new Hr({
+        props: {
+          title: e[4]("player.best.curr20"),
+          content: Cr(qe(e[1], 20) / 100, 4)
+        }
+      }), s = new Hr({
+        props: {
           title: e[4]("player.best.playCount"),
           content: e[3].playCount
         }
       }), {
         c() {
-          $e(t.$$.fragment);
+          $e(t.$$.fragment), n = D(), $e(r.$$.fragment), o = D(), $e(s.$$.fragment)
         },
-        m(e, r) {
-          xe(t, e, r), n = !0;
+        m(e, i) {
+          xe(t, e, i), M(e, n, i), xe(r, e, i), M(e, o, i), xe(s, e, i), a = !0
         },
         p(e, n) {
-          const r = {};
-          16 & n && (r.title = e[4]("player.best.playCount"));
-          8 & n && (r.content = e[3].playCount);
-          t.$set(r);
+          const o = {};
+          16 & n && (o.title = e[4]("player.best.best30")), 1 & n && (o.content = Cr(qe(e[1], 30) / 100, 4)), t.$set(o);
+          const a = {};
+          16 & n && (a.title = e[4]("player.best.curr20")), 2 & n && (a.content = Cr(qe(e[1], 20) / 100, 4)), r.$set(a);
+          const i = {};
+          16 & n && (i.title = e[4]("player.best.playCount")), 8 & n && (i.content = e[3].playCount), s.$set(i)
         },
         i(e) {
-          n || (ge(t.$$.fragment, e), n = !0);
+          a || (ge(t.$$.fragment, e), ge(r.$$.fragment, e), ge(s.$$.fragment, e), a = !0)
         },
         o(e) {
-          me(t.$$.fragment, e), n = !1;
+          me(t.$$.fragment, e), me(r.$$.fragment, e), me(s.$$.fragment, e), a = !1
         },
         d(e) {
-          ke(t, e);
+          ke(t, e), e && E(n), ke(r, e), e && E(o), ke(s, e)
         }
       }
     }
