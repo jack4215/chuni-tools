@@ -64,12 +64,14 @@
             [e.en_US]: {
                 pleaseLogin: "Please login to CHUNITHM-NET first.",
                 needReload: "Please reload CHUNITHM-NET.",
-                analyzeRating: "Submit Results"
+                analyzeRating: "Submit Results",
+                noteBelowButton: "Time : 2025/6/3 ~ 2025/7/10"
             },
             [e.zh_TW]: {
                 pleaseLogin: "請先登入 CHUNITHM-NET 再執行本程式。",
                 needReload: "請重新整理 CHUNITHM-NET 再執行本程式。",
-                analyzeRating: "賽事成績上傳"
+                analyzeRating: "賽事成績上傳",
+                noteBelowButton: "開放時間 : 2025/6/3 ~ 2025/7/10"
             }
         }[function() {
             const t = new URLSearchParams(location.search);
@@ -95,10 +97,19 @@
                 r.href = t("fetch-champ") + "/common/styles/inject.css",
                 e.innerText = s.analyzeRating,
                 e.href = t("fetch-champ") + "/champrecord-viewer/#history",
-                e.target = "recordViewer",
+                e.target = "champrecordViewer",
                 l.getElementsByTagName("head")[0].appendChild(r),
                 r.addEventListener("load", ( () => {
-                    l.querySelector(".clearfix")?.insertAdjacentElement("afterend", e);
+                    const target = l.querySelector(".clearfix");
+                    if (target) {
+                        target.insertAdjacentElement("afterend", e);
+                        const p = l.createElement("p");
+                        p.className = "fetch-champ-note";
+                        p.style.fontFamily = "sans-serif";
+                        p.style.fontSize = "0.8em";
+                        p.innerText = s.noteBelowButton;
+                        e.insertAdjacentElement("afterend", p);
+                    }
                 }
                 ))
             }(),
