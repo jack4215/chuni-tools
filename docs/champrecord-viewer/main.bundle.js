@@ -835,12 +835,12 @@
       default: (e, t) => t.timestamp - e.timestamp,
       playOrder: (e, t) => t.timestamp - e.timestamp,
       title: (e, t) => e.title < t.title ? -1 : e.title > t.title ? 1 : Oe.indexOf(t.difficulty) - Oe.indexOf(e.difficulty),
-      const: (e, t) => t.const-e.const || e.score < 0 ? 1 : t.score < 0 ? -1 : t.rating - e.rating || t.const-e.const || e.score - t.score,
-      op: (e, t) => t.op - e.op || e.score < 0 ? 1 : t.score < 0 ? -1 : t.rating - e.rating || t.const-e.const || e.score - t.score,
-      opp: (e, t) => t.op / t.opMax - e.op / e.opMax || e.score < 0 ? 1 : t.score < 0 ? -1 : t.rating - e.rating || t.const-e.const || e.score - t.score,
-      score: (e, t) => t.score - e.score || e.score < 0 ? 1 : t.score < 0 ? -1 : t.rating - e.rating || t.const-e.const || e.score - t.score,
-      scoreDiff: (e, t) => t.scoreDiff - e.scoreDiff || e.score < 0 ? 1 : t.score < 0 ? -1 : t.rating - e.rating || t.const-e.const || e.score - t.score,
-      rating: (e, t) => e.score < 0 ? 1 : t.score < 0 ? -1 : t.rating - e.rating || t.const-e.const || e.score - t.score,
+      const: (e, t) => t.const-e.const || e.order - t.order,
+      op: (e, t) => t.op - e.op || e.order - t.order,
+      opp: (e, t) => t.op / t.opMax - e.op / e.opMax || e.order - t.order,
+      score: (e, t) => t.score - e.score || e.order - t.order,
+      scoreDiff: (e, t) => t.scoreDiff - e.scoreDiff || e.order - t.order,
+      rating: (e, t) => e.order - t.order,
       aj: (e, t) => {
         if (e.clear == t.clear) return e.score < 0 ? 1 : t.score < 0 ? -1 : t.rating - e.rating || t.const-e.const || e.score - t.score;
         const n = ["", "FC", "AJ"];
