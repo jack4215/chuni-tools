@@ -65,15 +65,15 @@
                 pleaseLogin: "Please login to CHUNITHM-NET first.",
                 needReload: "Please reload CHUNITHM-NET.",
                 analyzeRating: "Submit Results",
-                eventTitle: "FTC25TH Prelim",
+                eventTitle: "FT - TAKAO Championship '25 Prelim",
                 eventTime: "Time : 2025/6/3 ~ 2025/7/10"
             },
             [e.zh_TW]: {
                 pleaseLogin: "請先登入 CHUNITHM-NET 再執行本程式。",
                 needReload: "請重新整理 CHUNITHM-NET 再執行本程式。",
                 analyzeRating: "賽事成績上傳",
-                eventTitle: "FTC25TH Prelim",
-                eventTime: "開放時間 : 2025/6/3 ~ 2025/7/10"
+                eventTitle: "FT - TAKAO Championship '25 Prelim",
+                eventTime: "開放時間：2025/6/3 ~ 2025/7/10"
             }
         }[function() {
             const t = new URLSearchParams(location.search);
