@@ -108,7 +108,7 @@
                         const div = l.createElement("div");
                         div.className = "fetch-champ-container";
                         const title = l.createElement("p");
-                        title.style.color = "#75b4f7";
+                        title.style.color = "#ffa173";
                         title.innerText = s.eventTitle;
                         const time = l.createElement("p");
                         time.style.fontSize = "15px";
