@@ -91,7 +91,7 @@
         try {
             !function() {
                 const e = l.createElement("a");
-                e.className = "chuni-tool-btn";
+                e.className = "chuni-tool-btn2";
                 const r = l.createElement("link");
                 r.rel = "stylesheet",
                 r.href = t("fetch-champ") + "/common/styles/inject.css",
