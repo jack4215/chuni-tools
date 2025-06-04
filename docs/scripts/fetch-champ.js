@@ -65,13 +65,15 @@
                 pleaseLogin: "Please login to CHUNITHM-NET first.",
                 needReload: "Please reload CHUNITHM-NET.",
                 analyzeRating: "Submit Results",
-                noteBelowButton: "Time : 2025/6/3 ~ 2025/7/10"
+                eventTitle: "FTC25TH Prelim",
+                eventTime: "Time : 2025/6/3 ~ 2025/7/10"
             },
             [e.zh_TW]: {
                 pleaseLogin: "請先登入 CHUNITHM-NET 再執行本程式。",
                 needReload: "請重新整理 CHUNITHM-NET 再執行本程式。",
                 analyzeRating: "賽事成績上傳",
-                noteBelowButton: "開放時間 : 2025/6/3 ~ 2025/7/10"
+                eventTitle: "FTC25TH Prelim",
+                eventTime: "開放時間 : 2025/6/3 ~ 2025/7/10"
             }
         }[function() {
             const t = new URLSearchParams(location.search);
@@ -103,13 +105,17 @@
                     const target = l.querySelector(".clearfix");
                     if (target) {
                         target.insertAdjacentElement("afterend", e);
-                        const p = l.createElement("p");
-                        p.className = "fetch-champ-note";
-                        p.style.fontFamily = "sans-serif";
-                        p.style.fontSize = "0.9em";
-                        p.style.marginTop = "-1rem";
-                        p.innerText = s.noteBelowButton;
-                        e.insertAdjacentElement("afterend", p);
+                        const div = l.createElement("div");
+                        div.className = "fetch-champ-container";
+                        const title = l.createElement("p");
+                        title.style.color = "#75b4f7";
+                        title.innerText = s.eventTitle;
+                        const time = l.createElement("p");
+                        time.style.fontSize = "15px";
+                        time.innerText = s.eventTime;
+                        div.appendChild(title);
+                        div.appendChild(time);
+                        e.insertAdjacentElement("afterend", div);
                     }
                 }
                 ))
