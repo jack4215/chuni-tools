@@ -64,7 +64,7 @@
             [e.en_US]: {
                 pleaseLogin: "Please login to CHUNITHM-NET first.",
                 needReload: "Please reload CHUNITHM-NET.",
-                analyzeRating: "Submit Results",
+                analyzeRating: "Submit Record",
                 eventTitle: "FT - TAKAO Championship '25 Prelim",
                 eventTime: "Time : 2025/6/3 ~ 2025/7/10"
             },
