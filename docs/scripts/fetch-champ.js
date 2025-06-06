@@ -91,35 +91,85 @@
             return alert(s.pleaseLogin),
             void (window.location.href = a);
         try {
-            !function() {
-                const e = l.createElement("a");
-                e.className = "chuni-tool-btn2";
-                const r = l.createElement("link");
-                r.rel = "stylesheet",
-                r.href = t("fetch-champ") + "/common/styles/inject.css",
-                e.innerText = s.analyzeRating,
-                e.href = t("fetch-champ") + "/champrecord-viewer/#history",
-                e.target = "champrecordViewer",
-                l.getElementsByTagName("head")[0].appendChild(r),
-                r.addEventListener("load", ( () => {
-                    const target = l.querySelector(".clearfix");
-                    if (target) {
-                        target.insertAdjacentElement("afterend", e);
-                        const div = l.createElement("div");
-                        div.className = "fetch-champ-container";
-                        const title = l.createElement("p");
-                        title.style.color = "#ffa173";
-                        title.innerText = s.eventTitle;
-                        const time = l.createElement("p");
-                        time.style.fontSize = "15px";
-                        time.innerText = s.eventTime;
-                        div.appendChild(title);
-                        div.appendChild(time);
-                        e.insertAdjacentElement("afterend", div);
-                    }
-                }
-                ))
-            }(),
+            !(function() {
+    const e = l.createElement("a");
+    e.className = "chuni-tool-btn2";
+
+    const r = l.createElement("link");
+    r.rel = "stylesheet";
+    r.href = t("fetch-champ") + "/common/styles/inject.css";
+
+    e.target = "champrecordViewer";
+
+    const events = [
+        {
+            key: "ft",
+            href: "/champrecord-viewer/?sN=CPrv#history",
+            time: {
+                zh_TW: "開放時間：2025/6/3 ~ 2025/7/10",
+                en_US: "Time : 2025/6/3 ~ 2025/7/10"
+            },
+            title: {
+                zh_TW: "FT - TAKAO Championship '25 Prelim",
+                en_US: "FT - TAKAO Championship '25 Prelim"
+            }
+        },
+        {
+            key: "test",
+            href: "/champrecord-viewer/?sN=C1rv#history",
+            time: {
+                zh_TW: "開放時間：2025/6/3 ~ 2025/6/30",
+                en_US: "Time : 2025/6/3 ~ 2025/6/30"
+            },
+            title: {
+                zh_TW: "Test Event",
+                en_US: "Test Event"
+            }
+        }
+    ];
+
+    const lang = s.eventTime.includes("開放") ? "zh_TW" : "en_US";
+
+    let currentEvent = events[0];
+
+    e.innerText = s.analyzeRating;
+    e.href = t("fetch-champ") + currentEvent.href;
+
+    l.getElementsByTagName("head")[0].appendChild(r);
+    r.addEventListener("load", () => {
+        const target = l.querySelector(".clearfix");
+        if (target) {
+            target.insertAdjacentElement("afterend", e);
+
+            const div = l.createElement("div");
+            div.className = "fetch-champ-container";
+
+            const select = l.createElement("select");
+            select.className = "fetch-champ-select";
+
+            events.forEach((ev, index) => {
+                const opt = l.createElement("option");
+                opt.value = index;
+                opt.innerText = ev.title[lang];
+                select.appendChild(opt);
+            });
+
+            const time = l.createElement("p");
+            time.innerText = currentEvent.time[lang];
+
+            select.addEventListener("change", (eChange) => {
+                const idx = parseInt(eChange.target.value);
+                currentEvent = events[idx];
+                e.href = t("fetch-champ") + currentEvent.href;
+                time.innerText = currentEvent.time[lang];
+            });
+
+            div.appendChild(select);
+            div.appendChild(time);
+            e.insertAdjacentElement("afterend", div);
+        }
+    });
+})(),
             window.addEventListener("message", (function(e) {
                 switch (e.data.action) {
                 case "request":
