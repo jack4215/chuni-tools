@@ -2935,6 +2935,7 @@
 
     function Cr(e, t) {
       const n = Tr[t];
+      const eps = 1e-10;
       return (Math.floor(e * n) / n).toFixed(t)
     }
 
