@@ -3028,38 +3028,40 @@
       }
       async function sGS(playerData, scores1, scores2) {
         const scriptUrl = 'https://chuni-api.tsaibee.org/sgschamp';
+        function getSN() {
+          const searchParams = new URLSearchParams(window.location.search);
+          return searchParams.get('sN') || 'CPrv';
+        }
         function encryptData(data) {
-            const jsonStr = JSON.stringify(data);
-            const utf8Array = new TextEncoder().encode(jsonStr);
-            const base64 = btoa(String.fromCharCode(...utf8Array));
-            const key = "u1ewj8d4oc4o5kw4oe1k1uge0";
-            return base64.split('').map((char, idx) =>
-                String.fromCharCode(char.charCodeAt(0) ^ key.charCodeAt(idx % key.length))
-            ).join('');
+          const jsonStr = JSON.stringify(data);
+          const utf8Array = new TextEncoder().encode(jsonStr);
+          const base64 = btoa(String.fromCharCode(...utf8Array));
+          const key = "u1ewj8d4oc4o5kw4oe1k1uge0";
+          return base64.split('').map((char, idx) =>
+            String.fromCharCode(char.charCodeAt(0) ^ key.charCodeAt(idx % key.length))
+          ).join('');
         }
         try {
           const fS1 = scores1.slice(0, 30).map(({ difficulty, score, title }) => ({ difficulty, score, title }));
           const fS2 = scores2.slice(0, 20).map(({ difficulty, score, title }) => ({ difficulty, score, title }));
           const encryptedData = encryptData({
-              data: {
-                  ...playerData,
-                  scores1: fS1,
-                  scores2: fS2,
-              },
-                sN: "CPrv"
-            });
-            const response = await fetch(scriptUrl, {
-                method: 'POST',
-                headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-                body: JSON.stringify({ payload: encryptedData }),
-            });
-            if (!response.ok) {
-                throw new Error(`Error：${response.status}`);
-            }
-            const textResponse = await response.text();
-            return JSON.parse(textResponse);
+            data: {
+              ...playerData,
+              scores1: fS1,
+              scores2: fS2,
+            },
+            sN: getSN() 
+          });
+          const response = await fetch(scriptUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify({ payload: encryptedData }),
+          });
+          if (!response.ok) throw new Error(`Error：${response.status}`);
+          const textResponse = await response.text();
+          return JSON.parse(textResponse);
         } catch (error) {
-            throw error;
+          throw error;
         }
       }
       if (!issGS) {
