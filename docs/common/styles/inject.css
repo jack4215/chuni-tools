@@ -3,3 +3,4 @@
 .fetch-champ-container { padding: 8px; background-color: #2f182b; margin: 10px auto; width: 440px; font-family: Arial, sans-serif; border-radius: 4px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); }
 .fetch-champ-container p { margin: 5px 0; color: #e7e7e7; text-align: center; line-height: 1.2;font-size: 15px;}
 .fetch-champ-select { font-size: 19px; padding: 6px 8px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2); color: rgb(255, 161, 115); text-align: center; outline: none; appearance: none; }
+.fetch-champ-select:focus, .fetch-champ-select:active { background-color: #2f182b; /* 保持背景 */ color: rgb(255, 161, 115); border-color: rgba(255, 255, 255, 0.4); } .fetch-champ-select option { background-color: #2f182b; color: rgb(255, 161, 115); }
