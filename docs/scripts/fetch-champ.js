@@ -64,16 +64,12 @@
             [e.en_US]: {
                 pleaseLogin: "Please login to CHUNITHM-NET first.",
                 needReload: "Please reload CHUNITHM-NET.",
-                analyzeRating: "Submit Record",
-                eventTitle: "FT - TAKAO Championship '25 Prelim",
-                eventTime: "Time : 2025/6/3 ~ 2025/7/10"
+                analyzeRating: "Submit Record"
             },
             [e.zh_TW]: {
                 pleaseLogin: "請先登入 CHUNITHM-NET 再執行本程式。",
                 needReload: "請重新整理 CHUNITHM-NET 再執行本程式。",
-                analyzeRating: "賽事成績上傳",
-                eventTitle: "FT - TAKAO Championship '25 Prelim",
-                eventTime: "開放時間：2025/6/3 ~ 2025/7/10"
+                analyzeRating: "賽事成績上傳"
             }
         }[function() {
             const t = new URLSearchParams(location.search);
@@ -133,7 +129,17 @@
                         }
                     }
                 ];
-                const lang = s.eventTime.includes("開放") ? "zh_TW" : "en_US";
+                const lang = (() => {
+                    const localLang = localStorage.getItem("language");
+                    switch (localLang) {
+                        case "zh_TW":
+                            return "zh_TW";
+                        case "en_US":
+                            return "en_US";
+                        default:
+                            return navigator.language.startsWith("zh") ? "zh_TW" : "en_US";
+                    }
+                })();
                 let currentEvent = events[0];
                 e.innerText = s.analyzeRating;
                 e.href = t("fetch-champ") + currentEvent.href;
