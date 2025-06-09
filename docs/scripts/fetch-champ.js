@@ -113,12 +113,23 @@
                     {
                         href: "/champrecord-viewer/?sN=C1rv#history",
                         time: {
-                            zh_TW: "開放時間：2025/6/3 ~ 2025/6/30",
-                            en_US: "Time : 2025/6/3 ~ 2025/6/30"
+                            zh_TW: "開放時間：2025/6/9 ~ 2025/6/30",
+                            en_US: "Time : 2025/6/9 ~ 2025/6/30"
                         },
                         title: {
-                            zh_TW: "Test Event",
-                            en_US: "Test Event"
+                            zh_TW: "國家一級體力鑒定",
+                            en_US: "National First-Class Physical Fitness Certification"
+                        }
+                    },
+                    {
+                        href: "/champrecord-viewer/?sN=C2rv#history",
+                        time: {
+                            zh_TW: "開放時間：2025/6/9 ~ 2025/6/30",
+                            en_US: "Time : 2025/6/9 ~ 2025/6/30"
+                        },
+                        title: {
+                            zh_TW: "天使的排泄物",
+                            en_US: "Celestial residue"
                         }
                     }
                 ];
