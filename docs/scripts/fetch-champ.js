@@ -138,6 +138,17 @@
                             zh_TW: "！",
                             en_US: "！"
                         }
+                    },
+                    {
+                        href: "/champrecord-viewer/?sN=C4rv#history",
+                        time: {
+                            zh_TW: "開放時間：2025/6/10 ~ 2025/6/30",
+                            en_US: "Time : 2025/6/10 ~ 2025/6/30"
+                        },
+                        title: {
+                            zh_TW: "導師的服裝露出度進化史",
+                            en_US: "The Evolution of Exposure in Mentor Attire"
+                        }
                     }
                 ];
                 const lang = (() => {
