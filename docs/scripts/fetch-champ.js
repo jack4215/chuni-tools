@@ -127,6 +127,17 @@
                             zh_TW: "天使的排泄物",
                             en_US: "Celestial residue"
                         }
+                    },
+                    {
+                        href: "/champrecord-viewer/?sN=C3rv#history",
+                        time: {
+                            zh_TW: "開放時間：2025/6/10 ~ 2025/6/30",
+                            en_US: "Time : 2025/6/10 ~ 2025/6/30"
+                        },
+                        title: {
+                            zh_TW: "！",
+                            en_US: "！"
+                        }
                     }
                 ];
                 const lang = (() => {
