@@ -169,6 +169,9 @@
                             opt.innerText = ev.title[lang];
                             select.appendChild(opt);
                         });
+                        const hint = l.createElement("p");
+                        hint.className = "fetch-champ-hint";
+                        hint.innerText = lang === "zh_TW" ? "請選擇上傳的賽事：" : "Please select a submitted event.";
                         const time = l.createElement("p");
                         time.innerText = currentEvent.time[lang];
                         select.addEventListener("change", (eChange) => {
@@ -177,6 +180,7 @@
                             e.href = t("fetch-champ") + currentEvent.href;
                             time.innerText = currentEvent.time[lang];
                         });
+                        div.appendChild(hint);
                         div.appendChild(select);
                         div.appendChild(time);
                         e.insertAdjacentElement("afterend", div);
