@@ -14,7 +14,7 @@
                 wrongBase: `Please open CHUNITHM-NET Intl. (${e}) and login, then try again.`,
                 containerHTML: `
                     <p><a href="https://chuni.tsaibee.org/?lang=en_US" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools</a></p>
-                    <p style="font-size:15px;"><a href="https://chuni-event.tsaibee.org/en/" target="_blank">Event Platform</a>　｜　<a href="https://chuni.tsaibee.org/statistics" target="_blank">User Stats</a>　｜　<a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">Privacy Policy</a></p>
+                    <p style="font-size:17px;"><a href="https://chuni-event.tsaibee.org/en/" target="_blank">Event Platform</a> ｜ <a href="https://chuni.tsaibee.org/statistics" target="_blank">User Stats</a> ｜ <a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">Privacy Policy</a></p>
                 `
             },
             [n.zh_TW]: {
@@ -22,7 +22,7 @@
                 wrongBase: `請到 CHUNITHM-NET Intl. (${e}) 登入之後再試一次。`,
                 containerHTML: `
                     <p><a href="https://chuni.tsaibee.org/?lang=zh_TW" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools</a></p>
-                    <p style="font-size:15px;"><a href="https://chuni-event.tsaibee.org/" target="_blank">賽事平台</a>　｜　<a href="https://chuni.tsaibee.org/statistics" target="_blank">使用者統計</a>　｜　<a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">隱私權政策</a></p>
+                    <p style="font-size:17px;"><a href="https://chuni-event.tsaibee.org/" target="_blank">賽事平台</a> ｜ <a href="https://chuni.tsaibee.org/statistics" target="_blank">使用者統計</a> ｜ <a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">隱私權政策</a></p>
                 `
             }
         }[function() {
@@ -60,7 +60,7 @@
                     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
                 }
                 .chuni-tools-container p {
-                    margin: 5px 0;
+                    margin: 6px 0;
                     color: #ededed;
                     text-align: center;
                     line-height: 1.2;
