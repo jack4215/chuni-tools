@@ -13742,5 +13742,50 @@
     "genre": 7,
     "release": 19,
     "newV": 1
+  },
+  "月光": {
+    "BAS": 4,
+    "ADV": 7.5,
+    "EXP": 11,
+    "MAS": 14.2,
+    "genre": 2,
+    "release": 19,
+    "newV": 1
+  },
+  "ゆりかご": {
+    "BAS": 2,
+    "ADV": 4,
+    "EXP": 9,
+    "MAS": 13.3,
+    "genre": 2,
+    "release": 19,
+    "newV": 1
+  },
+  "ひつぎとふたご": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 10.7,
+    "MAS": 14.8,
+    "genre": 6,
+    "release": 19,
+    "newV": 1
+  },
+  "MegiddØ": {
+    "BAS": 5,
+    "ADV": 8.5,
+    "EXP": 14.4,
+    "MAS": 15.4,
+    "genre": 5,
+    "release": 19,
+    "newV": 1
+  },
+  "Crossmythos Rhapsodia": {
+    "BAS": 6,
+    "ADV": 9.5,
+    "EXP": 14.6,
+    "MAS": 15.5,
+    "genre": 5,
+    "release": 19,
+    "newV": 1
   }
 }
