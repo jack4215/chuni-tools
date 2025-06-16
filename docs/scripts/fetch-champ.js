@@ -107,7 +107,7 @@
                     }
                 })();
                 r.addEventListener("load", () => {
-                    fetch("https://chuni-event.tsaibee.org/event.json")
+                    fetch("https://chuni-event.tsaibee.org/event.json?t=" + Date.now())
                         .then(res => res.json())
                         .then((events) => {
                             const now = new Date();
