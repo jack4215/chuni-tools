@@ -87,115 +87,67 @@
             return alert(s.pleaseLogin),
             void (window.location.href = a);
         try {
-            !(function() {
+            !(function () {
+                const l = document;
                 const e = l.createElement("a");
                 e.className = "chuni-tool-btn2";
+                e.target = "champrecordViewer";
+
                 const r = l.createElement("link");
                 r.rel = "stylesheet";
                 r.href = t("fetch-champ") + "/common/styles/inject.css";
-                e.target = "champrecordViewer";
-                const events = [
-                    {
-                        href: "/champrecord-viewer/?sN=CPrv#history",
-                        time: {
-                            zh_TW: "開放時間：2025/6/3 ~ 2025/7/10",
-                            en_US: "Time : 2025/6/3 ~ 2025/7/10"
-                        },
-                        title: {
-                            zh_TW: "FT - TAKAO Championship '25 Prelim",
-                            en_US: "FT - TAKAO Championship '25 Prelim"
-                        }
-                    },
-                    {
-                        href: "/champrecord-viewer/?sN=C1rv#history",
-                        time: {
-                            zh_TW: "開放時間：2025/6/9 ~ 2025/6/30",
-                            en_US: "Time : 2025/6/9 ~ 2025/6/30"
-                        },
-                        title: {
-                            zh_TW: "國家一級體力鑒定",
-                            en_US: "National First-Class Physical Fitness Certification"
-                        }
-                    },
-                    {
-                        href: "/champrecord-viewer/?sN=C2rv#history",
-                        time: {
-                            zh_TW: "開放時間：2025/6/9 ~ 2025/6/30",
-                            en_US: "Time : 2025/6/9 ~ 2025/6/30"
-                        },
-                        title: {
-                            zh_TW: "天使的排泄物",
-                            en_US: "Celestial residue"
-                        }
-                    },
-                    {
-                        href: "/champrecord-viewer/?sN=C3rv#history",
-                        time: {
-                            zh_TW: "開放時間：2025/6/10 ~ 2025/6/30",
-                            en_US: "Time : 2025/6/10 ~ 2025/6/30"
-                        },
-                        title: {
-                            zh_TW: "！",
-                            en_US: "！"
-                        }
-                    },
-                    {
-                        href: "/champrecord-viewer/?sN=C4rv#history",
-                        time: {
-                            zh_TW: "開放時間：2025/6/10 ~ 2025/6/30",
-                            en_US: "Time : 2025/6/10 ~ 2025/6/30"
-                        },
-                        title: {
-                            zh_TW: "導師的服裝露出度進化史",
-                            en_US: "The Evolution of Exposure in Mentor Attire"
-                        }
-                    }
-                ];
+                l.getElementsByTagName("head")[0].appendChild(r);
+
                 const lang = (() => {
                     const localLang = localStorage.getItem("language");
                     switch (localLang) {
-                        case "zh_TW":
-                            return "zh_TW";
-                        case "en_US":
-                            return "en_US";
-                        default:
-                            return navigator.language.startsWith("zh") ? "zh_TW" : "en_US";
+                        case "zh_TW": return "zh_TW";
+                        case "en_US": return "en_US";
+                        default: return navigator.language.startsWith("zh") ? "zh_TW" : "en_US";
                     }
                 })();
-                let currentEvent = events[0];
-                e.innerText = s.analyzeRating;
-                e.href = t("fetch-champ") + currentEvent.href;
-                l.getElementsByTagName("head")[0].appendChild(r);
                 r.addEventListener("load", () => {
-                    const target = l.querySelector(".clearfix");
-                    if (target) {
-                        target.insertAdjacentElement("afterend", e);
-                        const div = l.createElement("div");
-                        div.className = "fetch-champ-container";
-                        const select = l.createElement("select");
-                        select.className = "fetch-champ-select";
-                        events.forEach((ev, index) => {
-                            const opt = l.createElement("option");
-                            opt.value = index;
-                            opt.innerText = ev.title[lang];
-                            select.appendChild(opt);
-                        });
-                        const hint = l.createElement("p");
-                        hint.className = "fetch-champ-hint";
-                        hint.innerText = lang === "zh_TW" ? "請選擇上傳的賽事：" : "Please select a submitted event.";
-                        const time = l.createElement("p");
-                        time.innerText = currentEvent.time[lang];
-                        select.addEventListener("change", (eChange) => {
-                            const idx = parseInt(eChange.target.value);
-                            currentEvent = events[idx];
+                    fetch("https://chuni-event.tsaibee.org/event.json")
+                        .then(res => res.json())
+                        .then((events) => {
+                            const now = new Date();
+                            const validEvents = events.filter(ev => !ev.expire || new Date(ev.expire) >= now);
+                            if (validEvents.length === 0) return;
+                            let currentEvent = validEvents[0];
+                            e.innerText = s.analyzeRating;
                             e.href = t("fetch-champ") + currentEvent.href;
+                            const target = l.querySelector(".clearfix");
+                            if (!target) return;
+                            target.insertAdjacentElement("afterend", e);
+                            const div = l.createElement("div");
+                            div.className = "fetch-champ-container";
+                            const select = l.createElement("select");
+                            select.className = "fetch-champ-select";
+                            validEvents.forEach((ev, index) => {
+                                const opt = l.createElement("option");
+                                opt.value = index;
+                                opt.innerText = ev.title[lang];
+                                select.appendChild(opt);
+                            });
+                            const hint = l.createElement("p");
+                            hint.className = "fetch-champ-hint";
+                            hint.innerText = lang === "zh_TW" ? "請選擇上傳的賽事：" : "Please select a submitted event.";
+                            const time = l.createElement("p");
                             time.innerText = currentEvent.time[lang];
+                            select.addEventListener("change", (eChange) => {
+                                const idx = parseInt(eChange.target.value);
+                                currentEvent = validEvents[idx];
+                                e.href = t("fetch-champ") + currentEvent.href;
+                                time.innerText = currentEvent.time[lang];
+                            });
+                            div.appendChild(hint);
+                            div.appendChild(select);
+                            div.appendChild(time);
+                            e.insertAdjacentElement("afterend", div);
+                        })
+                        .catch((err) => {
+                            console.error("Error：", err);
                         });
-                        div.appendChild(hint);
-                        div.appendChild(select);
-                        div.appendChild(time);
-                        e.insertAdjacentElement("afterend", div);
-                    }
                 });
             })(),
             window.addEventListener("message", (function(e) {
