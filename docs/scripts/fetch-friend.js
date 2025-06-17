@@ -94,8 +94,8 @@
                 r.rel = "stylesheet",
                 r.href = t("fetch-friend") + "/common/styles/inject.css",
                 e.innerText = s.analyzeRating,
-                e.href = t("fetch-friend") + "/friendrecord-viewer/#all",
-                e.target = "friendrecordViewer",
+                e.href = t("fetch-friend") + "/friendrecord-viewer/#all";
+                e.onclick = e => (e.preventDefault(), window.open(e.currentTarget.href, "friendrecordViewer_" + (document.querySelector('select[name="friend"]')?.value || "default")));
                 l.getElementsByTagName("head")[0].appendChild(r),
                 r.addEventListener("load", ( () => {
                     l.querySelector(".clearfix")?.insertAdjacentElement("afterend", e)
