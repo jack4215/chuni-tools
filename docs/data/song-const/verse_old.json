@@ -13787,5 +13787,50 @@
     "genre": 5,
     "release": 19,
     "newV": 1
+  },
+  "Paradoxes": {
+    "BAS": 1,
+    "ADV": 4,
+    "EXP": 8.5,
+    "MAS": 12,
+    "genre": 0,
+    "release": 19,
+    "newV": 1
+  },
+  "Running to the straight ver1.01": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 10,
+    "MAS": 13.4,
+    "genre": 0,
+    "release": 19,
+    "newV": 1
+  },
+  "you (Vocal)": {
+    "BAS": 1,
+    "ADV": 5,
+    "EXP": 8,
+    "MAS": 12.5,
+    "genre": 0,
+    "release": 19,
+    "newV": 1
+  },
+  "Southern Cross": {
+    "BAS": 3,
+    "ADV": 7,
+    "EXP": 11.7,
+    "MAS": 14.6,
+    "genre": 6,
+    "release": 19,
+    "newV": 1
+  },
+  "A c i - L": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 13.3,
+    "MAS": 14.8,
+    "genre": 6,
+    "release": 19,
+    "newV": 1
   }
 }
