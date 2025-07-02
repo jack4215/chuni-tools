@@ -212,7 +212,7 @@
                                     rating: a,
                                     overPower: e.querySelector(".player_overpower_text").innerHTML.match(/\(([^)]+)\)/)[1],
                                     playCount: "--", 
-                                    lastPlayed: "--",
+                                    lastPlayed: Date.parse(e.querySelector(".player_lastplaydate_text").innerHTML),
                                     ratingPn: background,
                                     code: sF,
                                     fname: f.querySelector(".player_name_in").innerHTML,
