@@ -13832,5 +13832,50 @@
     "genre": 6,
     "release": 19,
     "newV": 1
+  },
+  "7thSense": {
+    "BAS": 4,
+    "ADV": 7,
+    "EXP": 12,
+    "MAS": 14.7,
+    "genre": 9,
+    "release": 19,
+    "newV": 1
+  },
+  "デスパレイト": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 10,
+    "MAS": 13.6,
+    "genre": 9,
+    "release": 19,
+    "newV": 1
+  },
+  "Swift Swing": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 11,
+    "MAS": 14.8,
+    "genre": 9,
+    "release": 19,
+    "newV": 1
+  },
+  "Galaxy Blaster": {
+    "BAS": 5,
+    "ADV": 8,
+    "EXP": 12,
+    "MAS": 14.6,
+    "genre": 9,
+    "release": 19,
+    "newV": 1
+  },
+  "BOUNCE & DANCE": {
+    "BAS": 3,
+    "ADV": 7,
+    "EXP": 11,
+    "MAS": 14.5,
+    "genre": 9,
+    "release": 19,
+    "newV": 1
   }
 }
