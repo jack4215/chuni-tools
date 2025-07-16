@@ -555,7 +555,7 @@
     "ADV": 6,
     "EXP": 8,
     "MAS": 12.3,
-    "ULT": 14.9,
+    "ULT": 15,
     "genre": 3,
     "release": 1,
     "newV": 0
@@ -2528,7 +2528,7 @@
     "BAS": 5,
     "ADV": 8.5,
     "EXP": 13.8,
-    "MAS": 15.1,
+    "MAS": 15.2,
     "genre": 6,
     "release": 4,
     "newV": 0
@@ -2954,7 +2954,7 @@
     "ADV": 5,
     "EXP": 9.5,
     "MAS": 13.4,
-    "ULT": 15.1,
+    "ULT": 15.2,
     "genre": 0,
     "release": 5,
     "newV": 0
@@ -6356,7 +6356,7 @@
     "BAS": 4,
     "ADV": 9.5,
     "EXP": 13.8,
-    "MAS": 15.4,
+    "MAS": 15.5,
     "genre": 5,
     "release": 10,
     "newV": 0
@@ -8112,7 +8112,7 @@
     "BAS": 4,
     "ADV": 6,
     "EXP": 12.7,
-    "MAS": 15.1,
+    "MAS": 15.2,
     "genre": 6,
     "release": 12,
     "newV": 0
@@ -8364,7 +8364,7 @@
     "BAS": 4,
     "ADV": 7.5,
     "EXP": 13.3,
-    "MAS": 14.4,
+    "MAS": 14.5,
     "genre": 5,
     "release": 13,
     "newV": 0
@@ -8832,7 +8832,7 @@
     "BAS": 5,
     "ADV": 8,
     "EXP": 13.8,
-    "MAS": 15,
+    "MAS": 14.9,
     "genre": 9,
     "release": 14,
     "newV": 0
@@ -8949,7 +8949,7 @@
     "BAS": 7.5,
     "ADV": 12.5,
     "EXP": 14.5,
-    "MAS": 15.2,
+    "MAS": 15.3,
     "genre": 6,
     "release": 14,
     "newV": 0
@@ -10641,7 +10641,7 @@
     "BAS": 4,
     "ADV": 8,
     "EXP": 13.4,
-    "MAS": 14.9,
+    "MAS": 15,
     "genre": 6,
     "release": 15,
     "newV": 0
@@ -13087,7 +13087,7 @@
     "BAS": 4,
     "ADV": 8.5,
     "EXP": 11.6,
-    "MAS": 14.9,
+    "MAS": 15,
     "genre": 6,
     "release": 19,
     "newV": 1
@@ -13205,7 +13205,7 @@
     "BAS": 5,
     "ADV": 10,
     "EXP": 14.3,
-    "MAS": 15.2,
+    "MAS": 15.3,
     "genre": 5,
     "release": 19,
     "newV": 1
@@ -13250,7 +13250,7 @@
     "BAS": 5,
     "ADV": 9,
     "EXP": 13.9,
-    "MAS": 15.1,
+    "MAS": 15,
     "genre": 6,
     "release": 19,
     "newV": 1
@@ -13313,7 +13313,7 @@
     "BAS": 4,
     "ADV": 7.5,
     "EXP": 12.6,
-    "MAS": 14.8,
+    "MAS": 15,
     "genre": 6,
     "release": 19,
     "newV": 1
@@ -13376,7 +13376,7 @@
     "BAS": 5,
     "ADV": 8,
     "EXP": 13.8,
-    "MAS": 15,
+    "MAS": 14.9,
     "genre": 5,
     "release": 19,
     "newV": 1
@@ -13566,7 +13566,7 @@
     "BAS": 2,
     "ADV": 6,
     "EXP": 12.3,
-    "MAS": 13.9,
+    "MAS": 14,
     "genre": 2,
     "release": 19,
     "newV": 1
