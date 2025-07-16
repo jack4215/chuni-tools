@@ -6969,6 +6969,7 @@
     "ADV": 5,
     "EXP": 9,
     "MAS": 12.5,
+    "ULT": 14.5,
     "genre": 5,
     "release": 12,
     "newV": 0
@@ -12299,6 +12300,7 @@
     "ADV": 5,
     "EXP": 8,
     "MAS": 12.7,
+    "ULT": 14.2,
     "genre": 0,
     "release": 18,
     "newV": 0
@@ -13876,6 +13878,207 @@
     "MAS": 14.5,
     "genre": 9,
     "release": 19,
+    "newV": 1
+  },
+  "ぎゅむ！": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 9.5,
+    "MAS": 13.1,
+    "genre": 0,
+    "release": 20,
+    "newV": 1
+  },
+  "TAIDADA": {
+    "BAS": 2,
+    "ADV": 5,
+    "EXP": 9,
+    "MAS": 13.1,
+    "genre": 0,
+    "release": 20,
+    "newV": 1
+  },
+  "モエチャッカファイア": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 9.5,
+    "MAS": 12.8,
+    "ULT": 14.5,
+    "genre": 0,
+    "release": 20,
+    "newV": 1
+  },
+  "はいよろこんで": {
+    "BAS": 2,
+    "ADV": 6,
+    "EXP": 9,
+    "MAS": 12.9,
+    "genre": 0,
+    "release": 20,
+    "newV": 1
+  },
+  "ラヴィ": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 9.5,
+    "MAS": 13,
+    "ULT": 14.4,
+    "genre": 2,
+    "release": 20,
+    "newV": 1
+  },
+  "テトリス": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 10.1,
+    "MAS": 14.2,
+    "genre": 2,
+    "release": 20,
+    "newV": 1
+  },
+  "モ　ミ　ア　ゲ　ヲ　シ　ャ　カ　ア　ゲ　ヲ": {
+    "BAS": 2,
+    "ADV": 6,
+    "EXP": 10.4,
+    "MAS": 13,
+    "genre": 2,
+    "release": 20,
+    "newV": 1
+  },
+  "最終鬼畜妹フランドール・S (Chroma Remix)": {
+    "BAS": 3,
+    "ADV": 7,
+    "EXP": 12.5,
+    "MAS": 14.9,
+    "genre": 3,
+    "release": 20,
+    "newV": 1
+  },
+  "RE Aoharu": {
+    "BAS": 2,
+    "ADV": 6,
+    "EXP": 10.2,
+    "MAS": 13.2,
+    "genre": 6,
+    "release": 20,
+    "newV": 1
+  },
+  "Unwelcome School": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 10.8,
+    "MAS": 13.7,
+    "ULT": 15,
+    "genre": 6,
+    "release": 20,
+    "newV": 1
+  },
+  "彩りキャンバス": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 9.5,
+    "MAS": 13.6,
+    "genre": 6,
+    "release": 20,
+    "newV": 1
+  },
+  "ニルヴの心臓": {
+    "BAS": 4,
+    "ADV": 7,
+    "EXP": 13,
+    "MAS": 15,
+    "genre": 6,
+    "release": 20,
+    "newV": 1
+  },
+  "単位がない！": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 10.1,
+    "MAS": 13.9,
+    "genre": 7,
+    "release": 20,
+    "newV": 1
+  },
+  "Energizing Flame": {
+    "BAS": 4,
+    "ADV": 7,
+    "EXP": 12.6,
+    "MAS": 14.5,
+    "genre": 9,
+    "release": 20,
+    "newV": 1
+  },
+  "Daydreama": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 11.7,
+    "MAS": 14.4,
+    "genre": 9,
+    "release": 20,
+    "newV": 1
+  },
+  "エモーション・キャプチャー": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 9.5,
+    "MAS": 12.9,
+    "genre": 5,
+    "release": 20,
+    "newV": 1
+  },
+  "Flap&Clap": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 10.5,
+    "MAS": 14,
+    "genre": 5,
+    "release": 20,
+    "newV": 1
+  },
+  "luminoid love PART2": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 10.5,
+    "MAS": 14.2,
+    "genre": 5,
+    "release": 20,
+    "newV": 1
+  },
+  "χρόνος": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 12.8,
+    "MAS": 14.8,
+    "genre": 5,
+    "release": 20,
+    "newV": 1
+  },
+  "TOXIC": {
+    "BAS": 2,
+    "ADV": 6,
+    "EXP": 11,
+    "MAS": 14.3,
+    "genre": 5,
+    "release": 20,
+    "newV": 1
+  },
+  "並行天涯": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 12.7,
+    "MAS": 15.2,
+    "genre": 5,
+    "release": 20,
+    "newV": 1
+  },
+  "Wing:No.6223": {
+    "BAS": 3,
+    "ADV": 7,
+    "EXP": 11,
+    "MAS": 14.1,
+    "genre": 5,
+    "release": 20,
     "newV": 1
   }
 }
