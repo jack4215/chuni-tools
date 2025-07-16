@@ -1,13 +1,4 @@
 {
-  "1": {
-    "BAS": 3,
-    "ADV": 5,
-    "EXP": 10,
-    "MAS": 13.2,
-    "genre": 0,
-    "release": 15,
-    "newV": 0
-  },
   "39": {
     "BAS": 3,
     "ADV": 6,
@@ -949,15 +940,6 @@
     "release": 1,
     "newV": 0
   },
-  "FREELY TOMORROW": {
-    "BAS": 2,
-    "ADV": 4,
-    "EXP": 8,
-    "MAS": 11.4,
-    "genre": 2,
-    "release": 1,
-    "newV": 0
-  },
   "ギガンティックO.T.N": {
     "BAS": 3,
     "ADV": 6,
@@ -1756,15 +1738,6 @@
     "release": 3,
     "newV": 0
   },
-  "ビバハピ": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 9,
-    "MAS": 11.9,
-    "genre": 2,
-    "release": 3,
-    "newV": 0
-  },
   "願い星": {
     "BAS": 3,
     "ADV": 5,
@@ -1871,15 +1844,6 @@
     "MAS": 11.4,
     "genre": 2,
     "release": 8,
-    "newV": 0
-  },
-  "Tell Your World": {
-    "BAS": 3,
-    "ADV": 5,
-    "EXP": 8,
-    "MAS": 11.4,
-    "genre": 2,
-    "release": 3,
     "newV": 0
   },
   "ロミオとシンデレラ": {
@@ -2312,16 +2276,6 @@
     "EXP": 10.6,
     "MAS": 14.4,
     "genre": 5,
-    "release": 4,
-    "newV": 0
-  },
-  "Daydream café": {
-    "BAS": 3,
-    "ADV": 5,
-    "EXP": 8,
-    "MAS": 11.4,
-    "ULT": 12.7,
-    "genre": 0,
     "release": 4,
     "newV": 0
   },
@@ -4150,29 +4104,11 @@
     "release": 7,
     "newV": 0
   },
-  "おちゃめ機能": {
-    "BAS": 2,
-    "ADV": 5,
-    "EXP": 8,
-    "MAS": 12.6,
-    "genre": 2,
-    "release": 7,
-    "newV": 0
-  },
   "輪廻転生": {
     "BAS": 3,
     "ADV": 6,
     "EXP": 9.5,
     "MAS": 13.8,
-    "genre": 2,
-    "release": 7,
-    "newV": 0
-  },
-  "シャルル": {
-    "BAS": 3,
-    "ADV": 5,
-    "EXP": 8,
-    "MAS": 11.6,
     "genre": 2,
     "release": 7,
     "newV": 0
@@ -6469,15 +6405,6 @@
     "release": 10,
     "newV": 0
   },
-  "テリトリーバトル": {
-    "BAS": 2,
-    "ADV": 5,
-    "EXP": 9,
-    "MAS": 12.4,
-    "genre": 5,
-    "release": 11,
-    "newV": 0
-  },
   "ROAD TO DREAM": {
     "BAS": 3,
     "ADV": 6,
@@ -7361,15 +7288,6 @@
     "release": 14,
     "newV": 0
   },
-  "No.1": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 9,
-    "MAS": 11.7,
-    "genre": 0,
-    "release": 12,
-    "newV": 0
-  },
   "ザ・ライブ革命でSHOW！": {
     "BAS": 2,
     "ADV": 5,
@@ -7388,92 +7306,11 @@
     "release": 12,
     "newV": 0
   },
-  "香水": {
-    "BAS": 2,
-    "ADV": 4,
-    "EXP": 7,
-    "MAS": 10.4,
-    "genre": 0,
-    "release": 13,
-    "newV": 0
-  },
-  "猫 ～THE FIRST TAKE ver.～": {
-    "BAS": 1,
-    "ADV": 4,
-    "EXP": 8,
-    "MAS": 11.4,
-    "genre": 0,
-    "release": 13,
-    "newV": 0
-  },
-  "インフェルノ": {
-    "BAS": 3,
-    "ADV": 5,
-    "EXP": 9.5,
-    "MAS": 12.4,
-    "genre": 0,
-    "release": 13,
-    "newV": 0
-  },
-  "残酷な天使のテーゼ": {
-    "BAS": 2,
-    "ADV": 5,
-    "EXP": 8,
-    "MAS": 11.3,
-    "genre": 0,
-    "release": 13,
-    "newV": 0
-  },
   "夜に駆ける": {
     "BAS": 2,
     "ADV": 5,
     "EXP": 9,
     "MAS": 11.8,
-    "genre": 0,
-    "release": 13,
-    "newV": 0
-  },
-  "紅": {
-    "BAS": 3,
-    "ADV": 7,
-    "EXP": 11.3,
-    "MAS": 14.6,
-    "genre": 0,
-    "release": 13,
-    "newV": 0
-  },
-  "GO! GO! MANIAC": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 10,
-    "MAS": 13.5,
-    "genre": 0,
-    "release": 13,
-    "newV": 0
-  },
-  "廻廻奇譚": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 9,
-    "MAS": 12.4,
-    "genre": 0,
-    "release": 13,
-    "newV": 0
-  },
-  "エクストラ・マジック・アワー": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 8.5,
-    "MAS": 12.5,
-    "genre": 0,
-    "release": 13,
-    "newV": 0
-  },
-  "名前のない怪物": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 9,
-    "MAS": 12.6,
     "genre": 0,
     "release": 13,
     "newV": 0
@@ -7501,24 +7338,6 @@
     "ADV": 6,
     "EXP": 10,
     "MAS": 14.2,
-    "genre": 2,
-    "release": 13,
-    "newV": 0
-  },
-  "心予報": {
-    "BAS": 3,
-    "ADV": 5,
-    "EXP": 8.5,
-    "MAS": 12.8,
-    "genre": 2,
-    "release": 13,
-    "newV": 0
-  },
-  "拝啓、桜舞い散るこの日に": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 9.5,
-    "MAS": 12.5,
     "genre": 2,
     "release": 13,
     "newV": 0
@@ -7565,15 +7384,6 @@
     "ADV": 6,
     "EXP": 8.5,
     "MAS": 12,
-    "genre": 2,
-    "release": 13,
-    "newV": 0
-  },
-  "深海のリトルクライ feat. 土岐麻子": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 9.5,
-    "MAS": 13.6,
     "genre": 2,
     "release": 13,
     "newV": 0
@@ -7673,15 +7483,6 @@
     "ADV": 5,
     "EXP": 12.3,
     "MAS": 14.9,
-    "genre": 6,
-    "release": 13,
-    "newV": 0
-  },
-  "]-[|/34<#!": {
-    "BAS": 4,
-    "ADV": 8.5,
-    "EXP": 14,
-    "MAS": 14.8,
     "genre": 6,
     "release": 13,
     "newV": 0
@@ -7992,39 +7793,12 @@
     "release": 12,
     "newV": 0
   },
-  "キズナミュージック♪": {
-    "BAS": 3,
-    "ADV": 5,
-    "EXP": 9,
-    "MAS": 12.4,
-    "genre": 0,
-    "release": 13,
-    "newV": 0
-  },
-  "FIRE BIRD": {
-    "BAS": 3,
-    "ADV": 5,
-    "EXP": 9.5,
-    "MAS": 13.5,
-    "genre": 0,
-    "release": 13,
-    "newV": 0
-  },
   "最強 the サマータイム!!!!!": {
     "BAS": 3,
     "ADV": 6,
     "EXP": 9.5,
     "MAS": 12.8,
     "genre": 9,
-    "release": 12,
-    "newV": 0
-  },
-  "I believe what you said": {
-    "BAS": 2,
-    "ADV": 5,
-    "EXP": 9,
-    "MAS": 11.8,
-    "genre": 0,
     "release": 12,
     "newV": 0
   },
@@ -8163,15 +7937,6 @@
     "release": 13,
     "newV": 0
   },
-  "天空カフェテリア": {
-    "BAS": 3,
-    "ADV": 5,
-    "EXP": 8.5,
-    "MAS": 12.2,
-    "genre": 0,
-    "release": 13,
-    "newV": 0
-  },
   "ヒバリ": {
     "BAS": 3,
     "ADV": 6,
@@ -8205,15 +7970,6 @@
     "EXP": 12.3,
     "MAS": 14.9,
     "genre": 9,
-    "release": 13,
-    "newV": 0
-  },
-  "Realize": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 10,
-    "MAS": 13.3,
-    "genre": 0,
     "release": 13,
     "newV": 0
   },
@@ -8262,15 +8018,6 @@
     "release": 12,
     "newV": 0
   },
-  "FLARE": {
-    "BAS": 3,
-    "ADV": 5,
-    "EXP": 9.5,
-    "MAS": 12.6,
-    "genre": 0,
-    "release": 13,
-    "newV": 0
-  },
   "UTAKATA": {
     "BAS": 3,
     "ADV": 5,
@@ -8304,24 +8051,6 @@
     "EXP": 10.5,
     "MAS": 13.9,
     "genre": 9,
-    "release": 13,
-    "newV": 0
-  },
-  "Lost Princess": {
-    "BAS": 2,
-    "ADV": 5,
-    "EXP": 9,
-    "MAS": 11.7,
-    "genre": 0,
-    "release": 13,
-    "newV": 0
-  },
-  "Mirage Game": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 9.5,
-    "MAS": 12.4,
-    "genre": 0,
     "release": 13,
     "newV": 0
   },
@@ -8403,15 +8132,6 @@
     "EXP": 12.9,
     "MAS": 14.5,
     "genre": 6,
-    "release": 13,
-    "newV": 0
-  },
-  "なだめスかし Negotiation（TVsize）": {
-    "BAS": 3,
-    "ADV": 5,
-    "EXP": 9.5,
-    "MAS": 12.8,
-    "genre": 0,
     "release": 13,
     "newV": 0
   },
@@ -8523,15 +8243,6 @@
     "release": 13,
     "newV": 0
   },
-  "Long shot": {
-    "BAS": 2,
-    "ADV": 5,
-    "EXP": 9.5,
-    "MAS": 12.4,
-    "genre": 0,
-    "release": 13,
-    "newV": 0
-  },
   "MEGALOVANIA": {
     "BAS": 4,
     "ADV": 8,
@@ -8550,48 +8261,12 @@
     "release": 13,
     "newV": 0
   },
-  "圧　倒　的　存　在　感": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 10,
-    "MAS": 13,
-    "genre": 0,
-    "release": 13,
-    "newV": 0
-  },
   "ピアノ協奏曲第１番”蠍火”": {
     "BAS": 4,
     "ADV": 9,
     "EXP": 14.2,
     "MAS": 15.5,
     "genre": 6,
-    "release": 13,
-    "newV": 0
-  },
-  "永遠のAria": {
-    "BAS": 3,
-    "ADV": 5,
-    "EXP": 8.5,
-    "MAS": 12.7,
-    "genre": 0,
-    "release": 13,
-    "newV": 0
-  },
-  "うまぴょい伝説": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 9.5,
-    "MAS": 12.5,
-    "genre": 0,
-    "release": 13,
-    "newV": 0
-  },
-  "うっせぇわ": {
-    "BAS": 3,
-    "ADV": 5,
-    "EXP": 9,
-    "MAS": 12.9,
-    "genre": 0,
     "release": 13,
     "newV": 0
   },
@@ -8784,39 +8459,12 @@
     "release": 14,
     "newV": 0
   },
-  "違う、そうじゃない": {
-    "BAS": 1,
-    "ADV": 4,
-    "EXP": 8.5,
-    "MAS": 12.3,
-    "genre": 0,
-    "release": 13,
-    "newV": 0
-  },
-  "俺ら東京さ行ぐだ": {
-    "BAS": 2,
-    "ADV": 4,
-    "EXP": 9,
-    "MAS": 12.7,
-    "genre": 0,
-    "release": 13,
-    "newV": 0
-  },
   "J219": {
     "BAS": 2,
     "ADV": 6,
     "EXP": 10.9,
     "MAS": 14.5,
     "genre": 6,
-    "release": 13,
-    "newV": 0
-  },
-  "CAT'S EYE": {
-    "BAS": 3,
-    "ADV": 5,
-    "EXP": 9.5,
-    "MAS": 13,
-    "genre": 7,
     "release": 13,
     "newV": 0
   },
@@ -8847,24 +8495,6 @@
     "release": 14,
     "newV": 0
   },
-  "怪物": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 9,
-    "MAS": 12.5,
-    "genre": 0,
-    "release": 14,
-    "newV": 0
-  },
-  "明け星": {
-    "BAS": 1,
-    "ADV": 4,
-    "EXP": 8.5,
-    "MAS": 11.7,
-    "genre": 0,
-    "release": 14,
-    "newV": 0
-  },
   "シル・ヴ・プレジデント": {
     "BAS": 3,
     "ADV": 6,
@@ -8879,15 +8509,6 @@
     "ADV": 5,
     "EXP": 9.5,
     "MAS": 12.7,
-    "genre": 0,
-    "release": 14,
-    "newV": 0
-  },
-  "ギラギラ": {
-    "BAS": 1,
-    "ADV": 4,
-    "EXP": 8.5,
-    "MAS": 11.8,
     "genre": 0,
     "release": 14,
     "newV": 0
@@ -9090,24 +8711,6 @@
     "release": 14,
     "newV": 0
   },
-  "Dig Delight!": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 9.5,
-    "MAS": 12.7,
-    "genre": 0,
-    "release": 14,
-    "newV": 0
-  },
-  "Floor Killer": {
-    "BAS": 2,
-    "ADV": 5,
-    "EXP": 9,
-    "MAS": 12.6,
-    "genre": 0,
-    "release": 14,
-    "newV": 0
-  },
   "ジャンキーナイトタウンオーケストラ": {
     "BAS": 2,
     "ADV": 5,
@@ -9189,33 +8792,6 @@
     "release": 14,
     "newV": 0
   },
-  "くらべられっ子": {
-    "BAS": 3,
-    "ADV": 5,
-    "EXP": 9,
-    "MAS": 12.5,
-    "genre": 2,
-    "release": 14,
-    "newV": 0
-  },
-  "あの世行きのバスに乗ってさらば。": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 9.5,
-    "MAS": 12.7,
-    "genre": 2,
-    "release": 14,
-    "newV": 0
-  },
-  "泥の分際で私だけの大切を奪おうだなんて": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 10,
-    "MAS": 13.3,
-    "genre": 2,
-    "release": 14,
-    "newV": 0
-  },
   "吉原ラメント": {
     "BAS": 3,
     "ADV": 5,
@@ -9231,24 +8807,6 @@
     "EXP": 9.5,
     "MAS": 12.8,
     "genre": 2,
-    "release": 14,
-    "newV": 0
-  },
-  "愛のシュプリーム！": {
-    "BAS": 2,
-    "ADV": 5,
-    "EXP": 9,
-    "MAS": 12,
-    "genre": 0,
-    "release": 14,
-    "newV": 0
-  },
-  "めいど・うぃず・どらごんず♥": {
-    "BAS": 2,
-    "ADV": 5,
-    "EXP": 9.5,
-    "MAS": 11.8,
-    "genre": 0,
     "release": 14,
     "newV": 0
   },
@@ -9320,15 +8878,6 @@
     "ADV": 5,
     "EXP": 9.5,
     "MAS": 12.9,
-    "genre": 0,
-    "release": 14,
-    "newV": 0
-  },
-  "失礼しますが、RIP♡": {
-    "BAS": 3,
-    "ADV": 5,
-    "EXP": 10,
-    "MAS": 13.5,
     "genre": 0,
     "release": 14,
     "newV": 0
@@ -9477,15 +9026,6 @@
     "release": 14,
     "newV": 0
   },
-  "Rumbling hearts": {
-    "BAS": 2,
-    "ADV": 5,
-    "EXP": 8,
-    "MAS": 11.6,
-    "genre": 0,
-    "release": 14,
-    "newV": 0
-  },
   "非実在系女子達はどうすりゃいいですか？": {
     "BAS": 2,
     "ADV": 6,
@@ -9572,51 +9112,6 @@
     "ADV": 7,
     "EXP": 11,
     "MAS": 13.7,
-    "genre": 0,
-    "release": 15,
-    "newV": 0
-  },
-  "Before I Rise": {
-    "BAS": 2,
-    "ADV": 5,
-    "EXP": 8.5,
-    "MAS": 11.9,
-    "genre": 0,
-    "release": 15,
-    "newV": 0
-  },
-  "ミックスナッツ": {
-    "BAS": 2,
-    "ADV": 5,
-    "EXP": 9,
-    "MAS": 13,
-    "genre": 0,
-    "release": 15,
-    "newV": 0
-  },
-  "阿修羅ちゃん": {
-    "BAS": 3,
-    "ADV": 5,
-    "EXP": 9,
-    "MAS": 13,
-    "genre": 0,
-    "release": 15,
-    "newV": 0
-  },
-  "なにやってもうまくいかない": {
-    "BAS": 2,
-    "ADV": 5,
-    "EXP": 9.5,
-    "MAS": 12.7,
-    "genre": 0,
-    "release": 15,
-    "newV": 0
-  },
-  "ユメヲカケル！": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 9.5,
-    "MAS": 12.6,
     "genre": 0,
     "release": 15,
     "newV": 0
@@ -9870,33 +9365,6 @@
     "EXP": 11.4,
     "MAS": 14.7,
     "genre": 6,
-    "release": 15,
-    "newV": 0
-  },
-  "INSIDE IDENTITY": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 9.5,
-    "MAS": 12.7,
-    "genre": 0,
-    "release": 15,
-    "newV": 0
-  },
-  "Van!shment Th!s World": {
-    "BAS": 3,
-    "ADV": 5,
-    "EXP": 9.5,
-    "MAS": 12.2,
-    "genre": 0,
-    "release": 15,
-    "newV": 0
-  },
-  "がんばれ！蜘蛛子さんのテーマ": {
-    "BAS": 4,
-    "ADV": 7,
-    "EXP": 10.5,
-    "MAS": 14.3,
-    "genre": 0,
     "release": 15,
     "newV": 0
   },
@@ -10593,15 +10061,6 @@
     "release": 15,
     "newV": 0
   },
-  "Burn My Soul": {
-    "BAS": 3,
-    "ADV": 5,
-    "EXP": 9,
-    "MAS": 12.8,
-    "genre": 0,
-    "release": 15,
-    "newV": 0
-  },
   "Let you DIVE!": {
     "BAS": 3,
     "ADV": 7,
@@ -11149,15 +10608,6 @@
     "EXP": 9,
     "MAS": 11.8,
     "genre": 0,
-    "release": 16,
-    "newV": 0
-  },
-  "いつかオトナになれるといいね。": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 9.5,
-    "MAS": 12.8,
-    "genre": 2,
     "release": 16,
     "newV": 0
   },
@@ -11733,15 +11183,6 @@
     "ADV": 5,
     "EXP": 8.5,
     "MAS": 12,
-    "genre": 2,
-    "release": 17,
-    "newV": 0
-  },
-  "アンダーキッズ": {
-    "BAS": 4,
-    "ADV": 7,
-    "EXP": 9,
-    "MAS": 13.5,
     "genre": 2,
     "release": 17,
     "newV": 0
