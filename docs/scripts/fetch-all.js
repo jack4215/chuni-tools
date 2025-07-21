@@ -401,8 +401,8 @@
                                 a.append("diff", c.indexOf(t).toString()),
                                 a.append("token", r("_t"));
                                 const n = await i("/mobile/record/musicGenre/sendMusicDetail/", a)
-                                  , l = n.querySelectorAll(`.music_box.bg_${Object.entries(o).find((e => e[1] === t))[0]} .box14 > div`)[1].querySelector(".text_b")?.innerHTML.replace("times", "");
-                                return parseInt(l ?? "0")
+                                , l = n.querySelectorAll(`.music_box.bg_${Object.entries(o).find((e => e[1] === t))?.[0]} .box14 > div`)?.[1]?.querySelector(".text_b")?.innerHTML.replace("times", "");
+                                return parseInt(l) || 0
                             }(t.data.idx, t.data.difficulty)
                             break;
                         case "worldRank":
