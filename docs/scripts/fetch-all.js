@@ -417,10 +417,8 @@
                                 const l = n.querySelector(".rank_block_inner_mine");
                                 if (l) {
                                     const rank = l.querySelector(".rank_block_rank")?.textContent.trim() || "-";
-                                    console.log("%c    Your world rank: %c" + rank, "color: gray", "color: white");
                                     return parseInt(rank);
                                 } else {
-                                    console.log("%c    Your world rank: %c-", "color: gray", "color: white");
                                     return "-";
                                 }
                             }(t.data.idx, t.data.difficulty)
