@@ -64,12 +64,12 @@
             [e.en_US]: {
                 pleaseLogin: "Please login to CHUNITHM-NET first.",
                 needReload: "Please reload CHUNITHM-NET.",
-                analyzeRating: "Analyze Rating (Old)"
+                analyzeRating: "Analyze Rating (TEST)"
             },
             [e.zh_TW]: {
                 pleaseLogin: "請先登入 CHUNITHM-NET 再執行本程式。",
                 needReload: "請重新整理 CHUNITHM-NET 再執行本程式。",
-                analyzeRating: "分析遊戲成績 (舊定)"
+                analyzeRating: "分析遊戲成績 (TEST)"
             }
         }[function() {
             const t = new URLSearchParams(location.search);
@@ -270,6 +270,26 @@
                                 const n = await i("/mobile/record/musicGenre/sendMusicDetail/", a)
                                   , l = n.querySelectorAll(`.music_box.bg_${Object.entries(o).find((e => e[1] === t))[0]} .box14 > div`)[1].querySelector(".text_b")?.innerHTML.replace("times", "");
                                 return parseInt(l)
+                            }(t.data.idx, t.data.difficulty)
+                            break;
+                        case "worldRank":
+                            s = async function(e, t) {
+                                const a = new FormData;
+                                a.append("idx", e);
+                                a.append("genre", "99");
+                                a.append("diff", c.indexOf(t).toString());
+                                a.append("category", "1");
+                                a.append("token", r("_t"));
+                                const n = await i("/mobile/ranking/sendRankingDetail/", a);
+                                const l = n.querySelector(".rank_block_inner_mine");
+                                if (l) {
+                                    const rank = l.querySelector(".rank_block_rank")?.textContent.trim() || "-";
+                                    console.log("%c    Your world rank: %c" + rank, "color: gray", "color: white");
+                                    return parseInt(rank);
+                                } else {
+                                    console.log("%c    Your world rank: %c-", "color: gray", "color: white");
+                                    return "-";
+                                }
                             }(t.data.idx, t.data.difficulty)
                         }
                         l("ping", {
