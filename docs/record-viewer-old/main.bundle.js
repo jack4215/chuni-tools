@@ -856,7 +856,7 @@
         const nn = ["", "CLR", "HRD", "BRV", "ABS", "CTS"];
         return nn.indexOf(t.clear2) - nn.indexOf(e.clear2)
       },
-      playcount: (e, t) => (e.playCount === "-" ? 9999999 : e.playCount) === (t.playCount === "-" ? 9999999 : t.playCount) ? e.order - t.order : (t.playCount === "-" ? 9999999 : t.playCount) - (e.playCount === "-" ? 9999999 : e.playCount)
+      playcount: (e, t) => (e.playCount === "-" ? 9999999 : e.playCount) === (t.playCount === "-" ? 9999999 : t.playCount) ? e.order - t.order : (e.playCount === "-" ? 9999999 : e.playCount) - (t.playCount === "-" ? 9999999 : t.playCount)
     };
 
     function Xe(e) {
