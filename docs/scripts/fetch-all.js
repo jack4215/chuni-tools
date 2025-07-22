@@ -405,7 +405,7 @@
                                 return parseInt(l) || 0
                             }(t.data.idx, t.data.difficulty)
                             break;
-                        case "worldRank":
+                        case "songWorldRank":
                             s = async function(e, t) {
                                 const a = new FormData;
                                 a.append("idx", e);
