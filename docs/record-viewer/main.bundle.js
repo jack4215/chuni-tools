@@ -54,11 +54,11 @@
       },
       903: e => {
         "use strict";
-        e.exports = JSON.parse('{"main.title":"CHUNITHM Record Viewer","loading.constData":"Used song constant data: {{name}}","loading.error.serviceDown":"CHUNITHM-NET service is currently unavailable.<br/>Please come back later.","loading.error.rejected":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.timeout":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.noopener":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.unknown":"Please <em>screenshot or copy the error message</em> to the author.","header.title.dl":"Save or share B40 as image","header.title.constData":"Change song constant data (Current: {{name}})","header.title.settings":"Open settings","settings.main.title":"Settings","settings.main.reset":"Reset Settings","settings.filter.title":"Filter","settings.filter.const":"By Chart Constant","settings.filter.diff":"By Difficulty","settings.filter.diff.warn":"*Should select at least one","settings.filter.diff.notify":"*Filtering difficulties or more than two hidden songs that are not displayed on CHUNITHM-NET may cause the data to be inaccurate.","settings.filter.genre":"By Genre","settings.filter.genre.all":"Toggle ALL","settings.filter.release":"By Version","settings.filter.release.all":"Toggle ALL","settings.filter.rank":"By Rank","settings.filter.rank.all":"Tog","settings.data.title":"Game Data","settings.data.constData":"Chart Constant Data（Version : JP 20250716v9）","settings.data.constData.crossverse":"Japanese Ver. (X-VERSE)","settings.data.constData.sun":"SUN","settings.data.constData.sunplus":"SUN+","settings.data.constData.luminous":"LUMINOUS","settings.data.constData.luminousplus":"LUMINOUS PLUS","settings.data.constData.verse":"Intl. Ver. (VERSE)","settings.data.playcount":"Show Play Count","settings.data.playcount.notify":"*You can click the dark box beside a song to view its play count","settings.data.showScoreDiff":"Show Diff.erence <span style=\\"color:var(--theme-text-dim)\\">(since last updated)</span>","settings.data.diffUpdate":"Diff. Basis Update Interval <span style=\\"color:var(--theme-text-dim)\\">Last updated: {{date}}</span>","settings.data.diffUpdate.1d":"Auto-update after 1 day","settings.data.diffUpdate.3d":"Auto-update after 3 days","settings.data.diffUpdate.7d":"Auto-update after 1 week","settings.data.diffUpdate.14d":"Auto-update after 2 weeks","settings.data.diffUpdate.30d":"Auto-update after 1 month","settings.data.diffUpdate.manual":"Manually update","settings.data.diffUpdate.update":"Update Diff. Basis","settings.data.diffUpdate.reload":"Reload Page to Update","settings.data.diffUpdate.notify":"*If set to auto-update when it has been more than the specified duration from the last time updated, the program will automatically update it.<br><br>◆ For more information please refer to <a href=\\"https://chuni.tsaibee.org\\" target=\\"_blank\\">Home Page</a>.<br><br>◆ To report issues please mail to <a href=\\"mailto:admin@tsaibee.org\\" target=\\"_blank\\">admin@tsaibee.org</a>.","settings.data.overpower":"Show OVER POWER","settings.data.overpower.hide":"Hide (Show Rank)","settings.data.overpower.clr":"Hide (Show Clear Mark)","settings.data.overpower.value":"Show (OVER POWER Value)","settings.data.overpower.percentage":"Show (OVER POWER Achievement%)","settings.data.overpower.dgvalue":"Show (Designate OVER POWER Value)","settings.data.overpower.dgpercentage":"Show (Designate OVER POWER Achievement%)","settings.data.overpower.eudgvalue":"Show (Designate OVER POWER Value except unscored)","settings.data.overpower.eudgpercentage":"Show (Designate OVER POWER Achievement% except unscored)","settings.data.overpower.notify":"*It will also show unplayed song when toggled to \\"Show OVER POWER\\".<br/>*Total over power might differ from the official one, if some of the songs are not unlocked yet.<br/>*When set to \\"(Designate OVER POWER)\\", only the chart with the highest OP value and the highest difficulty for each song will be displayed.","settings.ui.title":"User Interface","settings.ui.locale":"Language","settings.ui.theme":"Theme","player.generic.generatedAt":"Generated At","player.best.playCount":"Play Count","player.best.best30":"BEST 30","player.best.maxPossible":"Max Possible","player.best.all30":"ALL 30","player.best.curr20":"CURRENT 20","player.recent.average":"Rating","record.head.playOrder":"Played Time","record.head.order":"#","record.head.title":"Title","record.head.const":"Ct","record.head.overpower":"OP","record.head.overpowerPercent":"OP%","record.head.rank":"Rank","record.head.clr":"CLR","record.head.score":"Score","record.head.scoreDiff":"Diff.","record.head.rating":"Rat.","record.head.ajfc":"AJ","record.head.playcount":"PC","record.fetch.fetching":"Fetching record for <span style=\\"color:var(--theme-song-{{diff}});\\">{{diffStr}}</span> difficulty...","record.fetch.diff.ult":"ULTIMA","record.fetch.diff.mas":"MASTER","record.fetch.diff.exp":"EXPERT","record.fetch.diff.adv":"ADVANCED","record.fetch.diff.bas":"BASIC","record.fetch.unknown":"Found unknown song(s):\\n\\n{{songs}}\\n\\nPlease contact the author via Email (admin@tsaibee.org).","record.fetch.error":"<span style=\\"color:red;\\">Some error occured when fetching best record!<br/>You probably need to reload the page now.</span>","playcount.fetch.button":"Fetch","playcount.fetch.progress":"Fetching play count... ({{progress}}/{{all}})","playcount.fetch.error":"<span style=\\"color:red;\\">Some error occured when fetching play count!<br/>You probably need to reload the page now.</span>","share.error":"Something went wrong when converting your scores to PNG. Please screenshot the error message to the author.\\n\\n{{error}}"}')
+        e.exports = JSON.parse('{"main.title":"CHUNITHM Record Viewer","loading.constData":"Used song constant data: {{name}}","loading.error.serviceDown":"CHUNITHM-NET service is currently unavailable.<br/>Please come back later.","loading.error.rejected":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.timeout":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.noopener":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.unknown":"Please <em>screenshot or copy the error message</em> to the author.","header.title.dl":"Save or share B40 as image","header.title.constData":"Change song constant data (Current: {{name}})","header.title.settings":"Open settings","settings.main.title":"Settings","settings.main.reset":"Reset Settings","settings.filter.title":"Filter","settings.filter.const":"By Chart Constant","settings.filter.diff":"By Difficulty","settings.filter.diff.warn":"*Should select at least one","settings.filter.diff.notify":"*Filtering difficulties or more than two hidden songs that are not displayed on CHUNITHM-NET may cause the data to be inaccurate.","settings.filter.genre":"By Genre","settings.filter.genre.all":"Toggle ALL","settings.filter.release":"By Version","settings.filter.release.all":"Toggle ALL","settings.filter.rank":"By Rank","settings.filter.rank.all":"Tog","settings.data.title":"Game Data","settings.data.constData":"Chart Constant Data（Version : JP 20250716v9）","settings.data.constData.crossverse":"Japanese Ver. (X-VERSE)","settings.data.constData.sun":"SUN","settings.data.constData.sunplus":"SUN+","settings.data.constData.luminous":"LUMINOUS","settings.data.constData.luminousplus":"LUMINOUS PLUS","settings.data.constData.verse":"Intl. Ver. (VERSE)","settings.data.playcount":"Show Play Count / World Ranking","settings.data.playcount.notify":"*You can click the dark box beside a song to view.","settings.data.showScoreDiff":"Show Diff.erence <span style=\\"color:var(--theme-text-dim)\\">(since last updated)</span>","settings.data.diffUpdate":"Diff. Basis Update Interval <span style=\\"color:var(--theme-text-dim)\\">Last updated: {{date}}</span>","settings.data.diffUpdate.1d":"Auto-update after 1 day","settings.data.diffUpdate.3d":"Auto-update after 3 days","settings.data.diffUpdate.7d":"Auto-update after 1 week","settings.data.diffUpdate.14d":"Auto-update after 2 weeks","settings.data.diffUpdate.30d":"Auto-update after 1 month","settings.data.diffUpdate.manual":"Manually update","settings.data.diffUpdate.update":"Update Diff. Basis","settings.data.diffUpdate.reload":"Reload Page to Update","settings.data.diffUpdate.notify":"*If set to auto-update when it has been more than the specified duration from the last time updated, the program will automatically update it.<br><br>◆ For more information please refer to <a href=\\"https://chuni.tsaibee.org\\" target=\\"_blank\\">Home Page</a>.<br><br>◆ To report issues please mail to <a href=\\"mailto:admin@tsaibee.org\\" target=\\"_blank\\">admin@tsaibee.org</a>.","settings.data.overpower":"Show OVER POWER","settings.data.overpower.hide":"Hide (Show Rank)","settings.data.overpower.clr":"Hide (Show Clear Mark)","settings.data.overpower.value":"Show (OVER POWER Value)","settings.data.overpower.percentage":"Show (OVER POWER Achievement%)","settings.data.overpower.dgvalue":"Show (Designate OVER POWER Value)","settings.data.overpower.dgpercentage":"Show (Designate OVER POWER Achievement%)","settings.data.overpower.eudgvalue":"Show (Designate OVER POWER Value except unscored)","settings.data.overpower.eudgpercentage":"Show (Designate OVER POWER Achievement% except unscored)","settings.data.overpower.notify":"*It will also show unplayed song when toggled to \\"Show OVER POWER\\".<br/>*Total over power might differ from the official one, if some of the songs are not unlocked yet.<br/>*When set to \\"(Designate OVER POWER)\\", only the chart with the highest OP value and the highest difficulty for each song will be displayed.","settings.ui.title":"User Interface","settings.ui.locale":"Language","settings.ui.theme":"Theme","player.generic.generatedAt":"Generated At","player.best.playCount":"Play Count","player.best.best30":"BEST 30","player.best.maxPossible":"Max Possible","player.best.all30":"ALL 30","player.best.curr20":"CURRENT 20","player.recent.average":"Rating","record.head.playOrder":"Played Time","record.head.order":"#","record.head.title":"Title","record.head.const":"Ct","record.head.overpower":"OP","record.head.overpowerPercent":"OP%","record.head.rank":"Rank","record.head.clr":"CLR","record.head.score":"Score","record.head.scoreDiff":"Diff.","record.head.rating":"Rat.","record.head.ajfc":"AJ","record.head.playcount":"PC","record.head.worldrank":"WR","record.fetch.fetching":"Fetching record for <span style=\\"color:var(--theme-song-{{diff}});\\">{{diffStr}}</span> difficulty...","record.fetch.diff.ult":"ULTIMA","record.fetch.diff.mas":"MASTER","record.fetch.diff.exp":"EXPERT","record.fetch.diff.adv":"ADVANCED","record.fetch.diff.bas":"BASIC","record.fetch.unknown":"Found unknown song(s):\\n\\n{{songs}}\\n\\nPlease contact the author via Email (admin@tsaibee.org).","record.fetch.error":"<span style=\\"color:red;\\">Some error occured when fetching best record!<br/>You probably need to reload the page now.</span>","playcount.fetch.button":"Fetch PC","worldrank.fetch.button":"Fetch WR","playcount.fetch.progress":"Fetching ... ({{progress}}/{{all}})","playcount.fetch.error":"<span style=\\"color:red;\\">Some error occured when fetching!<br/>You probably need to reload the page now.</span>","share.error":"Something went wrong when converting your scores to PNG. Please screenshot the error message to the author.\\n\\n{{error}}"}')
       },
       141: e => {
         "use strict";
-        e.exports = JSON.parse('{"main.title":"CHUNITHM 查分器","loading.constData":"使用 {{name}} 版本的定數資料","loading.error.serviceDown":"CHUNITHM-NET 目前正在停服維護。<br/>請在其可以使用的時段執行本程式。","loading.error.rejected":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.timeout":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.noopener":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.unknown":"無法正常執行！<br/>請截圖以下錯誤資訊並回報作者協助處理。","header.title.dl":"將B40記錄儲存為照片","header.title.constData":"切換歌曲定數資料 (目前：{{name}})","header.title.settings":"設定","settings.main.title":"設定","settings.main.reset":"重置設定","settings.filter.title":"歌曲篩選","settings.filter.const":"依 譜面定數","settings.filter.diff":"依 譜面難度","settings.filter.diff.warn":"*至少選一個吧","settings.filter.diff.notify":"*依照難度篩選或有 2 首以上未於 CHUNITHM-NET 顯示的隱藏曲，可能會使得記錄變得不準確","settings.filter.genre":"依 歌曲類別","settings.filter.genre.all":"全部開啟/關閉","settings.filter.release":"依 歌曲版本","settings.filter.release.all":"全開/關","settings.filter.rank":"依 評級分數","settings.filter.rank.all":"全選","settings.data.title":"遊戲數據","settings.data.constData":"使用的定數資料（版本：JP 20250716v9）","settings.data.constData.crossverse":"日版 (X-VERSE)","settings.data.constData.sun":"SUN","settings.data.constData.sunplus":"SUN+","settings.data.constData.luminous":"LUMINOUS","settings.data.constData.luminousplus":"LUMINOUS PLUS","settings.data.constData.verse":"國際版 (VERSE)","settings.data.playcount":"顯示個別歌曲遊玩次數","settings.data.playcount.notify":"*點擊歌曲條目旁的深色方塊也可以查看單曲遊玩次數","settings.data.showScoreDiff":"顯示推分數據","settings.data.diffUpdate":"推分基準更新週期 <span style=\\"color:var(--theme-text-dim)\\">上次更新：{{date}}</span>","settings.data.diffUpdate.1d":"一天 後自動更新","settings.data.diffUpdate.3d":"三天 後自動更新","settings.data.diffUpdate.7d":"一週 後自動更新","settings.data.diffUpdate.14d":"兩週 後自動更新","settings.data.diffUpdate.30d":"一個月 後自動更新","settings.data.diffUpdate.manual":"手動更新","settings.data.diffUpdate.update":"更新推分基準","settings.data.diffUpdate.reload":"請重新載入頁面以更新紀錄","settings.data.diffUpdate.notify":"*若設定為自動更新，每當距離「上一次記錄推分基準」超過指定時間，就會自動更新推分的計算基準<br><br>◆ 關於書籤工具說明，請見<a href=\\"https://chuni.tsaibee.org\\" target=\\"_blank\\">本服務首頁</a><br><br>◆ 問題回報請寄信至 <a href=\\"mailto:admin@tsaibee.org\\" target=\\"_blank\\">admin@tsaibee.org</a>","settings.data.overpower":"顯示 OVER POWER","settings.data.overpower.hide":"隱藏 (顯示成績評級)","settings.data.overpower.clr":"隱藏 (顯示 CLEAR 標記)","settings.data.overpower.value":"顯示 (OVER POWER 數值)","settings.data.overpower.percentage":"顯示 (OVER POWER 達成率)","settings.data.overpower.dgvalue":"顯示 (OVER POWER 對象數值)","settings.data.overpower.dgpercentage":"顯示 (OVER POWER 對象達成率)","settings.data.overpower.eudgvalue":"顯示 (OVER POWER 對象數值 - 排除無分數)","settings.data.overpower.eudgpercentage":"顯示 (OVER POWER 對象達成率 - 排除無分數)","settings.data.overpower.notify":"*設定為「顯示」時，未遊玩的歌曲也會一併顯示<br/>*若有尚未解鎖的歌曲，OVER POWER 的數據可能會與官方記錄有差別<br/>*設定為「(OVER POWER 對象)」時，僅會顯示單曲所有譜面取得最大 OP 數值難度及最高難度","settings.ui.title":"使用者介面","settings.ui.locale":"語言","settings.ui.theme":"佈景主題","player.generic.generatedAt":"生成日期","player.best.playCount":"遊玩道數","player.best.best30":"BEST 30","player.best.maxPossible":"不推分可至","player.best.all30":"ALL 30","player.best.curr20":"CURRENT 20","player.recent.average":"Rating","record.head.playOrder":"遊玩時間","record.head.order":"#","record.head.title":"曲名","record.head.const":"定數","record.head.overpower":"OP","record.head.overpowerPercent":"OP%","record.head.rank":"評級","record.head.clr":"CLR","record.head.score":"成績","record.head.scoreDiff":"推分","record.head.rating":"評分","record.head.ajfc":"AJ","record.head.playcount":"次數","record.fetch.fetching":"正在載入 <span style=\\"color:var(--theme-song-{{diff}});\\">{{diffStr}}</span> 資料……","record.fetch.diff.ult":"黑譜 (ULTIMA)","record.fetch.diff.mas":"紫譜 (MASTER)","record.fetch.diff.exp":"紅譜 (EXPERT)","record.fetch.diff.adv":"黃譜 (ADVANCED)","record.fetch.diff.bas":"綠譜 (BASIC)","record.fetch.unknown":"資料庫尚未有以下歌曲：\\n{{songs}}\\n請寄信至 admin@tsaibee.org 反映。","record.fetch.error":"<span style=\\"color:red;\\">取得遊玩記錄時發生問題，<br/>請重新整理頁面後再試一次。</span>","playcount.fetch.button":"取得","playcount.fetch.progress":"正在取得歌曲遊玩次數…… ({{progress}}/{{all}})","playcount.fetch.error":"<span style=\\"color:red;\\">取得遊玩次數時出現問題，<br/>請重新整理頁面後再試一次。</span>","share.error":"轉換圖檔時出現錯誤，請將以下的錯誤訊息截圖傳給作者處理。\\n\\n{{error}}"}')
+        e.exports = JSON.parse('{"main.title":"CHUNITHM 查分器","loading.constData":"使用 {{name}} 版本的定數資料","loading.error.serviceDown":"CHUNITHM-NET 目前正在停服維護。<br/>請在其可以使用的時段執行本程式。","loading.error.rejected":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.timeout":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.noopener":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.unknown":"無法正常執行！<br/>請截圖以下錯誤資訊並回報作者協助處理。","header.title.dl":"將B40記錄儲存為照片","header.title.constData":"切換歌曲定數資料 (目前：{{name}})","header.title.settings":"設定","settings.main.title":"設定","settings.main.reset":"重置設定","settings.filter.title":"歌曲篩選","settings.filter.const":"依 譜面定數","settings.filter.diff":"依 譜面難度","settings.filter.diff.warn":"*至少選一個吧","settings.filter.diff.notify":"*依照難度篩選或有 2 首以上未於 CHUNITHM-NET 顯示的隱藏曲，可能會使得記錄變得不準確","settings.filter.genre":"依 歌曲類別","settings.filter.genre.all":"全部開啟/關閉","settings.filter.release":"依 歌曲版本","settings.filter.release.all":"全開/關","settings.filter.rank":"依 評級分數","settings.filter.rank.all":"全選","settings.data.title":"遊戲數據","settings.data.constData":"使用的定數資料（版本：JP 20250716v9）","settings.data.constData.crossverse":"日版 (X-VERSE)","settings.data.constData.sun":"SUN","settings.data.constData.sunplus":"SUN+","settings.data.constData.luminous":"LUMINOUS","settings.data.constData.luminousplus":"LUMINOUS PLUS","settings.data.constData.verse":"國際版 (VERSE)","settings.data.playcount":"顯示個別歌曲遊玩次數 / 世界排名","settings.data.playcount.notify":"*點擊歌曲條目旁的深色方塊也可以查看","settings.data.showScoreDiff":"顯示推分數據","settings.data.diffUpdate":"推分基準更新週期 <span style=\\"color:var(--theme-text-dim)\\">上次更新：{{date}}</span>","settings.data.diffUpdate.1d":"一天 後自動更新","settings.data.diffUpdate.3d":"三天 後自動更新","settings.data.diffUpdate.7d":"一週 後自動更新","settings.data.diffUpdate.14d":"兩週 後自動更新","settings.data.diffUpdate.30d":"一個月 後自動更新","settings.data.diffUpdate.manual":"手動更新","settings.data.diffUpdate.update":"更新推分基準","settings.data.diffUpdate.reload":"請重新載入頁面以更新紀錄","settings.data.diffUpdate.notify":"*若設定為自動更新，每當距離「上一次記錄推分基準」超過指定時間，就會自動更新推分的計算基準<br><br>◆ 關於書籤工具說明，請見<a href=\\"https://chuni.tsaibee.org\\" target=\\"_blank\\">本服務首頁</a><br><br>◆ 問題回報請寄信至 <a href=\\"mailto:admin@tsaibee.org\\" target=\\"_blank\\">admin@tsaibee.org</a>","settings.data.overpower":"顯示 OVER POWER","settings.data.overpower.hide":"隱藏 (顯示成績評級)","settings.data.overpower.clr":"隱藏 (顯示 CLEAR 標記)","settings.data.overpower.value":"顯示 (OVER POWER 數值)","settings.data.overpower.percentage":"顯示 (OVER POWER 達成率)","settings.data.overpower.dgvalue":"顯示 (OVER POWER 對象數值)","settings.data.overpower.dgpercentage":"顯示 (OVER POWER 對象達成率)","settings.data.overpower.eudgvalue":"顯示 (OVER POWER 對象數值 - 排除無分數)","settings.data.overpower.eudgpercentage":"顯示 (OVER POWER 對象達成率 - 排除無分數)","settings.data.overpower.notify":"*設定為「顯示」時，未遊玩的歌曲也會一併顯示<br/>*若有尚未解鎖的歌曲，OVER POWER 的數據可能會與官方記錄有差別<br/>*設定為「(OVER POWER 對象)」時，僅會顯示單曲所有譜面取得最大 OP 數值難度及最高難度","settings.ui.title":"使用者介面","settings.ui.locale":"語言","settings.ui.theme":"佈景主題","player.generic.generatedAt":"生成日期","player.best.playCount":"遊玩道數","player.best.best30":"BEST 30","player.best.maxPossible":"不推分可至","player.best.all30":"ALL 30","player.best.curr20":"CURRENT 20","player.recent.average":"Rating","record.head.playOrder":"遊玩時間","record.head.order":"#","record.head.title":"曲名","record.head.const":"定數","record.head.overpower":"OP","record.head.overpowerPercent":"OP%","record.head.rank":"評級","record.head.clr":"CLR","record.head.score":"成績","record.head.scoreDiff":"推分","record.head.rating":"評分","record.head.ajfc":"AJ","record.head.playcount":"次數","record.head.worldrank":"世排","record.fetch.fetching":"正在載入 <span style=\\"color:var(--theme-song-{{diff}});\\">{{diffStr}}</span> 資料……","record.fetch.diff.ult":"黑譜 (ULTIMA)","record.fetch.diff.mas":"紫譜 (MASTER)","record.fetch.diff.exp":"紅譜 (EXPERT)","record.fetch.diff.adv":"黃譜 (ADVANCED)","record.fetch.diff.bas":"綠譜 (BASIC)","record.fetch.unknown":"資料庫尚未有以下歌曲：\\n{{songs}}\\n請寄信至 admin@tsaibee.org 反映。","record.fetch.error":"<span style=\\"color:red;\\">取得遊玩記錄時發生問題，<br/>請重新整理頁面後再試一次。</span>","playcount.fetch.button":"取得次數","worldrank.fetch.button":"取得世排","playcount.fetch.progress":"正在取得…… ({{progress}}/{{all}})","playcount.fetch.error":"<span style=\\"color:red;\\">執行時出現問題，<br/>請重新整理頁面後再試一次。</span>","share.error":"轉換圖檔時出現錯誤，請將以下的錯誤訊息截圖傳給作者處理。\\n\\n{{error}}"}')
       }
     },
     t = {};
@@ -856,7 +856,8 @@
         const nn = ["", "CLR", "HRD", "BRV", "ABS", "CTS"];
         return nn.indexOf(t.clear2) - nn.indexOf(e.clear2)
       },
-      playcount: (e, t) => null == e.playCount ? 100 : null == t.playCount ? -100 : e.playCount == t.playCount ? e.order - t.order : t.playCount - e.playCount
+      playcount: (e, t) => null == e.playCount ? 100 : null == t.playCount ? -100 : e.playCount == t.playCount ? e.order - t.order : t.playCount - e.playCount,
+      worldrank: (e, t) => (e.worldRank === "-" ? 9999999 : e.worldRank) === (t.worldRank === "-" ? 9999999 : t.worldRank) ? e.order - t.order : (e.worldRank === "-" ? 9999999 : e.worldRank) - (t.worldRank === "-" ? 9999999 : t.worldRank)
     };
 
     function Xe(e) {
@@ -2393,22 +2394,35 @@
     }
 
     function Yn(t) {
-      let n, r, o, a, i, l, c, d, u, f, p, h = t[3]("playcount.fetch.button") + "";
+      let n1, r, r2, n2, i, c, u, f, p,
+          h = t[3]("playcount.fetch.button") + "",
+          h2 = t[3]("worldrank.fetch.button") + "";
+
       return {
         c() {
-          n = H("div"), r = H("button"), a = D(), i = H("input"), l = D(), c = H("span"), c.textContent = "～", d = D(), u = H("input"), O(r, "type", "button"), O(r, "class", "btn svelte-1lhvhf8"), r.disabled = o = t[2] || Zn(t[0], t[1]), O(i, "type", "number"), O(i, "min", "1"), O(i, "placeholder", "from"), O(i, "inputmode", "numeric"), O(i, "class", "svelte-1lhvhf8"), O(u, "type", "number"), O(u, "min", "1"), O(u, "placeholder", "to"), O(u, "inputmode", "numeric"), O(u, "class", "svelte-1lhvhf8"), O(n, "class", "wrapper svelte-1lhvhf8")
+          n1 = H("div"), r = H("button"), r2 = H("button"),
+          n2 = H("div"), i = H("input"), c = H("span"), c.textContent = "～", u = H("input"),
+          O(r, "type", "button"), O(r, "class", "btn svelte-1lhvhf8"), r.disabled = t[2] || Zn(t[0], t[1]),
+          O(r2, "type", "button"), O(r2, "class", "btn svelte-1lhvhf8"), r2.disabled = t[2] || Zn(t[0], t[1]),
+          O(i, "type", "number"), O(i, "min", "1"), O(i, "placeholder", "from"), O(i, "inputmode", "numeric"), O(i, "class", "svelte-1lhvhf8"),
+          O(u, "type", "number"), O(u, "min", "1"), O(u, "placeholder", "to"), O(u, "inputmode", "numeric"), O(u, "class", "svelte-1lhvhf8"),
+          O(n1, "class", "wrapper svelte-1lhvhf8"), O(n2, "class", "wrapper svelte-1lhvhf8")
         },
         m(e, o) {
-          M(e, n, o), k(n, r), r.innerHTML = h, k(n, a), k(n, i), R(i, t[0]), k(n, l), k(n, c), k(n, d), k(n, u), R(u, t[1]), f || (p = [P(r, "click", t[5]), P(i, "input", t[6]), P(u, "input", t[7])], f = !0)
+          M(e, n1, o), k(n1, r), r.innerHTML = h, k(n1, r2), r2.innerHTML = h2,
+          M(e, n2, o), k(n2, i), R(i, t[0]), k(n2, c), k(n2, u), R(u, t[1]),
+          f || (p = [P(r, "click", t[5]), P(i, "input", t[6]), P(u, "input", t[7]), P(r2, "click", t[8])], f = !0)
         },
-        p(e, [t]) {
-          8 & t && h !== (h = e[3]("playcount.fetch.button") + "") && (r.innerHTML = h), 7 & t && o !== (o = e[2] || Zn(e[0], e[1])) && (r.disabled = o), 1 & t && _(i.value) !== e[0] && R(i, e[0]), 2 & t && _(u.value) !== e[1] && R(u, e[1])
+        p(e, s) {
+          (8 & s && h !== (h = e[3]("playcount.fetch.button") + "")) && (r.innerHTML = h),
+          (7 & s) && (r.disabled = e[2] || Zn(e[0], e[1]), r2.disabled = e[2] || Zn(e[0], e[1])),
+          (1 & s && _(i.value) !== e[0]) && R(i, e[0]),
+          (2 & s && _(u.value) !== e[1]) && R(u, e[1]),
+          (8 & s && h2 !== (h2 = e[3]("worldrank.fetch.button") + "")) && (r2.innerHTML = h2)
         },
         i: e,
         o: e,
-        d(e) {
-          e && E(n), f = !1, s(p)
-        }
+        d(e) { e && (E(n1), E(n2)), f = !1, s(p) }
       }
     }
 
@@ -2418,31 +2432,44 @@
 
     function Qn(e, t, n) {
       let r, o, s, a, i, l;
-      u(e, jt, (e => n(2, r = e))), u(e, wt, (e => n(3, o = e))), u(e, kt, (e => n(8, s = e))), u(e, St, (e => n(9, a = e))),/* u(e, At, (e => n(10, i = e))),*/ u(e, xt, (e => n(11, l = e)));
-      let c = 1,
-        d = 40;
+      u(e, jt, (e => n(2, r = e))), u(e, wt, (e => n(3, o = e))), u(e, kt, (e => n(8, s = e))), u(e, St, (e => n(9, a = e))), u(e, At, (e => n(10, i = e))), u(e, xt, (e => n(11, l = e)));
+
+      let c = 1, d = 40;
+
       async function f(e, t) {
         if (!Zn(e, t)) {
           p(St, a = !0, a), p(jt, r = !0, r), p(xt, l = !1, l);
           try {
             const n = sFS.slice(e - 1, t).length;
-            for (const [r, s] of sFS.slice(e - 1, t).entries()) kt.set(o("playcount.fetch.progress", {
-              progress: `${r}`,
-              all: `${n}`
-            })), null == s.playCount && (s.playCount = await gt("songPlayCount", s.difficulty, s.idx), At.set(sFS));
+            for (const [r, s] of sFS.slice(e - 1, t).entries())
+              kt.set(o("playcount.fetch.progress", { progress: `${r}`, all: `${n}` })),
+              null == s.playCount && (s.playCount = await gt("songPlayCount", s.difficulty, s.idx), At.set(i));
             p(jt, r = !1, r), p(St, a = !1, a)
           } catch {
-            p(St, a = !1, a), p(kt, s = o("playcount.fetch.error"), s), setTimeout((() => {
-              p(jt, r = !1, r)
-            }), 6e3)
+            p(St, a = !1, a), p(kt, s = o("playcount.fetch.error"), s), setTimeout(() => { p(jt, r = !1, r) }, 6e3)
           }
         }
       }
-      return [c, d, r, o, f, () => f(c, d), function() {
-        c = _(this.value), n(0, c)
-      }, function() {
-        d = _(this.value), n(1, d)
-      }]
+
+      async function f2(e, t) {
+        if (!Zn(e, t)) {
+          p(St, a = !0, a), p(jt, r = !0, r), p(xt, l = !1, l);
+          try {
+            const n = sFS.slice(e - 1, t).length;
+            for (const [r, s] of sFS.slice(e - 1, t).entries())
+              kt.set(o("playcount.fetch.progress", { progress: `${r}`, all: `${n}` })),
+              null == s.worldRank && (s.worldRank = await gt("songWorldRank", s.difficulty, s.idx), At.set(i));
+            p(jt, r = !1, r), p(St, a = !1, a)
+          } catch {
+            p(St, a = !1, a), p(kt, s = o("playcount.fetch.error"), s), setTimeout(() => { p(jt, r = !1, r) }, 6e3)
+          }
+        }
+      }
+      return [
+        c, d, r, o,
+        f,  () => f(c, d),  function(){ c = _(this.value), n(0, c) }, function(){ d = _(this.value), n(1, d) },
+        () => f2(c, d)
+      ]
     }
     const Kn = class extends Se {
       constructor(e) {
@@ -3541,27 +3568,87 @@
     }
 
     function Jr(e) {
-      let t;
-
-      function n(e, t) {
-        return void 0 === e[0].playCount ? Gr : Xr
-      }
-      let r = n(e),
-        o = r(e);
+      let ph1, ph2;
+      const selCount = e => void 0 === e[0].playCount ? Gr : Xr;
+      const selRank  = e => void 0 === e[0].worldRank ? Grw : Wrr;
+      let cr = selCount(e), rr = selRank(e),
+          cb = cr(e), rb = rr(e);
       return {
         c() {
-          o.c(), t = L()
+          cb.c(); rb.c();
+          ph1 = L(); ph2 = L();
         },
-        m(e, n) {
-          o.m(e, n), M(e, t, n)
+        m(t, a) {
+          cb.m(t, a); M(t, ph1, a);
+          rb.m(t, a); M(t, ph2, a);
         },
-        p(e, s) {
-          r === (r = n(e)) && o ? o.p(e, s) : (o.d(1), o = r(e), o && (o.c(), o.m(t.parentNode, t)))
+        p(e, f) {
+          let ncr = selCount(e), nrr = selRank(e);
+          if (cr === ncr) cb.p?.(e, f);
+          else {
+            cb.d(1);
+            cr = ncr; cb = cr(e);
+            cb.c(); cb.m(ph1.parentNode, ph1);
+          }
+          if (rr === nrr) rb.p?.(e, f);
+          else {
+            rb.d(1);
+            rr = nrr; rb = rr(e);
+            rb.c(); rb.m(ph2.parentNode, ph2);
+          }
         },
-        d(e) {
-          o.d(e), e && E(t)
+        d(detach) {
+          cb.d(detach); rb.d(detach);
+          if (detach) { E(ph1); E(ph2); }
         }
       }
+    }
+    function Wrr(e) {
+      let td, textNode, val = (e[0].worldRank ?? "-") + "";
+      return {
+        c() {
+          td = H("td");
+          textNode = A(val);
+          O(td, "class", "svelte-1gjhsjp");
+        },
+        m(target, anchor) {
+          M(target, td, anchor);
+          k(td, textNode);
+        },
+        p(e, s) {
+          let newVal = (e[0].worldRank ?? "-") + "";
+          if (val !== newVal) {
+            val = newVal;
+            I(textNode, val);
+          }
+        },
+        d(detach) {
+          if (detach) E(td);
+        }
+      };
+    }
+    function Grw(e) {
+      let td, cleanup, bound = false;
+      return {
+        c() {
+          td = H("td");
+          td.innerHTML = '<span class="svelte-1gjhsjp">  </span>';
+          O(td, "class", "pc-hidden svelte-1gjhsjp");
+          B(td, "disabled", e[5]);
+        },
+        m(target, anchor) {
+          M(target, td, anchor);
+          if (!bound) { cleanup = P(td, "click", e[9]); bound = true; }
+        },
+        p(e, flags) {
+          32 & flags && B(td, "disabled", e[5]);
+        },
+        d(detach) {
+          if (detach) E(td);
+          bound = false;
+          cleanup && cleanup();
+        }
+      };
     }
 
     function Xr(e) {
@@ -3697,6 +3784,12 @@
           n(0, l.playCount = e, l)
         })).catch((() => {
           n(0, l.playCount = null, l)
+        }))
+      }, () => {
+        i || gt("songWorldRank", l.difficulty, l.idx).then((e => {
+          n(0, l.worldRank = e, l)
+        })).catch((() => {
+          n(0, l.worldRank = null, l)
         }))
       }]
     }
@@ -3911,6 +4004,10 @@
         }, {
           display: "playcount",
           sort: "playcount",
+          condition: a && "all" === s
+        }, {
+          display: "worldrank",
+          sort: "worldrank",
           condition: a && "all" === s
         }])
       }, [f, p, h, o, r, c, d, s, a, i, l, e => {
