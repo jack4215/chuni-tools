@@ -13530,5 +13530,50 @@
     "genre": 5,
     "release": 20,
     "newV": 1
+  },
+  "ブタサンダー": {
+    "BAS": 2,
+    "ADV": 5,
+    "EXP": 8.5,
+    "MAS": 13.3,
+    "genre": 2,
+    "release": 20,
+    "newV": 1
+  },
+  "私の歯医者さん": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 8,
+    "MAS": 13.2,
+    "genre": 2,
+    "release": 20,
+    "newV": 1
+  },
+  "少女A": {
+    "BAS": 2,
+    "ADV": 6,
+    "EXP": 10.3,
+    "MAS": 14.2,
+    "genre": 2,
+    "release": 20,
+    "newV": 1
+  },
+  "え？あぁ、そう。- 10th Anniversary Edition -": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 9.5,
+    "MAS": 14,
+    "genre": 2,
+    "release": 20,
+    "newV": 1
+  },
+  "Individual on parade!": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 9,
+    "MAS": 12.6,
+    "genre": 9,
+    "release": 20,
+    "newV": 1
   }
 }
