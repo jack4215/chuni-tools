@@ -63,7 +63,8 @@ async function fetchData() {
             { name: "Head", url: "https://chunithm-net-eng.com/mobile/collection/avatarCustom/customiseHead/" },
             { name: "Wear", url: "https://chunithm-net-eng.com/mobile/collection/avatarCustom/customiseWear/" },
             { name: "Item", url: "https://chunithm-net-eng.com/mobile/collection/avatarCustom/customiseItem/" },
-            { name: "Back", url: "https://chunithm-net-eng.com/mobile/collection/avatarCustom/customiseBack/" }
+            { name: "Back", url: "https://chunithm-net-eng.com/mobile/collection/avatarCustom/customiseBack/" },
+            { name: "Front", url: "https://chunithm-net-eng.com/mobile/collection/avatarCustom/customiseFront/" }
         ];
 
         let avatarCounts = {};
@@ -173,6 +174,7 @@ style.innerHTML = `
     .avatar-table th.wear-bg { background-color: #ffa0a0; }
     .avatar-table th.item-bg { background-color: #ffd18f; }
     .avatar-table th.back-bg { background-color: #ff9fff; }
+    .avatar-table th.front-bg { background-color: #59ffff; }
 
     .Count-Info {
         font-family: Arial, sans-serif;
