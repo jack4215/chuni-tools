@@ -13575,5 +13575,50 @@
     "genre": 9,
     "release": 20,
     "newV": 1
+  },
+  "アージェントシンメトリー": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 10.2,
+    "MAS": 14.4,
+    "genre": 9,
+    "release": 20,
+    "newV": 1
+  },
+  "ノーライ": {
+    "BAS": 3,
+    "ADV": 7,
+    "EXP": 11.7,
+    "MAS": 14.7,
+    "genre": 5,
+    "release": 20,
+    "newV": 1
+  },
+  "あの日、あの部屋で、あったこと": {
+    "BAS": 4,
+    "ADV": 8.5,
+    "EXP": 13.3,
+    "MAS": 15.1,
+    "genre": 5,
+    "release": 20,
+    "newV": 1
+  },
+  "Star Saveler": {
+    "BAS": 3,
+    "ADV": 7,
+    "EXP": 11.1,
+    "MAS": 14.3,
+    "genre": 5,
+    "release": 20,
+    "newV": 1
+  },
+  "Tru'nembra": {
+    "BAS": 5,
+    "ADV": 10,
+    "EXP": 14.4,
+    "MAS": 15.6,
+    "genre": 5,
+    "release": 20,
+    "newV": 1
   }
 }
