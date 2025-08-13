@@ -1,7 +1,5 @@
 {
     "githubPullRequests.ignoredPullRequestBranches": [
-        "schedule",
-        "schedule",
         "schedule"
     ]
 }
