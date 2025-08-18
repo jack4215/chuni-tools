@@ -252,6 +252,7 @@
                                     playCount: e.querySelector(".user_data_play_count .user_data_text").innerHTML,
                                     lastPlayed: Date.parse(e.querySelector(".player_lastplaydate_text").innerHTML),
                                     ratingPn: background,
+                                    team: e.querySelector(".player_team_name")?.innerHTML || "N/A",
                                     code: e.querySelector('.user_data_friend_code .user_data_text span[style="display:none;"]')?.innerText || "N/A",
                                 };
                                 return playerData;

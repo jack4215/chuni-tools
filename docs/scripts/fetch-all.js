@@ -338,8 +338,18 @@
                             }();
                             break;
                         case "playerStats":
-                            s = async function() {
+                            s = async function () {
                                 const e = await i("/mobile/home/playerData");
+                                let tb = "N/A";
+                                const teamElement = e.querySelector(".player_team_name");
+                                if (teamElement) {
+                                    const tp = await i("/mobile/team/teamTop");
+                                    const bD = Array.from(tp.querySelectorAll(".team_boost_check"))
+                                        .filter(el => el.querySelector(".team_boost_boost_day"))
+                                        .map(el => el.textContent.trim())
+                                        .filter(day => /^\d+$/.test(day));
+                                    tb = bD.join(",") || "N/A";
+                                }
                                 const t = e.querySelectorAll(".player_honor_short")[0];
                                 const r = /honor_bg_.*(?=\.png)/.exec(t.style.backgroundImage);
                                 let honorTextElement = t.querySelector(".player_honor_text_view span");
@@ -364,7 +374,7 @@
                                     }
                                 }
                                 const a = Array.from(e.querySelectorAll(".player_rating_num_block img"))
-                                    .map((e => /rating_.*_comma.png/.test(e.src) ? "." : /rating_.*_[0-9]*(?=\.png)/.exec(e.src)[0].slice(-1)))
+                                    .map(e => /rating_.*_comma.png/.test(e.src) ? "." : /rating_.*_[0-9]*(?=\.png)/.exec(e.src)[0].slice(-1))
                                     .join("");
                                 const profileDiv = e.querySelector(".box_playerprofile.clearfix, .box_playerprofile");
                                 let background = "normal";
@@ -386,6 +396,8 @@
                                     playCount: e.querySelector(".user_data_play_count .user_data_text").innerHTML,
                                     lastPlayed: Date.parse(e.querySelector(".player_lastplaydate_text").innerHTML),
                                     ratingPn: background,
+                                    team: teamElement?.innerHTML || "N/A",
+                                    tb: tb,
                                     code: e.querySelector('.user_data_friend_code .user_data_text span[style="display:none;"]')?.innerText || "N/A",
                                 };
                                 return playerData;

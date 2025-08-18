@@ -192,6 +192,7 @@
                                     playCount: "--", 
                                     lastPlayed: "--",
                                     ratingPn: background,
+                                    team: e.querySelector(".player_team_name")?.innerHTML || "N/A",
                                     code: selectedFriendIdx,
                                     fname: f.querySelector(".player_name_in").innerHTML,
                                     frating: aa,
