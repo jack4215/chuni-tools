@@ -13620,5 +13620,50 @@
     "genre": 5,
     "release": 20,
     "newV": 1
+  },
+  "1番輝く星": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 9,
+    "MAS": 12.7,
+    "genre": 0,
+    "release": 20,
+    "newV": 1
+  },
+  "きゅびずむ": {
+    "BAS": 4,
+    "ADV": 6,
+    "EXP": 9.5,
+    "MAS": 12.8,
+    "genre": 0,
+    "release": 20,
+    "newV": 1
+  },
+  "きゅびびびびずむ": {
+    "BAS": 5,
+    "ADV": 9,
+    "EXP": 12.9,
+    "MAS": 14.5,
+    "genre": 0,
+    "release": 20,
+    "newV": 1
+  },
+  "うい麦畑でつかまえて": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 9.5,
+    "MAS": 13.7,
+    "genre": 0,
+    "release": 20,
+    "newV": 1
+  },
+  "幽霊船戦": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 10,
+    "MAS": 14.6,
+    "genre": 0,
+    "release": 20,
+    "newV": 1
   }
 }
