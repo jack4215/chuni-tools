@@ -34,7 +34,7 @@
       .rank_block_justice {
         position: absolute;
         left: 3px;
-        top: -3px;
+        top: -4px;
         font-size: small;
         color: #ff8645;
         white-space: nowrap;
