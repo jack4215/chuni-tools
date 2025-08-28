@@ -35,7 +35,7 @@
         position: absolute;
         left: 3px;
         top: -3px;
-        font-size: x-small;
+        font-size: small;
         color: #ff8645;
         white-space: nowrap;
       }
