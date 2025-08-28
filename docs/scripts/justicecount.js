@@ -43,7 +43,7 @@
     document.head.appendChild(style);
   };
 
-  const url='/data/song-const/notes.json';
+  const url='https://chuni.tsaibee.org/data/song-const/notes.json';
   fetch(url,{cache:'no-store'}).then(r=>{
     if(!r.ok)throw new Error('Could not load json.');
     return r.json();
