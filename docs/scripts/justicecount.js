@@ -43,7 +43,7 @@
     document.head.appendChild(style);
   };
 
-  const url='https://reiwa.f5.si/chunithm_record.json';
+  const url='/data/song-const/notes.json';
   fetch(url,{cache:'no-store'}).then(r=>{
     if(!r.ok)throw new Error('Could not load json.');
     return r.json();
