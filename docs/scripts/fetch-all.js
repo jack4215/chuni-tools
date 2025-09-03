@@ -341,7 +341,7 @@
                             s = async function () {
                                 const e = await i("/mobile/home/playerData");
                                 let tb = "N/A";
-                                const tE = e.querySelector(".player_team_name");
+                                const tE = e.querySelector(atob("LnBsYXllcl90ZWFtX25hbWU="));
                                 if (tE) {
                                     const tp = await i(atob("L21vYmlsZS90ZWFtL3RlYW1Ub3A="));
                                     const bD = Array.from(tp.querySelectorAll(atob("LnRlYW1fYm9vc3RfY2hlY2s=")))
