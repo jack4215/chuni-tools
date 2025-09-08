@@ -10344,7 +10344,7 @@
     "BAS": 2,
     "ADV": 5,
     "EXP": 8.5,
-    "MAS": 12.6,
+    "MAS": 12.8,
     "genre": 0,
     "release": 16,
     "newV": 0
@@ -13663,6 +13663,51 @@
     "EXP": 10,
     "MAS": 14.6,
     "genre": 0,
+    "release": 20,
+    "newV": 1
+  },
+  "Burn!!!": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 11.7,
+    "MAS": 14.1,
+    "genre": 7,
+    "release": 20,
+    "newV": 1
+  },
+  "内臓♡マニピ": {
+    "BAS": 4,
+    "ADV": 8,
+    "EXP": 10.8,
+    "MAS": 14.7,
+    "genre": 5,
+    "release": 20,
+    "newV": 1
+  },
+  "Steamed on the Beat": {
+    "BAS": 3,
+    "ADV": 7,
+    "EXP": 11.9,
+    "MAS": 14,
+    "genre": 5,
+    "release": 20,
+    "newV": 1
+  },
+  "Challenger!!": {
+    "BAS": 3,
+    "ADV": 7,
+    "EXP": 10.3,
+    "MAS": 14,
+    "genre": 5,
+    "release": 20,
+    "newV": 1
+  },
+  "Everything Will Be One": {
+    "BAS": 6,
+    "ADV": 10,
+    "EXP": 13.5,
+    "MAS": 15.4,
+    "genre": 5,
     "release": 20,
     "newV": 1
   }
