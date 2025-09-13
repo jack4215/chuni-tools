@@ -397,6 +397,7 @@
     "ADV": 6,
     "EXP": 10.4,
     "MAS": 14,
+    "ULT": 14.8,
     "genre": 5,
     "release": 2,
     "newV": 0
@@ -1497,6 +1498,7 @@
     "ADV": 6,
     "EXP": 10.3,
     "MAS": 13.5,
+    "ULT": 14.7,
     "genre": 5,
     "release": 3,
     "newV": 0
@@ -1914,6 +1916,7 @@
     "ADV": 5,
     "EXP": 8.5,
     "MAS": 11.4,
+    "ULT": 13.7,
     "genre": 5,
     "release": 3,
     "newV": 0
@@ -2646,6 +2649,7 @@
     "ADV": 6,
     "EXP": 9.5,
     "MAS": 13.7,
+    "ULT": 14.2,
     "genre": 5,
     "release": 4,
     "newV": 0
@@ -2873,6 +2877,7 @@
     "ADV": 6,
     "EXP": 8,
     "MAS": 12.5,
+    "ULT": 13.6,
     "genre": 5,
     "release": 5,
     "newV": 0
@@ -7320,6 +7325,7 @@
     "ADV": 5,
     "EXP": 9,
     "MAS": 11.7,
+    "ULT": 13.7,
     "genre": 5,
     "release": 12,
     "newV": 0
