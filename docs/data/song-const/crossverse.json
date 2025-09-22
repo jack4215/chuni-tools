@@ -13720,5 +13720,59 @@
     "genre": 5,
     "release": 20,
     "newV": 1
+  },
+  "ずんだシェイキング": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 11.1,
+    "MAS": 13.6,
+    "genre": 2,
+    "release": 20,
+    "newV": 1
+  },
+  "オブソミート": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 9.5,
+    "MAS": 13.8,
+    "genre": 2,
+    "release": 20,
+    "newV": 1
+  },
+  "スーパーヒーロー": {
+    "BAS": 2,
+    "ADV": 5,
+    "EXP": 8,
+    "MAS": 12.5,
+    "genre": 2,
+    "release": 20,
+    "newV": 1
+  },
+  "カルチャ": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 10,
+    "MAS": 14,
+    "genre": 2,
+    "release": 20,
+    "newV": 1
+  },
+  "スパイダーダンス": {
+    "BAS": 2,
+    "ADV": 6,
+    "EXP": 10.7,
+    "MAS": 14.5,
+    "genre": 6,
+    "release": 20,
+    "newV": 1
+  },
+  "夢と希望": {
+    "BAS": 3,
+    "ADV": 7,
+    "EXP": 10.3,
+    "MAS": 13.5,
+    "genre": 6,
+    "release": 20,
+    "newV": 1
   }
 }
