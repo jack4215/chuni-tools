@@ -290,7 +290,7 @@
                                     const difficultyScore = sumScores(records);
                                     const totalHighScore = await fetchTotalHighScore(difficultyNames[e]);
                                     const clearStatus = JSON.parse(localStorage.getItem("clearStatus_251002") || "{}");
-                                 //   if (e === o.ultima) {
+                                    if (e !== o.ultima) {
                                         records.push({
                                             title: "Crossmythos Rhapsodia",
                                             score: totalHighScore - difficultyScore === 0 ? -1 : totalHighScore - difficultyScore, 
@@ -299,7 +299,7 @@
                                             clear2: "",
                                             idx: "2802"
                                         });
-                                 //   }
+                                    }
                                     // Add hidden song end 
                                     return records;
                                 }(t.data.difficulty);
