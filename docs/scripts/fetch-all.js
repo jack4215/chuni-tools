@@ -99,13 +99,13 @@
                 l.getElementsByTagName("head")[0].appendChild(r),
                 r.addEventListener("load", ( () => {
                     l.querySelector(".clearfix")?.insertAdjacentElement("afterend", e);
-                 //   insertClearButtons();
+                    insertClearButtons();
                 }
                 ))
                 function insertClearButtons() {
-                    const difficulties = ["ULT"];
+                    const difficulties = ["BAS","ADV","EXP","MAS"];
                     const types = ["FC", "AJ"];
-                    const stateKey = "clearStatus_250417";
+                    const stateKey = "clearStatus_251002";
                     const defaultState = { BAS: "", ADV: "", EXP: "", MAS: "", ULT: "" };
                     const state = JSON.parse(localStorage.getItem(stateKey) || JSON.stringify(defaultState));
                     const colorMap = { BAS: "#8ae29a", ADV: "#ea8a55", EXP: "#ed5a77", MAS: "#dd8aee", ULT: "#78deff" };
@@ -113,7 +113,7 @@
                     container.className = "clear-select-container";
                     const title = document.createElement("p");
                     title.id = "clear-toggle-title";
-                    title.innerText = "Select \"Theatore Creatore\" Status ▼";
+                    title.innerText = "Select \"Crossmythos Rhapsodia\" Status ▼";
                     title.style.cursor = "pointer";
                     container.appendChild(title);
                     const grid = document.createElement("div");
@@ -164,7 +164,7 @@
                     title.addEventListener("click", () => {
                         grid.classList.toggle("open");
                         const isOpen = grid.classList.contains("open");
-                        title.innerText = `Select \"Theatore Creatore\" Status ${isOpen ? "▲" : "▼"}`;
+                        title.innerText = `Select \"Crossmythos Rhapsodia\" Status ${isOpen ? "▲" : "▼"}`;
                     });
                     const style = document.createElement("style");
                     style.textContent = `
@@ -279,7 +279,7 @@
                                             idx: t.querySelector('input[name="idx"]').value
                                         };
                                     })).filter((e => e.title && e.score && !e.title.includes("Floor Killer") && !e.title.includes("Dig Delight!")));
-                                 /*   // Add hidden song
+                                    // Add hidden song
                                     const difficultyNames = {
                                         [o.ultima]: "ultima",
                                         [o.master]: "master",
@@ -289,18 +289,18 @@
                                     };   
                                     const difficultyScore = sumScores(records);
                                     const totalHighScore = await fetchTotalHighScore(difficultyNames[e]);
-                                    const clearStatus = JSON.parse(localStorage.getItem("clearStatus_250417") || "{}");
-                                    if (e === o.ultima) {
+                                    const clearStatus = JSON.parse(localStorage.getItem("clearStatus_251002") || "{}");
+                                 //   if (e === o.ultima) {
                                         records.push({
-                                            title: "Theatore Creatore",
+                                            title: "Crossmythos Rhapsodia",
                                             score: totalHighScore - difficultyScore === 0 ? -1 : totalHighScore - difficultyScore, 
                                             difficulty: e,
                                             clear: clearStatus[e] || "",
                                             clear2: "",
-                                            idx: "2712"
+                                            idx: "2802"
                                         });
-                                    }
-                                    // Add hidden song end */
+                                 //   }
+                                    // Add hidden song end 
                                     return records;
                                 }(t.data.difficulty);
                                 break;
