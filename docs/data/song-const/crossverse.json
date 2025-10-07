@@ -13774,5 +13774,50 @@
     "genre": 6,
     "release": 20,
     "newV": 1
+  },
+  "ソウルのピース": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 10.6,
+    "MAS": 13.7,
+    "genre": 7,
+    "release": 20,
+    "newV": 1
+  },
+  "ナラク・オン・エア": {
+    "BAS": 4,
+    "ADV": 6,
+    "EXP": 12,
+    "MAS": 14.2,
+    "genre": 5,
+    "release": 20,
+    "newV": 1
+  },
+  "システム": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 11.4,
+    "MAS": 13.6,
+    "genre": 5,
+    "release": 20,
+    "newV": 1
+  },
+  "恋伯色": {
+    "BAS": 4,
+    "ADV": 6,
+    "EXP": 9.5,
+    "MAS": 13.8,
+    "genre": 5,
+    "release": 20,
+    "newV": 1
+  },
+  "OUTRAGE": {
+    "BAS": 6,
+    "ADV": 10.4,
+    "EXP": 14,
+    "MAS": 15.4,
+    "genre": 5,
+    "release": 20,
+    "newV": 1
   }
 }
