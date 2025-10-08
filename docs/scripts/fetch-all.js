@@ -197,6 +197,7 @@
                         .clear-grid.open {
                             max-height: 300px;
                             padding: 6px 0;
+                            user-select: none;
                         }
                         .clear-row {
                             display: flex;
