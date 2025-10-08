@@ -8,24 +8,6 @@
     "release": 8,
     "newV": 0
   },
-  "サクリファイス": {
-    "BAS": 3,
-    "ADV": 7,
-    "EXP": 9.5,
-    "MAS": 13.4,
-    "genre": 2,
-    "release": 12,
-    "newV": 0
-  },
-  "HECATONCHEIR": {
-    "BAS": 3,
-    "ADV": 7,
-    "EXP": 11.8,
-    "MAS": 14.1,
-    "genre": 9,
-    "release": 18,
-    "newV": 0
-  },
   "B.B.K.K.B.K.K.": {
     "BAS": 4,
     "ADV": 6,
@@ -11851,6 +11833,15 @@
     "ADV": 9,
     "EXP": 13.5,
     "MAS": 15.3,
+    "genre": 9,
+    "release": 18,
+    "newV": 0
+  },
+  "HECATONCHEIR": {
+    "BAS": 3,
+    "ADV": 7,
+    "EXP": 11.8,
+    "MAS": 14.1,
     "genre": 9,
     "release": 18,
     "newV": 0
