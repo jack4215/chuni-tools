@@ -2157,7 +2157,7 @@
           M(e, t, s), k(t, n), r || (o = P(t, "click", a), r = !0)
         },
         p(n, r) {
-          e = n, 32 & r && (t.disabled = e[5]), 2 & r && B(t, "activated", e[1][e[6]])
+          e = n, t.disabled = e[5], 2 & r && B(t, "activated", e[1][e[6]])
         },
         d(e) {
           e && E(t), r = !1, o()
@@ -2192,7 +2192,12 @@
             for (; n < h.length; n += 1) h[n].d(1);
             h.length = p.length
           }
-          4 & t && f !== (f = e[2]("settings.filter.genre.all") + "") && I(l, f), 1 & t && B(i, "activated", e[0])/*, 32 & t && (i.disabled = e[5])*/
+          32 & t && (function() { for (let n = 0; n < h.length; n += 1) {
+              const childCtx = Vn(e, p, n);
+              h[n].p(childCtx, 32)
+            }
+          })()
+          4 & t && f !== (f = e[2]("settings.filter.genre.all") + "") && I(l, f), 1 & t && B(i, "activated", e[0]), 32 & t && (i.disabled = e[5])
         },
         i: e,
         o: e,
@@ -2242,7 +2247,7 @@
           M(e, t, s), k(t, n), r || (o = P(t, "click", a), r = !0)
         },
         p(n, r) {
-          e = n, 32 & r && (t.disabled = e[5]), 2 & r && B(t, "activated", e[1][e[6]])
+          e = n, t.disabled = e[5], 2 & r && B(t, "activated", e[1][e[6]])
         },
         d(e) {
           e && E(t), r = !1, o()
@@ -2277,7 +2282,12 @@
             for (; n < h.length; n += 1) h[n].d(1);
             h.length = p.length
           }
-          4 & t && f !== (f = e[2]("settings.filter.release.all") + "") && I(l, f), 1 & t && B(i, "activated", e[0])/*, 32 & t && (i.disabled = e[5])*/
+          32 & t && (function() { for (let n = 0; n < h.length; n += 1) {
+              const childCtx = Vn(e, p, n);
+              h[n].p(childCtx, 32)
+            }
+          })()
+          4 & t && f !== (f = e[2]("settings.filter.release.all") + "") && I(l, f), 1 & t && B(i, "activated", e[0]), 32 & t && (i.disabled = e[5])
         },
         i: e,
         o: e,
@@ -2327,7 +2337,7 @@
           M(e, t, s), k(t, n), r || (o = P(t, "click", a), r = !0)
         },
         p(n, r) {
-          e = n, 32 & r && (t.disabled = e[5]), 2 & r && B(t, "activated", e[1][e[6]])
+          e = n, t.disabled = e[5], 2 & r && B(t, "activated", e[1][e[6]])
         },
         d(e) {
           e && E(t), r = !1, o()
@@ -2362,7 +2372,12 @@
             for (; n < h.length; n += 1) h[n].d(1);
             h.length = p.length
           }
-          4 & t && f !== (f = e[2]("settings.filter.rank.all") + "") && I(l, f), 1 & t && B(i, "activated", e[0])/*, 32 & t && (i.disabled = e[5])*/
+          32 & t && (function() { for (let n = 0; n < h.length; n += 1) {
+              const childCtx = Vn(e, p, n);
+              h[n].p(childCtx, 32)
+            }
+          })()
+          4 & t && f !== (f = e[2]("settings.filter.rank.all") + "") && I(l, f), 1 & t && B(i, "activated", e[0]), 32 & t && (i.disabled = e[5])
         },
         i: e,
         o: e,
