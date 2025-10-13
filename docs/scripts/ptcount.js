@@ -24,12 +24,12 @@ function displayPt() {
         });
     });
 
-    let message = "點數統計：(每日上限 30 pt)\n";
+    let message = "Total：(Daily limit 30 pt)\n";
     availableMonths.forEach((month, index) => {
         const points = monthlyData[month] || 0;
         message += `${month.slice(0, 4)}/${month.slice(4)}: ${points} pt`;
         if (index === availableMonths.length - 1) {
-            message += " (資料未齊)";
+            message += " (Incomplete)";
         }
         message += "\n";
     });
