@@ -99,7 +99,7 @@
                 l.getElementsByTagName("head")[0].appendChild(r),
                 r.addEventListener("load", ( () => {
                     l.querySelector(".clearfix")?.insertAdjacentElement("afterend", e);
-                    insertClearButtons();
+                //    insertClearButtons();
                 }
                 ))
                 function insertClearButtons() {
@@ -280,8 +280,8 @@
                                             idx: t.querySelector('input[name="idx"]').value
                                         };
                                     })).filter((e => e.title && e.score && !e.title.includes("Floor Killer") && !e.title.includes("Dig Delight!")));
-                                    // Add hidden song
-                                    const difficultyNames = {
+                                /*    // Add hidden song
+                                    const dNs = {
                                         [o.ultima]: "ultima",
                                         [o.master]: "master",
                                         [o.expert]: "expert",
@@ -289,7 +289,7 @@
                                         [o.basic]: "basic"
                                     };   
                                     const difficultyScore = sumScores(records);
-                                    const totalHighScore = await fetchTotalHighScore(difficultyNames[e]);
+                                    const totalHighScore = await fetchTotalHighScore(dNs[e]);
                                     const clearStatus = JSON.parse(localStorage.getItem("clearStatus_251002") || "{}");
                                     if (e !== o.ultima) {
                                         records.push({
@@ -301,7 +301,7 @@
                                             idx: "2802"
                                         });
                                     }
-                                    // Add hidden song end 
+                                    // Add hidden song end */
                                     return records;
                                 }(t.data.difficulty);
                                 break;
