@@ -867,7 +867,7 @@
     function Ge(e, t, n) {
       const r = e, o = t, s = [];  
       r.map(e => {
-          let songData = t.songs ? t.songs.find(song => song.title === e.title) : t[e.title];
+          let songData = t.songs ? t.songs.find(song => Xe(song.title) === Xe(e.title)) : (t[e.title] || t[Xe(e.title)]);
           if (songData && songData.newV !== undefined) {
               e.newV = songData.newV;
           } else {
