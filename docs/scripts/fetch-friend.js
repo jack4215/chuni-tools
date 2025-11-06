@@ -168,7 +168,7 @@
                                 let honorColor = "normal";
                                 if (t) {
                                     const honorTextElement = t.querySelector(".player_honor_text_view span");
-                                    honorText = honorTextElement ? honorTextElement.innerHTML : null;
+                                    honorText = honorTextElement ? honorTextElement.textContent.trim() : null;
                                     const bgImage = t.style.backgroundImage;
                                     const imageUrlMatch = bgImage.match(/url\(["']?(.*?)["']?\)/);
                                     const imageUrl = imageUrlMatch ? imageUrlMatch[1] : null;

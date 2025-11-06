@@ -344,7 +344,7 @@
                                 const t = e.querySelectorAll(".player_honor_short")[0];
                                 const r = /honor_bg_.*(?=\.png)/.exec(t.style.backgroundImage);
                                 let honorTextElement = t.querySelector(".player_honor_text_view span");
-                                let honorText = honorTextElement ? honorTextElement.innerHTML : null;
+                                let honorText = honorTextElement ? honorTextElement.textContent.trim() : null;
                                 let honorColor = r ? r[0].slice(9) : "normal";
                                 if (!honorText && t) {
                                     const backgroundImage = t.style.backgroundImage;
