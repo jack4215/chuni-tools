@@ -340,17 +340,7 @@
                             break;
                         case "playerStats":
                             s = async function () {
-                                const e = await i("/mobile/home/playerData");
-                                let tb = "N/A";
-                                const tE = e.querySelector(atob("LnBsYXllcl90ZWFtX25hbWU="));
-                                if (tE) {
-                                    const tp = await i(atob("L21vYmlsZS90ZWFtL3RlYW1Ub3A="));
-                                    const bD = Array.from(tp.querySelectorAll(atob("LnRlYW1fYm9vc3RfY2hlY2s=")))
-                                        .filter(el => el.querySelector(atob("LnRlYW1fYm9vc3RfYm9vc3RfZGF5")))
-                                        .map(el => el.textContent.trim())
-                                        .filter(day => /^\d+$/.test(day));
-                                    tb = bD.join(",") || "N/A";
-                                }
+                                const e = await i("/mobile/home/playerData");                                
                                 const t = e.querySelectorAll(".player_honor_short")[0];
                                 const r = /honor_bg_.*(?=\.png)/.exec(t.style.backgroundImage);
                                 let honorTextElement = t.querySelector(".player_honor_text_view span");
@@ -398,7 +388,6 @@
                                     lastPlayed: Date.parse(e.querySelector(".player_lastplaydate_text").innerHTML),
                                     ratingPn: background,
                                     team: e.querySelector(".player_team_name")?.innerHTML || "N/A",
-                                    tb: tb,
                                     code: e.querySelector('.user_data_friend_code .user_data_text span[style="display:none;"]')?.innerText || "N/A",
                                 };
                                 return playerData;

@@ -13963,5 +13963,50 @@
     "genre": 2,
     "release": 20,
     "newV": 1
+  },
+  "Kaleidoscope": {
+    "BAS": 3,
+    "ADV": 7,
+    "EXP": 13.5,
+    "MAS": 15.2,
+    "genre": 6,
+    "release": 20,
+    "newV": 1
+  },
+  "hyperreality": {
+    "BAS": 5,
+    "ADV": 8,
+    "EXP": 13.6,
+    "MAS": 15.2,
+    "genre": 5,
+    "release": 20,
+    "newV": 1
+  },
+  "Deep Blue": {
+    "BAS": 6,
+    "ADV": 11,
+    "EXP": 14.5,
+    "MAS": 15.6,
+    "genre": 5,
+    "release": 20,
+    "newV": 1
+  },
+  "DEvourER": {
+    "BAS": 4,
+    "ADV": 7,
+    "EXP": 12.8,
+    "MAS": 14.8,
+    "genre": 5,
+    "release": 20,
+    "newV": 1
+  },
+  "創 -汝ら新世界へ歩む者なり-": {
+    "BAS": 7,
+    "ADV": 12,
+    "EXP": 14.8,
+    "MAS": 15.7,
+    "genre": 5,
+    "release": 20,
+    "newV": 1
   }
 }
