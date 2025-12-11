@@ -10336,7 +10336,7 @@
     "BAS": 2,
     "ADV": 5,
     "EXP": 8.5,
-    "MAS": 12.8,
+    "MAS": 13,
     "genre": 0,
     "release": 16,
     "newV": 0
@@ -11489,7 +11489,7 @@
     "BAS": 2,
     "ADV": 5,
     "EXP": 10.1,
-    "MAS": 13.4,
+    "MAS": 13.5,
     "genre": 9,
     "release": 17,
     "newV": 0
@@ -13082,7 +13082,7 @@
     "BAS": 3,
     "ADV": 6,
     "EXP": 9,
-    "MAS": 13.1,
+    "MAS": 12.9,
     "genre": 2,
     "release": 19,
     "newV": 0
@@ -13254,7 +13254,7 @@
     "BAS": 1,
     "ADV": 5,
     "EXP": 8,
-    "MAS": 12.5,
+    "MAS": 13,
     "genre": 0,
     "release": 19,
     "newV": 0
@@ -13343,7 +13343,7 @@
   "モエチャッカファイア": {
     "BAS": 3,
     "ADV": 6,
-    "EXP": 9.5,
+    "EXP": 10,
     "MAS": 12.8,
     "ULT": 14.4,
     "genre": 0,
@@ -13464,7 +13464,7 @@
     "BAS": 3,
     "ADV": 5,
     "EXP": 9.5,
-    "MAS": 12.9,
+    "MAS": 13,
     "genre": 5,
     "release": 20,
     "newV": 1
@@ -13554,7 +13554,7 @@
     "BAS": 2,
     "ADV": 6,
     "EXP": 10.3,
-    "MAS": 14.2,
+    "MAS": 14.3,
     "genre": 2,
     "release": 20,
     "newV": 1
@@ -13562,7 +13562,7 @@
   "え？あぁ、そう。- 10th Anniversary Edition -": {
     "BAS": 3,
     "ADV": 6,
-    "EXP": 9.5,
+    "EXP": 10.2,
     "MAS": 14,
     "genre": 2,
     "release": 20,
