@@ -912,7 +912,7 @@
     "BAS": 3,
     "ADV": 5,
     "EXP": 9.5,
-    "MAS": 13.8,
+    "MAS": 14,
     "genre": 5,
     "release": 1,
     "newV": 0
@@ -4036,7 +4036,7 @@
     "BAS": 3,
     "ADV": 5,
     "EXP": 9.5,
-    "MAS": 14.4,
+    "MAS": 14.3,
     "genre": 3,
     "release": 6,
     "newV": 0
@@ -8563,7 +8563,7 @@
     "BAS": 7.5,
     "ADV": 12.5,
     "EXP": 14.5,
-    "MAS": 15.3,
+    "MAS": 15.4,
     "genre": 6,
     "release": 14,
     "newV": 0
@@ -11967,7 +11967,7 @@
     "BAS": 3,
     "ADV": 7.5,
     "EXP": 12.3,
-    "MAS": 14.5,
+    "MAS": 14.6,
     "genre": 5,
     "release": 18,
     "newV": 0
@@ -12273,7 +12273,7 @@
   "Tuatha Dé Danann": {
     "BAS": 5,
     "ADV": 10.3,
-    "EXP": 14.3,
+    "EXP": 14,
     "MAS": 15.5,
     "genre": 5,
     "release": 18,
@@ -12336,7 +12336,7 @@
   "Acid God": {
     "BAS": 4,
     "ADV": 9.5,
-    "EXP": 14,
+    "EXP": 13.9,
     "MAS": 15.4,
     "genre": 5,
     "release": 18,
@@ -12345,7 +12345,7 @@
   "Forsaken Tale": {
     "BAS": 5,
     "ADV": 12,
-    "EXP": 14.5,
+    "EXP": 14.4,
     "MAS": 15.7,
     "genre": 5,
     "release": 18,
@@ -12694,7 +12694,7 @@
     "BAS": 5,
     "ADV": 9,
     "EXP": 13.7,
-    "MAS": 15,
+    "MAS": 14.9,
     "genre": 6,
     "release": 19,
     "newV": 0
@@ -12784,7 +12784,7 @@
     "BAS": 4,
     "ADV": 8,
     "EXP": 13.9,
-    "MAS": 15.2,
+    "MAS": 15.3,
     "genre": 6,
     "release": 19,
     "newV": 0
@@ -13091,7 +13091,7 @@
     "BAS": 5,
     "ADV": 8,
     "EXP": 13.7,
-    "MAS": 15,
+    "MAS": 15.1,
     "genre": 9,
     "release": 19,
     "newV": 0
@@ -13119,7 +13119,7 @@
     "BAS": 3,
     "ADV": 6,
     "EXP": 10.9,
-    "MAS": 14,
+    "MAS": 13.9,
     "genre": 2,
     "release": 19,
     "newV": 0
@@ -13136,8 +13136,8 @@
   "I Wanna": {
     "BAS": 4,
     "ADV": 7,
-    "EXP": 13.9,
-    "MAS": 15.3,
+    "EXP": 14,
+    "MAS": 15.2,
     "genre": 0,
     "release": 19,
     "newV": 0
@@ -13164,7 +13164,7 @@
     "BAS": 3,
     "ADV": 7,
     "EXP": 11.4,
-    "MAS": 14.9,
+    "MAS": 15,
     "genre": 6,
     "release": 19,
     "newV": 0
@@ -13173,7 +13173,7 @@
     "BAS": 3,
     "ADV": 6,
     "EXP": 12.5,
-    "MAS": 14.4,
+    "MAS": 14.5,
     "genre": 6,
     "release": 19,
     "newV": 0
@@ -13182,7 +13182,7 @@
     "BAS": 3,
     "ADV": 5,
     "EXP": 10.9,
-    "MAS": 14,
+    "MAS": 13.9,
     "genre": 7,
     "release": 19,
     "newV": 0
@@ -13191,7 +13191,7 @@
     "BAS": 4,
     "ADV": 7.5,
     "EXP": 11,
-    "MAS": 14.2,
+    "MAS": 14.1,
     "genre": 2,
     "release": 19,
     "newV": 0
@@ -13209,7 +13209,7 @@
     "BAS": 3,
     "ADV": 6,
     "EXP": 10.7,
-    "MAS": 15,
+    "MAS": 15.1,
     "genre": 6,
     "release": 19,
     "newV": 0
@@ -13218,7 +13218,7 @@
     "BAS": 5,
     "ADV": 8.5,
     "EXP": 14.4,
-    "MAS": 15.6,
+    "MAS": 15.5,
     "genre": 5,
     "release": 19,
     "newV": 0
@@ -13263,7 +13263,7 @@
     "BAS": 3,
     "ADV": 7,
     "EXP": 11.7,
-    "MAS": 14.7,
+    "MAS": 14.9,
     "genre": 6,
     "release": 19,
     "newV": 0
@@ -13272,7 +13272,7 @@
     "BAS": 3,
     "ADV": 6,
     "EXP": 13.3,
-    "MAS": 15,
+    "MAS": 15.1,
     "genre": 6,
     "release": 19,
     "newV": 0
@@ -13281,7 +13281,7 @@
     "BAS": 4,
     "ADV": 7,
     "EXP": 12,
-    "MAS": 14.7,
+    "MAS": 14.9,
     "genre": 9,
     "release": 19,
     "newV": 0
@@ -13308,7 +13308,7 @@
     "BAS": 5,
     "ADV": 8,
     "EXP": 12.2,
-    "MAS": 14.6,
+    "MAS": 14.7,
     "genre": 9,
     "release": 19,
     "newV": 0
@@ -13345,7 +13345,7 @@
     "ADV": 6,
     "EXP": 9.5,
     "MAS": 12.8,
-    "ULT": 14.5,
+    "ULT": 14.4,
     "genre": 0,
     "release": 20,
     "newV": 1
@@ -13364,7 +13364,7 @@
     "ADV": 6,
     "EXP": 9.5,
     "MAS": 13,
-    "ULT": 14.4,
+    "ULT": 14.5,
     "genre": 2,
     "release": 20,
     "newV": 1
@@ -13391,7 +13391,7 @@
     "BAS": 3,
     "ADV": 7,
     "EXP": 12.5,
-    "MAS": 14.9,
+    "MAS": 15,
     "genre": 3,
     "release": 20,
     "newV": 1
@@ -13446,7 +13446,7 @@
     "BAS": 4,
     "ADV": 7,
     "EXP": 12.6,
-    "MAS": 14.5,
+    "MAS": 14.4,
     "genre": 9,
     "release": 20,
     "newV": 1
@@ -13455,7 +13455,7 @@
     "BAS": 3,
     "ADV": 6,
     "EXP": 11.7,
-    "MAS": 14.4,
+    "MAS": 14.6,
     "genre": 9,
     "release": 20,
     "newV": 1
@@ -13509,7 +13509,7 @@
     "BAS": 3,
     "ADV": 6,
     "EXP": 12.7,
-    "MAS": 15.2,
+    "MAS": 15.1,
     "genre": 5,
     "release": 20,
     "newV": 1
@@ -13526,7 +13526,7 @@
   "神鳴": {
     "BAS": 6,
     "ADV": 10.5,
-    "EXP": 14.4,
+    "EXP": 14.5,
     "MAS": 15.6,
     "genre": 5,
     "release": 20,
@@ -13581,7 +13581,7 @@
     "BAS": 3,
     "ADV": 6,
     "EXP": 10.2,
-    "MAS": 14.4,
+    "MAS": 14.2,
     "genre": 9,
     "release": 20,
     "newV": 1
@@ -13590,7 +13590,7 @@
     "BAS": 3,
     "ADV": 7,
     "EXP": 11.7,
-    "MAS": 14.7,
+    "MAS": 14.5,
     "genre": 5,
     "release": 20,
     "newV": 1
@@ -13599,7 +13599,7 @@
     "BAS": 4,
     "ADV": 8.5,
     "EXP": 13.3,
-    "MAS": 15.1,
+    "MAS": 15,
     "genre": 5,
     "release": 20,
     "newV": 1
@@ -13608,7 +13608,7 @@
     "BAS": 3,
     "ADV": 7,
     "EXP": 11.1,
-    "MAS": 14.3,
+    "MAS": 14.4,
     "genre": 5,
     "release": 20,
     "newV": 1
