@@ -9370,5 +9370,158 @@
     "ADV": 2000,
     "EXP": 3500,
     "MAS": 5000
+  },
+  "BOW AND ARROW （アニメ・オープニングver.）": {
+    "BAS": 290,
+    "ADV": 438,
+    "EXP": 903,
+    "MAS": 1068,
+    "ULT": 1118
+  },
+  "Ave Mujica": {
+    "BAS": 410,
+    "ADV": 646,
+    "EXP": 1074,
+    "MAS": 1547
+  },
+  "KiLLKiSS": {
+    "BAS": 0,
+    "ADV": 0,
+    "EXP": 921,
+    "MAS": 1610
+  },
+  "怪獣": {
+    "BAS": 396,
+    "ADV": 0,
+    "EXP": 1049,
+    "MAS": 1477
+  },
+  "一旦ステイ TONIGHT": {
+    "BAS": 0,
+    "ADV": 0,
+    "EXP": 1428,
+    "MAS": 2426
+  },
+  "モニタリング": {
+    "BAS": 0,
+    "ADV": 0,
+    "EXP": 844,
+    "MAS": 1177
+  },
+  "化けの花": {
+    "BAS": 0,
+    "ADV": 0,
+    "EXP": 914,
+    "MAS": 1265,
+    "ULT": 1525
+  },
+  "キャンディークッキーチョコレート": {
+    "BAS": 0,
+    "ADV": 0,
+    "EXP": 1302,
+    "MAS": 2154,
+    "ULT": 2111
+  },
+  "Ultimate taste": {
+    "BAS": 0,
+    "ADV": 0,
+    "EXP": 1558,
+    "MAS": 2299
+  },
+  "AiAe": {
+    "BAS": 0,
+    "ADV": 0,
+    "EXP": 1533,
+    "MAS": 2264
+  },
+  "ビッグブリッヂの死闘 -シアトリズムFFAC Arrange- from FFV": {
+    "BAS": 570,
+    "ADV": 916,
+    "EXP": 1727,
+    "MAS": 2372
+  },
+  "MORNINGLOOM": {
+    "BAS": 0,
+    "ADV": 0,
+    "EXP": 1595,
+    "MAS": 2181
+  },
+  "Angelic Layer": {
+    "BAS": 0,
+    "ADV": 0,
+    "EXP": 1206,
+    "MAS": 2115
+  },
+  "当たり前田の小野美苗": {
+    "BAS": 0,
+    "ADV": 0,
+    "EXP": 1576,
+    "MAS": 2322
+  },
+  "BIRTH": {
+    "BAS": 0,
+    "ADV": 0,
+    "EXP": 1304,
+    "MAS": 2251
+  },
+  "WakeUP MakeUP FEVER!": {
+    "BAS": 0,
+    "ADV": 0,
+    "EXP": 1123,
+    "MAS": 1927
+  },
+  "Starlight★Limited": {
+    "BAS": 0,
+    "ADV": 0,
+    "EXP": 1752,
+    "MAS": 1928
+  },
+  "魔法に照らされたアンコール": {
+    "BAS": 0,
+    "ADV": 0,
+    "EXP": 921,
+    "MAS": 1148
+  },
+  "ジナ": {
+    "BAS": 0,
+    "ADV": 0,
+    "EXP": 1426,
+    "MAS": 2329
+  },
+  "Road to Aventura": {
+    "BAS": 0,
+    "ADV": 0,
+    "EXP": 1274,
+    "MAS": 1921
+  },
+  "☆をつなぐシュトラール": {
+    "BAS": 0,
+    "ADV": 0,
+    "EXP": 1506,
+    "MAS": 3067
+  },
+  "MOMOCO68000": {
+    "BAS": 0,
+    "ADV": 0,
+    "EXP": 1496,
+    "MAS": 1844
+  },
+  "〚回帰〛 ～Scherzo ~フォルトゥーナの悪戯~": {
+    "BAS": 0,
+    "ADV": 0,
+    "EXP": 1566,
+    "MAS": 2088
+  },
+  "tHE uNcontRollaBle ciNdeRella": {
+    "BAS": 0,
+    "ADV": 0,
+    "EXP": 1826,
+    "MAS": 2213
+  },
+  "轆轤首": {
+    "BAS": 0,
+    "ADV": 0,
+    "EXP": 1737,
+    "MAS": 3177
   }
 }
