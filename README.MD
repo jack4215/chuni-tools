@@ -7,7 +7,7 @@ This repo is forked from [Dogeon188/chuni-tools](https://github.com/Dogeon188/ch
 For more information please refer to [this page](https://chuni.tsaibee.org/?lang=en_US).
 
 ## Chart constant data
-JP 20251211v4
+JP 20251218v1
 
 ## How to use
 1. Copy the following link to your bookmarks.
@@ -64,7 +64,7 @@ The version complete title data is from [かっきー](https://x.com/Schwarz_k2m
 若要取得更多資訊，請參考[此頁面](https://chuni.tsaibee.org/?lang=zh_TW)
 
 ## 定數資料
-JP 20251211v4
+JP 20251218v1
 
 ## 如何使用
 1. 複製以下的連結加入書籤 

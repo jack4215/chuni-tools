@@ -1735,15 +1735,6 @@
     "release": 4,
     "newV": 0
   },
-  "愛言葉": {
-    "BAS": 2,
-    "ADV": 5,
-    "EXP": 8,
-    "MAS": 11.4,
-    "genre": 2,
-    "release": 3,
-    "newV": 0
-  },
   "後夜祭": {
     "BAS": 3,
     "ADV": 5,
@@ -2345,15 +2336,6 @@
     "ADV": 7,
     "EXP": 9.5,
     "MAS": 13.7,
-    "genre": 2,
-    "release": 4,
-    "newV": 0
-  },
-  "すきなことだけでいいです": {
-    "BAS": 2,
-    "ADV": 5,
-    "EXP": 8,
-    "MAS": 13,
     "genre": 2,
     "release": 4,
     "newV": 0
@@ -5486,15 +5468,6 @@
     "release": 9,
     "newV": 0
   },
-  "Star Divine": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 9,
-    "MAS": 12.1,
-    "genre": 0,
-    "release": 9,
-    "newV": 0
-  },
   "御旗のもとに": {
     "BAS": 2,
     "ADV": 5,
@@ -5554,15 +5527,6 @@
     "ADV": 5,
     "EXP": 9,
     "MAS": 11.3,
-    "genre": 2,
-    "release": 9,
-    "newV": 0
-  },
-  "＊ハロー、プラネット。": {
-    "BAS": 2,
-    "ADV": 6,
-    "EXP": 8,
-    "MAS": 12.7,
     "genre": 2,
     "release": 9,
     "newV": 0
@@ -5925,15 +5889,6 @@
     "EXP": 8.5,
     "MAS": 12.6,
     "genre": 2,
-    "release": 10,
-    "newV": 0
-  },
-  "Kadenz": {
-    "BAS": 3,
-    "ADV": 7,
-    "EXP": 10.5,
-    "MAS": 13.7,
-    "genre": 0,
     "release": 10,
     "newV": 0
   },
@@ -9612,15 +9567,6 @@
     "release": 15,
     "newV": 0
   },
-  "irony": {
-    "BAS": 2,
-    "ADV": 5,
-    "EXP": 8,
-    "MAS": 11.7,
-    "genre": 0,
-    "release": 15,
-    "newV": 0
-  },
   "お空のニュークリアフュージョン道場": {
     "BAS": 3,
     "ADV": 5,
@@ -9927,15 +9873,6 @@
     "release": 15,
     "newV": 0
   },
-  "五等分のカタチ": {
-    "BAS": 2,
-    "ADV": 6,
-    "EXP": 9,
-    "MAS": 11.3,
-    "genre": 0,
-    "release": 15,
-    "newV": 0
-  },
   "魔法少女とチョコレゐト": {
     "BAS": 3,
     "ADV": 5,
@@ -10098,75 +10035,12 @@
     "release": 15,
     "newV": 0
   },
-  "青春コンプレックス": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 9,
-    "MAS": 12.6,
-    "genre": 0,
-    "release": 16,
-    "newV": 0
-  },
-  "ギターと孤独と蒼い惑星": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 9.5,
-    "MAS": 12.4,
-    "genre": 0,
-    "release": 16,
-    "newV": 0
-  },
   "INTERNET OVERDOSE": {
     "BAS": 3,
     "ADV": 6,
     "EXP": 8.5,
     "MAS": 13,
     "genre": 0,
-    "release": 16,
-    "newV": 0
-  },
-  "新時代（ウタfrom ONE PIECE FILM RED）": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 9,
-    "MAS": 12.2,
-    "genre": 0,
-    "release": 16,
-    "newV": 0
-  },
-  "祝福": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 9,
-    "MAS": 12.1,
-    "genre": 0,
-    "release": 16,
-    "newV": 0
-  },
-  "刃渡り2億センチ(TV edit)": {
-    "BAS": 2,
-    "ADV": 7,
-    "EXP": 12,
-    "MAS": 14.6,
-    "genre": 0,
-    "release": 16,
-    "newV": 0
-  },
-  "おとせサンダー": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 9.5,
-    "MAS": 11.9,
-    "genre": 0,
-    "release": 16,
-    "newV": 0
-  },
-  "カレシのジュード": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 9.5,
-    "MAS": 13.1,
-    "genre": 2,
     "release": 16,
     "newV": 0
   },
@@ -10585,29 +10459,11 @@
     "release": 16,
     "newV": 0
   },
-  "Night Spider": {
-    "BAS": 2,
-    "ADV": 5,
-    "EXP": 9,
-    "MAS": 13.1,
-    "genre": 0,
-    "release": 16,
-    "newV": 0
-  },
   "#あくあ色ぱれっと": {
     "BAS": 2,
     "ADV": 5,
     "EXP": 9,
     "MAS": 11.8,
-    "genre": 0,
-    "release": 16,
-    "newV": 0
-  },
-  "story": {
-    "BAS": 3,
-    "ADV": 7,
-    "EXP": 10.3,
-    "MAS": 13.7,
     "genre": 0,
     "release": 16,
     "newV": 0
@@ -10735,24 +10591,6 @@
     "EXP": 8.5,
     "MAS": 13,
     "genre": 9,
-    "release": 16,
-    "newV": 0
-  },
-  "Sad Creature": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 9.5,
-    "MAS": 12.9,
-    "genre": 0,
-    "release": 16,
-    "newV": 0
-  },
-  "Goodbye Innocence": {
-    "BAS": 3,
-    "ADV": 6,
-    "EXP": 10,
-    "MAS": 12.7,
-    "genre": 0,
     "release": 16,
     "newV": 0
   },
@@ -14234,6 +14072,51 @@
     "EXP": 13.9,
     "MAS": 15.4,
     "genre": 5,
+    "release": 21,
+    "newV": 1
+  },
+  "アイドゥーミー！": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 9.5,
+    "MAS": 13.6,
+    "genre": 0,
+    "release": 21,
+    "newV": 1
+  },
+  "Edelied": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 9,
+    "MAS": 13.5,
+    "genre": 0,
+    "release": 21,
+    "newV": 1
+  },
+  "㋰責任集合体": {
+    "BAS": 2,
+    "ADV": 5,
+    "EXP": 9.5,
+    "MAS": 13.3,
+    "genre": 2,
+    "release": 21,
+    "newV": 1
+  },
+  "バカ通信": {
+    "BAS": 4,
+    "ADV": 7.5,
+    "EXP": 11.3,
+    "MAS": 14.4,
+    "genre": 2,
+    "release": 21,
+    "newV": 1
+  },
+  "ヤババイナ": {
+    "BAS": 4,
+    "ADV": 7,
+    "EXP": 11.8,
+    "MAS": 14.3,
+    "genre": 2,
     "release": 21,
     "newV": 1
   }
