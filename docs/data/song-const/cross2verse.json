@@ -14119,5 +14119,50 @@
     "genre": 2,
     "release": 21,
     "newV": 1
+  },
+  "A-Yah-YAh-YaH-YAH!": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 9.5,
+    "MAS": 13.7,
+    "genre": 3,
+    "release": 21,
+    "newV": 1
+  },
+  "アマノジャクリバース feat. ｙｔｒ": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 10.6,
+    "MAS": 13.8,
+    "genre": 3,
+    "release": 21,
+    "newV": 1
+  },
+  "The Music of Violent Eating": {
+    "BAS": 5,
+    "ADV": 8,
+    "EXP": 13.4,
+    "MAS": 15.1,
+    "genre": 3,
+    "release": 21,
+    "newV": 1
+  },
+  "New World": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 10.9,
+    "MAS": 13.4,
+    "genre": 3,
+    "release": 21,
+    "newV": 1
+  },
+  "メイドノココロハアヤツリドール": {
+    "BAS": 2,
+    "ADV": 5,
+    "EXP": 9.5,
+    "MAS": 12.8,
+    "genre": 3,
+    "release": 21,
+    "newV": 1
   }
 }
