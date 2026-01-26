@@ -14164,5 +14164,41 @@
     "genre": 3,
     "release": 21,
     "newV": 1
+  },
+  "Choose!!!": {
+    "BAS": 2,
+    "ADV": 5,
+    "EXP": 9,
+    "MAS": 12,
+    "genre": 0,
+    "release": 21,
+    "newV": 1
+  },
+  "愛と煩悩と輪廻と常識の極彩世界": {
+    "BAS": 4,
+    "ADV": 7,
+    "EXP": 12.2,
+    "MAS": 15,
+    "genre": 6,
+    "release": 21,
+    "newV": 1
+  },
+  "ゼイタクするまで抱きしめて": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 10.4,
+    "MAS": 14.3,
+    "genre": 6,
+    "release": 21,
+    "newV": 1
+  },
+  "LAST PROPOZE": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 10.3,
+    "MAS": 14.4,
+    "genre": 6,
+    "release": 21,
+    "newV": 1
   }
 }
