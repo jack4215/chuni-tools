@@ -3042,7 +3042,7 @@
           ).join('');
         }
         try {
-          const fS1 = scores1.slice(0, 30).map(({ difficulty, score, title, timestamp }) => ({ difficulty, score, title, timestamp }));
+          const fS1 = scores1.slice(0, 20).map(({ difficulty, score, title, timestamp }) => ({ difficulty, score, title, timestamp }));
           const fS2 = scores2.slice(0, 20).map(({ difficulty, score, title, timestamp }) => ({ difficulty, score, title, timestamp }));
           const encryptedData = encryptData({
             data: {
