@@ -8871,10 +8871,11 @@
     "MAS": 2599
   },
   "Campus mode!!": {
-    "BAS": 0,
-    "ADV": 0,
+    "BAS": 508,
+    "ADV": 836,
     "EXP": 1219,
-    "MAS": 1942
+    "MAS": 1942,
+    "ULT": 2209
   },
   "Fighting My Way": {
     "BAS": 0,
@@ -9637,5 +9638,35 @@
     "ADV": 994,
     "EXP": 1833,
     "MAS": 2858
+  },
+  "もっと！": {
+    "BAS": 538,
+    "ADV": 905,
+    "EXP": 1566,
+    "MAS": 1909
+  },
+  "はっぴーでいず！": {
+    "BAS": 574,
+    "ADV": 1099,
+    "EXP": 1516,
+    "MAS": 2325
+  },
+  "Behavior": {
+    "BAS": 473,
+    "ADV": 1211,
+    "EXP": 1168,
+    "MAS": 2131
+  },
+  "M@GICAL☆CURE! LOVE ♥ SHOT!": {
+    "BAS": 539,
+    "ADV": 1048,
+    "EXP": 1471,
+    "MAS": 2139
+  },
+  "LEMON MELON COOKIE": {
+    "BAS": 565,
+    "ADV": 917,
+    "EXP": 1215,
+    "MAS": 1710
   }
 }
