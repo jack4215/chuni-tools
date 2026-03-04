@@ -1699,10 +1699,8 @@
 
         const getJacketUrl = (title) => {
           const song = idxMap.find(s => s.title === title || Xe(s.title) === title || s.title === Xe(title));
-          const imgFile = (song && song.image) ? song.image : "0000000000000000.jpg";
-          
-          return "https://corsproxy.io/?" + encodeURIComponent("https://new.chunithm-net.com/chuni-mobile/html/mobile/img/" + imgFile);
-
+          if (song && song.image) return "https://otoge-db.net/chunithm/jacket/" + song.image;
+          return "https://otoge-db.net/chunithm/jacket/0000000000000000.jpg";
         };
 
         const diffColors = { "ULT": "var(--theme-song-ult)", "MAS": "var(--theme-song-mas)", "EXP": "var(--theme-song-exp)", "ADV": "var(--theme-song-adv)", "BAS": "var(--theme-song-bas)" };
