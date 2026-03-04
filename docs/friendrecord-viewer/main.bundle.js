@@ -1637,14 +1637,14 @@
 
       function(e, t = {}) {
         return e.toBlob ? new Promise((n => {
-          e.toBlob(n, t.type ? t.type : "image/png", t.quality ? t.quality : 1)
+          e.toBlob(n, t.type ? t.type : "image/jpg", t.quality ? t.quality : 1)
         })) : new Promise((n => {
           const r = window.atob(e.toDataURL(t.type ? t.type : void 0, t.quality ? t.quality : void 0).split(",")[1]),
             o = r.length,
             s = new Uint8Array(o);
           for (let e = 0; e < o; e += 1) s[e] = r.charCodeAt(e);
           n(new Blob([s], {
-            type: t.type ? t.type : "image/png"
+            type: t.type ? t.type : "image/jpg"
           }))
         }))
       }(n);
@@ -1653,12 +1653,10 @@
     async function gn() {
       const mainEl = document.querySelector("main");
       if (null == mainEl) return alert(d(wt)("share.error", { error: "resultNode is null" }));
-
       const loading = document.createElement("div");
-      loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>正在生成 B50 圖片並載入封面，請稍候片刻...<br>Generating Image...</div>";
+      loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Generating Image, please wait...</div>";
       loading.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:#1e1e24;display:flex;align-items:center;justify-content:center;color:white;z-index:99999;font-weight:bold;text-align:center;font-size:1.2em;";
       document.body.appendChild(loading);
-
       try {
         let idxMap = [];
         try {
@@ -1668,21 +1666,17 @@
         } catch(err) {
           console.warn("Failed to fetch idx.json", err);
         }
-
         const getJacketUrl = (title) => {
           const song = idxMap.find(s => s.title === title || Xe(s.title) === title || s.title === Xe(title));
           const imgFile = (song && song.image) ? song.image : "0000000000000000.jpg";
-          return "https://reiwa.f5.si/jackets/chunithm/" + imgFile.replace('.jpg', '.webp');
+          return "https://otoge-db.net/chunithm/jacket/" + imgFile.replace('.jpg', '.webp');
         };
-
         const diffColors = { "ULT": "var(--theme-song-ult)", "MAS": "var(--theme-song-mas)", "EXP": "var(--theme-song-exp)", "ADV": "var(--theme-song-adv)", "BAS": "var(--theme-song-bas)" };
-
         const getClearLabel = (clr) => {
           if(clr === "AJ") return '<div style="color:#ffdf75;text-shadow:0 0 5px #ffdf75;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">ALL JUSTICE</div>';
           if(clr === "FC") return '<div style="color:#03fc1c;text-shadow:0 0 5px #03fc1c;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">FULL COMBO</div>';
           return '';
         };
-
         const getRankColor = (rank) => {
           if(rank === "MAX") return "var(--theme-clear-ajc)";
           if(rank === "SSS+") return "#68fb60";
@@ -1696,56 +1690,43 @@
           if(rank === "A") return "#80d5ff";
           return "var(--theme-text-dim)";
         };
-
         const stats = d(Ut);
         const allRecords = d(At);
         const bestRecords = allRecords.filter(item => (item.newV === 0 || (item.newV === 2 && item.difficulty !== "ULT")) && item.score !== -1).slice(0, 30);
         const newRecords = allRecords.filter(item => (item.newV === 1 || (item.newV === 2 && item.difficulty === "ULT")) && item.score !== -1).slice(0, 20);
-
         const b30Avg = (bestRecords.reduce((acc, s) => acc + s.rating, 0) / 30 / 100).toFixed(4);
         const n20Avg = (newRecords.reduce((acc, s) => acc + s.rating, 0) / 20 / 100).toFixed(4);
-
-        const updateTimeStr = localStorage.getItem("prevUpdateTime") ? new Date(Number(localStorage.getItem("prevUpdateTime"))).toLocaleString() : '---';
         const genTimeStr = new Date().toLocaleString();
-
         let opString = stats?.overPower || '---';
         if (opString !== '---' && !opString.includes('%')) {
             opString += '%';
         }
-
         let topBgStyle = "background: #3b3b3b; border: 2px solid #aaaaaa;";
         const profileNode = document.querySelector('.wrapper.svelte-1rv2o5c');
         if (profileNode && profileNode.style.background) {
             topBgStyle = `background: ${profileNode.style.background}; border: 3px solid transparent;`;
         }
-
         let chartHtml = '';
         if (bestRecords.length > 0) {
             const chartRatings = bestRecords.map(s => s.rating / 100);
             while (chartRatings.length < 30) chartRatings.push(0); 
-            
             const validRatings = chartRatings.filter(r => r > 0);
             let maxVal = validRatings.length > 0 ? Math.max(...validRatings) : 17;
             let minVal = validRatings.length > 0 ? Math.min(...validRatings) : 15;
-
             let stepUnit = 0.05;
             let diff = maxVal - minVal;
             if (diff > 2.0) stepUnit = 0.5;
             else if (diff > 1.0) stepUnit = 0.2;
             else if (diff > 0.45) stepUnit = 0.1;
             else stepUnit = 0.05;
-
             let yMax = parseFloat((Math.ceil(Math.round(maxVal * 1000) / Math.round(stepUnit * 1000)) * stepUnit).toFixed(2));
             let yMin = parseFloat((Math.floor(Math.round(minVal * 1000) / Math.round(stepUnit * 1000)) * stepUnit).toFixed(2));
-
             if (yMax === yMin) {
                 yMax += stepUnit;
                 yMin -= stepUnit;
             }
-
             let steps = Math.round((yMax - yMin) / stepUnit);
             const avgPercent = Math.max(0, Math.min(100, ((parseFloat(b30Avg) - yMin) / (yMax - yMin)) * 100));
-
             let gridLinesHtml = '';
             for(let i=0; i<=steps; i++) {
                 const val = yMin + stepUnit * i;
@@ -1755,7 +1736,6 @@
                     <div style="position: absolute; left: -42px; bottom: ${percent}%; transform: translateY(50%); font-size: 13px; color: var(--theme-text-dim); width: 36px; text-align: right;">${val.toFixed(2)}</div>
                 `;
             }
-            
             const barsHtml = chartRatings.map((r, i) => {
                 const h = r > yMin ? ((r - yMin) / (yMax - yMin)) * 100 : (r > 0 ? 1 : 0);
                 return `
@@ -1764,11 +1744,9 @@
                     </div>
                 `;
             }).join('');
-            
             const xAxisHtml = chartRatings.map((r, i) => `
                 <div style="flex: 1; text-align: center; font-size: 12px; color: var(--theme-text-dim); margin-top: 6px; font-weight: bold;">${i + 1}</div>
             `).join('');
-
             chartHtml = `
             <div style="margin-top: 18px; flex-grow: 1; background: #1e1e24; border: 2px solid var(--theme-border); border-radius: 12px; padding: 25px 25px 15px 20px; display: flex; flex-direction: column; position: relative; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
                 <div style="position: absolute; top: 15px; left: 20px; font-size: 18px; font-weight: bold; color: var(--theme-text-dim); letter-spacing: 1px;">BEST 30 RATING CHART</div>
@@ -1776,7 +1754,7 @@
                 <div style="position: relative; flex-grow: 1; margin-top: 35px; margin-left: 40px; display: flex; align-items: flex-end;">
                     ${gridLinesHtml}
                     <div style="position: absolute; left: 0; right: 0; bottom: ${avgPercent}%; border-bottom: 2px solid #ff4b4b; z-index: 5;">
-                        <div style="position: absolute; right: 5px; bottom: 4px; color: #ff4b4b; font-size: 14px; font-weight: bold; background: #1e1e24; padding: 0 6px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">B30 AVG: ${b30Avg}</div>
+                        <div style="position: absolute; right: 5px; bottom: 4px; color: #ff4b4b; font-size: 14px; font-weight: bold; background: #1e1e24; padding: 0 6px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">AVG: ${b30Avg}</div>
                     </div>
                     <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; align-items: flex-end; gap: 2px;">
                         ${barsHtml}
@@ -1789,7 +1767,6 @@
             </div>
             `;
         }
-
         const renderSongBlock = (song, idx) => {
           const ratValue = (song.rating / 100).toFixed(2);
           const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
@@ -1815,11 +1792,9 @@
           </div>
           `;
         };
-
         const container = document.createElement("div");
         container.id = "copied-main";
         container.style.cssText = "position:absolute; top:0; left:0; z-index:-9999; width:1950px; background:#1e1e24; padding:45px; border-radius:15px;";
-        
         container.innerHTML = `
           <div style="display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4); margin-bottom:35px;">
             <div style="display:flex; align-items:baseline; gap:20px; position:relative; z-index:1;">
@@ -1837,7 +1812,6 @@
               </div>
             </div>
           </div>
-
           <div style="display:flex; gap:40px; align-items:stretch;">
             <div style="flex: 1; min-width: 0; display:flex; flex-direction:column;">
               <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
@@ -1848,7 +1822,6 @@
                 ${bestRecords.map((s, i) => renderSongBlock(s, i)).join('')}
               </div>
             </div>
-
             <div style="flex: 1; min-width: 0; display:flex; flex-direction:column;">
               <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
                 <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">CURRENT 20</h3>
@@ -1861,17 +1834,14 @@
               ${chartHtml}
             </div>
           </div>
-
           <div style="border-top:2px solid var(--theme-border); padding-top:20px; margin-top:30px; display:flex; justify-content:space-between; color:var(--theme-text-dim); font-size:16px;">
             <div>Generated by CHUNITHM Tools @TSAIBEE (https://chuni.tsaibee.org)<br>All copyrights of music jacket image on this site belong copyright holders.</div>
             <div>Date: ${genTimeStr}</div>
           </div>
         `;
-
         const originalOverflow = document.body.style.overflow;
         document.body.style.overflow = "hidden";
         document.body.appendChild(container);
-
         const imgs = container.querySelectorAll("img");
         await Promise.all([...imgs].map(img => new Promise((resolve) => {
           if (img.complete) resolve();
@@ -1880,13 +1850,11 @@
             img.onerror = resolve; 
           }
         })));
-
         const blob = await pn(container, { backgroundColor: "#1e1e24", scale: 2 });
         container.remove();
         document.body.style.overflow = originalOverflow;
         loading.remove();
-
-        const hn = "chunithm_b50.png";
+        const hn = "chunithm_b50.jpg";
         if (blob) {
           const url = window.URL.createObjectURL(blob);
           const a = document.createElement("a");
@@ -1904,6 +1872,7 @@
         alert("Error during image generation:\n" + err);
       }
     }
+
     function mn(e) {
       j(e, "svelte-iy49t2", ".wrapper.svelte-iy49t2{display:flex;-ms-flex-direction:row;z-index:2;flex-direction:row;justify-content:space-between;align-items:center;gap:1em;position:fixed;right:1rem;top:0.6rem}button.svelte-iy49t2{width:2rem;height:2rem;background:var(--theme-border);opacity:0.8;border-radius:40%;font-weight:bold}svg.svelte-iy49t2{overflow:visible}")
     }
