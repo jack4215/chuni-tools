@@ -1724,55 +1724,60 @@
         if (bestRecords.length > 0) {
             const chartRatings = bestRecords.map(s => s.rating / 100);
             while (chartRatings.length < 30) chartRatings.push(0); 
-
+            
             const validRatings = chartRatings.filter(r => r > 0);
             let maxVal = validRatings.length > 0 ? Math.max(...validRatings) : 17;
             let minVal = validRatings.length > 0 ? Math.min(...validRatings) : 15;
-            
-            let yMax = Math.ceil(maxVal * 10) / 10; 
-            let yMin = Math.floor(minVal * 10) / 10;
 
-            let diff = Math.round((yMax - yMin) * 10) / 10;
-            if (diff === 0) { yMax += 0.2; yMin -= 0.2; }
-            else if (diff === 0.1) { yMax += 0.1; yMin -= 0.2; }
-            else if (diff === 0.2) { yMax += 0.1; yMin -= 0.1; }
-            else if (diff === 0.3) { yMax += 0.1; }
-            yMin = Math.max(0, yMin);
+            let stepUnit = 0.05;
+            let diff = maxVal - minVal;
+            if (diff > 2.0) stepUnit = 0.5;
+            else if (diff > 1.0) stepUnit = 0.2;
+            else if (diff > 0.45) stepUnit = 0.1;
+            else stepUnit = 0.05;
 
+            let yMax = parseFloat((Math.ceil(Math.round(maxVal * 1000) / Math.round(stepUnit * 1000)) * stepUnit).toFixed(2));
+            let yMin = parseFloat((Math.floor(Math.round(minVal * 1000) / Math.round(stepUnit * 1000)) * stepUnit).toFixed(2));
+
+            if (yMax === yMin) {
+                yMax += stepUnit;
+                yMin -= stepUnit;
+            }
+
+            let steps = Math.round((yMax - yMin) / stepUnit);
             const avgPercent = Math.max(0, Math.min(100, ((parseFloat(b30Avg) - yMin) / (yMax - yMin)) * 100));
 
             let gridLinesHtml = '';
-            const steps = 4;
             for(let i=0; i<=steps; i++) {
-                const val = yMin + (yMax - yMin) * (i / steps);
+                const val = yMin + stepUnit * i;
                 const percent = (i / steps) * 100;
                 gridLinesHtml += `
                     <div style="position: absolute; left: 0; right: 0; bottom: ${percent}%; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 1;"></div>
                     <div style="position: absolute; left: -42px; bottom: ${percent}%; transform: translateY(50%); font-size: 13px; color: var(--theme-text-dim); width: 36px; text-align: right;">${val.toFixed(2)}</div>
                 `;
             }
-
+            
             const barsHtml = chartRatings.map((r, i) => {
-                const h = r > yMin ? ((r - yMin) / (yMax - yMin)) * 100 : (r > 0 ? 2 : 0);
+                const h = r > yMin ? ((r - yMin) / (yMax - yMin)) * 100 : (r > 0 ? 1 : 0);
                 return `
                     <div style="flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; z-index: 2;">
                         <div style="width: 75%; height: ${Math.max(0, Math.min(100, h))}%; background: var(--theme-control); box-shadow: inset 0 0 5px rgba(0,0,0,0.2); border-radius: 3px 3px 0 0;"></div>
                     </div>
                 `;
             }).join('');
-
+            
             const xAxisHtml = chartRatings.map((r, i) => `
                 <div style="flex: 1; text-align: center; font-size: 12px; color: var(--theme-text-dim); margin-top: 6px; font-weight: bold;">${i + 1}</div>
             `).join('');
 
             chartHtml = `
-            <div style="margin-top: 18px; flex-grow: 1; background: var(--theme-bg-main); border: 2px solid var(--theme-border); border-radius: 12px; padding: 25px 25px 15px 20px; display: flex; flex-direction: column; position: relative; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+            <div style="margin-top: 18px; flex-grow: 1; background: #1e1e24; border: 2px solid var(--theme-border); border-radius: 12px; padding: 25px 25px 15px 20px; display: flex; flex-direction: column; position: relative; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
                 <div style="position: absolute; top: 15px; left: 20px; font-size: 18px; font-weight: bold; color: var(--theme-text-dim); letter-spacing: 1px;">BEST 30 RATING CHART</div>
                 
                 <div style="position: relative; flex-grow: 1; margin-top: 35px; margin-left: 40px; display: flex; align-items: flex-end;">
                     ${gridLinesHtml}
                     <div style="position: absolute; left: 0; right: 0; bottom: ${avgPercent}%; border-bottom: 2px solid #ff4b4b; z-index: 5;">
-                        <div style="position: absolute; right: 5px; bottom: 4px; color: #ff4b4b; font-size: 14px; font-weight: bold; background: var(--theme-bg-main); padding: 0 6px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">B30 AVG: ${b30Avg}</div>
+                        <div style="position: absolute; right: 5px; bottom: 4px; color: #ff4b4b; font-size: 14px; font-weight: bold; background: #1e1e24; padding: 0 6px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">B30 AVG: ${b30Avg}</div>
                     </div>
                     <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; align-items: flex-end; gap: 2px;">
                         ${barsHtml}
@@ -1837,7 +1842,7 @@
           <div style="display:flex; gap:40px; align-items:stretch;">
             <div style="flex: 1; min-width: 0; display:flex; flex-direction:column;">
               <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
-                <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">Best 30</h3>
+                <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">BEST 30</h3>
                 <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${b30Avg}</b></span>
               </div>
               <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:18px; align-content:start;">
@@ -1847,7 +1852,7 @@
 
             <div style="flex: 1; min-width: 0; display:flex; flex-direction:column;">
               <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
-                <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">New 20</h3>
+                <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">CURRENT 20</h3>
                 <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${n20Avg}</b></span>
               </div>
               <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:18px; align-content:start;">
