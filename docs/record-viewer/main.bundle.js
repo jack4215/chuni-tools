@@ -54,11 +54,11 @@
       },
       903: e => {
         "use strict";
-        e.exports = JSON.parse('{"main.title":"CHUNITHM Record Viewer","loading.constData":"Used song constant data: {{name}}","loading.error.serviceDown":"CHUNITHM-NET service is currently unavailable.<br/>Please come back later.","loading.error.rejected":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.timeout":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.noopener":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.unknown":"Please <em>screenshot or copy the error message</em> to the author.","header.title.dl":"Save or share B40 as image","header.title.constData":"Change song constant data (Current: {{name}})","header.title.settings":"Open settings","settings.main.title":"Settings","settings.main.reset":"Reset Settings","settings.filter.title":"Filter","settings.filter.const":"By Chart Constant","settings.filter.diff":"By Difficulty","settings.filter.diff.warn":"*Should select at least one","settings.filter.diff.notify":"*Filtering difficulties or more than two hidden songs that are not displayed on CHUNITHM-NET may cause the data to be inaccurate.","settings.filter.genre":"By Genre","settings.filter.genre.all":"Toggle ALL","settings.filter.release":"By Version","settings.filter.release.all":"Toggle ALL","settings.filter.rank":"By Rank","settings.filter.rank.all":"Tog","settings.data.title":"Game Data","settings.data.constData":"Chart Constant Data（Version : JP 20260305v0）","settings.data.constData.crossverse":"Intl. Ver. (X-VERSE)","settings.data.constData.cross2verse":"Japanese Ver. (X-VERSE-X)","settings.data.constData.sunplus":"SUN+","settings.data.constData.luminous":"LUMINOUS","settings.data.constData.luminousplus":"LUMINOUS PLUS","settings.data.constData.verse":"VERSE","settings.data.playcount":"Show Play Count / EX Ranking","settings.data.playcount.notify":"*You can click the dark box beside a song to view.","settings.data.showScoreDiff":"Show Diff.erence <span style=\\"color:var(--theme-text-dim)\\">(since last updated)</span>","settings.data.diffUpdate":"Diff. Basis Update Interval <span style=\\"color:var(--theme-text-dim)\\">Last updated: {{date}}</span>","settings.data.diffUpdate.1d":"Auto-update after 1 day","settings.data.diffUpdate.3d":"Auto-update after 3 days","settings.data.diffUpdate.7d":"Auto-update after 1 week","settings.data.diffUpdate.14d":"Auto-update after 2 weeks","settings.data.diffUpdate.30d":"Auto-update after 1 month","settings.data.diffUpdate.manual":"Manually update","settings.data.diffUpdate.update":"Update Diff. Basis","settings.data.diffUpdate.reload":"Reload Page to Update","settings.data.diffUpdate.notify":"*If set to auto-update when it has been more than the specified duration from the last time updated, the program will automatically update it.<br><br>◆ For more information please refer to <a href=\\"https://chuni.tsaibee.org\\" target=\\"_blank\\">Home Page</a>.<br><br>◆ To report issues please mail to <a href=\\"mailto:admin@tsaibee.org\\" target=\\"_blank\\">admin@tsaibee.org</a>.","settings.data.overpower":"Show OVER POWER","settings.data.overpower.hide":"Hide (Show Rank)","settings.data.overpower.clr":"Hide (Show Clear Mark)","settings.data.overpower.value":"Show (OVER POWER Value)","settings.data.overpower.percentage":"Show (OVER POWER Achievement%)","settings.data.overpower.dgvalue":"Show (Designate OVER POWER Value)","settings.data.overpower.dgpercentage":"Show (Designate OVER POWER Achievement%)","settings.data.overpower.eudgvalue":"Show (Designate OVER POWER Value except unscored)","settings.data.overpower.eudgpercentage":"Show (Designate OVER POWER Achievement% except unscored)","settings.data.overpower.notify":"*It will also show unplayed song when toggled to \\"Show OVER POWER\\".<br/>*Total over power might differ from the official one, if some of the songs are not unlocked yet.<br/>*When set to \\"(Designate OVER POWER)\\", only the chart with the highest OP value and the highest difficulty for each song will be displayed.","settings.ui.title":"User Interface","settings.ui.locale":"Language","settings.ui.theme":"Theme","player.generic.generatedAt":"Generated At","player.best.playCount":"Play Count","player.best.best30":"BEST 30","player.best.maxPossible":"Max Possible","player.best.all30":"ALL 30","player.best.curr20":"CURRENT 20","player.recent.average":"Rating","record.head.playOrder":"Played Time","record.head.order":"#","record.head.title":"Title","record.head.const":"Ct","record.head.overpower":"OP","record.head.overpowerPercent":"OP%","record.head.rank":"Rank","record.head.clr":"CLR","record.head.score":"Score","record.head.scoreDiff":"Diff.","record.head.rating":"Rat.","record.head.ajfc":"AJ","record.head.playcount":"PC","record.head.worldrank":"Rk","record.fetch.fetching":"Fetching record for <span style=\\"color:var(--theme-song-{{diff}});\\">{{diffStr}}</span> difficulty...","record.fetch.diff.ult":"ULTIMA","record.fetch.diff.mas":"MASTER","record.fetch.diff.exp":"EXPERT","record.fetch.diff.adv":"ADVANCED","record.fetch.diff.bas":"BASIC","record.fetch.unknown":"Found unknown song(s):\\n\\n{{songs}}\\n\\nPlease contact the author via Email (admin@tsaibee.org).","record.fetch.error":"<span style=\\"color:red;\\">Some error occured when fetching best record!<br/>You probably need to reload the page now.</span>","playcount.fetch.button":"Fetch PC","worldrank.fetch.button":"Fetch Rk","playcount.fetch.progress":"Fetching ... ({{progress}}/{{all}})","playcount.fetch.error":"<span style=\\"color:red;\\">Some error occured when fetching!<br/>You probably need to reload the page now.</span>","share.error":"Something went wrong when converting your scores to PNG. Please screenshot the error message to the author.\\n\\n{{error}}"}')
+        e.exports = JSON.parse('{"main.title":"CHUNITHM Record Viewer","loading.constData":"Used song constant data: {{name}}","loading.error.serviceDown":"CHUNITHM-NET service is currently unavailable.<br/>Please come back later.","loading.error.rejected":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.timeout":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.noopener":"An error occurred while processing your request.<br/>Please <em>re-open <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> and <em>run the bookmarklet again</em>.","loading.error.unknown":"Please <em>screenshot or copy the error message</em> to the author.","header.title.dl":"Save or share B40 as image","header.title.constData":"Change song constant data (Current: {{name}})","header.title.settings":"Open settings","settings.main.title":"Settings","settings.main.reset":"Reset Settings","settings.filter.title":"Filter","settings.filter.const":"By Chart Constant","settings.filter.diff":"By Difficulty","settings.filter.diff.warn":"*Should select at least one","settings.filter.diff.notify":"*Filtering difficulties or more than two hidden songs that are not displayed on CHUNITHM-NET may cause the data to be inaccurate.","settings.filter.genre":"By Genre","settings.filter.genre.all":"Toggle ALL","settings.filter.release":"By Version","settings.filter.release.all":"Toggle ALL","settings.filter.rank":"By Rank","settings.filter.rank.all":"Tog","settings.data.title":"Game Data","settings.data.constData":"Chart Constant Data（Version : JP 20260305v0）","settings.data.constData.crossverse":"Intl. Ver. (X-VERSE)","settings.data.constData.cross2verse":"Japanese Ver. (X-VERSE-X)","settings.data.constData.sunplus":"SUN+","settings.data.constData.luminous":"LUMINOUS","settings.data.constData.luminousplus":"LUMINOUS PLUS","settings.data.constData.verse":"VERSE","settings.data.playcount":"Show Play Count","settings.data.worldrank":"Show EX Ranking","settings.data.playcount.notify":"*You can click the dark box beside a song to view.","settings.data.showScoreDiff":"Show Diff.erence <span style=\\"color:var(--theme-text-dim)\\">(since last updated)</span>","settings.data.diffUpdate":"Diff. Basis Update Interval <span style=\\"color:var(--theme-text-dim)\\">Last updated: {{date}}</span>","settings.data.diffUpdate.1d":"Auto-update after 1 day","settings.data.diffUpdate.3d":"Auto-update after 3 days","settings.data.diffUpdate.7d":"Auto-update after 1 week","settings.data.diffUpdate.14d":"Auto-update after 2 weeks","settings.data.diffUpdate.30d":"Auto-update after 1 month","settings.data.diffUpdate.manual":"Manually update","settings.data.diffUpdate.update":"Update Diff. Basis","settings.data.diffUpdate.reload":"Reload Page to Update","settings.data.diffUpdate.notify":"*If set to auto-update when it has been more than the specified duration from the last time updated, the program will automatically update it.<br><br>◆ For more information please refer to <a href=\\"https://chuni.tsaibee.org\\" target=\\"_blank\\">Home Page</a>.<br><br>◆ To report issues please mail to <a href=\\"mailto:admin@tsaibee.org\\" target=\\"_blank\\">admin@tsaibee.org</a>.","settings.data.overpower":"Show OVER POWER","settings.data.overpower.hide":"Hide (Show Rank)","settings.data.overpower.clr":"Hide (Show Clear Mark)","settings.data.overpower.value":"Show (OVER POWER Value)","settings.data.overpower.percentage":"Show (OVER POWER Achievement%)","settings.data.overpower.dgvalue":"Show (Designate OVER POWER Value)","settings.data.overpower.dgpercentage":"Show (Designate OVER POWER Achievement%)","settings.data.overpower.eudgvalue":"Show (Designate OVER POWER Value except unscored)","settings.data.overpower.eudgpercentage":"Show (Designate OVER POWER Achievement% except unscored)","settings.data.overpower.notify":"*It will also show unplayed song when toggled to \\"Show OVER POWER\\".<br/>*Total over power might differ from the official one, if some of the songs are not unlocked yet.<br/>*When set to \\"(Designate OVER POWER)\\", only the chart with the highest OP value and the highest difficulty for each song will be displayed.","settings.ui.title":"User Interface","settings.ui.locale":"Language","settings.ui.theme":"Theme","player.generic.generatedAt":"Generated At","player.best.playCount":"Play Count","player.best.best30":"BEST 30","player.best.maxPossible":"Max Possible","player.best.all30":"ALL 30","player.best.curr20":"CURRENT 20","player.recent.average":"Rating","record.head.playOrder":"Played Time","record.head.order":"#","record.head.title":"Title","record.head.const":"Ct","record.head.overpower":"OP","record.head.overpowerPercent":"OP%","record.head.rank":"Rank","record.head.clr":"CLR","record.head.score":"Score","record.head.scoreDiff":"Diff.","record.head.rating":"Rat.","record.head.ajfc":"AJ","record.head.playcount":"PC","record.head.worldrank":"Rk","record.fetch.fetching":"Fetching record for <span style=\\"color:var(--theme-song-{{diff}});\\">{{diffStr}}</span> difficulty...","record.fetch.diff.ult":"ULTIMA","record.fetch.diff.mas":"MASTER","record.fetch.diff.exp":"EXPERT","record.fetch.diff.adv":"ADVANCED","record.fetch.diff.bas":"BASIC","record.fetch.unknown":"Found unknown song(s):\\n\\n{{songs}}\\n\\nPlease contact the author via Email (admin@tsaibee.org).","record.fetch.error":"<span style=\\"color:red;\\">Some error occured when fetching best record!<br/>You probably need to reload the page now.</span>","playcount.fetch.button":"Fetch PC","worldrank.fetch.button":"Fetch Rk","playcount.fetch.progress":"Fetching ... ({{progress}}/{{all}})","playcount.fetch.error":"<span style=\\"color:red;\\">Some error occured when fetching!<br/>You probably need to reload the page now.</span>","share.error":"Something went wrong when converting your scores to PNG. Please screenshot the error message to the author.\\n\\n{{error}}"}')
       },
       141: e => {
         "use strict";
-        e.exports = JSON.parse('{"main.title":"CHUNITHM 查分器","loading.constData":"使用 {{name}} 版本的定數資料","loading.error.serviceDown":"CHUNITHM-NET 目前正在停服維護。<br/>請在其可以使用的時段執行本程式。","loading.error.rejected":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.timeout":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.noopener":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.unknown":"無法正常執行！<br/>請截圖以下錯誤資訊並回報作者協助處理。","header.title.dl":"將B40記錄儲存為照片","header.title.constData":"切換歌曲定數資料 (目前：{{name}})","header.title.settings":"設定","settings.main.title":"設定","settings.main.reset":"重置設定","settings.filter.title":"歌曲篩選","settings.filter.const":"依 譜面定數","settings.filter.diff":"依 譜面難度","settings.filter.diff.warn":"*至少選一個吧","settings.filter.diff.notify":"*依照難度篩選或有 2 首以上未於 CHUNITHM-NET 顯示的隱藏曲，可能會使得記錄變得不準確","settings.filter.genre":"依 歌曲類別","settings.filter.genre.all":"全部開啟/關閉","settings.filter.release":"依 歌曲版本","settings.filter.release.all":"全開/關","settings.filter.rank":"依 評級分數","settings.filter.rank.all":"全選","settings.data.title":"遊戲數據","settings.data.constData":"使用的定數資料（版本：JP 20260305v0）","settings.data.constData.crossverse":"國際版 (X-VERSE)","settings.data.constData.cross2verse":"日版 (X-VERSE-X)","settings.data.constData.sunplus":"SUN+","settings.data.constData.luminous":"LUMINOUS","settings.data.constData.luminousplus":"LUMINOUS PLUS","settings.data.constData.verse":"VERSE","settings.data.playcount":"顯示個別歌曲遊玩次數 / 全服排名","settings.data.playcount.notify":"*點擊歌曲條目旁的深色方塊也可以查看","settings.data.showScoreDiff":"顯示推分數據","settings.data.diffUpdate":"推分基準更新週期 <span style=\\"color:var(--theme-text-dim)\\">上次更新：{{date}}</span>","settings.data.diffUpdate.1d":"一天 後自動更新","settings.data.diffUpdate.3d":"三天 後自動更新","settings.data.diffUpdate.7d":"一週 後自動更新","settings.data.diffUpdate.14d":"兩週 後自動更新","settings.data.diffUpdate.30d":"一個月 後自動更新","settings.data.diffUpdate.manual":"手動更新","settings.data.diffUpdate.update":"更新推分基準","settings.data.diffUpdate.reload":"請重新載入頁面以更新紀錄","settings.data.diffUpdate.notify":"*若設定為自動更新，每當距離「上一次記錄推分基準」超過指定時間，就會自動更新推分的計算基準<br><br>◆ 關於書籤工具說明，請見<a href=\\"https://chuni.tsaibee.org\\" target=\\"_blank\\">本服務首頁</a><br><br>◆ 問題回報請寄信至 <a href=\\"mailto:admin@tsaibee.org\\" target=\\"_blank\\">admin@tsaibee.org</a>","settings.data.overpower":"顯示 OVER POWER","settings.data.overpower.hide":"隱藏 (顯示成績評級)","settings.data.overpower.clr":"隱藏 (顯示 CLEAR 標記)","settings.data.overpower.value":"顯示 (OVER POWER 數值)","settings.data.overpower.percentage":"顯示 (OVER POWER 達成率)","settings.data.overpower.dgvalue":"顯示 (OVER POWER 對象數值)","settings.data.overpower.dgpercentage":"顯示 (OVER POWER 對象達成率)","settings.data.overpower.eudgvalue":"顯示 (OVER POWER 對象數值 - 排除無分數)","settings.data.overpower.eudgpercentage":"顯示 (OVER POWER 對象達成率 - 排除無分數)","settings.data.overpower.notify":"*設定為「顯示」時，未遊玩的歌曲也會一併顯示<br/>*若有尚未解鎖的歌曲，OVER POWER 的數據可能會與官方記錄有差別<br/>*設定為「(OVER POWER 對象)」時，僅會顯示單曲所有譜面取得最大 OP 數值難度及最高難度","settings.ui.title":"使用者介面","settings.ui.locale":"語言","settings.ui.theme":"佈景主題","player.generic.generatedAt":"生成日期","player.best.playCount":"遊玩道數","player.best.best30":"BEST 30","player.best.maxPossible":"不推分可至","player.best.all30":"ALL 30","player.best.curr20":"CURRENT 20","player.recent.average":"Rating","record.head.playOrder":"遊玩時間","record.head.order":"#","record.head.title":"曲名","record.head.const":"定數","record.head.overpower":"OP","record.head.overpowerPercent":"OP%","record.head.rank":"評級","record.head.clr":"CLR","record.head.score":"成績","record.head.scoreDiff":"推分","record.head.rating":"評分","record.head.ajfc":"AJ","record.head.playcount":"次數","record.head.worldrank":"總排","record.fetch.fetching":"正在載入 <span style=\\"color:var(--theme-song-{{diff}});\\">{{diffStr}}</span> 資料……","record.fetch.diff.ult":"黑譜 (ULTIMA)","record.fetch.diff.mas":"紫譜 (MASTER)","record.fetch.diff.exp":"紅譜 (EXPERT)","record.fetch.diff.adv":"黃譜 (ADVANCED)","record.fetch.diff.bas":"綠譜 (BASIC)","record.fetch.unknown":"資料庫尚未有以下歌曲：\\n{{songs}}\\n請寄信至 admin@tsaibee.org 反映。","record.fetch.error":"<span style=\\"color:red;\\">取得遊玩記錄時發生問題，<br/>請重新整理頁面後再試一次。</span>","playcount.fetch.button":"取得次數","worldrank.fetch.button":"取得總排","playcount.fetch.progress":"正在取得…… ({{progress}}/{{all}})","playcount.fetch.error":"<span style=\\"color:red;\\">執行時出現問題，<br/>請重新整理頁面後再試一次。</span>","share.error":"轉換圖檔時出現錯誤，請將以下的錯誤訊息截圖傳給作者處理。\\n\\n{{error}}"}')
+        e.exports = JSON.parse('{"main.title":"CHUNITHM 查分器","loading.constData":"使用 {{name}} 版本的定數資料","loading.error.serviceDown":"CHUNITHM-NET 目前正在停服維護。<br/>請在其可以使用的時段執行本程式。","loading.error.rejected":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.timeout":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.noopener":"無法正常執行！<br/>請 <em>重新整理</em>、<em>重新登入 <a href=\\"https://chunithm-net-eng.com/mobile/\\">CHUNITHM-NET</a></em> 後，再執行查分器。","loading.error.unknown":"無法正常執行！<br/>請截圖以下錯誤資訊並回報作者協助處理。","header.title.dl":"將B40記錄儲存為照片","header.title.constData":"切換歌曲定數資料 (目前：{{name}})","header.title.settings":"設定","settings.main.title":"設定","settings.main.reset":"重置設定","settings.filter.title":"歌曲篩選","settings.filter.const":"依 譜面定數","settings.filter.diff":"依 譜面難度","settings.filter.diff.warn":"*至少選一個吧","settings.filter.diff.notify":"*依照難度篩選或有 2 首以上未於 CHUNITHM-NET 顯示的隱藏曲，可能會使得記錄變得不準確","settings.filter.genre":"依 歌曲類別","settings.filter.genre.all":"全部開啟/關閉","settings.filter.release":"依 歌曲版本","settings.filter.release.all":"全開/關","settings.filter.rank":"依 評級分數","settings.filter.rank.all":"全選","settings.data.title":"遊戲數據","settings.data.constData":"使用的定數資料（版本：JP 20260305v0）","settings.data.constData.crossverse":"國際版 (X-VERSE)","settings.data.constData.cross2verse":"日版 (X-VERSE-X)","settings.data.constData.sunplus":"SUN+","settings.data.constData.luminous":"LUMINOUS","settings.data.constData.luminousplus":"LUMINOUS PLUS","settings.data.constData.verse":"VERSE","settings.data.playcount":"顯示遊玩次數","settings.data.worldrank":"顯示全服排名","settings.data.playcount.notify":"*點擊歌曲條目旁的深色方塊也可以查看","settings.data.showScoreDiff":"顯示推分數據","settings.data.diffUpdate":"推分基準更新週期 <span style=\\"color:var(--theme-text-dim)\\">上次更新：{{date}}</span>","settings.data.diffUpdate.1d":"一天 後自動更新","settings.data.diffUpdate.3d":"三天 後自動更新","settings.data.diffUpdate.7d":"一週 後自動更新","settings.data.diffUpdate.14d":"兩週 後自動更新","settings.data.diffUpdate.30d":"一個月 後自動更新","settings.data.diffUpdate.manual":"手動更新","settings.data.diffUpdate.update":"更新推分基準","settings.data.diffUpdate.reload":"請重新載入頁面以更新紀錄","settings.data.diffUpdate.notify":"*若設定為自動更新，每當距離「上一次記錄推分基準」超過指定時間，就會自動更新推分的計算基準<br><br>◆ 關於書籤工具說明，請見<a href=\\"https://chuni.tsaibee.org\\" target=\\"_blank\\">本服務首頁</a><br><br>◆ 問題回報請寄信至 <a href=\\"mailto:admin@tsaibee.org\\" target=\\"_blank\\">admin@tsaibee.org</a>","settings.data.overpower":"顯示 OVER POWER","settings.data.overpower.hide":"隱藏 (顯示成績評級)","settings.data.overpower.clr":"隱藏 (顯示 CLEAR 標記)","settings.data.overpower.value":"顯示 (OVER POWER 數值)","settings.data.overpower.percentage":"顯示 (OVER POWER 達成率)","settings.data.overpower.dgvalue":"顯示 (OVER POWER 對象數值)","settings.data.overpower.dgpercentage":"顯示 (OVER POWER 對象達成率)","settings.data.overpower.eudgvalue":"顯示 (OVER POWER 對象數值 - 排除無分數)","settings.data.overpower.eudgpercentage":"顯示 (OVER POWER 對象達成率 - 排除無分數)","settings.data.overpower.notify":"*設定為「顯示」時，未遊玩的歌曲也會一併顯示<br/>*若有尚未解鎖的歌曲，OVER POWER 的數據可能會與官方記錄有差別<br/>*設定為「(OVER POWER 對象)」時，僅會顯示單曲所有譜面取得最大 OP 數值難度及最高難度","settings.ui.title":"使用者介面","settings.ui.locale":"語言","settings.ui.theme":"佈景主題","player.generic.generatedAt":"生成日期","player.best.playCount":"遊玩道數","player.best.best30":"BEST 30","player.best.maxPossible":"不推分可至","player.best.all30":"ALL 30","player.best.curr20":"CURRENT 20","player.recent.average":"Rating","record.head.playOrder":"遊玩時間","record.head.order":"#","record.head.title":"曲名","record.head.const":"定數","record.head.overpower":"OP","record.head.overpowerPercent":"OP%","record.head.rank":"評級","record.head.clr":"CLR","record.head.score":"成績","record.head.scoreDiff":"推分","record.head.rating":"評分","record.head.ajfc":"AJ","record.head.playcount":"次數","record.head.worldrank":"總排","record.fetch.fetching":"正在載入 <span style=\\"color:var(--theme-song-{{diff}});\\">{{diffStr}}</span> 資料……","record.fetch.diff.ult":"黑譜 (ULTIMA)","record.fetch.diff.mas":"紫譜 (MASTER)","record.fetch.diff.exp":"紅譜 (EXPERT)","record.fetch.diff.adv":"黃譜 (ADVANCED)","record.fetch.diff.bas":"綠譜 (BASIC)","record.fetch.unknown":"資料庫尚未有以下歌曲：\\n{{songs}}\\n請寄信至 admin@tsaibee.org 反映。","record.fetch.error":"<span style=\\"color:red;\\">取得遊玩記錄時發生問題，<br/>請重新整理頁面後再試一次。</span>","playcount.fetch.button":"取得次數","worldrank.fetch.button":"取得總排","playcount.fetch.progress":"正在取得…… ({{progress}}/{{all}})","playcount.fetch.error":"<span style=\\"color:red;\\">執行時出現問題，<br/>請重新整理頁面後再試一次。</span>","share.error":"轉換圖檔時出現錯誤，請將以下的錯誤訊息截圖傳給作者處理。\\n\\n{{error}}"}')
       }
     },
     t = {};
@@ -1008,25 +1008,16 @@
         let r = localStorage.getItem(e);
         (null === r || "true" !== r && "false" !== r) && (r = JSON.stringify(t), localStorage.setItem(e, r));
         let o = JSON.parse(r);
-        const {
-          subscribe: s,
-          set: a,
-          update: i
-        } = Ce(o);
-        return {
-          subscribe: s,
-          set(t) {
-            a(t), localStorage.setItem(e, JSON.stringify(t)), n(t)
-          },
-          update: i,
-          reset() {
-            this.set(t)
-          },
-          toggle() {
-            this.update((e => !e))
-          }
-        }
+        const { subscribe: s, set: a, update: i } = Ce(o);
+        return { subscribe: s, set(t) { a(t), localStorage.setItem(e, JSON.stringify(t)), n(t) }, update: i, reset() { this.set(t) }, toggle() { this.update((e => !e)) } }
       }("showPlaycount", !1),
+      rtt = function(e, t, n = (() => {})) {
+        let r = localStorage.getItem(e);
+        (null === r || "true" !== r && "false" !== r) && (r = JSON.stringify(t), localStorage.setItem(e, r));
+        let o = JSON.parse(r);
+        const { subscribe: s, set: a, update: i } = Ce(o);
+        return { subscribe: s, set(t) { a(t), localStorage.setItem(e, JSON.stringify(t)), n(t) }, update: i, reset() { this.set(t) }, toggle() { this.update((e => !e)) } }
+      }("showWorldRank", !1),
       ot = {
         "1d": 864e5,
         "3d": 2592e5,
@@ -1036,7 +1027,7 @@
         manual: Number.POSITIVE_INFINITY
       },
       st = Ne("diffUpdateInterval", "manual", Object.keys(ot)),
-      at = [Ae, De, Ze, Ye, Qe, et, eet, eeet, tt, nt, rt],
+      at = [Ae, De, Ze, Ye, Qe, et, eet, eeet, tt, nt, rt, rtt],
       it = {
         randomUUID: "undefined" != typeof crypto && crypto.randomUUID && crypto.randomUUID.bind(crypto)
       };
@@ -2893,25 +2884,17 @@
     }
 
     function kr(e) {
-      let t, n, r, o, a, i, l, c, d, u, f, p, h, g, m, v, b, bb, bbb, y, yy, yyy, w, $, x, j, S, T, C, N, U, A, L, _, I, R, F, B, V, q, W, J, X, G, Y, Z, K, ee, te, ne, se, ae, ie, le, ce, de, ue, fe, ve = e[0]("settings.main.title") + "",
+      let t, n, r, o, a, i, l, c, d, u, f, p, h, g, m, v, b, bb, bbb, y, yy, yyy, w, $, x, j, S, T, C, N, U, A, L, I, L_rk, I_rk, R, F, B, V, q, W, J, X, G, Y, Z, K, ee, te, ne, se, ae, ie, le, ce, de, ue, fe, _rk, ve = e[0]("settings.main.title") + "",
         ye = e[0]("settings.filter.title") + "",
         je = e[0]("settings.data.title") + "",
         Se = e[0]("settings.data.overpower.notify") + "",
         Te = e[0]("settings.ui.title") + "",
         Ce = e[0]("settings.main.reset") + "";
 
-      function Me(t) {
-        e[9](t)
-      }
-      function Ee(t) {
-        e[10](t)
-      }
-      let Ne = {
-        label: e[0]("settings.filter.const"),
-        max: 15.7,
-        min: 1,
-        step: .1
-      };
+      function Me(t) { e[9](t) }
+      function Ee(t) { e[10](t) }
+
+      let Ne = { label: e[0]("settings.filter.const"), max: 15.7, min: 1, step: .1 };
       let unsubQe = Qe.subscribe(filterDiff => {
         let newMin = 1;
         if (filterDiff) {
@@ -2923,179 +2906,94 @@
             newMin = 4;
           }
         }
-        if (f && f.$set) {
-          f.$set({ min: newMin });
-        } else {
-          Ne.min = newMin;
-        }
+        if (f && f.$set) { f.$set({ min: newMin }); } else { Ne.min = newMin; }
       });
-      void 0 !== e[1] && (Ne.high = e[1]), void 0 !== e[2] && (Ne.low = e[2]), f = new Dn({
-        props: Ne
-      }), Q.push((() => we(f, "high", Me))), Q.push((() => we(f, "low", Ee))), m = new Fn({}), b = new Xn({}), bb = new Xnn({}), bbb = new Xun({});
+      void 0 !== e[1] && (Ne.high = e[1]), void 0 !== e[2] && (Ne.low = e[2]), f = new Dn({ props: Ne }), Q.push((() => we(f, "high", Me))), Q.push((() => we(f, "low", Ee))), m = new Fn({}), b = new Xn({}), bb = new Xnn({}), bbb = new Xun({});
+      
       let He = function(e) {
         let t, n, r;
-
-        function o(t) {
-          e[11](t)
-        }
-        let s = {
-          label: e[0]("settings.data.constData"),
-          $$slots: {
-            default: [gr]
-          },
-          $$scope: {
-            ctx: e
-          }
-        };
-        return void 0 !== e[3] && (s.value = e[3]), t = new Tn({
-          props: s
-        }), Q.push((() => we(t, "value", o))), {
-          c() {
-            $e(t.$$.fragment)
-          },
-          m(e, n) {
-            xe(t, e, n), r = !0
-          },
+        function o(t) { e[11](t) }
+        let s = { label: e[0]("settings.data.constData"), $$slots: { default: [gr] }, $$scope: { ctx: e } };
+        return void 0 !== e[3] && (s.value = e[3]), t = new Tn({ props: s }), Q.push((() => we(t, "value", o))), {
+          c() { $e(t.$$.fragment) },
+          m(e, n) { xe(t, e, n), r = !0 },
           p(e, r) {
             const o = {};
-            1 & r && (o.label = e[0]("settings.data.constData")), 536870913 & r && (o.$$scope = {
-              dirty: r,
-              ctx: e
-            }), !n && 8 & r && (n = !0, o.value = e[3], oe((() => n = !1))), t.$set(o)
+            1 & r && (o.label = e[0]("settings.data.constData")), 536870913 & r && (o.$$scope = { dirty: r, ctx: e }), !n && 8 & r && (n = !0, o.value = e[3], oe((() => n = !1))), t.$set(o)
           },
-          i(e) {
-            r || (ge(t.$$.fragment, e), r = !0)
-          },
-          o(e) {
-            me(t.$$.fragment, e), r = !1
-          },
-          d(e) {
-            ke(t, e)
-          }
+          i(e) { r || (ge(t.$$.fragment, e), r = !0) },
+          o(e) { me(t.$$.fragment, e), r = !1 },
+          d(e) { ke(t, e) }
         }
       }(e);
 
-      function Ue(t) {
-        e[12](t)
-      }
-      let Ae = {
-        label: e[0]("settings.data.overpower"),
-        $$slots: {
-          default: [vr]
-        },
-        $$scope: {
-          ctx: e
-        }
-      };
+      function Ue(t) { e[12](t) }
+      let Ae = { label: e[0]("settings.data.overpower"), $$slots: { default: [vr] }, $$scope: { ctx: e } };
+      function De(t) { e[13](t) }
+      void 0 !== e[4] && (Ae.value = e[4]), T = new Tn({ props: Ae }), Q.push((() => we(T, "value", Ue)));
+      
+      let Le = { label: e[0]("settings.data.playcount") };
+      void 0 !== e[5] && (Le.checked = e[5]), L = new Nn({ props: Le }), Q.push((() => we(L, "checked", De)));
 
-      function De(t) {
-        e[13](t)
-      }
-      void 0 !== e[4] && (Ae.value = e[4]), T = new Tn({
-        props: Ae
-      }), Q.push((() => we(T, "value", Ue)));
-      let Le = {
-        label: e[0]("settings.data.playcount")
-      };
-      void 0 !== e[5] && (Le.checked = e[5]), L = new Nn({
-        props: Le
-      }), Q.push((() => we(L, "checked", De)));
-      let Pe = e[5] && br(e);
+      let Le_rk = { label: e[0]("settings.data.worldrank") };
+      function De_rk(t) { e[26](t) }
+      void 0 !== e[25] && (Le_rk.checked = e[25]), L_rk = new Nn({ props: Le_rk }), Q.push((() => we(L_rk, "checked", De_rk)));
 
-      function Oe(t) {
-        e[14](t)
-      }
-      let _e = {
-        label: e[0]("settings.data.showScoreDiff")
-      };
+      let Pe = (e[5] || e[25]) && br(e);
 
-      function Ie(t) {
-        e[15](t)
-      }
-      void 0 !== e[6] && (_e.checked = e[6]), F = new Nn({
-        props: _e
-      }), Q.push((() => we(F, "checked", Oe))), q = new lr({});
-      let Re = {
-        label: e[0]("settings.ui.locale"),
-        $$slots: {
-          default: [wr]
-        },
-        $$scope: {
-          ctx: e
-        }
-      };
-
-      function ze(t) {
-        e[16](t)
-      }
-      void 0 !== e[7] && (Re.value = e[7]), Z = new Tn({
-        props: Re
-      }), Q.push((() => we(Z, "value", Ie)));
-      let Fe = {
-        label: e[0]("settings.ui.theme"),
-        $$slots: {
-          default: [xr]
-        },
-        $$scope: {
-          ctx: e
-        }
-      };
-      return void 0 !== e[8] && (Fe.value = e[8]), te = new Tn({
-        props: Fe
-      }), Q.push((() => we(te, "value", ze))), {
+      function Oe(t) { e[14](t) }
+      let _e = { label: e[0]("settings.data.showScoreDiff") };
+      function Ie(t) { e[15](t) }
+      void 0 !== e[6] && (_e.checked = e[6]), F = new Nn({ props: _e }), Q.push((() => we(F, "checked", Oe))), q = new lr({});
+      
+      let Re = { label: e[0]("settings.ui.locale"), $$slots: { default: [wr] }, $$scope: { ctx: e } };
+      function ze(t) { e[16](t) }
+      void 0 !== e[7] && (Re.value = e[7]), Z = new Tn({ props: Re }), Q.push((() => we(Z, "value", Ie)));
+      let Fe = { label: e[0]("settings.ui.theme"), $$slots: { default: [xr] }, $$scope: { ctx: e } };
+      return void 0 !== e[8] && (Fe.value = e[8]), te = new Tn({ props: Fe }), Q.push((() => we(te, "value", ze))), {
         c() {
-          t = H("div"), n = H("div"), r = D(), o = H("div"), a = H("button"), a.textContent = "✕", i = D(), l = H("h3"), c = D(), d = H("h4"), u = D(), $e(f.$$.fragment), g = D(), $e(m.$$.fragment), v = D(), $e(b.$$.fragment), y = D(), $e(bb.$$.fragment), yy = D(), $e(bbb.$$.fragment), yyy = D(), w = H("hr"), $ = D(), x = H("h4"), j = D(), He && He.c(), S = D(), $e(T.$$.fragment), N = D(), U = H("div"), A = D(), $e(L.$$.fragment), I = D(), Pe && Pe.c(), R = D(), $e(F.$$.fragment), V = D(), $e(q.$$.fragment), W = D(), J = H("hr"), X = D(), G = H("h4"), Y = D(), $e(Z.$$.fragment), ee = D(), $e(te.$$.fragment), se = D(), ae = H("hr"), ie = D(), le = H("button"), O(n, "class", "modal-bg svelte-iga5r4"), O(a, "type", "button"), O(a, "class", "close-btn svelte-iga5r4"), z(l, "margin", "0"), O(d, "class", "svelte-iga5r4"), O(w, "class", "svelte-iga5r4"), O(x, "class", "svelte-iga5r4"), z(U, "color", "var(--theme-text-dim)"), z(U, "margin", ".5em auto"), O(J, "class", "svelte-iga5r4"), O(G, "class", "svelte-iga5r4"), O(ae, "class", "svelte-iga5r4"), O(le, "type", "button"), O(le, "class", "reset-btn svelte-iga5r4"), O(o, "class", "modal svelte-iga5r4"), O(t, "class", "wrapper svelte-iga5r4")
+          t = H("div"), n = H("div"), r = D(), o = H("div"), a = H("button"), a.textContent = "✕", i = D(), l = H("h3"), c = D(), d = H("h4"), u = D(), $e(f.$$.fragment), g = D(), $e(m.$$.fragment), v = D(), $e(b.$$.fragment), y = D(), $e(bb.$$.fragment), yy = D(), $e(bbb.$$.fragment), yyy = D(), w = H("hr"), $ = D(), x = H("h4"), j = D(), He && He.c(), S = D(), $e(T.$$.fragment), N = D(), U = H("div"), A = D(), $e(L.$$.fragment), I = D(), $e(L_rk.$$.fragment), I_rk = D(), Pe && Pe.c(), R = D(), $e(F.$$.fragment), V = D(), $e(q.$$.fragment), W = D(), J = H("hr"), X = D(), G = H("h4"), Y = D(), $e(Z.$$.fragment), ee = D(), $e(te.$$.fragment), se = D(), ae = H("hr"), ie = D(), le = H("button"), O(n, "class", "modal-bg svelte-iga5r4"), O(a, "type", "button"), O(a, "class", "close-btn svelte-iga5r4"), z(l, "margin", "0"), O(d, "class", "svelte-iga5r4"), O(w, "class", "svelte-iga5r4"), O(x, "class", "svelte-iga5r4"), z(U, "color", "var(--theme-text-dim)"), z(U, "margin", ".5em auto"), O(J, "class", "svelte-iga5r4"), O(G, "class", "svelte-iga5r4"), O(ae, "class", "svelte-iga5r4"), O(le, "type", "button"), O(le, "class", "reset-btn svelte-iga5r4"), O(o, "class", "modal svelte-iga5r4"), O(t, "class", "wrapper svelte-iga5r4")
         },
         m(s, p) {
-          M(s, t, p), k(t, n), k(t, r), k(t, o), k(o, a), k(o, i), k(o, l), l.innerHTML = ve, k(o, c), k(o, d), d.innerHTML = ye, k(o, u), xe(f, o, null), k(o, g), xe(m, o, null), k(o, v), xe(b, o, null), k(o, y), xe(bb, o, null), k(o, yy), xe(bbb, o, null), k(o, yyy), k(o, w), k(o, $), k(o, x), x.innerHTML = je, k(o, j), He && He.m(o, null), k(o, S), xe(T, o, null), k(o, N), k(o, U), U.innerHTML = Se, k(o, A), xe(L, o, null), k(o, I), Pe && Pe.m(o, null), k(o, R), xe(F, o, null), k(o, V), xe(q, o, null), k(o, W), k(o, J), k(o, X), k(o, G), G.innerHTML = Te, k(o, Y), xe(Z, o, null), k(o, ee), xe(te, o, null), k(o, se), k(o, ae), k(o, ie), k(o, le), le.innerHTML = Ce, de = !0, ue || (fe = [P(n, "click", xt.toggle), P(a, "click", xt.toggle), P(le, "click", e[17])], ue = !0)
+          M(s, t, p), k(t, n), k(t, r), k(t, o), k(o, a), k(o, i), k(o, l), l.innerHTML = ve, k(o, c), k(o, d), d.innerHTML = ye, k(o, u), xe(f, o, null), k(o, g), xe(m, o, null), k(o, v), xe(b, o, null), k(o, y), xe(bb, o, null), k(o, yy), xe(bbb, o, null), k(o, yyy), k(o, w), k(o, $), k(o, x), x.innerHTML = je, k(o, j), He && He.m(o, null), k(o, S), xe(T, o, null), k(o, N), k(o, U), U.innerHTML = Se, k(o, A), xe(L, o, null), k(o, I), xe(L_rk, o, null), k(o, I_rk), Pe && Pe.m(o, null), k(o, R), xe(F, o, null), k(o, V), xe(q, o, null), k(o, W), k(o, J), k(o, X), k(o, G), G.innerHTML = Te, k(o, Y), xe(Z, o, null), k(o, ee), xe(te, o, null), k(o, se), k(o, ae), k(o, ie), k(o, le), le.innerHTML = Ce, de = !0, ue || (fe = [P(n, "click", xt.toggle), P(a, "click", xt.toggle), P(le, "click", e[17])], ue = !0)
         },
         p(e, [t]) {
           (!de || 1 & t) && ve !== (ve = e[0]("settings.main.title") + "") && (l.innerHTML = ve), (!de || 1 & t) && ye !== (ye = e[0]("settings.filter.title") + "") && (d.innerHTML = ye);
           const n = {};
           1 & t && (n.label = e[0]("settings.filter.const")), !p && 2 & t && (p = !0, n.high = e[1], oe((() => p = !1))), !h && 4 & t && (h = !0, n.low = e[2], oe((() => h = !1))), f.$set(n), (!de || 1 & t) && je !== (je = e[0]("settings.data.title") + "") && (x.innerHTML = je), He.p(e, t);
           const r = {};
-          1 & t && (r.label = e[0]("settings.data.overpower")), 536870913 & t && (r.$$scope = {
-            dirty: t,
-            ctx: e
-          }), !C && 16 & t && (C = !0, r.value = e[4], oe((() => C = !1))), T.$set(r), (!de || 1 & t) && Se !== (Se = e[0]("settings.data.overpower.notify") + "") && (U.innerHTML = Se);
+          1 & t && (r.label = e[0]("settings.data.overpower")), 536870913 & t && (r.$$scope = { dirty: t, ctx: e }), !C && 16 & t && (C = !0, r.value = e[4], oe((() => C = !1))), T.$set(r), (!de || 1 & t) && Se !== (Se = e[0]("settings.data.overpower.notify") + "") && (U.innerHTML = Se);
+          
           const s = {};
-          1 & t && (s.label = e[0]("settings.data.playcount")), !_ && 32 & t && (_ = !0, s.checked = e[5], oe((() => _ = !1))), L.$set(s), e[5] ? Pe ? (Pe.p(e, t), 32 & t && ge(Pe, 1)) : (Pe = br(e), Pe.c(), ge(Pe, 1), Pe.m(o, R)) : Pe && (pe(), me(Pe, 1, 1, (() => {
-            Pe = null
-          })), he());
+          1 & t && (s.label = e[0]("settings.data.playcount")), !_ && 32 & t && (_ = !0, s.checked = e[5], oe((() => _ = !1))), L.$set(s);
+          
+          const s_rk = {};
+          1 & t && (s_rk.label = e[0]("settings.data.worldrank")), !_rk && 33554432 & t && (_rk = !0, s_rk.checked = e[25], oe((() => _rk = !1))), L_rk.$set(s_rk);
+
+          (e[5] || e[25]) ? Pe ? (Pe.p(e, t), 33554464 & t && ge(Pe, 1)) : (Pe = br(e), Pe.c(), ge(Pe, 1), Pe.m(o, R)) : Pe && (pe(), me(Pe, 1, 1, (() => { Pe = null })), he());
+          
           const a = {};
           1 & t && (a.label = e[0]("settings.data.showScoreDiff")), !B && 64 & t && (B = !0, a.checked = e[6], oe((() => B = !1))), F.$set(a), (!de || 1 & t) && Te !== (Te = e[0]("settings.ui.title") + "") && (G.innerHTML = Te);
           const i = {};
-          1 & t && (i.label = e[0]("settings.ui.locale")), 536870912 & t && (i.$$scope = {
-            dirty: t,
-            ctx: e
-          }), !K && 128 & t && (K = !0, i.value = e[7], oe((() => K = !1))), Z.$set(i);
+          1 & t && (i.label = e[0]("settings.ui.locale")), 536870912 & t && (i.$$scope = { dirty: t, ctx: e }), !K && 128 & t && (K = !0, i.value = e[7], oe((() => K = !1))), Z.$set(i);
           const c = {};
-          1 & t && (c.label = e[0]("settings.ui.theme")), 536870912 & t && (c.$$scope = {
-            dirty: t,
-            ctx: e
-          }), !ne && 256 & t && (ne = !0, c.value = e[8], oe((() => ne = !1))), te.$set(c), (!de || 1 & t) && Ce !== (Ce = e[0]("settings.main.reset") + "") && (le.innerHTML = Ce)
+          1 & t && (c.label = e[0]("settings.ui.theme")), 536870912 & t && (c.$$scope = { dirty: t, ctx: e }), !ne && 256 & t && (ne = !0, c.value = e[8], oe((() => ne = !1))), te.$set(c), (!de || 1 & t) && Ce !== (Ce = e[0]("settings.main.reset") + "") && (le.innerHTML = Ce)
         },
         i(e) {
-          de || (ge(f.$$.fragment, e), ge(m.$$.fragment, e), ge(b.$$.fragment, e), ge(bb.$$.fragment, e), ge(bbb.$$.fragment, e), ge(He), ge(T.$$.fragment, e), ge(L.$$.fragment, e), ge(Pe), ge(F.$$.fragment, e), ge(q.$$.fragment, e), ge(Z.$$.fragment, e), ge(te.$$.fragment, e), re((() => {
-            de && (ce || (ce = be(t, $n, {
-              duration: 100
-            }, !0)), ce.run(1))
-          })), de = !0)
+          de || (ge(f.$$.fragment, e), ge(m.$$.fragment, e), ge(b.$$.fragment, e), ge(bb.$$.fragment, e), ge(bbb.$$.fragment, e), ge(He), ge(T.$$.fragment, e), ge(L.$$.fragment, e), ge(L_rk.$$.fragment, e), ge(Pe), ge(F.$$.fragment, e), ge(q.$$.fragment, e), ge(Z.$$.fragment, e), ge(te.$$.fragment, e), re((() => { de && (ce || (ce = be(t, $n, { duration: 100 }, !0)), ce.run(1)) })), de = !0)
         },
         o(e) {
-          me(f.$$.fragment, e), me(m.$$.fragment, e), me(b.$$.fragment, e), me(bb.$$.fragment, e), me(bbb.$$.fragment, e), me(He), me(T.$$.fragment, e), me(L.$$.fragment, e), me(Pe), me(F.$$.fragment, e), me(q.$$.fragment, e), me(Z.$$.fragment, e), me(te.$$.fragment, e), ce || (ce = be(t, $n, {
-            duration: 100
-          }, !1)), ce.run(0), de = !1
+          me(f.$$.fragment, e), me(m.$$.fragment, e), me(b.$$.fragment, e), me(bb.$$.fragment, e), me(bbb.$$.fragment, e), me(He), me(T.$$.fragment, e), me(L.$$.fragment, e), me(L_rk.$$.fragment, e), me(Pe), me(F.$$.fragment, e), me(q.$$.fragment, e), me(Z.$$.fragment, e), me(te.$$.fragment, e), ce || (ce = be(t, $n, { duration: 100 }, !1)), ce.run(0), de = !1
         },
         d(e) {
-          e && E(t), ke(f), ke(m), ke(b), ke(bb), ke(bbb), He && He.d(), ke(T), ke(L), Pe && Pe.d(), ke(F), ke(q), ke(Z), ke(te), e && ce && ce.end(), ue = !1, s(fe), unsubQe && unsubQe()
+          e && E(t), ke(f), ke(m), ke(b), ke(bb), ke(bbb), He && He.d(), ke(T), ke(L), ke(L_rk), Pe && Pe.d(), ke(F), ke(q), ke(Z), ke(te), e && ce && ce.end(), ue = !1, s(fe), unsubQe && unsubQe()
         }
       }
     }
 
     function jr(e, t, n) {
-      let r, o, s, a, i, l, c, d, f;
-      return u(e, wt, (e => n(0, r = e))), u(e, Ze, (e => n(1, o = e))), u(e, Ye, (e => n(2, s = e))), u(e, tt, (e => n(3, a = e))), u(e, nt, (e => n(4, i = e))), u(e, rt, (e => n(5, l = e))), u(e, Tt, (e => n(6, c = e))), u(e, De, (e => n(7, d = e))), u(e, Ae, (e => n(8, f = e))), [r, o, s, a, i, l, c, d, f, function(e) {
+      let r, o, s, a, i, l, c, d, f, wr_val;
+      return u(e, wt, (e => n(0, r = e))), u(e, Ze, (e => n(1, o = e))), u(e, Ye, (e => n(2, s = e))), u(e, tt, (e => n(3, a = e))), u(e, nt, (e => n(4, i = e))), u(e, rt, (e => n(5, l = e))), u(e, Tt, (e => n(6, c = e))), u(e, De, (e => n(7, d = e))), u(e, Ae, (e => n(8, f = e))), u(e, rtt, (e => n(25, wr_val = e))), [r, o, s, a, i, l, c, d, f, function(e) {
         o = e, Ze.set(o)
       }, function(e) {
         s = e, Ye.set(s)
@@ -3113,6 +3011,8 @@
         f = e, Ae.set(f)
       }, () => {
         for (const e of at) e.reset()
+      }, , , , , , , , wr_val, function(e) {
+        wr_val = e, rtt.set(wr_val)
       }]
     }
     const Sr = class extends Se {
@@ -3635,141 +3535,77 @@
       }
     }
 
-    function Jr(e) {
-      let ph1, ph2;
+    function Jr_PC(e) {
+      let ph1;
       const selCount = e => void 0 === e[0].playCount ? Gr : Xr;
-      const selRank  = e => void 0 === e[0].worldRank ? Grw : Wrr;
-      let cr = selCount(e), rr = selRank(e),
-          cb = cr(e), rb = rr(e);
+      let cr = selCount(e), cb = cr(e);
       return {
-        c() {
-          cb.c(); rb.c();
-          ph1 = L(); ph2 = L();
-        },
-        m(t, a) {
-          cb.m(t, a); M(t, ph1, a);
-          rb.m(t, a); M(t, ph2, a);
-        },
+        c() { cb.c(); ph1 = L(); },
+        m(t, a) { cb.m(t, a); M(t, ph1, a); },
         p(e, f) {
-          let ncr = selCount(e), nrr = selRank(e);
-          if (cr === ncr) cb.p?.(e, f);
-          else {
-            cb.d(1);
-            cr = ncr; cb = cr(e);
-            cb.c(); cb.m(ph1.parentNode, ph1);
-          }
-          if (rr === nrr) rb.p?.(e, f);
-          else {
-            rb.d(1);
-            rr = nrr; rb = rr(e);
-            rb.c(); rb.m(ph2.parentNode, ph2);
-          }
+          let ncr = selCount(e);
+          if (cr === ncr) cb.p?.(e, f); else { cb.d(1); cr = ncr; cb = cr(e); cb.c(); cb.m(ph1.parentNode, ph1); }
         },
-        d(detach) {
-          cb.d(detach); rb.d(detach);
-          if (detach) { E(ph1); E(ph2); }
-        }
+        d(detach) { cb.d(detach); if (detach) E(ph1); }
+      }
+    }
+    function Jr_RK(e) {
+      let ph2;
+      const selRank  = e => void 0 === e[0].worldRank ? Grw : Wrr;
+      let rr = selRank(e), rb = rr(e);
+      return {
+        c() { rb.c(); ph2 = L(); },
+        m(t, a) { rb.m(t, a); M(t, ph2, a); },
+        p(e, f) {
+          let nrr = selRank(e);
+          if (rr === nrr) rb.p?.(e, f); else { rb.d(1); rr = nrr; rb = rr(e); rb.c(); rb.m(ph2.parentNode, ph2); }
+        },
+        d(detach) { rb.d(detach); if (detach) E(ph2); }
       }
     }
     function Wrr(e) {
       let td, textNode, val = (e[0].worldRank ?? "-") + "";
       return {
-        c() {
-          td = H("td");
-          textNode = A(val);
-          O(td, "class", "svelte-1gjhsjp");
-        },
-        m(target, anchor) {
-          M(target, td, anchor);
-          k(td, textNode);
-        },
-        p(e, s) {
-          let newVal = (e[0].worldRank ?? "-") + "";
-          if (val !== newVal) {
-            val = newVal;
-            I(textNode, val);
-          }
-        },
-        d(detach) {
-          if (detach) E(td);
-        }
+        c() { td = H("td"); textNode = A(val); O(td, "class", "svelte-1gjhsjp"); },
+        m(target, anchor) { M(target, td, anchor); k(td, textNode); },
+        p(e, s) { let newVal = (e[0].worldRank ?? "-") + ""; if (val !== newVal) { val = newVal; I(textNode, val); } },
+        d(detach) { if (detach) E(td); }
       };
     }
     function Grw(e) {
       let td, cleanup, bound = false;
       return {
-        c() {
-          td = H("td");
-          td.innerHTML = '<span class="svelte-1gjhsjp">  </span>';
-          O(td, "class", "pc-hidden svelte-1gjhsjp");
-          B(td, "disabled", e[5]);
-        },
-        m(target, anchor) {
-          M(target, td, anchor);
-          if (!bound) { cleanup = P(td, "click", e[9]); bound = true; }
-        },
-        p(e, flags) {
-          32 & flags && B(td, "disabled", e[5]);
-        },
-        d(detach) {
-          if (detach) E(td);
-          bound = false;
-          cleanup && cleanup();
-        }
+        c() { td = H("td"); td.innerHTML = '<span class="svelte-1gjhsjp">  </span>'; O(td, "class", "pc-hidden svelte-1gjhsjp"); B(td, "disabled", e[5]); },
+        m(target, anchor) { M(target, td, anchor); if (!bound) { cleanup = P(td, "click", e[9]); bound = true; } },
+        p(e, flags) { 32 & flags && B(td, "disabled", e[5]); },
+        d(detach) { if (detach) E(td); bound = false; cleanup && cleanup(); }
       };
     }
-
     function Xr(e) {
       let t, n, r = (e[0].playCount ?? "?") + "";
       return {
-        c() {
-          t = H("td"), n = A(r), O(t, "class", "svelte-1gjhsjp")
-        },
-        m(e, r) {
-          M(e, t, r), k(t, n)
-        },
-        p(e, t) {
-          1 & t && r !== (r = (e[0].playCount ?? "?") + "") && I(n, r)
-        },
-        d(e) {
-          e && E(t)
-        }
+        c() { t = H("td"), n = A(r), O(t, "class", "svelte-1gjhsjp") },
+        m(e, r) { M(e, t, r), k(t, n) },
+        p(e, t) { 1 & t && r !== (r = (e[0].playCount ?? "?") + "") && I(n, r) },
+        d(e) { e && E(t) }
       }
     }
-
     function Gr(e) {
       let t, n, r;
       return {
-        c() {
-          t = H("td"), t.innerHTML = '<span class="svelte-1gjhsjp">  </span>', O(t, "class", "pc-hidden svelte-1gjhsjp"), B(t, "disabled", e[5])
-        },
-        m(o, s) {
-          M(o, t, s), n || (r = P(t, "click", e[8]), n = !0)
-        },
-        p(e, n) {
-          32 & n && B(t, "disabled", e[5])
-        },
-        d(e) {
-          e && E(t), n = !1, r()
-        }
+        c() { t = H("td"), t.innerHTML = '<span class="svelte-1gjhsjp">  </span>', O(t, "class", "pc-hidden svelte-1gjhsjp"), B(t, "disabled", e[5]) },
+        m(o, s) { M(o, t, s), n || (r = P(t, "click", e[8]), n = !0) },
+        p(e, n) { 32 & n && B(t, "disabled", e[5]) },
+        d(e) { e && E(t), n = !1, r() }
       }
     }
     function Vz(data) {
       return {
-        c() {
-          this.el = document.createElement("span");
-          this.el.className = "newV-indicator";
-          this.el.textContent = data;
-        },
-        m(target, anchor) {
-          target.insertBefore(this.el, anchor);
-        },
-        d(detach) {
-          if (detach) this.el.remove();
-        },
+        c() { this.el = document.createElement("span"); this.el.className = "newV-indicator"; this.el.textContent = data; },
+        m(target, anchor) { target.insertBefore(this.el, anchor); },
+        d(detach) { if (detach) this.el.remove(); },
       };
     }
-
 
     function Yr(t) {
       let n, r, o, s, a, i, l, c, d, u, f, p, h, g, m, v, b, y, w, $, x, j = t[0].order + "",
@@ -3778,88 +3614,63 @@
         C = (t[0].const < 0 || -1 == t[0].score ? "-" : null == t[0].rating ? "??.??" : (t[0].rating / 100).toFixed(2)) + "",
         N = t[0].constUncertain && Ir();
       let newVIndicator = (t[0].newV === 1 || (t[0].newV === 2 && t[0].difficulty === "ULT")) && Vz(T);
+      
       function U(e, t) {
         if (e[1] === "hide") return Rr;
         if (e[1] === "clr") return Rrr;
         return zr;
       }
-      let L = U(t),
-        _ = L(t);
+      let L = U(t), _ = L(t);
+      function R(e, t) { return e[3] ? qr : Vr }
+      let z = R(t), F = z(t), V = Wr(t);
+      let q_pc = t[4] && "all" === t[2] && Jr_PC(t);
+      let q_rk = t[10] && "all" === t[2] && Jr_RK(t);
 
-      function R(e, t) {
-        return e[3] ? qr : Vr
-      }
-      let z = R(t),
-        F = z(t),
-        V = Wr(t),
-        q = t[4] && "all" === t[2] && Jr(t);
       return {
         c() {
-          n = H("tr"), r = H("td"), o = A(j), s = D(), a = H("td"), i = A(S), d = D(), u = H("td"), f = A(T), N && N.c(), p = D(), _.c(), h = D(), g = H("td"), F.c(), m = D(), v = H("td"), b = A(C), y = D(), V && V.c(), w = D(), q && q.c(), O(r, "class", "song-order svelte-1gjhsjp"), O(a, "data-diff", l = t[0].difficulty), O(a, "colspan", c = "history" === t[2] ? 2 : 1), O(a, "class", "svelte-1gjhsjp"), O(u, "class", "svelte-1gjhsjp"), O(g, "class", "song-score svelte-1gjhsjp"), B(g, "clickable", "all" === t[2]), O(v, "class", "svelte-1gjhsjp"), O(n, "class", "svelte-1gjhsjp"), B(n, "best30", t[0].order <= ( "curr" === t[2] ? 20 : "history" === t[2] ? 0 : 30)), B(n, "best40", t[0].order <= ("best" === t[2] ? 40 : "curr" === t[2] ? 30 : "history" === t[2] ? 0 : 40)), B(n, "ajc", 101e4 == t[0].score);
-          if (newVIndicator) {
-            newVIndicator.c();
-            newVIndicator.m(u, null);
-            f.textContent = "";
-          }
+          n = H("tr"), r = H("td"), o = A(j), s = D(), a = H("td"), i = A(S), d = D(), u = H("td"), f = A(T), N && N.c(), p = D(), _.c(), h = D(), g = H("td"), F.c(), m = D(), v = H("td"), b = A(C), y = D(), V && V.c(), w = D(), q_pc && q_pc.c(), q_rk && q_rk.c(), O(r, "class", "song-order svelte-1gjhsjp"), O(a, "data-diff", l = t[0].difficulty), O(a, "colspan", c = "history" === t[2] ? 2 : 1), O(a, "class", "svelte-1gjhsjp"), O(u, "class", "svelte-1gjhsjp"), O(g, "class", "song-score svelte-1gjhsjp"), B(g, "clickable", "all" === t[2]), O(v, "class", "svelte-1gjhsjp"), O(n, "class", "svelte-1gjhsjp"), B(n, "best30", t[0].order <= ( "curr" === t[2] ? 20 : "history" === t[2] ? 0 : 30)), B(n, "best40", t[0].order <= ("best" === t[2] ? 40 : "curr" === t[2] ? 30 : "history" === t[2] ? 0 : 40)), B(n, "ajc", 101e4 == t[0].score);
+          if (newVIndicator) { newVIndicator.c(); newVIndicator.m(u, null); f.textContent = ""; }
         },
         m(e, l) {
-          M(e, n, l), k(n, r), k(r, o), k(n, s), k(n, a), k(a, i), k(n, d), k(n, u), k(u, f), N && N.m(u, null), k(n, p), _.m(n, null), k(n, h), k(n, g), F.m(g, null), k(n, m), k(n, v), k(v, b), k(n, y), V && V.m(n, null), k(n, w), q && q.m(n, null), $ || (x = P(g, "click", t[6]), $ = !0)
+          M(e, n, l), k(n, r), k(r, o), k(n, s), k(n, a), k(a, i), k(n, d), k(n, u), k(u, f), N && N.m(u, null), k(n, p), _.m(n, null), k(n, h), k(n, g), F.m(g, null), k(n, m), k(n, v), k(v, b), k(n, y), V && V.m(n, null), k(n, w), q_pc && q_pc.m(n, null), q_rk && q_rk.m(n, null), $ || (x = P(g, "click", t[6]), $ = !0)
         },
         p(e, [t]) {
-          1 & t && j !== (j = e[0].order + "") && I(o, j), 1 & t && S !== (S = e[0].title + "") && I(i, S), 1 & t && l !== (l = e[0].difficulty) && O(a, "data-diff", l), 4 & t && c !== (c = "history" === e[2] ? 2 : 1) && O(a, "colspan", c), 1 & t && T !== (T = (e[0].const < 0 ? "-" : e[0].const?.toFixed(1) ?? "??.?") + "") && I(f, T), e[0].constUncertain ? N || (N = Ir(), N.c(), N.m(u, null)) : N && (N.d(1), N = null), L === (L = U(e)) && _ ? _.p(e, t) : (_.d(1), _ = L(e), _ && (_.c(), _.m(n, h))), z === (z = R(e)) && F ? F.p(e, t) : (F.d(1), F = z(e), F && (F.c(), F.m(g, null))), 4 & t && B(g, "clickable", "all" === e[2]), 1 & t && C !== (C = (e[0].const < 0 || -1 == e[0].score ? "-" : null == e[0].rating ? "??.??" : (e[0].rating / 100).toFixed(2)) + "") && I(b, C), V ? V.p(e, t) : (V = Wr(e), V.c(), V.m(n, w)), e[4] && "all" === e[2] ? q ? q.p(e, t) : (q = Jr(e), q.c(), q.m(n, null)) : q && (q.d(1), q = null), 5 & t && B(n, "best30", e[0].order <= ( "curr" === e[2] ? 20 : "history" === e[2] ? 0 : 30)), 5 & t && B(n, "best40", e[0].order <= ("best" === e[2] ? 40 : "curr" === e[2] ? 30 : "history" === e[2] ? 0 : 40)), 1 & t && B(n, "ajc", 101e4 == e[0].score)
-          const shouldShowNewV = 
-              e[0].newV === 1 || (e[0].newV === 2 && e[0].difficulty === "ULT");
+          1 & t && j !== (j = e[0].order + "") && I(o, j), 1 & t && S !== (S = e[0].title + "") && I(i, S), 1 & t && l !== (l = e[0].difficulty) && O(a, "data-diff", l), 4 & t && c !== (c = "history" === e[2] ? 2 : 1) && O(a, "colspan", c), 1 & t && T !== (T = (e[0].const < 0 ? "-" : e[0].const?.toFixed(1) ?? "??.?") + "") && I(f, T), e[0].constUncertain ? N || (N = Ir(), N.c(), N.m(u, null)) : N && (N.d(1), N = null), L === (L = U(e)) && _ ? _.p(e, t) : (_.d(1), _ = L(e), _ && (_.c(), _.m(n, h))), z === (z = R(e)) && F ? F.p(e, t) : (F.d(1), F = z(e), F && (F.c(), F.m(g, null))), 4 & t && B(g, "clickable", "all" === e[2]), 1 & t && C !== (C = (e[0].const < 0 || -1 == e[0].score ? "-" : null == e[0].rating ? "??.??" : (e[0].rating / 100).toFixed(2)) + "") && I(b, C), V ? V.p(e, t) : (V = Wr(e), V.c(), V.m(n, w)), 
+          e[4] && "all" === e[2] ? q_pc ? q_pc.p(e, t) : (q_pc = Jr_PC(e), q_pc.c(), q_pc.m(n, null)) : q_pc && (q_pc.d(1), q_pc = null),
+          e[10] && "all" === e[2] ? q_rk ? q_rk.p(e, t) : (q_rk = Jr_RK(e), q_rk.c(), q_rk.m(n, null)) : q_rk && (q_rk.d(1), q_rk = null),
+          5 & t && B(n, "best30", e[0].order <= ( "curr" === e[2] ? 20 : "history" === e[2] ? 0 : 30)), 5 & t && B(n, "best40", e[0].order <= ("best" === e[2] ? 40 : "curr" === e[2] ? 30 : "history" === e[2] ? 0 : 40)), 1 & t && B(n, "ajc", 101e4 == e[0].score);
+          const shouldShowNewV = e[0].newV === 1 || (e[0].newV === 2 && e[0].difficulty === "ULT");
           if (shouldShowNewV) {
-              if (newVIndicator) {
-                  newVIndicator.d(1);
-                  newVIndicator = null; 
-              }
-              newVIndicator = Vz(T); 
-              newVIndicator.c();
-              f.textContent = "";
-              newVIndicator.m(u, null);
+              if (newVIndicator) { newVIndicator.d(1); newVIndicator = null; }
+              newVIndicator = Vz(T); newVIndicator.c(); f.textContent = ""; newVIndicator.m(u, null);
           } else {
-              if (newVIndicator) {
-                  newVIndicator.d(1); 
-                  newVIndicator = null;
-              }
+              if (newVIndicator) { newVIndicator.d(1); newVIndicator = null; }
               f.textContent = T;
           }
         },
-        i: e,
-        o: e,
+        i: e, o: e,
         d(e) {
-          e && E(n), N && N.d(), _.d(), F.d(), V && V.d(), q && q.d(), $ = !1, x();
+          e && E(n), N && N.d(), _.d(), F.d(), V && V.d(), q_pc && q_pc.d(), q_rk && q_rk.d(), $ = !1, x();
           newVIndicator && newVIndicator.d();
         }
       }
     }
 
     function Zr(e, t, n) {
-      let r, o, s, a, i;
-      u(e, nt, (e => n(1, r = e))), u(e, $t, (e => n(2, o = e))), u(e, Tt, (e => n(3, s = e))), u(e, rt, (e => n(4, a = e))), u(e, jt, (e => n(5, i = e)));
-      let {
-        song: l
-      } = t;
+      let r, o, s, a, i, l, c, a_rk;
+      u(e, nt, (e => n(1, r = e))), u(e, $t, (e => n(2, o = e))), u(e, Tt, (e => n(3, s = e))), u(e, rt, (e => n(4, a = e))), u(e, jt, (e => n(5, i = e))), u(e, rtt, (e => n(10, a_rk = e)));
+      let { song: l_song } = t;
       return e.$$set = e => {
-        "song" in e && n(0, l = e.song)
-      }, [l, r, o, s, a, i, function() {
+        "song" in e && n(0, l_song = e.song)
+      }, [l_song, r, o, s, a, i, function() {
         "all" === o && Tt.toggle()
       }, function() {
         "all" == o && p(nt, r = r === "percentage" ? "value" : r === "value" ? "percentage" : r === "dgpercentage" ? "dgvalue" : r === "dgvalue" ? "dgpercentage" : r === "eudgpercentage" ? "eudgvalue" : "eudgpercentage", r);
       }, () => {
-        i || gt("songPlayCount", l.difficulty, l.idx).then((e => {
-          n(0, l.playCount = e, l)
-        })).catch((() => {
-          n(0, l.playCount = null, l)
-        }))
+        i || gt("songPlayCount", l_song.difficulty, l_song.idx).then((e => { n(0, l_song.playCount = e, l_song) })).catch((() => { n(0, l_song.playCount = null, l_song) }))
       }, () => {
-        i || gt("songWorldRank", l.difficulty, l.idx).then((e => {
-          n(0, l.worldRank = e, l)
-        })).catch((() => {
-          n(0, l.worldRank = null, l)
-        }))
-      }]
+        i || gt("songWorldRank", l_song.difficulty, l_song.idx).then((e => { n(0, l_song.worldRank = e, l_song) })).catch((() => { n(0, l_song.worldRank = null, l_song) }))
+      }, a_rk]
     }
     const Qr = class extends Se {
       constructor(e) {
@@ -4019,64 +3830,38 @@
     }
 
     function ao(e, t, n) {
-      let r, o, s, a, i, l, c;
-      u(e, $t, (e => n(7, s = e))), u(e, rt, (e => n(8, a = e))), u(e, Tt, (e => n(9, i = e))), u(e, nt, (e => n(10, l = e))), u(e, wt, (e => n(5, c = e)));
-      let {
-        playRecord: d
-      } = t, {
-        shown: f = !1
-      } = t, p = "rating", h = !1;
+      let r, o, s, a, i, l, c, a_rk;
+      u(e, $t, (e => n(7, s = e))), u(e, rt, (e => n(8, a = e))), u(e, rtt, (e => n(11, a_rk = e))), u(e, Tt, (e => n(9, i = e))), u(e, nt, (e => n(10, l = e))), u(e, wt, (e => n(5, c = e)));
+      let { playRecord: d } = t, { shown: f = !1 } = t, p = "rating", h = !1;
       return e.$$set = e => {
         "playRecord" in e && n(6, d = e.playRecord), "shown" in e && n(0, f = e.shown)
       }, e.$$.update = () => {
         70 & e.$$.dirty && n(4, r = d.sort(h ? (e, t) => -Je[p](e, t) : Je[p])), 1920 & e.$$.dirty && n(3, o = [{
-          display: "order",
-          sort: "rating",
-          nocur: !0
+          display: "order", sort: "rating", nocur: !0
         }, {
-          display: "playOrder",
-          sort: "playOrder",
-          condition: "history" === s
+          display: "playOrder", sort: "playOrder", condition: "history" === s
         }, {
-          display: "title",
-          sort: "title"
+          display: "title", sort: "title"
         }, {
-          display: "const",
-          sort: "const"
+          display: "const", sort: "const"
         }, {
-          display: "overpowerPercent",
-          sort: "opp",
-          condition: "percentage" == l || "dgpercentage" == l || "eudgpercentage" == l
+          display: "overpowerPercent", sort: "opp", condition: "percentage" == l || "dgpercentage" == l || "eudgpercentage" == l
         }, {
-          display: "overpower",
-          sort: "op",
-          condition: "value" == l || "dgvalue" == l || "eudgvalue" == l
+          display: "overpower", sort: "op", condition: "value" == l || "dgvalue" == l || "eudgvalue" == l
         }, {
-          display: "rank",
-          sort: "score",
-          condition: "hide" == l,
-          nocur: !i
+          display: "rank", sort: "score", condition: "hide" == l, nocur: !i
         }, {
-          display: "clr",
-          sort: "clr",
-          condition: "clr" == l
+          display: "clr", sort: "clr", condition: "clr" == l
         }, {
-          display: i ? "scoreDiff" : "score",
-          sort: i ? "scoreDiff" : "score"
+          display: i ? "scoreDiff" : "score", sort: i ? "scoreDiff" : "score"
         }, {
-          display: "rating",
-          sort: "rating"
+          display: "rating", sort: "rating"
         }, {
-          display: "ajfc",
-          sort: "aj",
+          display: "ajfc", sort: "aj",
         }, {
-          display: "playcount",
-          sort: "playcount",
-          condition: a && "all" === s
+          display: "playcount", sort: "playcount", condition: a && "all" === s
         }, {
-          display: "worldrank",
-          sort: "worldrank",
-          condition: a && "all" === s
+          display: "worldrank", sort: "worldrank", condition: a_rk && "all" === s
         }])
       }, [f, p, h, o, r, c, d, s, a, i, l, e => {
         p === e.sort ? n(2, h = !h) : (n(1, p = e.sort), n(2, h = !1))
