@@ -2008,14 +2008,14 @@
       function handleNumberStep(oldV, newV) {
         if (newV === null || isNaN(newV)) return oldV;
         let diff = Math.round((newV - oldV) * 10);
-        if (diff === 1) {
+        if (diff === 1) { 
           let nextV = oldV < 7 ? oldV + 1 : oldV < 10 ? oldV + 0.5 : oldV + 0.1;
           return Math.round(nextV * 10) / 10;
-        } else if (diff === -1) {
+        } else if (diff === -1) { 
           let prevV = oldV <= 7 ? oldV - 1 : oldV <= 10 ? oldV - 0.5 : oldV - 0.1;
           return Math.round(prevV * 10) / 10;
         } else {
-          return snap(newV);
+          return snap(newV); 
         }
       }
       return e.$$set = e => {
@@ -2029,13 +2029,17 @@
         let val = parseFloat(e.currentTarget.value);
         n(7, p = handleNumberStep(p, val)), n(7, p = Math.min(i, Math.max(a, p))), p < f && n(6, f = p), e.currentTarget.value = p.toString(), n(0, c = f), n(1, d = p)
       }, function() {
-        f = snap(_(this.value)), n(6, f)
+        f = snap(_(this.value));
+        this.value = f;
+        n(6, f);
       }, () => {
         n(0, c = f), n(1, d = p)
       }, () => {
         f > p && n(7, p = f)
       }, function() {
-        p = snap(_(this.value)), n(7, p)
+        p = snap(_(this.value));
+        this.value = p;
+        n(7, p);
       }, () => {
         n(0, c = f), n(1, d = p)
       }, () => {
