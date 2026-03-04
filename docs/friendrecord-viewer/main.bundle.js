@@ -1656,8 +1656,8 @@
       if (null == mainEl) return alert(d(wt)("share.error", { error: "resultNode is null" }));
 
       const loading = document.createElement("div");
-      loading.innerHTML = "正在生成 B50 圖片並載入封面，請稍候片刻...<br>Generating Image...";
-      loading.style.cssText = "position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,0.85);color:white;padding:25px;border-radius:10px;z-index:9999;font-weight:bold;text-align:center;font-size:1.2em;box-shadow:0 4px 15px rgba(0,0,0,0.5);";
+      loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>正在生成 B50 圖片並載入封面，請稍候片刻...<br>Generating Image...</div>";
+      loading.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:#1e1e24;display:flex;align-items:center;justify-content:center;color:white;z-index:99999;font-weight:bold;text-align:center;font-size:1.2em;";
       document.body.appendChild(loading);
 
       try {
@@ -1714,7 +1714,7 @@
             opString += '%';
         }
 
-        let topBgStyle = "background: #3b3b3b;";
+        let topBgStyle = "background: #3b3b3b; border: 2px solid #aaaaaa;";
         const profileNode = document.querySelector('.wrapper.svelte-1rv2o5c');
         if (profileNode && profileNode.style.background) {
             topBgStyle = `background: ${profileNode.style.background}; border: 3px solid transparent;`;
@@ -1819,7 +1819,7 @@
 
         const container = document.createElement("div");
         container.id = "copied-main";
-        container.style.cssText = "position:absolute; top:0; left:0; z-index:9998; width:1950px; background:#1e1e24; padding:45px; border-radius:15px;";
+        container.style.cssText = "position:absolute; top:0; left:0; z-index:-9999; width:1950px; background:#1e1e24; padding:45px; border-radius:15px;";
         
         container.innerHTML = `
           <div style="display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4); margin-bottom:35px;">
