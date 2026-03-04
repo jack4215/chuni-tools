@@ -1772,7 +1772,7 @@
           const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
           const diffColor = diffColors[song.difficulty] || "#fff";
           return `
-          <div style="background:var(--theme-bg-main); border-radius:8px; display:flex; flex-direction:column; overflow:hidden; border:2px solid ${diffColor}; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
+          <div style="background:var(--theme-bg-main); border-radius:8px; display:flex; flex-direction:column; overflow:hidden; box-sizing: border-box; border:2px solid ${diffColor}; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
             <div style="display:flex; justify-content:space-between; align-items:center; height:28px; padding:0 10px; background:rgba(255,255,255,0.05); font-size:14px; font-weight:bold; color:var(--theme-text); box-sizing:border-box;">
               <span style="line-height:1;">#${idx+1} <span style="color:var(--theme-text-dim);margin-left:5px;">${constValue}</span></span>
               <span style="line-height:1;">${ratValue}</span>
@@ -1850,7 +1850,8 @@
             img.onerror = resolve; 
           }
         })));
-        const blob = await pn(container, { backgroundColor: "#1e1e24", pixelRatio: 1 });
+        const scaleRatio = Math.min(window.devicePixelRatio || 1, 1.5);
+        const blob = await pn(container, { backgroundColor: "#1e1e24", pixelRatio: scaleRatio });
         container.remove();
         document.body.style.overflow = originalOverflow;
         loading.remove();
