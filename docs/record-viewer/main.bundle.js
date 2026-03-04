@@ -3831,12 +3831,12 @@
 
     function ao(e, t, n) {
       let r, o, s, a, i, l, c, a_rk;
-      u(e, $t, (e => n(7, s = e))), u(e, rt, (e => n(8, a = e))), u(e, rtt, (e => n(11, a_rk = e))), u(e, Tt, (e => n(9, i = e))), u(e, nt, (e => n(10, l = e))), u(e, wt, (e => n(5, c = e)));
+      u(e, $t, (e => n(7, s = e))), u(e, rt, (e => n(8, a = e))), u(e, rtt, (e => n(14, a_rk = e))), u(e, Tt, (e => n(9, i = e))), u(e, nt, (e => n(10, l = e))), u(e, wt, (e => n(5, c = e)));
       let { playRecord: d } = t, { shown: f = !1 } = t, p = "rating", h = !1;
       return e.$$set = e => {
         "playRecord" in e && n(6, d = e.playRecord), "shown" in e && n(0, f = e.shown)
       }, e.$$.update = () => {
-        70 & e.$$.dirty && n(4, r = d.sort(h ? (e, t) => -Je[p](e, t) : Je[p])), 1920 & e.$$.dirty && n(3, o = [{
+        70 & e.$$.dirty && n(4, r = d.sort(h ? (e, t) => -Je[p](e, t) : Je[p])), 18304 & e.$$.dirty && n(3, o = [{
           display: "order", sort: "rating", nocur: !0
         }, {
           display: "playOrder", sort: "playOrder", condition: "history" === s
@@ -3867,7 +3867,7 @@
         p === e.sort ? n(2, h = !h) : (n(1, p = e.sort), n(2, h = !1))
       }, (e, t) => {
         "Enter" !== t.code && "Space" !== t.code || (p === e.sort ? n(2, h = !h) : (n(1, p = e.sort), n(2, h = !1)))
-      }]
+      }, , a_rk]
     }
     const io = class extends Se {
       constructor(e) {
