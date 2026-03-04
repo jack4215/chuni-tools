@@ -1952,13 +1952,13 @@
       let n, r, o, a, i, l, c, d, u, f, p, h, g, m, v, b, y, w;
       return {
         c() {
-          n = H("div"), r = H("span"), o = D(), a = H("div"), i = H("div"), l = H("input"), c = D(), d = H("div"), u = H("input"), f = D(), p = H("div"), h = H("div"), g = D(), m = H("input"), v = D(), b = H("input"), l.value = t[6], O(l, "type", "number"), O(l, "min", t[3]), O(l, "max", t[4]), O(l, "step", t[5]), O(l, "inputmode", "decimal"), O(l, "class", "svelte-1aafgfe"), O(i, "class", "low svelte-1aafgfe"), z(i, "left", "calc((100% - 3rem) * " + t[9] + " / 100)"), u.value = t[7], O(u, "type", "number"), O(u, "min", t[3]), O(u, "max", t[4]), O(u, "step", t[5]), O(u, "inputmode", "decimal"), O(u, "class", "svelte-1aafgfe"), O(d, "class", "high svelte-1aafgfe"), z(d, "left", "calc((100% - 3rem) * " + t[8] + " / 100)"), O(a, "class", "indicators svelte-1aafgfe"), O(h, "class", "slider-bg svelte-1aafgfe"), z(h, "background", "linear-gradient( to right, var(--theme-border) 0%, var(--theme-border) " + (t[9] - 1) + "%, var(--theme-control) " + (t[9] - 1) + "%, var(--theme-control) " + (t[8] + 1) + "%, var(--theme-border) " + (t[8] + 1) + "%, var(--theme-border) 100% )"), O(m, "class", "low svelte-1aafgfe"), O(m, "type", "range"), O(m, "min", t[3]), O(m, "max", t[4]), O(m, "step", t[5]), O(b, "class", "high svelte-1aafgfe"), O(b, "type", "range"), O(b, "min", t[3]), O(b, "max", t[4]), O(b, "step", t[5]), O(p, "class", "slider svelte-1aafgfe"), O(n, "class", "wrapper svelte-1aafgfe")
+          n = H("div"), r = H("span"), o = D(), a = H("div"), i = H("div"), l = H("input"), c = D(), d = H("div"), u = H("input"), f = D(), p = H("div"), h = H("div"), g = D(), m = H("input"), v = D(), b = H("input"), l.value = t[6], l.disabled = t[18], O(l, "type", "number"), O(l, "min", t[3]), O(l, "max", t[4]), O(l, "step", t[5]), O(l, "inputmode", "decimal"), O(l, "class", "svelte-1aafgfe"), O(i, "class", "low svelte-1aafgfe"), z(i, "left", "calc((100% - 3rem) * " + t[9] + " / 100)"), u.value = t[7], u.disabled = t[18], O(u, "type", "number"), O(u, "min", t[3]), O(u, "max", t[4]), O(u, "step", t[5]), O(u, "inputmode", "decimal"), O(u, "class", "svelte-1aafgfe"), O(d, "class", "high svelte-1aafgfe"), z(d, "left", "calc((100% - 3rem) * " + t[8] + " / 100)"), O(a, "class", "indicators svelte-1aafgfe"), O(h, "class", "slider-bg svelte-1aafgfe"), z(h, "background", "linear-gradient( to right, var(--theme-border) 0%, var(--theme-border) " + (t[9] - 1) + "%, var(--theme-control) " + (t[9] - 1) + "%, var(--theme-control) " + (t[8] + 1) + "%, var(--theme-border) " + (t[8] + 1) + "%, var(--theme-border) 100% )"), O(m, "class", "low svelte-1aafgfe"), m.disabled = t[18], O(m, "type", "range"), O(m, "min", t[3]), O(m, "max", t[4]), O(m, "step", t[5]), O(b, "class", "high svelte-1aafgfe"), b.disabled = t[18], O(b, "type", "range"), O(b, "min", t[3]), O(b, "max", t[4]), O(b, "step", t[5]), O(p, "class", "slider svelte-1aafgfe"), O(n, "class", "wrapper svelte-1aafgfe")
         },
         m(e, s) {
           M(e, n, s), k(n, r), r.innerHTML = t[2], k(n, o), k(n, a), k(a, i), k(i, l), k(a, c), k(a, d), k(d, u), k(n, f), k(n, p), k(p, h), k(p, g), k(p, m), R(m, t[6]), k(p, v), k(p, b), R(b, t[7]), y || (w = [P(l, "change", t[10]), P(u, "change", t[11]), P(m, "change", t[12]), P(m, "input", t[12]), P(m, "change", t[13]), P(m, "input", t[14]), P(b, "change", t[15]), P(b, "input", t[15]), P(b, "change", t[16]), P(b, "input", t[17])], y = !0)
         },
         p(e, [t]) {
-          4 & t && (r.innerHTML = e[2]), 64 & t && l.value !== e[6] && (l.value = e[6]), 8 & t && O(l, "min", e[3]), 16 & t && O(l, "max", e[4]), 32 & t && O(l, "step", e[5]), 512 & t && z(i, "left", "calc((100% - 3rem) * " + e[9] + " / 100)"), 128 & t && u.value !== e[7] && (u.value = e[7]), 8 & t && O(u, "min", e[3]), 16 & t && O(u, "max", e[4]), 32 & t && O(u, "step", e[5]), 256 & t && z(d, "left", "calc((100% - 3rem) * " + e[8] + " / 100)"), 768 & t && z(h, "background", "linear-gradient( to right, var(--theme-border) 0%, var(--theme-border) " + (e[9] - 1) + "%, var(--theme-control) " + (e[9] - 1) + "%, var(--theme-control) " + (e[8] + 1) + "%, var(--theme-border) " + (e[8] + 1) + "%, var(--theme-border) 100% )"), 8 & t && O(m, "min", e[3]), 16 & t && O(m, "max", e[4]), 32 & t && O(m, "step", e[5]), 64 & t && R(m, e[6]), 8 & t && O(b, "min", e[3]), 16 & t && O(b, "max", e[4]), 32 & t && O(b, "step", e[5]), 128 & t && R(b, e[7])
+          4 & t && (r.innerHTML = e[2]), 64 & t && l.value !== e[6] && (l.value = e[6]), 262144 & t && (l.disabled = e[18]), 8 & t && O(l, "min", e[3]), 16 & t && O(l, "max", e[4]), 32 & t && O(l, "step", e[5]), 512 & t && z(i, "left", "calc((100% - 3rem) * " + e[9] + " / 100)"), 128 & t && u.value !== e[7] && (u.value = e[7]), 262144 & t && (u.disabled = e[18]), 8 & t && O(u, "min", e[3]), 16 & t && O(u, "max", e[4]), 32 & t && O(u, "step", e[5]), 256 & t && z(d, "left", "calc((100% - 3rem) * " + e[8] + " / 100)"), 768 & t && z(h, "background", "linear-gradient( to right, var(--theme-border) 0%, var(--theme-border) " + (e[9] - 1) + "%, var(--theme-control) " + (e[9] - 1) + "%, var(--theme-control) " + (e[8] + 1) + "%, var(--theme-border) " + (e[8] + 1) + "%, var(--theme-border) 100% )"), 8 & t && O(m, "min", e[3]), 16 & t && O(m, "max", e[4]), 32 & t && O(m, "step", e[5]), 64 & t && R(m, e[6]), 262144 & t && (m.disabled = e[18]), 8 & t && O(b, "min", e[3]), 16 & t && O(b, "max", e[4]), 32 & t && O(b, "step", e[5]), 128 & t && R(b, e[7]), 262144 & t && (b.disabled = e[18])
         },
         i: e,
         o: e,
@@ -1987,6 +1987,9 @@
         {
           high: d
         } = t,
+        {
+          disabled: dis = !1
+        } = t,
         u = i - a,
         f = c,
         p = d;
@@ -2010,7 +2013,7 @@
         }
       }
       return e.$$set = e => {
-        "label" in e && n(2, s = e.label), "min" in e && n(3, a = e.min), "max" in e && n(4, i = e.max), "step" in e && n(5, l = e.step), "low" in e && n(0, c = e.low), "high" in e && n(1, d = e.high)
+        "label" in e && n(2, s = e.label), "min" in e && n(3, a = e.min), "max" in e && n(4, i = e.max), "step" in e && n(5, l = e.step), "low" in e && n(0, c = e.low), "high" in e && n(1, d = e.high), "disabled" in e && n(18, dis = e.disabled)
       }, e.$$.update = () => {
         u = i - a; if (f < a) n(6, f = a); if (p > i) n(7, p = i); if (p < f) n(7, p = f); 72 & e.$$.dirty && n(9, r = (f - a) / u * 100), 136 & e.$$.dirty && n(8, o = (p - a) / u * 100)
       }, [c, d, s, a, i, l, f, p, o, r, e => {
@@ -2035,7 +2038,7 @@
         n(0, c = f), n(1, d = p)
       }, () => {
         p < f && n(6, f = p)
-      }]
+      }, dis]
     }
     const Dn = class extends Se {
       constructor(e) {
@@ -2920,7 +2923,7 @@
         }
         if (f && f.$set) { f.$set({ min: newMin }); } else { Ne.min = newMin; }
       });
-      void 0 !== e[1] && (Ne.high = e[1]), void 0 !== e[2] && (Ne.low = e[2]), f = new Dn({ props: Ne }), Q.push((() => we(f, "high", Me))), Q.push((() => we(f, "low", Ee))), m = new Fn({}), b = new Xn({}), bb = new Xnn({}), bbb = new Xun({});
+      void 0 !== e[1] && (Ne.high = e[1]), void 0 !== e[2] && (Ne.low = e[2]), void 0 !== e[27] && (Ne.disabled = e[27]), f = new Dn({ props: Ne }), Q.push((() => we(f, "high", Me))), Q.push((() => we(f, "low", Ee))), m = new Fn({}), b = new Xn({}), bb = new Xnn({}), bbb = new Xun({});
       
       let He = function(e) {
         let t, n, r;
@@ -2972,7 +2975,7 @@
         p(e, [t]) {
           (!de || 1 & t) && ve !== (ve = e[0]("settings.main.title") + "") && (l.innerHTML = ve), (!de || 1 & t) && ye !== (ye = e[0]("settings.filter.title") + "") && (d.innerHTML = ye);
           const n = {};
-          1 & t && (n.label = e[0]("settings.filter.const")), !p && 2 & t && (p = !0, n.high = e[1], oe((() => p = !1))), !h && 4 & t && (h = !0, n.low = e[2], oe((() => h = !1))), f.$set(n), (!de || 1 & t) && je !== (je = e[0]("settings.data.title") + "") && (x.innerHTML = je), He.p(e, t);
+          1 & t && (n.label = e[0]("settings.filter.const")), !p && 2 & t && (p = !0, n.high = e[1], oe((() => p = !1))), !h && 4 & t && (h = !0, n.low = e[2], oe((() => h = !1))), 134217728 & t && (n.disabled = e[27]), f.$set(n), (!de || 1 & t) && je !== (je = e[0]("settings.data.title") + "") && (x.innerHTML = je), He.p(e, t);
           const r = {};
           1 & t && (r.label = e[0]("settings.data.overpower")), 536870913 & t && (r.$$scope = { dirty: t, ctx: e }), !C && 16 & t && (C = !0, r.value = e[4], oe((() => C = !1))), T.$set(r), (!de || 1 & t) && Se !== (Se = e[0]("settings.data.overpower.notify") + "") && (U.innerHTML = Se);
           
@@ -3004,8 +3007,8 @@
     }
 
     function jr(e, t, n) {
-      let r, o, s, a, i, l, c, d, f, wr_val;
-      return u(e, wt, (e => n(0, r = e))), u(e, Ze, (e => n(1, o = e))), u(e, Ye, (e => n(2, s = e))), u(e, tt, (e => n(3, a = e))), u(e, nt, (e => n(4, i = e))), u(e, rt, (e => n(5, l = e))), u(e, Tt, (e => n(6, c = e))), u(e, De, (e => n(7, d = e))), u(e, Ae, (e => n(8, f = e))), u(e, rtt, (e => n(25, wr_val = e))), [r, o, s, a, i, l, c, d, f, function(e) {
+      let r, o, s, a, i, l, c, d, f, wr_val, isFetching;
+      return u(e, wt, (e => n(0, r = e))), u(e, Ze, (e => n(1, o = e))), u(e, Ye, (e => n(2, s = e))), u(e, tt, (e => n(3, a = e))), u(e, nt, (e => n(4, i = e))), u(e, rt, (e => n(5, l = e))), u(e, Tt, (e => n(6, c = e))), u(e, De, (e => n(7, d = e))), u(e, Ae, (e => n(8, f = e))), u(e, rtt, (e => n(25, wr_val = e))), u(e, jt, (e => n(27, isFetching = e))), [r, o, s, a, i, l, c, d, f, function(e) {
         o = e, Ze.set(o)
       }, function(e) {
         s = e, Ye.set(s)
@@ -3025,7 +3028,7 @@
         for (const e of at) e.reset()
       }, , , , , , , , wr_val, function(e) {
         wr_val = e, rtt.set(wr_val)
-      }]
+      }, isFetching]
     }
     const Sr = class extends Se {
         constructor(e) {
