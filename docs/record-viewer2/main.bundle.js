@@ -1761,8 +1761,8 @@
         // 5. 構建要拍攝的 HTML 容器
         const container = document.createElement("div");
         container.id = "copied-main";
-        // 將容器推移到畫面外，避免干擾使用者操作
-        container.style.cssText = "position:absolute; left:-9999px; top:-9999px; width:1100px; background:var(--theme-bg-sub); padding:30px; border-radius:15px;";
+        // 將容器放回畫面左上角，並設定 z-index 藏在 loading 提示框(9999)的下方
+        container.style.cssText = "position:absolute; top:0; left:0; z-index:9998; width:1100px; background:#1e1e24; padding:30px; border-radius:15px;";
         
         container.innerHTML = `
           <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:15px; margin-bottom:25px; color:var(--theme-text);">
@@ -1799,8 +1799,8 @@
           }
         })));
 
-        // 7. 拍照並產出圖檔
-        const blob = await pn(container, { backgroundColor: window.getComputedStyle(document.body).backgroundColor });
+        // 7. 拍照並產出圖檔 (強制指定深色背景，並提升畫質 scale)
+        const blob = await pn(container, { backgroundColor: "#1e1e24", scale: 2 });
         container.remove();
         loading.remove();
 
