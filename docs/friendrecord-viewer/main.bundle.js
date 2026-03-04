@@ -1652,38 +1652,191 @@
     }
     const hn = "chunithm_b40.png";
     async function gn() {
-      const e = document.querySelector("main");
-      if (null == e) return alert(d(wt)("share.error", {
-        error: "resultNode is null"
-      }));
-      let t = e?.cloneNode(!0);
-      t.id = "copied-main", t.querySelectorAll("tbody tr:nth-child(n+41)").forEach((e => {
-        e.remove()
-      })), e?.parentElement?.appendChild(t), pn(t, {
-        backgroundColor: window.getComputedStyle(document.body).backgroundColor
-      }).then((async e => {
-        if (t.remove(), null != e)
-          if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-            const t = new File([e], hn, {
-              type: e.type
-            });
-            navigator?.canShare({
-              files: [t]
-            }) && navigator.share({
-              files: [t]
-            }).catch(console.log)
-          } else {
-            const t = document.createElement("a");
-            t.href = window.URL.createObjectURL(e), t.download = hn, t.click()
+      const mainEl = document.querySelector("main");
+      if (null == mainEl) return alert(d(wt)("share.error", { error: "resultNode is null" }));
+
+      const loading = document.createElement("div");
+      loading.innerHTML = "正在生成 B50 圖片並載入封面，請稍候片刻...<br>Generating Image...";
+      loading.style.cssText = "position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,0.85);color:white;padding:25px;border-radius:10px;z-index:9999;font-weight:bold;text-align:center;font-size:1.2em;box-shadow:0 4px 15px rgba(0,0,0,0.5);";
+      document.body.appendChild(loading);
+
+      try {
+        let idxMap = [];
+        try {
+          let res = await fetch('../data/idx.json');
+          if(!res.ok) res = await fetch('/data/idx.json');
+          if(res.ok) idxMap = await res.json();
+        } catch(err) {
+          console.warn("Failed to fetch idx.json", err);
+        }
+
+        const getJacketUrl = (title) => {
+          const song = idxMap.find(s => s.title === title || Xe(s.title) === title || s.title === Xe(title));
+          const imgFile = (song && song.image) ? song.image : "0000000000000000.jpg";
+          return "https://reiwa.f5.si/jackets/chunithm/" + imgFile.replace('.jpg', '.webp');
+        };
+
+        const diffColors = { "ULT": "var(--theme-song-ult)", "MAS": "var(--theme-song-mas)", "EXP": "var(--theme-song-exp)", "ADV": "var(--theme-song-adv)", "BAS": "var(--theme-song-bas)" };
+
+        const getClearLabel = (clr) => {
+          if(clr === "AJ") return '<div style="color:#ffdf75;text-shadow:0 0 5px #ffdf75;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">ALL JUSTICE</div>';
+          if(clr === "FC") return '<div style="color:#03fc1c;text-shadow:0 0 5px #03fc1c;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">FULL COMBO</div>';
+          return '';
+        };
+
+        const getRankColor = (rank) => {
+          if(rank === "MAX") return "var(--theme-clear-ajc)";
+          if(rank === "SSS+") return "#68fb60";
+          if(rank === "SSS") return "#ffd744";
+          if(rank === "SS+") return "#ffe277";
+          if(rank === "SS") return "#ffedaa";
+          if(rank === "S+") return "#ffd744";
+          if(rank === "S") return "#ffe277";
+          if(rank === "AAA") return "#cceeff";
+          if(rank === "AA") return "#a6e1ff";
+          if(rank === "A") return "#80d5ff";
+          return "var(--theme-text-dim)";
+        };
+
+        const stats = d(Ut);
+        const allRecords = d(At);
+        const bestRecords = allRecords.filter(item => (item.newV === 0 || (item.newV === 2 && item.difficulty !== "ULT")) && item.score !== -1).sort((a,b) => b.rating - a.rating || b.const - a.const || b.score - a.score).slice(0, 30);
+        const newRecords = allRecords.filter(item => (item.newV === 1 || (item.newV === 2 && item.difficulty === "ULT")) && item.score !== -1).sort((a,b) => b.rating - a.rating || b.const - a.const || b.score - a.score).slice(0, 20);
+
+        const b30Avg = (bestRecords.reduce((acc, s) => acc + s.rating, 0) / 30 / 100).toFixed(4);
+        const n20Avg = (newRecords.reduce((acc, s) => acc + s.rating, 0) / 20 / 100).toFixed(4);
+
+        const updateTimeStr = localStorage.getItem("prevUpdateTime") ? new Date(Number(localStorage.getItem("prevUpdateTime"))).toLocaleString() : '---';
+        const genTimeStr = new Date().toLocaleString();
+
+        let opString = stats?.overPower || '---';
+        if (opString !== '---' && !opString.includes('%')) {
+            opString += '%';
+        }
+
+        let topBgStyle = "background: #555555; border-left: 10px solid var(--theme-control);";
+        const profileNode = document.querySelector('.wrapper.svelte-1rv2o5c');
+        if (profileNode && profileNode.style.background) {
+            topBgStyle = `background: ${profileNode.style.background}; border: 3px solid transparent;`;
+        }
+
+        const renderSongBlock = (song, idx) => {
+          const ratValue = (song.rating / 100).toFixed(2);
+          const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
+          const diffColor = diffColors[song.difficulty] || "#fff";
+          return `
+          <div style="background:var(--theme-bg-main); border-radius:8px; display:flex; flex-direction:column; overflow:hidden; border:2px solid ${diffColor}; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
+            <div style="display:flex; justify-content:space-between; align-items:center; height:28px; padding:0 10px; background:rgba(255,255,255,0.05); font-size:14px; font-weight:bold; color:var(--theme-text); box-sizing:border-box;">
+              <span style="line-height:1;">#${idx+1} <span style="color:var(--theme-text-dim);margin-left:5px;">${constValue}</span></span>
+              <span style="line-height:1;">${ratValue}</span>
+            </div>
+            <div style="position:relative; width:100%; aspect-ratio:1; background:#000;">
+              <img src="${getJacketUrl(song.title)}" style="width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
+              <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.75); text-align:center; padding:8px 0;">
+                ${getClearLabel(song.clear)}
+                <div style="font-weight:bold; font-size:18px; color:white; line-height:1;">${song.score < 0 ? "-" : song.score.toLocaleString()} <span style="color:${getRankColor(song.rank)}; font-size:16px;">${song.rank}</span></div>
+              </div>
+            </div>
+            <div style="height:38px; display:flex; align-items:center; justify-content:center; padding:0 8px; box-sizing:border-box;">
+              <div style="font-size:15px; font-weight:bold; color:var(--theme-text); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2;">
+                ${song.title}
+              </div>
+            </div>
+          </div>
+          `;
+        };
+
+        const container = document.createElement("div");
+        container.id = "copied-main";
+        container.style.cssText = "position:absolute; top:0; left:0; z-index:9998; width:1950px; background:#1e1e24; padding:45px; border-radius:15px;";
+        
+        container.innerHTML = `
+          <div style="display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4); margin-bottom:35px;">
+            <div style="display:flex; align-items:baseline; gap:20px; position:relative; z-index:1;">
+              <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">Player</span>
+              <span style="font-size:52px; font-weight:bold; color:#fff; letter-spacing:2px; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${stats?.name || 'Player'}</span>
+            </div>
+            <div style="display:flex; align-items:baseline; gap:50px; position:relative; z-index:1;">
+              <div style="display:flex; align-items:baseline; gap:15px;">
+                <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">Rating</span>
+                <span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${stats?.rating || '---'}</span>
+              </div>
+              <div style="display:flex; align-items:baseline; gap:15px;">
+                <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">OP</span>
+                <span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${opString}</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:40px; align-items:flex-start;">
+            <div style="flex: 1; min-width: 0;">
+              <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
+                <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">Best 30</h3>
+                <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${b30Avg}</b></span>
+              </div>
+              <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:18px; align-content:start;">
+                ${bestRecords.map((s, i) => renderSongBlock(s, i)).join('')}
+              </div>
+            </div>
+
+            <div style="flex: 1; min-width: 0;">
+              <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
+                <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">New 20</h3>
+                <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${n20Avg}</b></span>
+              </div>
+              <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:18px; align-content:start;">
+                ${newRecords.map((s, i) => renderSongBlock(s, i)).join('')}
+              </div>
+            </div>
+          </div>
+
+          <div style="border-top:2px solid var(--theme-border); padding-top:20px; margin-top:30px; display:flex; justify-content:space-between; color:var(--theme-text-dim); font-size:16px;">
+            <div>Generated by CHUNITHM Record Viewer</div>
+            <div>GENERATE: ${genTimeStr}</div>
+          </div>
+        `;
+
+        document.body.appendChild(container);
+        const imgs = container.querySelectorAll("img");
+        await Promise.all([...imgs].map(img => new Promise((resolve) => {
+          if (img.complete) resolve();
+          else {
+            img.onload = resolve;
+            img.onerror = resolve; 
           }
-        else alert(d(wt)("share.error", {
-          error: "result blob is null"
-        }))
-      })).catch((e => {
-        alert(d(wt)("share.error", {
-          error: e
-        }))
-      }))
+        })));
+        const blob = await pn(container, { backgroundColor: "#1e1e24", scale: 2 });
+        container.remove();
+        loading.remove();
+
+        const hn = "chunithm_b50.png";
+        if (blob) {
+          if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            const file = new File([blob], hn, { type: blob.type });
+            if (navigator.canShare && navigator.canShare({ files: [file] })) {
+              navigator.share({ files: [file] }).catch(console.log);
+            } else {
+              const url = window.URL.createObjectURL(blob);
+              const a = document.createElement("a");
+              a.href = url;
+              a.download = hn;
+              a.click();
+            }
+          } else {
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = hn;
+            a.click();
+          }
+        } else {
+          alert("Image generation failed. Result blob is null.");
+        }
+      } catch (err) {
+        if(document.getElementById("copied-main")) document.getElementById("copied-main").remove();
+        loading.remove();
+        alert("Error during image generation:\n" + err);
+      }
     }
 
     function mn(e) {
