@@ -1850,7 +1850,7 @@
             img.onerror = resolve; 
           }
         })));
-        const blob = await pn(container, { backgroundColor: "#1e1e24", scale: 2 });
+        const blob = await pn(container, { backgroundColor: "#1e1e24", scale: 1 });
         container.remove();
         document.body.style.overflow = originalOverflow;
         loading.remove();
