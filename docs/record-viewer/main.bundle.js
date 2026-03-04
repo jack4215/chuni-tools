@@ -3238,10 +3238,14 @@
                       const idx = parseInt(item.idx, 10);
                       const diff = diffMap[item.difficulty];
                       const score = item.score;
+                      let clearNum = 0;
+                      if (item.clear === "FC") clearNum = 1;
+                      else if (item.clear === "AJ") clearNum = 2;
+                      const packedScore = score * 3 + clearNum;
                       const packedIdx = idx + 20480 * diff;
                       const encodedIdx = pad(base62Encode(packedIdx), 3);
-                      const encodedScore = pad(base62Encode(score), 4);
-                      cpScores3 += encodedIdx + encodedScore; 
+                      const encodedScore = pad(base62Encode(packedScore), 4);
+                      cpScores3 += encodedIdx + encodedScore;
                   }
               });
               const encryptedData = encryptData({
