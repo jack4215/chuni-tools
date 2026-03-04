@@ -3143,47 +3143,81 @@
           'user_id': eCode
         });
       }
-      async function sGS(playerData, scores1, scores2) {
-        const scriptUrl = 'https://chuni-api.tsaibee.org/sgs';
-        function encryptData(data) {
-            const jsonStr = JSON.stringify(data);
-            const utf8Array = new TextEncoder().encode(jsonStr);
-            const base64 = btoa(String.fromCharCode(...utf8Array));
-            const key = "u1ewj8d4oc4o5kw4oe1k1uge0";
-            return base64.split('').map((char, idx) =>
-                String.fromCharCode(char.charCodeAt(0) ^ key.charCodeAt(idx % key.length))
-            ).join('');
-        }
-        try {
-          const fS1 = scores1.slice(0, 30).map(({ difficulty, score, title }) => ({ difficulty, score, title }));
-          const fS2 = scores2.slice(0, 20).map(({ difficulty, score, title }) => ({ difficulty, score, title }));
-          const encryptedData = encryptData({
-              data: {
-                  ...playerData,
-                  scores1: fS1,
-                  scores2: fS2,
-              },
-              sN: "NFrv"
-            });
-            const response = await fetch(scriptUrl, {
-                method: 'POST',
-                headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-                body: JSON.stringify({ payload: encryptedData }),
-            });
-            if (!response.ok) {
-                throw new Error(`Error：${response.status}`);
-            }
-            const textResponse = await response.text();
-            return JSON.parse(textResponse);
-        } catch (error) {
-            throw error;
-        }
+      async function sGS(playerData, scores1, scores2, scores3) {
+          const scriptUrl = 'https://chuni-api.tsaibee.org/sgs';
+          function base62Encode(num) {
+              if (num === 0) return "0";
+              let str = "";
+              const chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+              while (num > 0) {
+                  str = chars[num % 62] + str;
+                  num = Math.floor(num / 62);
+              }
+              return str;
+          }
+          function pad(str, length) {
+              return str.padStart(length, '0');
+          }
+          function encryptData(data) {
+              const jsonStr = JSON.stringify(data);
+              const utf8Array = new TextEncoder().encode(jsonStr);
+              const base64 = btoa(String.fromCharCode(...utf8Array));
+              const key = "u1ewj8d4oc4o5kw4oe1k1uge0";
+              return base64.split('').map((char, idx) =>
+                  String.fromCharCode(char.charCodeAt(0) ^ key.charCodeAt(idx % key.length))
+              ).join('');
+          }
+          try {
+              const fS1 = scores1.slice(0, 30).map(({ difficulty, score, title }) => ({ difficulty, score, title }));
+              const fS2 = scores2.slice(0, 20).map(({ difficulty, score, title }) => ({ difficulty, score, title }));
+              const diffMap = { "EXP": 2, "MAS": 3, "ULT": 4 };
+              let cpScores3 = "";
+              scores3.forEach(item => {
+                  if (diffMap[item.difficulty] !== undefined) {
+                      const idx = parseInt(item.idx, 10);
+                      const diff = diffMap[item.difficulty];
+                      const score = item.score;
+                      let clearNum = 0;
+                      if (item.clear === "FC") clearNum = 1;
+                      else if (item.clear === "AJ") clearNum = 2;
+                      const packedScore = score * 3 + clearNum;
+                      const packedIdx = idx + 20480 * diff;
+                      const encodedIdx = pad(base62Encode(packedIdx), 3);
+                      const encodedScore = pad(base62Encode(packedScore), 4);
+                      cpScores3 += encodedIdx + encodedScore;
+                  }
+              });
+              const encryptedData = encryptData({
+                  data: {
+                      ...playerData,
+                      scores1: fS1,
+                      scores2: fS2,
+                  },
+                  sN: "NFrv"
+              });
+              const requestBody = {
+                  payload: encryptedData,
+                  payload2: cpScores3
+              };
+              const response = await fetch(scriptUrl, {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                  body: JSON.stringify(requestBody),
+              });
+              if (!response.ok) {
+                  throw new Error(`Error：${response.status}`);
+              }
+              const textResponse = await response.text();
+              return JSON.parse(textResponse);
+          } catch (error) {
+              throw error;
+          }
       }
       if (!issGS) {
-        issGS = true;
-        const sbest30 = Cr(qe(e[0], 30) / 100, 4);
-        const snew20 = Cr(qe(e[1], 20) / 100, 4);
-        sGS({...e[3], sbest30, snew20}, e[6], e[7]).catch(console.error);
+          issGS = true;
+          const sbest30 = Cr(qe(e[0], 30) / 100, 4);
+          const snew20 = Cr(qe(e[1], 20) / 100, 4);
+          sGS({...e[3], sbest30, snew20}, e[6], e[7], e[8]).catch(console.error);
       }
       return t = new Hr({
         props: {
