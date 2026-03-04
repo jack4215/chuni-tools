@@ -1794,7 +1794,7 @@
         };
         const container = document.createElement("div");
         container.id = "copied-main";
-        container.style.cssText = "position:absolute; top:0; left:0; z-index:-9999; width:1950px; background:#1e1e24; padding:45px; border-radius:15px;";
+        container.style.cssText = "position:absolute; top:0; left:0; z-index:-9999; width:1950px !important; min-width:1950px !important; max-width:none !important; background:#1e1e24; padding:45px; border-radius:15px;";
         container.innerHTML = `
           <div style="display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4); margin-bottom:35px;">
             <div style="display:flex; align-items:baseline; gap:20px; position:relative; z-index:1;">
