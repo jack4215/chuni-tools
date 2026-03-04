@@ -1772,7 +1772,7 @@
           const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
           const diffColor = diffColors[song.difficulty] || "#fff";
           return `
-          <div style="width:170px; background:${diffColor}; border-radius:8px; padding:2px; box-sizing: border-box !important; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
+          <div style="width:170px; background:${diffColor}; border-radius:8px; padding:1px; box-sizing: border-box !important; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
             
             <div style="background:var(--theme-bg-main); border-radius:6px; display:flex; flex-direction:column; overflow:hidden; width:100%;">
               
@@ -1788,7 +1788,7 @@
                 </div>
               </div>
               <div style="height:38px; display:flex; align-items:center; justify-content:center; padding:0 8px; box-sizing:border-box;">
-                <div style="font-size:15px; font-weight:bold; color:var(--theme-text); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2;">
+                <div style="font-size:15px; font-weight:bold; color:${diffColor}; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2;">
                   ${song.title}
                 </div>
               </div>
