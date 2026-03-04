@@ -1071,13 +1071,6 @@
       return ht.set(r.uuid, r), r.promise
     }
 
-    function mt(e) {
-      const t = JSON.parse(localStorage.getItem("prevPlayRecord") ?? "{}");
-      return e.forEach((e => {
-        void 0 === e.scoreDiff && (void 0 !== t[e.idx]?.[e.difficulty] ? e.scoreDiff = e.score - t[e.idx][e.difficulty] : e.scoreDiff = e.score)
-      })), e
-    }
-
     function vt(e = !1) {
       const {
         subscribe: t,
@@ -1172,23 +1165,14 @@
           set: t,
           subscribe: e,
           async init() {
-            const e = Date.now(),
-              s = Number(localStorage.getItem("prevUpdateTime") ?? Number.NEGATIVE_INFINITY),
-              a = s == Number.NEGATIVE_INFINITY || e - s > ot[d(st)];
             if (n) return;
             const i = JSON.parse(JSON.stringify(d(Qe)));
-            for (let e of Oe)(a || i[e]) && (kt.set(d(wt)("record.fetch.fetching", {
+            for (let e of Oe) i[e] && (kt.set(d(wt)("record.fetch.fetching", {
               diff: e.toLowerCase(),
               diffStr: d(wt)("record.fetch.diff." + e.toLowerCase())
-            })), Array.prototype.push.apply(o, await gt("friendallRecord", e)), r[e] = !0);
+            })), Array.prototype.push.apply(o, await gt("friendallRecord", e)), r[e] = !0);    
             const l = Ge(o, await d(Mt), d(wt)("record.fetch.unknown"));
-            a && function(e) {
-              const t = {};
-              e.forEach((e => {
-                var n;
-                e.score < 0 || (t[n = e.idx] ?? (t[n] = {}), t[e.idx][e.difficulty] = e.score)
-              })), localStorage.setItem("prevPlayRecord", JSON.stringify(t)), localStorage.setItem("prevUpdateTime", Date.now().toString()), console.log("Saved record history at " + localStorage.getItem("prevUpdateTime"))
-            }(l), mt(l), t(l), n = !0
+            t(l), n = !0
           },
           async updateConstData() {
             n && t(Ge(o, await d(Mt), d(wt)("record.fetch.unknown")))
@@ -1204,7 +1188,7 @@
               })), Array.prototype.push.apply(o, await gt("friendallRecord", t)), e = !0);
               if (e) {
                 const e = Ge(o, await d(Mt), d(wt)("record.fetch.unknown"));
-                t(e), mt(e)
+                t(e)
               }
               jt.set(!1), St.set(!1)
             } catch {
@@ -1214,7 +1198,7 @@
             }
           }
         }
-      })(),
+      })();
       Dt = (() => {
         let e = 0;
         return () => (e += 1, `u${`0000${(Math.random()*36**4<<0).toString(36)}`.slice(-4)}${e}`)
@@ -2431,145 +2415,6 @@
       }
     };
 
-    function er(e) {
-      j(e, "svelte-11jgb29", ".update-scorediff-btn.svelte-11jgb29{display:none;background-color:var(--theme-control);padding:0.5rem 1.5rem;margin:0.5rem 0.5rem;border-radius:0.8rem;float:right}.update-scorediff-btn.svelte-11jgb29:disabled{background-color:var(--theme-bg-sub);cursor:no-drop}")
-    }
-
-    function tr(e, t, n) {
-      const r = e.slice();
-      return r[5] = t[n], r
-    }
-
-    function nr(e) {
-      let t, n, r, o = e[0]("settings.data.diffUpdate." + e[5]) + "";
-      return {
-        c() {
-          t = H("option"), n = A(o), t.__value = r = e[5], t.value = t.__value
-        },
-        m(e, r) {
-          M(e, t, r), k(t, n)
-        },
-        p(e, t) {
-          1 & t && o !== (o = e[0]("settings.data.diffUpdate." + e[5]) + "") && I(n, o)
-        },
-        d(e) {
-          e && E(t)
-        }
-      }
-    }
-
-    function rr(e) {
-      let t, n = st.accepts,
-        r = [];
-      for (let t = 0; t < n.length; t += 1) r[t] = nr(tr(e, n, t));
-      return {
-        c() {
-          for (let e = 0; e < r.length; e += 1) r[e].c();
-          t = L()
-        },
-        m(e, n) {
-          for (let t = 0; t < r.length; t += 1) r[t] && r[t].m(e, n);
-          M(e, t, n)
-        },
-        p(e, o) {
-          if (1 & o) {
-            let s;
-            for (n = st.accepts, s = 0; s < n.length; s += 1) {
-              const a = tr(e, n, s);
-              r[s] ? r[s].p(a, o) : (r[s] = nr(a), r[s].c(), r[s].m(t.parentNode, t))
-            }
-            for (; s < r.length; s += 1) r[s].d(1);
-            r.length = n.length
-          }
-        },
-        d(e) {
-          N(r, e), e && E(t)
-        }
-      }
-    }
-
-    function or(e) {
-      let t, n, r, o, s = e[0]("settings.data.diffUpdate." + (e[2] ? "reload" : "update")) + "";
-      return {
-        c() {
-          t = H("button"), n = A(s), O(t, "type", "button"), O(t, "class", "update-scorediff-btn svelte-11jgb29"), t.disabled = e[2]
-        },
-        m(s, a) {
-          M(s, t, a), k(t, n), r || (o = P(t, "click", e[4]), r = !0)
-        },
-        p(e, r) {
-          5 & r && s !== (s = e[0]("settings.data.diffUpdate." + (e[2] ? "reload" : "update")) + "") && I(n, s), 4 & r && (t.disabled = e[2])
-        },
-        d(e) {
-          e && E(t), r = !1, o()
-        }
-      }
-    }
-
-    function sr(e) {
-      let t, n, r, o, s, a, i = e[0]("settings.data.diffUpdate.notify") + "";
-
-      function l(t) {
-        e[3](t)
-      }
-      let c = {
-        label: e[0]("settings.data.diffUpdate", {
-          date: new Date(Number(localStorage.getItem("prevUpdateTime"))).toLocaleDateString()
-        }),
-        $$slots: {
-          default: [rr]
-        },
-        $$scope: {
-          ctx: e
-        }
-      };
-      void 0 !== e[1] && (c.value = e[1]), t = new Tn({
-        props: c
-      }), Q.push((() => we(t, "value", l)));
-      let d = "manual" === e[1] && or(e);
-      return {
-        c() {
-          $e(t.$$.fragment), r = D(), d && d.c(), o = D(), s = H("div"), z(s, "color", "var(--theme-text-dim)"), z(s, "margin", ".5em auto")
-        },
-        m(e, n) {
-          xe(t, e, n), M(e, r, n), d && d.m(e, n), M(e, o, n), M(e, s, n), s.innerHTML = i, a = !0
-        },
-        p(e, [r]) {
-          const l = {};
-          1 & r && (l.label = e[0]("settings.data.diffUpdate", {
-            date: new Date(Number(localStorage.getItem("prevUpdateTime"))).toLocaleDateString()
-          })), 257 & r && (l.$$scope = {
-            dirty: r,
-            ctx: e
-          }), !n && 2 & r && (n = !0, l.value = e[1], oe((() => n = !1))), t.$set(l), "manual" === e[1] ? d ? d.p(e, r) : (d = or(e), d.c(), d.m(o.parentNode, o)) : d && (d.d(1), d = null), (!a || 1 & r) && i !== (i = e[0]("settings.data.diffUpdate.notify") + "") && (s.innerHTML = i)
-        },
-        i(e) {
-          a || (ge(t.$$.fragment, e), a = !0)
-        },
-        o(e) {
-          me(t.$$.fragment, e), a = !1
-        },
-        d(e) {
-          ke(t, e), e && E(r), d && d.d(e), e && E(o), e && E(s)
-        }
-      }
-    }
-    let ar = Ce(!1);
-
-    function ir(e, t, n) {
-      let r, o, s;
-      return u(e, wt, (e => n(0, r = e))), u(e, st, (e => n(1, o = e))), u(e, ar, (e => n(2, s = e))), [r, o, s, function(e) {
-        o = e, st.set(o)
-      }, () => {
-        localStorage.removeItem("prevPlayRecord"), localStorage.removeItem("prevUpdateTime"), p(ar, s = !0, s)
-      }]
-    }
-    const lr = class extends Se {
-      constructor(e) {
-        super(), je(this, e, ir, sr, i, {}, er)
-      }
-    };
-
     function cr(e) {
       j(e, "svelte-iga5r4", ".wrapper.svelte-iga5r4{position:fixed;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;z-index:2}.modal-bg.svelte-iga5r4{position:fixed;background:rgba(0, 0, 0, 0.4);top:0;left:0;width:100%;height:100%}.modal.svelte-iga5r4{background:var(--theme-bg-main);width:70%;max-width:32rem;max-height:80%;overflow-y:auto;margin:auto;padding:2em;position:relative;box-shadow:2rem 2rem 10px rgba(0, 0, 0, 0.5333333333);border-radius:1rem;text-align:left}.close-btn.svelte-iga5r4{position:absolute;top:0.5rem;right:0.5rem;width:2rem;height:2rem;background-color:var(--theme-border);border-radius:40%}.reset-btn.svelte-iga5r4{display:block;margin-left:auto;background-color:var(--theme-reset);width:-moz-fit-content;width:fit-content;padding:0.5rem 1.5rem;border-radius:0.8rem}h4.svelte-iga5r4{margin:0.5rem 0;color:var(--theme-text-dim)}hr.svelte-iga5r4{border:none;border-top:var(--theme-border) 0.1rem solid;margin:2rem auto}")
     }
@@ -2807,203 +2652,94 @@
     }
 
     function kr(e) {
-      let t, n, r, o, a, i, l, c, d, u, f, p, h, g, m, v, b, bb, bbb, y, yy, yyy, w, $, x, j, S, T, C, N, U, A, L, _, I, R, F, B, V, q, W, J, X, G, Y, Z, K, ee, te, ne, se, ae, ie, le, ce, de, ue, fe, ve = e[0]("settings.main.title") + "",
+      let t, n, r, o, a, i, l, c, d, u, f, p, h, g, m, v, b, bb, bbb, y, yy, yyy, w, $, x, j, S, T, C, N, U, A, L, _, I, R, J, X, G, Y, Z, K, ee, te, ne, se, ae, ie, le, ce, de, ue, fe, ve = e[0]("settings.main.title") + "",
         ye = e[0]("settings.filter.title") + "",
         je = e[0]("settings.data.title") + "",
         Se = e[0]("settings.data.overpower.notify") + "",
         Te = e[0]("settings.ui.title") + "",
         Ce = e[0]("settings.main.reset") + "";
 
-      function Me(t) {
-        e[9](t)
-      }
+      function Me(t) { e[9](t) }
+      function Ee(t) { e[10](t) }
 
-      function Ee(t) {
-        e[10](t)
-      }
-      let Ne = {
-        label: e[0]("settings.filter.const"),
-        max: 15.7,
-        min: 1,
-        step: .1
-      };
+      let Ne = { label: e[0]("settings.filter.const"), max: 15.7, min: 1, step: .1 };
       function updateNe() {
         const filterDiff = JSON.parse(localStorage.getItem("filterDiff"));
         if (filterDiff) {
-          if (!filterDiff.BAS && !filterDiff.ADV && !filterDiff.EXP) {
-            Ne.min = 10;
-          } else if (!filterDiff.BAS && !filterDiff.ADV) {
-            Ne.min = 7; 
-          } else if (!filterDiff.BAS) {
-            Ne.min = 4;
-          } else {
-            Ne.min = 1;
-          }
-        } else {
-          Ne.min = 1;
-        }
+          if (!filterDiff.BAS && !filterDiff.ADV && !filterDiff.EXP) { Ne.min = 10; }
+          else if (!filterDiff.BAS && !filterDiff.ADV) { Ne.min = 7; }
+          else if (!filterDiff.BAS) { Ne.min = 4; }
+          else { Ne.min = 1; }
+        } else { Ne.min = 1; }
       }
       updateNe();
-      void 0 !== e[1] && (Ne.high = e[1]), void 0 !== e[2] && (Ne.low = e[2]), f = new Dn({
-        props: Ne
-      }), Q.push((() => we(f, "high", Me))), Q.push((() => we(f, "low", Ee))), m = new Fn({}), b = new Xn({}), bb = new Xnn({}), bbb = new Xun({});
+      void 0 !== e[1] && (Ne.high = e[1]), void 0 !== e[2] && (Ne.low = e[2]), f = new Dn({ props: Ne }), Q.push((() => we(f, "high", Me))), Q.push((() => we(f, "low", Ee))), m = new Fn({}), b = new Xn({}), bb = new Xnn({}), bbb = new Xun({});
+      
       let He = function(e) {
         let t, n, r;
-
-        function o(t) {
-          e[11](t)
-        }
-        let s = {
-          label: e[0]("settings.data.constData"),
-          $$slots: {
-            default: [gr]
-          },
-          $$scope: {
-            ctx: e
-          }
-        };
-        return void 0 !== e[3] && (s.value = e[3]), t = new Tn({
-          props: s
-        }), Q.push((() => we(t, "value", o))), {
-          c() {
-            $e(t.$$.fragment)
-          },
-          m(e, n) {
-            xe(t, e, n), r = !0
-          },
+        function o(t) { e[11](t) }
+        let s = { label: e[0]("settings.data.constData"), $$slots: { default: [gr] }, $$scope: { ctx: e } };
+        return void 0 !== e[3] && (s.value = e[3]), t = new Tn({ props: s }), Q.push((() => we(t, "value", o))), {
+          c() { $e(t.$$.fragment) },
+          m(e, n) { xe(t, e, n), r = !0 },
           p(e, r) {
             const o = {};
-            1 & r && (o.label = e[0]("settings.data.constData")), 536870913 & r && (o.$$scope = {
-              dirty: r,
-              ctx: e
-            }), !n && 8 & r && (n = !0, o.value = e[3], oe((() => n = !1))), t.$set(o)
+            1 & r && (o.label = e[0]("settings.data.constData")), 536870913 & r && (o.$$scope = { dirty: r, ctx: e }), !n && 8 & r && (n = !0, o.value = e[3], oe((() => n = !1))), t.$set(o)
           },
-          i(e) {
-            r || (ge(t.$$.fragment, e), r = !0)
-          },
-          o(e) {
-            me(t.$$.fragment, e), r = !1
-          },
-          d(e) {
-            ke(t, e)
-          }
+          i(e) { r || (ge(t.$$.fragment, e), r = !0) },
+          o(e) { me(t.$$.fragment, e), r = !1 },
+          d(e) { ke(t, e) }
         }
       }(e);
 
-      function Ue(t) {
-        e[12](t)
-      }
-      let Ae = {
-        label: e[0]("settings.data.overpower"),
-        $$slots: {
-          default: [vr]
-        },
-        $$scope: {
-          ctx: e
-        }
-      };
-
-      function De(t) {
-        e[13](t)
-      }
-      void 0 !== e[4] && (Ae.value = e[4]), T = new Tn({
-        props: Ae
-      }), Q.push((() => we(T, "value", Ue)));
-      let Le = {
-        label: e[0]("settings.data.playcount")
-      };
-      void 0 !== e[5] && (Le.checked = e[5]), L = new Nn({
-        props: Le
-      }), Q.push((() => we(L, "checked", De)));
+      function Ue(t) { e[12](t) }
+      let Ae = { label: e[0]("settings.data.overpower"), $$slots: { default: [vr] }, $$scope: { ctx: e } };
+      function De(t) { e[13](t) }
+      void 0 !== e[4] && (Ae.value = e[4]), T = new Tn({ props: Ae }), Q.push((() => we(T, "value", Ue)));
+      
+      let Le = { label: e[0]("settings.data.playcount") };
+      void 0 !== e[5] && (Le.checked = e[5]), L = new Nn({ props: Le }), Q.push((() => we(L, "checked", De)));
       let Pe = e[5] && br(e);
 
-      function Oe(t) {
-        e[14](t)
-      }
-      let _e = {
-        label: e[0]("settings.data.showScoreDiff")
-      };
-
-      function Ie(t) {
-        e[15](t)
-      }
-      void 0 !== e[6] && (_e.checked = e[6]), F = new Nn({
-        props: _e
-      }), Q.push((() => we(F, "checked", Oe))), q = new lr({});
-      let Re = {
-        label: e[0]("settings.ui.locale"),
-        $$slots: {
-          default: [wr]
-        },
-        $$scope: {
-          ctx: e
-        }
-      };
-
-      function ze(t) {
-        e[16](t)
-      }
-      void 0 !== e[7] && (Re.value = e[7]), Z = new Tn({
-        props: Re
-      }), Q.push((() => we(Z, "value", Ie)));
-      let Fe = {
-        label: e[0]("settings.ui.theme"),
-        $$slots: {
-          default: [xr]
-        },
-        $$scope: {
-          ctx: e
-        }
-      };
-      return void 0 !== e[8] && (Fe.value = e[8]), te = new Tn({
-        props: Fe
-      }), Q.push((() => we(te, "value", ze))), {
+      function Ie(t) { e[15](t) }
+      
+      let Re = { label: e[0]("settings.ui.locale"), $$slots: { default: [wr] }, $$scope: { ctx: e } };
+      function ze(t) { e[16](t) }
+      void 0 !== e[7] && (Re.value = e[7]), Z = new Tn({ props: Re }), Q.push((() => we(Z, "value", Ie)));
+      
+      let Fe = { label: e[0]("settings.ui.theme"), $$slots: { default: [xr] }, $$scope: { ctx: e } };
+      return void 0 !== e[8] && (Fe.value = e[8]), te = new Tn({ props: Fe }), Q.push((() => we(te, "value", ze))), {
         c() {
-          t = H("div"), n = H("div"), r = D(), o = H("div"), a = H("button"), a.textContent = "✕", i = D(), l = H("h3"), c = D(), d = H("h4"), u = D(), $e(f.$$.fragment), g = D(), $e(m.$$.fragment), v = D(), $e(b.$$.fragment), y = D(), $e(bb.$$.fragment), yy = D(), $e(bbb.$$.fragment), yyy = D(), w = H("hr"), $ = D(), x = H("h4"), j = D(), He && He.c(), S = D(), $e(T.$$.fragment), N = D(), U = H("div"), A = D(), $e(L.$$.fragment), I = D(), Pe && Pe.c(), R = D(), $e(F.$$.fragment), V = D(), $e(q.$$.fragment), W = D(), J = H("hr"), X = D(), G = H("h4"), Y = D(), $e(Z.$$.fragment), ee = D(), $e(te.$$.fragment), se = D(), ae = H("hr"), ie = D(), le = H("button"), O(n, "class", "modal-bg svelte-iga5r4"), O(a, "type", "button"), O(a, "class", "close-btn svelte-iga5r4"), z(l, "margin", "0"), O(d, "class", "svelte-iga5r4"), O(w, "class", "svelte-iga5r4"), O(x, "class", "svelte-iga5r4"), z(U, "color", "var(--theme-text-dim)"), z(U, "margin", ".5em auto"), O(J, "class", "svelte-iga5r4"), O(G, "class", "svelte-iga5r4"), O(ae, "class", "svelte-iga5r4"), O(le, "type", "button"), O(le, "class", "reset-btn svelte-iga5r4"), O(o, "class", "modal svelte-iga5r4"), O(t, "class", "wrapper svelte-iga5r4")
+          t = H("div"), n = H("div"), r = D(), o = H("div"), a = H("button"), a.textContent = "✕", i = D(), l = H("h3"), c = D(), d = H("h4"), u = D(), $e(f.$$.fragment), g = D(), $e(m.$$.fragment), v = D(), $e(b.$$.fragment), y = D(), $e(bb.$$.fragment), yy = D(), $e(bbb.$$.fragment), yyy = D(), w = H("hr"), $ = D(), x = H("h4"), j = D(), He && He.c(), S = D(), $e(T.$$.fragment), N = D(), U = H("div"), A = D(), $e(L.$$.fragment), I = D(), Pe && Pe.c(), R = D(), J = H("hr"), X = D(), G = H("h4"), Y = D(), $e(Z.$$.fragment), ee = D(), $e(te.$$.fragment), se = D(), ae = H("hr"), ie = D(), le = H("button"), O(n, "class", "modal-bg svelte-iga5r4"), O(a, "type", "button"), O(a, "class", "close-btn svelte-iga5r4"), z(l, "margin", "0"), O(d, "class", "svelte-iga5r4"), O(w, "class", "svelte-iga5r4"), O(x, "class", "svelte-iga5r4"), z(U, "color", "var(--theme-text-dim)"), z(U, "margin", ".5em auto"), O(J, "class", "svelte-iga5r4"), O(G, "class", "svelte-iga5r4"), O(ae, "class", "svelte-iga5r4"), O(le, "type", "button"), O(le, "class", "reset-btn svelte-iga5r4"), O(o, "class", "modal svelte-iga5r4"), O(t, "class", "wrapper svelte-iga5r4")
         },
         m(s, p) {
-          M(s, t, p), k(t, n), k(t, r), k(t, o), k(o, a), k(o, i), k(o, l), l.innerHTML = ve, k(o, c), k(o, d), d.innerHTML = ye, k(o, u), xe(f, o, null), k(o, g), xe(m, o, null), k(o, v), xe(b, o, null), k(o, y), xe(bb, o, null), k(o, yy), xe(bbb, o, null), k(o, yyy), k(o, w), k(o, $), k(o, x), x.innerHTML = je, k(o, j), He && He.m(o, null), k(o, S), xe(T, o, null), k(o, N), k(o, U), U.innerHTML = Se, k(o, A), xe(L, o, null), k(o, I), Pe && Pe.m(o, null), k(o, R), xe(F, o, null), k(o, V), xe(q, o, null), k(o, W), k(o, J), k(o, X), k(o, G), G.innerHTML = Te, k(o, Y), xe(Z, o, null), k(o, ee), xe(te, o, null), k(o, se), k(o, ae), k(o, ie), k(o, le), le.innerHTML = Ce, de = !0, ue || (fe = [P(n, "click", xt.toggle), P(a, "click", xt.toggle), P(le, "click", e[17])], ue = !0)
+          M(s, t, p), k(t, n), k(t, r), k(t, o), k(o, a), k(o, i), k(o, l), l.innerHTML = ve, k(o, c), k(o, d), d.innerHTML = ye, k(o, u), xe(f, o, null), k(o, g), xe(m, o, null), k(o, v), xe(b, o, null), k(o, y), xe(bb, o, null), k(o, yy), xe(bbb, o, null), k(o, yyy), k(o, w), k(o, $), k(o, x), x.innerHTML = je, k(o, j), He && He.m(o, null), k(o, S), xe(T, o, null), k(o, N), k(o, U), U.innerHTML = Se, k(o, A), xe(L, o, null), k(o, I), Pe && Pe.m(o, null), k(o, R), k(o, J), k(o, X), k(o, G), G.innerHTML = Te, k(o, Y), xe(Z, o, null), k(o, ee), xe(te, o, null), k(o, se), k(o, ae), k(o, ie), k(o, le), le.innerHTML = Ce, de = !0, ue || (fe = [P(n, "click", xt.toggle), P(a, "click", xt.toggle), P(le, "click", e[17])], ue = !0)
         },
         p(e, [t]) {
           (!de || 1 & t) && ve !== (ve = e[0]("settings.main.title") + "") && (l.innerHTML = ve), (!de || 1 & t) && ye !== (ye = e[0]("settings.filter.title") + "") && (d.innerHTML = ye);
           const n = {};
           1 & t && (n.label = e[0]("settings.filter.const")), !p && 2 & t && (p = !0, n.high = e[1], oe((() => p = !1))), !h && 4 & t && (h = !0, n.low = e[2], oe((() => h = !1))), f.$set(n), (!de || 1 & t) && je !== (je = e[0]("settings.data.title") + "") && (x.innerHTML = je), He.p(e, t);
           const r = {};
-          1 & t && (r.label = e[0]("settings.data.overpower")), 536870913 & t && (r.$$scope = {
-            dirty: t,
-            ctx: e
-          }), !C && 16 & t && (C = !0, r.value = e[4], oe((() => C = !1))), T.$set(r), (!de || 1 & t) && Se !== (Se = e[0]("settings.data.overpower.notify") + "") && (U.innerHTML = Se);
+          1 & t && (r.label = e[0]("settings.data.overpower")), 536870913 & t && (r.$$scope = { dirty: t, ctx: e }), !C && 16 & t && (C = !0, r.value = e[4], oe((() => C = !1))), T.$set(r), (!de || 1 & t) && Se !== (Se = e[0]("settings.data.overpower.notify") + "") && (U.innerHTML = Se);
           const s = {};
-          1 & t && (s.label = e[0]("settings.data.playcount")), !_ && 32 & t && (_ = !0, s.checked = e[5], oe((() => _ = !1))), L.$set(s), e[5] ? Pe ? (Pe.p(e, t), 32 & t && ge(Pe, 1)) : (Pe = br(e), Pe.c(), ge(Pe, 1), Pe.m(o, R)) : Pe && (pe(), me(Pe, 1, 1, (() => {
-            Pe = null
-          })), he());
-          const a = {};
-          1 & t && (a.label = e[0]("settings.data.showScoreDiff")), !B && 64 & t && (B = !0, a.checked = e[6], oe((() => B = !1))), F.$set(a), (!de || 1 & t) && Te !== (Te = e[0]("settings.ui.title") + "") && (G.innerHTML = Te);
+          1 & t && (s.label = e[0]("settings.data.playcount")), !_ && 32 & t && (_ = !0, s.checked = e[5], oe((() => _ = !1))), L.$set(s), e[5] ? Pe ? (Pe.p(e, t), 32 & t && ge(Pe, 1)) : (Pe = br(e), Pe.c(), ge(Pe, 1), Pe.m(o, R)) : Pe && (pe(), me(Pe, 1, 1, (() => { Pe = null })), he());
+          
+          (!de || 1 & t) && Te !== (Te = e[0]("settings.ui.title") + "") && (G.innerHTML = Te);
           const i = {};
-          1 & t && (i.label = e[0]("settings.ui.locale")), 536870912 & t && (i.$$scope = {
-            dirty: t,
-            ctx: e
-          }), !K && 128 & t && (K = !0, i.value = e[7], oe((() => K = !1))), Z.$set(i);
+          1 & t && (i.label = e[0]("settings.ui.locale")), 536870912 & t && (i.$$scope = { dirty: t, ctx: e }), !K && 128 & t && (K = !0, i.value = e[7], oe((() => K = !1))), Z.$set(i);
           const c = {};
-          1 & t && (c.label = e[0]("settings.ui.theme")), 536870912 & t && (c.$$scope = {
-            dirty: t,
-            ctx: e
-          }), !ne && 256 & t && (ne = !0, c.value = e[8], oe((() => ne = !1))), te.$set(c), (!de || 1 & t) && Ce !== (Ce = e[0]("settings.main.reset") + "") && (le.innerHTML = Ce)
+          1 & t && (c.label = e[0]("settings.ui.theme")), 536870912 & t && (c.$$scope = { dirty: t, ctx: e }), !ne && 256 & t && (ne = !0, c.value = e[8], oe((() => ne = !1))), te.$set(c), (!de || 1 & t) && Ce !== (Ce = e[0]("settings.main.reset") + "") && (le.innerHTML = Ce)
         },
         i(e) {
-          de || (ge(f.$$.fragment, e), ge(m.$$.fragment, e), ge(b.$$.fragment, e), ge(bb.$$.fragment, e), ge(bbb.$$.fragment, e), ge(He), ge(T.$$.fragment, e), ge(L.$$.fragment, e), ge(Pe), ge(F.$$.fragment, e), ge(q.$$.fragment, e), ge(Z.$$.fragment, e), ge(te.$$.fragment, e), re((() => {
-            de && (ce || (ce = be(t, $n, {
-              duration: 100
-            }, !0)), ce.run(1))
+          de || (ge(f.$$.fragment, e), ge(m.$$.fragment, e), ge(b.$$.fragment, e), ge(bb.$$.fragment, e), ge(bbb.$$.fragment, e), ge(He), ge(T.$$.fragment, e), ge(L.$$.fragment, e), ge(Pe), ge(Z.$$.fragment, e), ge(te.$$.fragment, e), re((() => {
+            de && (ce || (ce = be(t, $n, { duration: 100 }, !0)), ce.run(1))
           })), de = !0)
         },
         o(e) {
-          me(f.$$.fragment, e), me(m.$$.fragment, e), me(b.$$.fragment, e), me(bb.$$.fragment, e), me(bbb.$$.fragment, e), me(He), me(T.$$.fragment, e), me(L.$$.fragment, e), me(Pe), me(F.$$.fragment, e), me(q.$$.fragment, e), me(Z.$$.fragment, e), me(te.$$.fragment, e), ce || (ce = be(t, $n, {
-            duration: 100
-          }, !1)), ce.run(0), de = !1
+          me(f.$$.fragment, e), me(m.$$.fragment, e), me(b.$$.fragment, e), me(bb.$$.fragment, e), me(bbb.$$.fragment, e), me(He), me(T.$$.fragment, e), me(L.$$.fragment, e), me(Pe), me(Z.$$.fragment, e), me(te.$$.fragment, e), ce || (ce = be(t, $n, { duration: 100 }, !1)), ce.run(0), de = !1
         },
         d(e) {
-          e && E(t), ke(f), ke(m), ke(b), ke(bb), He && He.d(), ke(T), ke(L), Pe && Pe.d(), ke(F), ke(q), ke(Z), ke(te), e && ce && ce.end(), ue = !1, s(fe)
+          e && E(t), ke(f), ke(m), ke(b), ke(bb), ke(bbb), He && He.d(), ke(T), ke(L), Pe && Pe.d(), ke(Z), ke(te), e && ce && ce.end(), ue = !1, s(fe)
         }
       }
     }
