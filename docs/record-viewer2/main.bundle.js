@@ -1741,13 +1741,20 @@
         const updateTimeStr = localStorage.getItem("prevUpdateTime") ? new Date(Number(localStorage.getItem("prevUpdateTime"))).toLocaleString() : '---';
         const genTimeStr = new Date().toLocaleString();
 
-        // 處理 OP 顯示字串 (確保有 % 號)
         let opString = stats?.overPower || '---';
         if (opString !== '---' && !opString.includes('%')) {
             opString += '%';
         }
 
-        // 5. 定義單格歌曲的渲染模板
+        // 5. 動態抓取頂部面板背景
+        let topBgStyle = "background: #555555; border-left: 10px solid var(--theme-control);";
+        const profileNode = document.querySelector('.wrapper.svelte-1rv2o5c');
+        if (profileNode && profileNode.style.background) {
+            // 如果網頁原有的牌面有自帶背景，就完整繼承並套用 transparent border 確保 box-sizing 漸層正確渲染
+            topBgStyle = `background: ${profileNode.style.background}; border: 3px solid transparent;`;
+        }
+
+        // 6. 定義單格歌曲的渲染模板
         const renderSongBlock = (song, idx) => {
           const ratValue = (song.rating / 100).toFixed(2);
           const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
@@ -1772,45 +1779,44 @@
           `;
         };
 
-        // 6. 構建要拍攝的 HTML 容器 (改回左右切割排版，並換上全新頂部)
+        // 7. 構建要拍攝的 HTML 容器
         const container = document.createElement("div");
         container.id = "copied-main";
-        // 寬度設定 1950px 呈現高畫質寬比例
         container.style.cssText = "position:absolute; top:0; left:0; z-index:9998; width:1950px; background:#1e1e24; padding:45px; border-radius:15px;";
         
         container.innerHTML = `
-          <div style="display:flex; justify-content:space-between; align-items:center; background:var(--theme-bg-main); padding:25px 40px; border-radius:15px; border-left: 10px solid var(--theme-control); box-shadow:0 6px 15px rgba(0,0,0,0.4); margin-bottom:35px;">
-            <div style="display:flex; align-items:baseline; gap:20px;">
-              <span style="font-size:26px; color:var(--theme-text-dim); font-weight:bold;">Player</span>
-              <span style="font-size:52px; font-weight:bold; color:var(--theme-text); letter-spacing:2px;">${stats?.name || 'Player'}</span>
+          <div style="display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4); margin-bottom:35px;">
+            <div style="display:flex; align-items:baseline; gap:20px; position:relative; z-index:1;">
+              <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">Player</span>
+              <span style="font-size:52px; font-weight:bold; color:#fff; letter-spacing:2px; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${stats?.name || 'Player'}</span>
             </div>
-            <div style="display:flex; align-items:baseline; gap:50px;">
+            <div style="display:flex; align-items:baseline; gap:50px; position:relative; z-index:1;">
               <div style="display:flex; align-items:baseline; gap:15px;">
-                <span style="font-size:26px; color:var(--theme-text-dim); font-weight:bold;">Rating</span>
-                <span style="font-size:52px; font-weight:bold; color:var(--theme-text);">${stats?.rating || '---'}</span>
+                <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">Rating</span>
+                <span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${stats?.rating || '---'}</span>
               </div>
               <div style="display:flex; align-items:baseline; gap:15px;">
-                <span style="font-size:26px; color:var(--theme-text-dim); font-weight:bold;">OP</span>
-                <span style="font-size:52px; font-weight:bold; color:var(--theme-text);">${opString}</span>
+                <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">OP</span>
+                <span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${opString}</span>
               </div>
             </div>
           </div>
 
           <div style="display:flex; gap:40px; align-items:flex-start;">
-            <div style="flex: 1;">
-              <div style="display:flex; justify-content:space-between; align-items:baseline; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px;">
-                <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0;">Best 30</h3>
-                <span style="font-size:22px; color:var(--theme-text-dim);">Average: <b style="color:var(--theme-text); font-size:28px;">${b30Avg}</b></span>
+            <div style="flex: 1; min-width: 0;">
+              <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
+                <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">Best 30</h3>
+                <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${b30Avg}</b></span>
               </div>
               <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:18px; align-content:start;">
                 ${bestRecords.map((s, i) => renderSongBlock(s, i)).join('')}
               </div>
             </div>
 
-            <div style="flex: 1;">
-              <div style="display:flex; justify-content:space-between; align-items:baseline; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px;">
-                <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0;">New 20</h3>
-                <span style="font-size:22px; color:var(--theme-text-dim);">Average: <b style="color:var(--theme-text); font-size:28px;">${n20Avg}</b></span>
+            <div style="flex: 1; min-width: 0;">
+              <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
+                <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">New 20</h3>
+                <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${n20Avg}</b></span>
               </div>
               <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:18px; align-content:start;">
                 ${newRecords.map((s, i) => renderSongBlock(s, i)).join('')}
@@ -1826,7 +1832,7 @@
 
         document.body.appendChild(container);
 
-        // 7. 強制等待所有封面圖載入完成
+        // 8. 強制等待所有封面圖載入完成
         const imgs = container.querySelectorAll("img");
         await Promise.all([...imgs].map(img => new Promise((resolve) => {
           if (img.complete) resolve();
@@ -1836,7 +1842,7 @@
           }
         })));
 
-        // 8. 拍照並產出圖檔
+        // 9. 拍照並產出圖檔
         const blob = await pn(container, { backgroundColor: "#1e1e24", scale: 2 });
         container.remove();
         loading.remove();
