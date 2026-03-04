@@ -2878,7 +2878,6 @@
       function Me(t) {
         e[9](t)
       }
-
       function Ee(t) {
         e[10](t)
       }
@@ -2888,23 +2887,23 @@
         min: 1,
         step: .1
       };
-      function updateNe() {
-        const filterDiff = JSON.parse(localStorage.getItem("filterDiff"));
+      let unsubQe = Qe.subscribe(filterDiff => {
+        let newMin = 1;
         if (filterDiff) {
           if (!filterDiff.BAS && !filterDiff.ADV && !filterDiff.EXP) {
-            Ne.min = 10;
+            newMin = 10;
           } else if (!filterDiff.BAS && !filterDiff.ADV) {
-            Ne.min = 7; 
+            newMin = 7; 
           } else if (!filterDiff.BAS) {
-            Ne.min = 4;
-          } else {
-            Ne.min = 1;
+            newMin = 4;
           }
-        } else {
-          Ne.min = 1;
         }
-      }
-      updateNe();
+        if (f && f.$set) {
+          f.$set({ min: newMin });
+        } else {
+          Ne.min = newMin;
+        }
+      });
       void 0 !== e[1] && (Ne.high = e[1]), void 0 !== e[2] && (Ne.low = e[2]), f = new Dn({
         props: Ne
       }), Q.push((() => we(f, "high", Me))), Q.push((() => we(f, "low", Ee))), m = new Fn({}), b = new Xn({}), bb = new Xnn({}), bbb = new Xun({});
@@ -3064,7 +3063,7 @@
           }, !1)), ce.run(0), de = !1
         },
         d(e) {
-          e && E(t), ke(f), ke(m), ke(b), ke(bb), ke(bbb), He && He.d(), ke(T), ke(L), Pe && Pe.d(), ke(F), ke(q), ke(Z), ke(te), e && ce && ce.end(), ue = !1, s(fe)
+          e && E(t), ke(f), ke(m), ke(b), ke(bb), ke(bbb), He && He.d(), ke(T), ke(L), Pe && Pe.d(), ke(F), ke(q), ke(Z), ke(te), e && ce && ce.end(), ue = !1, s(fe), unsubQe && unsubQe()
         }
       }
     }
