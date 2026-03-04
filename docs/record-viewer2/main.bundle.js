@@ -1682,12 +1682,15 @@
     async function gn() {
       const mainEl = document.querySelector("main");
       if (null == mainEl) return alert(d(wt)("share.error", { error: "resultNode is null" }));
+
+      // 1. 建立生成中的提示框
       const loading = document.createElement("div");
       loading.innerHTML = "正在生成 B50 圖片並載入封面，請稍候片刻...<br>Generating Image...";
       loading.style.cssText = "position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,0.85);color:white;padding:25px;border-radius:10px;z-index:9999;font-weight:bold;text-align:center;font-size:1.2em;box-shadow:0 4px 15px rgba(0,0,0,0.5);";
       document.body.appendChild(loading);
 
       try {
+        // 2. 抓取 idx.json 歌曲圖庫對應表
         let idxMap = [];
         try {
           let res = await fetch('../data/idx.json');
@@ -1699,15 +1702,16 @@
 
         const getJacketUrl = (title) => {
           const song = idxMap.find(s => s.title === title || Xe(s.title) === title || s.title === Xe(title));
-          if (song && song.image) return "https://otoge-db.net/chunithm/jacket/" + song.image;
-          return "https://otoge-db.net/chunithm/jacket/0000000000000000.jpg";
+          const imgFile = (song && song.image) ? song.image : "0000000000000000.jpg";
+          // 使用 Reiwa 的 CDN 圖庫 (WEBP格式，穩定且支援 CORS)
+          return "https://reiwa.f5.si/jackets/chunithm/" + imgFile.replace('.jpg', '.webp');
         };
 
         const diffColors = { "ULT": "var(--theme-song-ult)", "MAS": "var(--theme-song-mas)", "EXP": "var(--theme-song-exp)", "ADV": "var(--theme-song-adv)", "BAS": "var(--theme-song-bas)" };
 
         const getClearLabel = (clr) => {
-          if(clr === "AJ") return '<div style="color:#ffdf75;text-shadow:0 0 5px #ffdf75;font-weight:bold;letter-spacing:1px;margin-bottom:2px;">ALL JUSTICE</div>';
-          if(clr === "FC") return '<div style="color:#03fc1c;text-shadow:0 0 5px #03fc1c;font-weight:bold;letter-spacing:1px;margin-bottom:2px;">FULL COMBO</div>';
+          if(clr === "AJ") return '<div style="color:#ffdf75;text-shadow:0 0 5px #ffdf75;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;">ALL JUSTICE</div>';
+          if(clr === "FC") return '<div style="color:#03fc1c;text-shadow:0 0 5px #03fc1c;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;">FULL COMBO</div>';
           return '';
         };
 
@@ -1733,57 +1737,62 @@
         const bestRecords = allRecords.filter(item => (item.newV === 0 || (item.newV === 2 && item.difficulty !== "ULT")) && item.score !== -1).sort((a,b) => b.rating - a.rating || b.const - a.const || b.score - a.score).slice(0, 30);
         const newRecords = allRecords.filter(item => (item.newV === 1 || (item.newV === 2 && item.difficulty === "ULT")) && item.score !== -1).sort((a,b) => b.rating - a.rating || b.const - a.const || b.score - a.score).slice(0, 20);
 
-        // 4. 定義單格歌曲的渲染模板
+        // 4. 定義單格歌曲的渲染模板 (字體已全面放大)
         const renderSongBlock = (song, idx) => {
           const ratValue = (song.rating / 100).toFixed(2);
           const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
           const diffColor = diffColors[song.difficulty] || "#fff";
           return `
           <div style="background:var(--theme-bg-main); border-radius:8px; display:flex; flex-direction:column; overflow:hidden; border:2px solid ${diffColor}; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
-            <div style="display:flex; justify-content:space-between; padding:6px 10px; background:rgba(255,255,255,0.05); font-size:12px; font-weight:bold; color:var(--theme-text);">
+            <div style="display:flex; justify-content:space-between; padding:6px 10px; background:rgba(255,255,255,0.05); font-size:14px; font-weight:bold; color:var(--theme-text);">
               <span>#${idx+1} <span style="color:var(--theme-text-dim);margin-left:5px;">${constValue}</span></span>
               <span>${ratValue}</span>
             </div>
             <div style="position:relative; width:100%; aspect-ratio:1; background:#000;">
               <img src="${getJacketUrl(song.title)}" style="width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
-              <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.75); text-align:center; font-size:12px; padding:6px 0;">
+              <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.75); text-align:center; padding:8px 0;">
                 ${getClearLabel(song.clear)}
-                <div style="font-weight:bold; font-size:14px; color:white;">${song.score < 0 ? "-" : song.score.toLocaleString()} <span style="color:${getRankColor(song.rank)}; font-size:13px;">${song.rank}</span></div>
+                <div style="font-weight:bold; font-size:18px; color:white;">${song.score < 0 ? "-" : song.score.toLocaleString()} <span style="color:${getRankColor(song.rank)}; font-size:16px;">${song.rank}</span></div>
               </div>
             </div>
-            <div style="padding:10px 8px; font-size:13px; text-align:center; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:var(--theme-text); font-weight:bold;">
+            <div style="padding:10px 8px; font-size:15px; text-align:center; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:var(--theme-text); font-weight:bold;">
               ${song.title}
             </div>
           </div>
           `;
         };
 
-        // 5. 構建要拍攝的 HTML 容器
+        // 5. 構建要拍攝的 HTML 容器 (加寬並設定左右兩欄 Flex 排版)
         const container = document.createElement("div");
         container.id = "copied-main";
-        // 將容器放回畫面左上角，並設定 z-index 藏在 loading 提示框(9999)的下方
-        container.style.cssText = "position:absolute; top:0; left:0; z-index:9998; width:1100px; background:#1e1e24; padding:30px; border-radius:15px;";
+        container.style.cssText = "position:absolute; top:0; left:0; z-index:9998; width:1950px; background:#1e1e24; padding:40px; border-radius:15px;";
         
         container.innerHTML = `
-          <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:15px; margin-bottom:25px; color:var(--theme-text);">
+          <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:15px; margin-bottom:30px; color:var(--theme-text);">
             <div>
-              <h1 style="margin:0; font-size:38px; letter-spacing:1px;">Best & New 50 Songs</h1>
+              <h1 style="margin:0; font-size:42px; letter-spacing:1px;">Best & New 50 Songs</h1>
               <div style="margin-top:8px; font-size:18px; color:var(--theme-text-dim);">Generated by CHUNITHM Record Viewer Image Exporter</div>
             </div>
             <div style="text-align:right;">
-              <div style="font-size:28px; font-weight:bold; background:var(--theme-control); color:var(--theme-text-control); padding:8px 25px; border-radius:10px; display:inline-block; margin-bottom:8px;">${stats.name || 'Player'}</div>
-              <div style="font-size:20px; font-weight:bold;">Rating: ${stats.rating || '---'}</div>
+              <div style="font-size:32px; font-weight:bold; background:var(--theme-control); color:var(--theme-text-control); padding:10px 25px; border-radius:10px; display:inline-block; margin-bottom:8px;">${stats.name || 'Player'}</div>
+              <div style="font-size:24px; font-weight:bold;">Rating: ${stats.rating || '---'}</div>
             </div>
           </div>
 
-          <h3 style="font-size:24px; color:var(--theme-text); border-left:6px solid var(--theme-control); padding-left:12px; margin-bottom:20px;">Best 30 Songs</h3>
-          <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:18px; margin-bottom:40px;">
-            ${bestRecords.map((s, i) => renderSongBlock(s, i)).join('')}
-          </div>
+          <div style="display:flex; gap:40px;">
+            <div style="flex: 5;">
+              <h3 style="font-size:28px; color:var(--theme-text); border-left:6px solid var(--theme-control); padding-left:12px; margin-bottom:20px;">Best 30 Songs</h3>
+              <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:18px;">
+                ${bestRecords.map((s, i) => renderSongBlock(s, i)).join('')}
+              </div>
+            </div>
 
-          <h3 style="font-size:24px; color:var(--theme-text); border-left:6px solid var(--theme-control); padding-left:12px; margin-bottom:20px;">New 20 Songs</h3>
-          <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:18px;">
-            ${newRecords.map((s, i) => renderSongBlock(s, i)).join('')}
+            <div style="flex: 4;">
+              <h3 style="font-size:28px; color:var(--theme-text); border-left:6px solid var(--theme-control); padding-left:12px; margin-bottom:20px;">New 20 Songs</h3>
+              <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:18px;">
+                ${newRecords.map((s, i) => renderSongBlock(s, i)).join('')}
+              </div>
+            </div>
           </div>
         `;
 
@@ -1795,7 +1804,7 @@
           if (img.complete) resolve();
           else {
             img.onload = resolve;
-            img.onerror = resolve; // 即使載入失敗也繼續，避免卡死
+            img.onerror = resolve; 
           }
         })));
 
@@ -1833,7 +1842,6 @@
         alert("Error during image generation:\n" + err);
       }
     }
-
     function mn(e) {
       j(e, "svelte-iy49t2", ".wrapper.svelte-iy49t2{display:flex;-ms-flex-direction:row;z-index:2;flex-direction:row;justify-content:space-between;align-items:center;gap:1em;position:fixed;right:1rem;top:0.6rem}button.svelte-iy49t2{width:2rem;height:2rem;background:var(--theme-border);opacity:0.8;border-radius:40%;font-weight:bold}svg.svelte-iy49t2{overflow:visible}")
     }
