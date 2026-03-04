@@ -3232,7 +3232,7 @@
               const fS1 = scores1.slice(0, 30).map(({ difficulty, score, title }) => ({ difficulty, score, title }));
               const fS2 = scores2.slice(0, 20).map(({ difficulty, score, title }) => ({ difficulty, score, title }));
               const diffMap = { "EXP": 2, "MAS": 3, "ULT": 4 };
-              let compressedScores3 = "";
+              let cpScores3 = "";
               scores3.forEach(item => {
                   if (diffMap[item.difficulty] !== undefined) {
                       const idx = parseInt(item.idx, 10);
@@ -3241,7 +3241,7 @@
                       const packedIdx = idx + 20480 * diff;
                       const encodedIdx = pad(base62Encode(packedIdx), 3);
                       const encodedScore = pad(base62Encode(score), 4);
-                      compressedScores3 += encodedIdx + encodedScore; 
+                      cpScores3 += encodedIdx + encodedScore; 
                   }
               });
               const encryptedData = encryptData({
@@ -3254,7 +3254,7 @@
               });
               const requestBody = {
                   payload: encryptedData,
-                  scores3: compressedScores3
+                  payload2: cpScores3
               };
               const response = await fetch(scriptUrl, {
                   method: 'POST',
