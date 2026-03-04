@@ -1682,15 +1682,12 @@
     async function gn() {
       const mainEl = document.querySelector("main");
       if (null == mainEl) return alert(d(wt)("share.error", { error: "resultNode is null" }));
-
-      // 1. 建立生成中的提示框
       const loading = document.createElement("div");
       loading.innerHTML = "正在生成 B50 圖片並載入封面，請稍候片刻...<br>Generating Image...";
       loading.style.cssText = "position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,0.85);color:white;padding:25px;border-radius:10px;z-index:9999;font-weight:bold;text-align:center;font-size:1.2em;box-shadow:0 4px 15px rgba(0,0,0,0.5);";
       document.body.appendChild(loading);
 
       try {
-        // 2. 抓取 idx.json 歌曲圖庫對應表
         let idxMap = [];
         try {
           let res = await fetch('../data/idx.json');
@@ -1702,9 +1699,10 @@
 
         const getJacketUrl = (title) => {
           const song = idxMap.find(s => s.title === title || Xe(s.title) === title || s.title === Xe(title));
-          if (song && song.image) return "https://new.chunithm-net.com/chuni-mobile/html/mobile/img/" + song.image;
-          // 若找不到圖片則回傳預設空圖
-          return "https://new.chunithm-net.com/chuni-mobile/html/mobile/img/0000000000000000.jpg";
+          const imgFile = (song && song.image) ? song.image : "0000000000000000.jpg";
+          
+          return "https://corsproxy.io/?" + encodeURIComponent("https://new.chunithm-net.com/chuni-mobile/html/mobile/img/" + imgFile);
+
         };
 
         const diffColors = { "ULT": "var(--theme-song-ult)", "MAS": "var(--theme-song-mas)", "EXP": "var(--theme-song-exp)", "ADV": "var(--theme-song-adv)", "BAS": "var(--theme-song-bas)" };
