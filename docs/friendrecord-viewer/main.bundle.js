@@ -1714,7 +1714,7 @@
             opString += '%';
         }
 
-        let topBgStyle = "background: #555555; border-left: 10px solid var(--theme-control);";
+        let topBgStyle = "background: #3b3b3b;";
         const profileNode = document.querySelector('.wrapper.svelte-1rv2o5c');
         if (profileNode && profileNode.style.background) {
             topBgStyle = `background: ${profileNode.style.background}; border: 3px solid transparent;`;
