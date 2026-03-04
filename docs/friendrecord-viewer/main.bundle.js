@@ -1772,7 +1772,7 @@
           const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
           const diffColor = diffColors[song.difficulty] || "#fff";
           return `
-          <div style="background:var(--theme-bg-main); border-radius:8px; display:flex; flex-direction:column; overflow:hidden; box-sizing: border-box; border:2px solid ${diffColor}; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
+          <div style="width:170px; background:var(--theme-bg-main); border-radius:8px; display:flex; flex-direction:column; overflow:hidden; box-sizing: border-box !important; border:2px solid ${diffColor}; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
             <div style="display:flex; justify-content:space-between; align-items:center; height:28px; padding:0 10px; background:rgba(255,255,255,0.05); font-size:14px; font-weight:bold; color:var(--theme-text); box-sizing:border-box;">
               <span style="line-height:1;">#${idx+1} <span style="color:var(--theme-text-dim);margin-left:5px;">${constValue}</span></span>
               <span style="line-height:1;">${ratValue}</span>
@@ -1794,7 +1794,7 @@
         };
         const container = document.createElement("div");
         container.id = "copied-main";
-        container.style.cssText = "position:absolute; top:0; left:0; z-index:-9999; width:1950px; background:#1e1e24; padding:45px; border-radius:15px;";
+        container.style.cssText = "position:absolute; top:0; left:0; z-index:-9999; width:1950px !important; min-width:1950px !important; max-width:none !important; box-sizing:border-box !important; background:#1e1e24; padding:45px; border-radius:15px;";
         container.innerHTML = `
           <div style="display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4); margin-bottom:35px;">
             <div style="display:flex; align-items:baseline; gap:20px; position:relative; z-index:1;">
@@ -1818,7 +1818,7 @@
                 <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">BEST 30</h3>
                 <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${b30Avg}</b></span>
               </div>
-              <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:15px; align-content:start;">
+              <div style="display:grid; grid-template-columns:repeat(5, 170px); gap:15px; align-content:start;">
                 ${bestRecords.map((s, i) => renderSongBlock(s, i)).join('')}
               </div>
             </div>
@@ -1827,7 +1827,7 @@
                 <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">CURRENT 20</h3>
                 <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${n20Avg}</b></span>
               </div>
-              <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:15px; align-content:start;">
+              <div style="display:grid; grid-template-columns:repeat(5, 170px); gap:15px; align-content:start;">
                 ${newRecords.map((s, i) => renderSongBlock(s, i)).join('')}
               </div>
               
