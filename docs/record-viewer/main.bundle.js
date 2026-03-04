@@ -1999,22 +1999,43 @@
         u = i - a,
         f = c,
         p = d;
+      function snap(v) {
+        if (v === null || isNaN(v)) return 0;
+        if (v <= 7.25) return Math.round(v);
+        if (v <= 10.25) return Math.round(v * 2) / 2;
+        return Math.round(v * 10) / 10;
+      }
+      function handleNumberStep(oldV, newV) {
+        if (newV === null || isNaN(newV)) return oldV;
+        let diff = Math.round((newV - oldV) * 10);
+        if (diff === 1) {
+          let nextV = oldV < 7 ? oldV + 1 : oldV < 10 ? oldV + 0.5 : oldV + 0.1;
+          return Math.round(nextV * 10) / 10;
+        } else if (diff === -1) {
+          let prevV = oldV <= 7 ? oldV - 1 : oldV <= 10 ? oldV - 0.5 : oldV - 0.1;
+          return Math.round(prevV * 10) / 10;
+        } else {
+          return snap(newV);
+        }
+      }
       return e.$$set = e => {
         "label" in e && n(2, s = e.label), "min" in e && n(3, a = e.min), "max" in e && n(4, i = e.max), "step" in e && n(5, l = e.step), "low" in e && n(0, c = e.low), "high" in e && n(1, d = e.high)
       }, e.$$.update = () => {
         u = i - a; if (f < a) n(6, f = a); if (p > i) n(7, p = i); if (p < f) n(7, p = f); 72 & e.$$.dirty && n(9, r = (f - a) / u * 100), 136 & e.$$.dirty && n(8, o = (p - a) / u * 100)
       }, [c, d, s, a, i, l, f, p, o, r, e => {
-        n(6, f = parseFloat(e.currentTarget.value) || f), n(6, f = Math.min(i, Math.max(a, f))), f > p && n(7, p = f), e.currentTarget.value = f.toString(), n(0, c = f), n(1, d = p)
+        let val = parseFloat(e.currentTarget.value);
+        n(6, f = handleNumberStep(f, val)), n(6, f = Math.min(i, Math.max(a, f))), f > p && n(7, p = f), e.currentTarget.value = f.toString(), n(0, c = f), n(1, d = p)
       }, e => {
-        n(7, p = parseFloat(e.currentTarget.value) || p), n(7, p = Math.min(i, Math.max(a, p))), p < f && n(6, f = p), e.currentTarget.value = p.toString(), n(0, c = f), n(1, d = p)
+        let val = parseFloat(e.currentTarget.value);
+        n(7, p = handleNumberStep(p, val)), n(7, p = Math.min(i, Math.max(a, p))), p < f && n(6, f = p), e.currentTarget.value = p.toString(), n(0, c = f), n(1, d = p)
       }, function() {
-        f = _(this.value), n(6, f)
+        f = snap(_(this.value)), n(6, f)
       }, () => {
         n(0, c = f), n(1, d = p)
       }, () => {
         f > p && n(7, p = f)
       }, function() {
-        p = _(this.value), n(7, p)
+        p = snap(_(this.value)), n(7, p)
       }, () => {
         n(0, c = f), n(1, d = p)
       }, () => {
