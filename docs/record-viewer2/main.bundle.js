@@ -1729,6 +1729,7 @@
         };
 
         // 3. 獲取當前用戶與成績資料
+        const stats = d(Ut);
         const allRecords = d(At);
         const bestRecords = allRecords.filter(item => (item.newV === 0 || (item.newV === 2 && item.difficulty !== "ULT")) && item.score !== -1).sort((a,b) => b.rating - a.rating || b.const - a.const || b.score - a.score).slice(0, 30);
         const newRecords = allRecords.filter(item => (item.newV === 1 || (item.newV === 2 && item.difficulty === "ULT")) && item.score !== -1).sort((a,b) => b.rating - a.rating || b.const - a.const || b.score - a.score).slice(0, 20);
@@ -1737,32 +1738,16 @@
         const b30Avg = (bestRecords.reduce((acc, s) => acc + s.rating, 0) / 30 / 100).toFixed(4);
         const n20Avg = (newRecords.reduce((acc, s) => acc + s.rating, 0) / 20 / 100).toFixed(4);
 
-        // 5. 動態抓取並複製個人資訊面板 (改為頂部滿版橫幅)
-        let profileHtml = '';
-        const profileNode = document.querySelector('.stats-name')?.closest('.wrapper') || document.querySelector('.stats-name')?.parentNode;
-        
-        if (profileNode) {
-          const clone = profileNode.cloneNode(true);
-          const shine = clone.querySelector('.shine');
-          if (shine) shine.remove(); // 移除動態反光特效避免截圖異常
-          
-          // 強制設定為滿版寬度
-          clone.style.maxWidth = '100%';
-          clone.style.width = '100%';
-          clone.style.margin = '0 0 35px 0';
-          clone.style.boxSizing = 'border-box';
-          clone.style.padding = '20px 40px';
-          clone.style.fontSize = '1.3em'; // 稍微放大內文字體以適應寬度
-          profileHtml = clone.outerHTML;
-        } else {
-          const stats = d(Ut);
-          profileHtml = `<div style="font-size:32px; font-weight:bold; background:var(--theme-control); color:var(--theme-text-control); padding:20px 40px; border-radius:10px; margin:0 0 35px 0;">${stats?.name || 'Player'}</div>`;
-        }
-
         const updateTimeStr = localStorage.getItem("prevUpdateTime") ? new Date(Number(localStorage.getItem("prevUpdateTime"))).toLocaleString() : '---';
         const genTimeStr = new Date().toLocaleString();
 
-        // 6. 定義單格歌曲的渲染模板
+        // 處理 OP 顯示字串 (確保有 % 號)
+        let opString = stats?.overPower || '---';
+        if (opString !== '---' && !opString.includes('%')) {
+            opString += '%';
+        }
+
+        // 5. 定義單格歌曲的渲染模板
         const renderSongBlock = (song, idx) => {
           const ratValue = (song.rating / 100).toFixed(2);
           const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
@@ -1787,40 +1772,49 @@
           `;
         };
 
-        // 7. 構建要拍攝的 HTML 容器 (改為上下垂直排版)
+        // 6. 構建要拍攝的 HTML 容器 (改回左右切割排版，並換上全新頂部)
         const container = document.createElement("div");
         container.id = "copied-main";
-        // 將寬度設定為 1300px 以達成最佳的 5 欄垂直視覺效果
-        container.style.cssText = "position:absolute; top:0; left:0; z-index:9998; width:1300px; background:#1e1e24; padding:40px; border-radius:15px;";
+        // 寬度設定 1950px 呈現高畫質寬比例
+        container.style.cssText = "position:absolute; top:0; left:0; z-index:9998; width:1950px; background:#1e1e24; padding:45px; border-radius:15px;";
         
         container.innerHTML = `
-          ${profileHtml}
-
-          <div style="margin-bottom: 40px;">
-            <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px;">
-              <h3 style="font-size:36px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; display:flex; align-items:baseline;">
-                Best 30
-                <span style="font-size:22px; font-weight:normal; color:var(--theme-text-dim); margin-left:20px;">
-                  Average: <b style="color:var(--theme-text); font-size:28px;">${b30Avg}</b>
-                </span>
-              </h3>
+          <div style="display:flex; justify-content:space-between; align-items:center; background:var(--theme-bg-main); padding:25px 40px; border-radius:15px; border-left: 10px solid var(--theme-control); box-shadow:0 6px 15px rgba(0,0,0,0.4); margin-bottom:35px;">
+            <div style="display:flex; align-items:baseline; gap:20px;">
+              <span style="font-size:26px; color:var(--theme-text-dim); font-weight:bold;">Player</span>
+              <span style="font-size:52px; font-weight:bold; color:var(--theme-text); letter-spacing:2px;">${stats?.name || 'Player'}</span>
             </div>
-            <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:20px;">
-              ${bestRecords.map((s, i) => renderSongBlock(s, i)).join('')}
+            <div style="display:flex; align-items:baseline; gap:50px;">
+              <div style="display:flex; align-items:baseline; gap:15px;">
+                <span style="font-size:26px; color:var(--theme-text-dim); font-weight:bold;">Rating</span>
+                <span style="font-size:52px; font-weight:bold; color:var(--theme-text);">${stats?.rating || '---'}</span>
+              </div>
+              <div style="display:flex; align-items:baseline; gap:15px;">
+                <span style="font-size:26px; color:var(--theme-text-dim); font-weight:bold;">OP</span>
+                <span style="font-size:52px; font-weight:bold; color:var(--theme-text);">${opString}</span>
+              </div>
             </div>
           </div>
 
-          <div style="margin-bottom: 20px;">
-            <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px;">
-              <h3 style="font-size:36px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; display:flex; align-items:baseline;">
-                New 20
-                <span style="font-size:22px; font-weight:normal; color:var(--theme-text-dim); margin-left:20px;">
-                  Average: <b style="color:var(--theme-text); font-size:28px;">${n20Avg}</b>
-                </span>
-              </h3>
+          <div style="display:flex; gap:40px; align-items:flex-start;">
+            <div style="flex: 1;">
+              <div style="display:flex; justify-content:space-between; align-items:baseline; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px;">
+                <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0;">Best 30</h3>
+                <span style="font-size:22px; color:var(--theme-text-dim);">Average: <b style="color:var(--theme-text); font-size:28px;">${b30Avg}</b></span>
+              </div>
+              <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:18px; align-content:start;">
+                ${bestRecords.map((s, i) => renderSongBlock(s, i)).join('')}
+              </div>
             </div>
-            <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:20px;">
-              ${newRecords.map((s, i) => renderSongBlock(s, i)).join('')}
+
+            <div style="flex: 1;">
+              <div style="display:flex; justify-content:space-between; align-items:baseline; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px;">
+                <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0;">New 20</h3>
+                <span style="font-size:22px; color:var(--theme-text-dim);">Average: <b style="color:var(--theme-text); font-size:28px;">${n20Avg}</b></span>
+              </div>
+              <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:18px; align-content:start;">
+                ${newRecords.map((s, i) => renderSongBlock(s, i)).join('')}
+              </div>
             </div>
           </div>
 
@@ -1832,7 +1826,7 @@
 
         document.body.appendChild(container);
 
-        // 8. 強制等待所有封面圖載入完成
+        // 7. 強制等待所有封面圖載入完成
         const imgs = container.querySelectorAll("img");
         await Promise.all([...imgs].map(img => new Promise((resolve) => {
           if (img.complete) resolve();
@@ -1842,7 +1836,7 @@
           }
         })));
 
-        // 9. 拍照並產出圖檔
+        // 8. 拍照並產出圖檔
         const blob = await pn(container, { backgroundColor: "#1e1e24", scale: 2 });
         container.remove();
         loading.remove();
