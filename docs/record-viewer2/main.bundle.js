@@ -1709,8 +1709,8 @@
         const diffColors = { "ULT": "var(--theme-song-ult)", "MAS": "var(--theme-song-mas)", "EXP": "var(--theme-song-exp)", "ADV": "var(--theme-song-adv)", "BAS": "var(--theme-song-bas)" };
 
         const getClearLabel = (clr) => {
-          if(clr === "AJ") return '<div style="color:#ffdf75;text-shadow:0 0 5px #ffdf75;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;">ALL JUSTICE</div>';
-          if(clr === "FC") return '<div style="color:#03fc1c;text-shadow:0 0 5px #03fc1c;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;">FULL COMBO</div>';
+          if(clr === "AJ") return '<div style="color:#ffdf75;text-shadow:0 0 5px #ffdf75;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">ALL JUSTICE</div>';
+          if(clr === "FC") return '<div style="color:#03fc1c;text-shadow:0 0 5px #03fc1c;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">FULL COMBO</div>';
           return '';
         };
 
@@ -1750,30 +1750,31 @@
         let topBgStyle = "background: #555555; border-left: 10px solid var(--theme-control);";
         const profileNode = document.querySelector('.wrapper.svelte-1rv2o5c');
         if (profileNode && profileNode.style.background) {
-            // 如果網頁原有的牌面有自帶背景，就完整繼承並套用 transparent border 確保 box-sizing 漸層正確渲染
             topBgStyle = `background: ${profileNode.style.background}; border: 3px solid transparent;`;
         }
 
-        // 6. 定義單格歌曲的渲染模板
+        // 6. 定義單格歌曲的渲染模板 (加入絕對高度鎖定，消除中英文字高低差異)
         const renderSongBlock = (song, idx) => {
           const ratValue = (song.rating / 100).toFixed(2);
           const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
           const diffColor = diffColors[song.difficulty] || "#fff";
           return `
           <div style="background:var(--theme-bg-main); border-radius:8px; display:flex; flex-direction:column; overflow:hidden; border:2px solid ${diffColor}; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
-            <div style="display:flex; justify-content:space-between; padding:6px 10px; background:rgba(255,255,255,0.05); font-size:14px; font-weight:bold; color:var(--theme-text);">
-              <span>#${idx+1} <span style="color:var(--theme-text-dim);margin-left:5px;">${constValue}</span></span>
-              <span>${ratValue}</span>
+            <div style="display:flex; justify-content:space-between; align-items:center; height:28px; padding:0 10px; background:rgba(255,255,255,0.05); font-size:14px; font-weight:bold; color:var(--theme-text); box-sizing:border-box;">
+              <span style="line-height:1;">#${idx+1} <span style="color:var(--theme-text-dim);margin-left:5px;">${constValue}</span></span>
+              <span style="line-height:1;">${ratValue}</span>
             </div>
             <div style="position:relative; width:100%; aspect-ratio:1; background:#000;">
               <img src="${getJacketUrl(song.title)}" style="width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
               <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.75); text-align:center; padding:8px 0;">
                 ${getClearLabel(song.clear)}
-                <div style="font-weight:bold; font-size:18px; color:white;">${song.score < 0 ? "-" : song.score.toLocaleString()} <span style="color:${getRankColor(song.rank)}; font-size:16px;">${song.rank}</span></div>
+                <div style="font-weight:bold; font-size:18px; color:white; line-height:1;">${song.score < 0 ? "-" : song.score.toLocaleString()} <span style="color:${getRankColor(song.rank)}; font-size:16px;">${song.rank}</span></div>
               </div>
             </div>
-            <div style="padding:10px 8px; font-size:15px; text-align:center; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:var(--theme-text); font-weight:bold;">
-              ${song.title}
+            <div style="height:38px; display:flex; align-items:center; justify-content:center; padding:0 8px; box-sizing:border-box;">
+              <div style="font-size:15px; font-weight:bold; color:var(--theme-text); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2;">
+                ${song.title}
+              </div>
             </div>
           </div>
           `;
