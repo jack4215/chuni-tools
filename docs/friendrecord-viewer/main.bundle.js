@@ -3134,7 +3134,7 @@
         }
       }
     }
-    let issGS = false;
+    let issGS = new URLSearchParams(window.location.search).get('issGS') === 'true';
     function Dr(e) {
       let t, n, r, o, s, a;
       const eCode = e[3]?.fcode;
