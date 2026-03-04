@@ -86,6 +86,29 @@
         if (!r("_t"))
             return alert(s.pleaseLogin),
             void (window.location.href = a);
+        let aidxDict = null;
+        async function getIdxDict() {
+            if (aidxDict !== null) return aidxDict;
+            aidxDict = {};
+            try {
+                const idxRes = await fetch("https://chuni.tsaibee.org/data/idx.json");
+                const idxData = await idxRes.json();
+                if (Array.isArray(idxData)) {
+                    idxData.forEach(item => {
+                        const songTitle = item.title || item.name;
+                        const songId = item.idx || item.id;
+                        if (songTitle && songId) {
+                            aidxDict[songTitle] = String(songId);
+                        }
+                    });
+                } else {
+                    aidxDict = idxData;
+                }
+            } catch (err) {
+                console.error("無法取得 idx.json", err);
+            }
+            return aidxDict;
+        }
         try {
             !function() {
                 const e = l.createElement("a");
@@ -125,6 +148,7 @@
                         case "friendallRecord":
                             console.log("%c    Target difficulty: %c" + t.data.difficulty, "color: gray", "color: white"),
                             s = async function(e=o.master) {
+                                const idxDict = await getIdxDict();
                                 const t = new FormData;
                                 t.append("genre", "99"),
                                 t.append("friend", document.querySelector('select[name="friend"]').value),
@@ -141,12 +165,13 @@
                                 const records = Array.from(c.querySelectorAll(".w388.music_box")).map((t => {
                                     const r = t.querySelector(".vs_list_friendbatch")
                                       , a = t.querySelectorAll(".play_musicdata_highscore")[1]?.innerHTML;
+                                    const songTitle = t.querySelector(".block_underline")?.textContent.trim();
                                     return {
-                                        title: t.querySelector(".block_underline")?.textContent.trim(),
+                                        title: songTitle,
                                         score: a && a !== "0" ? n(a) : -1,
                                         difficulty: e,
                                         clear: r?.querySelector('img[src*="alljustice"]') ? "AJ" : r?.querySelector('img[src*="fullcombo"]') ? "FC" : "",
-                                        idx: "9999"
+                                        idx: idxDict[songTitle] || "9999"
                                     }
                                 }));
                                 return records.filter((e => e.title && e.score && !e.title.includes("Floor Killer") && !e.title.includes("Dig Delight!")));
