@@ -3136,7 +3136,6 @@
     }
     function Dr(e) {
       let t, n, r, o, s, a;
-      }
       return t = new Hr({
         props: {
           title: e[4]("player.best.all30"),
