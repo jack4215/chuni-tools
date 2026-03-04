@@ -1850,7 +1850,13 @@
             img.onerror = resolve; 
           }
         })));
-        const blob = await pn(container, { backgroundColor: "#1e1e24", scale: 1 });
+        const currentHeight = container.offsetHeight || container.getBoundingClientRect().height;
+        const targetPixelRatio = 1080 / currentHeight;
+        const blob = await pn(container, { 
+          backgroundColor: "#1e1e24", 
+          pixelRatio: targetPixelRatio,
+          quality: 0.85 
+        });
         container.remove();
         document.body.style.overflow = originalOverflow;
         loading.remove();
