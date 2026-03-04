@@ -173,8 +173,8 @@
             const triggerButton = function() {
                 const e = r.createElement("button");
                 e.className = "chuni-tool-btn";
-                e.innerText = a.triggerScript;
-                r.querySelector(".clearfix")?.insertAdjacentElement("afterend", e);
+            //    e.innerText = a.triggerScript;
+            //   r.querySelector(".clearfix")?.insertAdjacentElement("afterend", e);
                 return e;
             }();
             let isLoading = false;
