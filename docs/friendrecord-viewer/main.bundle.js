@@ -1772,22 +1772,27 @@
           const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
           const diffColor = diffColors[song.difficulty] || "#fff";
           return `
-          <div style="width:170px; background:var(--theme-bg-main); border-radius:8px; display:flex; flex-direction:column; overflow:hidden; box-sizing: border-box !important; border:2px solid ${diffColor}; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
-            <div style="display:flex; justify-content:space-between; align-items:center; height:28px; padding:0 10px; background:rgba(255,255,255,0.05); font-size:14px; font-weight:bold; color:var(--theme-text); box-sizing:border-box;">
-              <span style="line-height:1;">#${idx+1} <span style="color:var(--theme-text-dim);margin-left:5px;">${constValue}</span></span>
-              <span style="line-height:1;">${ratValue}</span>
-            </div>
-            <div style="position:relative; width:100%; aspect-ratio:1; background:#000;">
-              <img src="${getJacketUrl(song.title)}" style="width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
-              <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.75); text-align:center; padding:8px 0;">
-                ${getClearLabel(song.clear)}
-                <div style="font-weight:bold; font-size:18px; color:white; line-height:1;">${song.score < 0 ? "-" : song.score.toLocaleString()} <span style="color:${getRankColor(song.rank)}; font-size:16px;">${song.rank}</span></div>
+          <div style="width:170px; background:${diffColor}; border-radius:8px; padding:2px; box-sizing: border-box !important; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
+            
+            <div style="background:var(--theme-bg-main); border-radius:6px; display:flex; flex-direction:column; overflow:hidden; width:100%;">
+              
+              <div style="display:flex; justify-content:space-between; align-items:center; height:28px; padding:0 10px; background:rgba(255,255,255,0.05); font-size:14px; font-weight:bold; color:var(--theme-text); box-sizing:border-box;">
+                <span style="line-height:1;">#${idx+1} <span style="color:var(--theme-text-dim);margin-left:5px;">${constValue}</span></span>
+                <span style="line-height:1;">${ratValue}</span>
               </div>
-            </div>
-            <div style="height:38px; display:flex; align-items:center; justify-content:center; padding:0 8px; box-sizing:border-box;">
-              <div style="font-size:15px; font-weight:bold; color:var(--theme-text); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2;">
-                ${song.title}
+              <div style="position:relative; width:100%; aspect-ratio:1; background:#000;">
+                <img src="${getJacketUrl(song.title)}" style="width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
+                <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.75); text-align:center; padding:8px 0;">
+                  ${getClearLabel(song.clear)}
+                  <div style="font-weight:bold; font-size:18px; color:white; line-height:1;">${song.score < 0 ? "-" : song.score.toLocaleString()} <span style="color:${getRankColor(song.rank)}; font-size:16px;">${song.rank}</span></div>
+                </div>
               </div>
+              <div style="height:38px; display:flex; align-items:center; justify-content:center; padding:0 8px; box-sizing:border-box;">
+                <div style="font-size:15px; font-weight:bold; color:var(--theme-text); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2;">
+                  ${song.title}
+                </div>
+              </div>
+
             </div>
           </div>
           `;
