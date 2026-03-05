@@ -1680,15 +1680,12 @@
     }
     async function gn() {
       const runId = Date.now(); 
-
       const mainEl = document.querySelector("main");
       if (null == mainEl) return alert(d(wt)("share.error", { error: "resultNode is null" }));
-      
       const loading = document.createElement("div");
       loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Preparing Data...</div>";
       loading.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:#1e1e24;display:flex;align-items:center;justify-content:center;color:white;z-index:99999;font-weight:bold;text-align:center;font-size:1.2em;";
       document.body.appendChild(loading);
-      
       try {
         let idxMap = [];
         try {
@@ -1698,18 +1695,16 @@
         } catch(err) {
           console.warn("Failed to fetch idx.json", err);
         }
-        
         const getJacketUrl = (title) => {
           const song = idxMap.find(s => s.title === title || Xe(s.title) === title || s.title === Xe(title));
           const imgFile = (song && song.image) ? song.image : "0000000000000000.jpg";
           const officialUrl = "chunithm-net-eng.com/mobile/img/" + imgFile;
           return "https://wsrv.nl/?url=" + officialUrl + "&w=200&v=" + Math.random();
         };
-
         const diffColors = { "ULT": "var(--theme-song-ult)", "MAS": "var(--theme-song-mas)", "EXP": "var(--theme-song-exp)", "ADV": "var(--theme-song-adv)", "BAS": "var(--theme-song-bas)" };
         const getClearLabel = (clr) => {
-          if(clr === "AJ") return '<div style="color:#ffdf75;text-shadow:0 0 5px #ffdf75;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">ALL JUSTICE</div>';
-          if(clr === "FC") return '<div style="color:#a3ccf5;text-shadow:0 0 5px #a3ccf5;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">FULL COMBO</div>';
+          if(clr === "AJ") return '<div style="color:#ffdf75;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">ALL JUSTICE</div>';
+          if(clr === "FC") return '<div style="color:#a3ccf5;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">FULL COMBO</div>';
           return '';
         };
         const getRankColor = (rank) => {
@@ -1725,13 +1720,12 @@
           if(rank === "A") return "#80d5ff";
           return "var(--theme-text-dim)";
         };
-        
         const stats = d(Ut);
         const allRecords = d(At);
         const bestRecords = allRecords.filter(item => (item.newV === 0 || (item.newV === 2 && item.difficulty !== "ULT")) && item.score !== -1).slice(0, 30);
         const newRecords = allRecords.filter(item => (item.newV === 1 || (item.newV === 2 && item.difficulty === "ULT")) && item.score !== -1).slice(0, 20);
-        const b30Avg = (bestRecords.reduce((acc, s) => acc + s.rating, 0) / 30 / 100).toFixed(4);
-        const n20Avg = (newRecords.reduce((acc, s) => acc + s.rating, 0) / 20 / 100).toFixed(4);
+        const b30Avg = Cr(qe(bestRecords.map(s => s.rating), 30) / 100, 4);
+        const n20Avg = Cr(qe(newRecords.map(s => s.rating), 20) / 100, 4);
         const genTimeStr = new Date().toLocaleString();
         let opString = stats?.overPower || '---';
         if (opString !== '---' && !opString.includes('%')) {
@@ -1742,11 +1736,9 @@
         if (profileNode && profileNode.style.background) {
             topBgStyle = `background: ${profileNode.style.background}; border: 3px solid transparent;`;
         }
-
         const charImgFile = stats?.character || "5bde9b9f1846049c.png";
         const charOfficialUrl = "chunithm-net-eng.com/mobile/img/" + charImgFile;
         const charProxyUrl = "https://wsrv.nl/?url=" + charOfficialUrl;
-
         let chartHtml = '';
         if (bestRecords.length > 0) {
             const chartRatings = bestRecords.map(s => s.rating / 100);
@@ -1776,8 +1768,7 @@
                     <div style="position: absolute; left: 0; right: 0; bottom: ${percent}%; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 1;"></div>
                     <div style="position: absolute; left: -42px; bottom: ${percent}%; transform: translateY(50%); font-size: 13px; color: var(--theme-text-dim); width: 36px; text-align: right;">${val.toFixed(2)}</div>
                 `;
-            }
-            
+            }  
             const barsHtml = chartRatings.map((r, i) => {
                 const h = r > yMin ? ((r - yMin) / (yMax - yMin)) * 100 : (r > 0 ? 1 : 0);
                 return `
@@ -1790,7 +1781,6 @@
             const xAxisHtml = chartRatings.map((r, i) => `
                 <div style="flex: 1; text-align: center; font-size: 12px; color: var(--theme-text-dim); margin-top: 6px; font-weight: bold;">${i + 1}</div>
             `).join('');
-            
             chartHtml = `
             <div style="flex: none; height: 475px; width: 100%; box-sizing: border-box; background: #1e1e24; border: 2px solid #3e3e4a; border-radius: 0; padding: 25px 25px 15px 20px; display: flex; flex-direction: column; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
                 <div style="position: absolute; top: 15px; left: 20px; font-size: 18px; font-weight: bold; color: var(--theme-text-dim); letter-spacing: 1px;">BEST 30 RATING CHART</div>
@@ -1816,17 +1806,15 @@
           const ratValue = (song.rating / 100).toFixed(2);
           const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
           const diffColor = diffColors[song.difficulty] || "#fff";
-          
           const pcHtml = song.playCount ? `<div style="position:absolute; top:14px; left:0; background:rgba(0,0,0,0.75); padding:4px 7px; color:white; font-size:18px; font-weight:bold; letter-spacing:0.5px; line-height:1; z-index:2;">PC: ${song.playCount}</div>` : '';
-
           return `
           <div style="width:170px; background:${diffColor}; border-radius:0; padding:1px; box-sizing: border-box !important; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
             <div style="background:var(--theme-bg-main); border-radius:0; display:flex; flex-direction:column; overflow:hidden; width:100%;">
               <div style="display:flex; justify-content:space-between; align-items:center; height:28px; padding:0 10px; background:rgba(255,255,255,0.05); font-size:16px; font-weight:bold; color:var(--theme-text); box-sizing:border-box;">
                 <span style="line-height:1;">#${idx+1}</span>
                 <div style="display:flex; align-items:baseline; gap:5px; line-height:1;">
-                  <span style="color:var(--theme-text-dim); font-size:12px;">${constValue}</span>
-                  <span style="color:rgba(255,255,255,0.3); font-size:12px;">/</span>
+                  <span style="color:var(--theme-text-dim); font-size:14px;">${constValue}</span>
+                  <span style="color:rgba(255,255,255,0.3); font-size:14px;">/</span>
                   <span>${ratValue}</span>
                 </div>
               </div>
@@ -1844,7 +1832,7 @@
 
               <div style="position:relative; height:38px; display:flex; align-items:center; justify-content:center; padding:0 8px; box-sizing:border-box; background:${diffColor};">
                 <div style="position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); z-index:1;"></div>
-                <div style="position:relative; z-index:2; font-size:15px; font-weight:bold; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2;">
+                <div style="position:relative; z-index:2; font-size:15px; font-weight:bold; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2; font-family: 'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif;">
                   ${song.title}
                 </div>
               </div>
@@ -1855,9 +1843,7 @@
         };
         const container = document.createElement("div");
         container.id = "copied-main";
-        
         container.style.cssText = "position:absolute; top:0; left:0; z-index:-9999; width:2100px !important; min-width:2100px !important; max-width:none !important; box-sizing:border-box !important; background:#1e1e24; padding:45px; border-radius:0;";
-        
         container.innerHTML = `
           <div style="position:absolute; right:0; top:0; height:650px; z-index:0; pointer-events:none;">
             <div style="display:inline-block; height:100%; -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);">
@@ -1927,9 +1913,7 @@
         const originalOverflow = document.body.style.overflow;
         document.body.style.overflow = "hidden";
         document.body.appendChild(container);
-
-        loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Please wait...</div>";
-        
+        loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Please wait...</div>"; 
         const imgs = container.querySelectorAll("img");
         await Promise.all([...imgs].map(async (img) => {
           try {
@@ -1950,13 +1934,10 @@
         }));
 
         loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Generating Final Image...</div>";
-
         const blob = await pn(container, { backgroundColor: "#1e1e24", pixelRatio: 1 });
-        
         container.remove();
         document.body.style.overflow = originalOverflow;
         loading.remove();
-        
         const hn = "chunithm_b50.jpg";
         if (blob) {
           const url = window.URL.createObjectURL(blob);
