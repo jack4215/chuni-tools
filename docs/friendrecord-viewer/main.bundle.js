@@ -1669,7 +1669,8 @@
         const getJacketUrl = (title) => {
           const song = idxMap.find(s => s.title === title || Xe(s.title) === title || s.title === Xe(title));
           const imgFile = (song && song.image) ? song.image : "0000000000000000.jpg";
-          return "https://chunithm-net-eng.com/mobile/img/" + imgFile;
+          const offUrl = "chunithm-net-eng.com/mobile/img/" + imgFile;
+          return "https://wsrv.nl/?url=" + offUrl;
         };
         const diffColors = { "ULT": "var(--theme-song-ult)", "MAS": "var(--theme-song-mas)", "EXP": "var(--theme-song-exp)", "ADV": "var(--theme-song-adv)", "BAS": "var(--theme-song-bas)" };
         const getClearLabel = (clr) => {
