@@ -1651,13 +1651,14 @@
       return r
     }
     async function gn() {
-      const runId = Date.now(); 
       const mainEl = document.querySelector("main");
       if (null == mainEl) return alert(d(wt)("share.error", { error: "resultNode is null" }));
+      
       const loading = document.createElement("div");
-      loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Generating Image, please wait...</div>";
+      loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Preparing Data...</div>";
       loading.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:#1e1e24;display:flex;align-items:center;justify-content:center;color:white;z-index:99999;font-weight:bold;text-align:center;font-size:1.2em;";
       document.body.appendChild(loading);
+      
       try {
         let idxMap = [];
         try {
@@ -1672,7 +1673,8 @@
           const song = idxMap.find(s => s.title === title || Xe(s.title) === title || s.title === Xe(title));
           const imgFile = (song && song.image) ? song.image : "0000000000000000.jpg";
           const officialUrl = "chunithm-net-eng.com/mobile/img/" + imgFile;
-          return "https://wsrv.nl/?url=" + officialUrl + "&v=" + runId;
+          // 加入 wsrv.nl 代理，並設定 w=200 縮小圖片尺寸，讓後面的 Base64 轉換速度暴增
+          return "https://wsrv.nl/?url=" + officialUrl + "&w=200&v=" + Math.random();
         };
 
         const diffColors = { "ULT": "var(--theme-song-ult)", "MAS": "var(--theme-song-mas)", "EXP": "var(--theme-song-exp)", "ADV": "var(--theme-song-adv)", "BAS": "var(--theme-song-bas)" };
@@ -1777,9 +1779,7 @@
           const diffColor = diffColors[song.difficulty] || "#fff";
           return `
           <div style="width:170px; background:${diffColor}; border-radius:8px; padding:1px; box-sizing: border-box !important; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
-            
             <div style="background:var(--theme-bg-main); border-radius:6px; display:flex; flex-direction:column; overflow:hidden; width:100%;">
-              
               <div style="display:flex; justify-content:space-between; align-items:center; height:28px; padding:0 10px; background:rgba(255,255,255,0.05); font-size:14px; font-weight:bold; color:var(--theme-text); box-sizing:border-box;">
                 <span style="line-height:1;">#${idx+1}</span>
                 <div style="display:flex; align-items:baseline; gap:5px; line-height:1;">
@@ -1861,21 +1861,43 @@
             <div>Date: ${genTimeStr}</div>
           </div>
         `;
+        
         const originalOverflow = document.body.style.overflow;
         document.body.style.overflow = "hidden";
         document.body.appendChild(container);
+
+        // --- 破除 Safari/iOS Bug 與 CORS 的核心魔法區塊 ---
+        loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Downloading 50 Images (Fixing iOS Bug)...</div>";
+        
         const imgs = container.querySelectorAll("img");
-        await Promise.all([...imgs].map(img => new Promise((resolve) => {
-          if (img.complete) resolve();
-          else {
-            img.onload = resolve;
-            img.onerror = resolve; 
+        await Promise.all([...imgs].map(async (img) => {
+          try {
+            const res = await fetch(img.src);
+            if (!res.ok) return; // 如果抓失敗就跳過，讓它維持原狀
+            const blob = await res.blob();
+            const reader = new FileReader();
+            await new Promise((resolve) => {
+              reader.onloadend = () => {
+                // 將圖片完全替換成 Base64 純文字，徹底擺脫網路請求與 Safari 錯亂
+                img.src = reader.result;
+                resolve();
+              };
+              reader.readAsDataURL(blob);
+            });
+          } catch(e) {
+            console.warn("Base64 convert failed for:", img.src);
           }
-        })));
+        }));
+
+        loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Generating Final Image...</div>";
+        // --- 魔法區塊結束 ---
+
         const blob = await pn(container, { backgroundColor: "#1e1e24", pixelRatio: 1 });
+        
         container.remove();
         document.body.style.overflow = originalOverflow;
         loading.remove();
+        
         const hn = "chunithm_b50.jpg";
         if (blob) {
           const url = window.URL.createObjectURL(blob);
@@ -1894,7 +1916,6 @@
         alert("Error during image generation:\n" + err);
       }
     }
-
     function mn(e) {
       j(e, "svelte-iy49t2", ".wrapper.svelte-iy49t2{display:flex;-ms-flex-direction:row;z-index:2;flex-direction:row;justify-content:space-between;align-items:center;gap:1em;position:fixed;right:1rem;top:0.6rem}button.svelte-iy49t2{width:2rem;height:2rem;background:var(--theme-border);opacity:0.8;border-radius:40%;font-weight:bold}svg.svelte-iy49t2{overflow:visible}")
     }
