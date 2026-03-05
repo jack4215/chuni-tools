@@ -1873,7 +1873,7 @@
             <div style="flex: none; width: 1100px; display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4); box-sizing:border-box; position:relative;">
               
               <div style="display:flex; align-items:baseline; gap:20px; position:relative; z-index:1;">
-                <span style="font-size:52px; font-weight:bold; color:#fff; letter-spacing:2px; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${stats?.name || 'Player'}</span>
+                <span style="font-size:52px; font-weight:bold; color:#fff; letter-spacing:2px; text-shadow:0 2px 4px rgba(0,0,0,0.7); font-family: 'Arial', sans-serif;">${stats?.name || 'Player'}</span>
               </div>
               
               <div style="display:flex; align-items:baseline; gap:50px; position:relative; z-index:1;">
