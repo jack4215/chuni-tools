@@ -1681,7 +1681,7 @@
         const diffColors = { "ULT": "var(--theme-song-ult)", "MAS": "var(--theme-song-mas)", "EXP": "var(--theme-song-exp)", "ADV": "var(--theme-song-adv)", "BAS": "var(--theme-song-bas)" };
         const getClearLabel = (clr) => {
           if(clr === "AJ") return '<div style="color:#ffdf75;text-shadow:0 0 5px #ffdf75;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">ALL JUSTICE</div>';
-          if(clr === "FC") return '<div style="color:#03fc1c;text-shadow:0 0 5px #03fc1c;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">FULL COMBO</div>';
+          if(clr === "FC") return '<div style="color:#03fc1c;text-shadow:0 0 5px #a3ccf5;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">FULL COMBO</div>';
           return '';
         };
         const getRankColor = (rank) => {
@@ -1715,7 +1715,7 @@
             topBgStyle = `background: ${profileNode.style.background}; border: 3px solid transparent;`;
         }
 
-        const charImgFile = stats?.character || "a0b5c9a39cc1e6d6.png";
+        const charImgFile = stats?.character || "5bde9b9f1846049c.png";
         const charOfficialUrl = "chunithm-net-eng.com/mobile/img/" + charImgFile;
         const charProxyUrl = "https://wsrv.nl/?url=" + charOfficialUrl;
 
@@ -1764,7 +1764,7 @@
             `).join('');
             
             chartHtml = `
-            <div style="flex-grow: 1; min-height: 400px; width: 100%; box-sizing: border-box; background: #1e1e24; border: 2px solid #3e3e4a; border-radius: 0; padding: 25px 25px 15px 20px; display: flex; flex-direction: column; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
+            <div style="flex: none; height: 475px; width: 100%; box-sizing: border-box; background: #1e1e24; border: 2px solid #3e3e4a; border-radius: 0; padding: 25px 25px 15px 20px; display: flex; flex-direction: column; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
                 <div style="position: absolute; top: 15px; left: 20px; font-size: 18px; font-weight: bold; color: var(--theme-text-dim); letter-spacing: 1px;">BEST 30 RATING CHART</div>
                 
                 <div style="position: relative; flex-grow: 1; margin-top: 35px; margin-left: 40px; display: flex; align-items: flex-end;">
@@ -1788,13 +1788,16 @@
           const ratValue = (song.rating / 100).toFixed(2);
           const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
           const diffColor = diffColors[song.difficulty] || "#fff";
+          
+          const pcHtml = song.playCount ? `<div style="position:absolute; top:14px; left:0; background:rgba(0,0,0,0.75); padding:4px 7px; color:white; font-size:18px; font-weight:bold; letter-spacing:0.5px; line-height:1; z-index:2;">PC: ${song.playCount}</div>` : '';
+
           return `
           <div style="width:170px; background:${diffColor}; border-radius:0; padding:1px; box-sizing: border-box !important; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
             <div style="background:var(--theme-bg-main); border-radius:0; display:flex; flex-direction:column; overflow:hidden; width:100%;">
-              <div style="display:flex; justify-content:space-between; align-items:center; height:28px; padding:0 10px; background:rgba(255,255,255,0.05); font-size:14px; font-weight:bold; color:var(--theme-text); box-sizing:border-box;">
+              <div style="display:flex; justify-content:space-between; align-items:center; height:28px; padding:0 10px; background:rgba(255,255,255,0.05); font-size:16px; font-weight:bold; color:var(--theme-text); box-sizing:border-box;">
                 <span style="line-height:1;">#${idx+1}</span>
                 <div style="display:flex; align-items:baseline; gap:5px; line-height:1;">
-                  <span style="color:var(--theme-text-dim);">${constValue}</span>
+                  <span style="color:var(--theme-text-dim); font-size:12px;">${constValue}</span>
                   <span style="color:rgba(255,255,255,0.3); font-size:12px;">/</span>
                   <span>${ratValue}</span>
                 </div>
@@ -1802,7 +1805,10 @@
 
               <div style="position:relative; width:100%; aspect-ratio:1; background:#000;">
                 <img src="${getJacketUrl(song.title)}" style="width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
-                <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.75); text-align:center; padding:8px 0;">
+                
+                ${pcHtml}
+
+                <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.75); text-align:center; padding:8px 0; z-index:2;">
                   ${getClearLabel(song.clear)}
                   <div style="font-weight:bold; font-size:18px; color:white; line-height:1;">${song.score < 0 ? "-" : song.score.toLocaleString()} <span style="color:${getRankColor(song.rank)}; font-size:16px;">${song.rank}</span></div>
                 </div>
@@ -1827,7 +1833,7 @@
         container.innerHTML = `
           <div style="position:absolute; right:0; top:0; height:650px; z-index:0; pointer-events:none;">
             <div style="display:inline-block; height:100%; -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);">
-              <div style="height:100%; overflow:hidden; -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 35%, rgba(0,0,0,0) 60%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 65%);">
+              <div style="height:100%; overflow:hidden; -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 50%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 50%);">
                 <img src="${charProxyUrl}" style="height:650px; width:auto; margin-top:-100px; display:block;" crossorigin="anonymous">
               </div>
             </div>
@@ -1855,10 +1861,10 @@
             </div>
           </div>
 
-          <div style="display:flex; gap:80px; align-items:stretch; position:relative; z-index:2;">
+          <div style="display:flex; gap:80px; align-items:flex-start; position:relative; z-index:2;">
             
             <div style="flex: none; width: 960px; min-width: 960px; height: 1615px; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
-              <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
+              <div style="flex: none; display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
                 <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">BEST 30</h3>
                 <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${b30Avg}</b></span>
               </div>
@@ -1867,10 +1873,10 @@
               </div>
             </div>
 
-            <div style="flex: none; width: 960px; min-width: 960px; display:flex; flex-direction:column; gap:25px;">
+            <div style="flex: none; width: 960px; min-width: 960px; height: 1615px; display:flex; flex-direction:column; gap:25px;">
               
-              <div style="height: 1115px; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
-                <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
+              <div style="flex: none; height: 1115px; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
+                <div style="flex: none; display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
                   <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">CURRENT 20</h3>
                   <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${n20Avg}</b></span>
                 </div>
