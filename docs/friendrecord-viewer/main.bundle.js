@@ -1681,7 +1681,7 @@
         const diffColors = { "ULT": "var(--theme-song-ult)", "MAS": "var(--theme-song-mas)", "EXP": "var(--theme-song-exp)", "ADV": "var(--theme-song-adv)", "BAS": "var(--theme-song-bas)" };
         const getClearLabel = (clr) => {
           if(clr === "AJ") return '<div style="color:#ffdf75;text-shadow:0 0 5px #ffdf75;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">ALL JUSTICE</div>';
-          if(clr === "FC") return '<div style="color:#03fc1c;text-shadow:0 0 5px #a3ccf5;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">FULL COMBO</div>';
+          if(clr === "FC") return '<div style="color:#a3ccf5;text-shadow:0 0 5px #a3ccf5;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">FULL COMBO</div>';
           return '';
         };
         const getRankColor = (rank) => {
@@ -1709,7 +1709,7 @@
         if (opString !== '---' && !opString.includes('%')) {
             opString += '%';
         }
-        let topBgStyle = "background: #3b3b3b; border: 2px solid #aaaaaa;";
+        let topBgStyle = "background: #2b2b33; border: 2px solid #aaaaaa;";
         const profileNode = document.querySelector('.wrapper.svelte-1rv2o5c');
         if (profileNode && profileNode.style.background) {
             topBgStyle = `background: ${profileNode.style.background}; border: 3px solid transparent;`;
