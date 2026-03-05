@@ -1820,7 +1820,7 @@
               </div>
 
               <div style="position:relative; width:100%; aspect-ratio:1; background:#000;">
-                <img src="${getJacketUrl(song.title)}" style="width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
+                <img src="${getJacketUrl(song.title)}" style="display:block; width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
                 
                 ${pcHtml}
 
@@ -1923,8 +1923,10 @@
             const reader = new FileReader();
             await new Promise((resolve) => {
               reader.onloadend = () => {
+                img.removeAttribute("crossorigin");
+                img.onload = resolve;
+                img.onerror = resolve;
                 img.src = reader.result;
-                resolve();
               };
               reader.readAsDataURL(blob);
             });
