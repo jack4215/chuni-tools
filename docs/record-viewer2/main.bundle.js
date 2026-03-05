@@ -1817,13 +1817,13 @@
           const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
           const diffColor = diffColors[song.difficulty] || "#fff";
           
-          // 【新增】判斷是否有 playCount，有的話就生成這段 HTML 黑底 bar
-          const pcHtml = song.playCount ? `<div style="position:absolute; top:12px; left:0; background:rgba(0,0,0,0.75); padding:4px 8px; color:white; font-size:12px; font-weight:bold; letter-spacing:0.5px; line-height:1; z-index:2;">PC: ${song.playCount}</div>` : '';
+          // 【修改】PC Bar: 字體大，padding小，top調整
+          const pcHtml = song.playCount ? `<div style="position:absolute; top:14px; left:0; background:rgba(0,0,0,0.75); padding:2px 6px; color:white; font-size:18px; font-weight:bold; letter-spacing:0.5px; line-height:1; z-index:2;">PC: ${song.playCount}</div>` : '';
 
           return `
           <div style="width:170px; background:${diffColor}; border-radius:0; padding:1px; box-sizing: border-box !important; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
             <div style="background:var(--theme-bg-main); border-radius:0; display:flex; flex-direction:column; overflow:hidden; width:100%;">
-              <div style="display:flex; justify-content:space-between; align-items:center; height:28px; padding:0 10px; background:rgba(255,255,255,0.05); font-size:14px; font-weight:bold; color:var(--theme-text); box-sizing:border-box;">
+              <div style="display:flex; justify-content:space-between; align-items:center; height:28px; padding:0 10px; background:rgba(255,255,255,0.05); font-size:18px; font-weight:bold; color:var(--theme-text); box-sizing:border-box;">
                 <span style="line-height:1;">#${idx+1}</span>
                 <div style="display:flex; align-items:baseline; gap:5px; line-height:1;">
                   <span style="color:var(--theme-text-dim);">${constValue}</span>
@@ -1854,7 +1854,6 @@
           </div>
           `;
         };
-
         const container = document.createElement("div");
         container.id = "copied-main";
         
