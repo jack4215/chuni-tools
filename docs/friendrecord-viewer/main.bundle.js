@@ -1717,7 +1717,7 @@
 
         const charImgFile = stats?.character || "a0b5c9a39cc1e6d6.png";
         const charOfficialUrl = "chunithm-net-eng.com/mobile/img/" + charImgFile;
-        const charProxyUrl = "https://wsrv.nl/?url=" + charOfficialUrl + "&w=1000&v=" + runId;
+        const charProxyUrl = "https://wsrv.nl/?url=" + charOfficialUrl;
 
         let chartHtml = '';
         if (bestRecords.length > 0) {
@@ -1825,9 +1825,9 @@
         container.style.cssText = "position:absolute; top:0; left:0; z-index:-9999; width:2100px !important; min-width:2100px !important; max-width:none !important; box-sizing:border-box !important; background:#1e1e24; padding:45px; border-radius:0;";
         
         container.innerHTML = `
-          <div style="position:absolute; right:0; top:0; width:800px; height:850px; z-index:0; pointer-events:none; -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to left, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);">
+          <div style="position:absolute; right:0; top:0; width:650px; height:750px; z-index:0; pointer-events:none; -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to left, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);">
             <div style="width:100%; height:100%; -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 75%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 75%);">
-              <img src="${charProxyUrl}" style="position:absolute; top:-30px; right:0; width:800px; height:850px; object-fit:cover;" crossorigin="anonymous">
+              <img src="${charProxyUrl}" style="position:absolute; top:-15%; right:0; width:100%; height:115%; object-fit:cover;" crossorigin="anonymous">
             </div>
           </div>
 
