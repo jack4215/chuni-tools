@@ -1816,6 +1816,10 @@
           const ratValue = (song.rating / 100).toFixed(2);
           const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
           const diffColor = diffColors[song.difficulty] || "#fff";
+          
+          // 【新增】判斷是否有 playCount，有的話就生成這段 HTML 黑底 bar
+          const pcHtml = song.playCount ? `<div style="position:absolute; top:12px; left:0; background:rgba(0,0,0,0.75); padding:4px 8px; color:white; font-size:12px; font-weight:bold; letter-spacing:0.5px; line-height:1; z-index:2;">PC: ${song.playCount}</div>` : '';
+
           return `
           <div style="width:170px; background:${diffColor}; border-radius:0; padding:1px; box-sizing: border-box !important; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
             <div style="background:var(--theme-bg-main); border-radius:0; display:flex; flex-direction:column; overflow:hidden; width:100%;">
@@ -1830,7 +1834,10 @@
 
               <div style="position:relative; width:100%; aspect-ratio:1; background:#000;">
                 <img src="${getJacketUrl(song.title)}" style="width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
-                <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.75); text-align:center; padding:8px 0;">
+                
+                ${pcHtml}
+
+                <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.75); text-align:center; padding:8px 0; z-index:2;">
                   ${getClearLabel(song.clear)}
                   <div style="font-weight:bold; font-size:18px; color:white; line-height:1;">${song.score < 0 ? "-" : song.score.toLocaleString()} <span style="color:${getRankColor(song.rank)}; font-size:16px;">${song.rank}</span></div>
                 </div>
@@ -1847,6 +1854,7 @@
           </div>
           `;
         };
+
         const container = document.createElement("div");
         container.id = "copied-main";
         
@@ -1885,7 +1893,7 @@
 
           <div style="display:flex; gap:80px; align-items:stretch; position:relative; z-index:2;">
             
-            <div style="flex: none; width: 960px; min-width: 960px; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
+            <div style="flex: none; width: 960px; min-width: 960px; height: 1615px; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
               <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
                 <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">BEST 30</h3>
                 <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${b30Avg}</b></span>
@@ -1897,7 +1905,7 @@
 
             <div style="flex: none; width: 960px; min-width: 960px; display:flex; flex-direction:column; gap:25px;">
               
-              <div style="background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
+              <div style="height: 1115px; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
                 <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
                   <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">CURRENT 20</h3>
                   <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${n20Avg}</b></span>
