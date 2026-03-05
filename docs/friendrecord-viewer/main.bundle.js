@@ -1889,21 +1889,26 @@
         const imgs = container.querySelectorAll("img");
         await Promise.all([...imgs].map(async (img) => {
           try {
-            const res = await fetch(img.src);
-            if (!res.ok) return; 
-            const blob = await res.blob();
-            const reader = new FileReader();
             await new Promise((resolve) => {
-              reader.onloadend = () => {
-                img.removeAttribute("crossorigin");
+              if (img.complete && img.naturalHeight !== 0) {
+                resolve();
+              } else {
                 img.onload = resolve;
                 img.onerror = resolve;
-                img.src = reader.result;
-              };
-              reader.readAsDataURL(blob);
+              }
             });
+            if (img.naturalWidth > 0) {
+              const canvas = document.createElement("canvas");
+              canvas.width = img.naturalWidth;
+              canvas.height = img.naturalHeight;
+              const ctx = canvas.getContext("2d");
+              ctx.drawImage(img, 0, 0);
+              
+              img.removeAttribute("crossorigin");
+              img.src = canvas.toDataURL("image/jpeg", 0.9);
+            }
           } catch(e) {
-            console.warn("Base64 convert failed for:", img.src);
+            console.warn("Base64 convert failed for:", img.src, e);
           }
         }));
 
