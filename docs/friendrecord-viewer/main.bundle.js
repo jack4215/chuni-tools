@@ -1905,7 +1905,7 @@
               ctx.drawImage(img, 0, 0);
               
               img.removeAttribute("crossorigin");
-              img.src = canvas.toDataURL("image/jpeg", 0.9);
+              img.src = canvas.toDataURL("image/png");
             }
           } catch(e) {
             console.warn("Base64 convert failed for:", img.src, e);
