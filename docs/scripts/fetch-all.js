@@ -376,6 +376,9 @@
                                         background = match[1];
                                     }
                                 }
+                                const d = await i("/mobile/collection/").catch(() => null);
+                                const m = d?.querySelector(".character_image_box img");
+
                                 const playerData = {
                                     name: e.querySelector(".player_name_in").innerHTML,
                                     honor: {
@@ -389,6 +392,7 @@
                                     ratingPn: background,
                                     team: e.querySelector(".player_team_name")?.innerHTML || "N/A",
                                     code: e.querySelector('.user_data_friend_code .user_data_text span[style="display:none;"]')?.innerText || "N/A",
+                                    character: m?.src?.split("/").pop() || "N/A" 
                                 };
                                 return playerData;
                             }();

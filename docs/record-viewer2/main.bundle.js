@@ -1928,7 +1928,7 @@
         document.body.style.overflow = "hidden";
         document.body.appendChild(container);
 
-        loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Downloading Images (Fixing iOS Bug)...</div>";
+        loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Please wait...</div>";
         
         const imgs = container.querySelectorAll("img");
         await Promise.all([...imgs].map(async (img) => {
