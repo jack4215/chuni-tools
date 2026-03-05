@@ -1787,8 +1787,8 @@
                   <div style="font-weight:bold; font-size:18px; color:white; line-height:1;">${song.score < 0 ? "-" : song.score.toLocaleString()} <span style="color:${getRankColor(song.rank)}; font-size:16px;">${song.rank}</span></div>
                 </div>
               </div>
-              <div style="height:38px; display:flex; align-items:center; justify-content:center; padding:0 8px; box-sizing:border-box;">
-                <div style="font-size:15px; font-weight:bold; color:${diffColor}; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2;">
+              <div style="height:38px; display:flex; align-items:center; justify-content:center; padding:0 8px; box-sizing:border-box; background:${diffColor};">
+                <div style="font-size:15px; font-weight:bold; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2;">
                   ${song.title}
                 </div>
               </div>
@@ -1799,12 +1799,16 @@
         };
         const container = document.createElement("div");
         container.id = "copied-main";
-        container.style.cssText = "position:absolute; top:0; left:0; z-index:-9999; width:1950px !important; min-width:1950px !important; max-width:none !important; box-sizing:border-box !important; background:#1e1e24; padding:45px; border-radius:15px;";
+        // 修改 2：畫布總寬度從 1950px 擴展到 1990px，容納更大的間隔
+        container.style.cssText = "position:absolute; top:0; left:0; z-index:-9999; width:1990px !important; min-width:1990px !important; max-width:none !important; box-sizing:border-box !important; background:#1e1e24; padding:45px; border-radius:15px;";
         container.innerHTML = `
           <div style="display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4); margin-bottom:35px;">
-            <div style="display:flex; align-items:baseline; gap:20px; position:relative; z-index:1;">
-              <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">Player</span>
-              <span style="font-size:52px; font-weight:bold; color:#fff; letter-spacing:2px; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${stats?.name || 'Player'}</span>
+            <div style="display:flex; align-items:center; gap:30px; position:relative; z-index:1;">
+              <img src="/data/crossverse.png" style="height:65px; object-fit:contain;" crossorigin="anonymous">
+              <div style="display:flex; align-items:baseline; gap:20px;">
+                <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">Player</span>
+                <span style="font-size:52px; font-weight:bold; color:#fff; letter-spacing:2px; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${stats?.name || 'Player'}</span>
+              </div>
             </div>
             <div style="display:flex; align-items:baseline; gap:50px; position:relative; z-index:1;">
               <div style="display:flex; align-items:baseline; gap:15px;">
@@ -1817,7 +1821,7 @@
               </div>
             </div>
           </div>
-          <div style="display:flex; gap:40px; align-items:stretch;">
+          <div style="display:flex; gap:80px; align-items:stretch;">
             <div style="flex: 1; min-width: 0; display:flex; flex-direction:column;">
               <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
                 <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">BEST 30</h3>
