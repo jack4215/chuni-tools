@@ -1717,7 +1717,7 @@
 
         const charImgFile = stats?.character || "a0b5c9a39cc1e6d6.png";
         const charOfficialUrl = "chunithm-net-eng.com/mobile/img/" + charImgFile;
-        const charProxyUrl = "https://wsrv.nl/?url=" + charOfficialUrl;
+        const charProxyUrl = "https://wsrv.nl/?url=" + charOfficialUrl + "&w=1000&v=" + runId;
 
         let chartHtml = '';
         if (bestRecords.length > 0) {
@@ -1783,7 +1783,7 @@
             </div>
             `;
         }
-
+        
         const renderSongBlock = (song, idx) => {
           const ratValue = (song.rating / 100).toFixed(2);
           const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
@@ -1825,8 +1825,10 @@
         container.style.cssText = "position:absolute; top:0; left:0; z-index:-9999; width:2100px !important; min-width:2100px !important; max-width:none !important; box-sizing:border-box !important; background:#1e1e24; padding:45px; border-radius:0;";
         
         container.innerHTML = `
-          <div style="position:absolute; right:0; top:0; width:800px; height:850px; z-index:0; pointer-events:none; -webkit-mask-image: radial-gradient(100% 100% at top right, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 75%); mask-image: radial-gradient(100% 100% at top right, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 75%);">
-            <img src="${charProxyUrl}" style="position:absolute; top:-30px; right:0; width:800px; height:850px; object-fit:cover;" crossorigin="anonymous">
+          <div style="position:absolute; right:0; top:0; width:800px; height:850px; z-index:0; pointer-events:none; -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to left, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);">
+            <div style="width:100%; height:100%; -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 75%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 75%);">
+              <img src="${charProxyUrl}" style="position:absolute; top:-30px; right:0; width:800px; height:850px; object-fit:cover;" crossorigin="anonymous">
+            </div>
           </div>
 
           <div style="display:flex; align-items:center; gap:50px; margin-bottom:35px; position:relative; z-index:2;">
