@@ -1678,19 +1678,18 @@
       }(n);
       return r
     }
-    const hn = "chunithm_b40.png";
     async function gn() {
+      const runId = Date.now(); 
+
       const mainEl = document.querySelector("main");
       if (null == mainEl) return alert(d(wt)("share.error", { error: "resultNode is null" }));
-
-      // 1. 建立生成中的提示框
+      
       const loading = document.createElement("div");
-      loading.innerHTML = "正在生成 B50 圖片並載入封面，請稍候片刻...<br>Generating Image...";
-      loading.style.cssText = "position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,0.85);color:white;padding:25px;border-radius:10px;z-index:9999;font-weight:bold;text-align:center;font-size:1.2em;box-shadow:0 4px 15px rgba(0,0,0,0.5);";
+      loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Preparing Data...</div>";
+      loading.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:#1e1e24;display:flex;align-items:center;justify-content:center;color:white;z-index:99999;font-weight:bold;text-align:center;font-size:1.2em;";
       document.body.appendChild(loading);
-
+      
       try {
-        // 2. 抓取 idx.json 歌曲圖庫對應表
         let idxMap = [];
         try {
           let res = await fetch('../data/idx.json');
@@ -1699,21 +1698,20 @@
         } catch(err) {
           console.warn("Failed to fetch idx.json", err);
         }
-
+        
         const getJacketUrl = (title) => {
           const song = idxMap.find(s => s.title === title || Xe(s.title) === title || s.title === Xe(title));
           const imgFile = (song && song.image) ? song.image : "0000000000000000.jpg";
-          return "https://reiwa.f5.si/jackets/chunithm/" + imgFile.replace('.jpg', '.webp');
+          const officialUrl = "chunithm-net-eng.com/mobile/img/" + imgFile;
+          return "https://wsrv.nl/?url=" + officialUrl + "&w=200&v=" + Math.random();
         };
 
         const diffColors = { "ULT": "var(--theme-song-ult)", "MAS": "var(--theme-song-mas)", "EXP": "var(--theme-song-exp)", "ADV": "var(--theme-song-adv)", "BAS": "var(--theme-song-bas)" };
-
         const getClearLabel = (clr) => {
           if(clr === "AJ") return '<div style="color:#ffdf75;text-shadow:0 0 5px #ffdf75;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">ALL JUSTICE</div>';
           if(clr === "FC") return '<div style="color:#03fc1c;text-shadow:0 0 5px #03fc1c;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">FULL COMBO</div>';
           return '';
         };
-
         const getRankColor = (rank) => {
           if(rank === "MAX") return "var(--theme-clear-ajc)";
           if(rank === "SSS+") return "#68fb60";
@@ -1727,152 +1725,246 @@
           if(rank === "A") return "#80d5ff";
           return "var(--theme-text-dim)";
         };
-
-        // 3. 獲取當前用戶與成績資料
+        
         const stats = d(Ut);
         const allRecords = d(At);
-        const bestRecords = allRecords.filter(item => (item.newV === 0 || (item.newV === 2 && item.difficulty !== "ULT")) && item.score !== -1).sort((a,b) => b.rating - a.rating || b.const - a.const || b.score - a.score).slice(0, 30);
-        const newRecords = allRecords.filter(item => (item.newV === 1 || (item.newV === 2 && item.difficulty === "ULT")) && item.score !== -1).sort((a,b) => b.rating - a.rating || b.const - a.const || b.score - a.score).slice(0, 20);
-
-        // 4. 計算 Best 30 與 New 20 平均值
+        const bestRecords = allRecords.filter(item => (item.newV === 0 || (item.newV === 2 && item.difficulty !== "ULT")) && item.score !== -1).slice(0, 30);
+        const newRecords = allRecords.filter(item => (item.newV === 1 || (item.newV === 2 && item.difficulty === "ULT")) && item.score !== -1).slice(0, 20);
         const b30Avg = (bestRecords.reduce((acc, s) => acc + s.rating, 0) / 30 / 100).toFixed(4);
         const n20Avg = (newRecords.reduce((acc, s) => acc + s.rating, 0) / 20 / 100).toFixed(4);
-
-        const updateTimeStr = localStorage.getItem("prevUpdateTime") ? new Date(Number(localStorage.getItem("prevUpdateTime"))).toLocaleString() : '---';
         const genTimeStr = new Date().toLocaleString();
-
         let opString = stats?.overPower || '---';
         if (opString !== '---' && !opString.includes('%')) {
             opString += '%';
         }
-
-        // 5. 動態抓取頂部面板背景
-        let topBgStyle = "background: #555555; border-left: 10px solid var(--theme-control);";
+        let topBgStyle = "background: #3b3b3b; border: 2px solid #aaaaaa;";
         const profileNode = document.querySelector('.wrapper.svelte-1rv2o5c');
         if (profileNode && profileNode.style.background) {
             topBgStyle = `background: ${profileNode.style.background}; border: 3px solid transparent;`;
         }
 
-        // 6. 定義單格歌曲的渲染模板 (加入絕對高度鎖定，消除中英文字高低差異)
+        const charImgFile = stats?.character || "a0b5c9a39cc1e6d6.png";
+        const charOfficialUrl = "chunithm-net-eng.com/mobile/img/" + charImgFile;
+        const charProxyUrl = "https://wsrv.nl/?url=" + charOfficialUrl;
+
+        let chartHtml = '';
+        if (bestRecords.length > 0) {
+            const chartRatings = bestRecords.map(s => s.rating / 100);
+            while (chartRatings.length < 30) chartRatings.push(0); 
+            const validRatings = chartRatings.filter(r => r > 0);
+            let maxVal = validRatings.length > 0 ? Math.max(...validRatings) : 17;
+            let minVal = validRatings.length > 0 ? Math.min(...validRatings) : 15;
+            let stepUnit = 0.05;
+            let diff = maxVal - minVal;
+            if (diff > 2.0) stepUnit = 0.5;
+            else if (diff > 1.0) stepUnit = 0.2;
+            else if (diff > 0.45) stepUnit = 0.1;
+            else stepUnit = 0.05;
+            let yMax = parseFloat((Math.ceil(Math.round(maxVal * 1000) / Math.round(stepUnit * 1000)) * stepUnit).toFixed(2));
+            let yMin = parseFloat((Math.floor(Math.round(minVal * 1000) / Math.round(stepUnit * 1000)) * stepUnit).toFixed(2));
+            if (yMax === yMin) {
+                yMax += stepUnit;
+                yMin -= stepUnit;
+            }
+            let steps = Math.round((yMax - yMin) / stepUnit);
+            const avgPercent = Math.max(0, Math.min(100, ((parseFloat(b30Avg) - yMin) / (yMax - yMin)) * 100));
+            let gridLinesHtml = '';
+            for(let i=0; i<=steps; i++) {
+                const val = yMin + stepUnit * i;
+                const percent = (i / steps) * 100;
+                gridLinesHtml += `
+                    <div style="position: absolute; left: 0; right: 0; bottom: ${percent}%; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 1;"></div>
+                    <div style="position: absolute; left: -42px; bottom: ${percent}%; transform: translateY(50%); font-size: 13px; color: var(--theme-text-dim); width: 36px; text-align: right;">${val.toFixed(2)}</div>
+                `;
+            }
+            
+            const barsHtml = chartRatings.map((r, i) => {
+                const h = r > yMin ? ((r - yMin) / (yMax - yMin)) * 100 : (r > 0 ? 1 : 0);
+                return `
+                    <div style="flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; z-index: 2;">
+                        <div style="width: 75%; height: ${Math.max(0, Math.min(100, h))}%; background: var(--theme-control); box-shadow: inset 0 0 5px rgba(0,0,0,0.2); border-radius: 0;"></div>
+                    </div>
+                `;
+            }).join('');
+            
+            const xAxisHtml = chartRatings.map((r, i) => `
+                <div style="flex: 1; text-align: center; font-size: 12px; color: var(--theme-text-dim); margin-top: 6px; font-weight: bold;">${i + 1}</div>
+            `).join('');
+            
+            chartHtml = `
+            <div style="flex-grow: 1; min-height: 400px; width: 100%; box-sizing: border-box; background: #1e1e24; border: 2px solid #3e3e4a; border-radius: 0; padding: 25px 25px 15px 20px; display: flex; flex-direction: column; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
+                <div style="position: absolute; top: 15px; left: 20px; font-size: 18px; font-weight: bold; color: var(--theme-text-dim); letter-spacing: 1px;">BEST 30 RATING CHART</div>
+                
+                <div style="position: relative; flex-grow: 1; margin-top: 35px; margin-left: 40px; display: flex; align-items: flex-end;">
+                    ${gridLinesHtml}
+                    <div style="position: absolute; left: 0; right: 0; bottom: ${avgPercent}%; border-bottom: 2px solid #ff4b4b; z-index: 5;">
+                        <div style="position: absolute; right: 5px; bottom: 4px; color: #ff4b4b; font-size: 14px; font-weight: bold; background: #1e1e24; padding: 0 6px; border-radius: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">AVG: ${b30Avg}</div>
+                    </div>
+                    <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; align-items: flex-end; gap: 2px;">
+                        ${barsHtml}
+                    </div>
+                </div>
+                
+                <div style="display: flex; margin-left: 40px; gap: 2px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 2px; z-index: 3;">
+                    ${xAxisHtml}
+                </div>
+            </div>
+            `;
+        }
+        
         const renderSongBlock = (song, idx) => {
           const ratValue = (song.rating / 100).toFixed(2);
           const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
           const diffColor = diffColors[song.difficulty] || "#fff";
           return `
-          <div style="background:var(--theme-bg-main); border-radius:8px; display:flex; flex-direction:column; overflow:hidden; border:2px solid ${diffColor}; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
-            <div style="display:flex; justify-content:space-between; align-items:center; height:28px; padding:0 10px; background:rgba(255,255,255,0.05); font-size:14px; font-weight:bold; color:var(--theme-text); box-sizing:border-box;">
-              <span style="line-height:1;">#${idx+1} <span style="color:var(--theme-text-dim);margin-left:5px;">${constValue}</span></span>
-              <span style="line-height:1;">${ratValue}</span>
-            </div>
-            <div style="position:relative; width:100%; aspect-ratio:1; background:#000;">
-              <img src="${getJacketUrl(song.title)}" style="width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
-              <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.75); text-align:center; padding:8px 0;">
-                ${getClearLabel(song.clear)}
-                <div style="font-weight:bold; font-size:18px; color:white; line-height:1;">${song.score < 0 ? "-" : song.score.toLocaleString()} <span style="color:${getRankColor(song.rank)}; font-size:16px;">${song.rank}</span></div>
+          <div style="width:170px; background:${diffColor}; border-radius:0; padding:1px; box-sizing: border-box !important; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
+            <div style="background:var(--theme-bg-main); border-radius:0; display:flex; flex-direction:column; overflow:hidden; width:100%;">
+              <div style="display:flex; justify-content:space-between; align-items:center; height:28px; padding:0 10px; background:rgba(255,255,255,0.05); font-size:14px; font-weight:bold; color:var(--theme-text); box-sizing:border-box;">
+                <span style="line-height:1;">#${idx+1}</span>
+                <div style="display:flex; align-items:baseline; gap:5px; line-height:1;">
+                  <span style="color:var(--theme-text-dim);">${constValue}</span>
+                  <span style="color:rgba(255,255,255,0.3); font-size:12px;">/</span>
+                  <span>${ratValue}</span>
+                </div>
               </div>
-            </div>
-            <div style="height:38px; display:flex; align-items:center; justify-content:center; padding:0 8px; box-sizing:border-box;">
-              <div style="font-size:15px; font-weight:bold; color:var(--theme-text); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2;">
-                ${song.title}
+
+              <div style="position:relative; width:100%; aspect-ratio:1; background:#000;">
+                <img src="${getJacketUrl(song.title)}" style="width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
+                <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.75); text-align:center; padding:8px 0;">
+                  ${getClearLabel(song.clear)}
+                  <div style="font-weight:bold; font-size:18px; color:white; line-height:1;">${song.score < 0 ? "-" : song.score.toLocaleString()} <span style="color:${getRankColor(song.rank)}; font-size:16px;">${song.rank}</span></div>
+                </div>
               </div>
+
+              <div style="position:relative; height:38px; display:flex; align-items:center; justify-content:center; padding:0 8px; box-sizing:border-box; background:${diffColor};">
+                <div style="position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); z-index:1;"></div>
+                <div style="position:relative; z-index:2; font-size:15px; font-weight:bold; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2;">
+                  ${song.title}
+                </div>
+              </div>
+
             </div>
           </div>
           `;
         };
-
-        // 7. 構建要拍攝的 HTML 容器
         const container = document.createElement("div");
         container.id = "copied-main";
-        container.style.cssText = "position:absolute; top:0; left:0; z-index:9998; width:1950px; background:#1e1e24; padding:45px; border-radius:15px;";
+        
+        container.style.cssText = "position:absolute; top:0; left:0; z-index:-9999; width:2100px !important; min-width:2100px !important; max-width:none !important; box-sizing:border-box !important; background:#1e1e24; padding:45px; border-radius:0;";
         
         container.innerHTML = `
-          <div style="display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4); margin-bottom:35px;">
-            <div style="display:flex; align-items:baseline; gap:20px; position:relative; z-index:1;">
-              <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">Player</span>
-              <span style="font-size:52px; font-weight:bold; color:#fff; letter-spacing:2px; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${stats?.name || 'Player'}</span>
-            </div>
-            <div style="display:flex; align-items:baseline; gap:50px; position:relative; z-index:1;">
-              <div style="display:flex; align-items:baseline; gap:15px;">
-                <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">Rating</span>
-                <span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${stats?.rating || '---'}</span>
-              </div>
-              <div style="display:flex; align-items:baseline; gap:15px;">
-                <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">OP</span>
-                <span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${opString}</span>
+          <div style="position:absolute; right:0; top:0; height:650px; z-index:0; pointer-events:none;">
+            <div style="display:inline-block; height:100%; -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);">
+              <div style="height:100%; overflow:hidden; -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 35%, rgba(0,0,0,0) 60%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 65%);">
+                <img src="${charProxyUrl}" style="height:650px; width:auto; margin-top:-100px; display:block;" crossorigin="anonymous">
               </div>
             </div>
           </div>
 
-          <div style="display:flex; gap:40px; align-items:flex-start;">
-            <div style="flex: 1; min-width: 0;">
+          <div style="display:flex; align-items:center; gap:50px; margin-bottom:35px; position:relative; z-index:2;">
+            <img src="/data/crossverse.png" style="height:120px; object-fit:contain;" crossorigin="anonymous">
+            
+            <div style="flex: none; width: 1100px; display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4); box-sizing:border-box; position:relative;">
+              
+              <div style="display:flex; align-items:baseline; gap:20px; position:relative; z-index:1;">
+                <span style="font-size:52px; font-weight:bold; color:#fff; letter-spacing:2px; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${stats?.name || 'Player'}</span>
+              </div>
+              
+              <div style="display:flex; align-items:baseline; gap:50px; position:relative; z-index:1;">
+                <div style="display:flex; align-items:baseline; gap:15px;">
+                  <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">Rating</span>
+                  <span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${stats?.rating || '---'}</span>
+                </div>
+                <div style="display:flex; align-items:baseline; gap:15px;">
+                  <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">OP</span>
+                  <span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${opString}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:80px; align-items:stretch; position:relative; z-index:2;">
+            
+            <div style="flex: none; width: 960px; min-width: 960px; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
               <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
-                <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">Best 30</h3>
+                <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">BEST 30</h3>
                 <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${b30Avg}</b></span>
               </div>
-              <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:18px; align-content:start;">
+              <div style="display:grid; grid-template-columns:repeat(5, 170px); gap:15px; align-content:start;">
                 ${bestRecords.map((s, i) => renderSongBlock(s, i)).join('')}
               </div>
             </div>
 
-            <div style="flex: 1; min-width: 0;">
-              <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
-                <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">New 20</h3>
-                <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${n20Avg}</b></span>
+            <div style="flex: none; width: 960px; min-width: 960px; display:flex; flex-direction:column; gap:25px;">
+              
+              <div style="background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
+                <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
+                  <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">CURRENT 20</h3>
+                  <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${n20Avg}</b></span>
+                </div>
+                <div style="display:grid; grid-template-columns:repeat(5, 170px); gap:15px; align-content:start;">
+                  ${newRecords.map((s, i) => renderSongBlock(s, i)).join('')}
+                </div>
               </div>
-              <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:18px; align-content:start;">
-                ${newRecords.map((s, i) => renderSongBlock(s, i)).join('')}
-              </div>
+              
+              ${chartHtml}
+
             </div>
           </div>
-
+          
           <div style="border-top:2px solid var(--theme-border); padding-top:20px; margin-top:30px; display:flex; justify-content:space-between; color:var(--theme-text-dim); font-size:16px;">
-            <div>Generated by CHUNITHM Record Viewer</div>
-            <div>UPDATE: ${updateTimeStr} &nbsp;&nbsp;|&nbsp;&nbsp; GENERATE: ${genTimeStr}</div>
+            <div>Generated by CHUNITHM Tools @TSAIBEE (https://chuni.tsaibee.org)<br>All copyrights of music jacket image on this site belong copyright holders.</div>
+            <div>Date: ${genTimeStr}</div>
           </div>
         `;
-
+        
+        const originalOverflow = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
         document.body.appendChild(container);
 
-        // 8. 強制等待所有封面圖載入完成
+        loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Downloading Images (Fixing iOS Bug)...</div>";
+        
         const imgs = container.querySelectorAll("img");
-        await Promise.all([...imgs].map(img => new Promise((resolve) => {
-          if (img.complete) resolve();
-          else {
-            img.onload = resolve;
-            img.onerror = resolve; 
+        await Promise.all([...imgs].map(async (img) => {
+          try {
+            const res = await fetch(img.src);
+            if (!res.ok) return; 
+            const blob = await res.blob();
+            const reader = new FileReader();
+            await new Promise((resolve) => {
+              reader.onloadend = () => {
+                img.src = reader.result;
+                resolve();
+              };
+              reader.readAsDataURL(blob);
+            });
+          } catch(e) {
+            console.warn("Base64 convert failed for:", img.src);
           }
-        })));
+        }));
 
-        // 9. 拍照並產出圖檔
-        const blob = await pn(container, { backgroundColor: "#1e1e24", scale: 2 });
+        loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Generating Final Image...</div>";
+
+        const blob = await pn(container, { backgroundColor: "#1e1e24", pixelRatio: 1 });
+        
         container.remove();
+        document.body.style.overflow = originalOverflow;
         loading.remove();
-
-        const hn = "chunithm_b50.png";
+        
+        const hn = "chunithm_b50.jpg";
         if (blob) {
-          if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-            const file = new File([blob], hn, { type: blob.type });
-            if (navigator.canShare && navigator.canShare({ files: [file] })) {
-              navigator.share({ files: [file] }).catch(console.log);
-            } else {
-              const url = window.URL.createObjectURL(blob);
-              const a = document.createElement("a");
-              a.href = url;
-              a.download = hn;
-              a.click();
-            }
-          } else {
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement("a");
-            a.href = url;
-            a.download = hn;
-            a.click();
-          }
+          const url = window.URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = hn;
+          a.click();
+          setTimeout(() => window.URL.revokeObjectURL(url), 1000);
         } else {
           alert("Image generation failed. Result blob is null.");
         }
       } catch (err) {
         if(document.getElementById("copied-main")) document.getElementById("copied-main").remove();
+        document.body.style.overflow = "";
         loading.remove();
         alert("Error during image generation:\n" + err);
       }
