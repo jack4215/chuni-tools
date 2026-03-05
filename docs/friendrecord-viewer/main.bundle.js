@@ -1717,6 +1717,7 @@
 
         const charImgFile = stats?.character || "a0b5c9a39cc1e6d6.png";
         const charOfficialUrl = "chunithm-net-eng.com/mobile/img/" + charImgFile;
+        // 使用無縮放參數的原始代理，保持最乾淨的讀取
         const charProxyUrl = "https://wsrv.nl/?url=" + charOfficialUrl;
 
         let chartHtml = '';
@@ -1825,7 +1826,7 @@
         container.style.cssText = "position:absolute; top:0; left:0; z-index:-9999; width:2100px !important; min-width:2100px !important; max-width:none !important; box-sizing:border-box !important; background:#1e1e24; padding:45px; border-radius:0;";
         
         container.innerHTML = `
-          <div style="position:absolute; right:0; top:0; width:700px; height:550px; z-index:0; pointer-events:none; -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to left, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);">
+          <div style="position:absolute; right:0; top:0; width:950px; height:550px; z-index:0; pointer-events:none; -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to left, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 100%);">
             <div style="width:100%; height:100%; position:relative; -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 75%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 75%);">
               <img src="${charProxyUrl}" style="position:absolute; top:-15%; right:0; height:115%; width:auto; max-width:none; object-fit:contain; object-position:right top;" crossorigin="anonymous">
             </div>
