@@ -1651,6 +1651,8 @@
       return r
     }
     async function gn() {
+      const runId = Date.now(); 
+
       const mainEl = document.querySelector("main");
       if (null == mainEl) return alert(d(wt)("share.error", { error: "resultNode is null" }));
       
@@ -1673,7 +1675,6 @@
           const song = idxMap.find(s => s.title === title || Xe(s.title) === title || s.title === Xe(title));
           const imgFile = (song && song.image) ? song.image : "0000000000000000.jpg";
           const officialUrl = "chunithm-net-eng.com/mobile/img/" + imgFile;
-          // 加入 wsrv.nl 代理，並設定 w=200 縮小圖片尺寸，讓後面的 Base64 轉換速度暴增
           return "https://wsrv.nl/?url=" + officialUrl + "&w=200&v=" + Math.random();
         };
 
@@ -1696,6 +1697,7 @@
           if(rank === "A") return "#80d5ff";
           return "var(--theme-text-dim)";
         };
+        
         const stats = d(Ut);
         const allRecords = d(At);
         const bestRecords = allRecords.filter(item => (item.newV === 0 || (item.newV === 2 && item.difficulty !== "ULT")) && item.score !== -1).slice(0, 30);
@@ -1712,6 +1714,10 @@
         if (profileNode && profileNode.style.background) {
             topBgStyle = `background: ${profileNode.style.background}; border: 3px solid transparent;`;
         }
+        const charImgFile = stats?.character || "a0b5c9a39cc1e6d6.png";
+        const charOfficialUrl = "chunithm-net-eng.com/mobile/img/" + charImgFile;
+        const charProxyUrl = "https://wsrv.nl/?url=" + charOfficialUrl + "&w=400&v=" + runId;
+        
         let chartHtml = '';
         if (bestRecords.length > 0) {
             const chartRatings = bestRecords.map(s => s.rating / 100);
@@ -1813,15 +1819,21 @@
         container.style.cssText = "position:absolute; top:0; left:0; z-index:-9999; width:1990px !important; min-width:1990px !important; max-width:none !important; box-sizing:border-box !important; background:#1e1e24; padding:45px; border-radius:15px;";
         
         container.innerHTML = `
-          <div style="display:flex; align-items:center; gap:40px; margin-bottom:35px;">
+          <div style="display:flex; align-items:center; gap:50px; margin-bottom:35px;">
             <img src="/data/crossverse.png" style="height:120px; object-fit:contain;" crossorigin="anonymous">
             
-            <div style="flex-grow:1; display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4);">
-              <div style="display:flex; align-items:baseline; gap:20px; position:relative; z-index:1;">
+            <div style="flex-grow:1; display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4); position:relative; overflow:hidden;">
+              
+              <div style="position:absolute; right:0; top:0; width:376px; height:153px; z-index:0; pointer-events:none; -webkit-mask-image:linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%); mask-image:linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);">
+                <img src="${charProxyUrl}" style="position:absolute; top:-10px; right:0; width:376px; height:263px; object-fit:cover;" crossorigin="anonymous">
+              </div>
+
+              <div style="display:flex; align-items:baseline; gap:20px; position:relative; z-index:1; margin-left:20px;">
                 <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">Player</span>
                 <span style="font-size:52px; font-weight:bold; color:#fff; letter-spacing:2px; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${stats?.name || 'Player'}</span>
               </div>
-              <div style="display:flex; align-items:baseline; gap:50px; position:relative; z-index:1;">
+              
+              <div style="display:flex; align-items:baseline; gap:50px; position:relative; z-index:1; margin-right:10px;">
                 <div style="display:flex; align-items:baseline; gap:15px;">
                   <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">Rating</span>
                   <span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${stats?.rating || '---'}</span>
@@ -1866,19 +1878,17 @@
         document.body.style.overflow = "hidden";
         document.body.appendChild(container);
 
-        // --- 破除 Safari/iOS Bug 與 CORS 的核心魔法區塊 ---
         loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Downloading 50 Images (Fixing iOS Bug)...</div>";
         
         const imgs = container.querySelectorAll("img");
         await Promise.all([...imgs].map(async (img) => {
           try {
             const res = await fetch(img.src);
-            if (!res.ok) return; // 如果抓失敗就跳過，讓它維持原狀
+            if (!res.ok) return; 
             const blob = await res.blob();
             const reader = new FileReader();
             await new Promise((resolve) => {
               reader.onloadend = () => {
-                // 將圖片完全替換成 Base64 純文字，徹底擺脫網路請求與 Safari 錯亂
                 img.src = reader.result;
                 resolve();
               };
@@ -1890,7 +1900,6 @@
         }));
 
         loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Generating Final Image...</div>";
-        // --- 魔法區塊結束 ---
 
         const blob = await pn(container, { backgroundColor: "#1e1e24", pixelRatio: 1 });
         
