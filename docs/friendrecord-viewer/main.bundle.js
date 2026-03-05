@@ -1657,7 +1657,7 @@
       if (null == mainEl) return alert(d(wt)("share.error", { error: "resultNode is null" }));
       
       const loading = document.createElement("div");
-      loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Preparing Data...</div>";
+      loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Preparing Data...</div>";
       loading.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:#1e1e24;display:flex;align-items:center;justify-content:center;color:white;z-index:99999;font-weight:bold;text-align:center;font-size:1.2em;";
       document.body.appendChild(loading);
       
@@ -1749,26 +1749,28 @@
                     <div style="position: absolute; left: -42px; bottom: ${percent}%; transform: translateY(50%); font-size: 13px; color: var(--theme-text-dim); width: 36px; text-align: right;">${val.toFixed(2)}</div>
                 `;
             }
+            
             const barsHtml = chartRatings.map((r, i) => {
                 const h = r > yMin ? ((r - yMin) / (yMax - yMin)) * 100 : (r > 0 ? 1 : 0);
                 return `
                     <div style="flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; z-index: 2;">
-                        <div style="width: 75%; height: ${Math.max(0, Math.min(100, h))}%; background: var(--theme-control); box-shadow: inset 0 0 5px rgba(0,0,0,0.2); border-radius: 3px 3px 0 0;"></div>
+                        <div style="width: 75%; height: ${Math.max(0, Math.min(100, h))}%; background: var(--theme-control); box-shadow: inset 0 0 5px rgba(0,0,0,0.2); border-radius: 0;"></div>
                     </div>
                 `;
             }).join('');
+            
             const xAxisHtml = chartRatings.map((r, i) => `
                 <div style="flex: 1; text-align: center; font-size: 12px; color: var(--theme-text-dim); margin-top: 6px; font-weight: bold;">${i + 1}</div>
             `).join('');
             
             chartHtml = `
-            <div style="flex-grow: 1; min-height: 400px; width: 100%; box-sizing: border-box; background: #1e1e24; border: 2px solid #3e3e4a; border-radius: 20px; padding: 25px 25px 15px 20px; display: flex; flex-direction: column; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
+            <div style="flex-grow: 1; min-height: 400px; width: 100%; box-sizing: border-box; background: #1e1e24; border: 2px solid #3e3e4a; border-radius: 0; padding: 25px 25px 15px 20px; display: flex; flex-direction: column; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
                 <div style="position: absolute; top: 15px; left: 20px; font-size: 18px; font-weight: bold; color: var(--theme-text-dim); letter-spacing: 1px;">BEST 30 RATING CHART</div>
                 
                 <div style="position: relative; flex-grow: 1; margin-top: 35px; margin-left: 40px; display: flex; align-items: flex-end;">
                     ${gridLinesHtml}
                     <div style="position: absolute; left: 0; right: 0; bottom: ${avgPercent}%; border-bottom: 2px solid #ff4b4b; z-index: 5;">
-                        <div style="position: absolute; right: 5px; bottom: 4px; color: #ff4b4b; font-size: 14px; font-weight: bold; background: #1e1e24; padding: 0 6px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">AVG: ${b30Avg}</div>
+                        <div style="position: absolute; right: 5px; bottom: 4px; color: #ff4b4b; font-size: 14px; font-weight: bold; background: #1e1e24; padding: 0 6px; border-radius: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">AVG: ${b30Avg}</div>
                     </div>
                     <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; align-items: flex-end; gap: 2px;">
                         ${barsHtml}
@@ -1781,13 +1783,14 @@
             </div>
             `;
         }
+
         const renderSongBlock = (song, idx) => {
           const ratValue = (song.rating / 100).toFixed(2);
           const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
           const diffColor = diffColors[song.difficulty] || "#fff";
           return `
-          <div style="width:170px; background:${diffColor}; border-radius:8px; padding:1px; box-sizing: border-box !important; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
-            <div style="background:var(--theme-bg-main); border-radius:6px; display:flex; flex-direction:column; overflow:hidden; width:100%;">
+          <div style="width:170px; background:${diffColor}; border-radius:0; padding:1px; box-sizing: border-box !important; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
+            <div style="background:var(--theme-bg-main); border-radius:0; display:flex; flex-direction:column; overflow:hidden; width:100%;">
               <div style="display:flex; justify-content:space-between; align-items:center; height:28px; padding:0 10px; background:rgba(255,255,255,0.05); font-size:14px; font-weight:bold; color:var(--theme-text); box-sizing:border-box;">
                 <span style="line-height:1;">#${idx+1}</span>
                 <div style="display:flex; align-items:baseline; gap:5px; line-height:1;">
@@ -1818,17 +1821,18 @@
         };
         const container = document.createElement("div");
         container.id = "copied-main";
-        container.style.cssText = "position:absolute; top:0; left:0; z-index:-9999; width:2100px !important; min-width:2100px !important; max-width:none !important; box-sizing:border-box !important; background:#1e1e24; padding:45px; border-radius:15px;";
+        
+        container.style.cssText = "position:absolute; top:0; left:0; z-index:-9999; width:2100px !important; min-width:2100px !important; max-width:none !important; box-sizing:border-box !important; background:#1e1e24; padding:45px; border-radius:0;";
         
         container.innerHTML = `
-          <div style="position:absolute; right:0; top:0; width:800px; height:600px; z-index:0; pointer-events:none; -webkit-mask-image: radial-gradient(ellipse at top right, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 75%); mask-image: radial-gradient(ellipse at top right, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 75%);">
-            <img src="${charProxyUrl}" style="position:absolute; top:-30px; right:0; width:800px; height:600px; object-fit:cover;" crossorigin="anonymous">
+          <div style="position:absolute; right:0; top:0; width:800px; height:850px; z-index:0; pointer-events:none; -webkit-mask-image: radial-gradient(100% 100% at top right, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 75%); mask-image: radial-gradient(100% 100% at top right, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 75%);">
+            <img src="${charProxyUrl}" style="position:absolute; top:-30px; right:0; width:800px; height:850px; object-fit:cover;" crossorigin="anonymous">
           </div>
 
           <div style="display:flex; align-items:center; gap:50px; margin-bottom:35px; position:relative; z-index:2;">
             <img src="/data/crossverse.png" style="height:120px; object-fit:contain;" crossorigin="anonymous">
             
-            <div style="flex: none; width: 1250px; display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4); box-sizing:border-box; position:relative;">
+            <div style="flex: none; width: 1100px; display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4); box-sizing:border-box; position:relative;">
               
               <div style="display:flex; align-items:baseline; gap:20px; position:relative; z-index:1;">
                 <span style="font-size:52px; font-weight:bold; color:#fff; letter-spacing:2px; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${stats?.name || 'Player'}</span>
@@ -1849,7 +1853,7 @@
 
           <div style="display:flex; gap:80px; align-items:stretch; position:relative; z-index:2;">
             
-            <div style="flex: none; width: 960px; min-width: 960px; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:20px; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
+            <div style="flex: none; width: 960px; min-width: 960px; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
               <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
                 <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">BEST 30</h3>
                 <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${b30Avg}</b></span>
@@ -1861,7 +1865,7 @@
 
             <div style="flex: none; width: 960px; min-width: 960px; display:flex; flex-direction:column; gap:25px;">
               
-              <div style="background:#2b2b33; border:2px solid #3e3e4a; border-radius:20px; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
+              <div style="background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
                 <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
                   <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">CURRENT 20</h3>
                   <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${n20Avg}</b></span>
@@ -1886,7 +1890,7 @@
         document.body.style.overflow = "hidden";
         document.body.appendChild(container);
 
-        loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Downloading Images (Fixing iOS Bug)...</div>";
+        loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Downloading Images (Fixing iOS Bug)...</div>";
         
         const imgs = container.querySelectorAll("img");
         await Promise.all([...imgs].map(async (img) => {
@@ -1907,7 +1911,7 @@
           }
         }));
 
-        loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Generating Final Image...</div>";
+        loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Generating Final Image...</div>";
 
         const blob = await pn(container, { backgroundColor: "#1e1e24", pixelRatio: 1 });
         
