@@ -1651,6 +1651,7 @@
       return r
     }
     async function gn() {
+      const runId = Date.now(); 
       const mainEl = document.querySelector("main");
       if (null == mainEl) return alert(d(wt)("share.error", { error: "resultNode is null" }));
       const loading = document.createElement("div");
@@ -1666,12 +1667,14 @@
         } catch(err) {
           console.warn("Failed to fetch idx.json", err);
         }
+        
         const getJacketUrl = (title) => {
           const song = idxMap.find(s => s.title === title || Xe(s.title) === title || s.title === Xe(title));
           const imgFile = (song && song.image) ? song.image : "0000000000000000.jpg";
-          const offUrl = "chunithm-net-eng.com/mobile/img/" + imgFile;
-          return "https://wsrv.nl/?url=" + offUrl;
+          const officialUrl = "chunithm-net-eng.com/mobile/img/" + imgFile;
+          return "https://wsrv.nl/?url=" + officialUrl + "&v=" + runId;
         };
+
         const diffColors = { "ULT": "var(--theme-song-ult)", "MAS": "var(--theme-song-mas)", "EXP": "var(--theme-song-exp)", "ADV": "var(--theme-song-adv)", "BAS": "var(--theme-song-bas)" };
         const getClearLabel = (clr) => {
           if(clr === "AJ") return '<div style="color:#ffdf75;text-shadow:0 0 5px #ffdf75;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">ALL JUSTICE</div>';
@@ -1811,7 +1814,7 @@
         
         container.innerHTML = `
           <div style="display:flex; align-items:center; gap:40px; margin-bottom:35px;">
-            <img src="/data/crossverse.png" style="height:90px; object-fit:contain;" crossorigin="anonymous">
+            <img src="/data/crossverse.png" style="height:120px; object-fit:contain;" crossorigin="anonymous">
             
             <div style="flex-grow:1; display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4);">
               <div style="display:flex; align-items:baseline; gap:20px; position:relative; z-index:1;">
