@@ -1777,9 +1777,14 @@
             <div style="background:var(--theme-bg-main); border-radius:6px; display:flex; flex-direction:column; overflow:hidden; width:100%;">
               
               <div style="display:flex; justify-content:space-between; align-items:center; height:28px; padding:0 10px; background:rgba(255,255,255,0.05); font-size:14px; font-weight:bold; color:var(--theme-text); box-sizing:border-box;">
-                <span style="line-height:1;">#${idx+1} <span style="color:var(--theme-text-dim);margin-left:5px;">${constValue}</span></span>
-                <span style="line-height:1;">${ratValue}</span>
+                <span style="line-height:1;">#${idx+1}</span>
+                <div style="display:flex; align-items:baseline; gap:5px; line-height:1;">
+                  <span style="color:var(--theme-text-dim);">${constValue}</span>
+                  <span style="color:rgba(255,255,255,0.3); font-size:12px;">/</span>
+                  <span>${ratValue}</span>
+                </div>
               </div>
+
               <div style="position:relative; width:100%; aspect-ratio:1; background:#000;">
                 <img src="${getJacketUrl(song.title)}" style="width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
                 <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.75); text-align:center; padding:8px 0;">
@@ -1787,8 +1792,10 @@
                   <div style="font-weight:bold; font-size:18px; color:white; line-height:1;">${song.score < 0 ? "-" : song.score.toLocaleString()} <span style="color:${getRankColor(song.rank)}; font-size:16px;">${song.rank}</span></div>
                 </div>
               </div>
-              <div style="height:38px; display:flex; align-items:center; justify-content:center; padding:0 8px; box-sizing:border-box; background:${diffColor};">
-                <div style="font-size:15px; font-weight:bold; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2;">
+
+              <div style="position:relative; height:38px; display:flex; align-items:center; justify-content:center; padding:0 8px; box-sizing:border-box; background:${diffColor};">
+                <div style="position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); z-index:1;"></div>
+                <div style="position:relative; z-index:2; font-size:15px; font-weight:bold; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2;">
                   ${song.title}
                 </div>
               </div>
@@ -1799,28 +1806,30 @@
         };
         const container = document.createElement("div");
         container.id = "copied-main";
-        // 修改 2：畫布總寬度從 1950px 擴展到 1990px，容納更大的間隔
         container.style.cssText = "position:absolute; top:0; left:0; z-index:-9999; width:1990px !important; min-width:1990px !important; max-width:none !important; box-sizing:border-box !important; background:#1e1e24; padding:45px; border-radius:15px;";
+        
         container.innerHTML = `
-          <div style="display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4); margin-bottom:35px;">
-            <div style="display:flex; align-items:center; gap:30px; position:relative; z-index:1;">
-              <img src="/data/crossverse.png" style="height:65px; object-fit:contain;" crossorigin="anonymous">
-              <div style="display:flex; align-items:baseline; gap:20px;">
+          <div style="display:flex; align-items:center; gap:40px; margin-bottom:35px;">
+            <img src="/data/crossverse.png" style="height:90px; object-fit:contain;" crossorigin="anonymous">
+            
+            <div style="flex-grow:1; display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4);">
+              <div style="display:flex; align-items:baseline; gap:20px; position:relative; z-index:1;">
                 <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">Player</span>
                 <span style="font-size:52px; font-weight:bold; color:#fff; letter-spacing:2px; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${stats?.name || 'Player'}</span>
               </div>
-            </div>
-            <div style="display:flex; align-items:baseline; gap:50px; position:relative; z-index:1;">
-              <div style="display:flex; align-items:baseline; gap:15px;">
-                <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">Rating</span>
-                <span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${stats?.rating || '---'}</span>
-              </div>
-              <div style="display:flex; align-items:baseline; gap:15px;">
-                <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">OP</span>
-                <span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${opString}</span>
+              <div style="display:flex; align-items:baseline; gap:50px; position:relative; z-index:1;">
+                <div style="display:flex; align-items:baseline; gap:15px;">
+                  <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">Rating</span>
+                  <span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${stats?.rating || '---'}</span>
+                </div>
+                <div style="display:flex; align-items:baseline; gap:15px;">
+                  <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">OP</span>
+                  <span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${opString}</span>
+                </div>
               </div>
             </div>
           </div>
+
           <div style="display:flex; gap:80px; align-items:stretch;">
             <div style="flex: 1; min-width: 0; display:flex; flex-direction:column;">
               <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
