@@ -1828,7 +1828,7 @@
           <div style="position:absolute; right:0; top:0; height:650px; z-index:0; pointer-events:none;">
             <div style="display:inline-block; height:100%; -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);">
               <div style="height:100%; overflow:hidden; -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 75%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 75%);">
-                <img src="${charProxyUrl}" style="height:750px; width:auto; margin-top:-100px; display:block;" crossorigin="anonymous">
+                <img src="${charProxyUrl}" style="height:650px; width:auto; margin-top:-100px; display:block;" crossorigin="anonymous">
               </div>
             </div>
           </div>
