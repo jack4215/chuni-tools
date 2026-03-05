@@ -1717,7 +1717,8 @@
 
         const charImgFile = stats?.character || "a0b5c9a39cc1e6d6.png";
         const charOfficialUrl = "chunithm-net-eng.com/mobile/img/" + charImgFile;
-        const charProxyUrl = "https://wsrv.nl/?url=" + charOfficialUrl + "&w=400&v=" + runId;
+        // 放大角色圖：為確保畫質，代理寬度拉高至 w=600
+        const charProxyUrl = "https://wsrv.nl/?url=" + charOfficialUrl + "&w=600&v=" + runId;
 
         let chartHtml = '';
         if (bestRecords.length > 0) {
@@ -1761,7 +1762,7 @@
                 <div style="flex: 1; text-align: center; font-size: 12px; color: var(--theme-text-dim); margin-top: 6px; font-weight: bold;">${i + 1}</div>
             `).join('');
             chartHtml = `
-            <div style="margin-top: 18px; flex-grow: 1; background: #1e1e24; border: 2px solid var(--theme-border); border-radius: 12px; padding: 25px 25px 15px 20px; display: flex; flex-direction: column; position: relative; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+            <div style="margin-top: 18px; flex-grow: 1; background: rgba(0,0,0,0.2); border: 2px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 25px 25px 15px 20px; display: flex; flex-direction: column; position: relative; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
                 <div style="position: absolute; top: 15px; left: 20px; font-size: 18px; font-weight: bold; color: var(--theme-text-dim); letter-spacing: 1px;">BEST 30 RATING CHART</div>
                 
                 <div style="position: relative; flex-grow: 1; margin-top: 35px; margin-left: 40px; display: flex; align-items: flex-end;">
@@ -1774,7 +1775,7 @@
                     </div>
                 </div>
                 
-                <div style="display: flex; margin-left: 40px; gap: 2px; border-top: 2px solid var(--theme-border); padding-top: 2px; z-index: 3;">
+                <div style="display: flex; margin-left: 40px; gap: 2px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 2px; z-index: 3;">
                     ${xAxisHtml}
                 </div>
             </div>
@@ -1817,22 +1818,25 @@
         };
         const container = document.createElement("div");
         container.id = "copied-main";
-        container.style.cssText = "position:absolute; top:0; left:0; z-index:-9999; width:1990px !important; min-width:1990px !important; max-width:none !important; box-sizing:border-box !important; background:#1e1e24; padding:45px; border-radius:15px;";
+        
+        // 畫布加寬至 2050px，給淡灰底色區塊足夠的 padding 呼吸空間
+        container.style.cssText = "position:absolute; top:0; left:0; z-index:-9999; width:2050px !important; min-width:2050px !important; max-width:none !important; box-sizing:border-box !important; background:#1e1e24; padding:45px; border-radius:15px;";
         
         container.innerHTML = `
-          <div style="position:absolute; right:0; top:0; width:376px; height:220px; z-index:0; pointer-events:none; -webkit-mask-image: radial-gradient(ellipse at top right, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%); mask-image: radial-gradient(ellipse at top right, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);">
-            <img src="${charProxyUrl}" style="position:absolute; top:-10px; right:0; width:376px; height:263px; object-fit:cover;" crossorigin="anonymous">
+          <div style="position:absolute; right:0; top:0; width:500px; height:260px; z-index:0; pointer-events:none; -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 90%); mask-image: linear-gradient(to left, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 90%);">
+            <img src="${charProxyUrl}" style="position:absolute; top:-20px; right:0; width:500px; height:350px; object-fit:cover;" crossorigin="anonymous">
           </div>
 
           <div style="display:flex; align-items:center; gap:50px; margin-bottom:35px; position:relative; z-index:2;">
             <img src="/data/crossverse.png" style="height:120px; object-fit:contain;" crossorigin="anonymous">
             
-            <div style="flex-grow:1; margin-right:400px; display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4); position:relative;">
-              <div style="display:flex; align-items:baseline; gap:20px; position:relative; z-index:1;">
-                <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">Player</span>
+            <div style="flex-grow:1; margin-right:450px; display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4); position:relative;">
+              
+              <div style="display:flex; align-items:baseline; gap:20px; position:relative; z-index:1; margin-left:10px;">
                 <span style="font-size:52px; font-weight:bold; color:#fff; letter-spacing:2px; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${stats?.name || 'Player'}</span>
               </div>
-              <div style="display:flex; align-items:baseline; gap:50px; position:relative; z-index:1;">
+              
+              <div style="display:flex; align-items:baseline; gap:50px; position:relative; z-index:1; margin-right:10px;">
                 <div style="display:flex; align-items:baseline; gap:15px;">
                   <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">Rating</span>
                   <span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${stats?.rating || '---'}</span>
@@ -1845,9 +1849,10 @@
             </div>
           </div>
 
-          <div style="display:flex; gap:80px; align-items:stretch; position:relative; z-index:2;">
-            <div style="flex: 1; min-width: 0; display:flex; flex-direction:column;">
-              <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
+          <div style="display:flex; gap:60px; align-items:stretch; position:relative; z-index:2;">
+            
+            <div style="flex: 1; min-width: 0; display:flex; flex-direction:column; background:rgba(255,255,255,0.03); border:2px solid rgba(255,255,255,0.05); border-radius:20px; padding:20px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.2);">
+              <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid rgba(255,255,255,0.1); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
                 <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">BEST 30</h3>
                 <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${b30Avg}</b></span>
               </div>
@@ -1855,8 +1860,9 @@
                 ${bestRecords.map((s, i) => renderSongBlock(s, i)).join('')}
               </div>
             </div>
-            <div style="flex: 1; min-width: 0; display:flex; flex-direction:column;">
-              <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
+
+            <div style="flex: 1; min-width: 0; display:flex; flex-direction:column; background:rgba(255,255,255,0.03); border:2px solid rgba(255,255,255,0.05); border-radius:20px; padding:20px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.2);">
+              <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid rgba(255,255,255,0.1); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
                 <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">CURRENT 20</h3>
                 <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${n20Avg}</b></span>
               </div>
@@ -1867,6 +1873,7 @@
               ${chartHtml}
             </div>
           </div>
+          
           <div style="border-top:2px solid var(--theme-border); padding-top:20px; margin-top:30px; display:flex; justify-content:space-between; color:var(--theme-text-dim); font-size:16px;">
             <div>Generated by CHUNITHM Tools @TSAIBEE (https://chuni.tsaibee.org)<br>All copyrights of music jacket image on this site belong copyright holders.</div>
             <div>Date: ${genTimeStr}</div>
