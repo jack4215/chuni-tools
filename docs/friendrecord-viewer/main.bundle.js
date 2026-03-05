@@ -1717,7 +1717,8 @@
 
         const charImgFile = stats?.character || "a0b5c9a39cc1e6d6.png";
         const charOfficialUrl = "chunithm-net-eng.com/mobile/img/" + charImgFile;
-        const charProxyUrl = "https://wsrv.nl/?url=" + charOfficialUrl;
+        // 抓取 800px 寬度的代理圖片
+        const charProxyUrl = "https://wsrv.nl/?url=" + charOfficialUrl + "&w=800&v=" + runId;
 
         let chartHtml = '';
         if (bestRecords.length > 0) {
