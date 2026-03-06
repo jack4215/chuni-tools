@@ -1690,15 +1690,7 @@
           if(rank === "AAA") return "#cceeff";
           if(rank === "AA") return "#a6e1ff";
           if(rank === "A") return "#80d5ff";
-          return "var(--theme-text-dim)";OP 99.50%
-          D1 Database
-          生成日期
-          2026/3/7
-          BEST 30
-          17.6243
-          CURRENT 20
-          17.2675
-          
+          return "var(--theme-text-dim)";
         };
         const stats = d(Ut);
         const allRecords = d(At);
