@@ -1690,7 +1690,15 @@
           if(rank === "AAA") return "#cceeff";
           if(rank === "AA") return "#a6e1ff";
           if(rank === "A") return "#80d5ff";
-          return "var(--theme-text-dim)";
+          return "var(--theme-text-dim)";OP 99.50%
+          D1 Database
+          生成日期
+          2026/3/7
+          BEST 30
+          17.6243
+          CURRENT 20
+          17.2675
+          
         };
         const stats = d(Ut);
         const allRecords = d(At);
@@ -1705,7 +1713,13 @@
         const subRating = calculatedRatingStr.slice(-2);
         let ratingHtml = `<span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${mainRating}<span style="font-size:36px;">${subRating}</span></span>`;
         if (ratingValue >= 17) {
-            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7));"><span style="background: linear-gradient(to bottom, #ffff8e 18%, #ff7c7c 28%, #f42cde 55%, #4d60f2 60%, #01e3fd 70%, #00ff80 92%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #fff970 20%, #ff7c7c 32%, #f42cde 44%, #2f45ff 56%, #00ccff 68%, #00ff80 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
+            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.85));"><span style="background: linear-gradient(to bottom, #fff970 20%, #ff7c7c 32%, #f42cde 44%, #2f45ff 56%, #00ccff 68%, #00ff80 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #fff970 20%, #ff7c7c 32%, #f42cde 44%, #2f45ff 56%, #00ccff 68%, #00ff80 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
+        } else if (ratingValue >= 16) {
+            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.85));"><span style="background: linear-gradient(to bottom, #ff8276 20%, #ffdf70 40%, #8cff70 60%, #70dfff 75%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #ff7c7c 20%, #ffdf70 40%, #8cff70 60%, #70dfff 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
+        } else if (ratingValue >= 15.25) {
+            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.85));"><span style="background: linear-gradient(to bottom, #ffe089 20%, #fffffe 50%, #ffd789 55%, #fff8eb 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #ffffd0 20%, #ffffff 50%, #b0b0b0 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
+        } else if (ratingValue >= 14.5) {
+            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.85));"><span style="background: linear-gradient(to bottom, #f5a507 20%, #fae294 50%, #f2a900 55%, #fff262 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #ffffaa 20%, #ffcc00 50%, #ff8800 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
         }
 
         const genTimeStr = new Date().toLocaleString();
