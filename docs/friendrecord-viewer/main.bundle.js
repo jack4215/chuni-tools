@@ -1707,7 +1707,6 @@
         if (ratingValue >= 17) {
             ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7));"><span style="background: linear-gradient(to bottom, #fff970 20%, #ff7c7c 32%, #f42cde 44%, #2f45ff 56%, #00ccff 68%, #00ff80 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #fff970 20%, #ff7c7c 32%, #f42cde 44%, #2f45ff 56%, #00ccff 68%, #00ff80 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
         }
-        }
 
         const genTimeStr = new Date().toLocaleString();
         let opString = stats?.overPower || '---';
