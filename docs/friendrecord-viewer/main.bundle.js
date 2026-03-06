@@ -1699,10 +1699,10 @@
         const b30Avg = Cr(qe(bestRecords.map(s => s.rating), 30) / 100, 4);
         const n20Avg = Cr(qe(newRecords.map(s => s.rating), 20) / 100, 4);
         
-        const calculatedRatingStr = Cr((qe(bestRecords.map(s => s.rating), 30) / 100) * 0.6 + (qe(newRecords.map(s => s.rating), 20) / 100) * 0.4, 4);
-        const ratingValue = parseFloat(calculatedRatingStr);
-        const mainRating = calculatedRatingStr.slice(0, -2);
-        const subRating = calculatedRatingStr.slice(-2);
+        const fullRatingStr = Cr((qe(bestRecords.map(s => s.rating), 30) / 100) * 0.6 + (qe(newRecords.map(s => s.rating), 20) / 100) * 0.4, 4);
+        const ratingValue = parseFloat(fullRatingStr);
+        const mainRating = fullRatingStr.slice(0, -2);
+        const subRating = fullRatingStr.slice(-2);
         let ratingHtml = `<span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${mainRating}<span style="font-size:36px;">${subRating}</span></span>`;
         if (ratingValue >= 17) {
             ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.99));"><span style="background: linear-gradient(to bottom, #fff970 18%, #ff7c7c 30%, #ff898b 45%, #f602d9 58%, #496bff 65%, #03c4ff 72%, #01dc9b 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #fff970 18%, #ff7c7c 30%, #ff898b 45%, #f602d9 58%, #496bff 65%, #03c4ff 72%, #01dc9b 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
