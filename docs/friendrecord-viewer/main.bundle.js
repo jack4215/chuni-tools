@@ -1670,7 +1670,7 @@
         const getJacketUrl = (title) => {
           const song = idxMap.find(s => s.title === title || Xe(s.title) === title || s.title === Xe(title));
           const imgFile = (song && song.image) ? song.image : "0000000000000000.jpg";
-          const officialUrl = "new.chunithm-net.com/chuni-mobile/html/mobile/img/" + imgFile;
+          const officialUrl = "chunithm-net-eng.com/mobile/img/" + imgFile;
           return "https://wsrv.nl/?url=" + officialUrl + "&w=200&v=" + Math.random();
         };
         const diffColors = { "ULT": "var(--theme-song-ult)", "MAS": "var(--theme-song-mas)", "EXP": "var(--theme-song-exp)", "ADV": "var(--theme-song-adv)", "BAS": "var(--theme-song-bas)" };
@@ -1725,7 +1725,7 @@
             topBgStyle = `background: ${profileNode.style.background}; border: 3px solid transparent;`;
         }
         const charImgFile = stats?.character || "5bde9b9f1846049c.png";
-        const charOfficialUrl = "new.chunithm-net.com/chuni-mobile/html/mobile/img/" + charImgFile;
+        const charOfficialUrl = "chunithm-net-eng.com/mobile/img/" + charImgFile;
         const charProxyUrl = "https://wsrv.nl/?url=" + charOfficialUrl;
         let chartHtml = '';
         if (bestRecords.length > 0) {
