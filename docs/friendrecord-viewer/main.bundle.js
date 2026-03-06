@@ -1705,7 +1705,7 @@
         const subRating = calculatedRatingStr.slice(-2);
         let ratingHtml = `<span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${mainRating}<span style="font-size:36px;">${subRating}</span></span>`;
         if (ratingValue >= 17) {
-            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7));"><span style="background: linear-gradient(to bottom, #fff970 20%, #ff7c7c 32%, #f42cde 44%, #2f45ff 56%, #00ccff 68%, #00ff80 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #fff970 20%, #ff7c7c 32%, #f42cde 44%, #2f45ff 56%, #00ccff 68%, #00ff80 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
+            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7));"><span style="background: linear-gradient(to bottom, #ffff8e 18%, #ff7c7c 28%, #f42cde 55%, #4d60f2 60%, #01e3fd 70%, #00ff80 92%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #fff970 20%, #ff7c7c 32%, #f42cde 44%, #2f45ff 56%, #00ccff 68%, #00ff80 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
         }
 
         const genTimeStr = new Date().toLocaleString();
