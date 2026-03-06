@@ -1741,9 +1741,9 @@
         const charProxyUrl = "https://wsrv.nl/?url=" + charOfficialUrl;
         let chartHtml = '';
         if (bestRecords.length > 0) {
-            const chartRatings = bestRecords.map(s => s.rating / 100);
-            while (chartRatings.length < 30) chartRatings.push(0); 
-            const validRatings = chartRatings.filter(r => r > 0);
+            const chartData = bestRecords.map(s => ({ rating: s.rating / 100, rank: s.rank }));
+            while (chartData.length < 30) chartData.push({ rating: 0, rank: "" }); 
+            const validRatings = chartData.map(d => d.rating).filter(r => r > 0);
             let maxVal = validRatings.length > 0 ? Math.max(...validRatings) : 17;
             let minVal = validRatings.length > 0 ? Math.min(...validRatings) : 15;
             let stepUnit = 0.05;
@@ -1769,16 +1769,17 @@
                     <div style="position: absolute; left: -42px; bottom: ${percent}%; transform: translateY(50%); font-size: 13px; color: var(--theme-text-dim); width: 36px; text-align: right;">${val.toFixed(2)}</div>
                 `;
             }  
-            const barsHtml = chartRatings.map((r, i) => {
-                const h = r > yMin ? ((r - yMin) / (yMax - yMin)) * 100 : (r > 0 ? 1 : 0);
+            const barsHtml = chartData.map((d, i) => {
+                const h = d.rating > yMin ? ((d.rating - yMin) / (yMax - yMin)) * 100 : (d.rating > 0 ? 1 : 0);
+                const bgColor = d.rank === "SSS+" ? "#856b10" : "var(--theme-control)";
                 return `
                     <div style="flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; z-index: 2;">
-                        <div style="width: 75%; height: ${Math.max(0, Math.min(100, h))}%; background: var(--theme-control); box-shadow: inset 0 0 5px rgba(0,0,0,0.2); border-radius: 0;"></div>
+                        <div style="width: 75%; height: ${Math.max(0, Math.min(100, h))}%; background: ${bgColor}; box-shadow: inset 0 0 5px rgba(0,0,0,0.2); border-radius: 0;"></div>
                     </div>
                 `;
             }).join('');
             
-            const xAxisHtml = chartRatings.map((r, i) => `
+            const xAxisHtml = chartData.map((d, i) => `
                 <div style="flex: 1; text-align: center; font-size: 12px; color: var(--theme-text-dim); margin-top: 6px; font-weight: bold;">${i + 1}</div>
             `).join('');
             chartHtml = `
@@ -1917,30 +1918,25 @@
         const imgs = container.querySelectorAll("img");
         await Promise.all([...imgs].map(async (img) => {
           try {
+            const res = await fetch(img.src);
+            if (!res.ok) return; 
+            const blob = await res.blob();
+            const reader = new FileReader();
             await new Promise((resolve) => {
-              if (img.complete && img.naturalHeight !== 0) {
-                resolve();
-              } else {
+              reader.onloadend = () => {
+                img.removeAttribute("crossorigin");
                 img.onload = resolve;
                 img.onerror = resolve;
-              }
+                img.src = reader.result;
+              };
+              reader.readAsDataURL(blob);
             });
-            if (img.naturalWidth > 0) {
-              const canvas = document.createElement("canvas");
-              canvas.width = img.naturalWidth;
-              canvas.height = img.naturalHeight;
-              const ctx = canvas.getContext("2d");
-              ctx.drawImage(img, 0, 0);
-              
-              img.removeAttribute("crossorigin");
-              img.src = canvas.toDataURL("image/png");
-            }
           } catch(e) {
-            console.warn("Base64 convert failed for:", img.src, e);
+            console.warn("Base64 convert failed for:", img.src);
           }
         }));
 
-        loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Generating Final Image...</div>";
+        loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Generating Image...</div>";
         const blob = await pn(container, { backgroundColor: "#1e1e24", pixelRatio: 1 });
         container.remove();
         document.body.style.overflow = originalOverflow;
