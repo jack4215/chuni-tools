@@ -1719,7 +1719,7 @@
             topBgStyle = `background: ${profileNode.style.background}; border: 3px solid transparent;`;
         }
         const charImgFile = stats?.character || "5bde9b9f1846049c.png";
-        const charOfficialUrl = "chunithm-net-eng.com/mobile/img/" + charImgFile;
+        const charOfficialUrl = "otoge-db.net/chunithm/jacket/" + charImgFile;
         const charProxyUrl = "https://wsrv.nl/?url=" + charOfficialUrl;
         let chartHtml = '';
         if (bestRecords.length > 0) {
