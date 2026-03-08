@@ -1679,424 +1679,421 @@
       return r
     }
     async function gn() {
-      const runId = Date.now(); 
-      const mainEl = document.querySelector("main");
-      if (null == mainEl) return alert(d(wt)("share.error", { error: "resultNode is null" }));
+      const runId = Date.now(); 
+      const mainEl = document.querySelector("main");
+      if (null == mainEl) return alert(d(wt)("share.error", { error: "resultNode is null" }));
 
-      const modal = document.createElement("div");
-      modal.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.8);z-index:999999;display:flex;align-items:center;justify-content:center;color:white;";
-      modal.innerHTML = `
-        <div style="background:#2b2b33;padding:25px;border-radius:10px;width:420px;max-width:90%;border:2px solid #3e3e4a;box-shadow:0 10px 30px rgba(0,0,0,0.8);font-family:sans-serif;">
-            <h2 style="margin-top:0;border-bottom:2px solid #3e3e4a;padding-bottom:10px;color:var(--theme-text);">下載圖片選項</h2>
-            <div style="display:flex;flex-direction:column;gap:15px;margin:20px 0;">
-                <label style="cursor:pointer;display:flex;align-items:center;gap:10px;">
-                    <input type="radio" name="gn_type" value="b50" checked style="width:20px;height:20px;accent-color:var(--theme-control);">
-                    <span style="font-size:18px;color:var(--theme-text);">BEST 30 + CURRENT 20</span>
-                </label>
-                <label style="cursor:pointer;display:flex;align-items:center;gap:10px;">
-                    <input type="radio" name="gn_type" value="const" style="width:20px;height:20px;accent-color:var(--theme-control);">
-                    <span style="font-size:18px;color:var(--theme-text);">特定定數區間 (分組顯示)</span>
-                </label>
-                <div id="gn_const_inputs" style="display:none;background:rgba(255,255,255,0.05);padding:15px;border-radius:8px;margin-left:30px;">
-                    <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;">
-                        <label style="display:flex;flex-direction:column;gap:5px;flex:1;">
-                            <span style="font-size:14px;color:var(--theme-text-dim);">Min Const</span>
-                            <input type="number" id="gn_min" value="15.0" step="0.1" min="1.0" max="15.4" style="padding:8px;border-radius:5px;border:none;background:#1e1e24;color:white;font-size:16px;">
-                        </label>
-                        <span style="margin-top:20px;color:var(--theme-text-dim);">~</span>
-                        <label style="display:flex;flex-direction:column;gap:5px;flex:1;">
-                            <span style="font-size:14px;color:var(--theme-text-dim);">Max Const</span>
-                            <input type="number" id="gn_max" value="15.4" step="0.1" min="1.0" max="15.4" style="padding:8px;border-radius:5px;border:none;background:#1e1e24;color:white;font-size:16px;">
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div style="display:flex;justify-content:flex-end;gap:10px;margin-top:30px;">
-                <button id="gn_btn_cancel" style="padding:10px 20px;border-radius:5px;border:none;background:#3e3e4a;color:white;cursor:pointer;font-size:16px;">取消</button>
-                <button id="gn_btn_generate" style="padding:10px 20px;border-radius:5px;border:none;background:var(--theme-control);color:white;cursor:pointer;font-size:16px;font-weight:bold;">生成圖片</button>
-            </div>
-        </div>
-      `;
-      document.body.appendChild(modal);
+      let userChoice;
+      try {
+          userChoice = await new Promise((resolve, reject) => {
+              const overlay = document.createElement("div");
+              overlay.id = "dl_overlay_modal";
+              overlay.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.8);z-index:999999;display:flex;align-items:center;justify-content:center;font-family:'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif;";
+              const modal = document.createElement("div");
+              modal.style.cssText = "background:#2b2b33;padding:25px;border-radius:15px;box-shadow:0 4px 15px rgba(0,0,0,0.5);color:#fff;width:400px;display:flex;flex-direction:column;gap:15px;border:2px solid #3e3e4a;";
+              modal.innerHTML = `
+                  <h3 style="margin:0;text-align:center;font-size:1.5em;border-bottom:2px solid #3e3e4a;padding-bottom:10px;">選擇下載類型</h3>
+                  <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:1.1em;">
+                      <input type="radio" name="dl_mode" value="b50" checked>
+                      BEST 30 + CURRENT 20
+                  </label>
+                  <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:1.1em;">
+                      <input type="radio" name="dl_mode" value="const">
+                      特定定數全曲 (10曲一行)
+                  </label>
+                  <div id="const_filters" style="display:none;flex-direction:column;gap:10px;background:#1e1e24;padding:15px;border-radius:10px;border:1px solid #3e3e4a;">
+                      <div style="display:flex;justify-content:space-between;align-items:center;">
+                          <span>最小定數 (Min):</span>
+                          <input type="number" id="min_const" value="15.0" step="0.1" min="1.0" max="15.7" style="width:80px;padding:5px;border-radius:5px;background:#2b2b33;color:#fff;border:1px solid #3e3e4a;text-align:center;font-size:1em;">
+                      </div>
+                      <div style="display:flex;justify-content:space-between;align-items:center;">
+                          <span>最大定數 (Max):</span>
+                          <input type="number" id="max_const" value="15.4" step="0.1" min="1.0" max="15.7" style="width:80px;padding:5px;border-radius:5px;background:#2b2b33;color:#fff;border:1px solid #3e3e4a;text-align:center;font-size:1em;">
+                      </div>
+                  </div>
+                  <div style="display:flex;justify-content:flex-end;gap:10px;margin-top:10px;">
+                      <button id="dl_cancel" style="padding:8px 15px;border-radius:8px;border:none;background:#3e3e4a;color:#fff;cursor:pointer;font-weight:bold;">取消</button>
+                      <button id="dl_confirm" style="padding:8px 15px;border-radius:8px;border:none;background:var(--theme-control, #00ccff);color:var(--theme-text-control, #000);cursor:pointer;font-weight:bold;">產生圖片</button>
+                  </div>
+              `;
+              overlay.appendChild(modal);
+              document.body.appendChild(overlay);
 
-      const radios = modal.querySelectorAll('input[name="gn_type"]');
-      const constInputs = modal.querySelector('#gn_const_inputs');
-      radios.forEach(r => r.addEventListener('change', e => {
-          if(e.target.value === 'const') {
-              constInputs.style.display = 'block';
-          } else {
-              constInputs.style.display = 'none';
-          }
-      }));
+              const radios = modal.querySelectorAll('input[name="dl_mode"]');
+              const filters = modal.querySelector('#const_filters');
+              radios.forEach(r => {
+                  r.addEventListener('change', (e) => {
+                      filters.style.display = e.target.value === 'const' ? 'flex' : 'none';
+                  });
+              });
 
-      const userSelection = await new Promise(resolve => {
-          modal.querySelector('#gn_btn_cancel').addEventListener('click', () => {
-              modal.remove();
-              resolve('cancel');
-          });
-          modal.querySelector('#gn_btn_generate').addEventListener('click', () => {
-              const type = modal.querySelector('input[name="gn_type"]:checked').value;
-              const min = parseFloat(modal.querySelector('#gn_min').value);
-              const max = parseFloat(modal.querySelector('#gn_max').value);
-              modal.remove();
-              resolve({ type, min, max });
-          });
-      });
+              modal.querySelector('#dl_cancel').addEventListener('click', () => {
+                  document.body.removeChild(overlay);
+                  reject('cancelled');
+              });
 
-      if (userSelection === 'cancel') return;
-      await doGenerate(userSelection.type, userSelection.min, userSelection.max);
+              modal.querySelector('#dl_confirm').addEventListener('click', () => {
+                  const mode = modal.querySelector('input[name="dl_mode"]:checked').value;
+                  const min = parseFloat(modal.querySelector('#min_const').value) || 1.0;
+                  const max = parseFloat(modal.querySelector('#max_const').value) || 15.7;
+                  document.body.removeChild(overlay);
+                  resolve({ mode, min, max });
+              });
+          });
+      } catch (e) {
+          if (e === 'cancelled') return;
+          throw e;
+      }
 
-      async function doGenerate(gnType, minConst, maxConst) {
-        const loading = document.createElement("div");
-        loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Preparing Data...</div>";
-        loading.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:#1e1e24;display:flex;align-items:center;justify-content:center;color:white;z-index:99999;font-weight:bold;text-align:center;font-size:1.2em;";
-        document.body.appendChild(loading);
-        try {
-          let idxMap = [];
-          try {
-            let res = await fetch('../data/idx.json');
-            if(!res.ok) res = await fetch('/data/idx.json');
-            if(res.ok) idxMap = await res.json();
-          } catch(err) {
-            console.warn("Failed to fetch idx.json", err);
-          }
-          const getJacketUrl = (title) => {
-            const song = idxMap.find(s => s.title === title || Xe(s.title) === title || s.title === Xe(title));
-            const imgFile = (song && song.image) ? song.image : "0000000000000000.jpg";
-            const officialUrl = "chunithm-net-eng.com/mobile/img/" + imgFile;
-            return "https://wsrv.nl/?url=" + officialUrl + "&w=200&v=" + Math.random();
-          };
-          const diffColors = { "ULT": "var(--theme-song-ult)", "MAS": "var(--theme-song-mas)", "EXP": "var(--theme-song-exp)", "ADV": "var(--theme-song-adv)", "BAS": "var(--theme-song-bas)" };
-          const getClearLabel = (clr) => {
-            if(clr === "AJ") return '<div style="color:#ffdf75;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">ALL JUSTICE</div>';
-            if(clr === "FC") return '<div style="color:#a3ccf5;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">FULL COMBO</div>';
-            return '';
-          };
-          const getRankColor = (rank) => {
-            if(rank === "MAX") return "var(--theme-clear-ajc)";
-            if(rank === "SSS+") return "#68fb60";
-            if(rank === "SSS") return "#ffd744";
-            if(rank === "SS+") return "#ffe277";
-            if(rank === "SS") return "#ffedaa";
-            if(rank === "S+") return "#ffd744";
-            if(rank === "S") return "#ffe277";
-            if(rank === "AAA") return "#cceeff";
-            if(rank === "AA") return "#a6e1ff";
-            if(rank === "A") return "#80d5ff";
-            return "var(--theme-text-dim)";
-          };
-          const stats = d(Ut);
-          const allRecords = d(At);
-          const bestRecords = allRecords.filter(item => (item.newV === 0 || (item.newV === 2 && item.difficulty !== "ULT")) && item.score !== -1).slice(0, 30);
-          const newRecords = allRecords.filter(item => (item.newV === 1 || (item.newV === 2 && item.difficulty === "ULT")) && item.score !== -1).slice(0, 20);
-          const b30Avg = Cr(qe(bestRecords.map(s => s.rating), 30) / 100, 4);
-          const n20Avg = Cr(qe(newRecords.map(s => s.rating), 20) / 100, 4);
-          
-          const fullRatingStr = Cr((qe(bestRecords.map(s => s.rating), 30) / 100) * 0.6 + (qe(newRecords.map(s => s.rating), 20) / 100) * 0.4, 4);
-          const ratingValue = parseFloat(fullRatingStr);
-          const mainRating = fullRatingStr.slice(0, -2);
-          const subRating = fullRatingStr.slice(-2);
-          let ratingHtml = `<span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${mainRating}<span style="font-size:36px;">${subRating}</span></span>`;
-          if (ratingValue >= 17) {
-              ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.99));"><span style="background: linear-gradient(to bottom, #fff970 18%, #ff7c7c 30%, #ff898b 45%, #f602d9 58%, #496bff 65%, #03c4ff 72%, #01dc9b 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #fff970 18%, #ff7c7c 30%, #ff898b 45%, #f602d9 58%, #496bff 65%, #03c4ff 72%, #01dc9b 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
-          } else if (ratingValue >= 16) {
-              ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.99));"><span style="background: linear-gradient(to bottom, #ff8276 20%, #ffdf70 40%, #8cff70 60%, #70dfff 75%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #ff8276 20%, #ffdf70 40%, #8cff70 60%, #70dfff 75%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
-          } else if (ratingValue >= 15.25) {
-              ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.99));"><span style="background: linear-gradient(to bottom, #ffe089 20%, #fffffe 50%, #ffd789 55%, #fff8eb 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #ffe089 20%, #fffffe 50%, #ffd789 55%, #fff8eb 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
-          } else if (ratingValue >= 14.5) {
-              ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.99));"><span style="background: linear-gradient(to bottom, #f5a507 20%, #fae294 50%, #f2a900 55%, #fff262 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #f5a507 20%, #fae294 50%, #f2a900 55%, #fff262 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
-          }
+      const loading = document.createElement("div");
+      loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);color:white;'>Preparing Data...</div>";
+      loading.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:#a3ccf5;display:flex;align-items:center;justify-content:center;z-index:99999;font-weight:bold;text-align:center;font-size:1.2em;";
+      document.body.appendChild(loading);
+      
+      try {
+        let idxMap = [];
+        try {
+          let res = await fetch('../data/idx.json');
+          if(!res.ok) res = await fetch('/data/idx.json');
+          if(res.ok) idxMap = await res.json();
+        } catch(err) {
+          console.warn("Failed to fetch idx.json", err);
+        }
+        const getJacketUrl = (title) => {
+          const song = idxMap.find(s => s.title === title || Xe(s.title) === title || s.title === Xe(title));
+          const imgFile = (song && song.image) ? song.image : "0000000000000000.jpg";
+          const officialUrl = "chunithm-net-eng.com/mobile/img/" + imgFile;
+          return "https://wsrv.nl/?url=" + officialUrl + "&w=200&v=" + Math.random();
+        };
+        const diffColors = { "ULT": "var(--theme-song-ult)", "MAS": "var(--theme-song-mas)", "EXP": "var(--theme-song-exp)", "ADV": "var(--theme-song-adv)", "BAS": "var(--theme-song-bas)" };
+        const getClearLabel = (clr) => {
+          if(clr === "AJ") return '<div style="color:#ffdf75;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">ALL JUSTICE</div>';
+          if(clr === "FC") return '<div style="color:#a3ccf5;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">FULL COMBO</div>';
+          return '';
+        };
+        const getRankColor = (rank) => {
+          if(rank === "MAX") return "var(--theme-clear-ajc)";
+          if(rank === "SSS+") return "#68fb60";
+          if(rank === "SSS") return "#ffd744";
+          if(rank === "SS+") return "#ffe277";
+          if(rank === "SS") return "#ffedaa";
+          if(rank === "S+") return "#ffd744";
+          if(rank === "S") return "#ffe277";
+          if(rank === "AAA") return "#cceeff";
+          if(rank === "AA") return "#a6e1ff";
+          if(rank === "A") return "#80d5ff";
+          return "var(--theme-text-dim)";
+        };
+        const stats = d(Ut);
+        const allRecords = d(At);
+        const bestRecords = allRecords.filter(item => (item.newV === 0 || (item.newV === 2 && item.difficulty !== "ULT")) && item.score !== -1).slice(0, 30);
+        const newRecords = allRecords.filter(item => (item.newV === 1 || (item.newV === 2 && item.difficulty === "ULT")) && item.score !== -1).slice(0, 20);
+        const b30Avg = Cr(qe(bestRecords.map(s => s.rating), 30) / 100, 4);
+        const n20Avg = Cr(qe(newRecords.map(s => s.rating), 20) / 100, 4);
+        
+        const fullRatingStr = Cr((qe(bestRecords.map(s => s.rating), 30) / 100) * 0.6 + (qe(newRecords.map(s => s.rating), 20) / 100) * 0.4, 4);
+        const ratingValue = parseFloat(fullRatingStr);
+        const mainRating = fullRatingStr.slice(0, -2);
+        const subRating = fullRatingStr.slice(-2);
+        
+        let ratingHtml = `<span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${mainRating}<span style="font-size:36px;">${subRating}</span></span>`;
+        if (ratingValue >= 17) {
+            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.85));"><span style="background: linear-gradient(to bottom, #fff970 20%, #ff7c7c 32%, #f42cde 44%, #2f45ff 56%, #00ccff 68%, #00ff80 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #fff970 20%, #ff7c7c 32%, #f42cde 44%, #2f45ff 56%, #00ccff 68%, #00ff80 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
+        } else if (ratingValue >= 16) {
+            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.85));"><span style="background: linear-gradient(to bottom, #ff7c7c 20%, #ffdf70 40%, #8cff70 60%, #70dfff 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #ff7c7c 20%, #ffdf70 40%, #8cff70 60%, #70dfff 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
+        } else if (ratingValue >= 15.25) {
+            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.85));"><span style="background: linear-gradient(to bottom, #ffffd0 20%, #ffffff 50%, #b0b0b0 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #ffffd0 20%, #ffffff 50%, #b0b0b0 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
+        } else if (ratingValue >= 14.5) {
+            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.85));"><span style="background: linear-gradient(to bottom, #ffffaa 20%, #ffcc00 50%, #ff8800 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #ffffaa 20%, #ffcc00 50%, #ff8800 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
+        }
 
-          const genTimeStr = new Date().toLocaleString();
-          let opString = stats?.overPower || '---';
-          if (opString !== '---' && !opString.includes('%')) {
-              opString += '%';
-          }
-          let topBgStyle = "background: #2b2b33; border: 2px solid #aaaaaa;";
-          const profileNode = document.querySelector('.wrapper.svelte-1rv2o5c');
-          if (profileNode && profileNode.style.background) {
-              topBgStyle = `background: ${profileNode.style.background}; border: 3px solid transparent;`;
-          }
-          const charImgFile = stats?.character || "5bde9b9f1846049c.png";
-          const charOfficialUrl = "chunithm-net-eng.com/mobile/img/" + charImgFile;
-          const charProxyUrl = "https://wsrv.nl/?url=" + charOfficialUrl;
-          let chartHtml = '';
-          if (bestRecords.length > 0 && gnType === 'b50') {
-              const chartData = bestRecords.map(s => ({ rating: s.rating / 100, rank: s.rank }));
-              while (chartData.length < 30) chartData.push({ rating: 0, rank: "" }); 
-              const validRatings = chartData.map(d => d.rating).filter(r => r > 0);
-              let maxVal = validRatings.length > 0 ? Math.max(...validRatings) : 17;
-              let minVal = validRatings.length > 0 ? Math.min(...validRatings) : 15;
-              let stepUnit = 0.05;
-              let diff = maxVal - minVal;
-              if (diff > 2.0) stepUnit = 0.5;
-              else if (diff > 1.0) stepUnit = 0.2;
-              else if (diff > 0.45) stepUnit = 0.1;
-              else stepUnit = 0.05;
-              let yMax = parseFloat((Math.ceil(Math.round(maxVal * 1000) / Math.round(stepUnit * 1000)) * stepUnit).toFixed(2));
-              let yMin = parseFloat((Math.floor(Math.round(minVal * 1000) / Math.round(stepUnit * 1000)) * stepUnit).toFixed(2));
-              if (yMax === yMin) {
-                  yMax += stepUnit;
-                  yMin -= stepUnit;
-              }
-              let steps = Math.round((yMax - yMin) / stepUnit);
-              const avgPercent = Math.max(0, Math.min(100, ((parseFloat(b30Avg) - yMin) / (yMax - yMin)) * 100));
-              let gridLinesHtml = '';
-              for(let i=0; i<=steps; i++) {
-                  const val = yMin + stepUnit * i;
-                  const percent = (i / steps) * 100;
-                  gridLinesHtml += `
-                      <div style="position: absolute; left: 0; right: 0; bottom: ${percent}%; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 1;"></div>
-                      <div style="position: absolute; left: -42px; bottom: ${percent}%; transform: translateY(50%); font-size: 13px; color: var(--theme-text-dim); width: 36px; text-align: right;">${val.toFixed(2)}</div>
-                  `;
-              }  
-              const barsHtml = chartData.map((d, i) => {
-                  const h = d.rating > yMin ? ((d.rating - yMin) / (yMax - yMin)) * 100 : (d.rating > 0 ? 1 : 0);
-                  const bgColor = d.rank === "SSS+" ? "#856b10" : "var(--theme-control)";
-                  return `
-                      <div style="flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; z-index: 2;">
-                          <div style="width: 75%; height: ${Math.max(0, Math.min(100, h))}%; background: ${bgColor}; box-shadow: inset 0 0 5px rgba(0,0,0,0.2); border-radius: 0;"></div>
-                      </div>
-                  `;
-              }).join('');
-              
-              const xAxisHtml = chartData.map((d, i) => `
-                  <div style="flex: 1; text-align: center; font-size: 12px; color: var(--theme-text-dim); margin-top: 6px; font-weight: bold;">${i + 1}</div>
-              `).join('');
-              chartHtml = `
-              <div style="flex: none; height: 475px; width: 100%; box-sizing: border-box; background: #1e1e24; border: 2px solid #3e3e4a; border-radius: 0; padding: 25px 25px 15px 20px; display: flex; flex-direction: column; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
-                  <div style="position: absolute; top: 15px; left: 20px; font-size: 18px; font-weight: bold; color: var(--theme-text-dim); letter-spacing: 1px;">BEST 30 RATING CHART</div>
-                  
-                  <div style="position: relative; flex-grow: 1; margin-top: 35px; margin-left: 40px; display: flex; align-items: flex-end;">
-                      ${gridLinesHtml}
-                      <div style="position: absolute; left: 0; right: 0; bottom: ${avgPercent}%; border-bottom: 2px solid #ff4b4b; z-index: 5;">
-                          <div style="position: absolute; right: 5px; bottom: 4px; color: #ff4b4b; font-size: 14px; font-weight: bold; background: #1e1e24; padding: 0 6px; border-radius: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">AVG: ${b30Avg}</div>
-                      </div>
-                      <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; align-items: flex-end; gap: 2px;">
-                          ${barsHtml}
-                      </div>
-                  </div>
-                  
-                  <div style="display: flex; margin-left: 40px; gap: 2px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 2px; z-index: 3;">
-                      ${xAxisHtml}
-                  </div>
-              </div>
-              `;
-          }
-          
-          const renderSongBlock = (song, idx) => {
-            const ratValue = (song.rating / 100).toFixed(2);
-            const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
-            const diffColor = diffColors[song.difficulty] || "#fff";
-            const pcHtml = song.playCount ? `<div style="position:absolute; top:14px; left:0; background:rgba(0,0,0,0.75); padding:4px 7px; color:white; font-size:18px; font-weight:bold; letter-spacing:0.5px; line-height:1; z-index:2;">PC: ${song.playCount}</div>` : '';
-            const idxHtml = idx !== null ? `<span style="line-height:1;">#${idx+1}</span>` : `<span></span>`;
-            return `
-            <div style="width:170px; background:${diffColor}; border-radius:0; padding:1px; box-sizing: border-box !important; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
-              <div style="background:var(--theme-bg-main); border-radius:0; display:flex; flex-direction:column; overflow:hidden; width:100%;">
-                <div style="display:flex; justify-content:space-between; align-items:center; height:28px; padding:0 10px; background:rgba(255,255,255,0.05); font-size:16px; font-weight:bold; color:var(--theme-text); box-sizing:border-box;">
-                  ${idxHtml}
-                  <div style="display:flex; align-items:baseline; gap:5px; line-height:1; ${idx === null ? 'width:100%; justify-content:center;' : ''}">
-                    <span style="color:var(--theme-text-dim); font-size:14px;">${constValue}</span>
-                    <span style="color:rgba(255,255,255,0.3); font-size:14px;">/</span>
-                    <span>${ratValue}</span>
-                  </div>
-                </div>
+        const genTimeStr = new Date().toLocaleString();
+        let opString = stats?.overPower || '---';
+        if (opString !== '---' && !opString.includes('%')) {
+            opString += '%';
+        }
+        let topBgStyle = "background: #2b2b33; border: 2px solid #aaaaaa;";
+        const profileNode = document.querySelector('.wrapper.svelte-1rv2o5c');
+        if (profileNode && profileNode.style.background) {
+            topBgStyle = `background: ${profileNode.style.background}; border: 3px solid transparent;`;
+        }
+        const charImgFile = stats?.character || "5bde9b9f1846049c.png";
+        const charOfficialUrl = "chunithm-net-eng.com/mobile/img/" + charImgFile;
+        const charProxyUrl = "https://wsrv.nl/?url=" + charOfficialUrl;
+        
+        let chartHtml = '';
+        if (bestRecords.length > 0) {
+            const chartData = bestRecords.map(s => ({ rating: s.rating / 100, rank: s.rank }));
+            while (chartData.length < 30) chartData.push({ rating: 0, rank: "" }); 
+            const validRatings = chartData.map(d => d.rating).filter(r => r > 0);
+            let maxVal = validRatings.length > 0 ? Math.max(...validRatings) : 17;
+            let minVal = validRatings.length > 0 ? Math.min(...validRatings) : 15;
+            let stepUnit = 0.05;
+            let diff = maxVal - minVal;
+            if (diff > 2.0) stepUnit = 0.5;
+            else if (diff > 1.0) stepUnit = 0.2;
+            else if (diff > 0.45) stepUnit = 0.1;
+            else stepUnit = 0.05;
+            let yMax = parseFloat((Math.ceil(Math.round(maxVal * 1000) / Math.round(stepUnit * 1000)) * stepUnit).toFixed(2));
+            let yMin = parseFloat((Math.floor(Math.round(minVal * 1000) / Math.round(stepUnit * 1000)) * stepUnit).toFixed(2));
+            if (yMax === yMin) {
+                yMax += stepUnit;
+                yMin -= stepUnit;
+            }
+            let steps = Math.round((yMax - yMin) / stepUnit);
+            const avgPercent = Math.max(0, Math.min(100, ((parseFloat(b30Avg) - yMin) / (yMax - yMin)) * 100));
+            let gridLinesHtml = '';
+            for(let i=0; i<=steps; i++) {
+                const val = yMin + stepUnit * i;
+                const percent = (i / steps) * 100;
+                gridLinesHtml += `
+                    <div style="position: absolute; left: 0; right: 0; bottom: ${percent}%; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 1;"></div>
+                    <div style="position: absolute; left: -42px; bottom: ${percent}%; transform: translateY(50%); font-size: 13px; color: var(--theme-text-dim); width: 36px; text-align: right;">${val.toFixed(2)}</div>
+                `;
+            }  
+            const barsHtml = chartData.map((d, i) => {
+                const h = d.rating > yMin ? ((d.rating - yMin) / (yMax - yMin)) * 100 : (d.rating > 0 ? 1 : 0);
+                const bgColor = d.rank === "SSS+" ? "#856b10" : "var(--theme-control)";
+                return `
+                    <div style="flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; z-index: 2;">
+                        <div style="width: 75%; height: ${Math.max(0, Math.min(100, h))}%; background: ${bgColor}; box-shadow: inset 0 0 5px rgba(0,0,0,0.2); border-radius: 0;"></div>
+                    </div>
+                `;
+            }).join('');
+            
+            const xAxisHtml = chartData.map((d, i) => `
+                <div style="flex: 1; text-align: center; font-size: 12px; color: var(--theme-text-dim); margin-top: 6px; font-weight: bold;">${i + 1}</div>
+            `).join('');
+            chartHtml = `
+            <div style="flex: none; height: 475px; width: 100%; box-sizing: border-box; background: #1e1e24; border: 2px solid #3e3e4a; border-radius: 0; padding: 25px 25px 15px 20px; display: flex; flex-direction: column; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
+                <div style="position: absolute; top: 15px; left: 20px; font-size: 18px; font-weight: bold; color: var(--theme-text-dim); letter-spacing: 1px;">BEST 30 RATING CHART</div>
+                
+                <div style="position: relative; flex-grow: 1; margin-top: 35px; margin-left: 40px; display: flex; align-items: flex-end;">
+                    ${gridLinesHtml}
+                    <div style="position: absolute; left: 0; right: 0; bottom: ${avgPercent}%; border-bottom: 2px solid #ff4b4b; z-index: 5;">
+                        <div style="position: absolute; right: 5px; bottom: 4px; color: #ff4b4b; font-size: 14px; font-weight: bold; background: #1e1e24; padding: 0 6px; border-radius: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">AVG: ${b30Avg}</div>
+                    </div>
+                    <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; align-items: flex-end; gap: 2px;">
+                        ${barsHtml}
+                    </div>
+                </div>
+                
+                <div style="display: flex; margin-left: 40px; gap: 2px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 2px; z-index: 3;">
+                    ${xAxisHtml}
+                </div>
+            </div>
+            `;
+        }
+        
+        const renderSongBlock = (song, idx) => {
+          const ratValue = (song.rating / 100).toFixed(2);
+          const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
+          const diffColor = diffColors[song.difficulty] || "#fff";
+          const pcHtml = song.playCount ? `<div style="position:absolute; top:14px; left:0; background:rgba(0,0,0,0.75); padding:4px 7px; color:white; font-size:18px; font-weight:bold; letter-spacing:0.5px; line-height:1; z-index:2;">PC: ${song.playCount}</div>` : '';
+          return `
+          <div style="width:170px; background:${diffColor}; border-radius:0; padding:1px; box-sizing: border-box !important; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
+            <div style="background:var(--theme-bg-main); border-radius:0; display:flex; flex-direction:column; overflow:hidden; width:100%;">
+              <div style="display:flex; justify-content:space-between; align-items:center; height:28px; padding:0 10px; background:rgba(255,255,255,0.05); font-size:16px; font-weight:bold; color:var(--theme-text); box-sizing:border-box;">
+                <span style="line-height:1;">#${idx+1}</span>
+                <div style="display:flex; align-items:baseline; gap:5px; line-height:1;">
+                  <span style="color:var(--theme-text-dim); font-size:14px;">${constValue}</span>
+                  <span style="color:rgba(255,255,255,0.3); font-size:14px;">/</span>
+                  <span>${ratValue}</span>
+                </div>
+              </div>
 
-                <div style="position:relative; width:100%; aspect-ratio:1; background:#000;">
-                  <img src="${getJacketUrl(song.title)}" style="display:block; width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
-                  
-                  ${pcHtml}
+              <div style="position:relative; width:100%; aspect-ratio:1; background:#000;">
+                <img src="${getJacketUrl(song.title)}" style="display:block; width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
+                
+                ${pcHtml}
 
-                  <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.75); text-align:center; padding:8px 0; z-index:2;">
-                    ${getClearLabel(song.clear)}
-                    <div style="font-weight:bold; font-size:18px; color:white; line-height:1;">${song.score < 0 ? "-" : song.score.toLocaleString()} <span style="color:${getRankColor(song.rank)}; font-size:16px;">${song.rank}</span></div>
-                  </div>
-                </div>
+                <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.75); text-align:center; padding:8px 0; z-index:2;">
+                  ${getClearLabel(song.clear)}
+                  <div style="font-weight:bold; font-size:18px; color:white; line-height:1;">${song.score < 0 ? "-" : song.score.toLocaleString()} <span style="color:${getRankColor(song.rank)}; font-size:16px;">${song.rank}</span></div>
+                </div>
+              </div>
 
-                <div style="position:relative; height:38px; display:flex; align-items:center; justify-content:center; padding:0 8px; box-sizing:border-box; background:${diffColor};">
-                  <div style="position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); z-index:1;"></div>
-                  <div style="position:relative; z-index:2; font-size:15px; font-weight:bold; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2; font-family: 'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif;">
-                    ${song.title}
-                  </div>
-                </div>
+              <div style="position:relative; height:38px; display:flex; align-items:center; justify-content:center; padding:0 8px; box-sizing:border-box; background:${diffColor};">
+                <div style="position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); z-index:1;"></div>
+                <div style="position:relative; z-index:2; font-size:15px; font-weight:bold; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2; font-family: 'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif;">
+                  ${song.title}
+                </div>
+              </div>
 
-              </div>
-            </div>
-            `;
-          };
+            </div>
+          </div>
+          `;
+        };
 
-          const topHeaderHtml = `
-            <div style="position:absolute; right:0; top:0; height:650px; z-index:0; pointer-events:none;">
-              <div style="display:inline-block; height:100%; -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);">
-                <div style="height:100%; overflow:hidden; -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 50%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 50%);">
-                  <img src="${charProxyUrl}" style="height:650px; width:auto; margin-top:-100px; display:block;" crossorigin="anonymous">
-                </div>
-              </div>
-            </div>
+        const container = document.createElement("div");
+        container.id = "copied-main";
+        const cWidth = userChoice.mode === 'b50' ? 2100 : 1950;
+        container.style.cssText = `position:absolute; top:0; left:0; z-index:-9999; width:${cWidth}px !important; min-width:${cWidth}px !important; max-width:none !important; box-sizing:border-box !important; background:#a3ccf5; padding:45px; border-radius:0;`;
 
-            <div style="display:flex; align-items:center; gap:50px; margin-bottom:35px; position:relative; z-index:2;">
-              <img src="/data/crossverse.png" style="height:120px; object-fit:contain;" crossorigin="anonymous">
-              
-              <div style="flex: none; width: 1120px; display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4); box-sizing:border-box; position:relative;">
-                
-                <div style="display:flex; align-items:baseline; gap:20px; position:relative; z-index:1;">
-                  <span style="font-size:52px; font-weight:bold; color:#fff; letter-spacing:2px; text-shadow:0 2px 4px rgba(0,0,0,0.7); font-family: 'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif; white-space: nowrap;">${stats?.name || 'Player'}</span>
-                </div>
-                
-                <div style="display:flex; align-items:baseline; gap:50px; position:relative; z-index:1;">
-                  <div style="display:flex; align-items:baseline; gap:15px;">
-                    <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">Rating</span>
-                    ${ratingHtml}
-                  </div>
-                  <div style="display:flex; align-items:baseline; gap:15px;">
-                    <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">OP</span>
-                    <span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${opString}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          `;
+        let contentHtml = '';
+        if (userChoice.mode === 'b50') {
+            contentHtml = `
+              <div style="display:flex; gap:80px; align-items:flex-start; position:relative; z-index:2;">
+                <div style="flex: none; width: 960px; min-width: 960px; height: 1615px; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
+                  <div style="flex: none; display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
+                    <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">BEST 30</h3>
+                    <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${b30Avg}</b></span>
+                  </div>
+                  <div style="display:grid; grid-template-columns:repeat(5, 170px); gap:15px; align-content:start;">
+                    ${bestRecords.map((s, i) => renderSongBlock(s, i)).join('')}
+                  </div>
+                </div>
 
-          let bodyHtml = '';
-          if (gnType === 'b50') {
-              bodyHtml = `
-              <div style="display:flex; gap:80px; align-items:flex-start; position:relative; z-index:2;">
-                <div style="flex: none; width: 960px; min-width: 960px; height: 1615px; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
-                  <div style="flex: none; display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
-                    <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">BEST 30</h3>
-                    <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${b30Avg}</b></span>
-                  </div>
-                  <div style="display:grid; grid-template-columns:repeat(5, 170px); gap:15px; align-content:start;">
-                    ${bestRecords.map((s, i) => renderSongBlock(s, i)).join('')}
-                  </div>
-                </div>
+                <div style="flex: none; width: 960px; min-width: 960px; height: 1615px; display:flex; flex-direction:column; gap:25px;">
+                  <div style="flex: none; height: 1115px; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
+                    <div style="flex: none; display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
+                      <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">CURRENT 20</h3>
+                      <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${n20Avg}</b></span>
+                    </div>
+                    <div style="display:grid; grid-template-columns:repeat(5, 170px); gap:15px; align-content:start;">
+                      ${newRecords.map((s, i) => renderSongBlock(s, i)).join('')}
+                    </div>
+                  </div>
+                  ${chartHtml}
+                </div>
+              </div>
+            `;
+        } else {
+            const minC = userChoice.min;
+            const maxC = userChoice.max;
+            const targetRecords = allRecords.filter(item => item.const >= minC && item.const <= maxC && item.score !== -1);
+            const groups = {};
+            targetRecords.forEach(s => {
+                const cStr = s.const.toFixed(1);
+                if (!groups[cStr]) groups[cStr] = [];
+                groups[cStr].push(s);
+            });
 
-                <div style="flex: none; width: 960px; min-width: 960px; height: 1615px; display:flex; flex-direction:column; gap:25px;">
-                  <div style="flex: none; height: 1115px; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
-                    <div style="flex: none; display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
-                      <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">CURRENT 20</h3>
-                      <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${n20Avg}</b></span>
-                    </div>
-                    <div style="display:grid; grid-template-columns:repeat(5, 170px); gap:15px; align-content:start;">
-                      ${newRecords.map((s, i) => renderSongBlock(s, i)).join('')}
-                    </div>
-                  </div>
-                  ${chartHtml}
-                </div>
-              </div>
-              `;
-          } else {
-              const filteredRecords = allRecords.filter(item => item.const >= minConst && item.const <= maxConst && item.score !== -1);
-              filteredRecords.sort((a, b) => b.const - a.const || b.score - a.score);
+            const sortedConsts = Object.keys(groups).sort((a,b) => parseFloat(b) - parseFloat(a));
+            let groupsHtml = '';
 
-              const groups = {};
-              filteredRecords.forEach(r => {
-                  const cStr = r.const.toFixed(1);
-                  if (!groups[cStr]) groups[cStr] = [];
-                  groups[cStr].push(r);
-              });
+            for (let c of sortedConsts) {
+                let songs = groups[c];
+                songs.sort((a,b) => b.score - a.score || b.rating - a.rating);
 
-              const constBlocksHtml = Object.keys(groups).sort((a, b) => parseFloat(b) - parseFloat(a)).map(cStr => {
-                  const g = groups[cStr];
-                  const total = g.length;
-                  const sss_plus = g.filter(r => r.rank === "MAX" || r.rank === "SSS+").length;
-                  const sss = g.filter(r => r.rank === "SSS").length;
-                  const ss_plus = g.filter(r => r.rank === "SS+").length;
-                  const ss = g.filter(r => r.rank === "SS").length;
-                  const aj = g.filter(r => r.clear === "AJ").length;
-                  const fc = g.filter(r => r.clear === "FC").length;
+                let total = songs.length;
+                let countSssPlus = songs.filter(s => s.score >= 1009000).length;
+                let countSss = songs.filter(s => s.score >= 1007500 && s.score < 1009000).length;
+                let countSsPlus = songs.filter(s => s.score >= 1005000 && s.score < 1007500).length;
+                let countSs = songs.filter(s => s.score >= 1000000 && s.score < 1005000).length;
+                let countAJ = songs.filter(s => s.clear === 'AJ').length;
+                let countFC = songs.filter(s => s.clear === 'FC').length;
 
-                  return `
-                  <div style="flex: none; width: 100%; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3); margin-bottom: 25px;">
-                      <div style="flex: none; display:flex; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; box-sizing: border-box; gap: 20px;">
-                          <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">${cStr}</h3>
-                          <span style="font-size:18px; color:var(--theme-text-dim); line-height:1; display:flex; gap:15px; padding-bottom:4px;">
-                              <span>SSS+ <b style="color:#68fb60;">${sss_plus}</b>/${total}</span>
-                              <span style="color:var(--theme-border);">|</span>
-                              <span>SSS <b style="color:#ffd744;">${sss}</b>/${total}</span>
-                              <span style="color:var(--theme-border);">|</span>
-                              <span>SS+ <b style="color:#ffe277;">${ss_plus}</b>/${total}</span>
-                              <span style="color:var(--theme-border);">|</span>
-                              <span>SS <b style="color:#ffedaa;">${ss}</b>/${total}</span>
-                              <span style="color:var(--theme-border);">|</span>
-                              <span>AJ <b style="color:#ffdf75;">${aj}</b>/${total}</span>
-                              <span style="color:var(--theme-border);">|</span>
-                              <span>FC <b style="color:#a3ccf5;">${fc}</b>/${total}</span>
-                          </span>
-                      </div>
-                      <div style="display:grid; grid-template-columns:repeat(10, 170px); gap:15px; align-content:start; justify-content:start;">
-                          ${g.map(s => renderSongBlock(s, null)).join('')}
-                      </div>
-                  </div>
-                  `;
-              }).join('');
+                let header = `
+                <div style="display:flex; align-items:flex-end; gap: 20px; margin-bottom: 15px; padding-bottom: 5px; border-bottom: 3px solid rgba(255,255,255,0.2);">
+                    <span style="font-size: 40px; font-weight: bold; color: #fff; line-height: 1;">${c}</span>
+                    <div style="display:flex; gap: 15px; font-size: 20px; color: #ddd; margin-bottom: 4px; font-weight: bold;">
+                        <div><span style="color:#68fb60">SSS+</span> ${countSssPlus}/${total}</div><span style="color:rgba(255,255,255,0.4)">|</span>
+                        <div><span style="color:#ffd744">SSS</span> ${countSss}/${total}</div><span style="color:rgba(255,255,255,0.4)">|</span>
+                        <div><span style="color:#ffe277">SS+</span> ${countSsPlus}/${total}</div><span style="color:rgba(255,255,255,0.4)">|</span>
+                        <div><span style="color:#ffedaa">SS</span> ${countSs}/${total}</div><span style="color:rgba(255,255,255,0.4)">|</span>
+                        <div><span style="color:#ffdf75">AJ</span> ${countAJ}/${total}</div><span style="color:rgba(255,255,255,0.4)">|</span>
+                        <div><span style="color:#a3ccf5">FC</span> ${countFC}/${total}</div>
+                    </div>
+                </div>
+                `;
 
-              bodyHtml = `<div style="display:flex; flex-direction:column; width: 100%; position:relative; z-index:2;">${constBlocksHtml}</div>`;
-          }
+                let grid = `<div style="display:grid; grid-template-columns:repeat(10, 170px); gap:15px; align-content:start;">`;
+                grid += songs.map((s, idx) => renderSongBlock(s, idx)).join('');
+                grid += `</div>`;
 
-          const footerHtml = `
-            <div style="border-top:2px solid var(--theme-border); padding-top:20px; margin-top:10px; display:flex; justify-content:space-between; color:var(--theme-text-dim); font-size:16px; position:relative; z-index:2;">
-              <div>Generated by CHUNITHM Tools @TSAIBEE (https://chuni.tsaibee.org)<br>All copyrights of music jacket image on this site belong copyright holders.</div>
-              <div>Date: ${genTimeStr}</div>
-            </div>
-          `;
+                groupsHtml += `<div style="margin-bottom: 40px;">${header}${grid}</div>`;
+            }
+            contentHtml = `<div style="display:flex; flex-direction:column; gap:0; position:relative; z-index:2; width: 100%; background: rgba(0,0,0,0.6); padding: 30px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.5);">${groupsHtml}</div>`;
+        }
 
-          const container = document.createElement("div");
-          container.id = "copied-main";
-          container.style.cssText = "position:absolute; top:0; left:0; z-index:-9999; width:2100px !important; min-width:2100px !important; max-width:none !important; box-sizing:border-box !important; background:#1e1e24; padding:45px; border-radius:0;";
-          container.innerHTML = topHeaderHtml + bodyHtml + footerHtml;
+        container.innerHTML = `
+          <div style="position:absolute; right:0; top:0; height:650px; z-index:0; pointer-events:none;">
+            <div style="display:inline-block; height:100%; -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);">
+              <div style="height:100%; overflow:hidden; -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 50%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 50%);">
+                <img src="${charProxyUrl}" style="height:650px; width:auto; margin-top:-100px; display:block;" crossorigin="anonymous">
+              </div>
+            </div>
+          </div>
 
-          const originalOverflow = document.body.style.overflow;
-          document.body.style.overflow = "hidden";
-          document.body.appendChild(container);
-          loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Please wait...</div>"; 
-          
-          const imgs = container.querySelectorAll("img");
-          await Promise.all([...imgs].map(async (img) => {
-            try {
-              const res = await fetch(img.src);
-              if (!res.ok) return; 
-              const blob = await res.blob();
-              const reader = new FileReader();
-              await new Promise((resolve) => {
-                reader.onloadend = () => {
-                  img.removeAttribute("crossorigin");
-                  img.onload = resolve;
-                  img.onerror = resolve;
-                  img.src = reader.result;
-                };
-                reader.readAsDataURL(blob);
-              });
-            } catch(e) {
-              console.warn("Base64 convert failed for:", img.src);
-            }
-          }));
+          <div style="display:flex; align-items:center; gap:50px; margin-bottom:35px; position:relative; z-index:2;">
+            <img src="/data/crossverse.png" style="height:120px; object-fit:contain;" crossorigin="anonymous">
+            
+            <div style="flex: 1; display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4); box-sizing:border-box; position:relative;">
+              
+              <div style="display:flex; align-items:baseline; gap:20px; position:relative; z-index:1;">
+                <span style="font-size:52px; font-weight:bold; color:#fff; letter-spacing:2px; text-shadow:0 2px 4px rgba(0,0,0,0.7); font-family: 'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif; white-space: nowrap;">${stats?.name || 'Player'}</span>
+              </div>
+              
+              <div style="display:flex; align-items:baseline; gap:50px; position:relative; z-index:1;">
+                <div style="display:flex; align-items:baseline; gap:15px;">
+                  <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">Rating</span>
+                  ${ratingHtml}
+                </div>
+                <div style="display:flex; align-items:baseline; gap:15px;">
+                  <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">OP</span>
+                  <span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${opString}</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Generating Image...</div>";
-          const blob = await pn(container, { backgroundColor: "#1e1e24", pixelRatio: 1 });
-          container.remove();
-          document.body.style.overflow = originalOverflow;
-          loading.remove();
-          
-          const hn = gnType === 'b50' ? "chunithm_b50.jpg" : `chunithm_const_${minConst}_${maxConst}.jpg`;
-          if (blob) {
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement("a");
-            a.href = url;
-            a.download = hn;
-            a.click();
-            setTimeout(() => window.URL.revokeObjectURL(url), 1000);
-          } else {
-            alert("Image generation failed. Result blob is null.");
-          }
-        } catch (err) {
-          if(document.getElementById("copied-main")) document.getElementById("copied-main").remove();
-          document.body.style.overflow = "";
-          loading.remove();
-          alert("Error during image generation:\n" + err);
-        }
-      }
-    }
+          ${contentHtml}
+          
+          <div style="border-top:2px solid rgba(0,0,0,0.2); padding-top:20px; margin-top:30px; display:flex; justify-content:space-between; color:rgba(0,0,0,0.6); font-size:16px; position:relative; z-index:2; font-weight:bold;">
+            <div>Generated by CHUNITHM Tools @TSAIBEE (https://chuni.tsaibee.org)<br>All copyrights of music jacket image on this site belong copyright holders.</div>
+            <div>Date: ${genTimeStr}</div>
+          </div>
+        `;
+        
+        const originalOverflow = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+        document.body.appendChild(container);
+        loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);color:white;'>Please wait...</div>"; 
+        const imgs = container.querySelectorAll("img");
+        await Promise.all([...imgs].map(async (img) => {
+          try {
+            const res = await fetch(img.src);
+            if (!res.ok) return; 
+            const blob = await res.blob();
+            const reader = new FileReader();
+            await new Promise((resolve) => {
+              reader.onloadend = () => {
+                img.removeAttribute("crossorigin");
+                img.onload = resolve;
+                img.onerror = resolve;
+                img.src = reader.result;
+              };
+              reader.readAsDataURL(blob);
+            });
+          } catch(e) {
+            console.warn("Base64 convert failed for:", img.src);
+          }
+        }));
+
+        loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);color:white;'>Generating Image...</div>";
+        const blob = await pn(container, { backgroundColor: "#a3ccf5", pixelRatio: 1 });
+        container.remove();
+        document.body.style.overflow = originalOverflow;
+        loading.remove();
+        const hn = userChoice.mode === 'b50' ? "chunithm_b50.jpg" : "chunithm_const.jpg";
+        if (blob) {
+          const url = window.URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = hn;
+          a.click();
+          setTimeout(() => window.URL.revokeObjectURL(url), 1000);
+        } else {
+          alert("Image generation failed. Result blob is null.");
+        }
+      } catch (err) {
+        if(document.getElementById("copied-main")) document.getElementById("copied-main").remove();
+        document.body.style.overflow = "";
+        loading.remove();
+        alert("Error during image generation:\n" + err);
+      }
+    }
 
     function mn(e) {
       j(e, "svelte-iy49t2", ".wrapper.svelte-iy49t2{display:flex;-ms-flex-direction:row;z-index:2;flex-direction:row;justify-content:space-between;align-items:center;gap:1em;position:fixed;right:1rem;top:0.6rem}button.svelte-iy49t2{width:2rem;height:2rem;background:var(--theme-border);opacity:0.8;border-radius:40%;font-weight:bold}svg.svelte-iy49t2{overflow:visible}")
