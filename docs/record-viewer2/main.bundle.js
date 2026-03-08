@@ -1972,7 +1972,7 @@
             const ctx = cvs.getContext("2d");
             ctx.drawImage(img, 0, 0);
 
-            rawBlob = await new Promise(resolve => cvs.toBlob(resolve, "image/jpeg", 0.9));
+            rawBlob = await new Promise(resolve => cvs.toBlob(resolve, "image/jpeg", 0.95));
         }
 
         container.remove();
