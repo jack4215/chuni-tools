@@ -1953,13 +1953,34 @@
         }));
 
         loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Generating Image...</div>";
-        const blob = await pn(container, { backgroundColor: "#1e1e24", pixelRatio: 1 });
+        
+        let rawBlob = await pn(container, { backgroundColor: "#1e1e24", pixelRatio: 1 });
+        
+        if (rawBlob) {
+            loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>Compressing Image...</div>";
+            
+            const img = new Image();
+            img.src = URL.createObjectURL(rawBlob);
+            await new Promise((resolve, reject) => {
+                img.onload = resolve;
+                img.onerror = reject;
+            });
+
+            const cvs = document.createElement("canvas");
+            cvs.width = img.width;
+            cvs.height = img.height;
+            const ctx = cvs.getContext("2d");
+            ctx.drawImage(img, 0, 0);
+
+            rawBlob = await new Promise(resolve => cvs.toBlob(resolve, "image/jpeg", 0.95));
+        }
+
         container.remove();
         document.body.style.overflow = originalOverflow;
         loading.remove();
         const hn = "chunithm_b50.jpg";
-        if (blob) {
-          const url = window.URL.createObjectURL(blob);
+        if (rawBlob) {
+          const url = window.URL.createObjectURL(rawBlob);
           const a = document.createElement("a");
           a.href = url;
           a.download = hn;
