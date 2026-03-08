@@ -1684,83 +1684,72 @@
     if (null == mainEl) return alert(d(wt)("share.error", { error: "resultNode is null" }));
 
     // ==========================================================
-    // Function 1: 下載設定選項 Modal (獨立 CSS 解決未載入 Bug)
+    // Function 1: 完美仿造原版設定頁的 UI
     // ==========================================================
     function showDownloadOptions() {
         return new Promise((resolve, reject) => {
-            // 注入完全獨立的 CSS，確保在任何情況下都能完美呈現原生 UI 風格
-            const styleId = "dl_modal_styles";
-            if (!document.getElementById(styleId)) {
-                const style = document.createElement("style");
-                style.id = styleId;
-                style.innerHTML = `
-                    #dl_overlay_modal { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 999999; display: flex; align-items: center; justify-content: center; }
-                    #dl_bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(2px); }
-                    #dl_modal { position: relative; background: var(--theme-bg, #2b2b33); padding: 1.5rem; border-radius: 0.5rem; width: 90%; max-width: 400px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); border: 1px solid var(--theme-border, #3e3e4a); color: var(--theme-text, #fff); font-family: 'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif; }
-                    #dl_close { position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: var(--theme-text-dim, #aaa); font-size: 1.2rem; cursor: pointer; transition: 0.2s; }
-                    #dl_close:hover { color: #fff; }
-                    .dl-title { margin: 0; margin-bottom: 1rem; font-size: 1.25rem; font-weight: bold; }
-                    .dl-h4 { color: var(--theme-text-dim, #aaa); font-size: 0.9rem; margin-top: 1rem; margin-bottom: 0.5rem; border-bottom: 1px solid var(--theme-border, #3e3e4a); padding-bottom: 0.2rem; font-weight: bold; }
-                    .dl-reset-btn { width: 100%; padding: 0.6rem; background: var(--theme-control, #00ccff); color: var(--theme-text-control, #000); border: none; border-radius: 0.25rem; font-weight: bold; cursor: pointer; margin-top: 1.5rem; font-size: 1rem; transition: filter 0.2s; }
-                    .dl-reset-btn:hover { filter: brightness(1.1); }
-                    .dl-radio-label { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; cursor: pointer; font-size: 1rem; font-weight: 500; }
-                    .dl-radio { accent-color: var(--theme-control, #00ccff); width: 1.1rem; height: 1.1rem; cursor: pointer; }
-                `;
-                document.head.appendChild(style);
-            }
-
             const overlay = document.createElement("div");
             overlay.id = "dl_overlay_modal";
+            // 完全照抄原版 .modal-bg 與 .wrapper 的絕對定位與背景
+            overlay.style.cssText = "position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:999999; display:flex; align-items:center; justify-content:center; font-family:'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif;";
             
-            overlay.innerHTML = `
-                <div id="dl_bg"></div>
-                <div id="dl_modal">
-                    <button id="dl_close">✕</button>
-                    <h3 class="dl-title">下載圖片設定</h3>
-                    
-                    <h4 class="dl-h4">選擇類型</h4>
-                    <label class="dl-radio-label">
-                        <input type="radio" name="dl_mode" value="b50" checked class="dl-radio"> 
+            const bg = document.createElement("div");
+            bg.style.cssText = "position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); backdrop-filter:blur(3px);";
+            
+            const modal = document.createElement("div");
+            // 照抄原版 .modal svelte-iga5r4 的外觀
+            modal.style.cssText = "position:relative; background:var(--theme-bg-main, #1e1e24); padding:1.5rem; border-radius:0.5rem; width:90%; max-width:380px; box-shadow:0 4px 20px rgba(0,0,0,0.5); border:1px solid var(--theme-border, #3e3e4a); color:var(--theme-text, #fff);";
+            
+            modal.innerHTML = `
+                <button id="dl_close" style="position:absolute; top:1rem; right:1rem; background:transparent; border:none; color:var(--theme-text-dim, #888); font-size:1.2rem; cursor:pointer;">✕</button>
+                <h3 style="margin:0 0 1rem 0; font-size:1.4rem;">下載圖片設定</h3>
+                
+                <h4 style="color:var(--theme-text-dim); border-bottom:1px solid var(--theme-border); padding-bottom:0.2rem; margin:1rem 0 0.5rem 0; font-size:0.9rem;">選擇類型</h4>
+                
+                <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:1rem;">
+                    <label style="display:flex; align-items:center; gap:10px; cursor:pointer; font-size:1.1rem; padding:5px 0;">
+                        <input type="radio" name="dl_mode" value="b50" checked style="width:1.2rem; height:1.2rem; accent-color:var(--theme-control);"> 
                         BEST 30 + CURRENT 20
                     </label>
-                    <label class="dl-radio-label">
-                        <input type="radio" name="dl_mode" value="const" class="dl-radio"> 
-                        特定定數全部歌曲 (10首一行)
+                    <label style="display:flex; align-items:center; gap:10px; cursor:pointer; font-size:1.1rem; padding:5px 0;">
+                        <input type="radio" name="dl_mode" value="const" style="width:1.2rem; height:1.2rem; accent-color:var(--theme-control);"> 
+                        特定定數全部歌曲
                     </label>
-
-                    <div id="const_filters" style="display:none; flex-direction:column;">
-                        <h4 class="dl-h4" style="margin-top:0.8rem;">定數範圍</h4>
-                        <div id="const_slider_mount" style="margin-top: 5px;"></div>
-                    </div>
-
-                    <button id="dl_confirm" class="dl-reset-btn">產生圖片</button>
                 </div>
+
+                <div id="const_filters_container" style="display:none; flex-direction:column; margin-bottom:1rem;">
+                    <div id="const_slider_mount"></div>
+                </div>
+
+                <hr style="border:0; border-top:1px solid var(--theme-border); margin:1.5rem 0 1rem 0;">
+                
+                <button id="dl_confirm" style="width:100%; padding:0.8rem; background:var(--theme-control, #00ccff); color:var(--theme-text-control, #000); border:none; border-radius:0.3rem; font-size:1.1rem; font-weight:bold; cursor:pointer; transition:0.2s;">
+                    產生圖片
+                </button>
             `;
             
+            overlay.appendChild(bg);
+            overlay.appendChild(modal);
             document.body.appendChild(overlay);
 
-            // 實例化原生拉桿元件 (Dn)
-            const sliderMount = overlay.querySelector('#const_slider_mount');
+            // 呼叫原版的拉桿組件
+            const sliderMount = modal.querySelector('#const_slider_mount');
             let sliderComp;
             try {
                 sliderComp = new Dn({
                     target: sliderMount,
                     props: {
-                        label: "依 譜面定數",
-                        min: 1.0,
-                        max: 15.7,
-                        step: 0.1,
-                        low: 15.0,
-                        high: 15.4
+                        label: d(wt)("settings.filter.const") || "依 譜面定數",
+                        min: 1.0, max: 15.7, step: 0.1, low: 15.0, high: 15.4
                     }
                 });
             } catch(e) {
-                console.warn("Slider mount error:", e);
-                sliderMount.innerHTML = `<span style="color:var(--theme-text-dim);">無法載入拉桿模組</span>`;
+                console.warn("Slider mount error", e);
+                sliderMount.innerHTML = `<span style="color:var(--theme-text-dim);">拉桿元件載入失敗</span>`;
             }
 
-            const radios = overlay.querySelectorAll('input[name="dl_mode"]');
-            const filtersContainer = overlay.querySelector('#const_filters');
+            const radios = modal.querySelectorAll('input[name="dl_mode"]');
+            const filtersContainer = modal.querySelector('#const_filters_container');
             radios.forEach(r => {
                 r.addEventListener('change', (e) => {
                     filtersContainer.style.display = e.target.value === 'const' ? 'flex' : 'none';
@@ -1773,25 +1762,29 @@
                 reject('cancelled');
             };
 
-            overlay.querySelector('#dl_close').addEventListener('click', close);
-            overlay.querySelector('#dl_bg').addEventListener('click', close);
+            modal.querySelector('#dl_close').addEventListener('click', close);
+            bg.addEventListener('click', close);
 
-            // 確認按鈕邏輯
-            overlay.querySelector('#dl_confirm').addEventListener('click', () => {
-                const mode = overlay.querySelector('input[name="dl_mode"]:checked').value;
+            modal.querySelector('#dl_confirm').addEventListener('click', () => {
+                const mode = modal.querySelector('input[name="dl_mode"]:checked').value;
                 let minC = 15.0;
                 let maxC = 15.4;
 
-                // 若為定數模式，從 Svelte 元件渲染出的文字中提取選定範圍 (解耦作法)
                 if (mode === 'const' && sliderComp) {
                     try {
-                        const matches = sliderMount.innerText.match(/(\d+\.\d+)/g);
-                        if (matches && matches.length >= 2) {
-                            const vals = matches.map(Number).sort((a,b) => a - b);
-                            minC = vals[0];
-                            maxC = vals[vals.length - 1];
-                        }
-                    } catch(e) { console.warn("Parse error", e); }
+                        const vals = sliderComp.$$.ctx[0]; 
+                        const vals2 = sliderComp.$$.ctx[1];
+                        minC = Math.min(vals, vals2) || 15.0;
+                        maxC = Math.max(vals, vals2) || 15.4;
+                    } catch(e) {
+                        try {
+                            const matches = sliderMount.innerText.match(/(\d+\.\d+)/g);
+                            if (matches && matches.length >= 2) {
+                                const parsed = matches.map(Number).sort((a,b)=>a-b);
+                                minC = parsed[0]; maxC = parsed[parsed.length-1];
+                            }
+                        } catch(e2){}
+                    }
                 }
                 
                 if (sliderComp) sliderComp.$destroy();
@@ -1801,7 +1794,6 @@
         });
     }
 
-    // 等待使用者選擇
     let userChoice;
     try {
         userChoice = await showDownloadOptions();
@@ -1823,15 +1815,12 @@
         let res = await fetch('../data/idx.json');
         if(!res.ok) res = await fetch('/data/idx.json');
         if(res.ok) idxMap = await res.json();
-      } catch(err) {
-        console.warn("Failed to fetch idx.json", err);
-      }
+      } catch(err) {}
 
       const getJacketUrl = (title) => {
         const song = idxMap.find(s => s.title === title || Xe(s.title) === title || s.title === Xe(title));
         const imgFile = (song && song.image) ? song.image : "0000000000000000.jpg";
-        const officialUrl = "chunithm-net-eng.com/mobile/img/" + imgFile;
-        return "https://wsrv.nl/?url=" + officialUrl + "&w=200&v=" + Math.random();
+        return "https://wsrv.nl/?url=chunithm-net-eng.com/mobile/img/" + imgFile + "&w=200&v=" + Math.random();
       };
 
       const diffColors = { "ULT": "var(--theme-song-ult)", "MAS": "var(--theme-song-mas)", "EXP": "var(--theme-song-exp)", "ADV": "var(--theme-song-adv)", "BAS": "var(--theme-song-bas)" };
@@ -1868,6 +1857,8 @@
       const subRating = fullRatingStr.slice(-2);
       
       let ratingHtml = `<span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${mainRating}<span style="font-size:36px;">${subRating}</span></span>`;
+      
+      // 套用包含極、虹、白金、金的漸層色
       if (ratingValue >= 17) {
           ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.99));"><span style="background: linear-gradient(to bottom, #fff970 18%, #ff7c7c 30%, #ff898b 45%, #f602d9 58%, #496bff 65%, #03c4ff 72%, #01dc9b 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #fff970 18%, #ff7c7c 30%, #ff898b 45%, #f602d9 58%, #496bff 65%, #03c4ff 72%, #01dc9b 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
       } else if (ratingValue >= 16) {
@@ -1878,7 +1869,6 @@
           ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.99));"><span style="background: linear-gradient(to bottom, #f5a507 20%, #fae294 50%, #f2a900 55%, #fff262 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #f5a507 20%, #fae294 50%, #f2a900 55%, #fff262 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
       }
 
-      const genTimeStr = new Date().toLocaleString();
       let opString = stats?.overPower || '---';
       if (opString !== '---' && !opString.includes('%')) { opString += '%'; }
       
@@ -1887,11 +1877,8 @@
       if (profileNode && profileNode.style.background) {
           topBgStyle = `background: ${profileNode.style.background}; border: 3px solid transparent;`;
       }
-      const charImgFile = stats?.character || "5bde9b9f1846049c.png";
-      const charOfficialUrl = "chunithm-net-eng.com/mobile/img/" + charImgFile;
-      const charProxyUrl = "https://wsrv.nl/?url=" + charOfficialUrl;
+      const charProxyUrl = "https://wsrv.nl/?url=chunithm-net-eng.com/mobile/img/" + (stats?.character || "5bde9b9f1846049c.png");
 
-      // 通用渲染單首歌曲 Block
       function renderSongBlock(song, idx) {
         const ratValue = (song.rating / 100).toFixed(2);
         const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
@@ -1927,9 +1914,6 @@
         `;
       }
 
-      // ==========================================================
-      // Function 2: 產生 BEST30 + CURRENT20 HTML
-      // ==========================================================
       function getB50Html() {
           let chartHtml = '';
           if (bestRecords.length > 0) {
@@ -1939,16 +1923,15 @@
               let maxVal = validRatings.length > 0 ? Math.max(...validRatings) : 17;
               let minVal = validRatings.length > 0 ? Math.min(...validRatings) : 15;
               let stepUnit = 0.05;
-              let diff = maxVal - minVal;
-              if (diff > 2.0) stepUnit = 0.5;
-              else if (diff > 1.0) stepUnit = 0.2;
-              else if (diff > 0.45) stepUnit = 0.1;
-              else stepUnit = 0.05;
+              if (maxVal - minVal > 2.0) stepUnit = 0.5;
+              else if (maxVal - minVal > 1.0) stepUnit = 0.2;
+              else if (maxVal - minVal > 0.45) stepUnit = 0.1;
               let yMax = parseFloat((Math.ceil(Math.round(maxVal * 1000) / Math.round(stepUnit * 1000)) * stepUnit).toFixed(2));
               let yMin = parseFloat((Math.floor(Math.round(minVal * 1000) / Math.round(stepUnit * 1000)) * stepUnit).toFixed(2));
               if (yMax === yMin) { yMax += stepUnit; yMin -= stepUnit; }
               let steps = Math.round((yMax - yMin) / stepUnit);
               const avgPercent = Math.max(0, Math.min(100, ((parseFloat(b30Avg) - yMin) / (yMax - yMin)) * 100));
+              
               let gridLinesHtml = '';
               for(let i=0; i<=steps; i++) {
                   const val = yMin + stepUnit * i;
@@ -1967,10 +1950,7 @@
                       </div>
                   `;
               }).join('');
-              
-              const xAxisHtml = chartData.map((d, i) => `
-                  <div style="flex: 1; text-align: center; font-size: 12px; color: var(--theme-text-dim); margin-top: 6px; font-weight: bold;">${i + 1}</div>
-              `).join('');
+              const xAxisHtml = chartData.map((d, i) => `<div style="flex: 1; text-align: center; font-size: 12px; color: var(--theme-text-dim); margin-top: 6px; font-weight: bold;">${i + 1}</div>`).join('');
               
               chartHtml = `
               <div style="flex: none; height: 475px; width: 100%; box-sizing: border-box; background: #1e1e24; border: 2px solid #3e3e4a; border-radius: 0; padding: 25px 25px 15px 20px; display: flex; flex-direction: column; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
@@ -2002,7 +1982,6 @@
                 ${bestRecords.map((s, i) => renderSongBlock(s, i)).join('')}
               </div>
             </div>
-
             <div style="flex: none; width: 960px; min-width: 960px; display:flex; flex-direction:column; gap:25px;">
               <div style="flex: none; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
                 <div style="flex: none; display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
@@ -2019,9 +1998,6 @@
           `;
       }
 
-      // ==========================================================
-      // Function 3: 產生 特定定數全部歌曲 HTML
-      // ==========================================================
       function getConstHtml(minC, maxC) {
           const targetRecords = allRecords.filter(item => item.const >= minC && item.const <= maxC && item.score !== -1);
           const groups = {};
@@ -2030,7 +2006,6 @@
               if (!groups[cStr]) groups[cStr] = [];
               groups[cStr].push(s);
           });
-
           const sortedConsts = Object.keys(groups).sort((a,b) => parseFloat(b) - parseFloat(a));
           let groupsHtml = '';
 
@@ -2072,9 +2047,6 @@
           return `<div style="display:flex; flex-direction:column; position:relative; z-index:2;">${groupsHtml}</div>`;
       }
 
-      // ==========================================================
-      // 核心執行與圖片渲染
-      // ==========================================================
       let contentHtml = userChoice.mode === 'b50' ? getB50Html() : getConstHtml(userChoice.min, userChoice.max);
       
       let cWidth = userChoice.mode === 'b50' ? 2100 : 1975;
@@ -2082,7 +2054,6 @@
 
       const container = document.createElement("div");
       container.id = "copied-main";
-      // 背景色依照要求改為原本的 #1e1e24
       container.style.cssText = `position:absolute; top:0; left:0; z-index:-9999; width:${cWidth}px !important; min-width:${cWidth}px !important; max-width:none !important; box-sizing:border-box !important; background:#1e1e24; padding:45px; border-radius:0;`;
       
       container.innerHTML = `
@@ -2117,7 +2088,7 @@
         
         <div style="border-top:2px solid rgba(255,255,255,0.2); padding-top:20px; margin-top:30px; display:flex; justify-content:space-between; color:rgba(255,255,255,0.6); font-size:16px; position:relative; z-index:2; font-weight:bold;">
           <div>Generated by CHUNITHM Tools @TSAIBEE (https://chuni.tsaibee.org)<br>All copyrights of music jacket image on this site belong copyright holders.</div>
-          <div>Date: ${genTimeStr}</div>
+          <div>Date: ${new Date().toLocaleString()}</div>
         </div>
       `;
       
@@ -2140,12 +2111,11 @@
             reader.readAsDataURL(blob);
           });
         } catch(e) {
-          console.warn("Base64 convert failed for:", img.src);
+          console.warn("Base64 convert failed:", img.src);
         }
       }));
 
       loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);color:white;'>Generating Image...</div>";
-      // 依照要求恢復 #1e1e24 黑色底圖
       const blob = await pn(container, { backgroundColor: "#1e1e24", pixelRatio: 1 });
       container.remove();
       document.body.style.overflow = originalOverflow;
