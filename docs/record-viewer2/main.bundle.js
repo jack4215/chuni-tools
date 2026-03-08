@@ -1683,37 +1683,41 @@
       const mainEl = document.querySelector("main");
       if (null == mainEl) return alert(d(wt)("share.error", { error: "resultNode is null" }));
 
-      let userChoice;
-      try {
-          userChoice = await new Promise((resolve, reject) => {
+      function showDownloadOptions() {
+          return new Promise((resolve, reject) => {
               const overlay = document.createElement("div");
               overlay.id = "dl_overlay_modal";
               overlay.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.8);z-index:999999;display:flex;align-items:center;justify-content:center;font-family:'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif;";
+              
               const modal = document.createElement("div");
-              modal.style.cssText = "background:#2b2b33;padding:25px;border-radius:15px;box-shadow:0 4px 15px rgba(0,0,0,0.5);color:#fff;width:400px;display:flex;flex-direction:column;gap:15px;border:2px solid #3e3e4a;";
+              modal.style.cssText = "background:#2b2b33; border: 1px solid #3e3e4a; border-radius: 12px; width: 420px; color: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.6); overflow: hidden;";
               modal.innerHTML = `
-                  <h3 style="margin:0;text-align:center;font-size:1.5em;border-bottom:2px solid #3e3e4a;padding-bottom:10px;">選擇下載類型</h3>
-                  <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:1.1em;">
-                      <input type="radio" name="dl_mode" value="b50" checked>
-                      BEST 30 + CURRENT 20
-                  </label>
-                  <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:1.1em;">
-                      <input type="radio" name="dl_mode" value="const">
-                      特定定數全曲 (10曲一行)
-                  </label>
-                  <div id="const_filters" style="display:none;flex-direction:column;gap:10px;background:#1e1e24;padding:15px;border-radius:10px;border:1px solid #3e3e4a;">
-                      <div style="display:flex;justify-content:space-between;align-items:center;">
-                          <span>最小定數 (Min):</span>
-                          <input type="number" id="min_const" value="15.0" step="0.1" min="1.0" max="15.7" style="width:80px;padding:5px;border-radius:5px;background:#2b2b33;color:#fff;border:1px solid #3e3e4a;text-align:center;font-size:1em;">
-                      </div>
-                      <div style="display:flex;justify-content:space-between;align-items:center;">
-                          <span>最大定數 (Max):</span>
-                          <input type="number" id="max_const" value="15.4" step="0.1" min="1.0" max="15.7" style="width:80px;padding:5px;border-radius:5px;background:#2b2b33;color:#fff;border:1px solid #3e3e4a;text-align:center;font-size:1em;">
+                  <div style="background: rgba(255,255,255,0.05); padding: 15px 20px; font-size: 18px; font-weight: bold; border-bottom: 1px solid #3e3e4a;">
+                      下載圖片設定
+                  </div>
+                  <div style="padding: 20px; display: flex; flex-direction: column; gap: 20px;">
+                      <label style="display:flex; align-items:center; gap:12px; cursor: pointer; font-size: 16px;">
+                          <input type="radio" name="dl_mode" value="b50" checked style="width:18px; height:18px; accent-color: var(--theme-control, #00ccff);">
+                          BEST 30 + CURRENT 20
+                      </label>
+                      <label style="display:flex; align-items:center; gap:12px; cursor: pointer; font-size: 16px;">
+                          <input type="radio" name="dl_mode" value="const" style="width:18px; height:18px; accent-color: var(--theme-control, #00ccff);">
+                          特定定數全部歌曲 (10首一行)
+                      </label>
+                      <div id="const_filters" style="display:none; flex-direction:column; gap:15px; background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; border: 1px solid #3e3e4a;">
+                          <div style="display:flex; justify-content:space-between; align-items:center;">
+                              <span style="font-size: 15px;">最小定數 (Min):</span>
+                              <input type="number" id="min_const" value="15.0" step="0.1" min="1.0" max="15.7" style="width: 100px; padding: 6px 10px; background: #1e1e24; border: 1px solid #555; color: #fff; border-radius: 6px; font-size: 15px; text-align: center; outline: none;">
+                          </div>
+                          <div style="display:flex; justify-content:space-between; align-items:center;">
+                              <span style="font-size: 15px;">最大定數 (Max):</span>
+                              <input type="number" id="max_const" value="15.7" step="0.1" min="1.0" max="15.7" style="width: 100px; padding: 6px 10px; background: #1e1e24; border: 1px solid #555; color: #fff; border-radius: 6px; font-size: 15px; text-align: center; outline: none;">
+                          </div>
                       </div>
                   </div>
-                  <div style="display:flex;justify-content:flex-end;gap:10px;margin-top:10px;">
-                      <button id="dl_cancel" style="padding:8px 15px;border-radius:8px;border:none;background:#3e3e4a;color:#fff;cursor:pointer;font-weight:bold;">取消</button>
-                      <button id="dl_confirm" style="padding:8px 15px;border-radius:8px;border:none;background:var(--theme-control, #00ccff);color:var(--theme-text-control, #000);cursor:pointer;font-weight:bold;">產生圖片</button>
+                  <div style="display:flex; justify-content:flex-end; gap: 12px; padding: 15px 20px; background: rgba(0,0,0,0.15); border-top: 1px solid #3e3e4a;">
+                      <button id="dl_cancel" style="padding: 8px 16px; border-radius: 6px; border: none; background: #444; color: #fff; font-size: 14px; font-weight: bold; cursor: pointer; transition: 0.2s;">取消</button>
+                      <button id="dl_confirm" style="padding: 8px 16px; border-radius: 6px; border: none; background: var(--theme-control, #00ccff); color: var(--theme-text-control, #000); font-size: 14px; font-weight: bold; cursor: pointer; transition: 0.2s;">確認</button>
                   </div>
               `;
               overlay.appendChild(modal);
@@ -1740,16 +1744,23 @@
                   resolve({ mode, min, max });
               });
           });
+      }
+
+      let userChoice;
+      try {
+          userChoice = await showDownloadOptions();
       } catch (e) {
           if (e === 'cancelled') return;
           throw e;
       }
 
+      const originalOverflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
       const loading = document.createElement("div");
       loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);color:white;'>Preparing Data...</div>";
       loading.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:#a3ccf5;display:flex;align-items:center;justify-content:center;z-index:99999;font-weight:bold;text-align:center;font-size:1.2em;";
       document.body.appendChild(loading);
-      
+
       try {
         let idxMap = [];
         try {
@@ -1759,18 +1770,21 @@
         } catch(err) {
           console.warn("Failed to fetch idx.json", err);
         }
+
         const getJacketUrl = (title) => {
           const song = idxMap.find(s => s.title === title || Xe(s.title) === title || s.title === Xe(title));
           const imgFile = (song && song.image) ? song.image : "0000000000000000.jpg";
           const officialUrl = "chunithm-net-eng.com/mobile/img/" + imgFile;
           return "https://wsrv.nl/?url=" + officialUrl + "&w=200&v=" + Math.random();
         };
+
         const diffColors = { "ULT": "var(--theme-song-ult)", "MAS": "var(--theme-song-mas)", "EXP": "var(--theme-song-exp)", "ADV": "var(--theme-song-adv)", "BAS": "var(--theme-song-bas)" };
         const getClearLabel = (clr) => {
           if(clr === "AJ") return '<div style="color:#ffdf75;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">ALL JUSTICE</div>';
           if(clr === "FC") return '<div style="color:#a3ccf5;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">FULL COMBO</div>';
           return '';
         };
+
         const getRankColor = (rank) => {
           if(rank === "MAX") return "var(--theme-clear-ajc)";
           if(rank === "SSS+") return "#68fb60";
@@ -1784,13 +1798,49 @@
           if(rank === "A") return "#80d5ff";
           return "var(--theme-text-dim)";
         };
+
+        const renderSongBlock = (song, idx) => {
+          const ratValue = (song.rating / 100).toFixed(2);
+          const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
+          const diffColor = diffColors[song.difficulty] || "#fff";
+          const pcHtml = song.playCount ? `<div style="position:absolute; top:14px; left:0; background:rgba(0,0,0,0.75); padding:4px 7px; color:white; font-size:18px; font-weight:bold; letter-spacing:0.5px; line-height:1; z-index:2;">PC: ${song.playCount}</div>` : '';
+          return `
+          <div style="width:170px; background:${diffColor}; border-radius:0; padding:1px; box-sizing: border-box !important; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
+            <div style="background:var(--theme-bg-main); border-radius:0; display:flex; flex-direction:column; overflow:hidden; width:100%;">
+              <div style="display:flex; justify-content:space-between; align-items:center; height:28px; padding:0 10px; background:rgba(255,255,255,0.05); font-size:16px; font-weight:bold; color:var(--theme-text); box-sizing:border-box;">
+                <span style="line-height:1;">#${idx+1}</span>
+                <div style="display:flex; align-items:baseline; gap:5px; line-height:1;">
+                  <span style="color:var(--theme-text-dim); font-size:14px;">${constValue}</span>
+                  <span style="color:rgba(255,255,255,0.3); font-size:14px;">/</span>
+                  <span>${ratValue}</span>
+                </div>
+              </div>
+              <div style="position:relative; width:100%; aspect-ratio:1; background:#000;">
+                <img src="${getJacketUrl(song.title)}" style="display:block; width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
+                ${pcHtml}
+                <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.75); text-align:center; padding:8px 0; z-index:2;">
+                  ${getClearLabel(song.clear)}
+                  <div style="font-weight:bold; font-size:18px; color:white; line-height:1;">${song.score < 0 ? "-" : song.score.toLocaleString()} <span style="color:${getRankColor(song.rank)}; font-size:16px;">${song.rank}</span></div>
+                </div>
+              </div>
+              <div style="position:relative; height:38px; display:flex; align-items:center; justify-content:center; padding:0 8px; box-sizing:border-box; background:${diffColor};">
+                <div style="position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); z-index:1;"></div>
+                <div style="position:relative; z-index:2; font-size:15px; font-weight:bold; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2; font-family: 'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif;">
+                  ${song.title}
+                </div>
+              </div>
+            </div>
+          </div>
+          `;
+        };
+
         const stats = d(Ut);
         const allRecords = d(At);
         const bestRecords = allRecords.filter(item => (item.newV === 0 || (item.newV === 2 && item.difficulty !== "ULT")) && item.score !== -1).slice(0, 30);
         const newRecords = allRecords.filter(item => (item.newV === 1 || (item.newV === 2 && item.difficulty === "ULT")) && item.score !== -1).slice(0, 20);
         const b30Avg = Cr(qe(bestRecords.map(s => s.rating), 30) / 100, 4);
         const n20Avg = Cr(qe(newRecords.map(s => s.rating), 20) / 100, 4);
-        
+
         const fullRatingStr = Cr((qe(bestRecords.map(s => s.rating), 30) / 100) * 0.6 + (qe(newRecords.map(s => s.rating), 20) / 100) * 0.4, 4);
         const ratingValue = parseFloat(fullRatingStr);
         const mainRating = fullRatingStr.slice(0, -2);
@@ -1809,9 +1859,8 @@
 
         const genTimeStr = new Date().toLocaleString();
         let opString = stats?.overPower || '---';
-        if (opString !== '---' && !opString.includes('%')) {
-            opString += '%';
-        }
+        if (opString !== '---' && !opString.includes('%')) { opString += '%'; }
+        
         let topBgStyle = "background: #2b2b33; border: 2px solid #aaaaaa;";
         const profileNode = document.querySelector('.wrapper.svelte-1rv2o5c');
         if (profileNode && profileNode.style.background) {
@@ -1820,147 +1869,97 @@
         const charImgFile = stats?.character || "5bde9b9f1846049c.png";
         const charOfficialUrl = "chunithm-net-eng.com/mobile/img/" + charImgFile;
         const charProxyUrl = "https://wsrv.nl/?url=" + charOfficialUrl;
-        
-        let chartHtml = '';
-        if (bestRecords.length > 0) {
-            const chartData = bestRecords.map(s => ({ rating: s.rating / 100, rank: s.rank }));
-            while (chartData.length < 30) chartData.push({ rating: 0, rank: "" }); 
-            const validRatings = chartData.map(d => d.rating).filter(r => r > 0);
-            let maxVal = validRatings.length > 0 ? Math.max(...validRatings) : 17;
-            let minVal = validRatings.length > 0 ? Math.min(...validRatings) : 15;
-            let stepUnit = 0.05;
-            let diff = maxVal - minVal;
-            if (diff > 2.0) stepUnit = 0.5;
-            else if (diff > 1.0) stepUnit = 0.2;
-            else if (diff > 0.45) stepUnit = 0.1;
-            else stepUnit = 0.05;
-            let yMax = parseFloat((Math.ceil(Math.round(maxVal * 1000) / Math.round(stepUnit * 1000)) * stepUnit).toFixed(2));
-            let yMin = parseFloat((Math.floor(Math.round(minVal * 1000) / Math.round(stepUnit * 1000)) * stepUnit).toFixed(2));
-            if (yMax === yMin) {
-                yMax += stepUnit;
-                yMin -= stepUnit;
+
+        function getB50Html() {
+            let chartHtml = '';
+            if (bestRecords.length > 0) {
+                const chartData = bestRecords.map(s => ({ rating: s.rating / 100, rank: s.rank }));
+                while (chartData.length < 30) chartData.push({ rating: 0, rank: "" }); 
+                const validRatings = chartData.map(d => d.rating).filter(r => r > 0);
+                let maxVal = validRatings.length > 0 ? Math.max(...validRatings) : 17;
+                let minVal = validRatings.length > 0 ? Math.min(...validRatings) : 15;
+                let stepUnit = 0.05;
+                let diff = maxVal - minVal;
+                if (diff > 2.0) stepUnit = 0.5;
+                else if (diff > 1.0) stepUnit = 0.2;
+                else if (diff > 0.45) stepUnit = 0.1;
+                else stepUnit = 0.05;
+                let yMax = parseFloat((Math.ceil(Math.round(maxVal * 1000) / Math.round(stepUnit * 1000)) * stepUnit).toFixed(2));
+                let yMin = parseFloat((Math.floor(Math.round(minVal * 1000) / Math.round(stepUnit * 1000)) * stepUnit).toFixed(2));
+                if (yMax === yMin) { yMax += stepUnit; yMin -= stepUnit; }
+                let steps = Math.round((yMax - yMin) / stepUnit);
+                const avgPercent = Math.max(0, Math.min(100, ((parseFloat(b30Avg) - yMin) / (yMax - yMin)) * 100));
+                let gridLinesHtml = '';
+                for(let i=0; i<=steps; i++) {
+                    const val = yMin + stepUnit * i;
+                    const percent = (i / steps) * 100;
+                    gridLinesHtml += `
+                        <div style="position: absolute; left: 0; right: 0; bottom: ${percent}%; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 1;"></div>
+                        <div style="position: absolute; left: -42px; bottom: ${percent}%; transform: translateY(50%); font-size: 13px; color: var(--theme-text-dim); width: 36px; text-align: right;">${val.toFixed(2)}</div>
+                    `;
+                }  
+                const barsHtml = chartData.map((d, i) => {
+                    const h = d.rating > yMin ? ((d.rating - yMin) / (yMax - yMin)) * 100 : (d.rating > 0 ? 1 : 0);
+                    const bgColor = d.rank === "SSS+" ? "#856b10" : "var(--theme-control)";
+                    return `
+                        <div style="flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; z-index: 2;">
+                            <div style="width: 75%; height: ${Math.max(0, Math.min(100, h))}%; background: ${bgColor}; box-shadow: inset 0 0 5px rgba(0,0,0,0.2); border-radius: 0;"></div>
+                        </div>
+                    `;
+                }).join('');
+                
+                const xAxisHtml = chartData.map((d, i) => `
+                    <div style="flex: 1; text-align: center; font-size: 12px; color: var(--theme-text-dim); margin-top: 6px; font-weight: bold;">${i + 1}</div>
+                `).join('');
+                
+                chartHtml = `
+                <div style="flex: none; height: 475px; width: 100%; box-sizing: border-box; background: #1e1e24; border: 2px solid #3e3e4a; border-radius: 0; padding: 25px 25px 15px 20px; display: flex; flex-direction: column; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
+                    <div style="position: absolute; top: 15px; left: 20px; font-size: 18px; font-weight: bold; color: var(--theme-text-dim); letter-spacing: 1px;">BEST 30 RATING CHART</div>
+                    <div style="position: relative; flex-grow: 1; margin-top: 35px; margin-left: 40px; display: flex; align-items: flex-end;">
+                        ${gridLinesHtml}
+                        <div style="position: absolute; left: 0; right: 0; bottom: ${avgPercent}%; border-bottom: 2px solid #ff4b4b; z-index: 5;">
+                            <div style="position: absolute; right: 5px; bottom: 4px; color: #ff4b4b; font-size: 14px; font-weight: bold; background: #1e1e24; padding: 0 6px; border-radius: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">AVG: ${b30Avg}</div>
+                        </div>
+                        <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; align-items: flex-end; gap: 2px;">
+                            ${barsHtml}
+                        </div>
+                    </div>
+                    <div style="display: flex; margin-left: 40px; gap: 2px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 2px; z-index: 3;">
+                        ${xAxisHtml}
+                    </div>
+                </div>
+                `;
             }
-            let steps = Math.round((yMax - yMin) / stepUnit);
-            const avgPercent = Math.max(0, Math.min(100, ((parseFloat(b30Avg) - yMin) / (yMax - yMin)) * 100));
-            let gridLinesHtml = '';
-            for(let i=0; i<=steps; i++) {
-                const val = yMin + stepUnit * i;
-                const percent = (i / steps) * 100;
-                gridLinesHtml += `
-                    <div style="position: absolute; left: 0; right: 0; bottom: ${percent}%; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 1;"></div>
-                    <div style="position: absolute; left: -42px; bottom: ${percent}%; transform: translateY(50%); font-size: 13px; color: var(--theme-text-dim); width: 36px; text-align: right;">${val.toFixed(2)}</div>
-                `;
-            }  
-            const barsHtml = chartData.map((d, i) => {
-                const h = d.rating > yMin ? ((d.rating - yMin) / (yMax - yMin)) * 100 : (d.rating > 0 ? 1 : 0);
-                const bgColor = d.rank === "SSS+" ? "#856b10" : "var(--theme-control)";
-                return `
-                    <div style="flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; z-index: 2;">
-                        <div style="width: 75%; height: ${Math.max(0, Math.min(100, h))}%; background: ${bgColor}; box-shadow: inset 0 0 5px rgba(0,0,0,0.2); border-radius: 0;"></div>
-                    </div>
-                `;
-            }).join('');
-            
-            const xAxisHtml = chartData.map((d, i) => `
-                <div style="flex: 1; text-align: center; font-size: 12px; color: var(--theme-text-dim); margin-top: 6px; font-weight: bold;">${i + 1}</div>
-            `).join('');
-            chartHtml = `
-            <div style="flex: none; height: 475px; width: 100%; box-sizing: border-box; background: #1e1e24; border: 2px solid #3e3e4a; border-radius: 0; padding: 25px 25px 15px 20px; display: flex; flex-direction: column; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
-                <div style="position: absolute; top: 15px; left: 20px; font-size: 18px; font-weight: bold; color: var(--theme-text-dim); letter-spacing: 1px;">BEST 30 RATING CHART</div>
-                
-                <div style="position: relative; flex-grow: 1; margin-top: 35px; margin-left: 40px; display: flex; align-items: flex-end;">
-                    ${gridLinesHtml}
-                    <div style="position: absolute; left: 0; right: 0; bottom: ${avgPercent}%; border-bottom: 2px solid #ff4b4b; z-index: 5;">
-                        <div style="position: absolute; right: 5px; bottom: 4px; color: #ff4b4b; font-size: 14px; font-weight: bold; background: #1e1e24; padding: 0 6px; border-radius: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">AVG: ${b30Avg}</div>
-                    </div>
-                    <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; align-items: flex-end; gap: 2px;">
-                        ${barsHtml}
-                    </div>
+
+            return `
+            <div style="display:flex; gap:80px; align-items:flex-start; position:relative; z-index:2;">
+              <div style="flex: none; width: 960px; min-width: 960px; height: 1615px; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
+                <div style="flex: none; display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
+                  <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">BEST 30</h3>
+                  <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${b30Avg}</b></span>
                 </div>
-                
-                <div style="display: flex; margin-left: 40px; gap: 2px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 2px; z-index: 3;">
-                    ${xAxisHtml}
+                <div style="display:grid; grid-template-columns:repeat(5, 170px); gap:15px; align-content:start;">
+                  ${bestRecords.map((s, i) => renderSongBlock(s, i)).join('')}
                 </div>
+              </div>
+
+              <div style="flex: none; width: 960px; min-width: 960px; height: 1615px; display:flex; flex-direction:column; gap:25px;">
+                <div style="flex: none; height: 1115px; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
+                  <div style="flex: none; display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
+                    <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">CURRENT 20</h3>
+                    <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${n20Avg}</b></span>
+                  </div>
+                  <div style="display:grid; grid-template-columns:repeat(5, 170px); gap:15px; align-content:start;">
+                    ${newRecords.map((s, i) => renderSongBlock(s, i)).join('')}
+                  </div>
+                </div>
+                ${chartHtml}
+              </div>
             </div>
             `;
         }
-        
-        const renderSongBlock = (song, idx) => {
-          const ratValue = (song.rating / 100).toFixed(2);
-          const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
-          const diffColor = diffColors[song.difficulty] || "#fff";
-          const pcHtml = song.playCount ? `<div style="position:absolute; top:14px; left:0; background:rgba(0,0,0,0.75); padding:4px 7px; color:white; font-size:18px; font-weight:bold; letter-spacing:0.5px; line-height:1; z-index:2;">PC: ${song.playCount}</div>` : '';
-          return `
-          <div style="width:170px; background:${diffColor}; border-radius:0; padding:1px; box-sizing: border-box !important; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
-            <div style="background:var(--theme-bg-main); border-radius:0; display:flex; flex-direction:column; overflow:hidden; width:100%;">
-              <div style="display:flex; justify-content:space-between; align-items:center; height:28px; padding:0 10px; background:rgba(255,255,255,0.05); font-size:16px; font-weight:bold; color:var(--theme-text); box-sizing:border-box;">
-                <span style="line-height:1;">#${idx+1}</span>
-                <div style="display:flex; align-items:baseline; gap:5px; line-height:1;">
-                  <span style="color:var(--theme-text-dim); font-size:14px;">${constValue}</span>
-                  <span style="color:rgba(255,255,255,0.3); font-size:14px;">/</span>
-                  <span>${ratValue}</span>
-                </div>
-              </div>
 
-              <div style="position:relative; width:100%; aspect-ratio:1; background:#000;">
-                <img src="${getJacketUrl(song.title)}" style="display:block; width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
-                
-                ${pcHtml}
-
-                <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.75); text-align:center; padding:8px 0; z-index:2;">
-                  ${getClearLabel(song.clear)}
-                  <div style="font-weight:bold; font-size:18px; color:white; line-height:1;">${song.score < 0 ? "-" : song.score.toLocaleString()} <span style="color:${getRankColor(song.rank)}; font-size:16px;">${song.rank}</span></div>
-                </div>
-              </div>
-
-              <div style="position:relative; height:38px; display:flex; align-items:center; justify-content:center; padding:0 8px; box-sizing:border-box; background:${diffColor};">
-                <div style="position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); z-index:1;"></div>
-                <div style="position:relative; z-index:2; font-size:15px; font-weight:bold; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2; font-family: 'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif;">
-                  ${song.title}
-                </div>
-              </div>
-
-            </div>
-          </div>
-          `;
-        };
-
-        const container = document.createElement("div");
-        container.id = "copied-main";
-        const cWidth = userChoice.mode === 'b50' ? 2100 : 1950;
-        container.style.cssText = `position:absolute; top:0; left:0; z-index:-9999; width:${cWidth}px !important; min-width:${cWidth}px !important; max-width:none !important; box-sizing:border-box !important; background:#a3ccf5; padding:45px; border-radius:0;`;
-
-        let contentHtml = '';
-        if (userChoice.mode === 'b50') {
-            contentHtml = `
-              <div style="display:flex; gap:80px; align-items:flex-start; position:relative; z-index:2;">
-                <div style="flex: none; width: 960px; min-width: 960px; height: 1615px; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
-                  <div style="flex: none; display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
-                    <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">BEST 30</h3>
-                    <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${b30Avg}</b></span>
-                  </div>
-                  <div style="display:grid; grid-template-columns:repeat(5, 170px); gap:15px; align-content:start;">
-                    ${bestRecords.map((s, i) => renderSongBlock(s, i)).join('')}
-                  </div>
-                </div>
-
-                <div style="flex: none; width: 960px; min-width: 960px; height: 1615px; display:flex; flex-direction:column; gap:25px;">
-                  <div style="flex: none; height: 1115px; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
-                    <div style="flex: none; display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
-                      <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">CURRENT 20</h3>
-                      <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${n20Avg}</b></span>
-                    </div>
-                    <div style="display:grid; grid-template-columns:repeat(5, 170px); gap:15px; align-content:start;">
-                      ${newRecords.map((s, i) => renderSongBlock(s, i)).join('')}
-                    </div>
-                  </div>
-                  ${chartHtml}
-                </div>
-              </div>
-            `;
-        } else {
-            const minC = userChoice.min;
-            const maxC = userChoice.max;
+        function getConstHtml(minC, maxC) {
             const targetRecords = allRecords.filter(item => item.const >= minC && item.const <= maxC && item.score !== -1);
             const groups = {};
             targetRecords.forEach(s => {
@@ -1979,34 +1978,45 @@
                 let total = songs.length;
                 let countSssPlus = songs.filter(s => s.score >= 1009000).length;
                 let countSss = songs.filter(s => s.score >= 1007500 && s.score < 1009000).length;
-                let countSsPlus = songs.filter(s => s.score >= 1005000 && s.score < 1007500).length;
-                let countSs = songs.filter(s => s.score >= 1000000 && s.score < 1005000).length;
                 let countAJ = songs.filter(s => s.clear === 'AJ').length;
                 let countFC = songs.filter(s => s.clear === 'FC').length;
 
-                let header = `
-                <div style="display:flex; align-items:flex-end; gap: 20px; margin-bottom: 15px; padding-bottom: 5px; border-bottom: 3px solid rgba(255,255,255,0.2);">
-                    <span style="font-size: 40px; font-weight: bold; color: #fff; line-height: 1;">${c}</span>
-                    <div style="display:flex; gap: 15px; font-size: 20px; color: #ddd; margin-bottom: 4px; font-weight: bold;">
-                        <div><span style="color:#68fb60">SSS+</span> ${countSssPlus}/${total}</div><span style="color:rgba(255,255,255,0.4)">|</span>
-                        <div><span style="color:#ffd744">SSS</span> ${countSss}/${total}</div><span style="color:rgba(255,255,255,0.4)">|</span>
-                        <div><span style="color:#ffe277">SS+</span> ${countSsPlus}/${total}</div><span style="color:rgba(255,255,255,0.4)">|</span>
-                        <div><span style="color:#ffedaa">SS</span> ${countSs}/${total}</div><span style="color:rgba(255,255,255,0.4)">|</span>
-                        <div><span style="color:#ffdf75">AJ</span> ${countAJ}/${total}</div><span style="color:rgba(255,255,255,0.4)">|</span>
-                        <div><span style="color:#a3ccf5">FC</span> ${countFC}/${total}</div>
+                let gridHtml = `<div style="display:grid; grid-template-columns:repeat(10, 170px); gap:15px; align-content:start;">`;
+                gridHtml += songs.map((s, idx) => renderSongBlock(s, idx)).join('');
+                gridHtml += `</div>`;
+
+                groupsHtml += `
+                <div style="flex: none; width: 1885px; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3); margin-bottom: 40px;">
+                  <div style="flex: none; display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
+                    <div style="display:flex; align-items:baseline; gap: 20px;">
+                        <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">LEVEL ${c}</h3>
+                        <div style="display:flex; gap: 15px; font-size: 16px; color: var(--theme-text-dim); font-weight: bold;">
+                            <span><span style="color:#68fb60">SSS+</span> ${countSssPlus}</span>
+                            <span><span style="color:#ffd744">SSS</span> ${countSss}</span>
+                            <span><span style="color:#ffdf75">AJ</span> ${countAJ}</span>
+                            <span><span style="color:#a3ccf5">FC</span> ${countFC}</span>
+                        </div>
                     </div>
+                    <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Total: <b style="color:var(--theme-text); font-size:28px;">${total}</b></span>
+                  </div>
+                  ${gridHtml}
                 </div>
                 `;
-
-                let grid = `<div style="display:grid; grid-template-columns:repeat(10, 170px); gap:15px; align-content:start;">`;
-                grid += songs.map((s, idx) => renderSongBlock(s, idx)).join('');
-                grid += `</div>`;
-
-                groupsHtml += `<div style="margin-bottom: 40px;">${header}${grid}</div>`;
             }
-            contentHtml = `<div style="display:flex; flex-direction:column; gap:0; position:relative; z-index:2; width: 100%; background: rgba(0,0,0,0.6); padding: 30px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.5);">${groupsHtml}</div>`;
+            if(groupsHtml === '') {
+                groupsHtml = `<div style="font-size: 24px; color: #1e1e24; margin-top: 50px; font-weight:bold;">該定數範圍內沒有成績紀錄</div>`;
+            }
+            return `<div style="display:flex; flex-direction:column; position:relative; z-index:2;">${groupsHtml}</div>`;
         }
 
+        let contentHtml = userChoice.mode === 'b50' ? getB50Html() : getConstHtml(userChoice.min, userChoice.max);
+        
+        let cWidth = userChoice.mode === 'b50' ? 2100 : 1975;
+        const filename = userChoice.mode === 'b50' ? "chunithm_b50.jpg" : "chunithm_const.jpg";
+
+        const container = document.createElement("div");
+        container.id = "copied-main";
+        container.style.cssText = `position:absolute; top:0; left:0; z-index:-9999; width:${cWidth}px !important; min-width:${cWidth}px !important; max-width:none !important; box-sizing:border-box !important; background:#a3ccf5; padding:45px; border-radius:0;`;
         container.innerHTML = `
           <div style="position:absolute; right:0; top:0; height:650px; z-index:0; pointer-events:none;">
             <div style="display:inline-block; height:100%; -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);">
@@ -2018,13 +2028,10 @@
 
           <div style="display:flex; align-items:center; gap:50px; margin-bottom:35px; position:relative; z-index:2;">
             <img src="/data/crossverse.png" style="height:120px; object-fit:contain;" crossorigin="anonymous">
-            
-            <div style="flex: 1; display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4); box-sizing:border-box; position:relative;">
-              
+            <div style="flex: none; width: ${userChoice.mode === 'b50' ? '1100px' : '1000px'}; display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4); box-sizing:border-box; position:relative;">
               <div style="display:flex; align-items:baseline; gap:20px; position:relative; z-index:1;">
                 <span style="font-size:52px; font-weight:bold; color:#fff; letter-spacing:2px; text-shadow:0 2px 4px rgba(0,0,0,0.7); font-family: 'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif; white-space: nowrap;">${stats?.name || 'Player'}</span>
               </div>
-              
               <div style="display:flex; align-items:baseline; gap:50px; position:relative; z-index:1;">
                 <div style="display:flex; align-items:baseline; gap:15px;">
                   <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">Rating</span>
@@ -2046,10 +2053,8 @@
           </div>
         `;
         
-        const originalOverflow = document.body.style.overflow;
-        document.body.style.overflow = "hidden";
         document.body.appendChild(container);
-        loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);color:white;'>Please wait...</div>"; 
+
         const imgs = container.querySelectorAll("img");
         await Promise.all([...imgs].map(async (img) => {
           try {
@@ -2076,12 +2081,12 @@
         container.remove();
         document.body.style.overflow = originalOverflow;
         loading.remove();
-        const hn = userChoice.mode === 'b50' ? "chunithm_b50.jpg" : "chunithm_const.jpg";
+        
         if (blob) {
           const url = window.URL.createObjectURL(blob);
           const a = document.createElement("a");
           a.href = url;
-          a.download = hn;
+          a.download = filename;
           a.click();
           setTimeout(() => window.URL.revokeObjectURL(url), 1000);
         } else {
@@ -2090,7 +2095,8 @@
       } catch (err) {
         if(document.getElementById("copied-main")) document.getElementById("copied-main").remove();
         document.body.style.overflow = "";
-        loading.remove();
+        const loader = document.getElementById("dl_overlay_modal");
+        if(loader) loader.remove();
         alert("Error during image generation:\n" + err);
       }
     }
