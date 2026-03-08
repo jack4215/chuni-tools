@@ -1687,39 +1687,46 @@
           return new Promise((resolve, reject) => {
               const overlay = document.createElement("div");
               overlay.id = "dl_overlay_modal";
-              overlay.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.8);z-index:999999;display:flex;align-items:center;justify-content:center;font-family:'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif;";
+              overlay.className = "wrapper svelte-iga5r4";
+              
+              const bg = document.createElement("div");
+              bg.className = "modal-bg svelte-iga5r4";
               
               const modal = document.createElement("div");
-              modal.style.cssText = "background:#2b2b33; border: 1px solid #3e3e4a; border-radius: 12px; width: 420px; color: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.6); overflow: hidden;";
+              modal.className = "modal svelte-iga5r4";
+              
               modal.innerHTML = `
-                  <div style="background: rgba(255,255,255,0.05); padding: 15px 20px; font-size: 18px; font-weight: bold; border-bottom: 1px solid #3e3e4a;">
-                      下載圖片設定
-                  </div>
-                  <div style="padding: 20px; display: flex; flex-direction: column; gap: 20px;">
-                      <label style="display:flex; align-items:center; gap:12px; cursor: pointer; font-size: 16px;">
-                          <input type="radio" name="dl_mode" value="b50" checked style="width:18px; height:18px; accent-color: var(--theme-control, #00ccff);">
-                          BEST 30 + CURRENT 20
-                      </label>
-                      <label style="display:flex; align-items:center; gap:12px; cursor: pointer; font-size: 16px;">
-                          <input type="radio" name="dl_mode" value="const" style="width:18px; height:18px; accent-color: var(--theme-control, #00ccff);">
-                          特定定數全部歌曲 (10首一行)
-                      </label>
-                      <div id="const_filters" style="display:none; flex-direction:column; gap:15px; background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; border: 1px solid #3e3e4a;">
-                          <div style="display:flex; justify-content:space-between; align-items:center;">
-                              <span style="font-size: 15px;">最小定數 (Min):</span>
-                              <input type="number" id="min_const" value="15.0" step="0.1" min="1.0" max="15.7" style="width: 100px; padding: 6px 10px; background: #1e1e24; border: 1px solid #555; color: #fff; border-radius: 6px; font-size: 15px; text-align: center; outline: none;">
-                          </div>
-                          <div style="display:flex; justify-content:space-between; align-items:center;">
-                              <span style="font-size: 15px;">最大定數 (Max):</span>
-                              <input type="number" id="max_const" value="15.7" step="0.1" min="1.0" max="15.7" style="width: 100px; padding: 6px 10px; background: #1e1e24; border: 1px solid #555; color: #fff; border-radius: 6px; font-size: 15px; text-align: center; outline: none;">
-                          </div>
+                  <button type="button" class="close-btn svelte-iga5r4" id="dl_close">✕</button>
+                  <h3 style="margin:0; margin-bottom: 1rem;">下載圖片設定</h3>
+                  <h4 class="svelte-iga5r4">選擇類型</h4>
+                  
+                  <label class="svelte-9ola9o" style="display:flex; flex-direction:row; align-items:center; gap: 10px; cursor: pointer; padding: 0.5rem 0;">
+                      <input type="radio" name="dl_mode" value="b50" checked style="width: 18px; height: 18px; accent-color: var(--theme-control);"> 
+                      <span>BEST 30 + CURRENT 20</span>
+                  </label>
+                  <label class="svelte-9ola9o" style="display:flex; flex-direction:row; align-items:center; gap: 10px; cursor: pointer; padding: 0.5rem 0;">
+                      <input type="radio" name="dl_mode" value="const" style="width: 18px; height: 18px; accent-color: var(--theme-control);"> 
+                      <span>特定定數全部歌曲 (10首一行)</span>
+                  </label>
+
+                  <div id="const_filters" style="display:none; flex-direction:column; gap:10px;">
+                      <hr class="svelte-iga5r4" style="margin: 1rem auto;">
+                      <h4 class="svelte-iga5r4">定數範圍</h4>
+                      <div class="wrapper svelte-1lhvhf8" style="padding:0;">
+                          <span style="color:var(--theme-text-dim); flex-grow: 1;">最小 (Min):</span>
+                          <input type="number" id="min_const" class="svelte-1lhvhf8" value="15.0" step="0.1" min="1.0" max="15.7" style="text-align:center;">
+                      </div>
+                      <div class="wrapper svelte-1lhvhf8" style="padding:0;">
+                          <span style="color:var(--theme-text-dim); flex-grow: 1;">最大 (Max):</span>
+                          <input type="number" id="max_const" class="svelte-1lhvhf8" value="15.7" step="0.1" min="1.0" max="15.7" style="text-align:center;">
                       </div>
                   </div>
-                  <div style="display:flex; justify-content:flex-end; gap: 12px; padding: 15px 20px; background: rgba(0,0,0,0.15); border-top: 1px solid #3e3e4a;">
-                      <button id="dl_cancel" style="padding: 8px 16px; border-radius: 6px; border: none; background: #444; color: #fff; font-size: 14px; font-weight: bold; cursor: pointer; transition: 0.2s;">取消</button>
-                      <button id="dl_confirm" style="padding: 8px 16px; border-radius: 6px; border: none; background: var(--theme-control, #00ccff); color: var(--theme-text-control, #000); font-size: 14px; font-weight: bold; cursor: pointer; transition: 0.2s;">確認</button>
-                  </div>
+
+                  <hr class="svelte-iga5r4" style="margin: 1.5rem auto;">
+                  <button type="button" class="reset-btn svelte-iga5r4" id="dl_confirm" style="background-color: var(--theme-control); color: var(--theme-text-control); font-weight: bold; width: 100%;">產生圖片</button>
               `;
+              
+              overlay.appendChild(bg);
               overlay.appendChild(modal);
               document.body.appendChild(overlay);
 
@@ -1731,7 +1738,12 @@
                   });
               });
 
-              modal.querySelector('#dl_cancel').addEventListener('click', () => {
+              modal.querySelector('#dl_close').addEventListener('click', () => {
+                  document.body.removeChild(overlay);
+                  reject('cancelled');
+              });
+
+              bg.addEventListener('click', () => {
                   document.body.removeChild(overlay);
                   reject('cancelled');
               });
@@ -1799,41 +1811,6 @@
           return "var(--theme-text-dim)";
         };
 
-        const renderSongBlock = (song, idx) => {
-          const ratValue = (song.rating / 100).toFixed(2);
-          const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
-          const diffColor = diffColors[song.difficulty] || "#fff";
-          const pcHtml = song.playCount ? `<div style="position:absolute; top:14px; left:0; background:rgba(0,0,0,0.75); padding:4px 7px; color:white; font-size:18px; font-weight:bold; letter-spacing:0.5px; line-height:1; z-index:2;">PC: ${song.playCount}</div>` : '';
-          return `
-          <div style="width:170px; background:${diffColor}; border-radius:0; padding:1px; box-sizing: border-box !important; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
-            <div style="background:var(--theme-bg-main); border-radius:0; display:flex; flex-direction:column; overflow:hidden; width:100%;">
-              <div style="display:flex; justify-content:space-between; align-items:center; height:28px; padding:0 10px; background:rgba(255,255,255,0.05); font-size:16px; font-weight:bold; color:var(--theme-text); box-sizing:border-box;">
-                <span style="line-height:1;">#${idx+1}</span>
-                <div style="display:flex; align-items:baseline; gap:5px; line-height:1;">
-                  <span style="color:var(--theme-text-dim); font-size:14px;">${constValue}</span>
-                  <span style="color:rgba(255,255,255,0.3); font-size:14px;">/</span>
-                  <span>${ratValue}</span>
-                </div>
-              </div>
-              <div style="position:relative; width:100%; aspect-ratio:1; background:#000;">
-                <img src="${getJacketUrl(song.title)}" style="display:block; width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
-                ${pcHtml}
-                <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.75); text-align:center; padding:8px 0; z-index:2;">
-                  ${getClearLabel(song.clear)}
-                  <div style="font-weight:bold; font-size:18px; color:white; line-height:1;">${song.score < 0 ? "-" : song.score.toLocaleString()} <span style="color:${getRankColor(song.rank)}; font-size:16px;">${song.rank}</span></div>
-                </div>
-              </div>
-              <div style="position:relative; height:38px; display:flex; align-items:center; justify-content:center; padding:0 8px; box-sizing:border-box; background:${diffColor};">
-                <div style="position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); z-index:1;"></div>
-                <div style="position:relative; z-index:2; font-size:15px; font-weight:bold; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2; font-family: 'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif;">
-                  ${song.title}
-                </div>
-              </div>
-            </div>
-          </div>
-          `;
-        };
-
         const stats = d(Ut);
         const allRecords = d(At);
         const bestRecords = allRecords.filter(item => (item.newV === 0 || (item.newV === 2 && item.difficulty !== "ULT")) && item.score !== -1).slice(0, 30);
@@ -1869,6 +1846,41 @@
         const charImgFile = stats?.character || "5bde9b9f1846049c.png";
         const charOfficialUrl = "chunithm-net-eng.com/mobile/img/" + charImgFile;
         const charProxyUrl = "https://wsrv.nl/?url=" + charOfficialUrl;
+
+        function renderSongBlock(song, idx) {
+          const ratValue = (song.rating / 100).toFixed(2);
+          const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
+          const diffColor = diffColors[song.difficulty] || "#fff";
+          const pcHtml = song.playCount ? `<div style="position:absolute; top:14px; left:0; background:rgba(0,0,0,0.75); padding:4px 7px; color:white; font-size:18px; font-weight:bold; letter-spacing:0.5px; line-height:1; z-index:2;">PC: ${song.playCount}</div>` : '';
+          return `
+          <div style="width:170px; background:${diffColor}; border-radius:0; padding:1px; box-sizing: border-box !important; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
+            <div style="background:var(--theme-bg-main); border-radius:0; display:flex; flex-direction:column; overflow:hidden; width:100%;">
+              <div style="display:flex; justify-content:space-between; align-items:center; height:28px; padding:0 10px; background:rgba(255,255,255,0.05); font-size:16px; font-weight:bold; color:var(--theme-text); box-sizing:border-box;">
+                <span style="line-height:1;">#${idx+1}</span>
+                <div style="display:flex; align-items:baseline; gap:5px; line-height:1;">
+                  <span style="color:var(--theme-text-dim); font-size:14px;">${constValue}</span>
+                  <span style="color:rgba(255,255,255,0.3); font-size:14px;">/</span>
+                  <span>${ratValue}</span>
+                </div>
+              </div>
+              <div style="position:relative; width:100%; aspect-ratio:1; background:#000;">
+                <img src="${getJacketUrl(song.title)}" style="display:block; width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
+                ${pcHtml}
+                <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.75); text-align:center; padding:8px 0; z-index:2;">
+                  ${getClearLabel(song.clear)}
+                  <div style="font-weight:bold; font-size:18px; color:white; line-height:1;">${song.score < 0 ? "-" : song.score.toLocaleString()} <span style="color:${getRankColor(song.rank)}; font-size:16px;">${song.rank}</span></div>
+                </div>
+              </div>
+              <div style="position:relative; height:38px; display:flex; align-items:center; justify-content:center; padding:0 8px; box-sizing:border-box; background:${diffColor};">
+                <div style="position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); z-index:1;"></div>
+                <div style="position:relative; z-index:2; font-size:15px; font-weight:bold; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2; font-family: 'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif;">
+                  ${song.title}
+                </div>
+              </div>
+            </div>
+          </div>
+          `;
+        }
 
         function getB50Html() {
             let chartHtml = '';
@@ -1933,7 +1945,7 @@
 
             return `
             <div style="display:flex; gap:80px; align-items:flex-start; position:relative; z-index:2;">
-              <div style="flex: none; width: 960px; min-width: 960px; height: 1615px; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
+              <div style="flex: none; width: 960px; min-width: 960px; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
                 <div style="flex: none; display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
                   <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">BEST 30</h3>
                   <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${b30Avg}</b></span>
@@ -1943,8 +1955,8 @@
                 </div>
               </div>
 
-              <div style="flex: none; width: 960px; min-width: 960px; height: 1615px; display:flex; flex-direction:column; gap:25px;">
-                <div style="flex: none; height: 1115px; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
+              <div style="flex: none; width: 960px; min-width: 960px; display:flex; flex-direction:column; gap:25px;">
+                <div style="flex: none; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
                   <div style="flex: none; display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
                     <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">CURRENT 20</h3>
                     <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Average: <b style="color:var(--theme-text); font-size:28px;">${n20Avg}</b></span>
@@ -1986,7 +1998,7 @@
                 gridHtml += `</div>`;
 
                 groupsHtml += `
-                <div style="flex: none; width: 1885px; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3); margin-bottom: 40px;">
+                <div style="flex: none; width: 1885px; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3); margin-bottom: 25px;">
                   <div style="flex: none; display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
                     <div style="display:flex; align-items:baseline; gap: 20px;">
                         <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">LEVEL ${c}</h3>
@@ -2004,7 +2016,7 @@
                 `;
             }
             if(groupsHtml === '') {
-                groupsHtml = `<div style="font-size: 24px; color: #1e1e24; margin-top: 50px; font-weight:bold;">該定數範圍內沒有成績紀錄</div>`;
+                groupsHtml = `<div style="font-size: 24px; color: var(--theme-text-dim); margin-top: 50px; font-weight:bold;">該定數範圍內沒有成績紀錄</div>`;
             }
             return `<div style="display:flex; flex-direction:column; position:relative; z-index:2;">${groupsHtml}</div>`;
         }
@@ -2017,6 +2029,7 @@
         const container = document.createElement("div");
         container.id = "copied-main";
         container.style.cssText = `position:absolute; top:0; left:0; z-index:-9999; width:${cWidth}px !important; min-width:${cWidth}px !important; max-width:none !important; box-sizing:border-box !important; background:#a3ccf5; padding:45px; border-radius:0;`;
+        
         container.innerHTML = `
           <div style="position:absolute; right:0; top:0; height:650px; z-index:0; pointer-events:none;">
             <div style="display:inline-block; height:100%; -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);">
