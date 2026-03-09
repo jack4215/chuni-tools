@@ -14292,6 +14292,51 @@
     "release": 21,
     "newV": 1
   },
+  "無敵的ハピネス！(SOS団5人Ver.)": {
+    "BAS": 3,
+    "ADV": 7,
+    "EXP": 10.7,
+    "MAS": 13.2,
+    "genre": 0,
+    "release": 21,
+    "newV": 1
+  },
+  "Chasing destiny": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 10.5,
+    "MAS": 14.1,
+    "genre": 0,
+    "release": 21,
+    "newV": 1
+  },
+  "Colorful Starting Line": {
+    "BAS": 3,
+    "ADV": 5,
+    "EXP": 9,
+    "MAS": 13.1,
+    "genre": 0,
+    "release": 21,
+    "newV": 1
+  },
+  "Future Refrain": {
+    "BAS": 2,
+    "ADV": 5,
+    "EXP": 10.9,
+    "MAS": 13.7,
+    "genre": 7,
+    "release": 21,
+    "newV": 1
+  },
+  "THE TRiANGLE": {
+    "BAS": 5,
+    "ADV": 8,
+    "EXP": 13.3,
+    "MAS": 15,
+    "genre": 9,
+    "release": 21,
+    "newV": 1
+  },
   "Verse X": {
     "BAS": 6,
     "ADV": 11.7,

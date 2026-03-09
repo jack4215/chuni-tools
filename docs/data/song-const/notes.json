@@ -9669,15 +9669,45 @@
     "EXP": 1215,
     "MAS": 1710
   },
+  "無敵的ハピネス！(SOS団5人Ver.)": {
+    "BAS": 539,
+    "ADV": 948,
+    "EXP": 1245,
+    "MAS": 1527
+  },
+  "Chasing destiny": {
+    "BAS": 706,
+    "ADV": 1109,
+    "EXP": 1548,
+    "MAS": 2118
+  },
+  "Colorful Starting Line": {
+    "BAS": 560,
+    "ADV": 947,
+    "EXP": 1208,
+    "MAS": 1676
+  },
+  "Future Refrain": {
+    "BAS": 422,
+    "ADV": 697,
+    "EXP": 1183,
+    "MAS": 1519
+  },
+  "THE TRiANGLE": {
+    "BAS": 763,
+    "ADV": 1161,
+    "EXP": 1919,
+    "MAS": 2709
+  },
   "Verse X": {
-    "BAS": 0,
-    "ADV": 0,
+    "BAS": 808,
+    "ADV": 1256,
     "EXP": 2421,
     "MAS": 3210
   },
   "DOMiNUS_GRAiL": {
-    "BAS": 0,
-    "ADV": 0,
+    "BAS": 810,
+    "ADV": 1315,
     "EXP": 2084,
     "MAS": 3090
   }
