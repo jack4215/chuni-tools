@@ -2247,8 +2247,8 @@
         p = d;
       function snap(v) {
         if (v === null || isNaN(v)) return 0;
-        if (v <= 7.25) return Math.round(v);
-        if (v <= 10.25) return Math.round(v * 2) / 2;
+        if (v < 7) return Math.round(v);
+        if (v < 10) return Math.round(v * 2) / 2;
         return Math.round(v * 10) / 10;
       }
       function handleNumberStep(oldV, newV) {
