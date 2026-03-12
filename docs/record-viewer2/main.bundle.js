@@ -1838,7 +1838,6 @@
             chartHtml = `
             <div style="flex: none; height: 475px; width: 100%; box-sizing: border-box; background: #1e1e24; border: 2px solid #3e3e4a; border-radius: 0; padding: 25px 25px 15px 20px; display: flex; flex-direction: column; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
                 <div style="position: absolute; top: 15px; left: 20px; font-size: 18px; font-weight: bold; color: var(--theme-text-dim); letter-spacing: 1px;">BEST 30 RATING CHART</div>
-                
                 <div style="position: relative; flex-grow: 1; margin-top: 35px; margin-left: 40px; display: flex; align-items: flex-end;">
                     ${gridLinesHtml}
                     <div style="position: absolute; left: 0; right: 0; bottom: ${avgPercent}%; border-bottom: 2px solid #ff4b4b; z-index: 5;">
@@ -1848,7 +1847,6 @@
                         ${barsHtml}
                     </div>
                 </div>
-                
                 <div style="display: flex; margin-left: 40px; gap: 2px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 2px; z-index: 3;">
                     ${xAxisHtml}
                 </div>
@@ -1904,13 +1902,10 @@
 
           <div style="display:flex; align-items:center; gap:50px; margin-bottom:35px; position:relative; z-index:2;">
             <img src="/data/crossverse.png" style="height:120px; object-fit:contain;" crossorigin="anonymous">
-            
             <div style="flex: none; width: 1120px; display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4); box-sizing:border-box; position:relative;">
-              
               <div style="display:flex; align-items:baseline; gap:20px; position:relative; z-index:1;">
                 <span style="font-size:52px; font-weight:bold; color:#fff; letter-spacing:2px; text-shadow:0 2px 4px rgba(0,0,0,0.7); font-family: 'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif; white-space: nowrap;">${stats?.name || 'Player'}</span>
               </div>
-              
               <div style="display:flex; align-items:baseline; gap:50px; position:relative; z-index:1;">
                 <div style="display:flex; align-items:baseline; gap:15px;">
                   <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">Rating</span>
@@ -1925,7 +1920,6 @@
           </div>
 
           <div style="display:flex; gap:80px; align-items:flex-start; position:relative; z-index:2;">
-            
             <div style="flex: none; width: 960px; min-width: 960px; height: 1615px; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
               <div style="flex: none; display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
                 <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">BEST 30</h3>
@@ -1937,7 +1931,6 @@
             </div>
 
             <div style="flex: none; width: 960px; min-width: 960px; height: 1615px; display:flex; flex-direction:column; gap:25px;">
-              
               <div style="flex: none; height: 1115px; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
                 <div style="flex: none; display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
                   <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">CURRENT 20</h3>
@@ -1947,9 +1940,7 @@
                   ${newRecords.map((s, i) => renderSongBlock(s, i)).join('')}
                 </div>
               </div>
-              
               ${chartHtml}
-
             </div>
           </div>
           
@@ -1985,19 +1976,15 @@
         }));
 
         loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>" + d(wt)("share.loading.generating") + "</div>";
-        
         let rawBlob = await pn(container, { backgroundColor: "#1e1e24", pixelRatio: 1 });
-        
         if (rawBlob) {
             loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>" + d(wt)("share.loading.compressing") + "</div>";
-            
             const img = new Image();
             img.src = URL.createObjectURL(rawBlob);
             await new Promise((resolve, reject) => {
                 img.onload = resolve;
                 img.onerror = reject;
             });
-
             const cvs = document.createElement("canvas");
             cvs.width = img.width;
             cvs.height = img.height;
@@ -2189,7 +2176,6 @@
         const container = document.createElement("div");
         container.id = "copied-main";
         container.style.cssText = `position:absolute; top:0; left:0; z-index:-9999; width:${cWidth}px !important; min-width:${cWidth}px !important; max-width:none !important; box-sizing:border-box !important; background:#1e1e24; padding:45px; border-radius:0;`;
-        
         container.innerHTML = `
           <div style="position:absolute; right:0; top:0; height:650px; z-index:0; pointer-events:none;">
             <div style="display:inline-block; height:100%; -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);">
@@ -2201,7 +2187,6 @@
 
           <div style="display:flex; align-items:center; gap:50px; margin-bottom:35px; position:relative; z-index:2;">
             <img src="/data/crossverse.png" style="height:120px; object-fit:contain;" crossorigin="anonymous">
-            
             <div style="flex: none; width: 1120px; display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4); box-sizing:border-box; position:relative;">
               <div style="display:flex; align-items:baseline; gap:20px; position:relative; z-index:1;">
                 <span style="font-size:52px; font-weight:bold; color:#fff; letter-spacing:2px; text-shadow:0 2px 4px rgba(0,0,0,0.7); font-family: 'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif; white-space: nowrap;">${stats?.name || 'Player'}</span>
