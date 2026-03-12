@@ -2036,9 +2036,9 @@
 
     async function gn() {
       const overlay = document.createElement("div");
-      overlay.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.7);display:flex;align-items:center;justify-content:center;z-index:99999;";
+      overlay.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.7);display:flex;align-items:center;justify-content:center;z-index:99999;opacity:0;transition:opacity 0.1s ease;";
       overlay.innerHTML = `
-        <div style="background:var(--theme-bg-main, #1e1e24);padding:20px 30px;border-radius:10px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.5);border:2px solid var(--theme-border, #3e3e4a);">
+        <div id="gn-modal-box" style="background:var(--theme-bg-main, #1e1e24);padding:20px 30px;border-radius:10px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.5);border:2px solid var(--theme-border, #3e3e4a);">
           <h3 style="color:var(--theme-text, #fff);margin-top:0;margin-bottom:10px;">${d(wt)("share.format.title")}</h3>
           <div style="display:flex;gap:15px;justify-content:center;margin-top:20px;">
             <button id="btn-gn-new" style="padding:10px 20px;background:var(--theme-control, #4CAF50);color:#fff;border:none;border-radius:5px;cursor:pointer;font-size:16px;font-weight:bold;transition:0.2s;">${d(wt)("share.format.new")}</button>
@@ -2048,10 +2048,26 @@
         </div>
       `;
       document.body.appendChild(overlay);
+      requestAnimationFrame(() => {
+        overlay.style.opacity = "1";
+      });
+      const closeModal = (action) => {
+        overlay.style.opacity = "0";
+        setTimeout(() => {
+          overlay.remove();
+          if (action === "new") gnNew();
+          else if (action === "old") gnOld();
+        }, 100);
+      };
 
-      document.getElementById("btn-gn-new").onclick = () => { overlay.remove(); gnNew(); };
-      document.getElementById("btn-gn-old").onclick = () => { overlay.remove(); gnOld(); };
-      document.getElementById("btn-gn-cancel").onclick = () => overlay.remove();
+      document.getElementById("btn-gn-new").onclick = () => closeModal("new");
+      document.getElementById("btn-gn-old").onclick = () => closeModal("old");
+      document.getElementById("btn-gn-cancel").onclick = () => closeModal();
+      overlay.onclick = (e) => {
+        if (e.target === overlay) {
+          closeModal();
+        }
+      };
     }
 
     function mn(e) {
