@@ -2034,15 +2034,18 @@
       }
     }
 
-    // 新增：依定數範圍輸出的下載邏輯
     async function gnConst(minC, maxC) {
       const runId = Date.now(); 
       const mainEl = document.querySelector("main");
       if (null == mainEl) return alert(d(wt)("share.error", { error: "resultNode is null" }));
+      
+      const originalOverflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
       const loading = document.createElement("div");
-      loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>" + d(wt)("share.loading.preparing") + "</div>";
+      loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>" + (d(wt)("share.loading.preparing") || "Preparing Data...") + "</div>";
       loading.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:#1e1e24;display:flex;align-items:center;justify-content:center;color:white;z-index:99999;font-weight:bold;text-align:center;font-size:1.2em;";
       document.body.appendChild(loading);
+      
       try {
         let idxMap = [];
         try {
@@ -2052,13 +2055,20 @@
         } catch(err) {
           console.warn("Failed to fetch idx.json", err);
         }
+        
         const getJacketUrl = (title) => {
           const song = idxMap.find(s => s.title === title || Xe(s.title) === title || s.title === Xe(title));
           const imgFile = (song && song.image) ? song.image : "0000000000000000.jpg";
           const officialUrl = "chunithm-net-eng.com/mobile/img/" + imgFile;
           return "https://wsrv.nl/?url=" + officialUrl + "&w=200&v=" + Math.random();
         };
+        
         const diffColors = { "ULT": "var(--theme-song-ult)", "MAS": "var(--theme-song-mas)", "EXP": "var(--theme-song-exp)", "ADV": "var(--theme-song-adv)", "BAS": "var(--theme-song-bas)" };
+        const getClearLabel = (clr) => {
+          if(clr === "AJ") return '<div style="color:#ffdf75;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">ALL JUSTICE</div>';
+          if(clr === "FC") return '<div style="color:#a3ccf5;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">FULL COMBO</div>';
+          return '';
+        };
         const getRankColor = (rank) => {
           if(rank === "MAX") return "var(--theme-clear-ajc)";
           if(rank === "SSS+") return "#68fb60";
@@ -2072,10 +2082,79 @@
           if(rank === "A") return "#80d5ff";
           return "var(--theme-text-dim)";
         };
+        
         const stats = d(Ut);
         const allRecords = d(At);
-        const validRecords = allRecords.filter(item => item.const >= minC && item.const <= maxC && item.score !== -1);
+
+        // 為了取得完全一致的 Rating UI，計算一遍 B30 & N20
+        const bestRecords = allRecords.filter(item => (item.newV === 0 || (item.newV === 2 && item.difficulty !== "ULT")) && item.score !== -1).slice(0, 30);
+        const newRecords = allRecords.filter(item => (item.newV === 1 || (item.newV === 2 && item.difficulty === "ULT")) && item.score !== -1).slice(0, 20);
+        const fullRatingStr = Cr((qe(bestRecords.map(s => s.rating), 30) / 100) * 0.6 + (qe(newRecords.map(s => s.rating), 20) / 100) * 0.4, 4);
+        const ratingValue = parseFloat(fullRatingStr);
+        const mainRating = fullRatingStr.slice(0, -2);
+        const subRating = fullRatingStr.slice(-2);
         
+        let ratingHtml = `<span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${mainRating}<span style="font-size:36px;">${subRating}</span></span>`;
+        if (ratingValue >= 17) {
+            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.99));"><span style="background: linear-gradient(to bottom, #fff970 18%, #ff7c7c 30%, #ff898b 45%, #f602d9 58%, #496bff 65%, #03c4ff 72%, #01dc9b 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #fff970 18%, #ff7c7c 30%, #ff898b 45%, #f602d9 58%, #496bff 65%, #03c4ff 72%, #01dc9b 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
+        } else if (ratingValue >= 16) {
+            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.99));"><span style="background: linear-gradient(to bottom, #ff8276 20%, #ffdf70 40%, #8cff70 60%, #70dfff 75%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #ff8276 20%, #ffdf70 40%, #8cff70 60%, #70dfff 75%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
+        } else if (ratingValue >= 15.25) {
+            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.99));"><span style="background: linear-gradient(to bottom, #ffe089 20%, #fffffe 50%, #ffd789 55%, #fff8eb 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #ffe089 20%, #fffffe 50%, #ffd789 55%, #fff8eb 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
+        } else if (ratingValue >= 14.5) {
+            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.99));"><span style="background: linear-gradient(to bottom, #f5a507 20%, #fae294 50%, #f2a900 55%, #fff262 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #f5a507 20%, #fae294 50%, #f2a900 55%, #fff262 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
+        }
+
+        const genTimeStr = new Date().toLocaleString();
+        let opString = stats?.overPower || '---';
+        if (opString !== '---' && !opString.includes('%')) opString += '%';
+        let topBgStyle = "background: #2b2b33; border: 2px solid #aaaaaa;";
+        const profileNode = document.querySelector('.wrapper.svelte-1rv2o5c');
+        if (profileNode && profileNode.style.background) {
+            topBgStyle = `background: ${profileNode.style.background}; border: 3px solid transparent;`;
+        }
+        const charImgFile = stats?.character || "5bde9b9f1846049c.png";
+        const charOfficialUrl = "chunithm-net-eng.com/mobile/img/" + charImgFile;
+        const charProxyUrl = "https://wsrv.nl/?url=" + charOfficialUrl;
+
+        // 【完全套用 gnNew 的高品質 renderSongBlock】
+        const renderSongBlock = (song, idx) => {
+          const ratValue = (song.rating / 100).toFixed(2);
+          const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
+          const diffColor = diffColors[song.difficulty] || "#fff";
+          const pcHtml = song.playCount ? `<div style="position:absolute; top:14px; left:0; background:rgba(0,0,0,0.75); padding:4px 7px; color:white; font-size:18px; font-weight:bold; letter-spacing:0.5px; line-height:1; z-index:2;">PC: ${song.playCount}</div>` : '';
+          return `
+          <div style="width:170px; background:${diffColor}; border-radius:0; padding:1px; box-sizing: border-box !important; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
+            <div style="background:var(--theme-bg-main); border-radius:0; display:flex; flex-direction:column; overflow:hidden; width:100%;">
+              <div style="display:flex; justify-content:space-between; align-items:center; height:28px; padding:0 10px; background:rgba(255,255,255,0.05); font-size:16px; font-weight:bold; color:var(--theme-text); box-sizing:border-box;">
+                <span style="line-height:1;">#${idx+1}</span>
+                <div style="display:flex; align-items:baseline; gap:5px; line-height:1;">
+                  <span style="color:var(--theme-text-dim); font-size:14px;">${constValue}</span>
+                  <span style="color:rgba(255,255,255,0.3); font-size:14px;">/</span>
+                  <span>${ratValue}</span>
+                </div>
+              </div>
+              <div style="position:relative; width:100%; aspect-ratio:1; background:#000;">
+                <img src="${getJacketUrl(song.title)}" style="display:block; width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
+                ${pcHtml}
+                <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.75); text-align:center; padding:8px 0; z-index:2;">
+                  ${getClearLabel(song.clear)}
+                  <div style="font-weight:bold; font-size:18px; color:white; line-height:1;">${song.score < 0 ? "-" : song.score.toLocaleString()} <span style="color:${getRankColor(song.rank)}; font-size:16px;">${song.rank}</span></div>
+                </div>
+              </div>
+              <div style="position:relative; height:38px; display:flex; align-items:center; justify-content:center; padding:0 8px; box-sizing:border-box; background:${diffColor};">
+                <div style="position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); z-index:1;"></div>
+                <div style="position:relative; z-index:2; font-size:15px; font-weight:bold; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2; font-family: 'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif;">
+                  ${song.title}
+                </div>
+              </div>
+            </div>
+          </div>
+          `;
+        };
+
+        // 篩選與分群定數紀錄
+        const validRecords = allRecords.filter(item => item.const >= minC && item.const <= maxC && item.score !== -1);
         const grouped = {};
         validRecords.forEach(s => {
           const cStr = s.const.toFixed(1);
@@ -2086,109 +2165,97 @@
 
         let contentHtml = '';
         if(constKeys.length === 0) {
-            contentHtml = '<div style="color:var(--theme-text-dim);font-size:20px;text-align:center;padding:50px;">無符合此定數範圍的紀錄 / No records found in this range.</div>';
+            contentHtml = '<div style="font-size:24px; color:var(--theme-text-dim); margin-top:50px; text-align:center; font-weight:bold; padding: 50px;">該定數範圍內沒有成績紀錄</div>';
         } else {
             constKeys.forEach(cStr => {
               const group = grouped[cStr];
-              group.sort((a,b) => b.score - a.score);
+              group.sort((a,b) => b.score - a.score || b.rating - a.rating); // 依分數、Rating排
 
-              let sssPlus = 0, sss = 0, ssPlus = 0, ss = 0, fc = 0, aj = 0;
+              let countSssPlus = 0, countSss = 0, countAJ = 0, countFC = 0;
               group.forEach(s => {
-                 if (s.rank === "SSS+") sssPlus++;
-                 else if (s.rank === "SSS") sss++;
-                 else if (s.rank === "SS+") ssPlus++;
-                 else if (s.rank === "SS") ss++;
-                 if (s.clear === "AJ") aj++;
-                 else if (s.clear === "FC") fc++;
+                 if (s.score >= 1009000) countSssPlus++;
+                 else if (s.score >= 1007500) countSss++;
+                 if (s.clear === "AJ") countAJ++;
+                 else if (s.clear === "FC") countFC++;
               });
 
-              let headerHtml = `
-                <div style="display:flex; align-items:center; gap:15px; border-bottom:2px solid #3e3e4a; padding-bottom:5px; margin-bottom:15px; margin-top:${contentHtml === '' ? '0' : '35px'};">
-                  <span style="font-size:22px; font-weight:bold; color:#fff; width:90px; flex-shrink:0;">Lv. ${cStr}</span>
-                  <div style="display:flex; gap:12px; font-size:15px; font-weight:bold; color:var(--theme-text-dim);">
-                    <span style="color:#68fb60">SSS+ <span style="color:#fff">${sssPlus}</span></span>
-                    <span style="color:#ffd744">SSS <span style="color:#fff">${sss}</span></span>
-                    <span style="color:#ffe277">SS+ <span style="color:#fff">${ssPlus}</span></span>
-                    <span style="color:#ffedaa">SS <span style="color:#fff">${ss}</span></span>
-                    <span style="color:#a3ccf5">FC <span style="color:#fff">${fc}</span></span>
-                    <span style="color:#ffdf75">AJ <span style="color:#fff">${aj}</span></span>
-                  </div>
-                  <div style="margin-left:auto; font-size:15px; font-weight:bold; color:var(--theme-text-dim);">
-                    Total: <span style="color:#fff">${group.length}</span>
-                  </div>
-                </div>
-              `;
-
-              let gridHtml = `<div style="display:grid; grid-template-columns:repeat(10, 100px); gap:12px; justify-content:start;">`;
-              group.forEach(song => {
-                 const diffColor = diffColors[song.difficulty] || "#fff";
-                 const jacket = getJacketUrl(song.title);
-                 const scoreStr = song.score < 0 ? "-" : song.score.toLocaleString();
-                 const rankColor = getRankColor(song.rank);
-                 const rankStr = song.rank === "MAX" ? "MAX" : (song.rank || "");
-                 
-                 let clearHtml = '';
-                 if(song.clear === "AJ") clearHtml = '<div style="position:absolute;top:3px;right:3px;background:#ffdf75;color:#000;font-size:10px;font-weight:bold;padding:1px 4px;border-radius:2px;z-index:2;line-height:1;">AJ</div>';
-                 else if(song.clear === "FC") clearHtml = '<div style="position:absolute;top:3px;right:3px;background:#a3ccf5;color:#000;font-size:10px;font-weight:bold;padding:1px 4px;border-radius:2px;z-index:2;line-height:1;">FC</div>';
-
-                 gridHtml += `
-                  <div style="width:100px; background:${diffColor}; padding:1px; box-sizing:border-box; box-shadow:0 3px 6px rgba(0,0,0,0.5);">
-                    <div style="background:#000; width:100%; position:relative; aspect-ratio:1;">
-                      <img src="${jacket}" style="width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
-                      ${clearHtml}
-                      <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.8); text-align:center; padding:3px 0; font-size:11px; font-weight:bold; color:#fff; z-index:2; display:flex; flex-direction:column; line-height:1.2;">
-                        <span>${scoreStr}</span>
-                        <span style="color:${rankColor};font-size:10px;">${rankStr}</span>
-                      </div>
-                    </div>
-                  </div>
-                 `;
-              });
+              let gridHtml = `<div style="display:grid; grid-template-columns:repeat(10, 170px); gap:15px; align-content:start;">`;
+              gridHtml += group.map((s, idx) => renderSongBlock(s, idx)).join('');
               gridHtml += `</div>`;
-              contentHtml += headerHtml + gridHtml;
+
+              contentHtml += `
+              <div style="flex: none; width: 100%; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3); margin-bottom:25px;">
+                <div style="flex: none; display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
+                  <div style="display:flex; align-items:baseline; gap: 20px;">
+                      <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">LEVEL ${cStr}</h3>
+                      <div style="display:flex; gap: 15px; font-size: 16px; color: var(--theme-text-dim); font-weight: bold;">
+                          <span><span style="color:#68fb60">SSS+</span> ${countSssPlus}</span>
+                          <span><span style="color:#ffd744">SSS</span> ${countSss}</span>
+                          <span><span style="color:#ffdf75">AJ</span> ${countAJ}</span>
+                          <span><span style="color:#a3ccf5">FC</span> ${countFC}</span>
+                      </div>
+                  </div>
+                  <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Total: <b style="color:var(--theme-text); font-size:28px;">${group.length}</b></span>
+                </div>
+                ${gridHtml}
+              </div>
+              `;
             });
         }
 
-        const genTimeStr = new Date().toLocaleString();
-        let opString = stats?.overPower || '---';
-        if (opString !== '---' && !opString.includes('%')) opString += '%';
-        let topBgStyle = "background: #2b2b33; border: 2px solid #aaaaaa;";
-        const profileNode = document.querySelector('.wrapper.svelte-1rv2o5c');
-        if (profileNode && profileNode.style.background) topBgStyle = `background: ${profileNode.style.background}; border: 3px solid transparent;`;
-
+        // 為了容納寬度 170px * 10首 + 15px * 9間距 = 1835px。加上 padding，總寬度設為 1950px。
+        const cWidth = 1950;
         const container = document.createElement("div");
         container.id = "copied-main";
-        container.style.cssText = "position:absolute; top:0; left:0; z-index:-9999; width:1188px !important; min-width:1188px !important; box-sizing:border-box !important; background:#1e1e24; padding:40px; border-radius:0;";
+        container.style.cssText = `position:absolute; top:0; left:0; z-index:-9999; width:${cWidth}px !important; min-width:${cWidth}px !important; max-width:none !important; box-sizing:border-box !important; background:#1e1e24; padding:45px; border-radius:0;`;
+        
         container.innerHTML = `
-          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:25px;">
-            <div style="display:flex; align-items:center; gap:30px;">
-              <img src="/data/crossverse.png" style="height:90px; object-fit:contain;" crossorigin="anonymous">
-              <div style="${topBgStyle} padding:15px 30px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.4); display:flex; align-items:center; gap:40px;">
-                <span style="font-size:36px; font-weight:bold; color:#fff; letter-spacing:1px; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${stats?.name || 'Player'}</span>
-                <div style="display:flex; gap:10px; align-items:baseline;">
-                  <span style="font-size:18px; color:rgba(255,255,255,0.8); font-weight:bold;">OP</span>
-                  <span style="font-size:32px; font-weight:bold; color:#fff;">${opString}</span>
+          <div style="position:absolute; right:0; top:0; height:650px; z-index:0; pointer-events:none;">
+            <div style="display:inline-block; height:100%; -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to left, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);">
+              <div style="height:100%; overflow:hidden; -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 50%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 50%);">
+                <img src="${charProxyUrl}" style="height:650px; width:auto; margin-top:-100px; display:block;" crossorigin="anonymous">
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:50px; margin-bottom:35px; position:relative; z-index:2;">
+            <img src="/data/crossverse.png" style="height:120px; object-fit:contain;" crossorigin="anonymous">
+            
+            <div style="flex: none; width: 1120px; display:flex; justify-content:space-between; align-items:center; ${topBgStyle} padding:25px 40px; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.4); box-sizing:border-box; position:relative;">
+              <div style="display:flex; align-items:baseline; gap:20px; position:relative; z-index:1;">
+                <span style="font-size:52px; font-weight:bold; color:#fff; letter-spacing:2px; text-shadow:0 2px 4px rgba(0,0,0,0.7); font-family: 'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif; white-space: nowrap;">${stats?.name || 'Player'}</span>
+              </div>
+              <div style="display:flex; align-items:baseline; gap:50px; position:relative; z-index:1;">
+                <div style="display:flex; align-items:baseline; gap:15px;">
+                  <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">Rating</span>
+                  ${ratingHtml}
+                </div>
+                <div style="display:flex; align-items:baseline; gap:15px;">
+                  <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">OP</span>
+                  <span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${opString}</span>
                 </div>
               </div>
             </div>
-            <div style="text-align:right;">
-              <div style="font-size:28px; font-weight:bold; color:var(--theme-text-dim); letter-spacing:1px;">CONSTANT OVERVIEW</div>
-              <div style="font-size:16px; color:var(--theme-text-dim); margin-top:5px;">Range: ${minC.toFixed(1)} ~ ${maxC.toFixed(1)}</div>
+            
+            <div style="margin-left:auto; text-align:right;">
+              <div style="font-size:28px; font-weight:bold; color:var(--theme-text-dim); letter-spacing:1px;">CONSTANT RANGE</div>
+              <div style="font-size:32px; font-weight:bold; color:#fff; margin-top:5px; text-shadow:0 2px 4px rgba(0,0,0,0.5);">${minC.toFixed(1)} ~ ${maxC.toFixed(1)}</div>
             </div>
           </div>
-          <div style="background:#2b2b33; border:2px solid #3e3e4a; padding:25px 30px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3);">
+
+          <div style="display:flex; flex-direction:column; position:relative; z-index:2;">
             ${contentHtml}
           </div>
-          <div style="border-top:2px solid var(--theme-border); padding-top:15px; margin-top:20px; display:flex; justify-content:space-between; color:var(--theme-text-dim); font-size:14px;">
-            <div>Generated by CHUNITHM Tools @TSAIBEE (https://chuni.tsaibee.org)</div>
+          
+          <div style="border-top:2px solid var(--theme-border); padding-top:20px; margin-top:30px; display:flex; justify-content:space-between; color:var(--theme-text-dim); font-size:16px;">
+            <div>Generated by CHUNITHM Tools @TSAIBEE (https://chuni.tsaibee.org)<br>All copyrights of music jacket image on this site belong copyright holders.</div>
             <div>Date: ${genTimeStr}</div>
           </div>
         `;
         
-        const originalOverflow = document.body.style.overflow;
-        document.body.style.overflow = "hidden";
         document.body.appendChild(container);
-        loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>" + d(wt)("share.loading.wait") + "</div>"; 
+
+        // 轉 Base64 避免跨域
         const imgs = container.querySelectorAll("img");
         await Promise.all([...imgs].map(async (img) => {
           try {
@@ -2208,11 +2275,12 @@
           } catch(e) { console.warn("Base64 convert failed for:", img.src); }
         }));
 
-        loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>" + d(wt)("share.loading.generating") + "</div>";
+        loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>" + (d(wt)("share.loading.generating") || "Generating Image...") + "</div>";
+        
         let rawBlob = await pn(container, { backgroundColor: "#1e1e24", pixelRatio: 1 });
         
         if (rawBlob) {
-            loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>" + d(wt)("share.loading.compressing") + "</div>";
+            loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>" + (d(wt)("share.loading.compressing") || "Compressing Image...") + "</div>";
             const img = new Image();
             img.src = URL.createObjectURL(rawBlob);
             await new Promise((resolve, reject) => { img.onload = resolve; img.onerror = reject; });
@@ -2226,6 +2294,7 @@
         container.remove();
         document.body.style.overflow = originalOverflow;
         loading.remove();
+        
         const hn = `chunithm_const_${minC.toFixed(1)}-${maxC.toFixed(1)}.jpg`;
         if (rawBlob) {
           const url = window.URL.createObjectURL(rawBlob);
@@ -2237,7 +2306,7 @@
         }
       } catch (err) {
         if(document.getElementById("copied-main")) document.getElementById("copied-main").remove();
-        document.body.style.overflow = "";
+        document.body.style.overflow = originalOverflow;
         loading.remove();
         alert(d(wt)("share.error", { error: err }));
       }
@@ -2255,14 +2324,7 @@
             <button id="btn-gn-old" style="padding:10px 20px;background:var(--theme-control);color:#fff;border:none;border-radius:5px;cursor:pointer;font-size:16px;font-weight:bold;transition:0.2s;">${d(wt)("share.format.old")}</button>
             
             <div style="text-align:left; background:rgba(255,255,255,0.05); padding:15px; border-radius:5px; border:1px solid var(--theme-border);">
-              <div style="color:var(--theme-text, #fff); margin-bottom:10px; font-weight:bold; font-size:14px; display:flex; justify-content:space-between;">
-                <span>定數範圍 (Const Range)</span>
-                <span id="gn-range-val" style="color:var(--theme-control);">14.0 ~ 15.5</span>
-              </div>
-              <div style="display:flex; flex-direction:column; gap:10px;">
-                <input type="range" id="gn-min-const" min="1.0" max="15.5" step="0.1" value="14.0" style="width:100%; accent-color:var(--theme-control);">
-                <input type="range" id="gn-max-const" min="1.0" max="15.5" step="0.1" value="15.5" style="width:100%; accent-color:var(--theme-control);">
-              </div>
+              <div id="const_slider_mount"></div>
               <button id="btn-gn-const" style="margin-top:15px;width:100%;padding:10px 20px;background:var(--theme-control);color:#fff;border:none;border-radius:5px;cursor:pointer;font-size:16px;font-weight:bold;transition:0.2s;">定數整理版 (By Constant)</button>
             </div>
           </div>
@@ -2274,39 +2336,54 @@
       requestAnimationFrame(() => {
         overlay.style.opacity = "1";
       });
-      const minEl = document.getElementById("gn-min-const");
-      const maxEl = document.getElementById("gn-max-const");
-      const valEl = document.getElementById("gn-range-val");
-      
-      const updateRange = (e) => {
-        let minV = parseFloat(minEl.value);
-        let maxV = parseFloat(maxEl.value);
-        if (minV > maxV) {
-          if (e.target === minEl) maxEl.value = minV;
-          else minEl.value = maxV;
-          minV = parseFloat(minEl.value);
-          maxV = parseFloat(maxEl.value);
-        }
-        valEl.innerText = `${minV.toFixed(1)} ~ ${maxV.toFixed(1)}`;
-      };
-      minEl.addEventListener("input", updateRange);
-      maxEl.addEventListener("input", updateRange);
+
+      const sliderMount = document.getElementById('const_slider_mount');
+      let sliderComp;
+      try {
+        sliderComp = new Dn({
+          target: sliderMount,
+          props: {
+            label: d(wt)("settings.filter.const") || "依 譜面定數",
+            min: 1.0, max: 15.5, step: 0.1, low: 14.0, high: 15.4
+          }
+        });
+      } catch(e) {
+        console.warn("Slider mount error", e);
+        sliderMount.innerHTML = `<span style="color:var(--theme-text-dim);">拉桿元件載入失敗</span>`;
+      }
 
       const closeModal = (action) => {
+        let minC = 14.0, maxC = 15.4;
+        if (action === "const" && sliderComp) {
+          try {
+            const vals = sliderComp.$$.ctx[0]; 
+            const vals2 = sliderComp.$$.ctx[1];
+            minC = Math.min(vals, vals2) || 14.0;
+            maxC = Math.max(vals, vals2) || 15.4;
+          } catch(e) {
+            try {
+              const matches = sliderMount.innerText.match(/(\d+\.\d+)/g);
+              if (matches && matches.length >= 2) {
+                const parsed = matches.map(Number).sort((a,b)=>a-b);
+                minC = parsed[0]; maxC = parsed[parsed.length-1];
+              }
+            } catch(e2){}
+          }
+        }
         overlay.style.opacity = "0";
         setTimeout(() => {
+          if (sliderComp) { try { sliderComp.$destroy(); } catch(e){} }
           overlay.remove();
+          
           if (action === "new") gnNew();
           else if (action === "old") gnOld();
-          else if (action === "const") gnConst(parseFloat(minEl.value), parseFloat(maxEl.value));
+          else if (action === "const") gnConst(minC, maxC);
         }, 100);
       };
-
       document.getElementById("btn-gn-new").onclick = () => closeModal("new");
       document.getElementById("btn-gn-old").onclick = () => closeModal("old");
       document.getElementById("btn-gn-const").onclick = () => closeModal("const");
       document.getElementById("btn-gn-cancel").onclick = () => closeModal();
-      
       overlay.addEventListener("mousedown", (e) => {
         const modalBox = document.getElementById("gn-modal-box");
         if (modalBox && !modalBox.contains(e.target)) {
