@@ -2038,7 +2038,7 @@
       const overlay = document.createElement("div");
       overlay.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100%;background:rgba(0,0,0,0.7);display:flex;align-items:center;justify-content:center;z-index:99999;opacity:0;transition:opacity 0.1s ease;";
       overlay.innerHTML = `
-        <div id="gn-modal-box" style="background:var(--theme-bg-main, #1e1e24);padding:20px 30px;border-radius:10px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.5);">
+        <div id="gn-modal-box" style="width:50%;background:var(--theme-bg-main, #1e1e24);padding:20px 30px;border-radius:10px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.5);">
           <h3 style="color:var(--theme-text, #fff);margin-top:0;margin-bottom:10px;">${d(wt)("share.format.title")}</h3>
           <div style="display:flex;flex-direction:column;gap:15px;justify-content:center;margin-top:20px;">
             <button id="btn-gn-new" style="padding:10px 20px;background:var(--theme-control);color:#fff;border:none;border-radius:5px;cursor:pointer;font-size:16px;font-weight:bold;transition:0.2s;">${d(wt)("share.format.new")}</button>
