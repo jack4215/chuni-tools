@@ -2294,7 +2294,8 @@
             <button id="btn-gn-const"style="padding:10px 20px;background:var(--theme-control);color:#fff;border:none;border-radius:5px;cursor:pointer;font-size:16px;font-weight:bold;transition:0.2s;">${d(wt)("share.format.const")}</button> 
             <div id="const_slider_mount"></div>
           </div>
-          
+
+          <span style="color:var(--theme-text-dim);margin-top:10px;margin-bottom:10px;">${d(wt)("share.format.pcnotice")}</span>
           <button id="btn-gn-cancel" style="margin-top:20px;padding:8px 20px;background:transparent;color:#fff;border:1px solid var(--theme-border);border-radius:5px;cursor:pointer;transition:0.2s;">${d(wt)("share.format.cancel")}</button>
         </div>
       `;
