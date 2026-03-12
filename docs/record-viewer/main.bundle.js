@@ -1721,7 +1721,7 @@
       if (null == mainEl) return alert(d(wt)("share.error", { error: "resultNode is null" }));
       const loading = document.createElement("div");
       loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>" + d(wt)("share.loading.preparing") + "</div>";
-      loading.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:#1e1e24;display:flex;align-items:center;justify-content:center;color:white;z-index:99999;font-weight:bold;text-align:center;font-size:1.2em;";
+      loading.style.cssText = "position:fixed;top:0;left:0;width:"+window.innerWidth+"px; height:"+window.innerHeight+"px;background:#1e1e24;display:flex;align-items:center;justify-content:center;color:white;z-index:99999;font-weight:bold;text-align:center;font-size:1.2em;";
       document.body.appendChild(loading);
       try {
         let idxMap = [];
@@ -2025,7 +2025,7 @@
       document.body.style.overflow = "hidden";
       const loading = document.createElement("div");
       loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>" + (d(wt)("share.loading.preparing") || "Preparing Data...") + " (0%)</div>";
-      loading.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:#1e1e24;display:flex;align-items:center;justify-content:center;color:white;z-index:99999;font-weight:bold;text-align:center;font-size:1.2em;";
+      loading.style.cssText = "position:fixed;top:0;left:0;width:"+window.innerWidth+"px; height:"+window.innerHeight+"px;background:#1e1e24;display:flex;align-items:center;justify-content:center;color:white;z-index:99999;font-weight:bold;text-align:center;font-size:1.2em;";
       document.body.appendChild(loading);
       
       try {
