@@ -2182,7 +2182,7 @@
                       <span><span style="color:#ffedaa">SS</span> ${countSs}</span>
                       <span><span style="color:#a3ccf5">FC</span> ${countFC}</span>
                       <span><span style="color:#ffdf75">AJ</span> ${countAJ}</span>
-                      <span style="font-size:30px; color:var(--theme-text-dim); font-weight:normal;"> / ${group.length}</span>
+                      <span> / ${group.length}</span>
                   </div>
                 </div>
                 ${gridHtml}
@@ -2305,7 +2305,7 @@
       const overlay = document.createElement("div");
       overlay.style.cssText = "position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0, 0, 0, 0.6); display:flex; align-items:center; justify-content:center; z-index:99999; opacity:0; transition:opacity 0.1s ease;";
       overlay.innerHTML = `
-        <div id="gn-modal-box" style="width:50%;max-width:32rem;background:var(--theme-bg-main, #1e1e24);padding:20px 30px;border-radius:10px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.5);">
+        <div id="gn-modal-box" style="width:70%;max-width:32rem;background:var(--theme-bg-main, #1e1e24);padding:20px 30px;border-radius:10px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.5);">
           <h3 style="color:var(--theme-text, #fff);margin-top:0;margin-bottom:10px;">${d(wt)("share.format.title")}</h3>
           
           <div style="display:flex;flex-direction:column;gap:15px;justify-content:center;margin-top:20px;">
@@ -2329,9 +2329,16 @@
         sliderComp = new Dn({
           target: sliderMount,
           props: {
+            label: "",
             min: 1.0, max: 15.7, step: 0.1, low: 15.0, high: 15.4
           }
         });
+        setTimeout(() => {
+          const labelNode = sliderMount.querySelector('div > div:first-child');
+          if (labelNode && labelNode.innerText.trim() === "") {
+            labelNode.style.display = "none";
+          }
+        }, 0);
       } catch(e) {
         console.warn("Slider mount error", e);
         sliderMount.innerHTML = `<span style="color:var(--theme-text-dim);">Slider Error</span>`;
