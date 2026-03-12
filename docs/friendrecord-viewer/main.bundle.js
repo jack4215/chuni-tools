@@ -4638,13 +4638,15 @@
       let t, n, r, o, s, a, i = (e[0][e[4]] ?? 0) + "";
       return {
         c() {
-          t = H("div"), n = H("div"), r = A(e[4]), o = D(), s = H("div"), a = A(i), O(n, "class", "svelte-1cp0kbr"), O(s, "class", "svelte-1cp0kbr"), O(t, "class", "item svelte-1cp0kbr"), B(t, "zero", !(e[0][e[4]] > 0)), B(t, "full", e[0][e[4]] == e[3])
+          t = H("div"), n = H("div"), r = A(e[4]), o = D(), s = H("div"), a = A(i), O(n, "class", "svelte-1cp0kbr"), O(s, "class", "svelte-1cp0kbr"), O(t, "class", "item svelte-1cp0kbr"), B(t, "zero", !(e[0][e[4]] > 0)), 
+          B(t, "full", e[0][e[4]] == e[3] && e[3] > 0)
         },
         m(e, i) {
           M(e, t, i), k(t, n), k(n, r), k(t, o), k(t, s), k(s, a)
         },
         p(e, n) {
-          1 & n && i !== (i = (e[0][e[4]] ?? 0) + "") && I(a, i), 1 & n && B(t, "zero", !(e[0][e[4]] > 0)), 9 & n && B(t, "full", e[0][e[4]] == e[3])
+          1 & n && i !== (i = (e[0][e[4]] ?? 0) + "") && I(a, i), 1 & n && B(t, "zero", !(e[0][e[4]] > 0)), 
+          9 & n && B(t, "full", e[0][e[4]] == e[3] && e[3] > 0)
         },
         d(e) {
           e && E(t)

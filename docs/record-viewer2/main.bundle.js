@@ -4846,13 +4846,15 @@
       let t, n, r, o, s, a, i = (e[0][e[4]] ?? 0) + "";
       return {
         c() {
-          t = H("div"), n = H("div"), r = A(e[4]), o = D(), s = H("div"), a = A(i), O(n, "class", "svelte-1cp0kbr"), O(s, "class", "svelte-1cp0kbr"), O(t, "class", "item svelte-1cp0kbr"), B(t, "zero", !(e[0][e[4]] > 0)), B(t, "full", e[0][e[4]] == e[3])
+          t = H("div"), n = H("div"), r = A(e[4]), o = D(), s = H("div"), a = A(i), O(n, "class", "svelte-1cp0kbr"), O(s, "class", "svelte-1cp0kbr"), O(t, "class", "item svelte-1cp0kbr"), B(t, "zero", !(e[0][e[4]] > 0)), 
+          B(t, "full", e[0][e[4]] == e[3] && e[3] > 0)
         },
         m(e, i) {
           M(e, t, i), k(t, n), k(n, r), k(t, o), k(t, s), k(s, a)
         },
         p(e, n) {
-          1 & n && i !== (i = (e[0][e[4]] ?? 0) + "") && I(a, i), 1 & n && B(t, "zero", !(e[0][e[4]] > 0)), 9 & n && B(t, "full", e[0][e[4]] == e[3])
+          1 & n && i !== (i = (e[0][e[4]] ?? 0) + "") && I(a, i), 1 & n && B(t, "zero", !(e[0][e[4]] > 0)), 
+          9 & n && B(t, "full", e[0][e[4]] == e[3] && e[3] > 0)
         },
         d(e) {
           e && E(t)
@@ -4890,10 +4892,13 @@
           z2.forEach(e => e.c()), l = D(),
           c = H("div"), d = H("div"), d.textContent = "FC", u = D(), f = H("div"), p = A(t[1]),
           O(d, "class", "svelte-1cp0kbr"), O(f, "class", "svelte-1cp0kbr"), O(c, "class", "item fc svelte-1cp0kbr"),
-          B(c, "zero", 0 == t[1]), B(c, "full", t[1] == t[3]),
+          B(c, "zero", 0 == t[1]), 
+          B(c, "full", t[1] == t[3] && t[3] > 0),
           h = H("div"), g = H("div"), g.textContent = "AJ", m = D(), v = H("div"), b = A(t[2]),
           O(g, "class", "svelte-1cp0kbr"), O(v, "class", "svelte-1cp0kbr"), O(h, "class", "item aj svelte-1cp0kbr"),
-          B(h, "zero", 0 == t[2]), B(h, "full", t[2] == t[3]), O(i, "class", "wrapper svelte-1cp0kbr")
+          B(h, "zero", 0 == t[2]), 
+          B(h, "full", t[2] == t[3] && t[3] > 0),
+          O(i, "class", "wrapper svelte-1cp0kbr")
         },
         m(e, t) {
           M(e, n, t), z1.forEach(el => el.m(n, null)), k(n, r), Mx && Mx.m(n, null), k(n, o), k(n, s), k(s, a),M(e, i, t), z2.forEach(el => el.m(i, null)), k(i, l),k(i, c), k(c, d), k(c, u), k(c, f), k(f, p),k(i, h), k(h, g), k(h, m), k(h, v), k(v, b)
@@ -4910,8 +4915,10 @@
             }
           }
           e[0].MAX > 0 ? (Mx ? Mx.p(e, t) : (Mx = Uo(e), Mx.c(), Mx.m(n, o))) : Mx && (Mx.d(1), Mx = null),
-          8 & t && I(a, "/" + e[3]), 2 & t && (I(p, e[1]), B(c, "zero", 0 == e[1])), 10 & t && B(c, "full", e[1] == e[3]),
-          4 & t && (I(b, e[2]), B(h, "zero", 0 == e[2])), 12 & t && B(h, "full", e[2] == e[3])
+          8 & t && I(a, "/" + e[3]), 2 & t && (I(p, e[1]), B(c, "zero", 0 == e[1])), 
+          10 & t && B(c, "full", e[1] == e[3] && e[3] > 0),
+          4 & t && (I(b, e[2]), B(h, "zero", 0 == e[2])), 
+          12 & t && B(h, "full", e[2] == e[3] && e[3] > 0)
         },
         d(e) {
           e && E(n), N(z1, e), Mx && Mx.d(e), e && E(i), N(z2, e), e && E(c), e && E(h)
