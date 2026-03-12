@@ -2120,7 +2120,7 @@
           const diffColor = diffColors[song.difficulty] || "#fff";
           const pcHtml = song.playCount ? `<div style="position:absolute; top:14px; left:0; background:rgba(0,0,0,0.75); padding:4px 7px; color:white; font-size:22px; font-weight:bold; letter-spacing:0.5px; line-height:1; z-index:2;">PC: ${song.playCount}</div>` : '';
           return `
-          <div style="width:170px; background:${diffColor}; border-radius:0; padding:1px; box-sizing: border-box !important; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
+          <div style="width:170px; background:${diffColor}; font-family: 'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif; border-radius:0; padding:1px; box-sizing: border-box !important; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
             <div style="background:var(--theme-bg-main); border-radius:0; display:flex; flex-direction:column; overflow:hidden; width:100%;">
               <div style="position:relative; width:100%; aspect-ratio:1; background:#000;">
                 <img src="${getJacketUrl(song.title)}" style="display:block; width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
@@ -2132,7 +2132,7 @@
               </div>
               <div style="position:relative; height:38px; display:flex; align-items:center; justify-content:center; padding:0 8px; box-sizing:border-box; background:${diffColor};">
                 <div style="position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); z-index:1;"></div>
-                <div style="position:relative; z-index:2; font-size:15px; font-weight:bold; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2; font-family: 'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif;">
+                <div style="position:relative; z-index:2; font-size:15px; font-weight:bold; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2;">
                   ${song.title}
                 </div>
               </div>
