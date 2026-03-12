@@ -1721,7 +1721,7 @@
       if (null == mainEl) return alert(d(wt)("share.error", { error: "resultNode is null" }));
       const loading = document.createElement("div");
       loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>" + d(wt)("share.loading.preparing") + "</div>";
-      loading.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:#1e1e24;display:flex;align-items:center;justify-content:center;color:white;z-index:99999;font-weight:bold;text-align:center;font-size:1.2em;";
+      loading.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100%;background:#1e1e24;display:flex;align-items:center;justify-content:center;color:white;z-index:99999;font-weight:bold;text-align:center;font-size:1.2em;";
       document.body.appendChild(loading);
       try {
         let idxMap = [];
@@ -2036,7 +2036,7 @@
 
     async function gn() {
       const overlay = document.createElement("div");
-      overlay.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.7);display:flex;align-items:center;justify-content:center;z-index:99999;opacity:0;transition:opacity 0.1s ease;";
+      overlay.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100%;background:rgba(0,0,0,0.7);display:flex;align-items:center;justify-content:center;z-index:99999;opacity:0;transition:opacity 0.1s ease;";
       overlay.innerHTML = `
         <div id="gn-modal-box" style="background:var(--theme-bg-main, #1e1e24);padding:20px 30px;border-radius:10px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.5);">
           <h3 style="color:var(--theme-text, #fff);margin-top:0;margin-bottom:10px;">${d(wt)("share.format.title")}</h3>
@@ -4250,7 +4250,7 @@
     };
 
     function lo(e) {
-      j(e, "svelte-75klku", ".modal-wrapper.svelte-75klku{position:fixed;top:0;left:0;width:100vw;height:100vh;display:flex;align-items:center}.modal-bg.svelte-75klku{position:fixed;background:rgba(0, 0, 0, 0.4);top:0;left:0;width:100vw;height:100vh}.modal.svelte-75klku{background:var(--theme-bg-main);width:70%;max-width:32rem;font-size:1.17em;margin:auto;padding:2rem;position:relative;box-shadow:2rem 2rem 10px rgba(0, 0, 0, 0.5333333333);border-radius:1rem;text-align:center}.app-version.svelte-75klku{color:var(--theme-text-dim);font-weight:normal;font-size:small}.spinner.svelte-75klku{margin:2rem auto;border:0.5rem solid var(--theme-bg-sub);border-top-color:var(--theme-label);border-radius:50%;width:4rem;height:4rem;animation:svelte-75klku-spin 1s cubic-bezier(0.5, 0.2, 0.5, 0.8) infinite}.error.svelte-75klku{margin:4rem auto;height:4rem;line-height:4rem;font-size:5em;color:var(--theme-label)}.error-text.svelte-75klku{color:#ff0000;white-space:pre-line;font-size:0.8em;text-align:left;background-color:var(--theme-bg-sub);border-radius:0.5em;max-height:15em;overflow-y:scroll;padding:1em}.dim.svelte-75klku{color:var(--theme-text-dim)}@keyframes svelte-75klku-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}")
+      j(e, "svelte-75klku", ".modal-wrapper.svelte-75klku{position:fixed;top:0;left:0;width:100vw;height:100%;display:flex;align-items:center}.modal-bg.svelte-75klku{position:fixed;background:rgba(0, 0, 0, 0.4);top:0;left:0;width:100vw;height:100%}.modal.svelte-75klku{background:var(--theme-bg-main);width:70%;max-width:32rem;font-size:1.17em;margin:auto;padding:2rem;position:relative;box-shadow:2rem 2rem 10px rgba(0, 0, 0, 0.5333333333);border-radius:1rem;text-align:center}.app-version.svelte-75klku{color:var(--theme-text-dim);font-weight:normal;font-size:small}.spinner.svelte-75klku{margin:2rem auto;border:0.5rem solid var(--theme-bg-sub);border-top-color:var(--theme-label);border-radius:50%;width:4rem;height:4rem;animation:svelte-75klku-spin 1s cubic-bezier(0.5, 0.2, 0.5, 0.8) infinite}.error.svelte-75klku{margin:4rem auto;height:4rem;line-height:4rem;font-size:5em;color:var(--theme-label)}.error-text.svelte-75klku{color:#ff0000;white-space:pre-line;font-size:0.8em;text-align:left;background-color:var(--theme-bg-sub);border-radius:0.5em;max-height:15em;overflow-y:scroll;padding:1em}.dim.svelte-75klku{color:var(--theme-text-dim)}@keyframes svelte-75klku-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}")
     }
 
     function co(e) {
