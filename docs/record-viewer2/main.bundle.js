@@ -2659,7 +2659,7 @@
       return e.$$set = e => {
         "label" in e && n(2, s = e.label), "min" in e && n(3, a = e.min), "max" in e && n(4, i = e.max), "step" in e && n(5, l = e.step), "low" in e && n(0, c = e.low), "high" in e && n(1, d = e.high), "disabled" in e && n(18, dis = e.disabled)
       }, e.$$.update = () => {
-        u = i - a; if (f < a) n(6, f = a); if (p > i) n(7, p = i); if (p < f) n(7, p = f); 72 & e.$$.dirty && n(9, r = (f - a) / u * 100), 136 & e.$$.dirty && n(8, o = (p - a) / u * 100)
+        u = i - a; if (f < a) n(6, f = a); if (p > i) n(7, p = i); 72 & e.$$.dirty && n(9, r = (f - a) / u * 100), 136 & e.$$.dirty && n(8, o = (p - a) / u * 100)
       }, [c, d, s, a, i, l, f, p, o, r, e => {
         let val = parseFloat(e.currentTarget.value);
         n(6, f = handleNumberStep(f, val)), n(6, f = Math.min(i, Math.max(a, f))), f > p && n(7, p = f), e.currentTarget.value = f.toString(), n(0, c = f), n(1, d = p)
