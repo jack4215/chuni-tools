@@ -2134,7 +2134,7 @@
 
         let contentHtml = '';
         if(constKeys.length === 0) {
-            contentHtml = '<div style="font-size:24px; color:var(--theme-text-dim); margin-top:50px; text-align:center; font-weight:bold; padding: 50px;">該定數範圍內沒有成績紀錄</div>';
+            contentHtml = '<div style="font-size:24px; color:var(--theme-text-dim); margin-top:50px; text-align:center; font-weight:bold; padding: 50px;">No Data</div>';
         } else {
             constKeys.forEach(cStr => {
               const group = grouped[cStr];
@@ -2219,7 +2219,7 @@
         const totalImgs = imgs.length;
         const updateProgress = () => {
             const percent = totalImgs === 0 ? 100 : Math.round((loadedCount / totalImgs) * 100);
-            loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>" + (d(wt)("share.loading.preparing") || "Preparing Data...") + ` (${percent}%)</div>`;
+            loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>" + (d(wt)("share.loading.wait")") + ` (${percent}%)</div>`;
         };
 
         await Promise.all(imgs.map(async (img) => {
