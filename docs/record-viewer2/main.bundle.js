@@ -2042,7 +2042,7 @@
       const originalOverflow = document.body.style.overflow;
       document.body.style.overflow = "hidden";
       const loading = document.createElement("div");
-      loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>" + (d(wt)("share.loading.preparing") || "Preparing Data...") + "</div>";
+      loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>" + (d(wt)("share.loading.preparing") || "Preparing Data...") + " (0%)</div>";
       loading.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:#1e1e24;display:flex;align-items:center;justify-content:center;color:white;z-index:99999;font-weight:bold;text-align:center;font-size:1.2em;";
       document.body.appendChild(loading);
       
@@ -2086,7 +2086,6 @@
         const stats = d(Ut);
         const allRecords = d(At);
 
-        // 為了取得完全一致的 Rating UI，計算一遍 B30 & N20
         const bestRecords = allRecords.filter(item => (item.newV === 0 || (item.newV === 2 && item.difficulty !== "ULT")) && item.score !== -1).slice(0, 30);
         const newRecords = allRecords.filter(item => (item.newV === 1 || (item.newV === 2 && item.difficulty === "ULT")) && item.score !== -1).slice(0, 20);
         const fullRatingStr = Cr((qe(bestRecords.map(s => s.rating), 30) / 100) * 0.6 + (qe(newRecords.map(s => s.rating), 20) / 100) * 0.4, 4);
@@ -2117,23 +2116,12 @@
         const charOfficialUrl = "chunithm-net-eng.com/mobile/img/" + charImgFile;
         const charProxyUrl = "https://wsrv.nl/?url=" + charOfficialUrl;
 
-        // 【完全套用 gnNew 的高品質 renderSongBlock】
-        const renderSongBlock = (song, idx) => {
-          const ratValue = (song.rating / 100).toFixed(2);
-          const constValue = song.const < 0 ? "-" : song.const.toFixed(1);
+        const renderSongBlock = (song) => {
           const diffColor = diffColors[song.difficulty] || "#fff";
           const pcHtml = song.playCount ? `<div style="position:absolute; top:14px; left:0; background:rgba(0,0,0,0.75); padding:4px 7px; color:white; font-size:18px; font-weight:bold; letter-spacing:0.5px; line-height:1; z-index:2;">PC: ${song.playCount}</div>` : '';
           return `
           <div style="width:170px; background:${diffColor}; border-radius:0; padding:1px; box-sizing: border-box !important; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
             <div style="background:var(--theme-bg-main); border-radius:0; display:flex; flex-direction:column; overflow:hidden; width:100%;">
-              <div style="display:flex; justify-content:space-between; align-items:center; height:28px; padding:0 10px; background:rgba(255,255,255,0.05); font-size:16px; font-weight:bold; color:var(--theme-text); box-sizing:border-box;">
-                <span style="line-height:1;">#${idx+1}</span>
-                <div style="display:flex; align-items:baseline; gap:5px; line-height:1;">
-                  <span style="color:var(--theme-text-dim); font-size:14px;">${constValue}</span>
-                  <span style="color:rgba(255,255,255,0.3); font-size:14px;">/</span>
-                  <span>${ratValue}</span>
-                </div>
-              </div>
               <div style="position:relative; width:100%; aspect-ratio:1; background:#000;">
                 <img src="${getJacketUrl(song.title)}" style="display:block; width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
                 ${pcHtml}
@@ -2153,7 +2141,6 @@
           `;
         };
 
-        // 篩選與分群定數紀錄
         const validRecords = allRecords.filter(item => item.const >= minC && item.const <= maxC && item.score !== -1);
         const grouped = {};
         validRecords.forEach(s => {
@@ -2169,42 +2156,42 @@
         } else {
             constKeys.forEach(cStr => {
               const group = grouped[cStr];
-              group.sort((a,b) => b.score - a.score || b.rating - a.rating); // 依分數、Rating排
-
-              let countSssPlus = 0, countSss = 0, countAJ = 0, countFC = 0;
+              group.sort((a,b) => b.score - a.score || b.rating - a.rating); 
+              let countSssPlus = 0, countSss = 0, countSsPlus = 0, countSs = 0, countAJ = 0, countFC = 0;
               group.forEach(s => {
-                 if (s.score >= 1009000) countSssPlus++;
-                 else if (s.score >= 1007500) countSss++;
+                 if (s.rank === "SSS+") countSssPlus++;
+                 else if (s.rank === "SSS") countSss++;
+                 else if (s.rank === "SS+") countSsPlus++;
+                 else if (s.rank === "SS") countSs++;
+                 
                  if (s.clear === "AJ") countAJ++;
                  else if (s.clear === "FC") countFC++;
               });
 
               let gridHtml = `<div style="display:grid; grid-template-columns:repeat(10, 170px); gap:15px; align-content:start;">`;
-              gridHtml += group.map((s, idx) => renderSongBlock(s, idx)).join('');
+              gridHtml += group.map(s => renderSongBlock(s)).join('');
               gridHtml += `</div>`;
-
               contentHtml += `
               <div style="flex: none; width: 100%; display:flex; flex-direction:column; background:#2b2b33; border:2px solid #3e3e4a; border-radius:0; padding:25px; box-sizing:border-box; box-shadow:0 8px 25px rgba(0,0,0,0.3); margin-bottom:25px;">
-                <div style="flex: none; display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box;">
-                  <div style="display:flex; align-items:baseline; gap: 20px;">
-                      <h3 style="font-size:32px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">LEVEL ${cStr}</h3>
-                      <div style="display:flex; gap: 15px; font-size: 16px; color: var(--theme-text-dim); font-weight: bold;">
-                          <span><span style="color:#68fb60">SSS+</span> ${countSssPlus}</span>
-                          <span><span style="color:#ffd744">SSS</span> ${countSss}</span>
-                          <span><span style="color:#ffdf75">AJ</span> ${countAJ}</span>
-                          <span><span style="color:#a3ccf5">FC</span> ${countFC}</span>
-                      </div>
+                <div style="flex: none; display:flex; justify-content:flex-start; align-items:baseline; border-bottom:3px solid var(--theme-border); padding-bottom:10px; margin-bottom:20px; height: 50px; box-sizing: border-box; gap:25px;">
+                  <h3 style="font-size:36px; color:var(--theme-text); border-left:8px solid var(--theme-control); padding-left:15px; margin:0; line-height:1;">Lv. ${cStr}</h3>
+                  <div style="display:flex; gap: 20px; font-size: 20px; color: var(--theme-text-dim); font-weight: bold; letter-spacing:0.5px;">
+                      <span><span style="color:#68fb60">SSS+</span> ${countSssPlus}</span>
+                      <span><span style="color:#ffd744">SSS</span> ${countSss}</span>
+                      <span><span style="color:#ffe277">SS+</span> ${countSsPlus}</span>
+                      <span><span style="color:#ffedaa">SS</span> ${countSs}</span>
+                      <span><span style="color:#a3ccf5">FC</span> ${countFC}</span>
+                      <span><span style="color:#ffdf75">AJ</span> ${countAJ}</span>
+                      <span><span style="color:#ffdf75">AJ</span> ${countAJ}</span>
+                      <span style="font-size:24px; color:var(--theme-text-dim); font-weight:normal;"> / ${group.length}</span>
                   </div>
-                  <span style="font-size:22px; color:var(--theme-text-dim); line-height:1;">Total: <b style="color:var(--theme-text); font-size:28px;">${group.length}</b></span>
                 </div>
                 ${gridHtml}
               </div>
               `;
             });
         }
-
-        // 為了容納寬度 170px * 10首 + 15px * 9間距 = 1835px。加上 padding，總寬度設為 1950px。
-        const cWidth = 1950;
+        const cWidth = 1980;
         const container = document.createElement("div");
         container.id = "copied-main";
         container.style.cssText = `position:absolute; top:0; left:0; z-index:-9999; width:${cWidth}px !important; min-width:${cWidth}px !important; max-width:none !important; box-sizing:border-box !important; background:#1e1e24; padding:45px; border-radius:0;`;
@@ -2254,25 +2241,37 @@
         `;
         
         document.body.appendChild(container);
+        
+        const imgs = Array.from(container.querySelectorAll("img"));
+        let loadedCount = 0;
+        const totalImgs = imgs.length;
 
-        // 轉 Base64 避免跨域
-        const imgs = container.querySelectorAll("img");
-        await Promise.all([...imgs].map(async (img) => {
+        // 更新進度顯示
+        const updateProgress = () => {
+            const percent = totalImgs === 0 ? 100 : Math.round((loadedCount / totalImgs) * 100);
+            loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>" + (d(wt)("share.loading.preparing") || "Preparing Data...") + ` (${percent}%)</div>`;
+        };
+
+        await Promise.all(imgs.map(async (img) => {
           try {
             const res = await fetch(img.src);
-            if (!res.ok) return; 
+            if (!res.ok) { loadedCount++; updateProgress(); return; }
             const blob = await res.blob();
             const reader = new FileReader();
             await new Promise((resolve) => {
               reader.onloadend = () => {
                 img.removeAttribute("crossorigin");
-                img.onload = resolve;
-                img.onerror = resolve;
+                img.onload = () => { loadedCount++; updateProgress(); resolve(); };
+                img.onerror = () => { loadedCount++; updateProgress(); resolve(); };
                 img.src = reader.result;
               };
               reader.readAsDataURL(blob);
             });
-          } catch(e) { console.warn("Base64 convert failed for:", img.src); }
+          } catch(e) { 
+            console.warn("Base64 convert failed for:", img.src); 
+            loadedCount++; 
+            updateProgress(); 
+          }
         }));
 
         loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>" + (d(wt)("share.loading.generating") || "Generating Image...") + "</div>";
