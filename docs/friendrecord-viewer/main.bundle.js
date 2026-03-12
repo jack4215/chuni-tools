@@ -4638,15 +4638,13 @@
       let t, n, r, o, s, a, i = (e[0][e[4]] ?? 0) + "";
       return {
         c() {
-          t = H("div"), n = H("div"), r = A(e[4]), o = D(), s = H("div"), a = A(i), O(n, "class", "svelte-1cp0kbr"), O(s, "class", "svelte-1cp0kbr"), O(t, "class", "item svelte-1cp0kbr"), B(t, "zero", !(e[0][e[4]] > 0)), 
-          B(t, "full", e[0][e[4]] == e[3] && e[3] > 0)
+          t = H("div"), n = H("div"), r = A(e[4]), o = D(), s = H("div"), a = A(i), O(n, "class", "svelte-1cp0kbr"), O(s, "class", "svelte-1cp0kbr"), O(t, "class", "item svelte-1cp0kbr"), B(t, "zero", !(e[0][e[4]] > 0)), B(t, "full", e[0][e[4]] == e[3] && e[3] > 0)
         },
         m(e, i) {
           M(e, t, i), k(t, n), k(n, r), k(t, o), k(t, s), k(s, a)
         },
         p(e, n) {
-          1 & n && i !== (i = (e[0][e[4]] ?? 0) + "") && I(a, i), 1 & n && B(t, "zero", !(e[0][e[4]] > 0)), 
-          9 & n && B(t, "full", e[0][e[4]] == e[3] && e[3] > 0)
+          1 & n && i !== (i = (e[0][e[4]] ?? 0) + "") && I(a, i), 1 & n && B(t, "zero", !(e[0][e[4]] > 0)), 9 & n && B(t, "full", e[0][e[4]] == e[3] && e[3] > 0)
         },
         d(e) {
           e && E(t)
@@ -4681,7 +4679,7 @@
         c() {
           n = H("div");
           for (let e = 0; e < 6; e += 1) $[e].c();
-          r = D(), x && x.c(), o = D(), s = H("div"), a = H("div"), a.textContent = "FC", i = D(), l = H("div"), c = A(t[1]), d = D(), u = H("div"), f = H("div"), f.textContent = "AJ", p = D(), h = H("div"), g = A(t[2]), m = D(), v = H("div"), b = A("/"), y = A(t[3]), O(a, "class", "svelte-1cp0kbr"), O(l, "class", "svelte-1cp0kbr"), O(s, "class", "item fc svelte-1cp0kbr"), B(s, "zero", 0 == t[1]), B(s, "full", t[1] == t[3]), O(f, "class", "svelte-1cp0kbr"), O(h, "class", "svelte-1cp0kbr"), O(u, "class", "item aj svelte-1cp0kbr"), B(u, "zero", 0 == t[2]), B(u, "full", t[2] == t[3]), O(v, "class", "total svelte-1cp0kbr"), O(n, "class", "wrapper svelte-1cp0kbr")
+          r = D(), x && x.c(), o = D(), s = H("div"), a = H("div"), a.textContent = "FC", i = D(), l = H("div"), c = A(t[1]), d = D(), u = H("div"), f = H("div"), f.textContent = "AJ", p = D(), h = H("div"), g = A(t[2]), m = D(), v = H("div"), b = A("/"), y = A(t[3]), O(a, "class", "svelte-1cp0kbr"), O(l, "class", "svelte-1cp0kbr"), O(s, "class", "item fc svelte-1cp0kbr"), B(s, "zero", 0 == t[1]), B(s, "full", t[1] == t[3] && t[3] > 0), O(f, "class", "svelte-1cp0kbr"), O(h, "class", "svelte-1cp0kbr"), O(u, "class", "item aj svelte-1cp0kbr"), B(u, "zero", 0 == t[2]), B(u, "full", t[2] == t[3] && t[3] > 0), O(v, "class", "total svelte-1cp0kbr"), O(n, "class", "wrapper svelte-1cp0kbr")
         },
         m(e, t) {
           M(e, n, t);
@@ -4697,7 +4695,7 @@
             }
             for (; o < 6; o += 1) $[o].d(1)
           }
-          e[0].MAX > 0 ? x ? x.p(e, t) : (x = Uo(e), x.c(), x.m(n, o)) : x && (x.d(1), x = null), 2 & t && I(c, e[1]), 2 & t && B(s, "zero", 0 == e[1]), 10 & t && B(s, "full", e[1] == e[3]), 4 & t && I(g, e[2]), 4 & t && B(u, "zero", 0 == e[2]), 12 & t && B(u, "full", e[2] == e[3]), 8 & t && I(y, e[3])
+          e[0].MAX > 0 ? x ? x.p(e, t) : (x = Uo(e), x.c(), x.m(n, o)) : x && (x.d(1), x = null), 2 & t && I(c, e[1]), 2 & t && B(s, "zero", 0 == e[1]), 10 & t && B(s, "full", e[1] == e[3] && e[3] > 0), 4 & t && I(g, e[2]), 4 & t && B(u, "zero", 0 == e[2]), 12 & t && B(u, "full", e[2] == e[3] && e[3] > 0), 8 & t && I(y, e[3])
         },
         i: e,
         o: e,
