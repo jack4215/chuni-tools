@@ -13,7 +13,7 @@
                 alreadyRun: "Please refresh the page before running CHUNI TOOLS again!",
                 wrongBase: `Please open CHUNITHM-NET Intl. (${e}) and login, then try again.`,
                 containerHTML: `
-                    <p>B50 image download feature is now available.</p>
+                    <p>Image download feature is available.</p>
                     <p>Go to Record viewer and click the download button at the top.</p>
                     <hr width="96%">
                     <p><a href="https://chuni.tsaibee.org/?lang=en_US" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools</a></p>
@@ -24,7 +24,7 @@
                 alreadyRun: "請重新整理頁面後再執行 CHUNITHM 書籤工具！",
                 wrongBase: `請到 CHUNITHM-NET Intl. (${e}) 登入之後再試一次。`,
                 containerHTML: `
-                    <p>下載 B50 圖片功能已開放</p>
+                    <p>下載圖片功能已更新</p>
                     <p>進入查分器點擊上方下載按鈕即可儲存</p>
                     <hr width="96%">
                     <p><a href="https://chuni.tsaibee.org/?lang=zh_TW" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools</a></p>
