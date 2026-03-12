@@ -2118,7 +2118,7 @@
 
         const renderSongBlock = (song) => {
           const diffColor = diffColors[song.difficulty] || "#fff";
-          const pcHtml = song.playCount ? `<div style="position:absolute; top:14px; left:0; background:rgba(0,0,0,0.75); padding:4px 7px; color:white; font-size:18px; font-weight:bold; letter-spacing:0.5px; line-height:1; z-index:2;">PC: ${song.playCount}</div>` : '';
+          const pcHtml = song.playCount ? `<div style="position:absolute; top:14px; left:0; background:rgba(0,0,0,0.75); padding:4px 7px; color:white; font-size:22px; font-weight:bold; letter-spacing:0.5px; line-height:1; z-index:2;">PC: ${song.playCount}</div>` : '';
           return `
           <div style="width:170px; background:${diffColor}; border-radius:0; padding:1px; box-sizing: border-box !important; box-shadow:0 4px 8px rgba(0,0,0,0.5);">
             <div style="background:var(--theme-bg-main); border-radius:0; display:flex; flex-direction:column; overflow:hidden; width:100%;">
@@ -2127,7 +2127,7 @@
                 ${pcHtml}
                 <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.75); text-align:center; padding:8px 0; z-index:2;">
                   ${getClearLabel(song.clear)}
-                  <div style="font-weight:bold; font-size:18px; color:white; line-height:1;">${song.score < 0 ? "-" : song.score.toLocaleString()} <span style="color:${getRankColor(song.rank)}; font-size:16px;">${song.rank}</span></div>
+                  <div style="font-weight:bold; font-size:22px; color:white; line-height:1;">${song.score < 0 ? "-" : song.score.toLocaleString()} <span style="color:${getRankColor(song.rank)}; font-size:16px;">${song.rank}</span></div>
                 </div>
               </div>
               <div style="position:relative; height:38px; display:flex; align-items:center; justify-content:center; padding:0 8px; box-sizing:border-box; background:${diffColor};">
@@ -2333,12 +2333,6 @@
             min: 1.0, max: 15.7, step: 0.1, low: 15.0, high: 15.4
           }
         });
-        setTimeout(() => {
-          const labelNode = sliderMount.querySelector('div > div:first-child');
-          if (labelNode && labelNode.innerText.trim() === "") {
-            labelNode.style.display = "none";
-          }
-        }, 0);
       } catch(e) {
         console.warn("Slider mount error", e);
         sliderMount.innerHTML = `<span style="color:var(--theme-text-dim);">Slider Error</span>`;
