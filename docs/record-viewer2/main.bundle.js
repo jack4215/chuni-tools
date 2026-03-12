@@ -2125,9 +2125,9 @@
               <div style="position:relative; width:100%; aspect-ratio:1; background:#000;">
                 <img src="${getJacketUrl(song.title)}" style="display:block; width:100%; height:100%; object-fit:cover;" crossorigin="anonymous">
                 ${pcHtml}
-                <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.75); text-align:center; padding:8px 0; z-index:2;">
+                <div style="position:absolute; font-size:16px; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.75); text-align:center; padding:8px 0; z-index:2;">
                   ${getClearLabel(song.clear)}
-                  <div style="font-weight:bold; font-size:22px; color:white; line-height:1;">${song.score < 0 ? "-" : song.score.toLocaleString()} <span style="color:${getRankColor(song.rank)}; font-size:16px;">${song.rank}</span></div>
+                  <div style="font-weight:bold; font-size:20px; color:white; line-height:1;">${song.score < 0 ? "-" : song.score.toLocaleString()} <span style="color:${getRankColor(song.rank)}; font-size:16px;">${song.rank}</span></div>
                 </div>
               </div>
               <div style="position:relative; height:38px; display:flex; align-items:center; justify-content:center; padding:0 8px; box-sizing:border-box; background:${diffColor};">
