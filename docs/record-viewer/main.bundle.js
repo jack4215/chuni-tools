@@ -2036,9 +2036,8 @@
 
     async function gn() {
       const overlay = document.createElement("div");
-      overlay.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.7);display:flex;align-items:center;justify-content:center;z-index:99999;opacity:0;transition:opacity 0.1s ease;";
+      overlay.style.cssText = "position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0, 0, 0, 0.6); display:flex; align-items:center; justify-content:center; z-index:99999; opacity:0; transition:opacity 0.1s ease;";
       overlay.innerHTML = `
-        <div class="modal-bg svelte-iga5r4"></div>
         <div id="gn-modal-box" style="width:50%;max-width:32rem;background:var(--theme-bg-main, #1e1e24);padding:20px 30px;border-radius:10px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.5);">
           <h3 style="color:var(--theme-text, #fff);margin-top:0;margin-bottom:10px;">${d(wt)("share.format.title")}</h3>
           <div style="display:flex;flex-direction:column;gap:15px;justify-content:center;margin-top:20px;">
@@ -2064,11 +2063,12 @@
       document.getElementById("btn-gn-new").onclick = () => closeModal("new");
       document.getElementById("btn-gn-old").onclick = () => closeModal("old");
       document.getElementById("btn-gn-cancel").onclick = () => closeModal();
-      overlay.onclick = (e) => {
-        if (e.target === overlay) {
+      overlay.addEventListener("mousedown", (e) => {
+        const modalBox = document.getElementById("gn-modal-box");
+        if (modalBox && !modalBox.contains(e.target)) {
           closeModal();
         }
-      };
+      });
     }
 
     function mn(e) {
