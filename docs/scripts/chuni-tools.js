@@ -13,8 +13,8 @@
                 alreadyRun: "Please refresh the page before running CHUNI TOOLS again!",
                 wrongBase: `Please open CHUNITHM-NET Intl. (${e}) and login, then try again.`,
                 containerHTML: `
-                    <p>Image download feature is available.</p>
-                    <p>Go to Record viewer and click the download button at the top.</p>
+                    <p>We sincerely invite you to fill out the questionnaire.</p>
+                    <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSc-Vemiwnc1MQeIrChyDsJV5Bave685bEFNU5ErVuf_Nd6ONQ/viewform" target="_blank">【Go to Survey】</a></p>
                     <hr width="96%">
                     <p><a href="https://chuni.tsaibee.org/?lang=en_US" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools</a></p>
                     <p style="font-size:17px;"><a href="https://chuni-event.tsaibee.org/en/" target="_blank">Event Platform</a> ｜ <a href="https://chuni.tsaibee.org/statistics" target="_blank">User Stats</a> ｜ <a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">Privacy Policy</a></p>
@@ -24,8 +24,8 @@
                 alreadyRun: "請重新整理頁面後再執行 CHUNITHM 書籤工具！",
                 wrongBase: `請到 CHUNITHM-NET Intl. (${e}) 登入之後再試一次。`,
                 containerHTML: `
-                    <p>下載圖片功能已更新</p>
-                    <p>進入查分器點擊上方下載按鈕即可儲存</p>
+                    <p>誠摯邀請您填寫年度調查問卷</p>
+                    <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSc-Vemiwnc1MQeIrChyDsJV5Bave685bEFNU5ErVuf_Nd6ONQ/viewform" target="_blank">【前往問卷調查】</a></p>
                     <hr width="96%">
                     <p><a href="https://chuni.tsaibee.org/?lang=zh_TW" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools</a></p>
                     <p style="font-size:17px;"><a href="https://chuni-event.tsaibee.org/" target="_blank">賽事平台</a>　｜　<a href="https://chuni.tsaibee.org/statistics" target="_blank">使用者統計</a>　｜　<a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">隱私權政策</a></p>
