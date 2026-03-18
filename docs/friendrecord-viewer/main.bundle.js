@@ -5113,6 +5113,15 @@
         })
       }, i, l, h, c, j, jk. d] 
     }
+    let _wasDesktop = window.innerWidth > 544;
+    window.addEventListener('resize', () => {
+      let _isDesktop = window.innerWidth > 544;
+      if (_wasDesktop !== _isDesktop) {
+        _wasDesktop = _isDesktop;
+        if (typeof At !== 'undefined') At.set([...d(At)]);
+        if (typeof Ut !== 'undefined') Ut.set({...d(Ut)});
+      }
+    })
     new class extends Se {
       constructor(e) {
         super(), je(this, e, Yo, Go, i, {}, zo)
