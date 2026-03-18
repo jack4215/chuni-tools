@@ -4105,7 +4105,7 @@
     }
 
     function Fr(e) {
-      let t, n, r, o, s = (e[0].const < 0 ? "-" : (e[0].op / 1e4).toFixed(2)) + "",
+      let t, n, r, o, s = (e[0].const < 0 ? "-" : (e[0].op / 1e4).toFixed(window.innerWidth > 544 ? 3 : 2)) + "",
         a = (e[0].const < 0 ? "-" : (e[0].opMax / 1e4).toFixed(1)) + "";
       return {
         c() {
@@ -4115,7 +4115,7 @@
           M(e, t, s), M(e, n, s), k(n, r), k(n, o)
         },
         p(e, n) {
-          1 & n && s !== (s = (e[0].const < 0 ? "-" : (e[0].op / 1e4).toFixed(2)) + "") && I(t, s), 1 & n && a !== (a = (e[0].const < 0 ? "-" : (e[0].opMax / 1e4).toFixed(1)) + "") && I(o, a)
+          1 & n && s !== (s = (e[0].const < 0 ? "-" : (e[0].op / 1e4).toFixed(window.innerWidth > 544 ? 3 : 2)) + "") && I(t, s), 1 & n && a !== (a = (e[0].const < 0 ? "-" : (e[0].opMax / 1e4).toFixed(1)) + "") && I(o, a)
         },
         d(e) {
           e && E(t), e && E(n)
@@ -4957,7 +4957,7 @@
     }
 
     function Oo(t) {
-      let n, r, o, s, a, i, l, c, d, u, f, p, h, g = Cr(t[1] / 1e4, 2) + "",
+      let n, r, o, s, a, i, l, c, d, u, f, p, h, g = Cr(t[1] / 1e4, window.innerWidth > 544 ? 3 : 2) + "",
         m = (t[0] / 1e4).toFixed(1) + "",
         v = (isNaN(t[2]) ? "--" : Cr(t[2], 4)) + "";
       return {
@@ -4968,7 +4968,7 @@
           M(e, n, t), k(n, r), k(r, o), k(o, s), k(r, a), k(r, i), k(i, l), k(i, c), k(n, d), k(n, u), k(u, f), k(f, p), k(f, h)
         },
         p(e, [t]) {
-          2 & t && g !== (g = Cr(e[1] / 1e4, 2) + "") && I(s, g), 1 & t && m !== (m = (e[0] / 1e4).toFixed(1) + "") && I(c, m), 4 & t && v !== (v = (isNaN(e[2]) ? "--" : Cr(e[2], 4)) + "") && I(p, v), 4 & t && z(f, "width", e[2] + "%"), 3 & t && B(n, "aj", e[0] && e[1].toFixed() === e[0].toFixed())
+          2 & t && g !== (g = Cr(e[1] / 1e4, window.innerWidth > 544 ? 3 : 2) + "") && I(s, g), 1 & t && m !== (m = (e[0] / 1e4).toFixed(1) + "") && I(c, m), 4 & t && v !== (v = (isNaN(e[2]) ? "--" : Cr(e[2], 4)) + "") && I(p, v), 4 & t && z(f, "width", e[2] + "%"), 3 & t && B(n, "aj", e[0] && e[1].toFixed() === e[0].toFixed())
         },
         i: e,
         o: e,
