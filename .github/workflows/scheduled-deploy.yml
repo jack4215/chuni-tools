@@ -5,32 +5,25 @@ on:
     - cron: '20 20 * * *'
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Checkout schedule branch
+        uses: actions/checkout@v3
         with:
-          node-version: 20
-          cache: 'npm'
+          ref: schedule
+          fetch-depth: 0
 
-      - name: Install dependencies
-        run: npm install
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Build VitePress site
-        run: npm run build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./.vitepress/dist
-          cname: chuni.tsaibee.org
+      - name: Switch to main and merge
+        run: |
+          git fetch origin main
+          git checkout main || git checkout -b main origin/main
+          git merge origin/schedule -m "Scheduled update from schedule branch"
+          git push origin main
