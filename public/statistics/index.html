@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>CHUNITHM Tools｜Statistics</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="author" content="Jack Lu">
+  <link rel="shortcut icon" href="/data/webicon02.png">
+  <link rel="apple-touch-icon" href="/data/webicon01.png">
+  <link rel="stylesheet" href="/common/styles/userstat.css" />
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7NQS6JFY3Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7NQS6JFY3Z');
+</script>
+<body>
+  <div class="content">
+    <h2>CHUNITHM Tools｜Statistics</h2>   
+    <div class="stat-select" style="margin: 3em 0;">
+      <a href="/statistics/user">User Statistics</a>
+      <a href="/statistics/song?rs=160">Song Statistics</a>
+      <div id="footer" style="margin: 3em 0;">Developed and maintained by TSAIBEE</div>
+    </div>
+  </div>
+
+  <script>
+    const theme = localStorage.theme || 'dark';
+    const root = document.documentElement;
+
+    function applyTheme() {
+      const themes = {
+        black: { bg: '#1a1a1a', tableBg: '#202020', text: '#cecece', border: '#333', header: '#2a2a2a' },
+        purple: { bg: '#161021', tableBg: '#1d132c', text: '#cecece', border: '#3a2a4a', header: '#2b1a40' },
+        dark: { bg: '#151f28', tableBg: '#1e2a36', text: '#cecece', border: '#444', header: '#2c3a4b' }
+      };
+      const t = themes[theme] || themes.dark;
+      root.style.setProperty('--bg-color', t.bg);
+      root.style.setProperty('--table-bg-color', t.tableBg);
+      root.style.setProperty('--table-text-color', t.text);
+      root.style.setProperty('--table-border-color', t.border);
+      root.style.setProperty('--table-header-bg', t.header);
+    }
+    applyTheme();
+  </script>
+</body>
+</html>

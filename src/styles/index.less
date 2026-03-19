@@ -1,0 +1,103 @@
+@import './post.less';
+@import './font.less';
+:root {
+  // Nav 透明度
+  --vp-nav-bg-color: rgba(255, 255, 255, 0.7);
+  --vp-local-nav-bg-color: rgba(255, 255, 255, 0.7);
+}
+
+.dark {
+  // Nav 透明度
+  --vp-nav-bg-color: rgba(27, 27, 31, 0.7);
+  --vp-local-nav-bg-color: rgba(27, 27, 31, 0.7);
+}
+
+svg {
+  display: inline-block;
+}
+
+.iconify {
+  width: 16px;
+  height: 16px;
+  // color: var(--vp-c-text-1);
+  vertical-align: -0.2rem;
+}
+
+// 整体布局
+.Layout {
+  min-height: 100dvh !important;
+}
+
+// 滚动条
+:root::-webkit-scrollbar,
+.VPSidebar::-webkit-scrollbar,
+pre::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+
+  &-thumb {
+    border-radius: 6px;
+    background-color: rgba(192, 192, 192, 0.8);
+
+    &:hover {
+      background-color: rgba(128, 128, 128, 0.8);
+    }
+  }
+}
+
+// 图片放大样式
+.medium-zoom-overlay {
+  z-index: 30;
+}
+
+.medium-zoom-image {
+  z-index: 31;
+}
+
+// 去除 Nav Footer 边框/过渡
+.VPNavBar,
+.VPFooter {
+  transition: none !important;
+  border: none !important;
+}
+
+// Nav 高斯模糊 / 分割线
+.VPLocalNav {
+  backdrop-filter: blur(10px);
+}
+
+.VPNavBar {
+  &:not(.has-sidebar) {
+    backdrop-filter: blur(10px);
+  }
+
+  &.has-sidebar {
+    .content-body {
+      backdrop-filter: blur(10px);
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  .VPNavBar {
+    &:not(.has-sidebar) {
+      &:not(.top) {
+        box-shadow: 0 0.3125rem 0.3125rem -0.3125rem rgba(0, 0, 0, 0.117);
+      }
+
+      .divider {
+        display: none;
+      }
+    }
+  }
+}
+
+// Footer 链接样式
+.VPFooter a {
+  text-decoration: none !important;
+  transition: none !important;
+
+  &:hover {
+    color: var(--vp-c-brand) !important;
+  }
+}
