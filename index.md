@@ -1,12 +1,12 @@
 ---
-title: CHUNITHM Event Platform
+title: CHUNITHM Tools
 description: CHUNITHM Event Platform
 
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
-  text: "CHUNITHM Event Platform"
+  text: "CHUNITHM Tools"
   tagline: for International Ver.
   actions:
     - theme: alt

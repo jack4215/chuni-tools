@@ -7,7 +7,7 @@
     "dev": "vitepress dev --host",
     "build": "vitepress build",
     "preview": "vitepress preview",
-    "deploy": "npm run build && gh-pages -d build --cname chuni-event.tsaibee.org"
+    "deploy": "npm run build && gh-pages -b schedule -d build --cname chuni.tsaibee.org"
   },
   "keywords": [],
   "type": "module",

@@ -17,15 +17,15 @@ export default defineConfig<ThemeConfig>({
   rewrites,
 
   head: [
-    ['link', { rel: 'icon', type: 'image/png', href: '/icon2.png' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/webicon01.png' }],
     ['meta', { name: 'author', content: 'Jack Lu' }],
     ['meta', { name: 'format-detection', content: 'telephone=no' }],
-    ['meta', { property: 'og:description', content: 'CHUNITHM Event Platform' }],
+    ['meta', { property: 'og:description', content: 'CHUNITHM Tools @TSAIBEE' }],
     [
       'script',
       {
         async: true,
-        src: `https://www.googletagmanager.com/gtag/js?id=G-J91Z4GBGQQ`,
+        src: `https://www.googletagmanager.com/gtag/js?id=G-7NQS6JFY3Z`,
       },
     ],
     [
@@ -34,7 +34,7 @@ export default defineConfig<ThemeConfig>({
       `window.dataLayer = window.dataLayer || [];
        function gtag(){dataLayer.push(arguments);}
        gtag('js', new Date());
-       gtag('config', 'G-J91Z4GBGQQ');`,
+       gtag('config', 'G-7NQS6JFY3Z');`,
     ],
   ],
 
@@ -47,8 +47,8 @@ export default defineConfig<ThemeConfig>({
       label: '繁體中文',
       lang: 'zh-TW',
       link: '/',
-      title: 'CHUNITHM Event Platform',
-      description: 'CHUNITHM Event Platform',
+      title: 'CHUNITHM Tools',
+      description: 'CHUNITHM Tools @TSAIBEE',
       themeConfig: {
         posts,
         page: {
@@ -65,8 +65,7 @@ export default defineConfig<ThemeConfig>({
               { text: '成績上傳', link: '/info/usage' }
             ]
           },
-          { text: '賽事列表', link: '/page-1' },
-          { text: '書籤工具', link: 'https://chuni.tsaibee.org/?lang=zh_TW' }
+          { text: '賽事列表', link: '/page-1' }
         ],
         sidebar: {
           '/info': [
@@ -89,11 +88,11 @@ export default defineConfig<ThemeConfig>({
       label: 'English',
       lang: 'en-US',
       link: '/en/',
-      title: 'CHUNITHM Event Platform',
-      description: 'CHUNITHM Event Platform (English)',
+      title: 'CHUNITHM Tools',
+      description: 'CHUNITHM Tools @TSAIBEE',
       themeConfig: {
         posts: [],
-        logo: '/icon2.png',
+        logo: '/webicon01.png',
         outline: { level: 2 },
         nav: [
           {
@@ -103,8 +102,7 @@ export default defineConfig<ThemeConfig>({
               { text: 'Usage', link: '/en/info/usage' }
             ]
           },
-          { text: 'Event List', link: '/page-1' },
-          { text: 'CHUNITHM Tools', link: 'https://chuni.tsaibee.org/?lang=en_US' }
+          { text: 'Event List', link: '/page-1' }
         ],
         sidebar: {
           '/en/info': [
