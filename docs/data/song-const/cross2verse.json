@@ -2033,6 +2033,7 @@
     "ADV": 7,
     "EXP": 10.3,
     "MAS": 14,
+    "ULT": 15.1,
     "genre": 6,
     "release": 3,
     "newV": 0
@@ -4199,6 +4200,7 @@
     "ADV": 7,
     "EXP": 10.7,
     "MAS": 14.4,
+    "ULT": 15.1,
     "genre": 6,
     "release": 7,
     "newV": 0
@@ -14351,6 +14353,42 @@
     "ADV": 10,
     "EXP": 14.4,
     "MAS": 15.4,
+    "genre": 5,
+    "release": 21,
+    "newV": 1
+  },
+  "パステル・シタイ！": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 10.1,
+    "MAS": 13.8,
+    "genre": 5,
+    "release": 21,
+    "newV": 1
+  },
+  "彩祭ワンダーワン！": {
+    "BAS": 3,
+    "ADV": 7,
+    "EXP": 10.3,
+    "MAS": 14,
+    "genre": 5,
+    "release": 21,
+    "newV": 1
+  },
+  "Fly Better!": {
+    "BAS": 3,
+    "ADV": 6,
+    "EXP": 9.5,
+    "MAS": 13.7,
+    "genre": 5,
+    "release": 21,
+    "newV": 1
+  },
+  "Phantom Crisis": {
+    "BAS": 6,
+    "ADV": 11.9,
+    "EXP": 14.1,
+    "MAS": 15.5,
     "genre": 5,
     "release": 21,
     "newV": 1
