@@ -2306,7 +2306,7 @@
           </div>
 
           <div style="color:var(--theme-text-dim);margin-top:10px;">${d(wt)("share.format.pcnotice")}</div>
-          <div id="google-login-btn" style="margin: 0 auto;"></div>
+          <div id="google-login-btn" style="margin: 0 auto;display:flex;flex-direction:column;align-items:center;"></div>
           <button id="btn-gn-cancel" style="margin-top:20px;padding:8px 20px;background:transparent;color:#fff;border:1px solid var(--theme-border);border-radius:5px;cursor:pointer;transition:0.2s;">${d(wt)("share.format.cancel")}</button>
         </div>
       `;
