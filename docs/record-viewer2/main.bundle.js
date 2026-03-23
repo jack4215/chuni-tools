@@ -2306,6 +2306,7 @@
           </div>
 
           <div style="color:var(--theme-text-dim);margin-top:10px;">${d(wt)("share.format.pcnotice")}</div>
+          <div id="google-login-btn" style="margin: 0 auto;"></div>
           <button id="btn-gn-cancel" style="margin-top:20px;padding:8px 20px;background:transparent;color:#fff;border:1px solid var(--theme-border);border-radius:5px;cursor:pointer;transition:0.2s;">${d(wt)("share.format.cancel")}</button>
         </div>
       `;
@@ -2313,6 +2314,34 @@
       requestAnimationFrame(() => {
         overlay.style.opacity = "1";
       });
+      const initGoogleLogin = () => {
+        if (!window.google) {
+          const script = document.createElement("script");
+          script.src = "https://accounts.google.com/gsi/client";
+          script.onload = renderGoogleBtn;
+          document.head.appendChild(script);
+        } else {
+          renderGoogleBtn();
+        }
+      };
+      const renderGoogleBtn = () => {
+        google.accounts.id.initialize({
+          client_id: "536700591087-eckb49kltjrkaa80h7vjcqkj0jntf6q6.apps.googleusercontent.com",
+          callback: (response) => {
+            try {
+              const payload = JSON.parse(atob(response.credential.split(".")[1]));
+              localStorage.setItem("chuni_gid", payload.sub);
+            } catch(e) {
+              console.error("Error:", e);
+            }
+          }
+        });
+        google.accounts.id.renderButton(
+          document.getElementById("google-login-btn"),
+          { theme: "outline", size: "large", type: "standard" }
+        );
+      };
+      initGoogleLogin();
 
       const sliderMount = document.getElementById('const_slider_mount');
       let sliderComp;
@@ -3847,6 +3876,7 @@
                       ...playerData,
                       scores1: fS1,
                       scores2: fS2,
+                      gid: localStorage.getItem("chuni_gid") || undefined
                   },
                   sN: "NPrv"
               });
