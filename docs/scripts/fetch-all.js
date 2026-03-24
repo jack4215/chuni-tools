@@ -343,53 +343,61 @@
                                 const e = await i("/mobile/home/playerData");
                                 const t = e.querySelectorAll(".player_honor_short")[0];
                                 const r = /honor_bg_.*(?=\.png)/.exec(t.style.backgroundImage);
-                                let honorTextElement = t.querySelector(".player_honor_text_view span");
-                                let honorText = honorTextElement ? honorTextElement.textContent.trim() : null;
-                                let honorColor = r ? r[0].slice(9) : "normal";
-                                if (!honorText && t) {
-                                    const backgroundImage = t.style.backgroundImage;
-                                    const imageUrlMatch = backgroundImage ? backgroundImage.match(/url\(["']?(.*?)["']?\)/) : null;
-                                    const imageUrl = imageUrlMatch ? imageUrlMatch[1] : null;
-                                    if (imageUrl) {
+                                let h = t.querySelector(".player_honor_text_view span");
+                                let x = h ? h.textContent.trim() : null;
+                                let c = r ? r[0].slice(9) : "normal";
+                                if (!x && t) {
+                                    const b = t.style.backgroundImage;
+                                    const u = b ? b.match(/url\(["']?(.*?)["']?\)/) : null;
+                                    const y = u ? u[1] : null;
+                                    if (y) {
                                         try {
-                                            const response = await fetch(`https://chuni.tsaibee.org/data/title.json?t=${Date.now()}`);
-                                            const titleData = await response.json();
-                                            const matchedTitle = titleData.find(item => item.image === imageUrl);
-                                            if (matchedTitle) {
-                                                honorText = matchedTitle.title;
-                                                honorColor = matchedTitle.genre;
+                                            const f = await fetch(`https://chuni.tsaibee.org/data/title.json?t=${Date.now()}`);
+                                            const j = await f.json();
+                                            const z = j.find(o => o.image === y);
+                                            if (z) {
+                                                x = z.title;
+                                                c = z.genre;
                                             }
-                                        } catch (error) {
-                                            console.error("Error:", error);
+                                        } catch (w) {
+                                            console.error("Error:", w);
                                         }
                                     }
                                 }
                                 const a = Array.from(e.querySelectorAll(".player_rating_num_block img"))
-                                    .map(e => /rating_.*_comma.png/.test(e.src) ? "." : /rating_.*_[0-9]*(?=\.png)/.exec(e.src)[0].slice(-1))
+                                    .map(n => /rating_.*_comma.png/.test(n.src) ? "." : /rating_.*_[0-9]*(?=\.png)/.exec(n.src)[0].slice(-1))
                                     .join("");
-                                const profileDiv = e.querySelector(".box_playerprofile.clearfix, .box_playerprofile");
-                                let background = "normal";
-                                if (profileDiv) {
-                                    const styleAttr = profileDiv.getAttribute("style");
-                                    const match = styleAttr.match(/profile_(\w+)\.png/);
-                                    if (match && match[1]) {
-                                        background = match[1];
-                                    }
+                                const p = e.querySelector(".box_playerprofile.clearfix, .box_playerprofile");
+                                let bg = "normal";
+                                if (p) {
+                                    const s = p.getAttribute("style");
+                                    const m1 = s.match(/profile_(\w+)\.png/);
+                                    if (m1 && m1[1]) bg = m1[1];
                                 }
+                                const l1 = e.querySelector(".player_lv");
+                                const l2 = e.querySelector(".player_reborn");
+                                const l3 = (l1 ? parseInt(l1.textContent.trim(), 10) : 0) + ((l2 ? parseInt(l2.textContent.trim(), 10) : 0) * 100);
+                                const c1 = e.querySelector(".player_classemblem_base img");
+                                const c2 = e.querySelector(".player_classemblem_top img");
+                                const c3 = [
+                                    c1 ? parseInt((c1.src.match(/_(\d+)\.png/) || [0, 0])[1], 10) : 0,
+                                    c2 ? parseInt((c2.src.match(/_(\d+)\.png/) || [0, 0])[1], 10) : 0
+                                ];
                                 const d = await i("/mobile/collection/").catch(() => null);
                                 const m = d?.querySelector(".character_image_box img");
-
                                 const playerData = {
                                     name: e.querySelector(".player_name_in").innerHTML,
+                                    level: l3,
+                                    class: c3,
                                     honor: {
-                                        text: honorText || "Unknown",
-                                        color: honorColor
+                                        text: x || "Unknown",
+                                        color: c
                                     },
                                     rating: a,
                                     overPower: e.querySelector(".player_overpower_text").innerHTML.match(/\(([^)]+)\)/)[1],
                                     playCount: e.querySelector(".user_data_play_count .user_data_text").innerHTML,
                                     lastPlayed: Date.parse(e.querySelector(".player_lastplaydate_text").innerHTML),
-                                    ratingPn: background,
+                                    ratingPn: bg,
                                     team: e.querySelector(".player_team_name")?.innerHTML || "N/A",
                                     code: e.querySelector('.user_data_friend_code .user_data_text span[style="display:none;"]')?.innerText || "N/A",
                                     character: m?.src?.split("/").pop() || "N/A" 
