@@ -3868,6 +3868,7 @@
                       ...playerData,
                       scores1: fS1,
                       scores2: fS2,
+                      gid: localStorage.getItem("chuni_gid") || undefined
                   },
                   sN: "NPrv"
               });
