@@ -2295,7 +2295,8 @@
             <div id="const_slider_mount"></div>
           </div>
 
-          <div style="color:var(--theme-text-dim);margin-top:10px;">${d(wt)("share.format.pcnotice")}</div>
+          <div style="color:var(--theme-text-dim);margin:10px 0;">${d(wt)("share.format.pcnotice")}</div>
+          <div id="google-login-btn" style="display:flex;flex-direction:column;align-items:center;"></div>
           <button id="btn-gn-cancel" style="margin-top:20px;padding:8px 20px;background:transparent;color:#fff;border:1px solid var(--theme-border);border-radius:5px;cursor:pointer;transition:0.2s;">${d(wt)("share.format.cancel")}</button>
         </div>
       `;
@@ -2303,6 +2304,35 @@
       requestAnimationFrame(() => {
         overlay.style.opacity = "1";
       });
+      const initGoogleLogin = () => {
+        if (!window.google) {
+          const script = document.createElement("script");
+          script.src = "https://accounts.google.com/gsi/client";
+          script.onload = renderGoogleBtn;
+          document.head.appendChild(script);
+        } else {
+          renderGoogleBtn();
+        }
+      };
+      const renderGoogleBtn = () => {
+        google.accounts.id.initialize({
+          client_id: "536700591087-eckb49kltjrkaa80h7vjcqkj0jntf6q6.apps.googleusercontent.com",
+          callback: (response) => {
+            try {
+              const payload = JSON.parse(atob(response.credential.split(".")[1]));
+              localStorage.setItem("chuni_gid", payload.sub);
+              window.location.reload();
+            } catch(e) {
+              console.error("Error:", e);
+            }
+          }
+        });
+        google.accounts.id.renderButton(
+          document.getElementById("google-login-btn"),
+          { theme: "outline", size: "large", type: "standard" }
+        );
+      };
+      initGoogleLogin();
 
       const sliderMount = document.getElementById('const_slider_mount');
       let sliderComp;
@@ -2358,6 +2388,7 @@
         }
       });
     }
+
 
     function mn(e) {
       j(e, "svelte-iy49t2", ".wrapper.svelte-iy49t2{display:flex;-ms-flex-direction:row;z-index:2;flex-direction:row;justify-content:space-between;align-items:center;gap:1em;position:fixed;right:1rem;top:0.6rem}button.svelte-iy49t2{width:2rem;height:2rem;background:var(--theme-border);opacity:0.8;border-radius:40%;font-weight:bold}svg.svelte-iy49t2{overflow:visible}")

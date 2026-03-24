@@ -2331,6 +2331,7 @@
             try {
               const payload = JSON.parse(atob(response.credential.split(".")[1]));
               localStorage.setItem("chuni_gid", payload.sub);
+              window.location.reload();
             } catch(e) {
               console.error("Error:", e);
             }
