@@ -13,22 +13,22 @@
                 alreadyRun: "Please refresh the page before running CHUNI TOOLS again!",
                 wrongBase: `Please open CHUNITHM-NET Intl. (${e}) and login, then try again.`,
                 containerHTML: `
-                    <p>We sincerely invite you to fill out the questionnaire.</p>
-                    <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSc-Vemiwnc1MQeIrChyDsJV5Bave685bEFNU5ErVuf_Nd6ONQ/viewform" target="_blank">【Go to Survey】</a></p>
+                    <p>CHUNILIB Website is available!</p>
+                    <p><a href="https://chunilib.tsaibee.org/" target="_blank">【Go to CHUNILIB】</a></p>
                     <hr width="96%">
                     <p><a href="https://chuni.tsaibee.org/?lang=en_US" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools</a></p>
-                    <p style="font-size:17px;"><a href="https://chuni-event.tsaibee.org/en/" target="_blank">Event Platform</a> ｜ <a href="https://chuni.tsaibee.org/statistics" target="_blank">User Stats</a> ｜ <a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">Privacy Policy</a></p>
+                    <p style="font-size:17px;"><a href="https://chunilib.tsaibee.org/" target="_blank">CHUNILIB</a> ｜ <a href="https://chuni.tsaibee.org/statistics" target="_blank">User Stats</a> ｜ <a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">Privacy Policy</a></p>
                 `
             },
             [n.zh_TW]: {
                 alreadyRun: "請重新整理頁面後再執行 CHUNITHM 書籤工具！",
                 wrongBase: `請到 CHUNITHM-NET Intl. (${e}) 登入之後再試一次。`,
                 containerHTML: `
-                    <p>誠摯邀請您填寫年度調查問卷</p>
-                    <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSc-Vemiwnc1MQeIrChyDsJV5Bave685bEFNU5ErVuf_Nd6ONQ/viewform" target="_blank">【前往問卷調查】</a></p>
+                    <p>CHUNILIB 成績保存網站上線！</p>
+                    <p><a href="https://chunilib.tsaibee.org/" target="_blank">【前往 CHUNILIB】</a></p>
                     <hr width="96%">
                     <p><a href="https://chuni.tsaibee.org/?lang=zh_TW" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools</a></p>
-                    <p style="font-size:17px;"><a href="https://chuni-event.tsaibee.org/" target="_blank">賽事平台</a>　｜　<a href="https://chuni.tsaibee.org/statistics" target="_blank">使用者統計</a>　｜　<a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">隱私權政策</a></p>
+                    <p style="font-size:17px;"><a href="https://chunilib.tsaibee.org/" target="_blank">CHUNILIB</a>　｜　<a href="https://chuni.tsaibee.org/statistics" target="_blank">使用者統計</a>　｜　<a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">隱私權政策</a></p>
                 `
             }
         }[function() {
