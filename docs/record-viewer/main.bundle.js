@@ -2296,6 +2296,7 @@
           </div>
 
           <div style="color:var(--theme-text-dim);margin:10px 0;">${d(wt)("share.format.pcnotice")}</div>
+          <h3 style="color:var(--theme-text, #fff);margin-top:30px;margin-bottom:10px;">${d(wt)("share.chunirec.title")}</h3>
           <div id="google-login-btn" style="display:flex;flex-direction:column;align-items:center;"></div>
           <button id="btn-gn-cancel" style="margin-top:20px;padding:8px 20px;background:transparent;color:#fff;border:1px solid var(--theme-border);border-radius:5px;cursor:pointer;transition:0.2s;">${d(wt)("share.format.cancel")}</button>
         </div>
