@@ -2345,7 +2345,6 @@
             }
           }
         });
-        });
         google.accounts.id.renderButton(
           document.getElementById("google-login-btn"),
           { theme: "outline", size: "large", type: "standard" }
