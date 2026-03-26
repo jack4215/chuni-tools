@@ -3683,7 +3683,7 @@
       let t, n, r, o, s, a, i, l, c, d, u, f, p, h, g, m, v, b, y, w, $, x, j, S = e[3].name + "",
         T = e[3].rating + "",
         C = e[3].overPower + "",
-        N = e[3].honor.text + "";
+        N = e[3].honors[0].text + "";
       y = new Hr({
         props: {
           title: e[4]("player.generic.generatedAt"),
@@ -3726,7 +3726,7 @@
       }
       return ~($ = P(e)) && (x = L[$] = U[$](e)), {
         c() {
-          t = H("div"),this.t = t, n = H("h2"), r = A(S), o = D(), s = H("div"), a = H("h2"), i = A(T), l = D(), c = H("span"), d = A("OP "), u = A(C), f = D(), p = H("div"), h = H("span"), g = A(N), v = D(), b = H("div"), $e(y.$$.fragment), w = D(), x && x.c(), O(n, "class", "stats-name svelte-1rv2o5c"), O(a, "class", "svelte-1rv2o5c"), O(c, "class", "svelte-1rv2o5c"), O(s, "class", "stats-rating svelte-1rv2o5c"), O(p, "class", "stats-honor svelte-1rv2o5c"), O(p, "data-honor", m = e[3].honor.color), B(p, "marquee", !0), O(b, "class", "stats-items svelte-1rv2o5c"), O(t, "class", "wrapper svelte-1rv2o5c"), O(t, "style", `background: ${getBackgroundColor(e[3].ratingPn)}`)
+          t = H("div"),this.t = t, n = H("h2"), r = A(S), o = D(), s = H("div"), a = H("h2"), i = A(T), l = D(), c = H("span"), d = A("OP "), u = A(C), f = D(), p = H("div"), h = H("span"), g = A(N), v = D(), b = H("div"), $e(y.$$.fragment), w = D(), x && x.c(), O(n, "class", "stats-name svelte-1rv2o5c"), O(a, "class", "svelte-1rv2o5c"), O(c, "class", "svelte-1rv2o5c"), O(s, "class", "stats-rating svelte-1rv2o5c"), O(p, "class", "stats-honor svelte-1rv2o5c"), O(p, "data-honor", m = e[3].honors[0].color), B(p, "marquee", !0), O(b, "class", "stats-items svelte-1rv2o5c"), O(t, "class", "wrapper svelte-1rv2o5c"), O(t, "style", `background: ${getBackgroundColor(e[3].ratingPn)}`)
           const bgColor = getBackgroundColor(e[3].ratingPn);
           const bgShine = getBackgroundShine(e[3].ratingPn);
           if (bgColor) {
