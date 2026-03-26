@@ -2320,11 +2320,18 @@
           client_id: "536700591087-eckb49kltjrkaa80h7vjcqkj0jntf6q6.apps.googleusercontent.com",
           callback: (response) => {
             try {
-              const payload = JSON.parse(atob(response.credential.split(".")[1]));
+              let base64Url = response.credential.split(".")[1];
+              let base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+              let pad = base64.length % 4;
+              if (pad) {
+                base64 += new Array(5 - pad).join('=');
+              }
+              const payload = JSON.parse(atob(base64));
               localStorage.setItem("chuni_gid", payload.sub);
               window.location.reload();
             } catch(e) {
               console.error("Error:", e);
+              alert("Login Error");
             }
           }
         });
