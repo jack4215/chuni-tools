@@ -4020,7 +4020,7 @@
           M(e, t, m), k(t, n), k(n, r), k(t, o), k(t, s), k(s, a), k(a, i), k(s, l), k(s, c), k(c, d), k(c, u), k(t, f), k(t, p), k(p, h), k(h, g), k(t, v), k(t, b), xe(y, b, null), k(b, w), ~$ && L[$].m(b, null), j = !0
         },
         p(e, [t]) {
-          (!j || 8 & t) && S !== (S = e[3].name + "") && I(r, S), (!j || 8 & t) && T !== (T = e[3].rating + "") && I(i, T), (!j || 8 & t) && C !== (C = e[3].overPower + "") && I(u, C), (!j || 8 & t) && N !== (N = e[3].honor.text + "") && I(g, N), (!j || 8 & t && m !== (m = e[3].honor.color)) && O(p, "data-honor", m);
+          (!j || 8 & t) && S !== (S = e[3].name + "") && I(r, S), (!j || 8 & t) && T !== (T = e[3].rating + "") && I(i, T), (!j || 8 & t) && C !== (C = e[3].overPower + "") && I(u, C), (!j || 8 & t) && N !== (N = e[3].honors[0].text + "") && I(g, N), (!j || 8 & t && m !== (m = e[3].honors[0].color)) && O(p, "data-honor", m);
           const n = {};
           16 & t && (n.title = e[4]("player.generic.generatedAt")), y.$set(n);
           let o = $;
