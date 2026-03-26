@@ -341,28 +341,40 @@
                         case "playerStats":
                             s = async function () {
                                 const e = await i("/mobile/home/playerData");
-                                const t = e.querySelectorAll(".player_honor_short")[0];
-                                const r = /honor_bg_.*(?=\.png)/.exec(t.style.backgroundImage);
-                                let h = t.querySelector(".player_honor_text_view span");
-                                let x = h ? h.textContent.trim() : null;
-                                let c = r ? r[0].slice(9) : "normal";
-                                if (!x && t) {
-                                    const b = t.style.backgroundImage;
-                                    const u = b ? b.match(/url\(["']?(.*?)["']?\)/) : null;
-                                    const y = u ? u[1] : null;
-                                    if (y) {
-                                        try {
-                                            const f = await fetch(`https://chuni.tsaibee.org/data/title.json?t=${Date.now()}`);
-                                            const j = await f.json();
-                                            const z = j.find(o => o.image === y);
-                                            if (z) {
-                                                x = z.title;
-                                                c = z.genre;
+                                const honorElements = Array.from(e.querySelectorAll(".player_honor_short"));
+                                let honors = [];
+                                let titleJson = null;
+                                for (const t of honorElements) {
+                                    let h = t.querySelector(".player_honor_text_view span");
+                                    let x = h ? h.textContent.trim() : null;
+                                    const b = t.style.backgroundImage || "";
+                                    if (!x && !b) continue;
+                                    const r = /honor_bg_.*(?=\.png)/.exec(b);
+                                    let c = r ? r[0].slice(9) : "normal";
+                                    if (!x && b) {
+                                        const u = b.match(/url\(["']?(.*?)["']?\)/);
+                                        const y = u ? u[1] : null;
+                                        if (y) {
+                                            x = y.split('/').pop(); 
+                                            try {
+                                                if (!titleJson) {
+                                                    const f = await fetch(`https://chuni.tsaibee.org/data/title.json?t=${Date.now()}`);
+                                                    titleJson = await f.json();
+                                                }
+                                                const z = titleJson.find(o => o.image === y);
+                                                if (z) {
+                                                    x = z.title;
+                                                    c = z.genre;
+                                                }
+                                            } catch (w) {
+                                                console.error("Error:", w);
                                             }
-                                        } catch (w) {
-                                            console.error("Error:", w);
                                         }
                                     }
+                                    honors.push({
+                                        text: x || "Unknown",
+                                        color: c
+                                    });
                                 }
                                 const a = Array.from(e.querySelectorAll(".player_rating_num_block img"))
                                     .map(n => /rating_.*_comma.png/.test(n.src) ? "." : /rating_.*_[0-9]*(?=\.png)/.exec(n.src)[0].slice(-1))
@@ -385,14 +397,12 @@
                                 ];
                                 const d = await i("/mobile/collection/").catch(() => null);
                                 const m = d?.querySelector(".character_image_box img");
+                                
                                 const playerData = {
                                     name: e.querySelector(".player_name_in").innerHTML,
                                     level: l3,
                                     class: c3,
-                                    honor: {
-                                        text: x || "Unknown",
-                                        color: c
-                                    },
+                                    honor: honors,
                                     rating: a,
                                     overPower: e.querySelector(".player_overpower_text").innerHTML.match(/\(([^)]+)\)/)[1],
                                     playCount: e.querySelector(".user_data_play_count .user_data_text").innerHTML,
