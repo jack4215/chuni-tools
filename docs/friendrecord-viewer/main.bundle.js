@@ -1852,7 +1852,7 @@
               </div>
               <div style="position:relative; height:38px; display:flex; align-items:center; justify-content:center; padding:0 8px; box-sizing:border-box; background:${diffColor};">
                 <div style="position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); z-index:1;"></div>
-                <div style="position:relative; z-index:2; font-size:15px; font-weight:bold; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2;">
+                <div style="position:relative; z-index:2; font-size:16px; font-weight:bold; color:#fff; white-space:nowrap; overflow:hidden; width:100%; text-align:center; line-height:1.2;">
                   ${song.title}
                 </div>
               </div>
@@ -2086,7 +2086,7 @@
               </div>
               <div style="position:relative; height:38px; display:flex; align-items:center; justify-content:center; padding:0 8px; box-sizing:border-box; background:${diffColor};">
                 <div style="position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); z-index:1;"></div>
-                <div style="position:relative; z-index:2; font-size:15px; font-weight:bold; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; text-align:center; line-height:1.2;">
+                <div style="position:relative; z-index:2; font-size:16px; font-weight:bold; color:#fff; white-space:nowrap; overflow:hidden; width:100%; text-align:center; line-height:1.2;">
                   ${song.title}
                 </div>
               </div>
