@@ -27,10 +27,10 @@
                 containerHTML: `
                     <p>CHUNILIB 成績管理網站上線！</p>
                     <p>不必經過 CHUNITHM NET 也可查看分數，並與全世界的玩家比拼，歡迎前往體驗！</p>
-                    <p><a href="https://chunilib.tsaibee.org/" target="_blank">【立即前往 CHUNILIB >>】</a></p>
+                    <p><a href="https://chunilib.tsaibee.org/?lang=zh_TW" target="_blank">【立即前往 CHUNILIB >>】</a></p>
                     <hr width="96%">
                     <p><a href="https://chuni.tsaibee.org/?lang=zh_TW" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools</a></p>
-                    <p style="font-size:17px;"><a href="https://chunilib.tsaibee.org/" target="_blank">CHUNILIB</a>　｜　<a href="https://chuni.tsaibee.org/statistics" target="_blank">使用者統計</a>　｜　<a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">隱私權政策</a></p>
+                    <p style="font-size:17px;"><a href="https://chunilib.tsaibee.org/?lang=zh_TW" target="_blank">CHUNILIB</a>　｜　<a href="https://chuni.tsaibee.org/statistics" target="_blank">使用者統計</a>　｜　<a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">隱私權政策</a></p>
                 `
             }
         }[function() {
