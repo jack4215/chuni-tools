@@ -5394,17 +5394,26 @@
       target: document.body
     })
     const observer = new MutationObserver((mutations, obs) => {
-      if (document.querySelector("main")) {
+      if (document.querySelector("main tbody tr")) {
         obs.disconnect();
         setTimeout(() => {
           const hasGid = !!localStorage.getItem("chuni_gid");
           const msg = hasGid ? d(wt)("record.fetch.loggedin") : d(wt)("record.fetch.notloggedin");
           const displayTime = hasGid ? 6000 : 15000;
-          St.set(!1); jt.set(!0); kt.set(msg);
+          const toast = document.createElement("div");
+          toast.style.cssText = ` position: fixed; z-index: 9999; bottom: 0.5rem; left: 0.5rem; padding: 0.5rem; border-radius: 0.5rem; background-color: rgba(0, 0, 0, 0.533); backdrop-filter: blur(2px); transform: translateY(100px); opacity: 0; transition: transform 0.4s cubic-bezier(0.1, 0.8, 0.2, 1), opacity 0.4s ease; `;
+          toast.innerHTML = `<span style="color: var(--theme-text-dim); font-size: 1em;">${msg}</span>`;
+          document.body.appendChild(toast);
+          requestAnimationFrame(() => {
+            toast.style.transform = "translateY(0)";
+            toast.style.opacity = "1";
+          });
           setTimeout(() => {
-            jt.set(!1);
+            toast.style.transform = "translateY(100px)";
+            toast.style.opacity = "0";
+            setTimeout(() => toast.remove(), 400); 
           }, displayTime);
-        }, 300); 
+        }, 200); 
       }
     });
     observer.observe(document.body, { childList: true, subtree: true });
