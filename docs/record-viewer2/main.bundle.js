@@ -5409,11 +5409,21 @@
           const hasGid = !!localStorage.getItem("chuni_gid");
           const msg = hasGid ? d(wt)("record.fetch.loggedin") : d(wt)("record.fetch.notloggedin");
           const displayTime = hasGid ? 6000 : 15000;
-          St.set(!1); jt.set(!0); kt.set(msg);
+          const toast = document.createElement("div");
+          toast.className = "wrapper svelte-1jd1sr0";
+          toast.style.cssText = "transform: translateY(100px); opacity: 0; transition: transform 0.4s cubic-bezier(0.1, 0.8, 0.2, 1), opacity 0.4s ease;";
+          toast.innerHTML = `<span class="text svelte-1jd1sr0">${msg}</span>`;
+          document.body.appendChild(toast);
+          requestAnimationFrame(() => {
+            toast.style.transform = "translateY(0)";
+            toast.style.opacity = "1";
+          });
           setTimeout(() => {
-            jt.set(!1);
+            toast.style.transform = "translateY(100px)";
+            toast.style.opacity = "0";
+            setTimeout(() => toast.remove(), 400); 
           }, displayTime);
-        }, 300); 
+        }, 200); 
       }
     });
     observer.observe(document.body, { childList: true, subtree: true });
