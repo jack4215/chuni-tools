@@ -5402,13 +5402,19 @@
     }({
       target: document.body
     })
-    setTimeout(() => {
-      const hasGid = !!localStorage.getItem("chuni_gid");
-      const msg = hasGid ? d(wt)("record.fetch.loggedin") : d(wt)("record.fetch.notloggedin");
-      St.set(!1); jt.set(!0); kt.set(msg);
-      setTimeout(() => {
-        jt.set(!1);
-      }, 6000);
-    }, 2000);
+    const observer = new MutationObserver((mutations, obs) => {
+      if (document.querySelector("main")) {
+        obs.disconnect();
+        setTimeout(() => {
+          const hasGid = !!localStorage.getItem("chuni_gid");
+          const msg = hasGid ? d(wt)("record.fetch.loggedin") : d(wt)("record.fetch.notloggedin");
+          St.set(!1); jt.set(!0); kt.set(msg);
+          setTimeout(() => {
+            jt.set(!1);
+          }, 6000);
+        }, 500); 
+      }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
   })()
 })();
