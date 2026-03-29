@@ -5403,7 +5403,7 @@
       target: document.body
     })
     const observer = new MutationObserver((mutations, obs) => {
-      if (document.querySelector("main")) {
+      if (document.querySelector("main tbody tr")) {
         obs.disconnect();
         setTimeout(() => {
           const hasGid = !!localStorage.getItem("chuni_gid");
@@ -5411,7 +5411,7 @@
           const displayTime = hasGid ? 6000 : 15000;
           const toast = document.createElement("div");
           toast.className = "wrapper svelte-1jd1sr0";
-          toast.style.cssText = "transform: translateY(100px); opacity: 0; transition: transform 0.4s cubic-bezier(0.1, 0.8, 0.2, 1), opacity 0.4s ease;";
+          toast.style.cssText = "position: fixed; z-index: 9999; bottom: 0.5rem; left: 0.5rem; transform: translateY(100px); opacity: 0; transition: transform 0.4s cubic-bezier(0.1, 0.8, 0.2, 1), opacity 0.4s ease;";
           toast.innerHTML = `<span class="text svelte-1jd1sr0">${msg}</span>`;
           document.body.appendChild(toast);
           requestAnimationFrame(() => {
@@ -5423,7 +5423,7 @@
             toast.style.opacity = "0";
             setTimeout(() => toast.remove(), 400); 
           }, displayTime);
-        }, 200); 
+        }, 300); 
       }
     });
     observer.observe(document.body, { childList: true, subtree: true });
