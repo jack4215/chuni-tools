@@ -95,14 +95,7 @@
                 r.href = t("fetch-all") + "/common/styles/inject.css",
                 e.innerText = s.analyzeRating,
                 e.href = t("fetch-all") + "/record-viewer/#all",
-                e.addEventListener("click", (evt => {
-                    evt.preventDefault();
-                    if (window.chuniViewer && !window.chuniViewer.closed) {
-                        window.chuniViewer.focus();
-                    } else {
-                        window.chuniViewer = window.open(e.href, "_blank");
-                    }
-                })),
+                e.target = "recordViewer",
                 l.getElementsByTagName("head")[0].appendChild(r),
                 r.addEventListener("load", ( () => {
                     l.querySelector(".clearfix")?.insertAdjacentElement("afterend", e);
