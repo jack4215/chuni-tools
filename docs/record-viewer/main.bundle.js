@@ -1726,18 +1726,24 @@
       try {
         let idxMap = [];
         try {
-          let res = await fetch('../data/idx.json');
-          if(!res.ok) res = await fetch('/data/idx.json');
+          let res = await fetch('../data/idx2.json');
+          if(!res.ok) res = await fetch('/data/idx2.json');
           if(res.ok) idxMap = await res.json();
         } catch(err) {
           console.warn("Failed to fetch idx.json", err);
         }
         const getJacketUrl = (title) => {
-          const song = idxMap.find(s => s.title === title || Xe(s.title) === title || s.title === Xe(title));
-          const imgFile = (song && song.image) ? song.image : "0000000000000000.jpg";
-          const officialUrl = "chunithm-net-eng.com/mobile/img/" + imgFile;
-          return "https://wsrv.nl/?url=" + officialUrl + "&w=200&v=" + Math.random();
-        };
+        const song = idxMap.find(s => s.title === title || Xe(s.title) === title || s.title === Xe(title));
+        let officialUrl = "chunithm-net-eng.com/mobile/img/0000000000000000.jpg";
+        if (song) {
+          if (song.image2) {
+            officialUrl = "chuni-event.tsaibee.org/fools/" + song.image2;
+          } else if (song.image) {
+            officialUrl = "chunithm-net-eng.com/mobile/img/" + song.image;
+          }
+        }
+        return "https://wsrv.nl/?url=" + officialUrl + "&w=200&v=" + Math.random();
+      };
         const diffColors = { "ULT": "var(--theme-song-ult)", "MAS": "var(--theme-song-mas)", "EXP": "var(--theme-song-exp)", "ADV": "var(--theme-song-adv)", "BAS": "var(--theme-song-bas)" };
         const getClearLabel = (clr) => {
           if(clr === "AJ") return '<div style="color:#ffdf75;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">ALL JUSTICE</div>';
@@ -2031,20 +2037,24 @@
       try {
         let idxMap = [];
         try {
-          let res = await fetch('../data/idx.json');
-          if(!res.ok) res = await fetch('/data/idx.json');
+          let res = await fetch('../data/idx2.json');
+          if(!res.ok) res = await fetch('/data/idx2.json');
           if(res.ok) idxMap = await res.json();
         } catch(err) {
           console.warn("Failed to fetch idx.json", err);
         }
-        
         const getJacketUrl = (title) => {
           const song = idxMap.find(s => s.title === title || Xe(s.title) === title || s.title === Xe(title));
-          const imgFile = (song && song.image) ? song.image : "0000000000000000.jpg";
-          const officialUrl = "chunithm-net-eng.com/mobile/img/" + imgFile;
+          let officialUrl = "chunithm-net-eng.com/mobile/img/0000000000000000.jpg";
+          if (song) {
+            if (song.image2) {
+              officialUrl = "chuni-event.tsaibee.org/fools/" + song.image2;
+            } else if (song.image) {
+              officialUrl = "chunithm-net-eng.com/mobile/img/" + song.image;
+            }
+          }
           return "https://wsrv.nl/?url=" + officialUrl + "&w=200&v=" + Math.random();
         };
-        
         const diffColors = { "ULT": "var(--theme-song-ult)", "MAS": "var(--theme-song-mas)", "EXP": "var(--theme-song-exp)", "ADV": "var(--theme-song-adv)", "BAS": "var(--theme-song-bas)" };
         const getClearLabel = (clr) => {
           if(clr === "AJ") return '<div style="color:#ffdf75;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">ALL JUSTICE</div>';
@@ -5398,7 +5408,7 @@
         setTimeout(() => {
           const hasGid = !!localStorage.getItem("chuni_gid");
           const msg = hasGid ? d(wt)("record.fetch.loggedin") : d(wt)("record.fetch.notloggedin");
-          const displayTime = hasGid ? 6000 : 60000;
+          const displayTime = hasGid ? 6000 : 20000;
           const toast = document.createElement("div");
           toast.style.cssText = ` position: fixed; z-index: 9999; bottom: 0.5rem; left: 0.5rem; padding: 0.5rem; border-radius: 0.5rem; background-color: rgba(0, 0, 0, 0.533); backdrop-filter: blur(2px); transform: translateY(100px); opacity: 0; transition: transform 0.4s cubic-bezier(0.1, 0.8, 0.2, 1), opacity 0.4s ease; `;
           toast.innerHTML = `<span style="color: var(--theme-text-dim); font-size: 1em;">${msg}</span>`;
