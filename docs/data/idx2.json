@@ -3047,7 +3047,7 @@
     {
         "id": "2184",
         "title": "ENDYMION",
-        "image": "6b34df2de18884b8.jpg"
+        "image2": "6b34df2de18884b8.jpg"
     },
     {
         "id": "2266",
@@ -4147,7 +4147,7 @@
     {
         "id": "428",
         "title": "Aleph-0",
-        "image": "986a1c6047f3033e.jpg"
+        "image2": "986a1c6047f3033e.jpg"
     },
     {
         "id": "2289",
@@ -5847,7 +5847,7 @@
     {
         "id": "180",
         "title": "怒槌",
-        "image": "a732d43fd2a11e8f.jpg"
+        "image2": "a732d43fd2a11e8f.jpg"
     },
     {
         "id": "146",
@@ -6272,7 +6272,7 @@
     {
         "id": "465",
         "title": "macrocosmos",
-        "image": "d587d2f18f560680.jpg"
+        "image2": "d587d2f18f560680.jpg"
     },
     {
         "id": "618",
@@ -6482,7 +6482,7 @@
     {
         "id": "788",
         "title": "Rebellion",
-        "image": "f3f526bb5400bcb6.jpg"
+        "image2": "f3f526bb5400bcb6.jpg"
     },
     {
         "id": "825",
@@ -7267,7 +7267,7 @@
     {
         "id": "2442",
         "title": "βlαnoir",
-        "image": "fd38d9c410c9ba31.jpg"
+        "image2": "fd38d9c410c9ba31.jpg"
     },
     {
         "id": "2457",
@@ -7482,7 +7482,7 @@
     {
         "id": "2651",
         "title": "Acid God",
-        "image": "8e4490da0e564cbd.jpg"
+        "image2": "8e4490da0e564cbd.jpg"
     },
     {
         "id": "2652",
@@ -7557,7 +7557,7 @@
     {
         "id": "2744",
         "title": "Crush the Dystopia",
-        "image": "df3d1d052c80377e.jpg"
+        "image2": "df3d1d052c80377e.jpg"
     },
     {
         "id": "2764",
@@ -7712,17 +7712,17 @@
     {
         "id": "2858",
         "title": "Everything Will Be One",
-        "image": "48385e2aa0151ac5.jpg"
+        "image2": "48385e2aa0151ac5.jpg"
     },
     {
         "id": "2869",
         "title": "OUTRAGE",
-        "image": "f4150a747aa00ceb.jpg"
+        "image2": "f4150a747aa00ceb.jpg"
     },
     {
         "id": "2880",
         "title": "輪廻玲々",
-        "image": "27a198d8502ebd31.jpg"
+        "image2": "27a198d8502ebd31.jpg"
     },
     {
         "id": "2891",
@@ -7737,6 +7737,6 @@
     {
         "id": "2950",
         "title": "DOMiNUS_GRAiL",
-        "image": "351f97f8eb271e94.jpg"
+        "image2": "351f97f8eb271e94.jpg"
     }
 ]
