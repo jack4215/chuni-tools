@@ -1719,12 +1719,10 @@
       const runId = Date.now(); 
       const mainEl = document.querySelector("main");
       if (null == mainEl) return alert(d(wt)("share.error", { error: "resultNode is null" }));
-      
       const loading = document.createElement("div");
       loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>" + d(wt)("share.loading.preparing") + "</div>";
       loading.style.cssText = "position:fixed;top:0;left:0;width:"+window.innerWidth+"px; height:"+window.innerHeight+"px;background:#1e1e24;display:flex;align-items:center;justify-content:center;color:white;z-index:99999;font-weight:bold;text-align:center;font-size:1.2em;";
       document.body.appendChild(loading);
-      
       try {
         let idxMap = [];
         try {
@@ -1734,28 +1732,24 @@
         } catch(err) {
           console.warn("Failed to fetch idx.json", err);
         }
-        
         const getJacketUrl = (title) => {
-          const song = idxMap.find(s => s.title === title || Xe(s.title) === title || s.title === Xe(title));
-          let officialUrl = "chunithm-net-eng.com/mobile/img/0000000000000000.jpg";
-          if (song) {
-            if (song.image2) {
-              officialUrl = "chuni-event.tsaibee.org/fools/" + song.image2;
-            } else if (song.image) {
-              officialUrl = "chunithm-net-eng.com/mobile/img/" + song.image;
-            }
+        const song = idxMap.find(s => s.title === title || Xe(s.title) === title || s.title === Xe(title));
+        let officialUrl = "chunithm-net-eng.com/mobile/img/0000000000000000.jpg";
+        if (song) {
+          if (song.image2) {
+            officialUrl = "chuni-event.tsaibee.org/fools/" + song.image2;
+          } else if (song.image) {
+            officialUrl = "chunithm-net-eng.com/mobile/img/" + song.image;
           }
-          return "https://wsrv.nl/?url=" + officialUrl + "&w=200&v=" + Math.random();
-        };
-        
+        }
+        return "https://wsrv.nl/?url=" + officialUrl + "&w=200&v=" + Math.random();
+      };
         const diffColors = { "ULT": "var(--theme-song-ult)", "MAS": "var(--theme-song-mas)", "EXP": "var(--theme-song-exp)", "ADV": "var(--theme-song-adv)", "BAS": "var(--theme-song-bas)" };
-        
         const getClearLabel = (clr) => {
           if(clr === "AJ") return '<div style="color:#ffdf75;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">ALL JUSTICE</div>';
           if(clr === "FC") return '<div style="color:#a3ccf5;font-weight:bold;letter-spacing:1px;margin-bottom:2px;font-size:13px;line-height:1;">FULL COMBO</div>';
           return '';
         };
-        
         const getRankColor = (rank) => {
           if(rank === "MAX") return "var(--theme-clear-ajc)";
           if(rank === "SSS+") return "#68fb60";
@@ -1769,7 +1763,6 @@
           if(rank === "A") return "#80d5ff";
           return "var(--theme-text-dim)";
         };
-        
         const stats = d(Ut);
         const allRecords = d(At);
         const bestRecords = allRecords.filter(item => (item.newV === 0 || (item.newV === 2 && item.difficulty !== "ULT")) && item.score !== -1).slice(0, 30);
@@ -1781,54 +1774,15 @@
         const ratingValue = parseFloat(fullRatingStr);
         const mainRating = fullRatingStr.slice(0, -2);
         const subRating = fullRatingStr.slice(-2);
-        
-        function generateRatingImageBase64(mainText, subText, val) {
-            const canvas = document.createElement('canvas');
-            canvas.width = 180;
-            canvas.height = 70;
-            const ctx = canvas.getContext('2d');
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            ctx.shadowColor = "rgba(0, 0, 0, 0.7)";
-            ctx.shadowOffsetY = 2;
-            ctx.shadowBlur = 4;
-
-            let gradient = ctx.createLinearGradient(0, 5, 0, 55);
-            if (val >= 17) {
-                gradient.addColorStop(0.18, "#fff970"); gradient.addColorStop(0.30, "#ff7c7c");
-                gradient.addColorStop(0.45, "#ff898b"); gradient.addColorStop(0.58, "#f602d9");
-                gradient.addColorStop(0.65, "#496bff"); gradient.addColorStop(0.72, "#03c4ff");
-                gradient.addColorStop(0.80, "#01dc9b");
-            } else if (val >= 16) {
-                gradient.addColorStop(0.20, "#ff8276"); gradient.addColorStop(0.40, "#ffdf70");
-                gradient.addColorStop(0.60, "#8cff70"); gradient.addColorStop(0.75, "#70dfff");
-            } else if (val >= 15.25) {
-                gradient.addColorStop(0.20, "#ffe089"); gradient.addColorStop(0.50, "#fffffe");
-                gradient.addColorStop(0.55, "#ffd789"); gradient.addColorStop(0.90, "#fff8eb");
-            } else if (val >= 14.5) {
-                gradient.addColorStop(0.20, "#f5a507"); gradient.addColorStop(0.50, "#fae294");
-                gradient.addColorStop(0.55, "#f2a900"); gradient.addColorStop(0.90, "#fff262");
-            } else {
-                gradient = "#ffffff";
-            }
-
-            ctx.fillStyle = gradient;
-            ctx.font = "bold 52px 'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif";
-            ctx.fillText(mainText, 5, 50);
-            
-            const mainWidth = ctx.measureText(mainText).width;
-            ctx.font = "bold 36px 'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif";
-            ctx.fillText(subText, 5 + mainWidth + 2, 50);
-
-            return canvas.toDataURL('image/png');
-        }
-
-        let ratingHtml = '';
-        if (ratingValue >= 14.5) {
-            const ratingB64 = generateRatingImageBase64(mainRating, subRating, ratingValue);
-            ratingHtml = `<img src="${ratingB64}" style="height: 55px; width: auto; object-fit: contain; vertical-align: bottom; margin-bottom: -4px;" crossorigin="anonymous" />`;
-        } else {
-            ratingHtml = `<span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${mainRating}<span style="font-size:36px;">${subRating}</span></span>`;
+        let ratingHtml = `<span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${mainRating}<span style="font-size:36px;">${subRating}</span></span>`;
+        if (ratingValue >= 17) {
+            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.99));"><span style="background: linear-gradient(to bottom, #fff970 18%, #ff7c7c 30%, #ff898b 45%, #f602d9 58%, #496bff 65%, #03c4ff 72%, #01dc9b 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #fff970 18%, #ff7c7c 30%, #ff898b 45%, #f602d9 58%, #496bff 65%, #03c4ff 72%, #01dc9b 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
+        } else if (ratingValue >= 16) {
+            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.99));"><span style="background: linear-gradient(to bottom, #ff8276 20%, #ffdf70 40%, #8cff70 60%, #70dfff 75%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #ff8276 20%, #ffdf70 40%, #8cff70 60%, #70dfff 75%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
+        } else if (ratingValue >= 15.25) {
+            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.99));"><span style="background: linear-gradient(to bottom, #ffe089 20%, #fffffe 50%, #ffd789 55%, #fff8eb 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #ffe089 20%, #fffffe 50%, #ffd789 55%, #fff8eb 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
+        } else if (ratingValue >= 14.5) {
+            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.99));"><span style="background: linear-gradient(to bottom, #f5a507 20%, #fae294 50%, #f2a900 55%, #fff262 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #f5a507 20%, #fae294 50%, #f2a900 55%, #fff262 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
         }
 
         const genTimeStr = new Date().toLocaleString();
@@ -1836,17 +1790,14 @@
         if (opString !== '---' && !opString.includes('%')) {
             opString += '%';
         }
-        
         let topBgStyle = "background: #2b2b33; border: 2px solid #aaaaaa;";
         const profileNode = document.querySelector('.wrapper.svelte-1rv2o5c');
         if (profileNode && profileNode.style.background) {
             topBgStyle = `background: ${profileNode.style.background}; border: 3px solid transparent;`;
         }
-        
         const charImgFile = stats?.character || "5bde9b9f1846049c.png";
         const charOfficialUrl = "chunithm-net-eng.com/mobile/img/" + charImgFile;
         const charProxyUrl = "https://wsrv.nl/?url=" + charOfficialUrl;
-        
         let chartHtml = '';
         if (bestRecords.length > 0) {
             const chartData = bestRecords.map(s => ({ rating: s.rating / 100, rank: s.rank }));
@@ -1862,10 +1813,12 @@
             else stepUnit = 0.05;
             let yMax = parseFloat((Math.ceil(Math.round(maxVal * 1000) / Math.round(stepUnit * 1000)) * stepUnit).toFixed(2));
             let yMin = parseFloat((Math.floor(Math.round(minVal * 1000) / Math.round(stepUnit * 1000)) * stepUnit).toFixed(2));
-            if (yMax === yMin) { yMax += stepUnit; yMin -= stepUnit; }
+            if (yMax === yMin) {
+                yMax += stepUnit;
+                yMin -= stepUnit;
+            }
             let steps = Math.round((yMax - yMin) / stepUnit);
             const avgPercent = Math.max(0, Math.min(100, ((parseFloat(b30Avg) - yMin) / (yMax - yMin)) * 100));
-            
             let gridLinesHtml = '';
             for(let i=0; i<=steps; i++) {
                 const val = yMin + stepUnit * i;
@@ -1888,7 +1841,6 @@
             const xAxisHtml = chartData.map((d, i) => `
                 <div style="flex: 1; text-align: center; font-size: 12px; color: var(--theme-text-dim); margin-top: 6px; font-weight: bold;">${i + 1}</div>
             `).join('');
-            
             chartHtml = `
             <div style="flex: none; height: 475px; width: 100%; box-sizing: border-box; background: #1e1e24; border: 2px solid #3e3e4a; border-radius: 0; padding: 25px 25px 15px 20px; display: flex; flex-direction: column; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
                 <div style="position: absolute; top: 15px; left: 20px; font-size: 18px; font-weight: bold; color: var(--theme-text-dim); letter-spacing: 1px;">BEST 30 RATING CHART</div>
@@ -1942,7 +1894,6 @@
           </div>
           `;
         };
-        
         const container = document.createElement("div");
         container.id = "copied-main";
         container.style.cssText = "position:absolute; top:0; left:0; z-index:-9999; width:2100px !important; min-width:2100px !important; max-width:none !important; box-sizing:border-box !important; background:#1e1e24; padding:45px; border-radius:0;";
@@ -1962,7 +1913,7 @@
                 <span style="font-size:52px; font-weight:bold; color:#fff; letter-spacing:2px; text-shadow:0 2px 4px rgba(0,0,0,0.7); font-family: 'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif; white-space: nowrap;">${stats?.name || 'Player'}</span>
               </div>
               <div style="display:flex; align-items:baseline; gap:50px; position:relative; z-index:1;">
-                <div style="display:flex; align-items:baseline; gap:15px; height:55px; line-height:55px;">
+                <div style="display:flex; align-items:baseline; gap:15px;">
                   <span style="font-size:26px; color:rgba(255,255,255,0.8); font-weight:bold; text-shadow:0 2px 4px rgba(0,0,0,0.7);">Rating</span>
                   ${ratingHtml}
                 </div>
@@ -2019,7 +1970,9 @@
               mode: 'cors',
               cache: 'no-cache'
             });
+            
             if (!res.ok) return; 
+            
             const blob = await res.blob();
             const reader = new FileReader();
             await new Promise((resolve) => {
@@ -2036,7 +1989,7 @@
           }
         }));
 
-        loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>處理相容性繪圖...</div>";
+        loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>處理繪圖相容性...</div>";
         await new Promise(resolve => setTimeout(resolve, 800));
 
         loading.innerHTML = "<div style='background:rgba(0,0,0,0.85);padding:25px;border-radius:0;box-shadow:0 4px 15px rgba(0,0,0,0.5);'>" + d(wt)("share.loading.generating") + "</div>";
@@ -2062,7 +2015,6 @@
         container.remove();
         document.body.style.overflow = originalOverflow;
         loading.remove();
-        
         const hn = "chunithm_b50.jpg";
         if (rawBlob) {
           const url = window.URL.createObjectURL(rawBlob);
@@ -2074,7 +2026,6 @@
         } else {
           alert(d(wt)("share.error", { error: "Image generation failed. Result blob is null." }));
         }
-        
       } catch (err) {
         if(document.getElementById("copied-main")) document.getElementById("copied-main").remove();
         document.body.style.overflow = "";
@@ -2148,21 +2099,13 @@
         
         let ratingHtml = `<span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${mainRating}<span style="font-size:36px;">${subRating}</span></span>`;
         if (ratingValue >= 17) {
-            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1;">
-                <span style="display: inline-block; background: linear-gradient(to bottom, #fff970 18%, #ff7c7c 30%, #ff898b 45%, #f602d9 58%, #496bff 65%, #03c4ff 72%, #01dc9b 80%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;">${mainRating}</span><span style="font-size:36px; display: inline-block; background: linear-gradient(to bottom, #fff970 18%, #ff7c7c 30%, #ff898b 45%, #f602d9 58%, #496bff 65%, #03c4ff 72%, #01dc9b 80%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;">${subRating}</span>
-            </span>`;
+            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.99));"><span style="background: linear-gradient(to bottom, #fff970 18%, #ff7c7c 30%, #ff898b 45%, #f602d9 58%, #496bff 65%, #03c4ff 72%, #01dc9b 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #fff970 18%, #ff7c7c 30%, #ff898b 45%, #f602d9 58%, #496bff 65%, #03c4ff 72%, #01dc9b 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
         } else if (ratingValue >= 16) {
-            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1;">
-                <span style="display: inline-block; background: linear-gradient(to bottom, #ff8276 20%, #ffdf70 40%, #8cff70 60%, #70dfff 75%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;">${mainRating}</span><span style="font-size:36px; display: inline-block; background: linear-gradient(to bottom, #ff8276 20%, #ffdf70 40%, #8cff70 60%, #70dfff 75%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;">${subRating}</span>
-            </span>`;
+            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.99));"><span style="background: linear-gradient(to bottom, #ff8276 20%, #ffdf70 40%, #8cff70 60%, #70dfff 75%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #ff8276 20%, #ffdf70 40%, #8cff70 60%, #70dfff 75%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
         } else if (ratingValue >= 15.25) {
-            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1;">
-                <span style="display: inline-block; background: linear-gradient(to bottom, #ffe089 20%, #fffffe 50%, #ffd789 55%, #fff8eb 90%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;">${mainRating}</span><span style="font-size:36px; display: inline-block; background: linear-gradient(to bottom, #ffe089 20%, #fffffe 50%, #ffd789 55%, #fff8eb 90%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;">${subRating}</span>
-            </span>`;
+            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.99));"><span style="background: linear-gradient(to bottom, #ffe089 20%, #fffffe 50%, #ffd789 55%, #fff8eb 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #ffe089 20%, #fffffe 50%, #ffd789 55%, #fff8eb 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
         } else if (ratingValue >= 14.5) {
-            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1;">
-                <span style="display: inline-block; background: linear-gradient(to bottom, #f5a507 20%, #fae294 50%, #f2a900 55%, #fff262 90%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;">${mainRating}</span><span style="font-size:36px; display: inline-block; background: linear-gradient(to bottom, #f5a507 20%, #fae294 50%, #f2a900 55%, #fff262 90%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;">${subRating}</span>
-            </span>`;
+            ratingHtml = `<span style="font-size:52px; font-weight:bold; line-height:1; filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.99));"><span style="background: linear-gradient(to bottom, #f5a507 20%, #fae294 50%, #f2a900 55%, #fff262 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${mainRating}</span><span style="font-size:36px; background: linear-gradient(to bottom, #f5a507 20%, #fae294 50%, #f2a900 55%, #fff262 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${subRating}</span></span>`;
         }
 
         const genTimeStr = new Date().toLocaleString();
