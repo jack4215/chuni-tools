@@ -1830,7 +1830,6 @@
         } else {
             ratingHtml = `<span style="font-size:52px; font-weight:bold; color:#fff; text-shadow:0 2px 4px rgba(0,0,0,0.7);">${mainRating}<span style="font-size:36px;">${subRating}</span></span>`;
         }
-        // -----------------------------------------------------------------
 
         const genTimeStr = new Date().toLocaleString();
         let opString = stats?.overPower || '---';
