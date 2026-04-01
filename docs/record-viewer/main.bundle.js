@@ -1726,8 +1726,8 @@
       try {
         let idxMap = [];
         try {
-          let res = await fetch('../data/idx2.json');
-          if(!res.ok) res = await fetch('/data/idx2.json');
+          let res = await fetch('../data/idx.json');
+          if(!res.ok) res = await fetch('/data/idx.json');
           if(res.ok) idxMap = await res.json();
         } catch(err) {
           console.warn("Failed to fetch idx.json", err);
@@ -2037,8 +2037,8 @@
       try {
         let idxMap = [];
         try {
-          let res = await fetch('../data/idx2.json');
-          if(!res.ok) res = await fetch('/data/idx2.json');
+          let res = await fetch('../data/idx.json');
+          if(!res.ok) res = await fetch('/data/idx.json');
           if(res.ok) idxMap = await res.json();
         } catch(err) {
           console.warn("Failed to fetch idx.json", err);
