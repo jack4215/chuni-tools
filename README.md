@@ -1,7 +1,5 @@
 # CHUNITHM Tools (Intl.ver)
 
-This repo is forked from [Dogeon188/chuni-tools](https://github.com/Dogeon188/chuni-tools).
-
 (請注意：中文內容設於下方)
 
 For more information please refer to [this page](https://chuni.tsaibee.org/?lang=en_US).
