@@ -60,6 +60,7 @@
             (r.location.hostname === e && (r.location.pathname === "/mobile/home/" || r.location.pathname === "/mobile/home"))) {
             s("fetch-clal");
         }
+        if (r.location.hostname === ea) return;
         function insertResult(targetElement) {
             const resultContainer = document.createElement("div");
             resultContainer.className = "chuni-tools-container";
