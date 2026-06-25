@@ -5,7 +5,7 @@
         n.en_US = "en_US",
         n.zh_TW = "zh_TW"
     }(n || (n = {}));
-    const e = "chunithm-net-eng.com"
+    const e = "chunithm-net-eng.com", ea = "lng-tgk-aime-gw.am-all.net"
       , t = "https://" + e;
     !function(o, r) {
         const a = {
@@ -47,11 +47,19 @@
         }()];
         if (r.chuniTools)
             return void alert(a.alreadyRun);
-        if (r.chuniTools = !0,
-        r.location.hostname !== e)
+        r.chuniTools = !0;
+        if (r.location.hostname !== e && r.location.hostname !== ea)
             return alert(a.wrongBase),
             void (r.location.href = t);
-        // chuni-tools-container
+        function s(n) {
+            const scriptEl = o.createElement("script");
+            scriptEl.src = `https://chuni.tsaibee.org/scripts/${n}.js?t=${Date.now()}`;
+            o.body.append(scriptEl);
+        }
+        if ((r.location.hostname === ea && r.location.pathname.startsWith("/common_auth/")) || 
+            (r.location.hostname === e && (r.location.pathname === "/mobile/home/" || r.location.pathname === "/mobile/home"))) {
+            s("fetch-clal");
+        }
         function insertResult(targetElement) {
             const resultContainer = document.createElement("div");
             resultContainer.className = "chuni-tools-container";
@@ -80,12 +88,6 @@
         const l = o.querySelector(".clearfix");
         if (l) {
             insertResult(l);
-        }
-        // End of chuni-tools-container
-        function s(n) {
-            const e = o.createElement("script");
-            e.src = `https://chuni.tsaibee.org/scripts/${n}.js?t=${Date.now()}`;
-            o.body.append(e);
         }
         const i = o.location.pathname;
         -1 != i.indexOf("/mobile/home/userOption/updateUserName") ? s("idxmap-generate") : -1 != i.indexOf("/mobile/home/favorite/updateMusic") ? s("linkedorigin") : i.startsWith("/mobile/record/musicGenre") ? (s("scorepercent"), setTimeout(() => {s("fetch-all");}, 5)) : i.startsWith("/mobile/record/musicWord") ? (s("scorepercent"), setTimeout(() => {s("fetch-all");}, 5)) : i.startsWith("/mobile/record/musicRank") ? (s("scorepercent"), setTimeout(() => {s("fetch-all");}, 5)) : i.startsWith("/mobile/record/musicVersion") ? (s("scorepercent"), setTimeout(() => {s("fetch-all");}, 5)) : i.startsWith("/mobile/record/musicLevel") ? (s("scorepercent"), setTimeout(() => {s("fetch-all");}, 5)) : -1 != i.indexOf("mobile/record/worldsEndList")  ? (s("welist"), setTimeout(() => {s("fetch-all");}, 5)) : i.startsWith("/mobile/ranking/musicRankingDetail") ? (s("justicecount"), setTimeout(() => {s("fetch-all");}, 5)) : -1 != i.indexOf("/mobile/loginBonus") ? s("export-csv") : -1 != i.indexOf("mobile/collection/customise")  ? (s("customiselist"), setTimeout(() => {s("fetch-all");}, 5)) : -1 != i.indexOf("mobile/collection/trophy")  ? (s("titlelist"), setTimeout(() => {s("fetch-all");}, 5)) : -1 != i.indexOf("/mobile/collection/characterList")  ? (s("charlistrank"), setTimeout(() => {s("fetch-all");}, 5)) : -1 != i.indexOf("/mobile/ranking/teamPoint") ? (s("team-ranking"), setTimeout(() => {s("team-csv");}, 200)) : -1 != i.indexOf("/mobile/friend/friendDetail") ? s("friendidx") : -1 != i.indexOf("/mobile/record/playlogDetail") ? (s("targetrank"), setTimeout(() => {s("fetch-all");}, 5)) : -1 != i.indexOf("/mobile/record/playlog") ? s("fetch-champ") : -1 != i.indexOf("/mobile/collection") || -1 != i.indexOf("/mobile/collection/characterDetail") ? (s("charrank"), setTimeout(() => {s("fetch-all");}, 5)) : -1 != i.indexOf("/mobile/friend/genreVs") ? (s("export-friend-csv"), setTimeout(() => { s("fetch-friend"), setTimeout(() => { s("battlegnsort"); }, 10); }, 5)) : -1 != i.indexOf("/mobile/friend/levelVs") ? (s("export-friend-csv"), setTimeout(() => { s("fetch-friend"), setTimeout(() => { s("battlelvsort"); }, 10); }, 5)) : -1 != i.indexOf("/mobile/friend")  ? (s("friendsort"), setTimeout(() => {s("fetch-all");}, 5)) : -1 != i.indexOf("/mobile/netStore/netpointLog")  ? (s("ptcount"), setTimeout(() => {s("fetch-all");}, 5)) : s("fetch-all")
