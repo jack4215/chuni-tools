@@ -13,9 +13,7 @@
                 alreadyRun: "Please refresh the page before running CHUNI TOOLS again!",
                 wrongBase: `Please open CHUNITHM-NET Intl. (${e}) and login, then try again.`,
                 containerHTML: `
-                    <p>CHUNILIB Website is Launch!</p>
-                    <p>Includes features such as daily score progress tracking, rating trends, and player VS!</p>
-                    <p><a href="https://chunilib.tsaibee.org/" target="_blank">【Go to CHUNILIB >>】</a></p>
+                    <p><a href="https://chunilib.tsaibee.org/constupdate" target="_blank">CHUNITHM Mate Const Update >></a></p>
                     <hr width="96%">
                     <p><a href="https://chuni.tsaibee.org/?lang=en_US" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools</a></p>
                     <p style="font-size:17px;"><a href="https://chunilib.tsaibee.org/" target="_blank">CHUNILIB</a> ｜ <a href="https://chuni.tsaibee.org/statistics" target="_blank">User Stats</a> ｜ <a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">Privacy Policy</a></p>
@@ -25,9 +23,7 @@
                 alreadyRun: "請重新整理頁面後再執行 CHUNITHM 書籤工具！",
                 wrongBase: `請到 CHUNITHM-NET Intl. (${e}) 登入之後再試一次。`,
                 containerHTML: `
-                    <p>還在到 CHUNITHM-NET 開書籤查分？</p>
-                    <p>使用 CHUNILIB 連書籤都不用開 🥳</p>
-                    <p><a href="https://chunilib.tsaibee.org/?lang=zh_TW" target="_blank">【立即前往 CHUNILIB >>】</a></p>
+                    <p><a href="https://chunilib.tsaibee.org/constupdate" target="_blank">CHUNITHM Mate 定數更新列表 >></a></p>
                     <hr width="96%">
                     <p><a href="https://chuni.tsaibee.org/?lang=zh_TW" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools</a></p>
                     <p style="font-size:17px;"><a href="https://chunilib.tsaibee.org/?lang=zh_TW" target="_blank">CHUNILIB</a>　｜　<a href="https://chuni.tsaibee.org/statistics" target="_blank">使用者統計</a>　｜　<a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">隱私權政策</a></p>
