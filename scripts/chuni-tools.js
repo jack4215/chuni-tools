@@ -15,7 +15,7 @@
                 containerHTML: `
                     <p><a href="https://chunilib.tsaibee.org/constupdate" target="_blank">CHUNITHM Mate Const Update >></a></p>
                     <hr width="96%">
-                    <a href="https://chunilib.tsaibee.org" target="_blank"><img src="https://chuni.tsaibee.org/data/banner_en.jpg" style="width: 96%;"></a>
+                    <a href="https://chunilib.tsaibee.org/?utm_source=chunitools&utm_medium=banner&utm_campaign=202607_banner" target="_blank"><img src="https://chuni.tsaibee.org/data/banner_en.jpg" style="width: 96%;"></a>
                     <hr width="96%">
                     <p><a href="https://chuni.tsaibee.org/?lang=en_US" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools</a></p>
                     <p style="font-size:17px;"><a href="https://chuni.tsaibee.org/statistics" target="_blank">User Statistics</a> ｜ <a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">Privacy Policy</a></p>
@@ -27,7 +27,7 @@
                 containerHTML: `
                     <p><a href="https://chunilib.tsaibee.org/constupdate" target="_blank">CHUNITHM Mate 定數更新列表 >></a></p>
                     <hr width="96%">
-                    <a href="https://chunilib.tsaibee.org/?lang=zh_TW" target="_blank"><img src="https://chuni.tsaibee.org/data/banner_zh.jpg" style="width: 96%;"></a>
+                    <a href="https://chunilib.tsaibee.org/?lang=zh_TW&utm_source=chunitools&utm_medium=banner&utm_campaign=202607_banner" target="_blank"><img src="https://chuni.tsaibee.org/data/banner_zh.jpg" style="width: 96%;"></a>
                     <hr width="96%">
                     <p><a href="https://chuni.tsaibee.org/?lang=zh_TW" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools</a></p>
                     <p style="font-size:17px;"><a href="https://chuni.tsaibee.org/statistics" target="_blank">使用者統計</a>　｜　<a href="https://chuni.tsaibee.org/privacy-policy" target="_blank">隱私權政策</a></p>
