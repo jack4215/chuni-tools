@@ -13,8 +13,6 @@
                 alreadyRun: "Please refresh the page before running CHUNI TOOLS again!",
                 wrongBase: `Please open CHUNITHM-NET Intl. (${e}) and login, then try again.`,
                 containerHTML: `
-                    <p><a href="https://chunilib.tsaibee.org/constupdate" target="_blank">CHUNITHM Mate Const Update >></a></p>
-                    <hr width="96%">
                     <a href="https://chunilib.tsaibee.org/?utm_source=chunitools&utm_medium=banner&utm_campaign=202607_banner" target="_blank"><img src="https://chuni.tsaibee.org/data/banner_en.jpg" style="width: 96%;"></a>
                     <hr width="96%">
                     <p><a href="https://chuni.tsaibee.org/?lang=en_US" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools</a></p>
@@ -25,8 +23,6 @@
                 alreadyRun: "請重新整理頁面後再執行 CHUNITHM 書籤工具！",
                 wrongBase: `請到 CHUNITHM-NET Intl. (${e}) 登入之後再試一次。`,
                 containerHTML: `
-                    <p><a href="https://chunilib.tsaibee.org/constupdate" target="_blank">CHUNITHM Mate 定數更新列表 >></a></p>
-                    <hr width="96%">
                     <a href="https://chunilib.tsaibee.org/?lang=zh_TW&utm_source=chunitools&utm_medium=banner&utm_campaign=202607_banner" target="_blank"><img src="https://chuni.tsaibee.org/data/banner_zh.jpg" style="width: 96%;"></a>
                     <hr width="96%">
                     <p><a href="https://chuni.tsaibee.org/?lang=zh_TW" target="_blank" style="color: #75b4f7;text-decoration: none;">CHUNITHM Tools</a></p>
